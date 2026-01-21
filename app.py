@@ -91,31 +91,31 @@ def build_photo_prompt(age_level: str = "age_5_6", theme: str = "none", custom_t
 def build_text_to_image_prompt(description: str, age_level: str = "age_5_6") -> str:
     """Build prompt for text-to-image mode (no photo)"""
     
-    base = f"""Create a CENTERED colouring page about "{description}" with LARGE MARGINS on all four sides.
+    base = f"""Create a printable black-and-white colouring page for children featuring: {description}
 
-COMPOSITION - THIS IS CRITICAL:
-- The entire scene must fit within the CENTER 80% of the image
-- Leave 10% EMPTY WHITE SPACE on the top, bottom, left, and right edges
-- Do NOT place ANY elements near the edges
-- Do NOT add title text or banners
-- Everything must be FULLY VISIBLE - no cropping
+This is a colouring book line drawing designed to fill an A4 page when printed.
 
-STYLE:
-- Black and white colouring book page for children
-- Thick, bold black outlines
-- White background only
-- No shading, no gradients
-- Simple enclosed shapes suitable for colouring
+DRAWING RULES:
+- Thick, bold black outlines only
+- White background
+- No shading, gradients, or textures
+- All shapes fully enclosed for colouring
 
-SCENE TO CREATE:
-- Feature iconic elements of: {description}
-- Include 2-3 cute children or characters in the scene
-- Add fun related objects and details
-- Make it magical and child-friendly
-- Fill the CENTER of the page (not the edges) with interesting details"""
+COMPOSITION:
+- Fill the page with a rich, detailed scene
+- All elements must be FULLY VISIBLE - nothing cut off at edges
+- No title text or banners
+
+SCENE:
+- Feature iconic elements of {description}
+- Include 2-3 cute children or characters
+- Add fun related objects and details throughout
+- Make it magical and child-friendly"""
 
     if age_level in CONFIG["age_levels"]:
-        base += "\n\n" + CONFIG["age_levels"][age_level]["overlay"]
+        base += "
+
+" + CONFIG["age_levels"][age_level]["overlay"]
 
     return base
 
