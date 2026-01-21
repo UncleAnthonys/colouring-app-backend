@@ -116,6 +116,7 @@ FRAME & VISIBILITY LOCK (MANDATORY):
 - Maintain a clear safety margin on all sides - no important elements within the outer 10% of the image
 - The composition must feel centred and print-safe
 - Compose as if for an A4 colouring book page with safe margins
+- Do NOT place any text or titles at the very top edge - keep all text fully visible
 
 OUTPUT REQUIREMENTS:
 - Black outlines on white background
