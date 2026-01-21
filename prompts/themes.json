@@ -330,5 +330,79 @@
       "name": "Add More Detail",
       "overlay": "Allow slightly more detail in clothing folds and facial features while maintaining colouring book style."
     }
+  },
+  "times_tables": {
+    "times_table_1": {
+      "name": "1 Times Table",
+      "description": "Learn the 1 times table",
+      "text_only": true,
+      "prompt": "1 times table quiz colouring page showing 1x1=1, 1x2=2, 1x3=3, 1x4=4, 1x5=5 written large with decorative borders around each equation, cute owl teacher character and school children, clean colouring book style"
+    },
+    "times_table_2": {
+      "name": "2 Times Table",
+      "description": "Learn the 2 times table",
+      "text_only": true,
+      "prompt": "2 times table quiz colouring page showing 2x1=2, 2x2=4, 2x3=6, 2x4=8, 2x5=10 written large with decorative borders around each equation, cute owl teacher character and school children, clean colouring book style"
+    },
+    "times_table_3": {
+      "name": "3 Times Table",
+      "description": "Learn the 3 times table",
+      "text_only": true,
+      "prompt": "3 times table quiz colouring page showing 3x1=3, 3x2=6, 3x3=9, 3x4=12, 3x5=15 written large with decorative borders around each equation, cute owl teacher character and school children, clean colouring book style"
+    },
+    "times_table_4": {
+      "name": "4 Times Table",
+      "description": "Learn the 4 times table",
+      "text_only": true,
+      "prompt": "4 times table quiz colouring page showing 4x1=4, 4x2=8, 4x3=12, 4x4=16, 4x5=20 written large with decorative borders around each equation, cute owl teacher character and school children, clean colouring book style"
+    },
+    "times_table_5": {
+      "name": "5 Times Table",
+      "description": "Learn the 5 times table",
+      "text_only": true,
+      "prompt": "5 times table quiz colouring page showing 5x1=5, 5x2=10, 5x3=15, 5x4=20, 5x5=25 written large with decorative borders around each equation, cute owl teacher character and school children, clean colouring book style"
+    },
+    "times_table_6": {
+      "name": "6 Times Table",
+      "description": "Learn the 6 times table",
+      "text_only": true,
+      "prompt": "6 times table quiz colouring page showing 6x1=6, 6x2=12, 6x3=18, 6x4=24, 6x5=30 written large with decorative borders around each equation, cute owl teacher character and school children, clean colouring book style"
+    },
+    "times_table_7": {
+      "name": "7 Times Table",
+      "description": "Learn the 7 times table",
+      "text_only": true,
+      "prompt": "7 times table quiz colouring page showing 7x1=7, 7x2=14, 7x3=21, 7x4=28, 7x5=35 written large with decorative borders around each equation, cute owl teacher character and school children, clean colouring book style"
+    },
+    "times_table_8": {
+      "name": "8 Times Table",
+      "description": "Learn the 8 times table",
+      "text_only": true,
+      "prompt": "8 times table quiz colouring page showing 8x1=8, 8x2=16, 8x3=24, 8x4=32, 8x5=40 written large with decorative borders around each equation, cute owl teacher character and school children, clean colouring book style"
+    },
+    "times_table_9": {
+      "name": "9 Times Table",
+      "description": "Learn the 9 times table",
+      "text_only": true,
+      "prompt": "9 times table quiz colouring page showing 9x1=9, 9x2=18, 9x3=27, 9x4=36, 9x5=45 written large with decorative borders around each equation, cute owl teacher character and school children, clean colouring book style"
+    },
+    "times_table_10": {
+      "name": "10 Times Table",
+      "description": "Learn the 10 times table",
+      "text_only": true,
+      "prompt": "10 times table quiz colouring page showing 10x1=10, 10x2=20, 10x3=30, 10x4=40, 10x5=50 written large with decorative borders around each equation, cute owl teacher character and school children, clean colouring book style"
+    },
+    "times_table_11": {
+      "name": "11 Times Table",
+      "description": "Learn the 11 times table",
+      "text_only": true,
+      "prompt": "11 times table quiz colouring page showing 11x1=11, 11x2=22, 11x3=33, 11x4=44, 11x5=55 written large with decorative borders around each equation, cute owl teacher character and school children, clean colouring book style"
+    },
+    "times_table_12": {
+      "name": "12 Times Table",
+      "description": "Learn the 12 times table",
+      "text_only": true,
+      "prompt": "12 times table quiz colouring page showing 12x1=12, 12x2=24, 12x3=36, 12x4=48, 12x5=60 written large with decorative borders around each equation, cute owl teacher character and school children, clean colouring book style"
+    }
   }
 }
