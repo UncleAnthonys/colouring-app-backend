@@ -137,7 +137,7 @@ async def generate_from_photo(prompt: str, image_b64: str, quality: str = "low")
         "model": "gpt-image-1.5",
         "prompt": prompt,
         "n": "1",
-        "size": "1024x1024",
+        "size": "1024x1792",
         "quality": quality,
     }
     
@@ -167,7 +167,7 @@ async def generate_from_text(prompt: str, quality: str = "low") -> dict:
         "model": "gpt-image-1.5",
         "prompt": prompt,
         "n": 1,
-        "size": "1024x1024",
+        "size": "1024x1792",
         "quality": quality,
     }
     
