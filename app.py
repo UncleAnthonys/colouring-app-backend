@@ -76,7 +76,7 @@ def build_photo_prompt(age_level: str = "age_5_6", theme: str = "none", custom_t
     
     # PHOTO-ACCURATE MODE - completely different prompt for "none" theme
     if theme == "none" and not custom_theme:
-        return """Convert this photograph into a colouring book page.
+        base_prompt = """Convert this photograph into a colouring book page.
 
 FACES AND PEOPLE (HIGHEST PRIORITY):
 - Faces MUST be recognisable as the actual people in the photo
@@ -97,12 +97,27 @@ LINE STYLE:
 - Clean enclosed shapes for colouring
 - No tiny details or dense textures
 
-BALANCE:
-- People: Keep accurate likeness
-- Background: Simplify for colouring
-- Result: A colourable page where you recognise the real people in a simplified version of the real scene
-
 OUTPUT: Bold black lines on pure white background."""
+
+        if age_level == "age_3_4":
+            base_prompt += """
+
+AGE 3-4 SIMPLIFICATION (CRITICAL):
+- VERY thick bold outlines
+- VERY simple shapes - maximum 15-20 colourable areas total
+- Remove most background detail - just 2-3 simple trees
+- Large simple shapes only - nothing fiddly
+- This must be EXTREMELY simple for a toddler"""
+        elif age_level == "age_7_8":
+            base_prompt += """
+
+AGE 7-8 DETAIL:
+- Can include more detail than younger ages
+- Thinner lines acceptable
+- More background elements allowed
+- More intricate patterns okay"""
+        
+        return base_prompt
 
     # THEMED MODE - use master prompt + overlays
     parts = [CONFIG["master_base_prompt"]["prompt"]]
