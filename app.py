@@ -91,52 +91,33 @@ def build_photo_prompt(age_level: str = "age_5_6", theme: str = "none", custom_t
 def build_text_to_image_prompt(description: str, age_level: str = "age_5_6") -> str:
     """Build prompt for text-to-image mode (no photo)"""
     
-    base = """Create a printable black-and-white colouring page for children. This is a colouring book line drawing, not an illustration.
+    base = f"""Create a CENTERED colouring page about "{description}" with LARGE MARGINS on all four sides.
 
-CORE DRAWING RULES (ABSOLUTE):
-- Use thick, bold black outlines only
-- Lines must be continuous, smooth, and clearly printable
-- All shapes must be fully enclosed - no open regions
+COMPOSITION - THIS IS CRITICAL:
+- The entire scene must fit within the CENTER 80% of the image
+- Leave 10% EMPTY WHITE SPACE on the top, bottom, left, and right edges
+- Do NOT place ANY elements near the edges
+- Do NOT add title text or banners
+- Everything must be FULLY VISIBLE - no cropping
+
+STYLE:
+- Black and white colouring book page for children
+- Thick, bold black outlines
 - White background only
-
-SIMPLIFICATION RULES:
-- No shading, texture, gradients, cross-hatching, or decorative detail
-- Convert everything into large, simple shapes suitable for colouring
-
-STYLE CONSTRAINT:
-- This is NOT a cartoon
-- This is NOT a sketch
-- This is NOT a realistic illustration
-- It must look like a traditional children's colouring book page
-
-FRAME & VISIBILITY LOCK (MANDATORY):
-- All elements must be fully visible within the image frame
-- No object may be cut off by the edge of the image
-- No partial objects at the borders
-- Maintain a clear safety margin on all sides - no important elements within the outer 10% of the image
-- The composition must feel centred and print-safe
-- Compose as if for an A4 colouring book page with safe margins
-- Do NOT place any text or titles at the very top edge - keep all text fully visible
-
-OUTPUT REQUIREMENTS:
-- Black outlines on white background
-- No colour
-- No numbers
-- Print-friendly"""
-
-    # Add age level
-    if age_level in CONFIG["age_levels"]:
-        base += "\n\n" + CONFIG["age_levels"][age_level]["overlay"]
-    
-    base += f"""
+- No shading, no gradients
+- Simple enclosed shapes suitable for colouring
 
 SCENE TO CREATE:
-Create a fun, engaging colouring page scene featuring: {description}
+- Feature iconic elements of: {description}
+- Include 2-3 cute children or characters in the scene
+- Add fun related objects and details
+- Make it magical and child-friendly
+- Fill the CENTER of the page (not the edges) with interesting details"""
 
-- Fill the page with interesting elements related to this theme
-- Make it magical and appealing for children
-- Include multiple related objects and details
-- Keep everything child-friendly and fun"""
+    if age_level in CONFIG["age_levels"]:
+        base += "
+
+" + CONFIG["age_levels"][age_level]["overlay"]
 
     return base
 
