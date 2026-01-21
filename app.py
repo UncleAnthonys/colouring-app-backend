@@ -115,9 +115,7 @@ SCENE TO CREATE:
 - Fill the CENTER of the page (not the edges) with interesting details"""
 
     if age_level in CONFIG["age_levels"]:
-        base += "
-
-" + CONFIG["age_levels"][age_level]["overlay"]
+        base += "\n\n" + CONFIG["age_levels"][age_level]["overlay"]
 
     return base
 
