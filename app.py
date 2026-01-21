@@ -140,24 +140,43 @@ def build_text_to_image_prompt(description: str, age_level: str = "age_5_6") -> 
     
     base = f"""Create a printable black-and-white colouring page for children featuring: {description}
 
-This is a colouring book line drawing designed to fill an A4 page when printed.
+STYLE: Classic children's colouring book - simple, clean, easy to colour.
 
-DRAWING RULES:
+CRITICAL - CLEAN OUTPUT:
+- ABSOLUTELY NO dots, specks, noise, or scattered marks anywhere
+- ABSOLUTELY NO ground texture or grass texture
+- NO tiny details or fine lines
+- Every line must be smooth and bold
+- If in doubt, LEAVE IT OUT - simpler is better
+
+LINE QUALITY:
 - Thick, bold black outlines only
-- White background
-- No shading, gradients, or textures
+- ALL lines must connect perfectly - no gaps
+- Pure white background - no grey tones
 - All shapes fully enclosed for colouring
+- Clean enclosed shapes - like a classic 1990s colouring book
 
 COMPOSITION:
-- Fill the page with a rich, detailed scene
+- Fill the page with a fun scene
 - All elements must be FULLY VISIBLE - nothing cut off at edges
+- Maximum 15-20 main elements
+- Lots of WHITE SPACE between elements
 - No title text or banners
 
 SCENE:
 - Feature iconic elements of {description}
 - Include 2-3 cute children or characters
-- Add fun related objects and details throughout
-- Make it magical and child-friendly"""
+- Add fun related objects
+- Make it magical and child-friendly
+
+BANNED:
+- Dots, specks, or scattered marks
+- Ground texture or grass blades
+- Tiny fiddly details
+- Sketchy or broken lines
+- Any visual noise
+
+OUTPUT: Bold black lines on pure white background. No grey. No texture."""
 
     if age_level in CONFIG["age_levels"]:
         base += "\n\n" + CONFIG["age_levels"][age_level]["overlay"]
