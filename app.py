@@ -113,9 +113,7 @@ SCENE:
 - Make it magical and child-friendly"""
 
     if age_level in CONFIG["age_levels"]:
-        base += "
-
-" + CONFIG["age_levels"][age_level]["overlay"]
+        base += "\n\n" + CONFIG["age_levels"][age_level]["overlay"]
 
     return base
 
