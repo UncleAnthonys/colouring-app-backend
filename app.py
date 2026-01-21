@@ -122,7 +122,7 @@ SCENE:
 # OPENAI API CALLS
 # ============================================
 
-async def generate_from_photo(prompt: str, image_b64: str, quality: str = "low") -> dict:
+async def generate_from_photo(prompt: str, image_b64: str, quality: str = "medium") -> dict:
     """Generate colouring page from photo using images/edits endpoint"""
     
     headers = {"Authorization": f"Bearer {OPENAI_API_KEY}"}
@@ -153,7 +153,7 @@ async def generate_from_photo(prompt: str, image_b64: str, quality: str = "low")
         return response.json()
 
 
-async def generate_from_text(prompt: str, quality: str = "low") -> dict:
+async def generate_from_text(prompt: str, quality: str = "medium") -> dict:
     """Generate colouring page from text using images/generations endpoint"""
     
     headers = {
@@ -228,7 +228,7 @@ class PhotoGenerateRequest(BaseModel):
     theme: str = "none"
     custom_theme: Optional[str] = None
     age_level: str = "age_5_6"
-    quality: str = "low"
+    quality: str = "medium"
 
 
 @app.post("/generate/photo")
@@ -282,7 +282,7 @@ async def generate_from_photo_endpoint(request: PhotoGenerateRequest):
 class TextGenerateRequest(BaseModel):
     description: str
     age_level: str = "age_5_6"
-    quality: str = "low"
+    quality: str = "medium"
 
 
 @app.post("/generate/text")
