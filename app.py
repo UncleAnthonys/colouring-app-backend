@@ -73,6 +73,38 @@ IMPORTANT:
 
 def build_photo_prompt(age_level: str = "age_5_6", theme: str = "none", custom_theme: str = None) -> str:
     """Build prompt for photo-to-colouring mode"""
+    
+    # PHOTO-ACCURATE MODE - completely different prompt for "none" theme
+    if theme == "none" and not custom_theme:
+        return """Convert this photograph into a colouring book page.
+
+FACES AND PEOPLE (HIGHEST PRIORITY):
+- Faces MUST be recognisable as the actual people in the photo
+- Keep exact hairstyles - long hair stays long, short stays short
+- Keep real facial features - this is the most important thing
+- A parent must recognise their children
+- Simplify clothing but keep it accurate to photo
+
+BACKGROUND (SIMPLIFY):
+- Keep the real setting from the photo
+- But simplify heavily for colouring:
+  - Dense trees become simple tree shapes with cloud-like foliage
+  - Hundreds of leaves become a few scattered leaves
+  - Keep the scene recognisable but colourable
+
+LINE STYLE:
+- Bold black outlines on white
+- Clean enclosed shapes for colouring
+- No tiny details or dense textures
+
+BALANCE:
+- People: Keep accurate likeness
+- Background: Simplify for colouring
+- Result: A colourable page where you recognise the real people in a simplified version of the real scene
+
+OUTPUT: Bold black lines on pure white background."""
+
+    # THEMED MODE - use master prompt + overlays
     parts = [CONFIG["master_base_prompt"]["prompt"]]
     
     if age_level in CONFIG["age_levels"]:
@@ -80,7 +112,7 @@ def build_photo_prompt(age_level: str = "age_5_6", theme: str = "none", custom_t
     
     if custom_theme:
         parts.append("\n\n" + build_custom_theme_overlay(custom_theme))
-    elif theme != "none" and theme in CONFIG["themes"]:
+    elif theme in CONFIG["themes"]:
         overlay = CONFIG["themes"][theme].get("overlay", "")
         if overlay:
             parts.append("\n\n" + overlay)
@@ -122,7 +154,7 @@ SCENE:
 # OPENAI API CALLS
 # ============================================
 
-async def generate_from_photo(prompt: str, image_b64: str, quality: str = "medium") -> dict:
+async def generate_from_photo(prompt: str, image_b64: str, quality: str = "low") -> dict:
     """Generate colouring page from photo using images/edits endpoint"""
     
     headers = {"Authorization": f"Bearer {OPENAI_API_KEY}"}
@@ -153,7 +185,7 @@ async def generate_from_photo(prompt: str, image_b64: str, quality: str = "mediu
         return response.json()
 
 
-async def generate_from_text(prompt: str, quality: str = "medium") -> dict:
+async def generate_from_text(prompt: str, quality: str = "low") -> dict:
     """Generate colouring page from text using images/generations endpoint"""
     
     headers = {
@@ -228,7 +260,7 @@ class PhotoGenerateRequest(BaseModel):
     theme: str = "none"
     custom_theme: Optional[str] = None
     age_level: str = "age_5_6"
-    quality: str = "medium"
+    quality: str = "low"
 
 
 @app.post("/generate/photo")
@@ -282,7 +314,7 @@ async def generate_from_photo_endpoint(request: PhotoGenerateRequest):
 class TextGenerateRequest(BaseModel):
     description: str
     age_level: str = "age_5_6"
-    quality: str = "medium"
+    quality: str = "low"
 
 
 @app.post("/generate/text")
