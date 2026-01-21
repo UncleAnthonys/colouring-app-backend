@@ -1,12 +1,10 @@
 {
   "version": "2.0",
   "model": "gpt-image-1",
-  
   "master_base_prompt": {
-    "description": "LINE DRAWING – COLOURING PAGE (NO NUMBERS). This is the non-negotiable core. Everything else layers on top.",
+    "description": "LINE DRAWING \u2013 COLOURING PAGE (NO NUMBERS). This is the non-negotiable core. Everything else layers on top.",
     "prompt": "Convert the uploaded photo into a printable black-and-white colouring page for children. This is a colouring book line drawing, not an illustration.\n\nCRITICAL - FACIAL LIKENESS (HIGHEST PRIORITY):\n- The faces MUST be recognisable as the specific people in the photo\n- Preserve each person's unique facial structure: face shape, eye spacing, nose shape, mouth shape, chin shape\n- Preserve distinctive features: hair style, hair length, hair texture, any visible features that make each person unique\n- Do NOT replace faces with generic cartoon faces\n- Do NOT use a standard 'child face template' - each face must match the individual in the photo\n- A parent looking at this should immediately recognise their children\n- Simplify the faces for colouring but KEEP THE LIKENESS\n\nCORE DRAWING RULES (ABSOLUTE):\n- Use thick, bold black outlines only\n- Lines must be continuous, smooth, and clearly printable\n- All shapes must be fully enclosed - no open regions\n- White background only\n\nSIMPLIFICATION RULES:\n- Remove all shading, texture, gradients, cross-hatching, and decorative detail\n- Do not draw realistic foliage, small debris, background texture, or lighting effects\n- Convert the image into large, simple shapes suitable for colouring\n\nSUBJECT & LIKENESS RULES:\n- Preserve the number of people, their relative positions and poses\n- Preserve recognisable facial structure - do not exaggerate facial features\n- Faces must be simplified but RECOGNISABLE AS THE SPECIFIC INDIVIDUALS\n- Clothing must be divided into clear, colourable areas\n\nSTYLE CONSTRAINT:\n- This is NOT a cartoon with generic faces\n- This is NOT a sketch\n- This is NOT a realistic illustration\n- It must look like a traditional children's colouring book page WITH RECOGNISABLE PEOPLE\n\nFRAME & VISIBILITY LOCK (MANDATORY):\n- All elements must be fully visible within the image frame\n- No object may be cut off by the edge of the image\n- No partial objects at the borders\n- Maintain a clear safety margin on all sides - no important elements within the outer 10% of the image\n- The composition must feel centred and print-safe\n- Compose as if for an A4 colouring book page with safe margins\n\nOUTPUT REQUIREMENTS:\n- Black outlines on white background\n- No colour\n- No numbers\n- No text\n- Print-friendly"
   },
-  
   "age_levels": {
     "age_3_4": {
       "name": "Ages 3-4 (Very Simple)",
@@ -27,357 +25,298 @@
       "overlay": "Age level: 7-8 years\n- Slightly thinner outlines\n- More detail allowed\n- Clothing patterns may be simplified\n- Background may include multiple elements\n- Still no shading or texture"
     }
   },
-  
   "themes": {
     "none": {
       "name": "No Theme (Photo Only)",
       "description": "Convert photo to colouring page without adding fantasy elements",
       "overlay": ""
     },
-    
     "dinosaurs": {
       "name": "Dinosaurs",
       "description": "Friendly dinosaur elements, dino hats, toys, footprints",
       "overlay": "Apply theme: Dinosaurs\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in dinosaur costumes or dinosaur hoodies with hoods up showing dino faces/spikes\n- Or give them dinosaur hats/headbands with horns and spikes\n- This is the most important part of the theme\n\nAdditional dinosaur elements:\n- Add friendly cartoon dinosaurs (T-rex, triceratops) in background\n- Dinosaur footprints, eggs, palm trees\n- Dinosaurs must be non-scary, rounded, and simple shapes"
     },
-    
     "pirates": {
       "name": "Pirates",
       "description": "Pirate clothing, hats, flags, simple ship shapes",
       "overlay": "Apply theme: Pirates\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in pirate costumes\n- Must include: pirate hats with skull and crossbones, striped shirts, bandanas\n- This is the most important part of the theme\n\nAdditional pirate elements:\n- Add pirate ship, flags, treasure chest in background\n- Keep faces fully visible\n- No weapons, no aggressive imagery"
     },
-    
     "fairies": {
       "name": "Fairies",
       "description": "Wings and soft fantasy elements",
       "overlay": "Apply theme: Fairies\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Give ALL people large fairy wings on their backs\n- Dress them in fairy/princess outfits with flowing dresses or tunics\n- Add flower crowns or sparkly headbands\n- This is the most important part of the theme\n\nAdditional fairy elements:\n- Add giant flowers, mushrooms, butterflies in background\n- Gentle, magical atmosphere\n- Wings must be large, simple shapes - avoid intricate patterns"
     },
-    
     "space": {
       "name": "Space Explorers",
       "description": "Astronaut suits, rockets, planets, stars",
       "overlay": "Apply theme: Space\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in astronaut space suits\n- Space suits must have helmets (can be open-faced to show faces)\n- This is the most important part of the theme\n\nAdditional space elements:\n- Add rocket ship, planets, stars, moon in background\n- Keep all shapes simple and rounded\n- People must be recognisable inside their space suits"
     },
-    
     "underwater": {
       "name": "Underwater World",
       "description": "Fish, bubbles, seaweed, friendly sea creatures",
       "overlay": "Apply theme: Underwater\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as mermaids/mermen with fish tails instead of legs\n- OR dress them in scuba diving suits with goggles and flippers\n- This is the most important part of the theme\n\nAdditional underwater elements:\n- Add friendly fish, octopus, starfish, bubbles, seaweed\n- Wavy water lines in background\n- No scary creatures - keep everything friendly"
     },
-    
     "unicorns": {
       "name": "Unicorns & Rainbows",
       "description": "Friendly unicorns, rainbows, stars",
       "overlay": "Apply theme: Unicorns\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Give ALL people unicorn horn headbands on their heads\n- Dress them in sparkly princess/prince outfits\n- Add rainbow-colored tutus or capes\n- This is the most important part of the theme\n\nAdditional unicorn elements:\n- Add friendly unicorn character in background\n- Rainbow arcs, stars, fluffy clouds\n- Keep all shapes large and simple - magical but not cluttered"
     },
-    
     "superheroes": {
       "name": "Superheroes",
       "description": "Capes, masks, simple city backdrop",
       "overlay": "Apply theme: Superheroes\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in superhero costumes\n- Must include: capes, eye masks, superhero bodysuits with emblems on chest\n- This is the most important part of the theme\n\nAdditional superhero elements:\n- Simple city buildings in background\n- Clouds, action lines\n- Keep faces visible behind masks\n- Empowering poses - no violence or weapons"
     },
-    
     "safari": {
       "name": "Safari Adventure",
       "description": "Friendly African animals, safari hats",
       "overlay": "Apply theme: Safari\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in safari explorer outfits\n- Must include: safari hats/pith helmets, khaki vests with pockets, binoculars around neck\n- This is the most important part of the theme\n\nAdditional safari elements:\n- Add friendly African animals: lion, elephant, giraffe, zebra\n- Acacia trees, savanna grass in background\n- Animals must be cute and friendly, not realistic or scary"
     },
-    
     "castle": {
       "name": "Fantasy Castle",
       "description": "Knights, princesses, castle backdrop",
       "overlay": "Apply theme: Castle\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as knights or princesses\n- Knights: armor, helmets with visors up showing face, shields\n- Princesses: flowing gowns, tiaras/crowns\n- This is the most important part of the theme\n\nAdditional castle elements:\n- Castle with towers and flags in background\n- Simple banners, a friendly dragon\n- Keep all shapes bold and simple - no weapons"
     },
-    
     "christmas": {
       "name": "Christmas",
       "description": "Santa hats, presents, simple tree",
       "overlay": "Apply theme: Christmas\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in Christmas outfits\n- Must include: Santa hats OR elf costumes with pointy hats and curly shoes\n- Add Christmas sweaters or red/green festive clothing\n- This is the most important part of the theme\n\nAdditional Christmas elements:\n- Christmas tree, wrapped presents, candy canes\n- Snowflakes, stars, stockings in background\n- Festive but not cluttered"
     },
-    
     "fantasy": {
       "name": "Fantasy",
       "description": "Wizards, magic wands, enchanted forest",
       "overlay": "Apply theme: Fantasy\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as wizards or magical characters\n- Must include: wizard robes, pointed wizard hats, magic wands\n- Add capes with stars/moons pattern\n- This is the most important part of the theme\n\nAdditional fantasy elements:\n- Magical forest, floating stars, spell books\n- Friendly owl or cat companion\n- Enchanted mushrooms, magical sparkles"
     },
-    
     "animals": {
       "name": "Cute Animals",
       "description": "Dressed as cute animals with animal friends",
       "overlay": "Apply theme: Animals\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in animal onesies/costumes (bunny, bear, cat, dog, panda)\n- Must include: animal ears, tails, paws on hands/feet\n- Full body animal costumes with hoods showing animal faces\n- This is the most important part of the theme\n\nAdditional animal elements:\n- Friendly cartoon animals around them (puppies, kittens, bunnies)\n- Simple grass, flowers in background\n- All animals must be cute and friendly"
     },
-    
     "knights_dragons": {
       "name": "Knights & Dragons",
       "description": "Knights in armor with friendly dragons",
       "overlay": "Apply theme: Knights & Dragons\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as knights in shining armor\n- Must include: knight helmets (visor up to show face), armor chest plates, shields\n- Add swords in scabbards (not drawn/threatening)\n- This is the most important part of the theme\n\nAdditional elements:\n- Friendly cartoon dragon (smiling, not scary)\n- Castle towers in background\n- Flags and banners"
     },
-    
     "explorers": {
       "name": "Explorers & Adventure",
       "description": "Jungle explorers with maps and compasses",
       "overlay": "Apply theme: Explorers\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as adventurer explorers\n- Must include: explorer hats/caps, utility vests with pockets, boots\n- Add backpacks, maps, compass, magnifying glass\n- This is the most important part of the theme\n\nAdditional explorer elements:\n- Jungle vines, ancient ruins or temple in background\n- Treasure map, compass rose\n- Friendly jungle animals (monkey, parrot)"
     },
-    
     "farm": {
       "name": "Farm",
       "description": "Farmers with barn animals",
       "overlay": "Apply theme: Farm\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as farmers\n- Must include: straw hats, overalls/dungarees, plaid shirts\n- Add gardening gloves, small tools (watering can, rake)\n- This is the most important part of the theme\n\nAdditional farm elements:\n- Friendly farm animals: cow, pig, chicken, sheep, horse\n- Red barn, wooden fence, hay bales in background\n- Simple crops, sunflowers"
     },
-    
     "zoo": {
       "name": "Zoo",
       "description": "Zookeepers with zoo animals",
       "overlay": "Apply theme: Zoo\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as zookeepers\n- Must include: khaki uniforms, zoo caps/hats, name badges\n- Add clipboards, feeding buckets\n- This is the most important part of the theme\n\nAdditional zoo elements:\n- Zoo animals: elephant, giraffe, monkey, penguin, lion\n- Zoo enclosure fences, trees\n- Zoo entrance sign in background"
     },
-    
     "nature": {
       "name": "Nature & Outdoors",
       "description": "Camping and nature exploration",
       "overlay": "Apply theme: Nature\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in camping/hiking outfits\n- Must include: hiking boots, outdoor jackets, backpacks\n- Add binoculars, water bottles, walking sticks\n- This is the most important part of the theme\n\nAdditional nature elements:\n- Tent, campfire, trees, mountains in background\n- Friendly forest animals: deer, squirrel, rabbit, birds\n- Butterflies, flowers, pine trees"
     },
-    
     "trucks_diggers": {
       "name": "Trucks & Diggers",
       "description": "Construction vehicles and truck drivers",
       "overlay": "Apply theme: Trucks & Diggers\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as construction/truck workers\n- Must include: hard hats, high-vis vests, work boots\n- Add tool belts, work gloves\n- This is the most important part of the theme\n\nAdditional elements:\n- Big diggers, dump trucks, excavators in background\n- Dirt piles, traffic cones\n- Keep vehicles simple and chunky shaped"
     },
-    
     "cars_racing": {
       "name": "Cars & Racing",
       "description": "Race car drivers with fast cars",
       "overlay": "Apply theme: Cars & Racing\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as race car drivers\n- Must include: racing suits/overalls, racing helmets (visor up to show face), racing gloves\n- Add winner medals or trophies\n- This is the most important part of the theme\n\nAdditional racing elements:\n- Race cars with numbers, finish line flags\n- Checkered flag pattern, race track\n- Winner podium, pit stop tools"
     },
-    
     "planes": {
       "name": "Planes & Pilots",
       "description": "Pilots and aircraft adventures",
       "overlay": "Apply theme: Planes & Pilots\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as pilots or aviators\n- Must include: pilot caps/helmets with goggles, flight jackets, aviator scarves\n- Add pilot wings badges on chest\n- This is the most important part of the theme\n\nAdditional elements:\n- Airplanes, helicopters, hot air balloons\n- Clouds, birds flying, runway\n- Control tower in background"
     },
-    
     "construction": {
       "name": "Construction Site",
       "description": "Builders and construction workers",
       "overlay": "Apply theme: Construction\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as construction workers/builders\n- Must include: yellow hard hats, tool belts, work boots, safety vests\n- Add tools: hammer, wrench, saw\n- This is the most important part of the theme\n\nAdditional construction elements:\n- Building under construction, scaffolding, crane\n- Bricks, cement mixer, wheelbarrow\n- Safety signs, traffic cones"
     },
-    
     "alphabet_a": {
       "name": "Alphabet A",
       "description": "Everything begins with letter A",
-      "overlay": "Apply theme: Alphabet Letter A\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as astronauts OR with apple-themed clothing\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter A\n- Include: apples, ants, airplane, alligator, anchor, acorns, arrow, angel wings\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'A' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot A words"
+      "overlay": "ALPHABET A THEME:\n\n1. COSTUMES: Dress all people as astronauts or apple costumes\n2. BIG LETTER: Draw a LARGE letter A - make it one of the biggest elements in the scene\n3. A OBJECTS: Fill scene with A things - apples, ants, airplane, alligator, anchor, acorns, arrow"
     },
-    
     "alphabet_b": {
       "name": "Alphabet B",
       "description": "Everything begins with letter B",
-      "overlay": "Apply theme: Alphabet Letter B\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as bears OR with butterfly wings OR as builders\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter B\n- Include: butterflies, balloons, birds, books, balls, bananas, bees, bubbles, basket\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'B' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot B words"
+      "overlay": "ALPHABET B THEME:\n\n1. COSTUMES: Dress all people as bears or butterflies\n2. BIG LETTER: Draw a LARGE letter B - make it one of the biggest elements in the scene\n3. B OBJECTS: Fill scene with B things - balloons, birds, books, balls, bananas, bees, bubbles, basket"
     },
-    
     "alphabet_c": {
       "name": "Alphabet C",
       "description": "Everything begins with letter C",
-      "overlay": "Apply theme: Alphabet Letter C\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as cowboys/cowgirls OR cats OR chefs\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter C\n- Include: cats, cars, clouds, cake, candy, candles, castle, crown, crayons\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'C' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot C words"
+      "overlay": "ALPHABET C THEME:\n\n1. COSTUMES: Dress all people as cats or cowboys\n2. BIG LETTER: Draw a LARGE letter C - make it one of the biggest elements in the scene\n3. C OBJECTS: Fill scene with C things - cars, clouds, cake, candy, candles, castle, crown, crayons"
     },
-    
     "alphabet_d": {
       "name": "Alphabet D",
       "description": "Everything begins with letter D",
-      "overlay": "Apply theme: Alphabet Letter D\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as doctors OR dinosaurs OR dancers\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter D\n- Include: dog, duck, dolphin, daisy, drum, door, dice, donut, dragon\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'D' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot D words"
+      "overlay": "ALPHABET D THEME:\n\n1. COSTUMES: Dress all people as dinosaurs or doctors\n2. BIG LETTER: Draw a LARGE letter D - make it one of the biggest elements in the scene\n3. D OBJECTS: Fill scene with D things - dog, duck, dolphin, daisy, drum, door, dice, donut, dragon"
     },
-    
     "alphabet_e": {
       "name": "Alphabet E",
       "description": "Everything begins with letter E",
-      "overlay": "Apply theme: Alphabet Letter E\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as explorers OR elephants OR elves\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter E\n- Include: elephant, eagle, eggs, envelope, earth, elf, engine, eyeglasses\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'E' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot E words"
+      "overlay": "ALPHABET E THEME:\n\n1. COSTUMES: Dress all people as elephants or explorers\n2. BIG LETTER: Draw a LARGE letter E - make it one of the biggest elements in the scene\n3. E OBJECTS: Fill scene with E things - eagle, eggs, envelope, earth, elf, engine, eyeglasses"
     },
-    
     "alphabet_f": {
       "name": "Alphabet F",
       "description": "Everything begins with letter F",
-      "overlay": "Apply theme: Alphabet Letter F\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as firefighters OR fairies OR frogs\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter F\n- Include: fish, frog, flower, flag, fork, feather, fire truck, flamingo, fox\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'F' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot F words"
+      "overlay": "ALPHABET F THEME:\n\n1. COSTUMES: Dress all people as frogs or firefighters\n2. BIG LETTER: Draw a LARGE letter F - make it one of the biggest elements in the scene\n3. F OBJECTS: Fill scene with F things - fish, flower, flag, fork, feather, fire truck, flamingo, fox"
     },
-    
     "alphabet_g": {
       "name": "Alphabet G",
       "description": "Everything begins with letter G",
-      "overlay": "Apply theme: Alphabet Letter G\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as gardeners OR giraffes OR ghosts (friendly)\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter G\n- Include: giraffe, grapes, guitar, grass, goat, gift, glasses, globe, gorilla\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'G' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot G words"
+      "overlay": "ALPHABET G THEME:\n\n1. COSTUMES: Dress all people as giraffes or gardeners\n2. BIG LETTER: Draw a LARGE letter G - make it one of the biggest elements in the scene\n3. G OBJECTS: Fill scene with G things - grapes, guitar, grass, goat, gift, glasses, globe, gorilla"
     },
-    
     "alphabet_h": {
       "name": "Alphabet H",
       "description": "Everything begins with letter H",
-      "overlay": "Apply theme: Alphabet Letter H\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as hippos OR horses OR wearing big hats\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter H\n- Include: house, horse, hat, heart, helicopter, hippo, hammer, honey, hedgehog\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'H' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot H words"
+      "overlay": "ALPHABET H THEME:\n\n1. COSTUMES: Dress all people as hippos or horses\n2. BIG LETTER: Draw a LARGE letter H - make it one of the biggest elements in the scene\n3. H OBJECTS: Fill scene with H things - house, hat, heart, helicopter, hammer, honey, hedgehog"
     },
-    
     "alphabet_i": {
       "name": "Alphabet I",
       "description": "Everything begins with letter I",
-      "overlay": "Apply theme: Alphabet Letter I\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as ice skaters OR insects OR inuit/eskimo outfits\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter I\n- Include: ice cream, igloo, island, iguana, ice, insects, iron, ivy\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'I' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot I words"
+      "overlay": "ALPHABET I THEME:\n\n1. COSTUMES: Dress all people as ice skaters or insects\n2. BIG LETTER: Draw a LARGE letter I - make it one of the biggest elements in the scene\n3. I OBJECTS: Fill scene with I things - ice cream, igloo, island, iguana, ice, iron, ivy"
     },
-    
     "alphabet_j": {
       "name": "Alphabet J",
       "description": "Everything begins with letter J",
-      "overlay": "Apply theme: Alphabet Letter J\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as jesters OR jungle explorers OR wearing jeans jackets\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter J\n- Include: jaguar, jellyfish, jam, jar, jeans, jet, juice, jungle, jewels\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'J' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot J words"
+      "overlay": "ALPHABET J THEME:\n\n1. COSTUMES: Dress all people as jesters or jungle explorers\n2. BIG LETTER: Draw a LARGE letter J - make it one of the biggest elements in the scene\n3. J OBJECTS: Fill scene with J things - jaguar, jellyfish, jam, jar, jeans, jet, juice, jewels"
     },
-    
     "alphabet_k": {
       "name": "Alphabet K",
       "description": "Everything begins with letter K",
-      "overlay": "Apply theme: Alphabet Letter K\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as kings/queens OR kangaroos OR karate outfits\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter K\n- Include: kangaroo, kite, key, king, kitten, kettle, keyboard, koala\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'K' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot K words"
+      "overlay": "ALPHABET K THEME:\n\n1. COSTUMES: Dress all people as kings or kangaroos\n2. BIG LETTER: Draw a LARGE letter K - make it one of the biggest elements in the scene\n3. K OBJECTS: Fill scene with K things - kite, key, kitten, kettle, keyboard, koala"
     },
-    
     "alphabet_l": {
       "name": "Alphabet L",
       "description": "Everything begins with letter L",
-      "overlay": "Apply theme: Alphabet Letter L\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as lions OR ladybugs OR lifeguards\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter L\n- Include: lion, ladybug, lamp, leaf, lemon, lighthouse, lizard, lollipop, ladder\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'L' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot L words"
+      "overlay": "ALPHABET L THEME:\n\n1. COSTUMES: Dress all people as lions or ladybugs\n2. BIG LETTER: Draw a LARGE letter L - make it one of the biggest elements in the scene\n3. L OBJECTS: Fill scene with L things - lamp, leaf, lemon, lighthouse, lizard, lollipop, ladder"
     },
-    
     "alphabet_m": {
       "name": "Alphabet M",
       "description": "Everything begins with letter M",
-      "overlay": "Apply theme: Alphabet Letter M\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as monkeys OR mice OR magicians\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter M\n- Include: monkey, moon, mouse, mushroom, mountain, milk, muffin, mitten, mailbox\n- Make it educational - children should spot M words\n\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'M' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge"
+      "overlay": "ALPHABET M THEME:\n\n1. COSTUMES: Dress all people as monkeys or mice\n2. BIG LETTER: Draw a LARGE letter M - make it one of the biggest elements in the scene\n3. M OBJECTS: Fill scene with M things - moon, mushroom, mountain, milk, muffin, mailbox, mitten"
     },
-    
     "alphabet_n": {
       "name": "Alphabet N",
       "description": "Everything begins with letter N",
-      "overlay": "Apply theme: Alphabet Letter N\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as nurses OR ninjas OR wearing necklaces\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter N\n- Include: nest, nuts, newspaper, needle, noodles, numbers, night sky, narwhal\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'N' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot N words"
+      "overlay": "ALPHABET N THEME:\n\n1. COSTUMES: Dress all people as nurses or ninjas\n2. BIG LETTER: Draw a LARGE letter N - make it one of the biggest elements in the scene\n3. N OBJECTS: Fill scene with N things - nest, nuts, newspaper, noodles, numbers, night sky, narwhal"
     },
-    
     "alphabet_o": {
       "name": "Alphabet O",
       "description": "Everything begins with letter O",
-      "overlay": "Apply theme: Alphabet Letter O\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as owls OR octopus OR orange costumes\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter O\n- Include: owl, octopus, orange, ocean, ostrich, otter, olive, onion, oval\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'O' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot O words"
+      "overlay": "ALPHABET O THEME:\n\n1. COSTUMES: Dress all people as owls or octopus\n2. BIG LETTER: Draw a LARGE letter O - make it one of the biggest elements in the scene\n3. O OBJECTS: Fill scene with O things - orange, ocean, ostrich, otter, olive, onion, oval"
     },
-    
     "alphabet_p": {
       "name": "Alphabet P",
       "description": "Everything begins with letter P",
-      "overlay": "Apply theme: Alphabet Letter P\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as pirates OR pandas OR princesses/princes\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter P\n- Include: panda, penguin, pig, pizza, pumpkin, pencil, parrot, piano, popcorn\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'P' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot P words"
+      "overlay": "ALPHABET P THEME:\n\n1. COSTUMES: Dress all people as pirates or pandas\n2. BIG LETTER: Draw a LARGE letter P - make it one of the biggest elements in the scene\n3. P OBJECTS: Fill scene with P things - penguin, pig, pizza, pumpkin, pencil, parrot, piano, popcorn"
     },
-    
     "alphabet_q": {
       "name": "Alphabet Q",
       "description": "Everything begins with letter Q",
-      "overlay": "Apply theme: Alphabet Letter Q\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as queens/kings with crowns OR wearing quilted clothing\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter Q\n- Include: queen, quilt, question mark, quail, quarter, quiver (arrows), quiche\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'Q' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot Q words"
+      "overlay": "ALPHABET Q THEME:\n\n1. COSTUMES: Dress all people as queens or kings with crowns\n2. BIG LETTER: Draw a LARGE letter Q - make it one of the biggest elements in the scene\n3. Q OBJECTS: Fill scene with Q things - quilt, question mark, quail, quarter, quiver"
     },
-    
     "alphabet_r": {
       "name": "Alphabet R",
       "description": "Everything begins with letter R",
-      "overlay": "Apply theme: Alphabet Letter R\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as robots OR rabbits OR race car drivers\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter R\n- Include: rabbit, rainbow, rocket, robot, rose, rain, ring, rooster, raccoon\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'R' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot R words"
+      "overlay": "ALPHABET R THEME:\n\n1. COSTUMES: Dress all people as robots or rabbits\n2. BIG LETTER: Draw a LARGE letter R - make it one of the biggest elements in the scene\n3. R OBJECTS: Fill scene with R things - rainbow, rocket, rose, rain, ring, rooster, raccoon"
     },
-    
     "alphabet_s": {
       "name": "Alphabet S",
       "description": "Everything begins with letter S",
-      "overlay": "Apply theme: Alphabet Letter S\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as superheroes OR sailors OR snakes\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter S\n- Include: sun, star, snake, snail, strawberry, spider, ship, sandwich, seahorse\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'S' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot S words"
+      "overlay": "ALPHABET S THEME:\n\n1. COSTUMES: Dress all people as superheroes or sailors\n2. BIG LETTER: Draw a LARGE letter S - make it one of the biggest elements in the scene\n3. S OBJECTS: Fill scene with S things - sun, star, snake, snail, strawberry, spider, ship, seahorse"
     },
-    
     "alphabet_t": {
       "name": "Alphabet T",
       "description": "Everything begins with letter T",
-      "overlay": "Apply theme: Alphabet Letter T\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as tigers OR train conductors OR turtles\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter T\n- Include: tiger, tree, train, turtle, teddy bear, tent, tomato, trumpet, truck\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'T' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot T words"
+      "overlay": "ALPHABET T THEME:\n\n1. COSTUMES: Dress all people as tigers or train conductors\n2. BIG LETTER: Draw a LARGE letter T - make it one of the biggest elements in the scene\n3. T OBJECTS: Fill scene with T things - tree, train, turtle, teddy bear, tent, tomato, trumpet, truck"
     },
-    
     "alphabet_u": {
       "name": "Alphabet U",
       "description": "Everything begins with letter U",
-      "overlay": "Apply theme: Alphabet Letter U\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people with umbrellas OR unicorn costumes OR uniforms\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter U\n- Include: umbrella, unicorn, underwear, ukulele, umpire, uniform, utensils\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'U' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot U words"
+      "overlay": "ALPHABET U THEME:\n\n1. COSTUMES: Dress all people as unicorns or uniforms\n2. BIG LETTER: Draw a LARGE letter U - make it one of the biggest elements in the scene\n3. U OBJECTS: Fill scene with U things - umbrella, underwear, ukulele, umpire, utensils"
     },
-    
     "alphabet_v": {
       "name": "Alphabet V",
       "description": "Everything begins with letter V",
-      "overlay": "Apply theme: Alphabet Letter V\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as veterinarians OR vikings OR with violet/purple clothing\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter V\n- Include: violin, volcano, vase, vegetables, vest, vulture, van, vine, vacuum\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'V' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot V words"
+      "overlay": "ALPHABET V THEME:\n\n1. COSTUMES: Dress all people as veterinarians or vikings\n2. BIG LETTER: Draw a LARGE letter V - make it one of the biggest elements in the scene\n3. V OBJECTS: Fill scene with V things - violin, volcano, vase, vegetables, vest, vulture, van, vine"
     },
-    
     "alphabet_w": {
       "name": "Alphabet W",
       "description": "Everything begins with letter W",
-      "overlay": "Apply theme: Alphabet Letter W\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as wizards OR wolves OR witches (friendly)\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter W\n- Include: whale, watermelon, wagon, watch, window, worm, wolf, windmill, waffle\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'W' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot W words"
+      "overlay": "ALPHABET W THEME:\n\n1. COSTUMES: Dress all people as wizards or wolves\n2. BIG LETTER: Draw a LARGE letter W - make it one of the biggest elements in the scene\n3. W OBJECTS: Fill scene with W things - whale, watermelon, wagon, watch, window, worm, windmill, waffle"
     },
-    
     "alphabet_x": {
       "name": "Alphabet X",
       "description": "Everything begins with letter X",
-      "overlay": "Apply theme: Alphabet Letter X\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people with X-ray vision goggles OR as x-ray technicians\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter X or have X in them\n- Include: x-ray, xylophone, x marks the spot, fox, box, six, taxi, exit sign\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'X' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot X words"
+      "overlay": "ALPHABET X THEME:\n\n1. COSTUMES: Dress all people as x-ray technicians\n2. BIG LETTER: Draw a LARGE letter X - make it one of the biggest elements in the scene\n3. X OBJECTS: Fill scene with X things - x-ray, xylophone, fox, box, six, taxi, exit sign"
     },
-    
     "alphabet_y": {
       "name": "Alphabet Y",
       "description": "Everything begins with letter Y",
-      "overlay": "Apply theme: Alphabet Letter Y\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in yellow clothing OR as yaks OR with yo-yos\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter Y\n- Include: yo-yo, yacht, yarn, yak, yogurt, yolk, yellow items, yawn\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'Y' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot Y words"
+      "overlay": "ALPHABET Y THEME:\n\n1. COSTUMES: Dress all people as yellow costumes or yaks\n2. BIG LETTER: Draw a LARGE letter Y - make it one of the biggest elements in the scene\n3. Y OBJECTS: Fill scene with Y things - yo-yo, yacht, yarn, yogurt, yolk"
     },
-    
     "alphabet_z": {
       "name": "Alphabet Z",
       "description": "Everything begins with letter Z",
-      "overlay": "Apply theme: Alphabet Letter Z\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as zebras OR zookeepers OR with zigzag patterns\n- This is the most important part of the theme\n\nALPHABET SCENE REQUIREMENT:\n- EVERY object in the scene must begin with letter Z\n- Include: zebra, zoo, zipper, zeppelin, zero, zigzag, zucchini, zombie (friendly)\nLETTER REQUIREMENT (CRITICAL - SECOND PRIORITY AFTER COSTUMES):\n- Draw a LARGE, BOLD outlined letter 'Z' - it should be one of the biggest elements in the scene\n- The letter must take up at least 15-20% of the image\n- Position it prominently - not hidden in a corner\n- The letter must be FULLY VISIBLE and NOT cut off at any edge\n- Make it educational - children should spot Z words"
+      "overlay": "ALPHABET Z THEME:\n\n1. COSTUMES: Dress all people as zebras or zookeepers\n2. BIG LETTER: Draw a LARGE letter Z - make it one of the biggest elements in the scene\n3. Z OBJECTS: Fill scene with Z things - zoo, zipper, zeppelin, zero, zigzag, zucchini"
     },
-    
     "counting": {
       "name": "Counting Fun",
       "description": "Numbers and counting objects",
       "overlay": "Apply theme: Counting\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in school/learning themed outfits\n- Add number badges or shirts with numbers on them\n- This is the most important part of the theme\n\nCOUNTING SCENE REQUIREMENT:\n- Include countable groups of objects: 1 sun, 2 birds, 3 flowers, 4 butterflies, 5 stars\n- Make numbers clearly countable (not too many)\n- Add number symbols 1-5 in the scene\n- Educational - children should practice counting"
     },
-    
     "shapes": {
       "name": "Shapes & Patterns",
       "description": "Geometric shapes everywhere",
       "overlay": "Apply theme: Shapes\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in clothing with shape patterns (circles, triangles, squares)\n- Add shape badges or accessories\n- This is the most important part of the theme\n\nSHAPES SCENE REQUIREMENT:\n- Include clear geometric shapes throughout: circles, squares, triangles, rectangles, stars, hearts\n- Objects should BE shapes: round sun, square windows, triangle roofs\n- Make shapes obvious and recognizable\n- Educational - children should identify shapes"
     },
-    
     "seasons_spring": {
       "name": "Spring Season",
       "description": "Springtime with flowers and baby animals",
       "overlay": "Apply theme: Spring\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in spring clothing: rain boots, light jackets, sun hats\n- Add flower crowns or butterfly accessories\n- This is the most important part of the theme\n\nSPRING SCENE ELEMENTS:\n- Flowers blooming, butterflies, baby animals (chicks, lambs, bunnies)\n- Rainbow, rain puddles, sunshine breaking through clouds\n- Trees with new leaves, birds building nests"
     },
-    
     "seasons_summer": {
       "name": "Summer Season",
       "description": "Beach and summer fun",
       "overlay": "Apply theme: Summer\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in summer beach wear: swimsuits, sun hats, sunglasses\n- Add beach accessories: bucket, spade, towel\n- This is the most important part of the theme\n\nSUMMER SCENE ELEMENTS:\n- Beach, sandcastle, ocean waves, seashells\n- Bright sun, ice cream, watermelon\n- Palm trees, beach ball, flip flops"
     },
-    
     "seasons_autumn": {
       "name": "Autumn/Fall Season",
       "description": "Fall leaves and harvest time",
       "overlay": "Apply theme: Autumn\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in cozy autumn clothes: sweaters, scarves, boots\n- Add autumn accessories: leaf crown, pumpkin basket\n- This is the most important part of the theme\n\nAUTUMN SCENE ELEMENTS:\n- Falling leaves, pumpkins, apples, acorns\n- Trees with autumn leaves, squirrels collecting nuts\n- Harvest vegetables, corn, scarecrow"
     },
-    
     "seasons_winter": {
       "name": "Winter Season",
       "description": "Snow and winter wonderland",
       "overlay": "Apply theme: Winter\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in warm winter clothes: coats, hats, scarves, mittens, boots\n- Add earmuffs, woolly accessories\n- This is the most important part of the theme\n\nWINTER SCENE ELEMENTS:\n- Snow, snowflakes, snowman, icicles\n- Bare trees with snow, frozen pond\n- Sled, hot cocoa, cozy cabin"
     },
-    
     "kindness": {
       "name": "Kindness",
       "description": "Acts of kindness and helping others",
       "overlay": "Apply theme: Kindness\n\nSCENE REQUIREMENT (CRITICAL):\n- Show the people in the photo performing acts of KINDNESS\n- Examples: sharing food, helping someone up, giving a gift, hugging\n- Include heart symbols throughout the scene\n- Warm, gentle atmosphere\n\nKINDNESS ELEMENTS:\n- Hearts floating in scene\n- People holding hands or helping each other\n- Gift boxes, flowers being shared\n- Smiling faces, warm expressions"
     },
-    
     "friendship": {
       "name": "Friendship",
       "description": "Best friends having fun together",
       "overlay": "Apply theme: Friendship\n\nSCENE REQUIREMENT (CRITICAL):\n- Show the people as BEST FRIENDS doing activities together\n- Examples: playing together, laughing, sharing, high-fiving\n- Include friendship symbols: linked hands, matching outfits\n\nFRIENDSHIP ELEMENTS:\n- People close together, arms around each other\n- Playground, picnic, or fun activity setting\n- Matching friendship bracelets or accessories\n- Happy, joyful expressions"
     },
-    
     "feelings": {
       "name": "Feelings & Emotions",
       "description": "Exploring different emotions",
       "overlay": "Apply theme: Feelings\n\nSCENE REQUIREMENT (CRITICAL):\n- Show people with clear HAPPY emotions and expressions\n- Include emotion symbols: smiley faces, hearts, stars\n- Warm, positive atmosphere\n\nFEELINGS ELEMENTS:\n- Big happy smiles on faces\n- Emoji-style emotion faces in background (happy, excited, peaceful)\n- Hearts, stars, sunshine representing positive feelings\n- Calm, friendly environment"
     },
-    
     "being_brave": {
       "name": "Being Brave",
       "description": "Courage and trying new things",
       "overlay": "Apply theme: Being Brave\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as brave adventurers or superheroes\n- Add capes, brave badges, adventure gear\n- This is the most important part of the theme\n\nBRAVERY SCENE:\n- Show people doing something brave: climbing, exploring, standing tall\n- Include symbols of courage: stars, shields, mountains conquered\n- Encouraging, empowering atmosphere\n- 'You can do it!' feeling"
     }
   },
-  
   "custom_modifiers": {
     "add_pet": {
       "name": "Include Family Pet",
