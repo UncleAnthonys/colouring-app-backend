@@ -71,9 +71,85 @@ IMPORTANT:
 - Preserve the original subjects (people/pets) from the photo but transform them into the theme"""
 
 
-def build_photo_prompt(age_level: str = "age_5_6", theme: str = "none", custom_theme: str = None) -> str:
+def build_photo_prompt(age_level: str = "age_5", theme: str = "none", custom_theme: str = None) -> str:
     """Build prompt for photo-to-colouring mode"""
     
+    # UNDER 3 - blob shapes bypass
+    if age_level == "under_3":
+        theme_name = custom_theme if custom_theme else theme
+        if theme_name == "none":
+            theme_name = "the scene"
+        return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
+
+DRAW:
+- The people from the photo as VERY simple blob shapes (round heads, simple body)
+- ONE simple {theme_name} object next to them
+
+STYLE:
+- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
+- EXTREMELY THICK black outlines
+- Blob/kawaii style - super rounded and chunky
+- Faces: just dots for eyes, simple curve for mouth
+- NO fingers, NO detailed features, NO hair details
+- Bodies as simple rounded shapes
+- Maximum 8-10 colourable areas TOTAL
+
+BACKGROUND:
+- PURE WHITE - absolutely nothing else
+- No ground, no shadows, nothing
+
+OUTPUT: Simple black outline blob figures on pure white. NO COLOUR."""
+
+    # AGE 3 - super simple bypass
+    if age_level == "age_3":
+        theme_name = custom_theme if custom_theme else theme
+        if theme_name == "none":
+            theme_name = "the scene"
+        return f"""Create an EXTREMELY SIMPLE toddler colouring page.
+
+STYLE: "My First Colouring Book" - for 3 year olds.
+
+DRAW ONLY:
+- One or two simple figures (people from photo as very basic shapes)
+- One simple {theme_name} object next to them
+- THAT IS ALL - NOTHING ELSE
+
+ABSOLUTE REQUIREMENTS:
+- PURE WHITE BACKGROUND - no sky, no clouds, no ground, no grass, nothing
+- VERY THICK black outlines only
+- MAXIMUM 10-12 large colourable areas in the ENTIRE image
+- NO patterns, NO details, NO small elements
+- Simple blob-like shapes
+
+OUTPUT: Thick simple outlines on pure white. Nothing in background."""
+
+    # AGE 4 - simple figures with costumes bypass
+    if age_level == "age_4":
+        theme_name = custom_theme if custom_theme else theme
+        if theme_name == "none":
+            theme_name = "the scene"
+        return f"""Create a SIMPLE colouring page for a 4 year old.
+
+DRAW:
+- The people from the photo as simple figures with basic {theme_name} costumes
+- One simple {theme_name} character/object next to them
+
+STYLE:
+- BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture, NO gradients
+- THICK black outlines
+- Simple rounded figures
+- Faces: dots for eyes, simple smile, basic hair shape
+- Simple clothing - NO frills, NO layered skirts, NO patterns
+- Bodies still chunky and simple
+- Maximum 15-18 colourable areas
+
+BACKGROUND:
+- PURE WHITE BACKGROUND - NOTHING ELSE
+- NO ground, NO sky, NO clouds, NO rainbow
+- Just figures on white
+
+OUTPUT: Thick black outlines on pure white. No background."""
+
     # PHOTO-ACCURATE MODE - completely different prompt for "none" theme
     if theme == "none" and not custom_theme:
         base_prompt = """Convert this photograph into a colouring book page.
@@ -99,7 +175,7 @@ LINE STYLE:
 
 OUTPUT: Bold black lines on pure white background."""
 
-        if age_level == "age_3_4":
+        if age_level == "age_3":
             base_prompt += """
 
 AGE 3-4 SIMPLIFICATION (CRITICAL):
@@ -135,8 +211,29 @@ AGE 7-8 DETAIL:
     return "".join(parts)
 
 
-def build_text_to_image_prompt(description: str, age_level: str = "age_5_6") -> str:
+def build_text_to_image_prompt(description: str, age_level: str = "age_5") -> str:
     """Build prompt for text-to-image mode (no photo)"""
+    
+    # TODDLER MODE (age 3-4) - super simple single object
+    if age_level == "age_3":
+        return f"""Create an EXTREMELY SIMPLE toddler colouring page.
+
+STYLE: "My First Colouring Book" - for 3 year olds.
+
+DRAW ONLY:
+- One simple {description} character or object
+- THAT IS ALL - NOTHING ELSE
+
+ABSOLUTE REQUIREMENTS:
+- PURE WHITE BACKGROUND - no sky, no clouds, no ground, no grass, nothing
+- VERY THICK black outlines only
+- MAXIMUM 10-12 large colourable areas in the ENTIRE image
+- NO patterns, NO details, NO small elements
+- Simple blob-like shapes
+
+REFERENCE: Think of a chunky tractor or simple horse drawing in a baby's colouring book - just the object on white, nothing else.
+
+OUTPUT: Thick simple outlines on pure white. Nothing in background."""
     
     base = f"""Create a printable black-and-white colouring page for children featuring: {description}
 
@@ -293,7 +390,7 @@ class PhotoGenerateRequest(BaseModel):
     image_b64: str
     theme: str = "none"
     custom_theme: Optional[str] = None
-    age_level: str = "age_5_6"
+    age_level: str = "age_5"
     quality: str = "low"
 
 
@@ -347,7 +444,7 @@ async def generate_from_photo_endpoint(request: PhotoGenerateRequest):
 
 class TextGenerateRequest(BaseModel):
     description: str
-    age_level: str = "age_5_6"
+    age_level: str = "age_5"
     quality: str = "low"
 
 

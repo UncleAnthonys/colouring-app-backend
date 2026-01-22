@@ -6,22 +6,34 @@
     "prompt": "Convert the uploaded photo into a children's colouring book page.\n\nFACIAL LIKENESS (HIGHEST PRIORITY):\n- Faces MUST be recognisable as the actual people in the photo\n- Keep each person's real face shape, eye shape, nose, mouth\n- Keep exact hairstyles - long hair stays long, short stays short\n- A parent must recognise their children immediately\n- Simplify for colouring but KEEP THE LIKENESS - not generic cartoon faces\n\nSTYLE TARGET: Classic children's colouring book - simple, clean, easy to colour.\n\nCOMPOSITION RULES (CRITICAL):\n- SIMPLE BACKGROUND ONLY: Plain sky with 2-3 simple clouds, simple flat ground\n- NO busy backgrounds - no detailed trees, no forests, no complex scenery\n- NO scattered small objects - no rocks, pebbles, grass blades, leaves on ground\n- Maximum 8-12 main elements in the entire image\n- Lots of WHITE SPACE between elements\n- Every element well-spaced and clearly separated\n\nLINE QUALITY (CRITICAL):\n- ALL lines must connect perfectly - no gaps\n- Thick, bold, smooth outlines\n- Every shape fully enclosed for colouring\n- No sketchy or broken lines\n- No fine details or thin lines\n\nSIMPLIFICATION:\n- Clothing: Simple shapes, no complex patterns\n- Objects: Bold simple outlines only\n- Background: Minimal - sky, ground, maybe 2-3 simple elements\n\nBANNED (DO NOT INCLUDE):\n- Generic cartoon faces - faces must look like the real people\n- Detailed foliage or trees with many leaves\n- Ground texture of any kind\n- Scattered debris, rocks, grass\n- Complex patterns\n- Tiny details\n\nFRAME:\n- All elements fully within frame\n- Clear margins on all sides\n- Centred composition\n\nOUTPUT: Black lines on pure white background. No grey. No texture. No shading."
   },
   "age_levels": {
-    "age_3_4": {
-      "name": "Ages 3-4 (Very Simple)",
-      "min_age": 3,
-      "max_age": 4,
+    "under_3": {
+      "name": "Under 3",
+      "description": "Blob shapes, pure white background",
+      "overlay": "BYPASS - Uses hardcoded prompt in app.py"
+    },
+    "age_3": {
+      "name": "Age 3",
+      "description": "Super simple figures, pure white background",
+      "overlay": "BYPASS - Uses hardcoded prompt in app.py"
+    },
+    "age_4": {
+      "name": "Age 4",
+      "description": "Simple figures with basic costumes, pure white background",
+      "overlay": "BYPASS - Uses hardcoded prompt in app.py"
+    },
+    "age_5": {
+      "name": "Age 5",
+      "description": "Moderate detail, clear scenes",
       "overlay": "Age level: 3-4 years\n- Use very thick outlines\n- Extremely simple shapes\n- Minimal detail\n- No small areas\n- Background limited to one simple sky shape and one simple ground shape\n- Clothing should be one solid shape per item\n- No patterns or stripes\n- Image should feel calm and uncluttered"
     },
-    "age_5_6": {
-      "name": "Ages 5-6 (Simple)",
-      "min_age": 5,
-      "max_age": 6,
+    "age_7_8": {
+      "name": "Ages 7-8",
+      "description": "Moderate detail",
       "overlay": "Age level: 5-6 years\n- Thick outlines\n- Moderate detail allowed\n- Clothing may include simple divisions (e.g. sleeves vs body)\n- Background may include a few simple objects\n- Avoid tiny or fiddly areas"
     },
-    "age_7_8": {
-      "name": "Ages 7-8 (Detailed)",
-      "min_age": 7,
-      "max_age": 8,
+    "age_9_10": {
+      "name": "Ages 9-10 (Older Kids)",
+      "description": "More detailed and intricate",
       "overlay": "Age level: 7-8 years\n- Slightly thinner outlines\n- More detail allowed\n- Clothing patterns may be simplified\n- Background may include multiple elements\n- Still no shading or texture"
     }
   },
