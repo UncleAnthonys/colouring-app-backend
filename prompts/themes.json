@@ -39,6 +39,11 @@
     "age_5": {
       "name": "Age 5",
       "description": "Simple costumes, minimal background",
+      "overlay": "Age level: 5 years\n- Medium-thick outlines\n- Simple but recognisable figures\n- Clothing: simple shapes, NO frills, NO layered skirts, NO intricate patterns\n- Maximum 20-25 colourable areas\n- MINIMAL background only - simple ground line, 1-2 simple clouds\n- NO rainbow, NO detailed scenery, NO flowers, NO scattered stars\n- Keep it simple and clean"
+    },
+    "age_7": {
+      "name": "Age 7",
+      "description": "More detail within objects, fuller scenes",
       "overlay": "BYPASS - Uses hardcoded prompt in app.py"
     }
   },
