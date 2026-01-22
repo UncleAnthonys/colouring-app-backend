@@ -44,7 +44,7 @@
     "age_7": {
       "name": "Age 7",
       "description": "More detail within objects, fuller scenes",
-      "overlay": "Age level: 7 years\n\nDETAIL LEVEL:\n- More detail WITHIN each object (not more objects)\n- Hair: show individual sections/strands to colour separately\n- Clothing: add simple patterns (stripes, stars, small shapes as outlines)\n- Faces: more expressive features\n- 30-35 colourable areas total\n\nBACKGROUND:\n- Fuller themed background\n- Ground, sky, clouds, 2-3 themed elements\n\nCRITICAL - KEEP IT CLEAN:\n- Every area must be PURE WHITE inside black outlines\n- NO grey shading, NO pencil texture, NO noise, NO random dots\n- Clean spaces between all lines"
+      "overlay": "Age level: 7 years\n\nDETAIL LEVEL:\n- More detail WITHIN each object (not more objects)\n- Hair: show individual sections/strands to colour separately\n- Clothing: add simple patterns (stripes, stars, small shapes as outlines)\n- Faces: more expressive features\n- 30-35 colourable areas total\n\nBACKGROUND:\n- Fuller themed background\n- Ground, sky, clouds, 2-3 themed elements\n\n\u26a0\ufe0f CRITICAL - ABSOLUTELY NO TEXTURE OR NOISE:\n- NO dots, NO speckles, NO stippling anywhere\n- NO pencil texture on ANY surface\n- NO grey shading of any kind\n- Every area must be PURE SOLID WHITE inside black outlines\n- Dresses, clothing, ground - ALL pure white, no dots\n- Clean crisp lines only"
     }
   },
   "themes": {
