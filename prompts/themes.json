@@ -450,5 +450,8 @@
       "text_only": true,
       "prompt": "12 times table quiz colouring page showing 12x1=12, 12x2=24, 12x3=36, 12x4=48, 12x5=60 written large with decorative borders around each equation, cute owl teacher character and school children, clean colouring book style"
     }
+  },
+  "master_text_prompt": {
+    "prompt": "Create a children's colouring book page.\n\n\u26a0\ufe0f ABSOLUTE REQUIREMENT - 100% BLACK AND WHITE:\n- ONLY black lines on pure white background\n- NO grey anywhere - not even light grey\n- NO shading of any kind\n- NO gradients\n- NO colour of any kind\n- NO dots, NO speckles, NO texture, NO noise\n- Every single area must be PURE WHITE inside black outlines\n- The background must be PURE WHITE\n- This is a colouring book - children will add the colour\n\nLINE QUALITY:\n- Medium-thickness black outlines throughout\n- ALL lines must connect perfectly - no gaps\n- All shapes fully enclosed for colouring\n- Clean, smooth lines - no sketchy or broken lines\n\nCOMPOSITION:\n- All elements must be FULLY VISIBLE - nothing cut off at edges\n- No title text or banners unless specified\n\nOUTPUT: Clean black outlines on pure white. No grey. No texture. No shading. No colour."
   }
 }
