@@ -178,37 +178,6 @@ BACKGROUND:
 OUTPUT: Clean black outlines with minimal simple background. Keep it simple."""
 
     # AGE 7 - more detail within objects, fuller scenes
-    if age_level == "age_7":
-        theme_name = custom_theme if custom_theme else theme
-        if theme_name == "none":
-            theme_name = "the scene"
-        return f"""Create a colouring page for a 7 year old.
-
-DRAW:
-- The people from the photo in detailed {theme_name} costumes
-- 2-3 {theme_name} characters/objects around them
-- Background scene appropriate to theme
-
-STYLE:
-- BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture, NO noise, NO random dots
-- Medium black outlines
-- More detail WITHIN objects:
-  - Hair with individual sections/strands to colour separately
-  - Clothing with simple patterns (stripes, stars, dots as outlines)
-  - Faces more expressive
-- Keep all areas CLEAN - pure white inside lines
-- 30-35 colourable areas
-
-BACKGROUND:
-- Fuller background scene
-- Ground, sky, clouds
-- A few themed elements (but not cluttered)
-- All clean outlines, no shading
-
-CRITICAL: Every area must be pure white inside black outlines. NO pencil texture. NO grey fills. Clean colourable spaces.
-
-OUTPUT: Detailed black line drawing with clean white spaces throughout."""
-
     # PHOTO-ACCURATE MODE - completely different prompt for "none" theme
     if theme == "none" and not custom_theme:
         base_prompt = """Convert this photograph into a colouring book page.
