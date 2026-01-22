@@ -242,10 +242,26 @@ AGE 7-8 DETAIL:
 def build_text_to_image_prompt(description: str, age_level: str = "age_5") -> str:
     """Build prompt for text-to-image mode (no photo)"""
     
-    # CHECK FOR TIMES_TABLES / MATHS THEMES FIRST
+    # CHECK FOR TEXT-ONLY THEMES FIRST (maths, times tables, etc.)
+    # Check in themes section for text_only themes
+    if "themes" in CONFIG and description in CONFIG["themes"]:
+        theme_data = CONFIG["themes"][description]
+        if theme_data.get("text_only", False):
+            # Use master_text_prompt + theme overlay
+            base_prompt = CONFIG.get("master_text_prompt", {}).get("prompt", "")
+            base_prompt += "\n\n" + theme_data.get("overlay", "")
+            
+            # Add age level overlay if exists
+            if age_level in CONFIG["age_levels"]:
+                base_prompt += "\n\n" + CONFIG["age_levels"][age_level]["overlay"]
+            
+            return base_prompt
+    
+    # Check in times_tables section (legacy)
     if "times_tables" in CONFIG and description in CONFIG["times_tables"]:
         theme_data = CONFIG["times_tables"][description]
-        base_prompt = theme_data["prompt"]
+        base_prompt = CONFIG.get("master_text_prompt", {}).get("prompt", "")
+        base_prompt += "\n\n" + theme_data.get("prompt", "")
         
         # Add age level overlay if exists
         if age_level in CONFIG["age_levels"]:
