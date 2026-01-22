@@ -343,6 +343,24 @@
       "name": "Being Brave",
       "description": "Courage and trying new things",
       "overlay": "Apply theme: Being Brave\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as brave adventurers or superheroes\n- Add capes, brave badges, adventure gear\n- This is the most important part of the theme\n\nBRAVERY SCENE:\n- Show people doing something brave: climbing, exploring, standing tall\n- Include symbols of courage: stars, shields, mountains conquered\n- Encouraging, empowering atmosphere\n- 'You can do it!' feeling"
+    },
+    "adding_socks": {
+      "name": "Adding with Socks",
+      "description": "Learn addition by counting socks on a washing line",
+      "text_only": true,
+      "overlay": "Apply theme: Addition with Socks\n\nSCENE LAYOUT (CRITICAL):\n- A washing line stretching across the page\n- LEFT SIDE: A group of simple socks hanging on the line (3-5 socks)\n- MIDDLE: A large clear PLUS symbol (+)\n- RIGHT SIDE: Another group of simple socks hanging on the line (2-4 socks)\n- Then a large clear EQUALS symbol (=)\n- FAR RIGHT: Empty pegs on the washing line (no socks) - this is where the child draws the answer\n\nCRITICAL RULES:\n- NO numbers anywhere on the page - ONLY socks and + = symbols\n- Simple cartoon socks with basic stripe patterns\n- Each sock clearly separate and easy to count\n- Make socks large and easy to colour\n\nDO NOT INCLUDE:\n- Any people or characters\n- Any numbers or digits\n- Any text or labels"
+    },
+    "adding_balloons": {
+      "name": "Adding with Balloons",
+      "description": "Learn addition by counting balloons",
+      "text_only": true,
+      "overlay": "Apply theme: Addition with Balloons\n\nSCENE LAYOUT (CRITICAL):\n- LEFT SIDE: A bunch of simple round balloons with strings (3-5 balloons)\n- MIDDLE: A large clear PLUS symbol (+)\n- RIGHT SIDE: Another bunch of balloons with strings (2-4 balloons)\n- Then a large clear EQUALS symbol (=)\n- FAR RIGHT: An empty cloud or box shape (space for child to draw the answer)\n\nCRITICAL RULES:\n- NO numbers anywhere on the page - ONLY balloons and + = symbols\n- Simple round balloons, each clearly separate\n- Each balloon easy to count\n- Make balloons large and easy to colour\n\nDO NOT INCLUDE:\n- Any people or characters\n- Any numbers or digits\n- Any text or labels"
+    },
+    "adding_cupcakes": {
+      "name": "Adding with Cupcakes",
+      "description": "Learn addition by counting cupcakes",
+      "text_only": true,
+      "overlay": "Apply theme: Addition with Cupcakes\n\nSCENE LAYOUT (CRITICAL):\n- LEFT SIDE: A group of cupcakes on a plate or stand (3-5 cupcakes)\n- MIDDLE: A large clear PLUS symbol (+)\n- RIGHT SIDE: Another group of cupcakes (2-4 cupcakes)\n- Then a large clear EQUALS symbol (=)\n- FAR RIGHT: An empty plate or box (space for child to draw the answer)\n\nCRITICAL RULES:\n- NO numbers anywhere on the page - ONLY cupcakes and + = symbols\n- Simple cupcakes with swirl frosting\n- Each cupcake clearly separate and easy to count\n- Make cupcakes large and easy to colour\n\nDO NOT INCLUDE:\n- Any people or characters\n- Any numbers or digits\n- Any text or labels"
     }
   },
   "custom_modifiers": {
@@ -431,24 +449,6 @@
       "description": "Learn the 12 times table",
       "text_only": true,
       "prompt": "12 times table quiz colouring page showing 12x1=12, 12x2=24, 12x3=36, 12x4=48, 12x5=60 written large with decorative borders around each equation, cute owl teacher character and school children, clean colouring book style"
-    },
-    "adding_socks": {
-      "name": "Adding with Socks",
-      "description": "Learn addition by counting socks on a washing line",
-      "text_only": true,
-      "prompt": "Simple addition colouring page with a washing line.\n\nLAYOUT:\n- A washing line across the top of the page\n- Several socks hanging on the LEFT side of the line\n- A large PLUS symbol (+) in the middle\n- Several socks hanging on the RIGHT side of the line\n- A large EQUALS symbol (=)\n- Empty pegs on the line (space for child to draw the answer)\n\nCRITICAL RULES:\n- NO numbers anywhere on the page - only socks and + = symbols\n- Simple cartoon socks with basic stripe patterns\n- Each sock clearly separate and easy to count\n\n\u26a0\ufe0f ABSOLUTE REQUIREMENT - 100% BLACK AND WHITE:\n- ONLY black lines on pure white background\n- NO grey anywhere\n- NO shading of any kind\n- NO dots, NO speckles, NO texture\n- Every area must be PURE WHITE inside black outlines\n- This is a colouring book - children will add the colour"
-    },
-    "adding_balloons": {
-      "name": "Adding with Balloons",
-      "description": "Learn addition by counting balloons",
-      "text_only": true,
-      "prompt": "Simple addition colouring page with balloons.\n\nLAYOUT:\n- A group of balloons on the LEFT side\n- A large PLUS symbol (+) in the middle\n- A group of balloons on the RIGHT side\n- A large EQUALS symbol (=)\n- An empty box or cloud shape (space for child to draw the answer)\n\nCRITICAL RULES:\n- NO numbers anywhere on the page - only balloons and + = symbols\n- Simple round balloons with strings\n- Each balloon clearly separate and easy to count\n\n\u26a0\ufe0f ABSOLUTE REQUIREMENT - 100% BLACK AND WHITE:\n- ONLY black lines on pure white background\n- NO grey anywhere\n- NO shading of any kind\n- NO dots, NO speckles, NO texture\n- Every area must be PURE WHITE inside black outlines\n- This is a colouring book - children will add the colour"
-    },
-    "adding_cupcakes": {
-      "name": "Adding with Cupcakes",
-      "description": "Learn addition by counting cupcakes",
-      "text_only": true,
-      "prompt": "Simple addition colouring page with cupcakes.\n\nLAYOUT:\n- A group of cupcakes on the LEFT side\n- A large PLUS symbol (+) in the middle  \n- A group of cupcakes on the RIGHT side\n- A large EQUALS symbol (=)\n- An empty box or plate shape (space for child to draw the answer)\n\nCRITICAL RULES:\n- NO numbers anywhere on the page - only cupcakes and + = symbols\n- Simple cupcakes with swirl frosting on top\n- Each cupcake clearly separate and easy to count\n\n\u26a0\ufe0f ABSOLUTE REQUIREMENT - 100% BLACK AND WHITE:\n- ONLY black lines on pure white background\n- NO grey anywhere\n- NO shading of any kind\n- NO dots, NO speckles, NO texture\n- Every area must be PURE WHITE inside black outlines\n- This is a colouring book - children will add the colour"
     }
   }
 }
