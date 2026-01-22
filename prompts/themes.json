@@ -45,6 +45,11 @@
       "name": "Age 7",
       "description": "More detail within objects, fuller scenes",
       "overlay": "Age level: 7 years\n\nDETAIL LEVEL:\n- More detail WITHIN each object (not more objects)\n- Hair: show individual sections/strands to colour separately\n- Clothing: add simple patterns (stripes, stars, small shapes as outlines)\n- Faces: more expressive features\n- 30-35 colourable areas total\n\nBACKGROUND:\n- Fuller themed background\n- Ground, sky, clouds, 2-3 themed elements\n\n\u26a0\ufe0f CRITICAL - ABSOLUTELY NO TEXTURE OR NOISE:\n- NO dots, NO speckles, NO stippling anywhere\n- NO pencil texture on ANY surface\n- NO grey shading of any kind\n- Every area must be PURE SOLID WHITE inside black outlines\n- Dresses, clothing, ground - ALL pure white, no dots\n- Clean crisp lines only"
+    },
+    "age_8": {
+      "name": "Age 8",
+      "description": "More intricate patterns and details",
+      "overlay": "Age level: 8 years\n\nDETAIL LEVEL:\n- More intricate detail WITHIN each object\n- Hair: multiple sections and strands, flowing details\n- Clothing: layered patterns, ruffles, bows, decorative elements\n- Accessories: necklaces, bracelets, wands with detail\n- Faces: fuller features, eyelashes\n- 35-40 colourable areas total\n\nBACKGROUND:\n- Rich themed background\n- Multiple themed elements (3-4)\n- More detailed clouds, ground elements\n\n\u26a0\ufe0f CRITICAL - ABSOLUTELY NO TEXTURE OR NOISE:\n- NO dots, NO speckles, NO stippling anywhere\n- NO pencil texture on ANY surface\n- NO grey shading of any kind\n- Every area must be PURE SOLID WHITE inside black outlines\n- All patterns created with CLEAN LINES ONLY\n- Clean crisp outlines throughout"
     }
   },
   "themes": {
