@@ -151,7 +151,7 @@ BACKGROUND:
 OUTPUT: Thick black outlines on pure white. No background."""
 
     # AGE 5 - slightly more detail, minimal background
-    if age_level == "age_5_DISABLED":
+    if age_level == "age_5":
         theme_name = custom_theme if custom_theme else theme
         if theme_name == "none":
             theme_name = "the scene"
