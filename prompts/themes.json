@@ -21,11 +21,6 @@
       "description": "Simple figures with basic costumes, pure white background",
       "overlay": "BYPASS - Uses hardcoded prompt in app.py"
     },
-    "age_5": {
-      "name": "Age 5",
-      "description": "Moderate detail, clear scenes",
-      "overlay": "Age level: 3-4 years\n- Use very thick outlines\n- Extremely simple shapes\n- Minimal detail\n- No small areas\n- Background limited to one simple sky shape and one simple ground shape\n- Clothing should be one solid shape per item\n- No patterns or stripes\n- Image should feel calm and uncluttered"
-    },
     "age_7_8": {
       "name": "Ages 7-8",
       "description": "Moderate detail",
@@ -35,6 +30,16 @@
       "name": "Ages 9-10 (Older Kids)",
       "description": "More detailed and intricate",
       "overlay": "Age level: 7-8 years\n- Slightly thinner outlines\n- More detail allowed\n- Clothing patterns may be simplified\n- Background may include multiple elements\n- Still no shading or texture"
+    },
+    "age_6": {
+      "name": "Age 6",
+      "description": "Detailed scenes with full background",
+      "overlay": "Age level: 3-4 years\n- Use very thick outlines\n- Extremely simple shapes\n- Minimal detail\n- No small areas\n- Background limited to one simple sky shape and one simple ground shape\n- Clothing should be one solid shape per item\n- No patterns or stripes\n- Image should feel calm and uncluttered"
+    },
+    "age_5": {
+      "name": "Age 5",
+      "description": "Simple costumes, minimal background",
+      "overlay": "BYPASS - Uses hardcoded prompt in app.py"
     }
   },
   "themes": {

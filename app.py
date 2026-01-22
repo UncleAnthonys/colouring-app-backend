@@ -150,6 +150,33 @@ BACKGROUND:
 
 OUTPUT: Thick black outlines on pure white. No background."""
 
+    # AGE 5 - slightly more detail, minimal background
+    if age_level == "age_5":
+        theme_name = custom_theme if custom_theme else theme
+        if theme_name == "none":
+            theme_name = "the scene"
+        return f"""Create a colouring page for a 5 year old.
+
+DRAW:
+- The people from the photo wearing simple {theme_name} costumes (basic outfits, not elaborate)
+- One {theme_name} character/object next to them
+
+STYLE:
+- BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture
+- Medium-thick black outlines
+- Simple but recognisable figures
+- Faces: simple eyes, smile, basic hair shape
+- Clothing: simple shapes, NO frills, NO layered skirts, NO intricate patterns
+- Maximum 20-25 colourable areas
+
+BACKGROUND:
+- MINIMAL background only
+- Simple ground line
+- Maybe 1-2 simple clouds
+- NO rainbow, NO detailed scenery, NO flowers, NO stars scattered around
+
+OUTPUT: Clean black outlines with minimal simple background. Keep it simple."""
+
     # PHOTO-ACCURATE MODE - completely different prompt for "none" theme
     if theme == "none" and not custom_theme:
         base_prompt = """Convert this photograph into a colouring book page.
