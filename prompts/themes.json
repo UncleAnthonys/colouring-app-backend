@@ -86,8 +86,8 @@
     },
     "underwater": {
       "name": "Underwater World",
-      "description": "Fish, bubbles, seaweed, friendly sea creatures",
-      "overlay": "Apply theme: Underwater\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people as mermaids/mermen with fish tails instead of legs\n- OR dress them in scuba diving suits with goggles and flippers\n- This is the most important part of the theme\n\nAdditional underwater elements:\n- Add friendly fish, octopus, starfish, bubbles, seaweed\n- Wavy water lines in background\n- No scary creatures - keep everything friendly"
+      "description": "Mermaids, fish, coral, sea creatures - completely underwater",
+      "overlay": "Apply theme: Underwater\n\n\u26a0\ufe0f CRITICAL - COMPLETELY UNDERWATER SCENE:\n- The ENTIRE scene is underwater - NO sky, NO clouds, NO above-water elements\n- Background should be ocean water with light rays coming down from above\n- Bubbles floating upward throughout the scene\n\nCOSTUME REQUIREMENT (DO THIS FIRST):\n- Dress ALL people as mermaids/mermen with fish tails instead of legs\n- Add seashell accessories, coral crowns, pearl necklaces\n\nUNDERWATER ELEMENTS:\n- Sunken ship or coral reef castle or giant clamshell in background\n- Friendly fish, octopus, seahorse, jellyfish, starfish, turtle, crab\n- Seaweed, coral, rocks, shells on the ocean floor\n- Treasure chest with coins and pearls\n- NO sky, NO clouds, NO birds - everything is underwater"
     },
     "unicorns": {
       "name": "Unicorns & Rainbows",
