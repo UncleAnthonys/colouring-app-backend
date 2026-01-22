@@ -242,17 +242,6 @@ AGE 7-8 DETAIL:
 def build_text_to_image_prompt(description: str, age_level: str = "age_5") -> str:
     """Build prompt for text-to-image mode (no photo)"""
     
-    # CHECK FOR TIMES_TABLES / MATHS THEMES FIRST
-    if "times_tables" in CONFIG and description in CONFIG["times_tables"]:
-        theme_data = CONFIG["times_tables"][description]
-        base_prompt = theme_data["prompt"]
-        
-        # Add age level overlay if exists
-        if age_level in CONFIG["age_levels"]:
-            base_prompt += "\n\n" + CONFIG["age_levels"][age_level]["overlay"]
-        
-        return base_prompt
-    
     # TODDLER MODE (age 3-4) - super simple single object
     if age_level == "age_3":
         return f"""Create an EXTREMELY SIMPLE toddler colouring page.
