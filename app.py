@@ -244,6 +244,36 @@ def build_text_to_image_prompt(description: str, age_level: str = "age_5") -> st
     
     # CHECK FOR TEXT-ONLY THEMES FIRST (maths, times tables, etc.)
     
+    # Handle "dot_to_dot X" dynamic theme
+    if description.startswith("dot_to_dot "):
+        subject = description.replace("dot_to_dot ", "")
+        base_prompt = f"""Create a children's dot-to-dot activity page featuring: {subject}
+
+⚠️ ABSOLUTE REQUIREMENT - 100% BLACK AND WHITE:
+- ONLY black lines/dots on pure white background
+- NO grey anywhere - not even light grey
+- NO shading, NO gradients
+
+MAIN ELEMENT - DOT TO DOT OUTLINE:
+- Create the outline of a {subject} using ONLY DOTS (black circles)
+- The dots should form the shape of {subject} but NOT be connected
+- Space the dots evenly so a child can connect them with a pencil
+- NO NUMBERS on the dots - just plain dots
+- The shape should be recognizable as {subject} when connected
+- Make dots fairly large and clear
+
+SURROUNDING SCENE:
+- Add a few simple related items around the dot-to-dot (fully drawn, not dots)
+- Include 1-2 children holding pencils/crayons
+- Keep background minimal
+
+The child's task is to connect the dots to reveal the {subject}."""
+        
+        if age_level in CONFIG["age_levels"]:
+            base_prompt += "\n\n" + CONFIG["age_levels"][age_level]["overlay"]
+        
+        return base_prompt
+
     # Handle "find_the X" dynamic theme
     if description.startswith("find_the "):
         subject = description.replace("find_the ", "")
