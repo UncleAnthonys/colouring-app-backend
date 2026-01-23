@@ -1,0 +1,166 @@
+{
+  "theme_type": "pattern_coloring",
+  "description": "Dynamic pattern coloring pages - any shape with age-appropriate pattern complexity",
+  "version": "1.0.0",
+  "age_config": {
+    "age_2": {
+      "count": 1,
+      "layout": "in the center of the page",
+      "outline": "Extra thick bold outlines suitable for toddlers",
+      "description": "Single large shape for toddlers"
+    },
+    "age_3": {
+      "count": 2,
+      "layout": "side by side",
+      "outline": "Extra thick bold outlines suitable for young children",
+      "description": "Two simple shapes side by side"
+    },
+    "age_4": {
+      "count": 4,
+      "layout": "arranged in 2 rows of 2",
+      "outline": "Thick bold outlines",
+      "description": "Four shapes in a 2x2 grid"
+    },
+    "age_5": {
+      "count": 4,
+      "layout": "arranged in 2 rows of 2",
+      "outline": "Thick bold outlines",
+      "description": "Four shapes with medium-simple patterns"
+    },
+    "age_6": {
+      "count": 6,
+      "layout": "arranged in 3 rows of 2",
+      "outline": "Thick bold outlines",
+      "description": "Six shapes with medium patterns"
+    },
+    "age_7": {
+      "count": 6,
+      "layout": "arranged in 3 rows of 2",
+      "outline": "Bold outlines",
+      "description": "Six shapes with medium-complex patterns"
+    },
+    "age_8": {
+      "count": 6,
+      "layout": "arranged in 3 rows of 2",
+      "outline": "Bold outlines",
+      "description": "Six shapes with complex patterns"
+    },
+    "age_9": {
+      "count": 6,
+      "layout": "arranged in 3 rows of 2",
+      "outline": "Professional vector art style",
+      "description": "Six shapes with intricate patterns"
+    },
+    "age_10": {
+      "count": 6,
+      "layout": "arranged in 3 rows of 2",
+      "outline": "Professional vector art style",
+      "description": "Six shapes with very intricate patterns"
+    }
+  },
+  "pattern_pools": {
+    "age_2": [
+      "horizontal stripes",
+      "polka dots"
+    ],
+    "age_3": [
+      "horizontal stripes",
+      "polka dots"
+    ],
+    "age_4": [
+      "horizontal stripes",
+      "polka dots",
+      "wavy lines",
+      "zigzags"
+    ],
+    "age_5": [
+      "swirls",
+      "small hearts",
+      "circles",
+      "zigzags"
+    ],
+    "age_6": [
+      "stripes",
+      "dots",
+      "waves",
+      "zigzags",
+      "hearts",
+      "spirals"
+    ],
+    "age_7": [
+      "diagonal stripes",
+      "fish scale pattern",
+      "chevron zigzags",
+      "hexagon honeycomb",
+      "bullseye circles",
+      "large polka dots"
+    ],
+    "age_8": [
+      "diamond grid",
+      "overlapping circles",
+      "herringbone pattern",
+      "teardrop shapes",
+      "leaf pattern",
+      "square grid"
+    ],
+    "age_9": [
+      "peacock feather scales",
+      "swirling vines",
+      "triangle mosaic",
+      "ocean waves",
+      "sunburst rays",
+      "daisy flowers"
+    ],
+    "age_10": [
+      "mandala flower",
+      "geometric stars",
+      "paisley teardrops",
+      "celtic knots",
+      "feather pattern",
+      "rose petals"
+    ]
+  },
+  "shape_exclusions": {
+    "default": "or decorations",
+    "cat": "grass, yarn, or decorations",
+    "cats": "grass, yarn, or decorations",
+    "dog": "grass, bones, or decorations",
+    "dogs": "grass, bones, or decorations",
+    "fish": "water, bubbles, seaweed, plants, or decorations",
+    "car": "roads, or decorations",
+    "cars": "roads, or decorations",
+    "truck": "roads, or decorations",
+    "trucks": "roads, or decorations",
+    "butterfly": "flowers, grass, or decorations",
+    "butterflies": "flowers, grass, or decorations",
+    "bunny": "carrots, grass, or decorations",
+    "bunnies": "carrots, grass, or decorations",
+    "easter egg": "grass, bunnies, or decorations",
+    "easter eggs": "grass, bunnies, or decorations",
+    "mug": "steam, coffee, or decorations",
+    "mugs": "steam, coffee, or decorations",
+    "flower": "grass, or decorations",
+    "flowers": "grass, or decorations"
+  },
+  "base_exclusions": "people, children, characters, rainbows, clouds, scenery",
+  "prompt_template": "CRITICAL: This image MUST contain ONLY {count} {plural_shape} and NOTHING else. {count} cartoon {plural_shape} {layout}. {pattern_descriptions} Very simple shapes. {outline}. Professional vector art style with clean connected lines. IMPORTANT: Do NOT add any {exclusions}. The background MUST be pure white. ONLY the {count} patterned {plural_shape}.",
+  "tested_shapes": [
+    "dog",
+    "cat", 
+    "car",
+    "truck",
+    "fish",
+    "butterfly",
+    "heart",
+    "easter egg",
+    "mug",
+    "bunny"
+  ],
+  "reliability_notes": {
+    "high_reliability": ["dog", "heart", "butterfly", "easter egg", "mug", "truck", "car"],
+    "medium_reliability": ["cat", "fish", "bunny"],
+    "known_issues": ["stars (black background issues with multiple stars)"],
+    "success_rate": "~85-90% with occasional random failures",
+    "retry_recommendation": "Implement retry logic for ~10-15% failure rate"
+  }
+}
