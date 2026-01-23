@@ -384,6 +384,21 @@
       "name": "Princesses",
       "description": "Royal princess fairy tale",
       "overlay": "Apply theme: Princesses\n\nCOSTUME REQUIREMENT:\n- Dress ALL people as princesses/princes in royal gowns and crowns\n- Add tiaras, flowing dresses, capes\n\nSCENE ELEMENTS:\n- Castle towers or palace ballroom\n- Royal throne, chandeliers\n- Magical carriage or white horse\n- Rose gardens, fountains\n- Sparkles and stars\n\nSETTING:\n- Fairy tale kingdom\n- Elegant and magical atmosphere"
+    },
+    "ballerina": {
+      "name": "Ballerina",
+      "description": "Ballet tutus, ballet shoes, stage and dance elements",
+      "overlay": "Apply theme: Ballerina\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in ballet costumes\n- Must include: tutu (fluffy ballet skirt), ballet shoes/slippers, hair in a bun\n- This is the most important part of the theme\n\nAdditional ballet elements:\n- Add stage curtains, spotlights, ballet barre in background\n- Include ribbons, roses, tiaras\n- Keep poses graceful and elegant\n- Keep faces fully visible"
+    },
+    "trains": {
+      "name": "Trains",
+      "description": "Train conductor outfits, steam trains, railway elements",
+      "overlay": "Apply theme: Trains\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in train conductor uniforms\n- Must include: conductor hat, overalls or uniform with buttons, neckerchief\n- This is the most important part of the theme\n\nAdditional train elements:\n- Add steam train, railway tracks, train station in background\n- Include smoke puffs, signals, countryside scenery\n- Keep all shapes simple and rounded\n- Keep faces fully visible"
+    },
+    "cowboys": {
+      "name": "Cowboys",
+      "description": "Cowboy hats, boots, western and desert elements",
+      "overlay": "Apply theme: Cowboys\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in cowboy/cowgirl outfits\n- Must include: cowboy hat, boots, bandana, denim or western shirt\n- This is the most important part of the theme\n\nAdditional western elements:\n- Add friendly horse, cacti, desert scenery, wooden fence in background\n- Include horseshoes, sheriff badge, barn\n- No weapons or aggressive imagery\n- Keep faces fully visible"
     }
   },
   "custom_modifiers": {
