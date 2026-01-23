@@ -243,6 +243,42 @@ def build_text_to_image_prompt(description: str, age_level: str = "age_5") -> st
     """Build prompt for text-to-image mode (no photo)"""
     
     # CHECK FOR TEXT-ONLY THEMES FIRST (maths, times tables, etc.)
+    
+    # Handle "find_the X" dynamic theme
+    if description.startswith("find_the "):
+        subject = description.replace("find_the ", "")
+        base_prompt = f"""Create a children's colouring book page - a "find and seek" game featuring: {subject}
+
+⚠️ ABSOLUTE REQUIREMENT - 100% BLACK AND WHITE:
+- ONLY black lines on pure white background
+- NO grey anywhere - not even light grey
+- NO shading, NO gradients, NO filled areas
+- Every area must be PURE WHITE inside black outlines
+
+SCENE: Create an appropriate NATURAL HABITAT for {subject}:
+- If animal: their natural environment (rabbit=field with grass and burrows, fish=underwater with coral, bird=forest with trees)
+- If object: where you would find it (football=pitch with goals, car=street with buildings)
+
+IMPORTANT - Hide 8-12 copies of {subject} throughout the scene:
+- Some fully visible in the open
+- Some peeking out from behind things (bushes, rocks, trees)
+- Some partially hidden
+- Some small in the background
+- Scatter them ALL OVER the scene
+
+DO NOT INCLUDE:
+- Any numbers
+- Any text or words  
+- Any people or children
+- Any other animals (ONLY {subject})
+
+Just the habitat scene with multiple {subject} hidden throughout to find."""
+        
+        if age_level in CONFIG["age_levels"]:
+            base_prompt += "\n\n" + CONFIG["age_levels"][age_level]["overlay"]
+        
+        return base_prompt
+    
     # Check in themes section for text_only themes
     if "themes" in CONFIG and description in CONFIG["themes"]:
         theme_data = CONFIG["themes"][description]

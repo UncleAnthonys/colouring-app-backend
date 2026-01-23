@@ -346,9 +346,9 @@
     },
     "adding_socks": {
       "name": "Adding with Socks",
-      "description": "Learn addition by counting socks on a washing line",
+      "description": "Learn addition by counting socks",
       "text_only": true,
-      "overlay": "Apply theme: Addition with Socks\n\nSCENE LAYOUT (CRITICAL - ONE WASHING LINE ONLY):\n- ONE single washing line stretching across the ENTIRE page from left to right\n- LEFT SECTION: 3 simple socks hanging on the line\n- A large PLUS symbol (+) on the line or below it\n- MIDDLE SECTION: 2 simple socks hanging on the line\n- A large EQUALS symbol (=) on the line or below it\n- RIGHT SECTION: EMPTY PEGS ONLY - NO SOCKS - leave lots of empty space on the line (at least half the line empty) for the child to draw the answer\n\nCRITICAL RULES:\n- ONLY ONE washing line across the page\n- NO numbers anywhere - ONLY socks and + = symbols\n- The empty section after = must be LARGE - enough space to draw 5+ socks\n- Simple cartoon socks with basic stripe patterns\n- Each sock clearly separate and easy to count\n\nDO NOT INCLUDE:\n- Any people or characters\n- Any numbers or digits\n- Any text or labels\n- Multiple washing lines\n- Socks after the equals sign\n\n\u26a0\ufe0f ABSOLUTE REQUIREMENT - 100% BLACK AND WHITE:\n- ONLY black outlines on pure white background\n- NO colour whatsoever\n- NO grey, NO shading, NO gradients\n- NO fills of any colour\n- Every area must be PURE WHITE inside black outlines\n- This is a colouring book - children will add the colour"
+      "overlay": "Create a simple maths worksheet style colouring page.\n\nIn the CENTER of the page, draw this addition equation using sock drawings:\n\n\ud83e\udde6\ud83e\udde6\ud83e\udde6  +  \ud83e\udde6\ud83e\udde6  =  [?]\n\nThat means:\n- Three sock drawings\n- Then a plus sign\n- Then two sock drawings\n- Then an equals sign\n- Then a question mark or empty box\n\nALL ON ONE LINE, horizontally across the page.\n\nDO NOT DRAW:\n- Any washing lines or clotheslines\n- Any background scenery\n- Any grass or ground\n- Any clouds\n- Any answer after the equals sign\n\nONLY DRAW:\n- The socks (simple outline drawings)\n- The + and = symbols\n- A question mark or empty box for the answer\n- Pure white background"
     },
     "adding_balloons": {
       "name": "Adding with Balloons",
@@ -361,6 +361,24 @@
       "description": "Learn addition by counting cupcakes",
       "text_only": true,
       "overlay": "Apply theme: Addition with Cupcakes\n\nSCENE LAYOUT (CRITICAL):\n- LEFT SIDE: A group of cupcakes on a plate or stand (3-5 cupcakes)\n- MIDDLE: A large clear PLUS symbol (+)\n- RIGHT SIDE: Another group of cupcakes (2-4 cupcakes)\n- Then a large clear EQUALS symbol (=)\n- FAR RIGHT: An empty plate or box (space for child to draw the answer)\n\nCRITICAL RULES:\n- NO numbers anywhere on the page - ONLY cupcakes and + = symbols\n- Simple cupcakes with swirl frosting\n- Each cupcake clearly separate and easy to count\n- Make cupcakes large and easy to colour\n\nDO NOT INCLUDE:\n- Any people or characters\n- Any numbers or digits\n- Any text or labels"
+    },
+    "butterfly_garden": {
+      "name": "Butterfly Garden",
+      "description": "A garden scene with butterflies to find",
+      "text_only": true,
+      "overlay": "A garden colouring page with hidden butterflies.\n\nDraw a simple garden scene:\n- One big tree\n- Some bushes and flowers\n- Grass along the bottom\n\nNow add 8 BUTTERFLIES hidden throughout:\n- Some flying in the open\n- Some behind leaves\n- Some near flowers\n- Some partially hidden\n\nThis is NOT an educational page. No learning, no maths, no counting exercises.\nJust a pretty garden with butterflies to colour.\n\nDO NOT DRAW:\n- Numbers\n- Letters or words\n- People or children\n- Other animals\n- Educational elements"
+    },
+    "find_me": {
+      "name": "Find Me!",
+      "description": "Your photo subject hidden throughout a scene",
+      "overlay": "Apply theme: Find Me! (Hidden Object Game)\n\nCRITICAL TASK:\nTake the MAIN SUBJECT from the photo and draw them MULTIPLE TIMES throughout the scene (8-12 copies).\n\nPLACEMENT:\n- Some fully visible in the foreground\n- Some peeking from behind trees, bushes, furniture\n- Some partially hidden behind objects  \n- Some small in the background\n- Make it a fun \"find them all\" game\n\nSCENE: Create a fun background environment (garden, park, bedroom, forest - whatever fits the subject)\n\nDO NOT INCLUDE:\n- Any numbers\n- Any text\n- The answer/count\n\nJust the subject repeated many times in a playful hide-and-seek scene."
+    },
+    "find_the": {
+      "name": "Find The...",
+      "description": "Hidden object game - finds objects in their natural setting",
+      "text_only": true,
+      "dynamic": true,
+      "overlay": "A \"find and seek\" colouring page.\n\nTake whatever object/animal was requested and:\n\n1. Create an appropriate NATURAL HABITAT scene for that thing:\n   - Rabbit \u2192 field with grass, bushes, burrows\n   - Football \u2192 football pitch with goals, lines\n   - Fish \u2192 underwater scene with seaweed, coral\n   - Dog \u2192 park with trees, benches, paths\n   - Car \u2192 street scene with buildings, roads\n   - Bird \u2192 forest with trees, branches, nests\n\n2. Hide 8-12 of that object/animal throughout the scene:\n   - Some fully visible\n   - Some peeking out from behind things\n   - Some partially hidden\n   - Some small in background\n\nDO NOT INCLUDE:\n- Any numbers\n- Any text or words\n- Any people\n\nJust the scene and the hidden objects to find."
     }
   },
   "custom_modifiers": {
