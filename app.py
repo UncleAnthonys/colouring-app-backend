@@ -105,6 +105,32 @@ OUTPUT: Simple black outline blob figures on pure white. NO COLOUR."""
         theme_name = custom_theme if custom_theme else theme
         if theme_name == "none":
             theme_name = "the scene"
+        
+        # Special handling for alphabet themes
+        if theme.startswith("alphabet_"):
+            letter = theme.replace("alphabet_", "").upper()
+            return f"""Create an EXTREMELY SIMPLE toddler alphabet colouring page for letter {letter}.
+
+DRAW:
+- The people from the photo as VERY simple blob shapes (round heads, simple chunky body)
+- Plain simple clothing - NO patterns, NO costumes
+- A big friendly letter {letter} CHARACTER standing next to them with a cute face, arms and legs
+
+STYLE:
+- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
+- EXTREMELY THICK black outlines
+- Blob/kawaii style - super rounded and chunky figures
+- Faces: just dots for eyes, simple curve for mouth
+- NO fingers, NO detailed features
+- Bodies as simple rounded shapes
+- Maximum 10-12 colourable areas TOTAL
+
+BACKGROUND:
+- PURE WHITE - absolutely nothing else
+- No ground, no shadows, nothing
+
+OUTPUT: Simple black outline blob figures standing next to a friendly letter {letter} character on pure white."""
+        
         return f"""Create an EXTREMELY SIMPLE toddler colouring page.
 
 STYLE: "My First Colouring Book" - for 3 year olds.
@@ -128,6 +154,31 @@ OUTPUT: Thick simple outlines on pure white. Nothing in background."""
         theme_name = custom_theme if custom_theme else theme
         if theme_name == "none":
             theme_name = "the scene"
+        
+        # Special handling for alphabet themes
+        if theme.startswith("alphabet_"):
+            letter = theme.replace("alphabet_", "").upper()
+            return f"""Create a SIMPLE alphabet colouring page for letter {letter} for a 4 year old.
+
+DRAW:
+- The people from the photo as simple cute figures
+- A big friendly letter {letter} CHARACTER with a cute face, arms and legs standing with them
+- 2-3 simple objects that start with {letter} (e.g. for E: elephant, egg)
+
+STYLE:
+- BLACK OUTLINES ON WHITE ONLY
+- THICK black outlines  
+- Simple rounded cartoon figures
+- The letter {letter} must be LARGE and clearly visible
+- Maximum 15-18 colourable areas
+
+NO TEXT - do not write any words or labels
+
+BACKGROUND:
+- PURE WHITE - no ground, no scenery
+
+OUTPUT: Simple figures with friendly letter character and a few {letter} objects. No text."""
+        
         return f"""Create a SIMPLE colouring page for a 4 year old.
 
 DRAW:
@@ -155,6 +206,34 @@ OUTPUT: Thick black outlines on pure white. No background."""
         theme_name = custom_theme if custom_theme else theme
         if theme_name == "none":
             theme_name = "the scene"
+        
+        # Special handling for alphabet themes
+        if theme.startswith("alphabet_"):
+            letter = theme.replace("alphabet_", "").upper()
+            return f"""Create an alphabet colouring page for letter {letter} for a 5 year old.
+
+DRAW:
+- The people from the photo wearing simple COSTUMES that start with {letter} (e.g. for E: explorer outfit with hat)
+- A big friendly letter {letter} CHARACTER with a cute face, arms and legs
+- 3-4 objects that start with {letter} (e.g. for E: elephant, eggs, envelope)
+
+IMPORTANT: Do NOT put the letter {letter} printed on clothing - dress them in themed COSTUMES instead
+
+STYLE:
+- BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading
+- Medium-thick black outlines
+- Simple but clear figures
+- The letter {letter} must be LARGE and clearly visible
+- Maximum 20-25 colourable areas
+
+NO TEXT - do not write any words or labels
+
+BACKGROUND:
+- MINIMAL - simple ground line, maybe 1-2 clouds
+- Keep mostly white
+
+OUTPUT: People in {letter}-themed costumes with friendly letter character and several {letter} objects."""
+        
         return f"""Create a colouring page for a 5 year old.
 
 DRAW:
