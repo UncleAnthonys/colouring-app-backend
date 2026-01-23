@@ -379,6 +379,16 @@
       "text_only": true,
       "dynamic": true,
       "overlay": "A \"find and seek\" colouring page.\n\nTake whatever object/animal was requested and:\n\n1. Create an appropriate NATURAL HABITAT scene for that thing:\n   - Rabbit \u2192 field with grass, bushes, burrows\n   - Football \u2192 football pitch with goals, lines\n   - Fish \u2192 underwater scene with seaweed, coral\n   - Dog \u2192 park with trees, benches, paths\n   - Car \u2192 street scene with buildings, roads\n   - Bird \u2192 forest with trees, branches, nests\n\n2. Hide 8-12 of that object/animal throughout the scene:\n   - Some fully visible\n   - Some peeking out from behind things\n   - Some partially hidden\n   - Some small in background\n\nDO NOT INCLUDE:\n- Any numbers\n- Any text or words\n- Any people\n\nJust the scene and the hidden objects to find."
+    },
+    "mermaids": {
+      "name": "Mermaids",
+      "description": "Underwater mermaid adventure",
+      "overlay": "Apply theme: Mermaids\n\nCOSTUME REQUIREMENT:\n- Transform ALL people into mermaids/mermen with fish tails\n- Add seashell accessories, starfish hair clips, pearl necklaces\n\nSCENE ELEMENTS:\n- Underwater palace or coral reef castle\n- Treasure chests with pearls and gems\n- Friendly sea creatures (dolphins, seahorses, tropical fish)\n- Seaweed, coral, bubbles throughout\n- Shells and starfish scattered around\n\nSETTING:\n- Fully underwater scene\n- Light rays coming from above\n- NO sky, NO above-water elements"
+    },
+    "princesses": {
+      "name": "Princesses",
+      "description": "Royal princess fairy tale",
+      "overlay": "Apply theme: Princesses\n\nCOSTUME REQUIREMENT:\n- Dress ALL people as princesses/princes in royal gowns and crowns\n- Add tiaras, flowing dresses, capes\n\nSCENE ELEMENTS:\n- Castle towers or palace ballroom\n- Royal throne, chandeliers\n- Magical carriage or white horse\n- Rose gardens, fountains\n- Sparkles and stars\n\nSETTING:\n- Fairy tale kingdom\n- Elegant and magical atmosphere"
     }
   },
   "custom_modifiers": {
