@@ -399,6 +399,11 @@
       "name": "Cowboys",
       "description": "Cowboy hats, boots, western and desert elements",
       "overlay": "Apply theme: Cowboys\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in cowboy/cowgirl outfits\n- Must include: cowboy hat, boots, bandana, denim or western shirt\n- This is the most important part of the theme\n\nAdditional western elements:\n- Add friendly horse, cacti, desert scenery, wooden fence in background\n- Include horseshoes, sheriff badge, barn\n- No weapons or aggressive imagery\n- Keep faces fully visible"
+    },
+    "circus": {
+      "name": "Circus",
+      "description": "Circus performers, big top, clowns, acrobats",
+      "overlay": "Apply theme: Circus\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in circus performer costumes\n- Must include: colourful outfits, sparkly leotards, clown costumes, ringmaster jacket and top hat\n- This is the most important part of the theme\n\nAdditional circus elements:\n- Add big top tent, circus ring, bunting, balloons in background\n- Include circus animals (elephant, seal, lion - all friendly), juggling balls, tightrope\n- Keep all imagery fun and friendly\n- Keep faces fully visible"
     }
   },
   "custom_modifiers": {
