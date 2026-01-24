@@ -14,6 +14,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
 from pattern_endpoints import pattern_router
+from PIL import Image
+import io
 
 app = FastAPI(title="Kids Colouring App API", version="1.0.0")
 
@@ -33,6 +35,9 @@ app.include_router(pattern_router)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 BASE_URL = "https://api.openai.com/v1"
 
+# Failure logging
+FAILURE_LOG = Path(__file__).parent / "generation_failures.log"
+
 # Load prompts
 PROMPTS_FILE = Path(__file__).parent / "prompts" / "themes.json"
 
@@ -47,6 +52,49 @@ async def startup():
     global CONFIG
     CONFIG = load_prompts()
     print(f"✅ Loaded {len(CONFIG.get('themes', {}))} themes")
+
+
+# ============================================
+# IMAGE VALIDATION & LOGGING
+# ============================================
+
+def is_valid_coloring_page(image_b64: str, brightness_threshold: int = 200) -> tuple:
+    """
+    Check if image has white background (not grey/black failure).
+    Returns (is_valid, avg_brightness)
+    
+    A proper coloring page is mostly white (brightness ~240-255).
+    A failed dark image has brightness below 200.
+    """
+    try:
+        image_bytes = base64.b64decode(image_b64)
+        image = Image.open(io.BytesIO(image_bytes)).convert('L')  # Convert to grayscale
+        
+        # Calculate average brightness
+        pixels = list(image.getdata())
+        avg_brightness = sum(pixels) / len(pixels)
+        
+        return avg_brightness >= brightness_threshold, avg_brightness
+    except Exception as e:
+        print(f"Error checking image brightness: {e}")
+        return True, 255  # Assume valid if check fails
+
+
+def log_generation_attempt(prompt_preview: str, attempt: int, success: bool, brightness: float, retried: bool = False):
+    """Log each generation attempt for tracking failure rates"""
+    try:
+        with open(FAILURE_LOG, "a") as f:
+            entry = {
+                "timestamp": datetime.now().isoformat(),
+                "prompt_preview": prompt_preview[:100].replace("\n", " "),
+                "attempt": attempt,
+                "success": success,
+                "brightness": round(brightness, 1),
+                "retried": retried
+            }
+            f.write(json.dumps(entry) + "\n")
+    except Exception as e:
+        print(f"Error logging generation attempt: {e}")
 
 
 # ============================================
@@ -80,10 +128,55 @@ def build_photo_prompt(age_level: str = "age_5", theme: str = "none", custom_the
     
     # UNDER 3 - blob shapes bypass
     if age_level == "under_3":
+        # NO THEME - photo only
+        if theme == "none" and not custom_theme:
+            return """Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
+
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
+
+DRAW:
+- The people from the photo as VERY simple blob shapes
+- THAT IS ALL - NOTHING ELSE
+
+STYLE:
+- BLACK OUTLINES ON WHITE ONLY
+- EXTREMELY THICK black outlines
+- Blob/kawaii style
+- Maximum 8-10 colourable areas TOTAL
+
+BACKGROUND:
+- PURE WHITE - absolutely nothing else
+
+OUTPUT: Simple blob figures on pure white. ONLY the people."""
+
         theme_name = custom_theme if custom_theme else theme
+
         if theme_name == "none":
             theme_name = "the scene"
+        # Special handling for alphabet themes
+        if theme.startswith("alphabet_"):
+            letter = theme.replace("alphabet_", "").upper()
+            return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
+
+DRAW:
+- The people from the photo as VERY simple blob shapes (round heads, simple body)
+- A big friendly letter {letter} CHARACTER with a cute face, arms and legs standing next to them
+
+STYLE:
+- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
+- EXTREMELY THICK black outlines
+- Blob/kawaii style - super rounded and chunky
+- Faces: just dots for eyes, simple curve for mouth
+- Maximum 8-10 colourable areas TOTAL
+
+BACKGROUND:
+- PURE WHITE - absolutely nothing else
+
+OUTPUT: Simple blob figures with friendly letter {letter} character on pure white."""
+
         return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
+
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, objects, or elements not in the original image.
 
 DRAW:
 - The people from the photo as VERY simple blob shapes (round heads, simple body)
@@ -106,7 +199,29 @@ OUTPUT: Simple black outline blob figures on pure white. NO COLOUR."""
 
     # AGE 3 - super simple bypass
     if age_level == "age_3":
+        # NO THEME - photo accurate only
+        if theme == "none" and not custom_theme:
+            return """Create an EXTREMELY SIMPLE colouring page for a 3 year old.
+
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
+
+DRAW:
+- The people from the photo as simple figures
+- THAT IS ALL - NOTHING ELSE
+
+STYLE:
+- BLACK OUTLINES ON WHITE ONLY
+- VERY THICK black outlines
+- Simple rounded shapes
+- Maximum 10-12 colourable areas TOTAL
+
+BACKGROUND:
+- PURE WHITE - absolutely nothing else
+
+OUTPUT: Simple black outline figures on pure white. ONLY the people from the photo."""
+
         theme_name = custom_theme if custom_theme else theme
+
         if theme_name == "none":
             theme_name = "the scene"
         
@@ -114,6 +229,8 @@ OUTPUT: Simple black outline blob figures on pure white. NO COLOUR."""
         if theme.startswith("alphabet_"):
             letter = theme.replace("alphabet_", "").upper()
             return f"""Create an EXTREMELY SIMPLE toddler alphabet colouring page for letter {letter}.
+
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, objects, or elements not in the original image.
 
 DRAW:
 - The people from the photo as VERY simple blob shapes (round heads, simple chunky body)
@@ -137,6 +254,8 @@ OUTPUT: Simple black outline blob figures standing next to a friendly letter {le
         
         return f"""Create an EXTREMELY SIMPLE toddler colouring page.
 
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, objects, or elements not in the original image.
+
 STYLE: "My First Colouring Book" - for 3 year olds.
 
 DRAW ONLY:
@@ -155,6 +274,28 @@ OUTPUT: Thick simple outlines on pure white. Nothing in background."""
 
     # AGE 4 - simple figures with costumes bypass
     if age_level == "age_4":
+        # NO THEME - photo only
+        if theme == "none" and not custom_theme:
+            return """Create a SIMPLE colouring page for a 4 year old.
+
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
+
+DRAW:
+- The people from the photo as simple cute figures
+- ONE simple object from the photo background (e.g. their bike, a fence, a ball)
+- THAT IS ALL - NOTHING ELSE
+
+STYLE:
+- BLACK OUTLINES ON WHITE ONLY
+- THICK black outlines
+- Simple rounded figures
+- Maximum 15-18 colourable areas TOTAL
+
+BACKGROUND:
+- PURE WHITE - no sky, no ground, no scenery
+
+OUTPUT: Simple figures with one object from the photo on pure white."""
+
         theme_name = custom_theme if custom_theme else theme
         if theme_name == "none":
             theme_name = "the scene"
@@ -163,6 +304,8 @@ OUTPUT: Thick simple outlines on pure white. Nothing in background."""
         if theme.startswith("alphabet_"):
             letter = theme.replace("alphabet_", "").upper()
             return f"""Create a SIMPLE alphabet colouring page for letter {letter} for a 4 year old.
+
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, objects, or elements not in the original image.
 
 DRAW:
 - The people from the photo as simple cute figures
@@ -184,6 +327,8 @@ BACKGROUND:
 OUTPUT: Simple figures with friendly letter character and a few {letter} objects. No text."""
         
         return f"""Create a SIMPLE colouring page for a 4 year old.
+
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, objects, or elements not in the original image.
 
 DRAW:
 - The people from the photo as simple figures with basic {theme_name} costumes
@@ -207,6 +352,30 @@ OUTPUT: Thick black outlines on pure white. No background."""
 
     # AGE 5 - slightly more detail, minimal background
     if age_level == "age_5":
+        # NO THEME - photo accurate
+        if theme == "none" and not custom_theme:
+            return """Create a colouring page for a 5 year old.
+
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, pets, or objects not in the original image.
+
+DRAW:
+- The people from the photo as simple figures
+- Background elements from the photo (simplified)
+- THAT IS ALL - NOTHING ELSE
+
+STYLE:
+- BLACK OUTLINES ON WHITE ONLY
+- Medium-thick black outlines
+- Simple but recognisable figures
+- Maximum 20-25 colourable areas
+
+BACKGROUND:
+- MINIMAL - simple ground line, 1-2 clouds maximum
+
+DO NOT ADD: Any pets, animals, or objects not in the original photo.
+
+OUTPUT: Simple figures with minimal background. Photo accurate."""
+
         theme_name = custom_theme if custom_theme else theme
         if theme_name == "none":
             theme_name = "the scene"
@@ -265,6 +434,8 @@ OUTPUT: Clean black outlines with minimal simple background. Keep it simple."""
     if theme == "none" and not custom_theme:
         base_prompt = """Convert this photograph into a colouring book page.
 
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, people, or objects that are not in the original image.
+
 FACES AND PEOPLE (HIGHEST PRIORITY):
 - Faces MUST be recognisable as the actual people in the photo
 - Keep exact hairstyles - long hair stays long, short stays short
@@ -283,6 +454,8 @@ LINE STYLE:
 - Bold black outlines on white
 - Clean enclosed shapes for colouring
 - No tiny details or dense textures
+
+DO NOT ADD: Any pets, animals, extra people, or objects not visible in the original photo.
 
 OUTPUT: Bold black lines on pure white background."""
 
@@ -422,6 +595,8 @@ Just the habitat scene with multiple {subject} hidden throughout to find."""
     if age_level == "age_3":
         return f"""Create an EXTREMELY SIMPLE toddler colouring page.
 
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, objects, or elements not in the original image.
+
 STYLE: "My First Colouring Book" - for 3 year olds.
 
 DRAW ONLY:
@@ -520,8 +695,8 @@ async def generate_from_photo(prompt: str, image_b64: str, quality: str = "low")
         return response.json()
 
 
-async def generate_from_text(prompt: str, quality: str = "low") -> dict:
-    """Generate colouring page from text using images/generations endpoint"""
+async def _generate_from_text_single(prompt: str, quality: str = "low") -> dict:
+    """Single generation attempt for text-to-image"""
     
     headers = {
         "Authorization": f"Bearer {OPENAI_API_KEY}",
@@ -547,6 +722,44 @@ async def generate_from_text(prompt: str, quality: str = "low") -> dict:
             raise HTTPException(status_code=response.status_code, detail=response.text)
         
         return response.json()
+
+
+async def generate_from_text(prompt: str, quality: str = "low", max_retries: int = 3) -> dict:
+    """
+    Generate colouring page from text with auto-retry for dark/grey images.
+    Logs all attempts for failure rate tracking.
+    """
+    
+    for attempt in range(1, max_retries + 1):
+        result = await _generate_from_text_single(prompt, quality)
+        
+        image_b64 = result["data"][0].get("b64_json")
+        
+        if image_b64:
+            is_valid, brightness = is_valid_coloring_page(image_b64)
+            
+            # Log this attempt
+            log_generation_attempt(
+                prompt_preview=prompt,
+                attempt=attempt,
+                success=is_valid,
+                brightness=brightness,
+                retried=(attempt > 1)
+            )
+            
+            if is_valid:
+                if attempt > 1:
+                    print(f"✅ Attempt {attempt}: Success after retry (brightness={brightness:.0f})")
+                return result
+            
+            print(f"⚠️ Attempt {attempt}/{max_retries}: Dark image detected (brightness={brightness:.0f}), retrying...")
+        else:
+            # URL response - can't check brightness, just return it
+            return result
+    
+    # All retries failed - return last attempt anyway (user sees it, we logged it)
+    print(f"❌ WARNING: All {max_retries} attempts produced dark images for prompt")
+    return result
 
 
 # ============================================
@@ -588,6 +801,31 @@ async def list_age_levels():
             "max_age": data.get("max_age")
         })
     return {"age_levels": levels}
+
+
+@app.get("/failure-stats")
+async def get_failure_stats():
+    """Get generation failure statistics"""
+    try:
+        if not FAILURE_LOG.exists():
+            return {"total": 0, "failures": 0, "failure_rate": 0, "retries_needed": 0}
+        
+        with open(FAILURE_LOG, "r") as f:
+            lines = f.readlines()
+        
+        total = len(lines)
+        failures = sum(1 for line in lines if '"success": false' in line)
+        retries = sum(1 for line in lines if '"retried": true' in line)
+        
+        return {
+            "total_attempts": total,
+            "failures": failures,
+            "failure_rate": round(failures / total * 100, 1) if total > 0 else 0,
+            "retries_needed": retries,
+            "retry_rate": round(retries / (total - retries) * 100, 1) if (total - retries) > 0 else 0
+        }
+    except Exception as e:
+        return {"error": str(e)}
 
 
 class PhotoGenerateRequest(BaseModel):
@@ -668,7 +906,7 @@ async def generate_from_text_endpoint(request: TextGenerateRequest):
     # Build prompt
     prompt = build_text_to_image_prompt(request.description, request.age_level)
     
-    # Generate
+    # Generate (with auto-retry for dark images)
     start = datetime.now()
     result = await generate_from_text(prompt, request.quality)
     elapsed = (datetime.now() - start).total_seconds()
