@@ -409,685 +409,799 @@
       "name": "Cow",
       "category": "farm",
       "description": "Farm cow in barnyard",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly cow with spots and bell around neck taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm setting - barn, wooden fence, hay bales, grass, rolling hills. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write COW at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly cow with spots and bell around neck taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm setting - barn, wooden fence, hay bales, grass, rolling hills. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write COW at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_pig": {
       "name": "Pig",
       "category": "farm",
       "description": "Farm pig in muddy pen",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly pig with curly tail and snout taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm setting - mud puddle, wooden fence, barn, trough. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PIG at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly pig with curly tail and snout taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm setting - mud puddle, wooden fence, barn, trough. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PIG at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_horse": {
       "name": "Horse",
       "category": "farm",
       "description": "Farm horse in stable",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly horse with flowing mane and tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm setting - stable, hay, wooden fence, grass field. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write HORSE at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly horse with flowing mane and tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm setting - stable, hay, wooden fence, grass field. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write HORSE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_sheep": {
       "name": "Sheep",
       "category": "farm",
       "description": "Fluffy sheep in meadow",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly fluffy sheep with woolly body taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm meadow - rolling green hills, wooden fence, clouds. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SHEEP at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly fluffy sheep with woolly body taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm meadow - rolling green hills, wooden fence, clouds. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SHEEP at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_chicken": {
       "name": "Chicken",
       "category": "farm",
       "description": "Farm chicken in coop",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly chicken/hen with feathers and red comb taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm setting - chicken coop, eggs, hay, fence. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CHICKEN at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly chicken/hen with feathers and red comb taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm setting - chicken coop, eggs, hay, fence. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CHICKEN at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_rooster": {
       "name": "Rooster",
       "category": "farm",
       "description": "Farm rooster crowing",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly proud rooster with colorful tail feathers and red comb taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm setting - fence, sunrise, barn, hay bales. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ROOSTER at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly proud rooster with colorful tail feathers and red comb taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm setting - fence, sunrise, barn, hay bales. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ROOSTER at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_duck": {
       "name": "Duck",
       "category": "farm",
       "description": "Farm duck by pond",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly duck with orange beak and webbed feet taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple pond setting - water, reeds, lily pads, farm in distance. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DUCK at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly duck with orange beak and webbed feet taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple pond setting - water, reeds, lily pads, farm in distance. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DUCK at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_goat": {
       "name": "Goat",
       "category": "farm",
       "description": "Farm goat on hillside",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly goat with little horns and beard taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm hillside - rocks, grass, wooden fence, barn. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write GOAT at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly goat with little horns and beard taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm hillside - rocks, grass, wooden fence, barn. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write GOAT at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_donkey": {
       "name": "Donkey",
       "category": "farm",
       "description": "Farm donkey in field",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly donkey with long ears taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm setting - grass field, wooden fence, hay, barn. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DONKEY at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly donkey with long ears taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm setting - grass field, wooden fence, hay, barn. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DONKEY at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_rabbit": {
       "name": "Rabbit",
       "category": "farm",
       "description": "Rabbit in hutch",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly fluffy rabbit with long ears and cotton tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm setting - hutch, carrots, grass, flowers. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write RABBIT at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly fluffy rabbit with long ears and cotton tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple farm setting - hutch, carrots, grass, flowers. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write RABBIT at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_lion": {
       "name": "Lion",
       "category": "zoo",
       "description": "Lion in African savanna",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly lion with big fluffy mane taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple African savanna - acacia tree, grass, rocks, sun. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LION at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly lion with big fluffy mane taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple African savanna - acacia tree, grass, rocks, sun. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LION at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_elephant": {
       "name": "Elephant",
       "category": "zoo",
       "description": "Elephant in African setting",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly elephant with big ears and long trunk taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple African savanna - trees, grass, watering hole, mountains. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ELEPHANT at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly elephant with big ears and long trunk taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple African savanna - trees, grass, watering hole, mountains. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ELEPHANT at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_giraffe": {
       "name": "Giraffe",
       "category": "zoo",
       "description": "Giraffe in African setting",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly giraffe with long neck and spots taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple African savanna - tall acacia trees, grass, clouds, hills. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write GIRAFFE at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly giraffe with long neck and spots taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple African savanna - tall acacia trees, grass, clouds, hills. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write GIRAFFE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_zebra": {
       "name": "Zebra",
       "category": "zoo",
       "description": "Zebra in African grassland",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly zebra with black and white stripes taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple African grassland - tall grass, trees, hills. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ZEBRA at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly zebra with black and white stripes taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple African grassland - tall grass, trees, hills. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ZEBRA at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_monkey": {
       "name": "Monkey",
       "category": "zoo",
       "description": "Monkey in jungle trees",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly monkey with curly tail and playful expression taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple jungle setting - tree branch, vines, leaves, bananas. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write MONKEY at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly monkey with curly tail and playful expression taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple jungle setting - tree branch, vines, leaves, bananas. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write MONKEY at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_gorilla": {
       "name": "Gorilla",
       "category": "zoo",
       "description": "Gorilla in jungle",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly gorilla with gentle expression taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple jungle setting - trees, leaves, vines, plants. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write GORILLA at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly gorilla with gentle expression taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple jungle setting - trees, leaves, vines, plants. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write GORILLA at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_hippo": {
       "name": "Hippo",
       "category": "zoo",
       "description": "Hippo in river",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly hippopotamus with big mouth and small ears taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple river setting - water, reeds, lily pads, birds. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write HIPPO at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly hippopotamus with big mouth and small ears taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple river setting - water, reeds, lily pads, birds. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write HIPPO at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_rhino": {
       "name": "Rhino",
       "category": "zoo",
       "description": "Rhino in grassland",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly rhinoceros with horn and thick skin taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple African grassland - grass, rocks, trees, dust. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write RHINO at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly rhinoceros with horn and thick skin taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple African grassland - grass, rocks, trees, dust. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write RHINO at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_tiger": {
       "name": "Tiger",
       "category": "zoo",
       "description": "Tiger in jungle",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly tiger with stripes and whiskers taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple jungle setting - bamboo, trees, leaves, rocks. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write TIGER at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly tiger with stripes and whiskers taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple jungle setting - bamboo, trees, leaves, rocks. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write TIGER at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_panda": {
       "name": "Panda",
       "category": "zoo",
       "description": "Panda in bamboo forest",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly panda with black and white patches eating bamboo taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple bamboo forest - bamboo stalks, leaves, mountains. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PANDA at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly panda with black and white patches eating bamboo taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple bamboo forest - bamboo stalks, leaves, mountains. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PANDA at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_koala": {
       "name": "Koala",
       "category": "zoo",
       "description": "Koala in eucalyptus tree",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly koala with fluffy ears and big nose taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple eucalyptus tree - branches, leaves, Australian bush. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write KOALA at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly koala with fluffy ears and big nose taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple eucalyptus tree - branches, leaves, Australian bush. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write KOALA at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_kangaroo": {
       "name": "Kangaroo",
       "category": "zoo",
       "description": "Kangaroo in Australian outback",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly kangaroo with baby joey in pouch taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple Australian outback - grass, rocks, eucalyptus trees. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write KANGAROO at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly kangaroo with baby joey in pouch taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple Australian outback - grass, rocks, eucalyptus trees. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write KANGAROO at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_penguin": {
       "name": "Penguin",
       "category": "zoo",
       "description": "Penguin in Antarctic",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly penguin with black and white body taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple Antarctic setting - ice, snow, icebergs, water. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PENGUIN at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly penguin with black and white body taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple Antarctic setting - ice, snow, icebergs, water. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PENGUIN at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_polar_bear": {
       "name": "Polar Bear",
       "category": "zoo",
       "description": "Polar bear in Arctic",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly polar bear with fluffy white fur taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple Arctic setting - ice, snow, icebergs, northern lights. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write POLAR BEAR at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly polar bear with fluffy white fur taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple Arctic setting - ice, snow, icebergs, northern lights. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write POLAR BEAR at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_snake": {
       "name": "Snake",
       "category": "zoo",
       "description": "Snake coiled up",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly snake coiled with friendly face and patterns on body taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple jungle or desert setting - branch, leaves, rocks. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SNAKE at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly snake coiled with friendly face and patterns on body taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple jungle or desert setting - branch, leaves, rocks. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SNAKE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_crocodile": {
       "name": "Crocodile",
       "category": "zoo",
       "description": "Crocodile in swamp",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly crocodile with bumpy skin and toothy smile - friendly not scary taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple swamp setting - water, reeds, lily pads, logs. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CROCODILE at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly crocodile with bumpy skin and toothy smile - friendly not scary taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple swamp setting - water, reeds, lily pads, logs. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CROCODILE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_bear": {
       "name": "Bear",
       "category": "zoo",
       "description": "Bear in forest",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly brown bear with fluffy fur taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple forest setting - trees, river, rocks, berries. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BEAR at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly brown bear with fluffy fur taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple forest setting - trees, river, rocks, berries. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BEAR at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_wolf": {
       "name": "Wolf",
       "category": "zoo",
       "description": "Wolf in forest",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly friendly wolf with fluffy fur - NOT scary taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple forest setting - trees, moon, rocks, snow. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write WOLF at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly friendly wolf with fluffy fur - NOT scary taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple forest setting - trees, moon, rocks, snow. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write WOLF at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_fox": {
       "name": "Fox",
       "category": "zoo",
       "description": "Fox in woodland",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly fox with bushy tail and pointed ears taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple woodland setting - trees, leaves, mushrooms, flowers. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write FOX at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly fox with bushy tail and pointed ears taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple woodland setting - trees, leaves, mushrooms, flowers. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write FOX at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_deer": {
       "name": "Deer",
       "category": "zoo",
       "description": "Deer in forest",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly deer with antlers and spotted coat taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple forest setting - trees, flowers, stream, grass. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DEER at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly deer with antlers and spotted coat taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple forest setting - trees, flowers, stream, grass. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DEER at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_dolphin": {
       "name": "Dolphin",
       "category": "sea",
       "description": "Dolphin jumping in ocean",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly dolphin jumping out of water taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ocean setting - waves, splash, sun, clouds. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DOLPHIN at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly dolphin jumping out of water taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ocean setting - waves, splash, sun, clouds. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DOLPHIN at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_whale": {
       "name": "Whale",
       "category": "sea",
       "description": "Whale swimming in ocean",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly whale with water spout taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ocean setting - waves, small fish, bubbles, seaweed. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write WHALE at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly whale with water spout taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ocean setting - waves, small fish, bubbles, seaweed. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write WHALE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_shark": {
       "name": "Shark",
       "category": "sea",
       "description": "Friendly shark in ocean",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly FRIENDLY smiling shark - cute and NOT scary taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ocean setting - waves, small fish, coral, seaweed. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SHARK at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly FRIENDLY smiling shark - cute and NOT scary taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ocean setting - waves, small fish, coral, seaweed. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SHARK at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_octopus": {
       "name": "Octopus",
       "category": "sea",
       "description": "Octopus underwater",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly octopus with 8 tentacles and big eyes taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple underwater setting - coral, seaweed, shells, bubbles. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write OCTOPUS at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly octopus with 8 tentacles and big eyes taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple underwater setting - coral, seaweed, shells, bubbles. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write OCTOPUS at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_jellyfish": {
       "name": "Jellyfish",
       "category": "sea",
       "description": "Jellyfish floating in ocean",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly jellyfish with flowing tentacles taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple underwater setting - bubbles, small fish, seaweed. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write JELLYFISH at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly jellyfish with flowing tentacles taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple underwater setting - bubbles, small fish, seaweed. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write JELLYFISH at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_seahorse": {
       "name": "Seahorse",
       "category": "sea",
       "description": "Seahorse in coral reef",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly seahorse with curly tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple coral reef setting - coral, seaweed, bubbles, shells. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SEAHORSE at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly seahorse with curly tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple coral reef setting - coral, seaweed, bubbles, shells. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SEAHORSE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_turtle": {
       "name": "Sea Turtle",
       "category": "sea",
       "description": "Sea turtle swimming",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly sea turtle with patterned shell taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ocean setting - coral, seaweed, small fish, bubbles. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write TURTLE at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly sea turtle with patterned shell taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ocean setting - coral, seaweed, small fish, bubbles. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write TURTLE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_crab": {
       "name": "Crab",
       "category": "sea",
       "description": "Crab on beach",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly crab with big claws and eyes on stalks taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple beach setting - sand, shells, waves, rocks. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CRAB at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly crab with big claws and eyes on stalks taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple beach setting - sand, shells, waves, rocks. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CRAB at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_starfish": {
       "name": "Starfish",
       "category": "sea",
       "description": "Starfish on ocean floor",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly starfish with 5 arms and happy face taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ocean floor setting - sand, shells, coral, seaweed. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write STARFISH at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly starfish with 5 arms and happy face taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ocean floor setting - sand, shells, coral, seaweed. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write STARFISH at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_clownfish": {
       "name": "Clownfish",
       "category": "sea",
       "description": "Clownfish in anemone",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly clownfish with orange and white stripes taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple coral reef with sea anemone, bubbles, coral. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CLOWNFISH at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly clownfish with orange and white stripes taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple coral reef with sea anemone, bubbles, coral. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CLOWNFISH at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_lobster": {
       "name": "Lobster",
       "category": "sea",
       "description": "Lobster on ocean floor",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly lobster with big claws and long antennae taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ocean floor setting - sand, rocks, seaweed, shells. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LOBSTER at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly lobster with big claws and long antennae taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ocean floor setting - sand, rocks, seaweed, shells. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LOBSTER at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_seal": {
       "name": "Seal",
       "category": "sea",
       "description": "Seal on rocks",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly seal with flippers and whiskers taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple coastal setting - rocks, water, waves, fish. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SEAL at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly seal with flippers and whiskers taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple coastal setting - rocks, water, waves, fish. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SEAL at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_walrus": {
       "name": "Walrus",
       "category": "sea",
       "description": "Walrus on ice",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly walrus with tusks and whiskers taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple Arctic coastal setting - ice, snow, water. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write WALRUS at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly walrus with tusks and whiskers taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple Arctic coastal setting - ice, snow, water. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write WALRUS at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_orca": {
       "name": "Orca",
       "category": "sea",
       "description": "Orca whale in ocean",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly orca whale with black and white markings - friendly taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ocean setting - waves, splash, fish. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ORCA at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly orca whale with black and white markings - friendly taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ocean setting - waves, splash, fish. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ORCA at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_stingray": {
       "name": "Stingray",
       "category": "sea",
       "description": "Stingray swimming",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly stingray with flat body and long tail - friendly taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ocean floor setting - sand, coral, shells. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write STINGRAY at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly stingray with flat body and long tail - friendly taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ocean floor setting - sand, coral, shells. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write STINGRAY at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_butterfly": {
       "name": "Butterfly",
       "category": "insects",
       "description": "Butterfly in garden",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly beautiful butterfly with detailed wing patterns taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - flowers, leaves, grass. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BUTTERFLY at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly beautiful butterfly with detailed wing patterns taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - flowers, leaves, grass. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BUTTERFLY at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_bee": {
       "name": "Bee",
       "category": "insects",
       "description": "Bee near flowers",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly friendly bee with stripes and tiny wings taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - flowers, beehive, leaves. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BEE at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly friendly bee with stripes and tiny wings taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - flowers, beehive, leaves. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BEE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_ladybug": {
       "name": "Ladybug",
       "category": "insects",
       "description": "Ladybug on leaf",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly ladybug with spots and tiny legs taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - big leaf, flowers, grass. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LADYBUG at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly ladybug with spots and tiny legs taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - big leaf, flowers, grass. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LADYBUG at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_caterpillar": {
       "name": "Caterpillar",
       "category": "insects",
       "description": "Caterpillar on branch",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly caterpillar with segments and tiny legs taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - branch, leaves, flowers. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CATERPILLAR at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly caterpillar with segments and tiny legs taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - branch, leaves, flowers. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CATERPILLAR at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_dragonfly": {
       "name": "Dragonfly",
       "category": "insects",
       "description": "Dragonfly near pond",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly dragonfly with long body and 4 wings taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple pond setting - reeds, lily pads, water. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DRAGONFLY at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly dragonfly with long body and 4 wings taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple pond setting - reeds, lily pads, water. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DRAGONFLY at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_grasshopper": {
       "name": "Grasshopper",
       "category": "insects",
       "description": "Grasshopper in grass",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly grasshopper with long back legs taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple meadow setting - tall grass, flowers, leaves. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write GRASSHOPPER at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly grasshopper with long back legs taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple meadow setting - tall grass, flowers, leaves. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write GRASSHOPPER at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_snail": {
       "name": "Snail",
       "category": "insects",
       "description": "Snail in garden",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly snail with spiral shell and eye stalks taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - leaves, mushrooms, flowers, pebbles. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SNAIL at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly snail with spiral shell and eye stalks taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - leaves, mushrooms, flowers, pebbles. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SNAIL at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_spider": {
       "name": "Spider",
       "category": "insects",
       "description": "Friendly spider on web",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly FRIENDLY cute spider with 8 legs and big friendly eyes - NOT scary taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple web setting - spider web, leaves, dewdrops. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SPIDER at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly FRIENDLY cute spider with 8 legs and big friendly eyes - NOT scary taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple web setting - spider web, leaves, dewdrops. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SPIDER at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_ant": {
       "name": "Ant",
       "category": "insects",
       "description": "Ant carrying food",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly ant carrying a leaf or crumb taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ground setting - pebbles, grass, ant hill. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ANT at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly ant carrying a leaf or crumb taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple ground setting - pebbles, grass, ant hill. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ANT at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_firefly": {
       "name": "Firefly",
       "category": "insects",
       "description": "Firefly glowing at night",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly firefly with glowing bottom taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple night garden setting - dark sky, stars, grass, flowers. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write FIREFLY at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly firefly with glowing bottom taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple night garden setting - dark sky, stars, grass, flowers. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write FIREFLY at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_beetle": {
       "name": "Beetle",
       "category": "insects",
       "description": "Beetle on log",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly beetle with shiny shell taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple forest floor setting - log, leaves, mushrooms. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BEETLE at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly beetle with shiny shell taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple forest floor setting - log, leaves, mushrooms. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BEETLE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_worm": {
       "name": "Worm",
       "category": "insects",
       "description": "Worm in soil",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly friendly worm poking out of soil taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - soil, apple, leaves, grass. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write WORM at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly friendly worm poking out of soil taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - soil, apple, leaves, grass. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write WORM at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_trex": {
       "name": "T-Rex",
       "category": "dinosaurs",
       "description": "T-Rex dinosaur",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly T-Rex dinosaur with big head, tiny arms, and friendly smile - NOT scary taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - volcano, palm trees, ferns, rocks. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write T-REX at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly T-Rex dinosaur with big head, tiny arms, and friendly smile - NOT scary taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - volcano, palm trees, ferns, rocks. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write T-REX at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_triceratops": {
       "name": "Triceratops",
       "category": "dinosaurs",
       "description": "Triceratops dinosaur",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Triceratops dinosaur with three horns and neck frill taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - palm trees, ferns, rocks, plants. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write TRICERATOPS at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Triceratops dinosaur with three horns and neck frill taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - palm trees, ferns, rocks, plants. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write TRICERATOPS at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_brachiosaurus": {
       "name": "Brachiosaurus",
       "category": "dinosaurs",
       "description": "Brachiosaurus dinosaur",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Brachiosaurus dinosaur with very long neck reaching up to trees taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - tall trees, ferns, clouds. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BRACHIOSAURUS at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Brachiosaurus dinosaur with very long neck reaching up to trees taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - tall trees, ferns, clouds. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BRACHIOSAURUS at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_stegosaurus": {
       "name": "Stegosaurus",
       "category": "dinosaurs",
       "description": "Stegosaurus dinosaur",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Stegosaurus dinosaur with plates on back and spiked tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - palm trees, ferns, rocks. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write STEGOSAURUS at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Stegosaurus dinosaur with plates on back and spiked tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - palm trees, ferns, rocks. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write STEGOSAURUS at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_pterodactyl": {
       "name": "Pterodactyl",
       "category": "dinosaurs",
       "description": "Pterodactyl flying",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Pterodactyl flying dinosaur with big wings spread out taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple sky setting - clouds, sun, mountains below. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PTERODACTYL at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Pterodactyl flying dinosaur with big wings spread out taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple sky setting - clouds, sun, mountains below. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PTERODACTYL at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_velociraptor": {
       "name": "Velociraptor",
       "category": "dinosaurs",
       "description": "Velociraptor dinosaur",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Velociraptor dinosaur standing on two legs - friendly NOT scary taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - ferns, rocks, plants. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write VELOCIRAPTOR at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Velociraptor dinosaur standing on two legs - friendly NOT scary taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - ferns, rocks, plants. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write VELOCIRAPTOR at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_diplodocus": {
       "name": "Diplodocus",
       "category": "dinosaurs",
       "description": "Diplodocus dinosaur",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Diplodocus dinosaur with very long neck and tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - trees, ferns, river. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DIPLODOCUS at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Diplodocus dinosaur with very long neck and tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - trees, ferns, river. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DIPLODOCUS at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_ankylosaurus": {
       "name": "Ankylosaurus",
       "category": "dinosaurs",
       "description": "Ankylosaurus dinosaur",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Ankylosaurus dinosaur with armored body and club tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - rocks, ferns, plants. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ANKYLOSAURUS at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Ankylosaurus dinosaur with armored body and club tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - rocks, ferns, plants. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ANKYLOSAURUS at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_spinosaurus": {
       "name": "Spinosaurus",
       "category": "dinosaurs",
       "description": "Spinosaurus dinosaur",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Spinosaurus dinosaur with big sail on back - friendly NOT scary taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric swamp setting - water, plants, trees. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SPINOSAURUS at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Spinosaurus dinosaur with big sail on back - friendly NOT scary taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric swamp setting - water, plants, trees. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SPINOSAURUS at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_parasaurolophus": {
       "name": "Parasaurolophus",
       "category": "dinosaurs",
       "description": "Parasaurolophus dinosaur",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Parasaurolophus dinosaur with distinctive curved head crest taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - trees, ferns, plants. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PARASAUROLOPHUS at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Parasaurolophus dinosaur with distinctive curved head crest taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - trees, ferns, plants. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PARASAUROLOPHUS at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_apatosaurus": {
       "name": "Apatosaurus",
       "category": "dinosaurs",
       "description": "Apatosaurus dinosaur",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Apatosaurus dinosaur with long neck and tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - trees, lake, ferns. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write APATOSAURUS at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Apatosaurus dinosaur with long neck and tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - trees, lake, ferns. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write APATOSAURUS at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "animal_pachycephalosaurus": {
       "name": "Pachycephalosaurus",
       "category": "dinosaurs",
       "description": "Pachycephalosaurus dinosaur",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Pachycephalosaurus dinosaur with thick domed head taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - rocks, ferns, hills. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PACHYCEPHALOSAURUS at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Pachycephalosaurus dinosaur with thick domed head taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - rocks, ferns, hills. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PACHYCEPHALOSAURUS at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "fruit_apple": {
       "name": "Apple",
       "category": "fruits",
       "description": "Apple with leaf",
-      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large shiny apple with a leaf and stem taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch, basket, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write APPLE at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large shiny apple with a leaf and stem taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch, basket, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write APPLE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "fruit_banana": {
       "name": "Banana",
       "category": "fruits",
       "description": "Banana bunch",
-      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large bunch of bananas with curved shape taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tropical leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BANANA at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large bunch of bananas with curved shape taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tropical leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BANANA at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "fruit_orange": {
       "name": "Orange",
       "category": "fruits",
       "description": "Orange with segment",
-      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large round orange with dimpled skin and leaf, maybe showing one segment slice taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch with leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ORANGE at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large round orange with dimpled skin and leaf, maybe showing one segment slice taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch with leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ORANGE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "fruit_strawberry": {
       "name": "Strawberry",
       "category": "fruits",
       "description": "Strawberry with seeds",
-      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large strawberry with tiny seeds and green leafy top taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple garden setting - strawberry plant leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write STRAWBERRY at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large strawberry with tiny seeds and green leafy top taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple garden setting - strawberry plant leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write STRAWBERRY at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "fruit_watermelon": {
       "name": "Watermelon",
       "category": "fruits",
       "description": "Watermelon slice",
-      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large big watermelon slice showing red flesh with seeds and green rind taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple summer setting - picnic blanket, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write WATERMELON at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large big watermelon slice showing red flesh with seeds and green rind taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple summer setting - picnic blanket, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write WATERMELON at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "fruit_grapes": {
       "name": "Grapes",
       "category": "fruits",
       "description": "Bunch of grapes",
-      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large bunch of round grapes on a vine with a leaf taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple vineyard setting - vine leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write GRAPES at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large bunch of round grapes on a vine with a leaf taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple vineyard setting - vine leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write GRAPES at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "fruit_pineapple": {
       "name": "Pineapple",
       "category": "fruits",
       "description": "Pineapple with crown",
-      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large pineapple with diamond pattern body and spiky crown leaves taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple tropical setting - beach, palm leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PINEAPPLE at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large pineapple with diamond pattern body and spiky crown leaves taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple tropical setting - beach, palm leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PINEAPPLE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "fruit_cherry": {
       "name": "Cherry",
       "category": "fruits",
       "description": "Cherries on stem",
-      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large pair of round cherries connected by stems with a leaf taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CHERRIES at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large pair of round cherries connected by stems with a leaf taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CHERRIES at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "fruit_pear": {
       "name": "Pear",
       "category": "fruits",
       "description": "Pear with leaf",
-      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large pear with curved shape, stem and leaf taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch, basket, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PEAR at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large pear with curved shape, stem and leaf taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch, basket, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PEAR at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "fruit_peach": {
       "name": "Peach",
       "category": "fruits",
       "description": "Fuzzy peach",
-      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large round peach with fuzzy texture and leaf taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch with leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PEACH at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large round peach with fuzzy texture and leaf taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch with leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PEACH at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "fruit_lemon": {
       "name": "Lemon",
       "category": "fruits",
       "description": "Lemon with leaf",
-      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large oval lemon with pointed ends and leaf taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch, lemonade glass, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LEMON at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large oval lemon with pointed ends and leaf taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch, lemonade glass, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LEMON at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "fruit_mango": {
       "name": "Mango",
       "category": "fruits",
       "description": "Tropical mango",
-      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large oval mango with curved shape and stem taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple tropical setting - leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write MANGO at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large oval mango with curved shape and stem taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple tropical setting - leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write MANGO at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "fruit_kiwi": {
       "name": "Kiwi",
       "category": "fruits",
       "description": "Kiwi fruit cut open",
-      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large kiwi fruit cut in half showing seeds pattern inside with fuzzy brown outside taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write KIWI at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large kiwi fruit cut in half showing seeds pattern inside with fuzzy brown outside taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write KIWI at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "fruit_coconut": {
       "name": "Coconut",
       "category": "fruits",
       "description": "Coconut half",
-      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large coconut cracked open showing white inside taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple tropical beach setting - palm tree, sand, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write COCONUT at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large coconut cracked open showing white inside taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple tropical beach setting - palm tree, sand, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write COCONUT at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "fruit_blueberry": {
       "name": "Blueberry",
       "category": "fruits",
       "description": "Big blueberries",
-      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large cluster of round blueberries with tiny crown tops taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple garden setting - bush leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BLUEBERRIES at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large cluster of round blueberries with tiny crown tops taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple garden setting - bush leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BLUEBERRIES at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "veg_carrot": {
       "name": "Carrot",
       "category": "vegetables",
       "description": "Carrot with green top",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large orange carrot with leafy green top taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - soil, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CARROT at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large orange carrot with leafy green top taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - soil, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CARROT at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "veg_broccoli": {
       "name": "Broccoli",
       "category": "vegetables",
       "description": "Broccoli floret",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large broccoli with tree-like floret top and thick stem taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BROCCOLI at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large broccoli with tree-like floret top and thick stem taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BROCCOLI at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "veg_tomato": {
       "name": "Tomato",
       "category": "vegetables",
       "description": "Ripe tomato",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large round tomato with green stem top taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - vine, leaves, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write TOMATO at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large round tomato with green stem top taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - vine, leaves, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write TOMATO at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "veg_corn": {
       "name": "Corn",
       "category": "vegetables",
       "description": "Corn on the cob",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large corn on the cob with kernels showing and husk leaves taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple farm setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CORN at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large corn on the cob with kernels showing and husk leaves taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple farm setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CORN at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "veg_pumpkin": {
       "name": "Pumpkin",
       "category": "vegetables",
       "description": "Pumpkin with stem",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large round pumpkin with ridges and curly stem taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple autumn setting - leaves, hay, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PUMPKIN at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large round pumpkin with ridges and curly stem taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple autumn setting - leaves, hay, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PUMPKIN at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "veg_potato": {
       "name": "Potato",
       "category": "vegetables",
       "description": "Potato with eyes",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large oval potato with little eyes/dots taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - soil, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write POTATO at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large oval potato with little eyes/dots taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - soil, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write POTATO at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "veg_onion": {
       "name": "Onion",
       "category": "vegetables",
       "description": "Onion with layers",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large round onion with papery skin and root bottom taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ONION at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large round onion with papery skin and root bottom taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ONION at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "veg_pepper": {
       "name": "Bell Pepper",
       "category": "vegetables",
       "description": "Bell pepper",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large bell pepper with bumpy bottom and green stem taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BELL PEPPER at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large bell pepper with bumpy bottom and green stem taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BELL PEPPER at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "veg_cucumber": {
       "name": "Cucumber",
       "category": "vegetables",
       "description": "Cucumber with bumps",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large long cucumber with bumpy skin taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - vine, leaves, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CUCUMBER at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large long cucumber with bumpy skin taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - vine, leaves, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CUCUMBER at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "veg_lettuce": {
       "name": "Lettuce",
       "category": "vegetables",
       "description": "Head of lettuce",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large leafy head of lettuce with wavy leaves taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LETTUCE at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large leafy head of lettuce with wavy leaves taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LETTUCE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "veg_peas": {
       "name": "Peas",
       "category": "vegetables",
       "description": "Peas in pod",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large open pea pod showing round peas inside taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - vine, leaves, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PEAS at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large open pea pod showing round peas inside taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - vine, leaves, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PEAS at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "veg_mushroom": {
       "name": "Mushroom",
       "category": "vegetables",
       "description": "Mushroom with spots",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large cute mushroom with round cap and stem - can have spots on cap taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple forest floor setting - grass, leaves, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write MUSHROOM at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large cute mushroom with round cap and stem - can have spots on cap taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple forest floor setting - grass, leaves, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write MUSHROOM at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "veg_eggplant": {
       "name": "Eggplant",
       "category": "vegetables",
       "description": "Purple eggplant",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large oval eggplant with green cap and stem taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write EGGPLANT at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large oval eggplant with green cap and stem taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write EGGPLANT at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "veg_radish": {
       "name": "Radish",
       "category": "vegetables",
       "description": "Radish with leaves",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large round red radish with green leafy top and white root tip taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - soil, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write RADISH at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large round red radish with green leafy top and white root tip taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - soil, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write RADISH at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "veg_celery": {
       "name": "Celery",
       "category": "vegetables",
       "description": "Celery stalks",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large celery stalks with leafy top taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CELERY at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large celery stalks with leafy top taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CELERY at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "flower_sunflower": {
       "name": "Sunflower",
       "category": "flowers",
       "description": "Big sunflower",
-      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large sunflower with large center disc, many petals around it, and tall stem with leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - sun, blue sky, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SUNFLOWER at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large sunflower with large center disc, many petals around it, and tall stem with leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - sun, blue sky, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SUNFLOWER at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "flower_rose": {
       "name": "Rose",
       "category": "flowers",
       "description": "Rose bloom",
-      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large rose with layered spiral petals, stem with thorns and leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ROSE at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large rose with layered spiral petals, stem with thorns and leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ROSE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "flower_tulip": {
       "name": "Tulip",
       "category": "flowers",
       "description": "Tulip in bloom",
-      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large tulip with cup-shaped petals and long stem with leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write TULIP at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large tulip with cup-shaped petals and long stem with leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write TULIP at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "flower_daisy": {
       "name": "Daisy",
       "category": "flowers",
       "description": "Daisy flower",
-      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large daisy with round center and simple petals all around, stem and leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple meadow setting - grass, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DAISY at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large daisy with round center and simple petals all around, stem and leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple meadow setting - grass, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DAISY at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "flower_lily": {
       "name": "Lily",
       "category": "flowers",
       "description": "Lily bloom",
-      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large lily flower with curved petals and stamens, stem and long leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LILY at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large lily flower with curved petals and stamens, stem and long leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LILY at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "flower_daffodil": {
       "name": "Daffodil",
       "category": "flowers",
       "description": "Daffodil bloom",
-      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large daffodil with trumpet center and star-shaped petals, long stem taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple spring garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DAFFODIL at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large daffodil with trumpet center and star-shaped petals, long stem taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple spring garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DAFFODIL at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "flower_pansy": {
       "name": "Pansy",
       "category": "flowers",
       "description": "Pansy flower",
-      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large pansy flower with overlapping rounded petals that look like a face taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PANSY at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large pansy flower with overlapping rounded petals that look like a face taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PANSY at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "flower_orchid": {
       "name": "Orchid",
       "category": "flowers",
       "description": "Orchid bloom",
-      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large exotic orchid with distinctive petal shapes on a stem taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple tropical setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ORCHID at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large exotic orchid with distinctive petal shapes on a stem taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple tropical setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ORCHID at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "flower_hibiscus": {
       "name": "Hibiscus",
       "category": "flowers",
       "description": "Hibiscus flower",
-      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large large hibiscus flower with 5 big petals and long stamen in center taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple tropical setting - leaves, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write HIBISCUS at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large large hibiscus flower with 5 big petals and long stamen in center taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple tropical setting - leaves, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write HIBISCUS at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "flower_poppy": {
       "name": "Poppy",
       "category": "flowers",
       "description": "Poppy flower",
-      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large poppy flower with delicate crinkly petals and dark center, stem taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple meadow setting - grass, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write POPPY at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large poppy flower with delicate crinkly petals and dark center, stem taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple meadow setting - grass, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write POPPY at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "flower_marigold": {
       "name": "Marigold",
       "category": "flowers",
       "description": "Marigold bloom",
-      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large round fluffy marigold with many small layered petals, stem and leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write MARIGOLD at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large round fluffy marigold with many small layered petals, stem and leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write MARIGOLD at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "flower_violet": {
       "name": "Violet",
       "category": "flowers",
       "description": "Violet flower",
-      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large small violet flower with heart-shaped leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple forest floor setting - moss, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write VIOLET at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large small violet flower with heart-shaped leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple forest floor setting - moss, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write VIOLET at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "flower_bluebell": {
       "name": "Bluebell",
       "category": "flowers",
       "description": "Bluebell flowers",
-      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large drooping bell-shaped bluebell flowers on a curved stem taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple woodland setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BLUEBELL at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large drooping bell-shaped bluebell flowers on a curved stem taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple woodland setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BLUEBELL at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "flower_lavender": {
       "name": "Lavender",
       "category": "flowers",
       "description": "Lavender sprig",
-      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large lavender sprig with tiny clustered flowers on tall stem taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple field setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LAVENDER at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large lavender sprig with tiny clustered flowers on tall stem taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple field setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LAVENDER at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     },
     "flower_lotus": {
       "name": "Lotus",
       "category": "flowers",
       "description": "Lotus flower",
-      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large lotus flower with layered petals floating on water with large round leaf taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple pond setting - water, lily pads, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LOTUS at the bottom in large hollow outline letters that can be colored in."
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large lotus flower with layered petals floating on water with large round leaf taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple pond setting - water, lily pads, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LOTUS at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     }
   },
   "custom_modifiers": {
