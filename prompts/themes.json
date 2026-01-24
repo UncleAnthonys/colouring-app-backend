@@ -818,6 +818,276 @@
       "category": "dinosaurs",
       "description": "Pachycephalosaurus dinosaur",
       "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly Pachycephalosaurus dinosaur with thick domed head taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple prehistoric setting - rocks, ferns, hills. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PACHYCEPHALOSAURUS at the bottom in large hollow outline letters that can be colored in."
+    },
+    "fruit_apple": {
+      "name": "Apple",
+      "category": "fruits",
+      "description": "Apple with leaf",
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large shiny apple with a leaf and stem taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch, basket, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write APPLE at the bottom in large hollow outline letters that can be colored in."
+    },
+    "fruit_banana": {
+      "name": "Banana",
+      "category": "fruits",
+      "description": "Banana bunch",
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large bunch of bananas with curved shape taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tropical leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BANANA at the bottom in large hollow outline letters that can be colored in."
+    },
+    "fruit_orange": {
+      "name": "Orange",
+      "category": "fruits",
+      "description": "Orange with segment",
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large round orange with dimpled skin and leaf, maybe showing one segment slice taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch with leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ORANGE at the bottom in large hollow outline letters that can be colored in."
+    },
+    "fruit_strawberry": {
+      "name": "Strawberry",
+      "category": "fruits",
+      "description": "Strawberry with seeds",
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large strawberry with tiny seeds and green leafy top taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple garden setting - strawberry plant leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write STRAWBERRY at the bottom in large hollow outline letters that can be colored in."
+    },
+    "fruit_watermelon": {
+      "name": "Watermelon",
+      "category": "fruits",
+      "description": "Watermelon slice",
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large big watermelon slice showing red flesh with seeds and green rind taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple summer setting - picnic blanket, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write WATERMELON at the bottom in large hollow outline letters that can be colored in."
+    },
+    "fruit_grapes": {
+      "name": "Grapes",
+      "category": "fruits",
+      "description": "Bunch of grapes",
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large bunch of round grapes on a vine with a leaf taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple vineyard setting - vine leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write GRAPES at the bottom in large hollow outline letters that can be colored in."
+    },
+    "fruit_pineapple": {
+      "name": "Pineapple",
+      "category": "fruits",
+      "description": "Pineapple with crown",
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large pineapple with diamond pattern body and spiky crown leaves taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple tropical setting - beach, palm leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PINEAPPLE at the bottom in large hollow outline letters that can be colored in."
+    },
+    "fruit_cherry": {
+      "name": "Cherry",
+      "category": "fruits",
+      "description": "Cherries on stem",
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large pair of round cherries connected by stems with a leaf taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CHERRIES at the bottom in large hollow outline letters that can be colored in."
+    },
+    "fruit_pear": {
+      "name": "Pear",
+      "category": "fruits",
+      "description": "Pear with leaf",
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large pear with curved shape, stem and leaf taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch, basket, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PEAR at the bottom in large hollow outline letters that can be colored in."
+    },
+    "fruit_peach": {
+      "name": "Peach",
+      "category": "fruits",
+      "description": "Fuzzy peach",
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large round peach with fuzzy texture and leaf taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch with leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PEACH at the bottom in large hollow outline letters that can be colored in."
+    },
+    "fruit_lemon": {
+      "name": "Lemon",
+      "category": "fruits",
+      "description": "Lemon with leaf",
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large oval lemon with pointed ends and leaf taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch, lemonade glass, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LEMON at the bottom in large hollow outline letters that can be colored in."
+    },
+    "fruit_mango": {
+      "name": "Mango",
+      "category": "fruits",
+      "description": "Tropical mango",
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large oval mango with curved shape and stem taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple tropical setting - leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write MANGO at the bottom in large hollow outline letters that can be colored in."
+    },
+    "fruit_kiwi": {
+      "name": "Kiwi",
+      "category": "fruits",
+      "description": "Kiwi fruit cut open",
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large kiwi fruit cut in half showing seeds pattern inside with fuzzy brown outside taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write KIWI at the bottom in large hollow outline letters that can be colored in."
+    },
+    "fruit_coconut": {
+      "name": "Coconut",
+      "category": "fruits",
+      "description": "Coconut half",
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large coconut cracked open showing white inside taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple tropical beach setting - palm tree, sand, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write COCONUT at the bottom in large hollow outline letters that can be colored in."
+    },
+    "fruit_blueberry": {
+      "name": "Blueberry",
+      "category": "fruits",
+      "description": "Big blueberries",
+      "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large cluster of round blueberries with tiny crown tops taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple garden setting - bush leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BLUEBERRIES at the bottom in large hollow outline letters that can be colored in."
+    },
+    "veg_carrot": {
+      "name": "Carrot",
+      "category": "vegetables",
+      "description": "Carrot with green top",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large orange carrot with leafy green top taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - soil, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CARROT at the bottom in large hollow outline letters that can be colored in."
+    },
+    "veg_broccoli": {
+      "name": "Broccoli",
+      "category": "vegetables",
+      "description": "Broccoli floret",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large broccoli with tree-like floret top and thick stem taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BROCCOLI at the bottom in large hollow outline letters that can be colored in."
+    },
+    "veg_tomato": {
+      "name": "Tomato",
+      "category": "vegetables",
+      "description": "Ripe tomato",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large round tomato with green stem top taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - vine, leaves, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write TOMATO at the bottom in large hollow outline letters that can be colored in."
+    },
+    "veg_corn": {
+      "name": "Corn",
+      "category": "vegetables",
+      "description": "Corn on the cob",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large corn on the cob with kernels showing and husk leaves taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple farm setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CORN at the bottom in large hollow outline letters that can be colored in."
+    },
+    "veg_pumpkin": {
+      "name": "Pumpkin",
+      "category": "vegetables",
+      "description": "Pumpkin with stem",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large round pumpkin with ridges and curly stem taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple autumn setting - leaves, hay, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PUMPKIN at the bottom in large hollow outline letters that can be colored in."
+    },
+    "veg_potato": {
+      "name": "Potato",
+      "category": "vegetables",
+      "description": "Potato with eyes",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large oval potato with little eyes/dots taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - soil, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write POTATO at the bottom in large hollow outline letters that can be colored in."
+    },
+    "veg_onion": {
+      "name": "Onion",
+      "category": "vegetables",
+      "description": "Onion with layers",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large round onion with papery skin and root bottom taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ONION at the bottom in large hollow outline letters that can be colored in."
+    },
+    "veg_pepper": {
+      "name": "Bell Pepper",
+      "category": "vegetables",
+      "description": "Bell pepper",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large bell pepper with bumpy bottom and green stem taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BELL PEPPER at the bottom in large hollow outline letters that can be colored in."
+    },
+    "veg_cucumber": {
+      "name": "Cucumber",
+      "category": "vegetables",
+      "description": "Cucumber with bumps",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large long cucumber with bumpy skin taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - vine, leaves, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CUCUMBER at the bottom in large hollow outline letters that can be colored in."
+    },
+    "veg_lettuce": {
+      "name": "Lettuce",
+      "category": "vegetables",
+      "description": "Head of lettuce",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large leafy head of lettuce with wavy leaves taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LETTUCE at the bottom in large hollow outline letters that can be colored in."
+    },
+    "veg_peas": {
+      "name": "Peas",
+      "category": "vegetables",
+      "description": "Peas in pod",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large open pea pod showing round peas inside taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - vine, leaves, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PEAS at the bottom in large hollow outline letters that can be colored in."
+    },
+    "veg_mushroom": {
+      "name": "Mushroom",
+      "category": "vegetables",
+      "description": "Mushroom with spots",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large cute mushroom with round cap and stem - can have spots on cap taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple forest floor setting - grass, leaves, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write MUSHROOM at the bottom in large hollow outline letters that can be colored in."
+    },
+    "veg_eggplant": {
+      "name": "Eggplant",
+      "category": "vegetables",
+      "description": "Purple eggplant",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large oval eggplant with green cap and stem taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write EGGPLANT at the bottom in large hollow outline letters that can be colored in."
+    },
+    "veg_radish": {
+      "name": "Radish",
+      "category": "vegetables",
+      "description": "Radish with leaves",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large round red radish with green leafy top and white root tip taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - soil, or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write RADISH at the bottom in large hollow outline letters that can be colored in."
+    },
+    "veg_celery": {
+      "name": "Celery",
+      "category": "vegetables",
+      "description": "Celery stalks",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large celery stalks with leafy top taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CELERY at the bottom in large hollow outline letters that can be colored in."
+    },
+    "flower_sunflower": {
+      "name": "Sunflower",
+      "category": "flowers",
+      "description": "Big sunflower",
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large sunflower with large center disc, many petals around it, and tall stem with leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - sun, blue sky, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SUNFLOWER at the bottom in large hollow outline letters that can be colored in."
+    },
+    "flower_rose": {
+      "name": "Rose",
+      "category": "flowers",
+      "description": "Rose bloom",
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large rose with layered spiral petals, stem with thorns and leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ROSE at the bottom in large hollow outline letters that can be colored in."
+    },
+    "flower_tulip": {
+      "name": "Tulip",
+      "category": "flowers",
+      "description": "Tulip in bloom",
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large tulip with cup-shaped petals and long stem with leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write TULIP at the bottom in large hollow outline letters that can be colored in."
+    },
+    "flower_daisy": {
+      "name": "Daisy",
+      "category": "flowers",
+      "description": "Daisy flower",
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large daisy with round center and simple petals all around, stem and leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple meadow setting - grass, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DAISY at the bottom in large hollow outline letters that can be colored in."
+    },
+    "flower_lily": {
+      "name": "Lily",
+      "category": "flowers",
+      "description": "Lily bloom",
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large lily flower with curved petals and stamens, stem and long leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LILY at the bottom in large hollow outline letters that can be colored in."
+    },
+    "flower_daffodil": {
+      "name": "Daffodil",
+      "category": "flowers",
+      "description": "Daffodil bloom",
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large daffodil with trumpet center and star-shaped petals, long stem taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple spring garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DAFFODIL at the bottom in large hollow outline letters that can be colored in."
+    },
+    "flower_pansy": {
+      "name": "Pansy",
+      "category": "flowers",
+      "description": "Pansy flower",
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large pansy flower with overlapping rounded petals that look like a face taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PANSY at the bottom in large hollow outline letters that can be colored in."
+    },
+    "flower_orchid": {
+      "name": "Orchid",
+      "category": "flowers",
+      "description": "Orchid bloom",
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large exotic orchid with distinctive petal shapes on a stem taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple tropical setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write ORCHID at the bottom in large hollow outline letters that can be colored in."
+    },
+    "flower_hibiscus": {
+      "name": "Hibiscus",
+      "category": "flowers",
+      "description": "Hibiscus flower",
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large large hibiscus flower with 5 big petals and long stamen in center taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple tropical setting - leaves, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write HIBISCUS at the bottom in large hollow outline letters that can be colored in."
+    },
+    "flower_poppy": {
+      "name": "Poppy",
+      "category": "flowers",
+      "description": "Poppy flower",
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large poppy flower with delicate crinkly petals and dark center, stem taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple meadow setting - grass, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write POPPY at the bottom in large hollow outline letters that can be colored in."
+    },
+    "flower_marigold": {
+      "name": "Marigold",
+      "category": "flowers",
+      "description": "Marigold bloom",
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large round fluffy marigold with many small layered petals, stem and leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write MARIGOLD at the bottom in large hollow outline letters that can be colored in."
+    },
+    "flower_violet": {
+      "name": "Violet",
+      "category": "flowers",
+      "description": "Violet flower",
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large small violet flower with heart-shaped leaves taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple forest floor setting - moss, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write VIOLET at the bottom in large hollow outline letters that can be colored in."
+    },
+    "flower_bluebell": {
+      "name": "Bluebell",
+      "category": "flowers",
+      "description": "Bluebell flowers",
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large drooping bell-shaped bluebell flowers on a curved stem taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple woodland setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BLUEBELL at the bottom in large hollow outline letters that can be colored in."
+    },
+    "flower_lavender": {
+      "name": "Lavender",
+      "category": "flowers",
+      "description": "Lavender sprig",
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large lavender sprig with tiny clustered flowers on tall stem taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple field setting - or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LAVENDER at the bottom in large hollow outline letters that can be colored in."
+    },
+    "flower_lotus": {
+      "name": "Lotus",
+      "category": "flowers",
+      "description": "Lotus flower",
+      "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large lotus flower with layered petals floating on water with large round leaf taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple pond setting - water, lily pads, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LOTUS at the bottom in large hollow outline letters that can be colored in."
     }
   },
   "custom_modifiers": {
