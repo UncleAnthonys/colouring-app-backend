@@ -13,6 +13,7 @@ from fastapi import FastAPI, HTTPException, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
+from pattern_endpoints import pattern_router
 
 app = FastAPI(title="Kids Colouring App API", version="1.0.0")
 
@@ -24,6 +25,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include pattern coloring router
+app.include_router(pattern_router)
 
 # Config
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
