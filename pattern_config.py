@@ -144,9 +144,9 @@ def generate_pattern_prompt(shape: str, age_level: str) -> str:
     
     # Build the prompt
     if count == 1:
-        prompt = f"""CRITICAL: This image MUST contain ONLY 1 {shape} and NOTHING else. 1 very large simple cartoon {shape} {layout}. {pattern_desc} Very simple shapes. {outline}. Professional vector art style with clean connected lines. IMPORTANT: Do NOT add any {exclusions}. The background MUST be pure white. ONLY the 1 large patterned {shape}."""
+        prompt = f"""CRITICAL: This image MUST contain ONLY 1 {shape} and NOTHING else. 1 very large simple cartoon {shape} {layout}. {pattern_desc} Very simple shapes. {outline}. BLACK AND WHITE OUTLINES ONLY - no colour, no grey, no shading. Professional vector art style with clean connected lines. IMPORTANT: Do NOT add any {exclusions}. The background MUST be pure white. ONLY the 1 large patterned {shape}."""
     else:
-        prompt = f"""CRITICAL: This image MUST contain ONLY {count} {plural_shape} and NOTHING else. {count} cartoon {plural_shape} {layout}. {pattern_desc} Very simple shapes. {outline}. Professional vector art style with clean connected lines. IMPORTANT: Do NOT add any {exclusions}. The background MUST be pure white. ONLY the {count} patterned {plural_shape}."""
+        prompt = f"""CRITICAL: This image MUST contain ONLY {count} {plural_shape} and NOTHING else. {count} cartoon {plural_shape} {layout}. {pattern_desc} Very simple shapes. {outline}. BLACK AND WHITE OUTLINES ONLY - no colour, no grey, no shading. Professional vector art style with clean connected lines. IMPORTANT: Do NOT add any {exclusions}. The background MUST be pure white. ONLY the {count} patterned {plural_shape}."""
     
     return prompt
 
@@ -195,9 +195,9 @@ def generate_pattern_prompt_deterministic(shape: str, age_level: str, pattern_in
     
     # Build the prompt
     if count == 1:
-        prompt = f"""CRITICAL: This image MUST contain ONLY 1 {shape} and NOTHING else. 1 very large simple cartoon {shape} {layout}. {pattern_desc} Very simple shapes. {outline}. Professional vector art style with clean connected lines. IMPORTANT: Do NOT add any {exclusions}. The background MUST be pure white. ONLY the 1 large patterned {shape}."""
+        prompt = f"""CRITICAL: This image MUST contain ONLY 1 {shape} and NOTHING else. 1 very large simple cartoon {shape} {layout}. {pattern_desc} Very simple shapes. {outline}. BLACK AND WHITE OUTLINES ONLY - no colour, no grey, no shading. Professional vector art style with clean connected lines. IMPORTANT: Do NOT add any {exclusions}. The background MUST be pure white. ONLY the 1 large patterned {shape}."""
     else:
-        prompt = f"""CRITICAL: This image MUST contain ONLY {count} {plural_shape} and NOTHING else. {count} cartoon {plural_shape} {layout}. {pattern_desc} Very simple shapes. {outline}. Professional vector art style with clean connected lines. IMPORTANT: Do NOT add any {exclusions}. The background MUST be pure white. ONLY the {count} patterned {plural_shape}."""
+        prompt = f"""CRITICAL: This image MUST contain ONLY {count} {plural_shape} and NOTHING else. {count} cartoon {plural_shape} {layout}. {pattern_desc} Very simple shapes. {outline}. BLACK AND WHITE OUTLINES ONLY - no colour, no grey, no shading. Professional vector art style with clean connected lines. IMPORTANT: Do NOT add any {exclusions}. The background MUST be pure white. ONLY the {count} patterned {plural_shape}."""
     
     return prompt
 

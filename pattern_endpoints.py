@@ -74,15 +74,15 @@ async def generate_pattern_coloring(request: PatternRequest):
     # This assumes you have a generate_image function that takes a prompt
     try:
         # Import your existing image generation function
-        from main import generate_image_from_prompt  # Adjust import as needed
+        from app import generate_from_text  # Adjust import as needed
         
-        image_base64 = await generate_image_from_prompt(
+        result = await generate_from_text(
             prompt=prompt,
             quality=request.quality
         )
         
         return PatternResponse(
-            image=image_base64,
+            image=result["data"][0]["b64_json"],
             prompt_used=prompt,
             shape=request.shape,
             age_level=request.age_level,
