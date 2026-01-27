@@ -35,23 +35,50 @@ Look at this drawing carefully and describe the character in PRECISE DETAIL.
 
 Return a JSON object with these fields:
 {
-  "character_type": "princess/knight/animal/robot/superhero/fairy/etc",
+  "character_type": "princess/knight/animal/robot/monster/superhero/fairy/etc",
   "name_suggestion": "A fun, child-friendly name based on their appearance",
   "physical_description": "Detailed description of face, hair, body shape, any unique features",
   "clothing_description": "VERY detailed description of what they're wearing - count layers, note exact colors top to bottom, describe patterns, buttons, accessories",
   "key_features": ["list", "of", "distinctive", "features", "that", "MUST", "appear", "in", "every", "image"],
   "colors": ["list", "of", "all", "colors", "used"],
   "personality_vibe": "What personality does this character seem to have based on their expression and style?",
-  "drawing_style": "How would you describe the child's art style? (stick figure, cartoon, detailed, etc.)"
+  "drawing_style": "How would you describe the child's art style? (stick figure, cartoon, detailed, etc.)",
+  "suggested_adventures": [
+    {
+      "title": "Creative adventure title",
+      "theme": "one word theme like: forest/ocean/space/castle/candy/monster/dinosaur/fairy/robot/pirate",
+      "description": "2-3 sentence description of the adventure plot tailored to this specific character",
+      "why_it_fits": "Brief explanation of why this adventure suits this character"
+    },
+    {
+      "title": "Another creative title",
+      "theme": "different theme",
+      "description": "Different adventure idea",
+      "why_it_fits": "Why this works for the character"
+    },
+    {
+      "title": "Third option",
+      "theme": "another theme",
+      "description": "Third unique adventure",
+      "why_it_fits": "Why this matches"
+    }
+  ]
 }
 
-BE EXTREMELY SPECIFIC ABOUT:
+BE EXTREMELY SPECIFIC ABOUT THE CHARACTER:
 - EXACT number of layers/tiers in clothing (count them!)
 - EXACT colors in order from top to bottom
 - Number and placement of buttons, dots, or patterns
 - Hair style, length, and color
 - Any accessories (crown, hat, wings, wand, etc.)
 - Facial features and expression
+
+FOR ADVENTURE SUGGESTIONS:
+- Base them on the character's appearance and vibe
+- A princess might suit magical/fairy tales, a monster might suit spooky/silly adventures
+- Be creative! Don't just use generic themes
+- Each adventure should feel UNIQUE to this specific character
+- Think about what would delight a child who drew this character
 
 This description will be used to recreate the character CONSISTENTLY across 10 coloring pages in an adventure story. 
 The child will be looking for THEIR character - accuracy is CRITICAL.
@@ -63,6 +90,14 @@ Return ONLY the JSON object, no other text or markdown."""
 # RESPONSE MODEL
 # =============================================================================
 
+class SuggestedAdventure(BaseModel):
+    """A suggested adventure based on the character."""
+    title: str
+    theme: str
+    description: str
+    why_it_fits: str = ""
+
+
 class ExtractedCharacter(BaseModel):
     """Extracted character data from a child's drawing."""
     character_type: str
@@ -73,6 +108,7 @@ class ExtractedCharacter(BaseModel):
     colors: list[str]
     personality_vibe: str
     drawing_style: str = "simple"
+    suggested_adventures: list[SuggestedAdventure] = []
     
     # Computed fields for adventure generation
     @property
@@ -185,6 +221,16 @@ async def extract_character_from_drawing(
         # Parse JSON
         data = json.loads(text)
         
+        # Parse suggested adventures
+        adventures = []
+        for adv in data.get("suggested_adventures", []):
+            adventures.append(SuggestedAdventure(
+                title=adv.get("title", "Mystery Adventure"),
+                theme=adv.get("theme", "forest"),
+                description=adv.get("description", ""),
+                why_it_fits=adv.get("why_it_fits", "")
+            ))
+        
         # Create character object
         character = ExtractedCharacter(
             character_type=data.get("character_type", "character"),
@@ -194,7 +240,8 @@ async def extract_character_from_drawing(
             key_features=data.get("key_features", []),
             colors=data.get("colors", []),
             personality_vibe=data.get("personality_vibe", "friendly and adventurous"),
-            drawing_style=data.get("drawing_style", data.get("drawing_complexity", "simple"))
+            drawing_style=data.get("drawing_style", data.get("drawing_complexity", "simple")),
+            suggested_adventures=adventures
         )
         
         return ExtractionResult(
@@ -287,6 +334,16 @@ def extract_character_sync(
         
         data = json.loads(text.strip())
         
+        # Parse suggested adventures
+        adventures = []
+        for adv in data.get("suggested_adventures", []):
+            adventures.append(SuggestedAdventure(
+                title=adv.get("title", "Mystery Adventure"),
+                theme=adv.get("theme", "forest"),
+                description=adv.get("description", ""),
+                why_it_fits=adv.get("why_it_fits", "")
+            ))
+        
         character = ExtractedCharacter(
             character_type=data.get("character_type", "character"),
             name_suggestion=data.get("name_suggestion", "My Character"),
@@ -295,7 +352,8 @@ def extract_character_sync(
             key_features=data.get("key_features", []),
             colors=data.get("colors", []),
             personality_vibe=data.get("personality_vibe", "friendly and adventurous"),
-            drawing_style=data.get("drawing_style", data.get("drawing_complexity", "simple"))
+            drawing_style=data.get("drawing_style", data.get("drawing_complexity", "simple")),
+            suggested_adventures=adventures
         )
         
         return ExtractionResult(

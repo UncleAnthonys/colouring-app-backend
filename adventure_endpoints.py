@@ -220,6 +220,17 @@ async def extract_character(
     # Use provided name or suggestion
     final_name = character_name if character_name else character.name_suggestion
     
+    # Format adventures for response
+    adventures = [
+        {
+            "title": adv.title,
+            "theme": adv.theme,
+            "description": adv.description,
+            "why_it_fits": adv.why_it_fits
+        }
+        for adv in character.suggested_adventures
+    ]
+    
     return {
         "success": True,
         "character": {
@@ -236,6 +247,7 @@ async def extract_character(
             "full_description": character.adventure_description,
             "key_feature_summary": character.key_feature_summary
         },
+        "suggested_adventures": adventures,
         "processing_time": result.processing_time,
         "model_used": result.model_used
     }
@@ -260,6 +272,17 @@ async def extract_character_base64(
     character = result.character
     final_name = character_name if character_name else character.name_suggestion
     
+    # Format adventures for response
+    adventures = [
+        {
+            "title": adv.title,
+            "theme": adv.theme,
+            "description": adv.description,
+            "why_it_fits": adv.why_it_fits
+        }
+        for adv in character.suggested_adventures
+    ]
+    
     return {
         "success": True,
         "character": {
@@ -275,6 +298,7 @@ async def extract_character_base64(
             "full_description": character.adventure_description,
             "key_feature_summary": character.key_feature_summary
         },
+        "suggested_adventures": adventures,
         "processing_time": result.processing_time,
         "model_used": result.model_used
     }
