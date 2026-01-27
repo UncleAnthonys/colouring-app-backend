@@ -1,0 +1,159 @@
+{
+  "gemini-2.5-flash": {
+    "error": "Parse error: Unterminated string starting at: line 5 column 27 (char 709)",
+    "raw": {
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "```json\n{\n  \"character_type\": \"princess\",\n  \"name_suggestion\": \"Princess Polychrome\",\n  \"physical_description\": \"The character has an oval-shaped head with a light skin tone (implied by the white paper). Their eyes are two small blue dots. A wide, upward-curving red line forms a cheerful smile. There is no distinct nose. The hair is bright yellow, drawn as spiky rays extending upwards and outwards from the head, resembling a crown. The body is a long, rectangular shape, tapering slightly towards the bottom. Two arms extend from the upper body, each ending in a hand with three distinct, rounded 'fingers' or lobes. No legs or feet are visible, as they are covered by the long dress.\",\n  \"clothing_description\": \"The character wears a multi-layered outfit. The upper body is covered by a solid dark red (crimson"
+              }
+            ],
+            "role": "model"
+          },
+          "finishReason": "MAX_TOKENS",
+          "index": 0
+        }
+      ],
+      "usageMetadata": {
+        "promptTokenCount": 536,
+        "candidatesTokenCount": 193,
+        "totalTokenCount": 1556,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 278
+          },
+          {
+            "modality": "IMAGE",
+            "tokenCount": 258
+          }
+        ],
+        "thoughtsTokenCount": 827
+      },
+      "modelVersion": "gemini-2.5-flash",
+      "responseId": "8uF4ad3IKf7axN8P_5PtqQE"
+    },
+    "time": 7.4424192905426025
+  },
+  "gemini-2.0-flash": {
+    "success": true,
+    "data": {
+      "character_type": "princess",
+      "name_suggestion": "Rainbow Royalty",
+      "physical_description": "A stick-figure-style person with a round head, blue eyes, a red smile, and yellow hair that extends upwards like a crown. The body is elongated and segmented.",
+      "clothing_description": "The character is wearing a multi-layered outfit. The top layer is a red, long-sleeved shirt or dress. Below that are four distinct layers: yellow, green, blue, and orange. Each layer is separated by a thin line. There are black dots on the yellow, green, and orange layers, resembling buttons.",
+      "key_features": [
+        "elongated body",
+        "segmented clothing layers",
+        "crown-like hair",
+        "stick figure style",
+        "buttons"
+      ],
+      "colors": [
+        "red",
+        "yellow",
+        "green",
+        "blue",
+        "orange",
+        "black",
+        "white"
+      ],
+      "personality_vibe": "Cheerful, whimsical, and friendly",
+      "drawing_complexity": "simple"
+    },
+    "raw": "\n{\n  \"character_type\": \"princess\",\n  \"name_suggestion\": \"Rainbow Royalty\",\n  \"physical_description\": \"A stick-figure-style person with a round head, blue eyes, a red smile, and yellow hair that extends upwards like a crown. The body is elongated and segmented.\",\n  \"clothing_description\": \"The character is wearing a multi-layered outfit. The top layer is a red, long-sleeved shirt or dress. Below that are four distinct layers: yellow, green, blue, and orange. Each layer is separated by a thin line. There are black dots on the yellow, green, and orange layers, resembling buttons.\",\n  \"key_features\": [\"elongated body\", \"segmented clothing layers\", \"crown-like hair\", \"stick figure style\", \"buttons\"],\n  \"colors\": [\"red\", \"yellow\", \"green\", \"blue\", \"orange\", \"black\", \"white\"],\n  \"personality_vibe\": \"Cheerful, whimsical, and friendly\",\n  \"drawing_complexity\": \"simple\"\n}\n",
+    "time": 3.296872854232788,
+    "model": "gemini-2.0-flash"
+  },
+  "gemini-1.5-flash": {
+    "error": "API error: 404 - {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.\",\n    \"status\": \"NOT_FOUND\"\n  }\n}\n",
+    "time": 0.12385106086730957
+  },
+  "gpt-4o-mini": {
+    "success": true,
+    "data": {
+      "character_type": "princess",
+      "name_suggestion": "Rainbow Sparkle",
+      "physical_description": "The character has a round face with a big smile and blue eyes. Their hair is long and yellow, styled in a wavy manner, resembling flowing locks.",
+      "clothing_description": "The character wears a dress with multiple layers. The top layer is red, followed by a rainbow pattern consisting of yellow, green, blue, and orange sections. Each section has black buttons down the front.",
+      "key_features": [
+        "long yellow hair",
+        "big smile",
+        "colorful dress",
+        "black buttons"
+      ],
+      "colors": [
+        "red",
+        "yellow",
+        "green",
+        "blue",
+        "orange",
+        "black"
+      ],
+      "personality_vibe": "Cheerful and playful, radiating positivity and joy.",
+      "drawing_complexity": "medium"
+    },
+    "raw": "\n{\n  \"character_type\": \"princess\",\n  \"name_suggestion\": \"Rainbow Sparkle\",\n  \"physical_description\": \"The character has a round face with a big smile and blue eyes. Their hair is long and yellow, styled in a wavy manner, resembling flowing locks.\",\n  \"clothing_description\": \"The character wears a dress with multiple layers. The top layer is red, followed by a rainbow pattern consisting of yellow, green, blue, and orange sections. Each section has black buttons down the front.\",\n  \"key_features\": [\"long yellow hair\", \"big smile\", \"colorful dress\", \"black buttons\"],\n  \"colors\": [\"red\", \"yellow\", \"green\", \"blue\", \"orange\", \"black\"],\n  \"personality_vibe\": \"Cheerful and playful, radiating positivity and joy.\",\n  \"drawing_complexity\": \"medium\"\n}\n",
+    "time": 6.595784902572632,
+    "model": "gpt-4o-mini",
+    "usage": {
+      "prompt_tokens": 37096,
+      "completion_tokens": 186,
+      "total_tokens": 37282,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    }
+  },
+  "gpt-4o": {
+    "success": true,
+    "data": {
+      "character_type": "princess",
+      "name_suggestion": "Rainbow Princess",
+      "physical_description": "The character has a round face with a big smile and blue eyes. She has long yellow hair that resembles a crown.",
+      "clothing_description": "The character is wearing a multi-tiered dress with four distinct layers. The top layer is red with long sleeves and a round neckline. The second layer is yellow, followed by a green layer, and the bottom layer is blue. Each layer has a black button in the center.",
+      "key_features": [
+        "yellow hair",
+        "multi-colored dress",
+        "black buttons",
+        "long sleeves"
+      ],
+      "colors": [
+        "red",
+        "yellow",
+        "green",
+        "blue",
+        "black"
+      ],
+      "personality_vibe": "Joyful and vibrant, with a playful and cheerful demeanor.",
+      "drawing_complexity": "simple"
+    },
+    "raw": "\n{\n  \"character_type\": \"princess\",\n  \"name_suggestion\": \"Rainbow Princess\",\n  \"physical_description\": \"The character has a round face with a big smile and blue eyes. She has long yellow hair that resembles a crown.\",\n  \"clothing_description\": \"The character is wearing a multi-tiered dress with four distinct layers. The top layer is red with long sleeves and a round neckline. The second layer is yellow, followed by a green layer, and the bottom layer is blue. Each layer has a black button in the center.\",\n  \"key_features\": [\"yellow hair\", \"multi-colored dress\", \"black buttons\", \"long sleeves\"],\n  \"colors\": [\"red\", \"yellow\", \"green\", \"blue\", \"black\"],\n  \"personality_vibe\": \"Joyful and vibrant, with a playful and cheerful demeanor.\",\n  \"drawing_complexity\": \"simple\"\n}\n",
+    "time": 9.362421989440918,
+    "model": "gpt-4o",
+    "usage": {
+      "prompt_tokens": 1366,
+      "completion_tokens": 188,
+      "total_tokens": 1554,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    }
+  }
+}

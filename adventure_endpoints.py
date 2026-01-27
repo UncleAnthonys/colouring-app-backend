@@ -15,7 +15,7 @@ import os
 import base64
 import httpx
 from typing import Optional, List
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, UploadFile, File, Form
 from pydantic import BaseModel
 
 from adventure_config import (
@@ -29,6 +29,12 @@ from adventure_config import (
     get_episode_data
 )
 from adventure_pdf import create_adventure_pdf_base64
+from character_extraction import (
+    extract_character_from_drawing,
+    ExtractedCharacter,
+    ExtractionResult,
+    build_character_prompt
+)
 
 # =============================================================================
 # CONFIGURATION
@@ -175,6 +181,104 @@ async def generate_image(prompt: str, quality: str = "low") -> str:
 # =============================================================================
 # ENDPOINTS
 # =============================================================================
+
+@router.post("/extract-character")
+async def extract_character(
+    image: UploadFile = File(...),
+    character_name: Optional[str] = Form(None)
+):
+    """
+    Extract character features from a child's drawing using Gemini 2.5 Flash.
+    
+    This analyzes the uploaded drawing and returns detailed character data
+    that can be used to generate consistent coloring pages.
+    
+    Args:
+        image: The child's drawing (JPEG, PNG, etc.)
+        character_name: Optional name for the character (child can provide)
+    
+    Returns:
+        Extracted character data including physical description, clothing,
+        key features, colors, and personality.
+    """
+    # Read and encode image
+    image_data = await image.read()
+    image_b64 = base64.b64encode(image_data).decode("utf-8")
+    
+    # Determine MIME type
+    content_type = image.content_type or "image/jpeg"
+    
+    # Extract character features
+    result = await extract_character_from_drawing(image_b64, content_type)
+    
+    if not result.success:
+        raise HTTPException(status_code=500, detail=result.error)
+    
+    # Build response
+    character = result.character
+    
+    # Use provided name or suggestion
+    final_name = character_name if character_name else character.name_suggestion
+    
+    return {
+        "success": True,
+        "character": {
+            "name": final_name,
+            "type": character.character_type,
+            "name_suggestion": character.name_suggestion,
+            "physical_description": character.physical_description,
+            "clothing_description": character.clothing_description,
+            "key_features": character.key_features,
+            "colors": character.colors,
+            "personality": character.personality_vibe,
+            "drawing_style": character.drawing_style,
+            # Pre-built for episode generation
+            "full_description": character.adventure_description,
+            "key_feature_summary": character.key_feature_summary
+        },
+        "processing_time": result.processing_time,
+        "model_used": result.model_used
+    }
+
+
+@router.post("/extract-character-base64")
+async def extract_character_base64(
+    image_b64: str,
+    mime_type: str = "image/jpeg",
+    character_name: Optional[str] = None
+):
+    """
+    Extract character features from a base64-encoded image.
+    
+    Alternative to file upload for FlutterFlow integration.
+    """
+    result = await extract_character_from_drawing(image_b64, mime_type)
+    
+    if not result.success:
+        raise HTTPException(status_code=500, detail=result.error)
+    
+    character = result.character
+    final_name = character_name if character_name else character.name_suggestion
+    
+    return {
+        "success": True,
+        "character": {
+            "name": final_name,
+            "type": character.character_type,
+            "name_suggestion": character.name_suggestion,
+            "physical_description": character.physical_description,
+            "clothing_description": character.clothing_description,
+            "key_features": character.key_features,
+            "colors": character.colors,
+            "personality": character.personality_vibe,
+            "drawing_style": character.drawing_style,
+            "full_description": character.adventure_description,
+            "key_feature_summary": character.key_feature_summary
+        },
+        "processing_time": result.processing_time,
+        "model_used": result.model_used
+    }
+
 
 @router.get("/themes", response_model=GetThemesResponse)
 async def get_themes():
