@@ -139,7 +139,7 @@ async def extract_character_from_drawing(
         }],
         "generationConfig": {
             "temperature": 0.2,
-            "maxOutputTokens": 2048
+            "maxOutputTokens": 4096
         }
     }
     
@@ -250,7 +250,7 @@ def extract_character_sync(
         }],
         "generationConfig": {
             "temperature": 0.2,
-            "maxOutputTokens": 2048
+            "maxOutputTokens": 4096
         }
     }
     
