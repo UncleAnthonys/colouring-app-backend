@@ -16,6 +16,7 @@ from typing import Optional
 from pattern_endpoints import pattern_router
 from PIL import Image
 import io
+from pdf_utils import create_a4_pdf
 
 app = FastAPI(title="Kids Colouring App API", version="1.0.0")
 
@@ -874,10 +875,19 @@ async def generate_from_photo_endpoint(request: PhotoGenerateRequest):
         output_image = image_data["url"]
         output_type = "url"
     
+    # Generate PDF if we have base64 image
+    pdf_b64 = None
+    if output_type == "base64":
+        try:
+            pdf_b64 = create_a4_pdf(output_image)
+        except Exception as e:
+            print(f"PDF generation failed: {e}")
+    
     return {
         "success": True,
         "image": output_image,
         "image_type": output_type,
+        "pdf": pdf_b64,
         "generation_time": elapsed,
         "theme_used": request.custom_theme or request.theme,
         "age_level": request.age_level
@@ -921,10 +931,19 @@ async def generate_from_text_endpoint(request: TextGenerateRequest):
         output_image = image_data["url"]
         output_type = "url"
     
+    # Generate PDF if we have base64 image
+    pdf_b64 = None
+    if output_type == "base64":
+        try:
+            pdf_b64 = create_a4_pdf(output_image)
+        except Exception as e:
+            print(f"PDF generation failed: {e}")
+    
     return {
         "success": True,
         "image": output_image,
         "image_type": output_type,
+        "pdf": pdf_b64,
         "generation_time": elapsed,
         "description": request.description,
         "age_level": request.age_level

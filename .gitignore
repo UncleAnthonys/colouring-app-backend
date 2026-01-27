@@ -1,2 +1,15 @@
+__pycache__/
+*.pyc
+*.log
 *.png
-response.json
+*.jpg
+*.jpeg
+*.pdf
+*.backup*
+temp_*
+response*.json
+r.json
+direct_test.json
+test_*.sh
+*.sh
+nature_themes_update.py
