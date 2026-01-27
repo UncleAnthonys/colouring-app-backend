@@ -17,6 +17,7 @@ from pattern_endpoints import pattern_router
 from PIL import Image
 import io
 from pdf_utils import create_a4_pdf
+from adventure_endpoints import router as adventure_router
 
 app = FastAPI(title="Kids Colouring App API", version="1.0.0")
 
@@ -31,6 +32,7 @@ app.add_middleware(
 
 # Include pattern coloring router
 app.include_router(pattern_router)
+app.include_router(adventure_router, prefix="/adventure", tags=["Adventure"])
 
 # Config
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
