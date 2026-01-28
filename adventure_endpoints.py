@@ -1,16 +1,6 @@
-"""
-🎨 My Character's Adventures - API Endpoints
-=============================================
-
-FastAPI endpoints for the adventure story system.
-
-Add to backend folder: ~/Downloads/kids-colouring-app/backend/adventure_endpoints.py
-
-Then import in app.py:
-    from adventure_endpoints import router as adventure_router
-    app.include_router(adventure_router, prefix="/adventure", tags=["Adventure"])
-"""
-
+from adventure_gemini import generate_adventure_reveal_gemini, generate_adventure_episode_gemini
+from character_extraction_gemini import extract_character_gemini
+import google.generativeai as genai
 import os
 import base64
 import httpx
@@ -20,25 +10,12 @@ from pydantic import BaseModel
 
 from adventure_config import (
     AGE_RULES,
-    ADVENTURE_THEMES,
-    FOREST_ADVENTURE,
-    MASTER_COLORING_PROMPT,
-    CHARACTER_REFERENCE_PROMPT,
     get_age_rules,
-    get_story_for_age,
-    get_episode_data
-)
-from adventure_pdf import create_adventure_pdf_base64
-from character_extraction import (
-    extract_character_from_drawing,
-    ExtractedCharacter,
-    ExtractionResult,
-    build_character_prompt
+    get_episode_data,
+    get_story_for_age
 )
 
-# =============================================================================
-# CONFIGURATION
-# =============================================================================
+from adventure_pdf import create_adventure_pdf_base64
 
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 MODEL = "gpt-image-1.5"
@@ -70,6 +47,7 @@ class GenerateEpisodeRequest(BaseModel):
     age_level: str = "age_6"
     choice_path: str = ""  # e.g., "", "A", "AA", "AB"
     quality: str = "low"
+    reveal_description: Optional[str] = None  # The analyzed reveal description for consistency
 
 
 class GenerateEpisodeResponse(BaseModel):
@@ -178,6 +156,239 @@ async def generate_image(prompt: str, quality: str = "low") -> str:
     raise HTTPException(status_code=500, detail="No image data in response")
 
 
+async def generate_image_with_reference(prompt: str, reference_image_b64: str, quality: str = "low") -> str:
+    """
+    Generate an image using OpenAI's gpt-image-1.5 model with a reference image.
+    
+    The reference image helps GPT understand the character's appearance better.
+    
+    Args:
+        prompt: Text description of what to generate
+        reference_image_b64: Base64 encoded reference image (child's drawing)
+        quality: Image quality ("low" or "high")
+    
+    Returns:
+        Base64 encoded generated image
+    """
+    if not OPENAI_API_KEY:
+        raise HTTPException(status_code=500, detail="OpenAI API key not configured")
+    
+    headers = {
+        "Authorization": f"Bearer {OPENAI_API_KEY}",
+        "Content-Type": "application/json"
+    }
+    
+    # Use the chat completions endpoint with vision + image generation
+    payload = {
+        "model": "gpt-4o",  # Use GPT-4o for vision understanding
+        "messages": [
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": f"""Look at this child's drawing carefully. I need you to describe it in extreme detail so we can recreate it as a professional Disney/Pixar style character.
+
+Then generate an image based on this prompt:
+{prompt}
+
+CRITICAL: The generated character MUST match the child's drawing exactly - same colors, same features, same proportions. The child will be looking for THEIR character."""
+                    },
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": f"data:image/jpeg;base64,{reference_image_b64}"
+                        }
+                    }
+                ]
+            }
+        ],
+        "max_tokens": 1000
+    }
+    
+    # First, get GPT-4o to understand the image
+    async with httpx.AsyncClient(timeout=120.0) as client:
+        response = await client.post(
+            "https://api.openai.com/v1/chat/completions",
+            headers=headers,
+            json=payload
+        )
+        
+        if response.status_code != 200:
+            # Fall back to regular generation without reference
+            return await generate_image(prompt, quality)
+        
+        result = response.json()
+        enhanced_description = result["choices"][0]["message"]["content"]
+    
+    # Now generate with the enhanced description
+    enhanced_prompt = f"""{prompt}
+
+ADDITIONAL DETAILS FROM REFERENCE:
+{enhanced_description}
+
+Style: Disney/Pixar 3D animated character, vibrant colors, magical sparkles, professional quality."""
+    
+    return await generate_image(enhanced_prompt, quality)
+
+
+async def generate_coloring_from_reference(prompt: str, reference_image_b64: str, quality: str = "low") -> str:
+    """
+    Generate a coloring page using the reveal image as reference.
+    
+    This ensures all episode coloring pages match the reveal character.
+    
+    Args:
+        prompt: The coloring page prompt (scene description)
+        reference_image_b64: Base64 encoded REVEAL image (not original drawing)
+        quality: Image quality ("low" or "high")
+    
+    Returns:
+        Base64 encoded coloring page image
+    """
+    if not OPENAI_API_KEY:
+        raise HTTPException(status_code=500, detail="OpenAI API key not configured")
+    
+    headers = {
+        "Authorization": f"Bearer {OPENAI_API_KEY}",
+        "Content-Type": "application/json"
+    }
+    
+    # Use GPT-4o to analyze the reveal image and extract character details
+    analysis_payload = {
+        "model": "gpt-4o",
+        "messages": [
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": """Analyze this character image in EXTREME detail. List:
+1. Exact body shape and proportions
+2. Facial features (eyes, mouth, nose, expression)
+3. Hair/head features (spikes, color, style)
+4. Body parts and colors
+5. Any accessories or unique features
+6. Clothing details
+
+Be VERY specific - count exact numbers (e.g., "7 spikes", "3 fingers").
+This will be used to recreate the character as a coloring page."""
+                    },
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": f"data:image/png;base64,{reference_image_b64}"
+                        }
+                    }
+                ]
+            }
+        ],
+        "max_tokens": 1000
+    }
+    
+    async with httpx.AsyncClient(timeout=120.0) as client:
+        response = await client.post(
+            "https://api.openai.com/v1/chat/completions",
+            headers=headers,
+            json=analysis_payload
+        )
+        
+        if response.status_code != 200:
+            # Fall back to regular generation
+            return await generate_image(prompt, quality)
+        
+        result = response.json()
+        character_analysis = result["choices"][0]["message"]["content"]
+    
+    # Now generate coloring page with the analysis
+    enhanced_prompt = f"""{prompt}
+
+=== CHARACTER REFERENCE (MUST MATCH EXACTLY) ===
+{character_analysis}
+
+⚠️ CRITICAL: The character in this coloring page MUST look IDENTICAL to the reference image above.
+Same proportions, same features, same number of spikes/fingers/etc.
+The child will be comparing this to their character reveal - it MUST match!"""
+    
+    return await generate_image(enhanced_prompt, quality)
+
+
+async def analyze_reveal_image(reveal_image_b64: str, character_name: str) -> str:
+    """
+    Analyze the reveal image with Gemini 2.5 to create a detailed description.
+    
+    This description will be stored and used for ALL episode generations,
+    ensuring character consistency without re-analyzing the image each time.
+    """
+    import os
+    
+    GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
+    
+    if not GOOGLE_API_KEY:
+        return f"A character named {character_name}"
+    
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GOOGLE_API_KEY}"
+    
+    prompt = f"""Create a BRIEF character reference sheet for "{character_name}" from this image.
+
+FORMAT (fill in each line):
+- HEAD: [color] [shape] head
+- HAIR/SPIKES: exactly [NUMBER] [color] spikes/hair pieces
+- EYES: [color] [shape] eyes
+- MOUTH: [description including teeth if visible]
+- BODY: [color] [shape] torso/body
+- ARMS: [color] arms, [NUMBER] fingers per hand
+- LEGS: [color] legs
+- FEET: [color] feet
+- SPECIAL: [any unique accessories like antenna, bolts, etc.]
+
+MUST-HAVE FEATURES (list 3-5 things that MUST appear):
+1. 
+2.
+3.
+
+Be EXACT with counts. Keep response under 300 words."""
+
+    payload = {
+        "contents": [{
+            "parts": [
+                {"text": prompt},
+                {
+                    "inline_data": {
+                        "mime_type": "image/png",
+                        "data": reveal_image_b64
+                    }
+                }
+            ]
+        }],
+        "generationConfig": {
+            "temperature": 0.1,
+            "maxOutputTokens": 1024
+        }
+    }
+    
+    try:
+        async with httpx.AsyncClient(timeout=60.0) as client:
+            response = await client.post(url, json=payload)
+        
+        if response.status_code != 200:
+            return f"A character named {character_name}"
+        
+        result = response.json()
+        
+        # Extract text - handle multiple parts (thinking + response)
+        parts = result["candidates"][0]["content"]["parts"]
+        text = ""
+        for part in parts:
+            if "text" in part:
+                text = part["text"]
+        
+        return text.strip() if text else f"A character named {character_name}"
+        
+    except Exception as e:
+        return f"A character named {character_name}"
+
+
 # =============================================================================
 # ENDPOINTS
 # =============================================================================
@@ -252,6 +463,37 @@ async def extract_character(
         "model_used": result.model_used
     }
 
+
+@router.post("/extract-and-reveal")
+async def extract_and_reveal(
+    image: UploadFile = File(...),
+    character_name: str = Form(...)
+):
+    """Extract character using pure Gemini and generate reveal image"""
+    try:
+        # Read image data
+        image_data = await image.read()
+        
+        # Extract character with Gemini
+        extraction_result = await extract_character_gemini(image_data, character_name)
+        
+        # Generate reveal image with Gemini
+        reveal_image = await generate_adventure_reveal_gemini({
+            'name': character_name,
+            'description': extraction_result['reveal_description'],
+            'key_feature': extraction_result['character']['key_feature']
+        })
+        
+        return {
+            'character': extraction_result['character'],
+            'reveal_description': extraction_result['reveal_description'],
+            'reveal_image': reveal_image,
+            'extraction_time': extraction_result['extraction_time'],
+            'model_used': 'gemini-2.5-flash'
+        }
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f'Pure Gemini extraction failed: {str(e)}')
 
 @router.post("/extract-character-base64")
 async def extract_character_base64(
@@ -446,8 +688,28 @@ KEY FEATURE THAT MUST BE VISIBLE: {char.key_feature}
 OUTPUT: Black lines on pure white background. NO text in image.
 """
     
+    # If we have a reveal_description, add it for consistency
+    if request.reveal_description:
+        full_prompt = f"""{master_prompt}
+
+=== CHARACTER: {char.name} ===
+{char.description}
+
+=== EXACT CHARACTER APPEARANCE (FROM REVEAL IMAGE - MUST MATCH!) ===
+{request.reveal_description}
+
+KEY FEATURE THAT MUST BE VISIBLE: {char.key_feature}
+
+{scene_prompt}
+
+⚠️ CRITICAL: The character MUST look IDENTICAL to the reveal image description above.
+Same proportions, same features, same colors, same number of spikes/fingers/etc.
+
+OUTPUT: Black lines on pure white background. NO text in image.
+"""
+    
     # Generate the image
-    image_b64 = await generate_image(full_prompt, request.quality)
+    image_b64 = await generate_image_gemini_flash(full_prompt)
     
     # Generate PDF
     choice_info = None
@@ -563,3 +825,323 @@ async def health_check():
         "themes_available": len(ADVENTURE_THEMES),
         "api_key_configured": bool(OPENAI_API_KEY)
     }
+
+async def generate_image_gemini_flash(prompt: str) -> str:
+    """Generate image using Gemini 2.5 Flash Image"""
+    import os
+    
+    api_key = os.environ.get('GOOGLE_API_KEY') or os.environ.get('GEMINI_API_KEY')
+    if not api_key:
+        raise HTTPException(status_code=500, detail='Google API key not configured')
+    
+    genai.configure(api_key=api_key)
+    
+    try:
+        model = genai.GenerativeModel('gemini-2.5-flash-image')
+        response = model.generate_content([prompt])
+        
+        if response.parts:
+            for part in response.parts:
+                if hasattr(part, 'inline_data') and part.inline_data:
+                    return base64.b64encode(part.inline_data.data).decode('utf-8')
+        
+        raise HTTPException(status_code=500, detail='No image generated')
+    except Exception as e:
+        print(f'Gemini error: {e}')
+        raise HTTPException(status_code=500, detail=f'Gemini failed: {str(e)}')
+
+@router.post("/test/gemini-image")
+async def test_gemini_image():
+    """Test Gemini image generation"""
+    try:
+        prompt = '''Create a coloring page with BLACK LINES ONLY on PURE WHITE BACKGROUND.
+        
+        CHARACTER: Tristan - friendly monster with these EXACT features:
+        - Green spherical head with exactly 5-7 black spikes on top
+        - 2 dark gray bolts protruding from sides of head (with rectangular notches)
+        - Heterochromia eyes: LEFT eye red iris, RIGHT eye blue iris  
+        - Wide smile showing 2-4 white pointed fangs
+        - Purple rectangular torso with black waist band
+        - Green arms with 3 fingers each, blue cuffs on wrists
+        - Orange cylindrical legs
+        - Green boots with blue accents
+        
+        SCENE: Tristan exploring a magical forest with tall trees, flowers, mushrooms, and woodland creatures like squirrels and birds. Tristan should be walking happily through the forest.
+        
+        CRITICAL: Output must be BLACK OUTLINES ONLY on WHITE BACKGROUND - suitable for children to color in. No shading, no gray areas, just clean black lines.'''
+        
+        image_b64 = await generate_image_gemini_flash(prompt)
+        return {"image_b64": image_b64, "status": "success"}
+        
+    except Exception as e:
+        return {"error": str(e), "status": "failed"}
+
+
+@router.post("/test/gemini-reveal")
+async def test_gemini_reveal():
+    """Test Gemini reveal generation"""
+    try:
+        prompt = '''Create a REVEAL IMAGE showing Tristan character for age 6 kids:
+        
+        STYLE: Disney/Pixar 3D rendered character with full vibrant colors
+        - Green spherical head with exactly 7 black spikes
+        - 2 gray bolts on sides of head (3 notches each)  
+        - Heterochromia eyes: LEFT red, RIGHT blue
+        - 4 white fangs in smile
+        - Purple rectangular torso with black waist band
+        - Green arms, blue wrist cuffs, 3 fingers each
+        - Orange legs
+        - Green boots with blue soles and stripes
+        
+        Background: Cheerful outdoor scene with bright colors
+        Output: Full-color 3D character reveal image'''
+        
+        image_b64 = await generate_image_gemini_flash(prompt)
+        return {"image_b64": image_b64, "type": "reveal"}
+        
+    except Exception as e:
+        return {"error": str(e)}
+
+@router.post("/test/gemini-coloring")  
+async def test_gemini_coloring():
+    """Test Gemini coloring page generation"""
+    try:
+        prompt = '''Create a COLORING PAGE for age 6 kids:
+        
+        CRITICAL: BLACK LINES ONLY on PURE WHITE BACKGROUND - NO COLOR FILL
+        
+        CHARACTER: Tristan with exact features:
+        - Round head with 7 triangular spikes on top
+        - 2 cylindrical bolts on sides of head
+        - Large round eyes  
+        - Smiling mouth with 4 small fangs
+        - Rectangular body with waist band
+        - Arms with 3 fingers, cuffs on wrists
+        - Straight legs
+        - Boots with stripes on front
+        
+        SCENE: Forest with trees, flowers, mushrooms for Episode 1
+        
+        OUTPUT: Black outlines only, white background, suitable for children to color in'''
+        
+        image_b64 = await generate_image_gemini_flash(prompt)
+        return {"image_b64": image_b64, "type": "coloring"}
+        
+    except Exception as e:
+        return {"error": str(e)}
+
+@router.post("/adventure/generate/episode-gemini")
+async def generate_episode_gemini(request: GenerateEpisodeRequest):
+    """
+    Generate adventure episode using Gemini 2.5 Flash Image (separate from main app)
+    """
+    char = request.character
+    age_level = request.age_level
+    episode_num = request.episode_num
+    
+    # Validate
+    if age_level not in AGE_RULES:
+        raise HTTPException(status_code=400, detail=f"Invalid age_level: {age_level}")
+    
+    # Get episode data and story (same logic as original)
+    ep_data = get_episode_data(request.theme, episode_num, request.choice_path)
+    if not ep_data:
+        raise HTTPException(status_code=404, detail=f"Episode {episode_num} not found")
+    
+    # Get story text
+    stories = ep_data.get("stories", {})
+    story = get_story_for_age(stories if isinstance(stories, dict) else {"age_6": stories}, age_level)
+    story = story.replace("{name}", char.name)
+    
+    # Build scene prompt
+    age_rules = get_age_rules(age_level)
+    scene_template = ep_data.get("scene", "")
+    scene_prompt = scene_template.format(
+        name=char.name,
+        character_pose=char.pose,
+        character_must_include=f"MUST INCLUDE: {char.key_feature}",
+        area_count=age_rules["colourable_areas"]
+    )
+    
+    # Generate image using Gemini
+    image_b64 = await generate_adventure_episode_gemini(
+        character_data={"name": char.name, "description": char.description, "key_feature": char.key_feature},
+        scene_prompt=scene_prompt,
+        age_rules=age_rules["rules"]
+    )
+    
+    # Return the same format as original
+    return {
+        "image_b64": image_b64,
+        "story": story,
+        "episode_num": episode_num,
+        "is_choice_point": ep_data.get("is_choice_point", False),
+        "choices": ep_data.get("choices"),
+        "choice_prompt": ep_data.get("choice_prompt")
+    }
+
+
+def convert_to_structure_only(reveal_description: str) -> str:
+    """Convert detailed color description to structure-only for coloring pages"""
+    
+    # Extract key structural elements while removing color references
+    structure_desc = f"""Friendly character with:
+- Round head with spikes on top
+- Cylindrical bolts on sides of head with notches  
+- Large round eyes with pupils
+- Wide smiling mouth showing pointed fangs
+- Rectangular torso with waist band
+- Cylindrical arms with fingers, cuffs on wrists
+- Straight legs  
+- Boot-shaped feet with stripes
+- Distinctive proportions and features from original drawing"""
+    
+    return structure_desc
+
+@router.post("/adventure/extract-and-generate")
+async def extract_and_generate_adventure(
+    image: UploadFile = File(...),
+    character_name: str = Form(...),
+    episode_num: int = Form(1),
+    theme: str = Form("forest"),
+    age_level: str = Form("age_6")
+):
+    """
+    Complete workflow: Extract character -> Generate reveal -> Generate episode
+    Works with any uploaded drawing automatically
+    """
+    try:
+        # Step 1: Extract character with full color details
+        extraction_result = await extract_and_reveal_internal(image, character_name)
+        
+        # Step 2: Convert to structure-only description for episodes
+        structure_description = convert_to_structure_only(extraction_result['reveal_description'])
+        
+        # Step 3: Generate episode using structure-only description
+        character_data = {
+            "name": character_name,
+            "description": structure_description,
+            "key_feature": "distinctive features from original drawing"
+        }
+        
+        # Get episode data
+        ep_data = get_episode_data(theme, episode_num, None)
+        age_rules = get_age_rules(age_level)
+        
+        scene_prompt = ep_data.get("scene", "").format(
+            name=character_name,
+            character_pose="standing happily",
+            character_must_include="MUST INCLUDE: character's distinctive features",
+            area_count=age_rules["colourable_areas"]
+        )
+        
+        # Generate episode using Gemini
+        episode_image = await generate_adventure_episode_gemini(
+            character_data=character_data,
+            scene_prompt=scene_prompt,
+            age_rules=age_rules["rules"]
+        )
+        
+        return {
+            "reveal_image": extraction_result['reveal_image'],
+            "episode_image": episode_image,
+            "character": extraction_result['character'],
+            "structure_description": structure_description,
+            "episode_num": episode_num
+        }
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Adventure generation failed: {str(e)}")
+
+
+@router.post("/adventure/extract-gemini-only")
+async def extract_gemini_only(
+    image: UploadFile = File(...),
+    character_name: str = Form(...)
+):
+    """Extract character using only Gemini - no OpenAI needed"""
+    try:
+        # Read image
+        image_data = await image.read()
+        image_b64 = base64.b64encode(image_data).decode('utf-8')
+        
+        # Use Gemini for character analysis
+        api_key = os.environ.get('GOOGLE_API_KEY') or os.environ.get('GEMINI_API_KEY')
+        if not api_key:
+            raise HTTPException(status_code=500, detail='Google API key not configured')
+        
+        genai.configure(api_key=api_key)
+        
+        # Analyze character with Gemini
+        model = genai.GenerativeModel('gemini-2.5-flash')
+        response = model.generate_content([
+            "Analyze this child's drawing and describe the character in detail for creating a 3D reveal image:",
+            {"mime_type": "image/jpeg", "data": image_b64}
+        ])
+        
+        character_description = response.text
+        
+        # Generate reveal image with Gemini
+        reveal_image = await generate_adventure_reveal_gemini({
+            "name": character_name,
+            "description": character_description,
+            "key_feature": "distinctive features from drawing"
+        })
+        
+        return {
+            "character": {
+                "name": character_name,
+                "description": character_description
+            },
+            "reveal_image": reveal_image
+        }
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Gemini extraction failed: {str(e)}")
+
+
+@router.post("/adventure/extract-gemini-only")
+async def extract_gemini_only(
+    image: UploadFile = File(...),
+    character_name: str = Form(...)
+):
+    """Extract character using only Gemini - no OpenAI needed"""
+    try:
+        # Read image
+        image_data = await image.read()
+        image_b64 = base64.b64encode(image_data).decode('utf-8')
+        
+        # Use Gemini for character analysis
+        api_key = os.environ.get('GOOGLE_API_KEY') or os.environ.get('GEMINI_API_KEY')
+        if not api_key:
+            raise HTTPException(status_code=500, detail='Google API key not configured')
+        
+        genai.configure(api_key=api_key)
+        
+        # Analyze character with Gemini
+        model = genai.GenerativeModel('gemini-2.5-flash')
+        response = model.generate_content([
+            "Analyze this child's drawing and describe the character in detail for creating a 3D reveal image:",
+            {"mime_type": "image/jpeg", "data": image_b64}
+        ])
+        
+        character_description = response.text
+        
+        # Generate reveal image with Gemini
+        reveal_image = await generate_adventure_reveal_gemini({
+            "name": character_name,
+            "description": character_description,
+            "key_feature": "distinctive features from drawing"
+        })
+        
+        return {
+            "character": {
+                "name": character_name,
+                "description": character_description
+            },
+            "reveal_image": reveal_image
+        }
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Gemini extraction failed: {str(e)}")
+

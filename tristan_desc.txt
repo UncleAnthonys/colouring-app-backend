@@ -1,0 +1,40 @@
+1.  **HEAD/FACE:**
+    *   **Shape, size, color:** Perfectly spherical head, large in proportion to the body. Color is a consistent bright lime green.
+    *   **Eyes:**
+        *   **Color:** Left eye has a white sclera, a bright red iris, and a black pupil. Right eye has a white sclera, a bright blue iris, and a black pupil.
+        *   **Shape:** Both eyes are perfectly circular.
+        *   **Size:** Large and prominent, positioned symmetrically on the upper half of the face.
+        *   **Outlines:** Each entire eye (sclera, iris, pupil) is outlined with a thick, solid black line. Each pupil contains two white circular highlights: one larger, one smaller, positioned in the upper-left quadrant of the pupil.
+    *   **Mouth:**
+        *   **Shape:** Wide, open, crescent-shaped smile, curving upwards.
+        *   **Color:** The interior of the mouth is a dark purple. The tongue is a bright red, visible at the bottom of the mouth opening.
+        *   **Teeth:** Exactly 4 sharp, pointed white fangs are visible on the upper jaw, two on each side of the mouth's center. No lower teeth are visible.
+    *   **Any hair/spikes:** Exactly 7 distinct, sharp, spiky protrusions on top of the head. These spikes are solid black and are arranged in a slightly curved line from the left side of the head to the right, with the central spikes being slightly taller.
+    *   **Any accessories on head:** Exactly 2 large, cylindrical, dark gray "bolts" or "electrodes" protrude horizontally from the sides of the head, one on each side, positioned slightly above the eye level. Each bolt has exactly 3 distinct, evenly spaced, rectangular notches or grooves on its outer, exposed end. A smaller, dark gray cylindrical connector piece attaches each bolt to the head.
+
+2.  **BODY:**
+    *   **Shape, color, proportions:** The torso is a rectangular shape with slightly rounded corners, wider at the bottom than at the top. It is a vibrant purple color. The height of the torso is approximately 1.5 times the height of the head.
+    *   **Any patterns, lines, or markings:** Exactly 1 thick, horizontal, solid black band encircles the waist, separating the upper and lower parts of the purple torso. Exactly 2 small, dark gray, cylindrical shoulder connectors are present, one on each side, positioned at the top corners of the torso where the arms attach.
+    *   **Clothing details:** Appears to be a simple, sleeveless tunic or shirt.
+
+3.  **ARMS/HANDS:**
+    *   **Color:** Bright lime green, consistent with the head color.
+    *   **Length, shape:** Arms are cylindrical and proportionate to the body, extending to just below the waist. They have a slight, soft bend at the elbow.
+    *   **Number of fingers:** Exactly 3 stubby, rounded fingers on each hand.
+    *   **Any accessories:** Exactly 1 thick, solid, smooth light blue cuff or bracelet on each wrist.
+
+4.  **LEGS/FEET:**
+    *   **Color, shape:** Legs are cylindrical, straight, and a consistent bright orange color. They are proportionate to the body.
+    *   **Any markings or details:** No markings or details on the orange leg sections.
+    *   **Feet:** Each foot is large and boot-like. The main body of the shoe is bright lime green. The sole is a distinct, wide, flat band of solid light blue. The front of the shoe is rounded and slightly upturned. Exactly 3 distinct, vertical, slightly curved light blue stripes or indentations are present on the front-top surface of each shoe, extending from the top edge towards the sole.
+
+5.  **UNIQUE FEATURES:**
+    *   Asymmetrical eye colors: Left eye is red, right eye is blue.
+    *   Exactly 7 black, sharp spikes on top of the head.
+    *   Exactly 2 dark gray side head bolts, each with exactly 3 rectangular notches.
+    *   Exactly 4 sharp, pointed white fangs visible in the upper mouth.
+    *   Exactly 3 fingers on each hand.
+    *   Exactly 1 thick, horizontal black band around the waist.
+    *   Exactly 1 thick, light blue cuff on each wrist.
+    *   Exactly 3 light blue stripes on the front of each shoe.
+    *   Overall color palette: Predominantly bright lime green, vibrant purple, bright orange, and light blue
