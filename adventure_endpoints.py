@@ -7,7 +7,7 @@ Complete endpoint system for:
 3. Generating age-appropriate coloring page episodes (Gemini)
 """
 
-from adventure_gemini import generate_adventure_reveal_gemini, generate_adventure_episode_gemini
+from adventure_gemini import generate_adventure_reveal_gemini, generate_adventure_episode_gemini, generate_personalized_stories
 from character_extraction_gemini import extract_character_with_extreme_accuracy
 import google.generativeai as genai
 import os
@@ -110,6 +110,40 @@ class GetEpisodesResponse(BaseModel):
     """Response listing episodes for a theme."""
     theme: str
     episodes: List[EpisodePreview]
+
+
+# =============================================================================
+# STORY GENERATION MODELS
+# =============================================================================
+
+class StoryEpisode(BaseModel):
+    """A single episode in a story theme."""
+    episode_num: int
+    title: str
+    scene_description: str
+    story_text: str
+
+
+class StoryTheme(BaseModel):
+    """A complete story theme with 10 episodes."""
+    theme_id: str
+    theme_name: str
+    theme_description: str
+    episodes: List[StoryEpisode]
+
+
+class GenerateStoriesRequest(BaseModel):
+    """Request to generate personalized stories."""
+    character_name: str
+    character_description: str
+    age_level: str = "age_6"  # age_3, age_4, age_5, age_6, age_7, age_8, age_9, age_10
+
+
+class GenerateStoriesResponse(BaseModel):
+    """Response with 3 personalized story themes."""
+    character_name: str
+    age_level: Optional[str] = None
+    themes: List[StoryTheme]
 
 
 # =============================================================================
@@ -228,7 +262,7 @@ async def extract_and_reveal(
         raise HTTPException(status_code=500, detail=f'Character extraction failed: {str(e)}')
 
 
-@router.post("/adventure/generate/episode-gemini")
+@router.post("/generate/episode-gemini")
 async def generate_episode_gemini_endpoint(request: GenerateEpisodeRequest):
     """
     Generate adventure episode coloring page using Gemini.
@@ -369,7 +403,7 @@ async def health_check():
 # COMPLETE WORKFLOW ENDPOINT
 # =============================================================================
 
-@router.post("/adventure/complete-workflow")
+@router.post("/complete-workflow")
 async def complete_workflow(
     image: UploadFile = File(...),
     character_name: str = Form(...),
@@ -503,3 +537,82 @@ async def test_gemini_coloring():
         
     except Exception as e:
         return {"error": str(e), "status": "failed"}
+
+
+# =============================================================================
+# PERSONALIZED STORY GENERATION
+# =============================================================================
+
+@router.post("/generate-stories", response_model=GenerateStoriesResponse)
+async def generate_stories_endpoint(request: GenerateStoriesRequest):
+    """
+    Generate 3 personalized story themes based on character and age.
+    
+    Takes the character name, description (from extraction), and age_level
+    to generate 3 complete story themes with 10 episodes each.
+    
+    Stories are tailored to:
+    - Character type (monster, princess, robot, animal, etc.)
+    - Child's age (simpler for younger, more complex for older)
+    
+    Age levels: age_3, age_4, age_5, age_6, age_7, age_8, age_9, age_10
+    
+    Each episode includes:
+    - Episode number and title
+    - Scene description (for drawing the coloring page)
+    - Story text (age-appropriate, for display below the coloring page)
+    
+    Use this after extract-and-reveal to get personalized stories,
+    then use the episode scene_description with generate/episode-gemini
+    to create each coloring page.
+    """
+    try:
+        result = await generate_personalized_stories(
+            character_name=request.character_name,
+            character_description=request.character_description,
+            age_level=request.age_level
+        )
+        
+        return result
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Story generation failed: {str(e)}")
+
+
+@router.post("/generate-stories-from-reveal")
+async def generate_stories_from_reveal(
+    character_name: str = Form(...),
+    reveal_description: str = Form(...),
+    age_level: str = Form("age_6")
+):
+    """
+    Generate personalized stories directly from reveal description.
+    
+    Alternative to the JSON endpoint - accepts form data.
+    Use this endpoint from FlutterFlow by passing:
+    - character_name: The name entered by the child
+    - reveal_description: The description returned from extract-and-reveal
+    - age_level: age_3, age_4, age_5, age_6, age_7, age_8, age_9, or age_10
+    
+    Stories are automatically adjusted for age complexity:
+    - age_3: Very simple sentences, basic emotions, familiar settings
+    - age_4-5: Simple stories with gentle adventures
+    - age_6-7: Fuller stories with mild challenges
+    - age_8-9: Complex plots with character development
+    - age_10: Sophisticated narratives with depth
+    """
+    try:
+        result = await generate_personalized_stories(
+            character_name=character_name,
+            character_description=reveal_description,
+            age_level=age_level
+        )
+        
+        return result
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Story generation failed: {str(e)}")
