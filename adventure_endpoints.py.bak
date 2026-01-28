@@ -1,5 +1,5 @@
 from adventure_gemini import generate_adventure_reveal_gemini, generate_adventure_episode_gemini
-from character_extraction_gemini import extract_character_with_extreme_accuracy
+from character_extraction_gemini import extract_character_gemini
 import google.generativeai as genai
 import os
 import base64
@@ -9,7 +9,6 @@ from fastapi import APIRouter, HTTPException, UploadFile, File, Form
 from pydantic import BaseModel
 
 from adventure_config import (
-    ADVENTURE_THEMES,
     AGE_RULES,
     get_age_rules,
     get_episode_data,
@@ -476,7 +475,7 @@ async def extract_and_reveal(
         image_data = await image.read()
         
         # Extract character with Gemini
-        extraction_result = await extract_character_with_extreme_accuracy(image_data, character_name)
+        extraction_result = await extract_character_gemini(image_data, character_name)
         
         # Generate reveal image with Gemini
         reveal_image = await generate_adventure_reveal_gemini({
