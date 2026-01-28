@@ -1,6 +1,6 @@
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyA0dAL2APhtfRgfM08wgOcLjURlsoZSYns")
+genai.configure(api_key="os.environ.get("GOOGLE_API_KEY")")
 
 try:
     model = genai.GenerativeModel('gemini-2.5-flash-image')

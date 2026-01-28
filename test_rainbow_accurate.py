@@ -1,7 +1,7 @@
 import google.generativeai as genai
 import base64
 
-genai.configure(api_key="AIzaSyA0dAL2APhtfRgfM08wgOcLjURlsoZSYns")
+genai.configure(api_key="os.environ.get("GOOGLE_API_KEY")")
 
 with open('/Users/gavinwalker/Downloads/test_drawings/IMG_8885.JPG', 'rb') as f:
     image_data = f.read()

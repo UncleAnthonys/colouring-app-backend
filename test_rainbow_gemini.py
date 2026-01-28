@@ -3,7 +3,7 @@ import base64
 import os
 
 # Set API key
-genai.configure(api_key="AIzaSyA0dAL2APhtfRgfM08wgOcLjURlsoZSYns")
+genai.configure(api_key="os.environ.get("GOOGLE_API_KEY")")
 
 # Read the Rainbow image
 with open('/Users/gavinwalker/Downloads/test_drawings/IMG_8885.JPG', 'rb') as f:
