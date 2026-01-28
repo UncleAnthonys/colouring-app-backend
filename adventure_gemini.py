@@ -16,43 +16,29 @@ async def generate_adventure_reveal_gemini(character_data: dict) -> str:
         
         description = character_data.get("description", "")
         
-        prompt = f'''THIS IS A CHILD'S DRAWING. THE PROPORTIONS ARE INTENTIONAL AND CORRECT. DO NOT NORMALIZE THEM.
+        prompt = f'''Create a Disney/Pixar quality 3D character from this child's drawing.
 
-CHARACTER ANALYSIS FROM CHILD'S DRAWING:
+CHARACTER ANALYSIS:
 {description}
 
-ABSOLUTE CRITICAL RULES - FOLLOW EXACTLY:
+STYLE & QUALITY (MOST IMPORTANT):
+- Professional Pixar/Disney animation quality like Toy Story, Monsters Inc, Inside Out
+- Smooth polished plastic/skin surfaces - NOT felt, fabric, or toy-like texture
+- Expressive face with depth, personality, and emotion
+- Proper lighting, shadows, and realistic 3D rendering
+- Living breathing character, not a toy or puppet
 
-1. PROPORTIONS ARE THE CHARACTER'S IDENTITY - DO NOT CHANGE THEM:
-   - If analysis says head is 25% of height and body is 52%, the body MUST be MORE THAN TWICE as tall as the head
-   - If analysis says arms are 15% of height, keep them SHORT and stubby
-   - If analysis says no legs visible and dress is 52% of height, make the dress EXTREMELY LONG
-   - These are NOT mistakes - this is what makes this character unique
-   - The unusual proportions ARE CORRECT - they are from a child's imagination
+KEY CHARACTER FEATURES (MUST INCLUDE):
+- Follow exact proportions from analysis (if body is 60%, head is 35%, keep those ratios)
+- Include ALL distinctive features mentioned (spikes, bolts, teeth, buttons, crown, etc)
+- Show ALL color sections in exact order listed
+- Count everything exactly (if 8 spikes, show 8; if 12 teeth, show 12)
 
-2. COLOR SECTIONS IN EXACT ORDER (CRITICAL):
-   - If analysis lists Red, Yellow, Green, Blue, Orange sections, show ALL 5 in EXACT order
-   - Each section must be clearly visible and distinct
-   - Do NOT merge or skip any color sections
+BACKGROUND:
+- Celebration scene with confetti, sparkles, rainbows
+- Portrait orientation, NO TEXT
 
-3. EXACT FEATURE COUNTS:
-   - Count buttons, crown points, etc exactly as described
-   - If 6 buttons, show exactly 6 buttons
-   - If 3 red dots on crown, show exactly 3 red dots
-
-4. DISNEY/PIXAR QUALITY:
-   - Professional 3D rendering with depth
-   - Expressive face with emotion and personality
-   - Realistic textures for hair, fabric, skin
-   - Proper lighting and shadows
-   - NOT a toy - a living character
-
-5. CELEBRATION BACKGROUND:
-   - Magical scene with confetti, sparkles, rainbows
-   - Portrait orientation
-   - NO TEXT
-
-REMEMBER: This is a CHILD'S DRAWING brought to life. The "weird" proportions are what make it special. DO NOT make it look like a normal person or character. Keep the exact proportions from the analysis.'''
+Bring this child's unique vision to life with Pixar-level professional quality.'''
         
         response = model.generate_content([prompt])
         
