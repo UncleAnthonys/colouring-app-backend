@@ -243,12 +243,18 @@ async def extract_and_reveal(
         # Extract character with Gemini (uses extreme accuracy prompt)
         extraction_result = await extract_character_with_extreme_accuracy(image_data, character_name)
         
-        # Generate reveal image with Gemini (uses 3-rule prompt)
-        reveal_image = await generate_adventure_reveal_gemini({
-            'name': character_name,
-            'description': extraction_result['reveal_description'],
-            'key_feature': extraction_result['character']['key_feature']
-        })
+        # Convert original drawing to base64 for reveal generation
+        image_b64 = base64.b64encode(image_data).decode('utf-8')
+        
+        # Generate reveal image with Gemini - NOW SEES THE ORIGINAL DRAWING!
+        reveal_image = await generate_adventure_reveal_gemini(
+            character_data={
+                'name': character_name,
+                'description': extraction_result['reveal_description'],
+                'key_feature': extraction_result['character']['key_feature']
+            },
+            original_drawing_b64=image_b64
+        )
         
         return {
             'character': extraction_result['character'],
