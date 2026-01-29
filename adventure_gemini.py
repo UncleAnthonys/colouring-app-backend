@@ -262,7 +262,8 @@ But the EMOTION and POSE must match this scene: {character_emotion}
         full_prompt = f'''Create a COLORING PAGE for children.
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║   THIS IS A COLORING PAGE - BLACK OUTLINES ON WHITE - NOTHING ELSE           ║
+║          COLORING BOOK PAGE - BLACK LINES ON WHITE ONLY                      ║
+║                    ***  ZERO COLOR ALLOWED  ***                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
 CHARACTER: {character_name}
@@ -279,48 +280,51 @@ STORY SCENE:
 AGE-APPROPRIATE COMPLEXITY:
 {age_rules}
 
-*** ABSOLUTE COLORING PAGE REQUIREMENTS ***
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                        CRITICAL OUTPUT RULES                                  ║
+╚══════════════════════════════════════════════════════════════════════════════╝
 
-1. BLACK OUTLINES ONLY - NO FILLED AREAS
-   ✓ Character body = WHITE inside with BLACK OUTLINE
-   ✓ Character clothes = WHITE inside with BLACK OUTLINE
-   ✓ Character hair = WHITE inside with BLACK OUTLINE (NOT solid black!)
-   ✓ Character face = WHITE inside with BLACK OUTLINE
-   ✓ ALL background elements = WHITE inside with BLACK OUTLINE
-   
-2. EVERY AREA MUST BE WHITE (EMPTY) FOR COLORING
-   - Children will fill these white areas with their crayons
-   - If you fill ANY area with black, you have FAILED
-   - Think: traditional coloring book with EMPTY shapes
-   
-3. ZERO SHADING, ZERO FILLS, ZERO GRADIENTS
-   - No grey areas anywhere
-   - No hatching or cross-hatching
-   - No stippling or dot shading
-   - No solid black fills (not even for hair or shadows!)
-   
-4. WHAT THIS MEANS FOR COMMON MISTAKES:
-   ✗ WRONG: Hair filled with solid black
-   ✓ RIGHT: Hair as WHITE sections with BLACK OUTLINE strokes showing hair texture
-   
-   ✗ WRONG: Dark clothing filled with black
-   ✓ RIGHT: Clothing as WHITE areas with BLACK OUTLINE
-   
-   ✗ WRONG: Shadows shown as grey or black areas
-   ✓ RIGHT: No shadows - just clean outlines
+**RULE 1: ABSOLUTELY ZERO COLOR**
+- Output ONLY black lines (#000000) on pure white background (#FFFFFF)
+- NO blue, NO pink, NO yellow, NO green, NO ANY color whatsoever
+- NO light blue, NO pale pink, NO cream, NO beige - ONLY pure white
+- The ONLY pixels allowed are BLACK (lines) and WHITE (background/fill areas)
+- If there is ANY color in the output, you have FAILED
 
-*** FAILURE CONDITIONS - DO NOT DO THESE ***
-❌ Filling hair with solid black = FAILURE
-❌ Filling any clothing with solid black = FAILURE
-❌ Filling ANY area with black or grey = FAILURE
-❌ Any area that isn't WHITE inside = FAILURE
-❌ Using shading or gradients = FAILURE
+**RULE 2: MAXIMIZE COLORABLE OBJECTS**
+- Include MANY separate objects for children to color
+- Add extra elements: butterflies, birds, squirrels, rabbits, flowers, mushrooms
+- More fairies, more sparkles as enclosed shapes, more leaves
+- Each object should be a distinct enclosed shape
+- Think: "What else can a child color in this scene?"
+- Fill empty space with additional colorable elements
 
-*** SUCCESS = 100% of image is BLACK LINES on WHITE ***
-A child must be able to color EVERY part of the image.
-Every single shape must be WHITE inside, bounded by BLACK lines.
+**RULE 3: ALL AREAS WHITE INSIDE**
+- Every shape must be WHITE inside with BLACK outline
+- Character clothes = WHITE (child colors them)
+- Character hair = WHITE sections with BLACK lines showing texture
+- Character skin = WHITE (child colors it)
+- Sky = WHITE, Ground = WHITE, Everything = WHITE inside
+- NO shading, NO grey, NO gradients, NO fills of any kind
 
-OUTPUT: Pure black outlines on pure white background. Traditional coloring book style.'''
+**RULE 4: ENCLOSED SHAPES**
+- Every element must have fully closed outlines
+- No gaps in lines - children need to color inside the lines
+- Each flower, each leaf, each mushroom = separate enclosed shape
+
+*** FAILURE CONDITIONS ***
+❌ ANY color (blue, pink, yellow, etc.) = FAILURE
+❌ ANY grey or shading = FAILURE  
+❌ ANY filled areas = FAILURE
+❌ NOT ENOUGH objects to color = FAILURE
+
+*** SUCCESS CRITERIA ***
+✓ 100% black lines on 100% white background
+✓ Lots of distinct objects/shapes to color
+✓ All shapes fully enclosed
+✓ Rich scene with many colorable elements
+
+OUTPUT: Pure BLACK outlines on pure WHITE. No color. No grey. No shading. Maximum colorable objects.'''
         
         # Build content with reveal image if provided
         if reveal_image_b64:
