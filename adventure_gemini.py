@@ -112,8 +112,8 @@ def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None)
     return base64.b64encode(buffer.read()).decode('utf-8')
 
 
-async def generate_adventure_reveal_gemini(character_data: dict) -> str:
-    """Generate Monsters Inc / Pixar style reveal - proven to give best proportions and style"""
+async def generate_adventure_reveal_gemini(character_data: dict, original_drawing_b64: str = None) -> str:
+    """Generate Monsters Inc / Pixar style reveal - uses ORIGINAL DRAWING as visual reference"""
     
     api_key = os.environ.get('GOOGLE_API_KEY') or os.environ.get('GEMINI_API_KEY')
     if not api_key:
@@ -127,48 +127,64 @@ async def generate_adventure_reveal_gemini(character_data: dict) -> str:
         description = character_data.get("description", "")
         character_name = character_data.get("name", "Character")
         
-        prompt = f'''Create a MONSTERS INC / PIXAR MOVIE style 3D character named "{character_name}" based on this child's drawing analysis:
+        prompt = f'''I am showing you a CHILDS DRAWING. Transform this EXACT character into a Disney/Pixar 3D movie character.
 
+CHARACTER NAME: {character_name}
+
+===== CRITICAL: MATCH THE DRAWING =====
+Look at the drawing I am showing you. Your output MUST be a 3D version of THIS EXACT CHARACTER:
+- If it is a GIRL with hair, dress, etc - Create a 3D GIRL (like Boo from Monsters Inc, Riley from Inside Out)
+- If it is a ONE-EYED MONSTER - Create a 3D monster (like Mike Wazowski)
+- If it is a ROBOT - Create a 3D robot
+- MATCH what you SEE in the drawing!
+
+===== CHARACTER ANALYSIS =====
 {description}
 
-===== STYLE =====
-This should look like a character straight out of MONSTERS INC or INSIDE OUT - that specific Pixar aesthetic where ALL characters (even humans, princesses, animals) have that stylized, appealing movie look.
+===== STYLE: PIXAR/DISNEY 3D =====
+Transform the childs drawing into a character that looks like it belongs in:
+- Monsters Inc (for monsters)
+- Inside Out (for humanoid characters)  
+- Toy Story (for toys/objects)
+- Frozen/Tangled (for princesses/girls)
 
-===== THE 3 MOST IMPORTANT RULES (FOLLOW EXACTLY) =====
+===== THE 3 MOST IMPORTANT RULES =====
 
-**RULE 1 - PROPORTIONS ARE SACRED:**
-Read the percentages in the analysis above. The child's proportions are INTENTIONAL:
-- If body is 65-70% of total height → body must be MUCH LARGER than head
-- If legs are 70% of height → make them EXTREMELY LONG (like the stick figure cyclops)
-- If it's a tall thin character → keep it TALL and THIN
-- If head is huge → keep it HUGE
-- Do NOT normalize to standard cartoon proportions - the unusual proportions make it SPECIAL
+**RULE 1 - MATCH THE DRAWING TYPE:**
+- Drawing shows a HUMAN/GIRL - Output is a 3D HUMAN/GIRL (NOT a blob, NOT a monster)
+- Drawing shows a MONSTER - Output is a 3D MONSTER
+- Drawing shows clothing (jacket, skirt, dress) - Include that EXACT clothing
+- Drawing shows hair (brown curls, blonde, etc) - Include that EXACT hair
 
-**RULE 2 - EXACT COLORS (NO SUBSTITUTIONS):**
-- Show ALL color sections in exact order
-- ORANGE means ORANGE (not red)
-- PURPLE means PURPLE (not blue)  
-- If it has rainbow stripes → show ALL the rainbow stripes
-- Never merge or skip color sections
+**RULE 2 - EXACT FEATURES FROM DRAWING:**
+- Hair color and style from the drawing
+- Clothing from the drawing (black jacket, rainbow skirt, etc)
+- Skin tone interpretation (if orange crayon = warm skin tone)
+- Eye color from the drawing
+- ALL details visible in the drawing
 
-**RULE 3 - MONSTERS INC AESTHETIC:**
-Think Mike Wazowski, Sulley, Boo, the characters from Inside Out:
-- Big expressive eyes with that Pixar sparkle and multiple light reflections
-- Smooth, appealing 3D surfaces
-- That specific Monsters Inc "feel" - fun, appealing, movie-quality
-- Expression showing EMOTION (joy, excitement)
-- The face should make you FEEL something
+**RULE 3 - PIXAR QUALITY:**
+- Big expressive Disney/Pixar eyes
+- Smooth appealing 3D surfaces
+- Emotion and personality in the face
+- Professional movie-quality rendering
 
 ===== REQUIREMENTS =====
 - Celebration background with confetti and sparkles
 - Portrait orientation - show FULL figure
 - NO TEXT anywhere on image
-- Only include features that are in the original drawing (no random additions)
-- Smooth Pixar-quality surfaces (not knitted, not felt, not woolen)
+- Character looks JOYFUL and ALIVE
 
-Generate the character now.'''
+IMPORTANT: Look at the drawing! If it is a girl with brown hair and a rainbow skirt, create a 3D GIRL - not a rainbow blob!'''
         
-        response = model.generate_content([prompt])
+        # Include original drawing as visual reference if provided
+        if original_drawing_b64:
+            response = model.generate_content([
+                prompt,
+                {"mime_type": "image/png", "data": original_drawing_b64}
+            ])
+        else:
+            response = model.generate_content([prompt])
         
         if response.parts:
             for part in response.parts:
@@ -204,10 +220,10 @@ async def generate_adventure_episode_gemini(character_data: dict, scene_prompt: 
         emotion_guidance = ""
         if character_emotion:
             emotion_guidance = f"""
-⚠️ CRITICAL - CHARACTER EMOTION AND POSE:
+*** CRITICAL - CHARACTER EMOTION AND POSE:
 {character_name} should look {character_emotion} in this scene.
 DO NOT copy the happy/celebratory pose from the reference image.
-The reference image shows the character's APPEARANCE (body shape, features, size).
+The reference image shows the character APPEARANCE (body shape, features, size).
 But the EMOTION and POSE must match this scene: {character_emotion}
 - If scared: hunched, worried expression, maybe hiding partially
 - If curious: leaning forward, wide eye, reaching out
@@ -219,13 +235,13 @@ But the EMOTION and POSE must match this scene: {character_emotion}
         # Build prompt
         full_prompt = f'''Create a COLORING PAGE for children.
 
-⚠️ CRITICAL: THIS IS A COLORING PAGE - ZERO COLOR ALLOWED ⚠️
+*** CRITICAL: THIS IS A COLORING PAGE - ZERO COLOR ALLOWED ***
 - The output must be 100% BLACK LINES on WHITE BACKGROUND
 - NO color AT ALL - not green, not blue, not purple, not orange, not any color
 - Children will add the colors themselves with crayons
 
 CHARACTER: {character_name}
-Use the reference image for the character's PHYSICAL APPEARANCE ONLY:
+Use the reference image for the character PHYSICAL APPEARANCE ONLY:
 - Body shape, proportions, and size
 - Distinctive features (number of eyes, horns, fur texture, etc.)
 - Clothing or accessories
@@ -245,7 +261,7 @@ COLORING PAGE REQUIREMENTS:
 - Bold clear lines for children to color
 - All shapes enclosed so children can color them in
 - Fill the entire image with the illustration
-- Character's expression and pose MUST match the story scene emotion
+- Character expression and pose MUST match the story scene emotion
 
 OUTPUT: Black and white coloring page. NO COLOR.'''
         
@@ -288,12 +304,12 @@ OUTPUT: Black and white coloring page. NO COLOR.'''
 
 async def generate_personalized_stories(character_name: str, character_description: str, age_level: str = "age_6") -> dict:
     """
-    Generate 3 personalized story themes based on character type and child's age.
+    Generate 3 personalized story themes based on character type and child age.
     
     Each theme has 10 episodes that tell a complete story featuring the character.
     Stories are tailored to:
     - Character type (monster = monster themes, princess = fairy tale themes, etc.)
-    - Child's age (simpler stories for younger kids, more complex for older)
+    - Child age (simpler stories for younger kids, more complex for older)
     """
     
     api_key = os.environ.get('GOOGLE_API_KEY') or os.environ.get('GEMINI_API_KEY')
@@ -401,7 +417,7 @@ AGE GROUP: 10+ YEARS OLD
     try:
         model = genai.GenerativeModel('gemini-2.5-flash')
         
-        prompt = f'''You are creating personalized story adventures for a children's coloring book app.
+        prompt = f'''You are creating personalized story adventures for a childrens coloring book app.
 
 Based on this character named "{character_name}", generate 3 DIFFERENT story themes. Each theme should have 10 episodes that tell a complete story.
 
@@ -413,7 +429,7 @@ CHARACTER ANALYSIS:
 CRITICAL: The stories MUST be appropriate for the age group above. Follow the sentence length, vocabulary, and complexity guidelines exactly.
 
 For each theme, provide:
-1. Theme name that fits this character's personality and type
+1. Theme name that fits this character personality and type
 2. Theme description (1 sentence, age-appropriate)
 3. 10 episodes, each with:
    - Episode number (1-10)
@@ -424,11 +440,11 @@ For each theme, provide:
 IMPORTANT RULES:
 - {character_name} is ALWAYS the hero of the story
 - Match themes to character type:
-  - Monster characters → monster school, spooky adventures, making friends despite being different
-  - Princess/girl characters → fashion, art, friendship, magical adventures
-  - Robot characters → invention, space, technology adventures
-  - Animal characters → nature, forest, animal friends adventures
-  - Superhero characters → saving the day, helping others
+  - Monster characters - monster school, spooky adventures, making friends despite being different
+  - Princess/girl characters - fashion, art, friendship, magical adventures
+  - Robot characters - invention, space, technology adventures
+  - Animal characters - nature, forest, animal friends adventures
+  - Superhero characters - saving the day, helping others
 - Each theme must have a clear beginning, middle, and end across 10 episodes
 - Always use "{character_name}" (not "the character") in story text
 - Scene descriptions must be detailed enough to draw as coloring pages
@@ -449,7 +465,7 @@ Return ONLY valid JSON in this exact format (no markdown, no extra text):
           "title": "Episode Title",
           "scene_description": "Detailed description of scene with {character_name} doing something specific in a specific setting with specific objects and possibly other characters.",
           "story_text": "Age-appropriate story text following the guidelines above.",
-          "character_emotion": "The emotion and pose {character_name} should have (e.g., 'nervous and hesitant', 'excited and jumping', 'scared and hiding', 'determined and brave', 'happy and waving', 'curious and leaning forward', 'sad with drooping posture', 'surprised with wide eye')"
+          "character_emotion": "The emotion and pose {character_name} should have (e.g., nervous and hesitant, excited and jumping, scared and hiding, determined and brave, happy and waving, curious and leaning forward, sad with drooping posture, surprised with wide eye)"
         }}
       ]
     }}
