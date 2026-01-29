@@ -1,0 +1,106 @@
+import os
+import base64
+import google.generativeai as genai
+from fastapi import HTTPException
+
+async def generate_adventure_reveal_gemini(character_data: dict) -> str:
+    """Generate Disney/Pixar reveal using extracted character details universally"""
+    api_key = os.environ.get('GOOGLE_API_KEY') or os.environ.get('GEMINI_API_KEY')
+    if not api_key:
+        raise HTTPException(status_code=500, detail='Google API key not configured')
+    
+    genai.configure(api_key=api_key)
+    
+    try:
+        model = genai.GenerativeModel('gemini-2.5-flash-image')
+        
+        # Parse the extracted description to create universal reveal prompt
+        description = character_data.get("description", "")
+        
+        prompt = f'''Create a Disney/Pixar 3D character reveal from this child's drawing.
+
+CHARACTER ANALYSIS:
+{description}
+
+🚨 CRITICAL PROPORTION RULES - THESE OVERRIDE ALL AESTHETIC PREFERENCES:
+
+1. **EXACT PROPORTIONS FROM ANALYSIS:**
+   - If analysis says "Body is 80% of total height" → Make body ACTUALLY 80% of figure
+   - If analysis says "Arms are 10-12% of height" → Make arms TINY (10-12% only!)
+   - If analysis says "Head is 20% of height" → Make head LARGE (20% of figure)
+   - If analysis says "NO LEGS VISIBLE" → NO legs showing, character is all torso/gown
+
+2. **UNUSUAL PROPORTIONS = CHARACTER IDENTITY:**
+   - Extremely long body/torso = ESSENTIAL feature, not a mistake to fix
+   - Tiny stubby arms = ESSENTIAL feature, not a mistake to fix
+   - No visible legs = ESSENTIAL feature, not a mistake to fix
+   - These proportions drive the STORY (tall character stories, reaching stories, etc.)
+
+3. **DO NOT "FIX" OR "NORMALIZE":**
+   - DO NOT make arms normal length if analysis says tiny
+   - DO NOT add legs if analysis says none visible
+   - DO NOT reduce body length if analysis says extremely long
+   - DO NOT make proportions look "better" - make them EXACTLY as described
+
+4. **VERIFICATION CHECKLIST:**
+   - Body-to-head ratio matches analysis percentages? ✓
+   - Arm length matches analysis percentages? ✓
+   - Leg visibility matches analysis? ✓
+   - Character looks UNUSUAL and DISTINCTIVE, not generic? ✓
+
+SCENE REQUIREMENTS:
+- Celebration background (confetti, sparkles, rainbow)
+- Disney/Pixar 3D rendering quality
+- Realistic textures (hair, fabric, skin)
+- NO TEXT anywhere
+- Portrait orientation, character centered
+
+Transform this drawing to 3D life with EXACT proportions from analysis - the unusual proportions are what make this character special and story-worthy!''
+        
+        response = model.generate_content([prompt])
+        
+        if response.parts:
+            for part in response.parts:
+                if hasattr(part, 'inline_data') and part.inline_data:
+                    return base64.b64encode(part.inline_data.data).decode('utf-8')
+        
+        raise HTTPException(status_code=500, detail='No image generated')
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f'Reveal generation failed: {str(e)}')
+
+async def generate_adventure_episode_gemini(character_data: dict, scene_prompt: str, age_rules: str) -> str:
+    """Generate black & white coloring page using structure-only description"""
+    api_key = os.environ.get('GOOGLE_API_KEY') or os.environ.get('GEMINI_API_KEY')
+    if not api_key:
+        raise HTTPException(status_code=500, detail='Google API key not configured')
+    
+    genai.configure(api_key=api_key)
+    
+    try:
+        model = genai.GenerativeModel('gemini-2.5-flash-image')
+        
+        # Convert to structure-only for coloring pages
+        structure_desc = f"""Character with distinctive features from original drawing:
+- Preserve unique proportions and key visual elements
+- Maintain character's special characteristics
+- Age-appropriate for {age_rules}"""
+        
+        full_prompt = f'''Create A4 portrait coloring page:
+
+CHARACTER: {character_data["name"]} - {structure_desc}
+SCENE: {scene_prompt}
+
+FORMAT: A4 portrait (tall, not square) - leave bottom 30% for story text
+CRITICAL: BLACK LINES ONLY on WHITE BACKGROUND - NO COLOR FILLS
+OUTPUT: Pure black line art suitable for children to color'''
+        
+        response = model.generate_content([full_prompt])
+        
+        if response.parts:
+            for part in response.parts:
+                if hasattr(part, 'inline_data') and part.inline_data:
+                    return base64.b64encode(part.inline_data.data).decode('utf-8')
+        
+        raise HTTPException(status_code=500, detail='No image generated')
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f'Episode generation failed: {str(e)}')

@@ -27,21 +27,16 @@ AGE_RULES = {
 AGE GROUP: UNDER 3 (BLOB STYLE)
 
 CRITICAL RULES:
-- EXTREMELY THICK outlines (5-6px stroke width)
+- EXTREMELY THICK outlines
 - Blob/kawaii style - super rounded and chunky shapes
 - Maximum 8-10 colourable areas in ENTIRE image
+- PURE WHITE background - nothing else, no scenery
 - Face: just dots for eyes, simple curve for mouth
-- Character fills 60-70% of the page
+- Character fills 80% of the page
 - NO small details whatsoever
 - Think "baby's first coloring book"
 
-SIMPLE SCENE ELEMENTS (because this is a STORY coloring book):
-- Add 2-3 VERY SIMPLE large shapes around character (big cloud, big sun, big flower)
-- Ground line is okay
-- Keep background elements HUGE and SIMPLE - same blob style as character
-- Each background element = 1 colourable area
-
-BANNED: Thin lines, patterns, small details, complex shapes
+BANNED: Any background, small details, thin lines, patterns
 """
     },
     "age_3": {
@@ -51,19 +46,14 @@ BANNED: Thin lines, patterns, small details, complex shapes
 AGE GROUP: 3 YEARS OLD
 
 RULES:
-- VERY THICK outlines (4-5px stroke width)
+- VERY THICK outlines
 - Maximum 10-12 colourable areas
+- Pure white background, no scenery
 - Simple blob-like shapes
 - Face: dots for eyes, simple smile
-- Character fills 50-60% of page
+- Character very large on page
 
-SIMPLE SCENE ELEMENTS (because this is a STORY coloring book):
-- Add 3-4 SIMPLE large shapes for setting (cloud, sun, tree, flower, mushroom)
-- Ground line with simple grass bumps
-- Keep all elements LARGE and ROUNDED
-- Scene elements use same thick lines as character
-
-BANNED: Patterns, small details, thin lines, complex shapes
+BANNED: Background scenery, patterns, small details
 """
     },
     "age_4": {
@@ -73,20 +63,13 @@ BANNED: Patterns, small details, thin lines, complex shapes
 AGE GROUP: 4 YEARS OLD
 
 RULES:
-- THICK outlines (3-4px stroke width)
+- THICK outlines
 - Maximum 15-18 colourable areas
+- Pure white background
 - Simple rounded figures
 - Basic clothing shapes (no patterns)
-- Character fills 45-55% of page
 
-SCENE ELEMENTS (because this is a STORY coloring book):
-- Add 4-5 simple background elements related to the story
-- Simple trees, flowers, clouds, sun, basic houses/mushrooms
-- Ground with simple grass or path
-- Elements should be simple shapes but recognizable
-- Good spacing between all elements
-
-BANNED: Patterns, tiny details, complex overlapping
+BANNED: Complex backgrounds, patterns, tiny details
 """
     },
     "age_5": {
@@ -96,21 +79,13 @@ BANNED: Patterns, tiny details, complex overlapping
 AGE GROUP: 5 YEARS OLD
 
 RULES:
-- Medium-thick outlines (2.5-3.5px stroke width)
+- Medium-thick outlines
 - Maximum 20-25 colourable areas
+- MINIMAL background (ground line, 1-2 simple elements only)
 - Simple but recognizable figures
 - Basic expressions allowed
-- Character fills 35-45% of page
 
-SCENE ELEMENTS (because this is a STORY coloring book):
-- Add 5-6 background elements that tell the story
-- Trees with simple branches, flowers with petals, clouds, sun/moon
-- Simple buildings, mushroom houses, or setting-appropriate structures
-- Ground with texture (grass tufts, stones, path)
-- Can include 1 simple secondary character or animal
-- Elements can be adjacent but not overlapping
-
-BANNED: Complex patterns, intricate details, overlapping elements
+BANNED: Complex patterns, intricate details, busy backgrounds
 """
     },
     "age_6": {
@@ -120,22 +95,13 @@ BANNED: Complex patterns, intricate details, overlapping elements
 AGE GROUP: 6 YEARS OLD
 
 RULES:
-- Medium outlines (2-3px stroke width)
+- Medium outlines
 - 25-30 colourable areas
-- Full themed background
+- Full themed background allowed
 - Detailed costumes, expressive faces
 - Simple patterns on clothing okay
-- Character fills 30-40% of page
 
-SCENE COMPOSITION:
-- Rich story scene with 6-8 background elements
-- Foreground and background separation
-- Setting-appropriate details (fairy village, forest, underwater, etc.)
-- Secondary characters welcome (fairies, animals, friends)
-- Environmental storytelling - props and objects from the story
-- Some layering okay with clear outlines
-
-BANNED: Very intricate patterns, tiny details under 0.5cm
+BANNED: Very intricate patterns, tiny details
 """
     },
     "age_7": {
@@ -145,21 +111,11 @@ BANNED: Very intricate patterns, tiny details under 0.5cm
 AGE GROUP: 7 YEARS OLD
 
 RULES:
-- Medium outlines (1.5-2.5px stroke width)
-- 30-35 colourable areas
 - More detail WITHIN objects
+- 30-35 colourable areas
+- Fuller themed background
 - Hair sections, clothing patterns allowed
 - Multiple characters okay
-- Character fills 25-35% of page
-
-SCENE COMPOSITION:
-- Rich, detailed story scene with 8-10 elements
-- Clear foreground/midground/background
-- Architectural details on buildings
-- Nature with texture (leaves, bark, grass)
-- Action and movement in the scene
-- Story-relevant props and environmental details
-- Depth through overlapping with clear outlines
 """
     },
     "age_8": {
@@ -169,20 +125,11 @@ SCENE COMPOSITION:
 AGE GROUP: 8 YEARS OLD
 
 RULES:
-- Medium-thin outlines (1-2px stroke width)
+- Thinner outlines allowed
 - 40-45 colourable areas
-- More intricate patterns allowed
+- More intricate patterns
 - Detailed accessories
-- Character fills 20-30% of page
-
-SCENE COMPOSITION:
-- Rich, detailed background scenes with 10-12 elements
-- Complex environments with depth
-- Texture variety (wood grain, stone, foliage, fabric)
-- Weather and atmospheric elements welcome
-- Dynamic compositions with interesting angles
-- Multiple characters with expressions
-- Detailed props and story elements
+- Rich background scenes
 """
     },
     "age_9": {
@@ -192,21 +139,11 @@ SCENE COMPOSITION:
 AGE GROUP: 9 YEARS OLD
 
 RULES:
-- Fine outlines (0.75-1.5px stroke width)
+- Fine outlines
 - 50-65 colourable areas
 - 90% of page filled with content
 - Large themed landmarks included
 - Complex patterns allowed
-
-SCENE COMPOSITION:
-- Highly detailed scenes with 12-15 elements
-- Professional illustration quality
-- Strong sense of depth and perspective
-- Detailed textures throughout
-- Atmospheric effects (light rays, sparkles, mist)
-- Complex character poses and expressions
-- Rich environmental storytelling
-- Cinematic framing
 """
     },
     "age_10": {
@@ -216,23 +153,12 @@ SCENE COMPOSITION:
 AGE GROUP: 10+ YEARS OLD
 
 RULES:
-- Fine thin outlines (0.5-1px stroke width)
+- Fine thin outlines
 - 70-90 colourable areas
 - Fill ALL empty space
 - Dense and intricate
 - Complex patterns and textures
 - Maximum detail
-
-SCENE COMPOSITION:
-- Adult coloring book quality
-- 15-20 detailed elements filling the scene
-- Sophisticated compositions with dynamic angles
-- Multiple depth layers with atmospheric perspective
-- Intricate textures on all surfaces
-- Detailed character anatomy and expressions
-- Complex environmental storytelling
-- Decorative patterns where appropriate
-- Cinematic, dramatic framing
 """
     }
 }

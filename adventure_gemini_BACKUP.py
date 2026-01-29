@@ -261,9 +261,10 @@ But the EMOTION and POSE must match this scene: {character_emotion}
         # Build prompt
         full_prompt = f'''Create a COLORING PAGE for children.
 
-╔══════════════════════════════════════════════════════════════════════════════╗
-║   THIS IS A COLORING PAGE - BLACK OUTLINES ON WHITE - NOTHING ELSE           ║
-╚══════════════════════════════════════════════════════════════════════════════╝
+*** CRITICAL: THIS IS A COLORING PAGE - ZERO COLOR ALLOWED ***
+- The output must be 100% BLACK LINES on WHITE BACKGROUND
+- NO color AT ALL - not green, not blue, not purple, not orange, not any color
+- Children will add the colors themselves with crayons
 
 CHARACTER: {character_name}
 Use the reference image for the character PHYSICAL APPEARANCE ONLY:
@@ -279,48 +280,16 @@ STORY SCENE:
 AGE-APPROPRIATE COMPLEXITY:
 {age_rules}
 
-*** ABSOLUTE COLORING PAGE REQUIREMENTS ***
+COLORING PAGE REQUIREMENTS:
+- BLACK LINES ONLY on PURE WHITE BACKGROUND
+- NO color anywhere
+- NO shading, NO grey gradients  
+- Bold clear lines for children to color
+- All shapes enclosed so children can color them in
+- Fill the entire image with the illustration
+- Character expression and pose MUST match the story scene emotion
 
-1. BLACK OUTLINES ONLY - NO FILLED AREAS
-   ✓ Character body = WHITE inside with BLACK OUTLINE
-   ✓ Character clothes = WHITE inside with BLACK OUTLINE
-   ✓ Character hair = WHITE inside with BLACK OUTLINE (NOT solid black!)
-   ✓ Character face = WHITE inside with BLACK OUTLINE
-   ✓ ALL background elements = WHITE inside with BLACK OUTLINE
-   
-2. EVERY AREA MUST BE WHITE (EMPTY) FOR COLORING
-   - Children will fill these white areas with their crayons
-   - If you fill ANY area with black, you have FAILED
-   - Think: traditional coloring book with EMPTY shapes
-   
-3. ZERO SHADING, ZERO FILLS, ZERO GRADIENTS
-   - No grey areas anywhere
-   - No hatching or cross-hatching
-   - No stippling or dot shading
-   - No solid black fills (not even for hair or shadows!)
-   
-4. WHAT THIS MEANS FOR COMMON MISTAKES:
-   ✗ WRONG: Hair filled with solid black
-   ✓ RIGHT: Hair as WHITE sections with BLACK OUTLINE strokes showing hair texture
-   
-   ✗ WRONG: Dark clothing filled with black
-   ✓ RIGHT: Clothing as WHITE areas with BLACK OUTLINE
-   
-   ✗ WRONG: Shadows shown as grey or black areas
-   ✓ RIGHT: No shadows - just clean outlines
-
-*** FAILURE CONDITIONS - DO NOT DO THESE ***
-❌ Filling hair with solid black = FAILURE
-❌ Filling any clothing with solid black = FAILURE
-❌ Filling ANY area with black or grey = FAILURE
-❌ Any area that isn't WHITE inside = FAILURE
-❌ Using shading or gradients = FAILURE
-
-*** SUCCESS = 100% of image is BLACK LINES on WHITE ***
-A child must be able to color EVERY part of the image.
-Every single shape must be WHITE inside, bounded by BLACK lines.
-
-OUTPUT: Pure black outlines on pure white background. Traditional coloring book style.'''
+OUTPUT: Black and white coloring page. NO COLOR.'''
         
         # Build content with reveal image if provided
         if reveal_image_b64:
