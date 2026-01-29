@@ -6,7 +6,110 @@ Focus on: PROPORTIONS, COLORS, PIXAR FACE - in that priority order
 import os
 import base64
 import google.generativeai as genai
+import json
 from fastapi import HTTPException
+
+
+def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None) -> str:
+    """
+    Take a square coloring image and create an A4 page with story text below.
+    
+    Layout:
+    - Top 85%: Large coloring illustration (fills the width)
+    - Bottom 15%: Compact title + story text
+    
+    Returns: Base64 encoded A4 PNG image
+    """
+    from PIL import Image, ImageDraw, ImageFont
+    import io
+    import textwrap
+    
+    # A4 at 150 DPI = 1240 x 1754 pixels
+    A4_WIDTH = 1240
+    A4_HEIGHT = 1754
+    
+    # Decode the coloring image
+    img_data = base64.b64decode(image_b64)
+    coloring_img = Image.open(io.BytesIO(img_data))
+    
+    # Create A4 canvas (white)
+    a4_page = Image.new('RGB', (A4_WIDTH, A4_HEIGHT), 'white')
+    
+    # Make coloring image as big as possible - 85% of page height
+    # Leave only 15% for text at bottom
+    max_coloring_height = int(A4_HEIGHT * 0.82)
+    max_coloring_width = A4_WIDTH - 60  # Small margin each side
+    
+    # Scale to fit while maintaining aspect ratio
+    img_ratio = coloring_img.width / coloring_img.height
+    
+    if img_ratio > (max_coloring_width / max_coloring_height):
+        # Image is wider - fit to width
+        new_width = max_coloring_width
+        new_height = int(new_width / img_ratio)
+    else:
+        # Image is taller - fit to height
+        new_height = max_coloring_height
+        new_width = int(new_height * img_ratio)
+    
+    # Resize coloring image
+    coloring_img = coloring_img.resize((new_width, new_height), Image.LANCZOS)
+    
+    # Center horizontally, place at top with small margin
+    x_offset = (A4_WIDTH - new_width) // 2
+    y_offset = 30  # Small top margin
+    
+    a4_page.paste(coloring_img, (x_offset, y_offset))
+    
+    # Draw a thin border around the coloring image
+    draw = ImageDraw.Draw(a4_page)
+    draw.rectangle(
+        [x_offset - 2, y_offset - 2, x_offset + new_width + 2, y_offset + new_height + 2],
+        outline='black',
+        width=2
+    )
+    
+    # Text area starts below the image - compact layout
+    text_area_top = y_offset + new_height + 20
+    
+    # Try to load fonts - moderate sizes for compact area
+    try:
+        title_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 38)
+        story_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 26)
+    except:
+        try:
+            title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 38)
+            story_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 26)
+        except:
+            title_font = ImageFont.load_default()
+            story_font = ImageFont.load_default()
+    
+    current_y = text_area_top
+    
+    # Draw title if provided
+    if title:
+        title_bbox = draw.textbbox((0, 0), title, font=title_font)
+        title_width = title_bbox[2] - title_bbox[0]
+        title_x = (A4_WIDTH - title_width) // 2
+        draw.text((title_x, current_y), title, fill='black', font=title_font)
+        current_y += 50
+    
+    # Wrap and draw story text - single line if short enough
+    wrapped_text = textwrap.fill(story_text, width=65)
+    
+    for line in wrapped_text.split('\n'):
+        line_bbox = draw.textbbox((0, 0), line, font=story_font)
+        line_width = line_bbox[2] - line_bbox[0]
+        line_x = (A4_WIDTH - line_width) // 2
+        draw.text((line_x, current_y), line, fill='black', font=story_font)
+        current_y += 35
+    
+    # Convert to base64
+    buffer = io.BytesIO()
+    a4_page.save(buffer, format='PNG', dpi=(150, 150))
+    buffer.seek(0)
+    
+    return base64.b64encode(buffer.read()).decode('utf-8')
 
 
 async def generate_adventure_reveal_gemini(character_data: dict) -> str:
@@ -81,32 +184,28 @@ async def generate_adventure_episode_gemini(character_data: dict, scene_prompt: 
     """
     Generate black & white coloring page using the REVEAL IMAGE as reference.
     
-    This ensures the coloring page character matches the reveal exactly.
-    Gemini SEES the reveal image and converts it to line art in the scene.
+    Uses 3:4 portrait aspect ratio for A4-style pages.
     """
     
     api_key = os.environ.get('GOOGLE_API_KEY') or os.environ.get('GEMINI_API_KEY')
     if not api_key:
         raise HTTPException(status_code=500, detail='Google API key not configured')
     
-    genai.configure(api_key=api_key)
-    
     try:
-        model = genai.GenerativeModel('gemini-2.5-flash-image')
+        from google import genai
+        from google.genai import types
+        
+        client = genai.Client(api_key=api_key)
         
         character_name = character_data.get("name", "Character")
         
-        # Build prompt - this exact wording worked perfectly in testing
+        # Build prompt
         full_prompt = f'''Create a COLORING PAGE for children.
-
-I am showing you a reference character image. You must CONVERT this character into BLACK LINE ART and place them in the story scene.
 
 ⚠️ CRITICAL: THIS IS A COLORING PAGE - ZERO COLOR ALLOWED ⚠️
 - The output must be 100% BLACK LINES on WHITE BACKGROUND
 - NO color AT ALL - not green, not blue, not purple, not orange, not any color
-- NOT EVEN A HINT of color anywhere
 - Children will add the colors themselves with crayons
-- If you add ANY color, the coloring page is ruined
 
 CHARACTER: {character_name}
 Match the reference image exactly - same proportions, same features, same distinctive elements.
@@ -119,29 +218,47 @@ AGE-APPROPRIATE COMPLEXITY:
 
 COLORING PAGE REQUIREMENTS:
 - BLACK LINES ONLY on PURE WHITE BACKGROUND
-- NO color anywhere - not on character, not on scene, not anywhere
-- NO shading, NO grey gradients
+- NO color anywhere
+- NO shading, NO grey gradients  
 - Bold clear lines for children to color
-- Leave bottom 20% blank for story text
 - All shapes enclosed so children can color them in
+- Fill the entire image with the illustration
 
-OUTPUT: 100% BLACK AND WHITE coloring page. Pure black lines on pure white background. ABSOLUTELY NO COLOR.'''
+OUTPUT: Black and white coloring page. NO COLOR.'''
         
-        # If we have a reveal image, include it as reference
+        # Build content with reveal image if provided
         if reveal_image_b64:
-            response = model.generate_content([
+            contents = [
                 full_prompt,
-                {"mime_type": "image/png", "data": reveal_image_b64}
-            ])
+                types.Part.from_bytes(
+                    data=base64.b64decode(reveal_image_b64),
+                    mime_type="image/png"
+                )
+            ]
         else:
-            response = model.generate_content([full_prompt])
+            contents = full_prompt
         
-        if response.parts:
-            for part in response.parts:
-                if hasattr(part, 'inline_data') and part.inline_data:
-                    return base64.b64encode(part.inline_data.data).decode('utf-8')
+        # Generate with portrait aspect ratio
+        response = client.models.generate_content(
+            model='gemini-2.5-flash-image',
+            contents=contents,
+            config=types.GenerateContentConfig(
+                response_modalities=['IMAGE', 'TEXT'],
+                image_config=types.ImageConfig(
+                    aspect_ratio='3:4'  # Portrait for A4-style
+                )
+            )
+        )
+        
+        # Extract image from response
+        for part in response.candidates[0].content.parts:
+            if hasattr(part, 'inline_data') and part.inline_data:
+                return base64.b64encode(part.inline_data.data).decode('utf-8')
         
         raise HTTPException(status_code=500, detail='No image generated')
+        
+    except ImportError as e:
+        raise HTTPException(status_code=500, detail=f'google-genai package not installed: {str(e)}')
     except Exception as e:
         raise HTTPException(status_code=500, detail=f'Episode generation failed: {str(e)}')
 
