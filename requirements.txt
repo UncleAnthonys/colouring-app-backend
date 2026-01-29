@@ -6,3 +6,4 @@ pydantic>=2.0.0
 Pillow
 reportlab
 google-genai
+google-generativeai
