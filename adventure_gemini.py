@@ -113,16 +113,22 @@ def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None)
 
 
 async def generate_adventure_reveal_gemini(character_data: dict, original_drawing_b64: str = None) -> str:
-    """Generate Monsters Inc / Pixar style reveal - uses ORIGINAL DRAWING as visual reference"""
+    """Generate Monsters Inc / Pixar style reveal - uses ORIGINAL DRAWING as visual reference
+    
+    Uses google.genai SDK with explicit size constraints to stay in standard pricing tier.
+    Output: ~1024x1024 or 3:4 portrait (~864x1152) - both under 1 megapixel.
+    """
     
     api_key = os.environ.get('GOOGLE_API_KEY') or os.environ.get('GEMINI_API_KEY')
     if not api_key:
         raise HTTPException(status_code=500, detail='Google API key not configured')
     
-    genai.configure(api_key=api_key)
-    
     try:
-        model = genai.GenerativeModel('gemini-2.5-flash-image')
+        # Use new SDK for consistent size control
+        from google import genai
+        from google.genai import types
+        
+        client = genai.Client(api_key=api_key)
         
         description = character_data.get("description", "")
         character_name = character_data.get("name", "Character")
@@ -177,21 +183,41 @@ Transform the childs drawing into a character that looks like it belongs in:
 
 IMPORTANT: Look at the drawing! If it is a girl with brown hair and a rainbow skirt, create a 3D GIRL - not a rainbow blob!'''
         
-        # Include original drawing as visual reference if provided
+        # Build content with original drawing if provided
         if original_drawing_b64:
-            response = model.generate_content([
+            contents = [
                 prompt,
-                {"mime_type": "image/png", "data": original_drawing_b64}
-            ])
+                types.Part.from_bytes(
+                    data=base64.b64decode(original_drawing_b64),
+                    mime_type="image/jpeg"
+                )
+            ]
         else:
-            response = model.generate_content([prompt])
+            contents = prompt
         
-        if response.parts:
-            for part in response.parts:
-                if hasattr(part, 'inline_data') and part.inline_data:
-                    return base64.b64encode(part.inline_data.data).decode('utf-8')
+        # Generate with STANDARD size (under 1 megapixel to avoid 2K/4K pricing)
+        # 3:4 portrait at standard resolution = ~864x1152 = 995,328 pixels
+        response = client.models.generate_content(
+            model='gemini-2.5-flash-image',
+            contents=contents,
+            config=types.GenerateContentConfig(
+                response_modalities=['IMAGE', 'TEXT'],
+                image_config=types.ImageConfig(
+                    aspect_ratio='3:4',  # Portrait orientation
+                    # Standard resolution - no 2K/4K upscaling
+                )
+            )
+        )
+        
+        # Extract image from response
+        for part in response.candidates[0].content.parts:
+            if hasattr(part, 'inline_data') and part.inline_data:
+                return base64.b64encode(part.inline_data.data).decode('utf-8')
         
         raise HTTPException(status_code=500, detail='No image generated')
+        
+    except ImportError as e:
+        raise HTTPException(status_code=500, detail=f'google-genai package not installed: {str(e)}')
     except Exception as e:
         raise HTTPException(status_code=500, detail=f'Reveal generation failed: {str(e)}')
 
@@ -277,14 +303,16 @@ OUTPUT: Black and white coloring page. NO COLOR.'''
         else:
             contents = full_prompt
         
-        # Generate with portrait aspect ratio
+        # Generate with portrait aspect ratio - STANDARD pricing tier
+        # 3:4 at standard resolution = ~864x1152 = 995,328 pixels (under 1MP)
+        # This avoids 2K/4K pricing tiers
         response = client.models.generate_content(
             model='gemini-2.5-flash-image',
             contents=contents,
             config=types.GenerateContentConfig(
                 response_modalities=['IMAGE', 'TEXT'],
                 image_config=types.ImageConfig(
-                    aspect_ratio='3:4'  # Portrait for A4-style
+                    aspect_ratio='3:4'  # Portrait for A4-style, standard resolution
                 )
             )
         )
