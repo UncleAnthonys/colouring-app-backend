@@ -180,11 +180,12 @@ Generate the character now.'''
         raise HTTPException(status_code=500, detail=f'Reveal generation failed: {str(e)}')
 
 
-async def generate_adventure_episode_gemini(character_data: dict, scene_prompt: str, age_rules: str, reveal_image_b64: str = None, story_text: str = None) -> str:
+async def generate_adventure_episode_gemini(character_data: dict, scene_prompt: str, age_rules: str, reveal_image_b64: str = None, story_text: str = None, character_emotion: str = None) -> str:
     """
     Generate black & white coloring page using the REVEAL IMAGE as reference.
     
     Uses 3:4 portrait aspect ratio for A4-style pages.
+    character_emotion overrides the default reveal pose with scene-appropriate emotion.
     """
     
     api_key = os.environ.get('GOOGLE_API_KEY') or os.environ.get('GEMINI_API_KEY')
@@ -199,6 +200,22 @@ async def generate_adventure_episode_gemini(character_data: dict, scene_prompt: 
         
         character_name = character_data.get("name", "Character")
         
+        # Build emotion/pose guidance
+        emotion_guidance = ""
+        if character_emotion:
+            emotion_guidance = f"""
+⚠️ CRITICAL - CHARACTER EMOTION AND POSE:
+{character_name} should look {character_emotion} in this scene.
+DO NOT copy the happy/celebratory pose from the reference image.
+The reference image shows the character's APPEARANCE (body shape, features, size).
+But the EMOTION and POSE must match this scene: {character_emotion}
+- If scared: hunched, worried expression, maybe hiding partially
+- If curious: leaning forward, wide eye, reaching out
+- If sad: drooping posture, downturned expression
+- If determined: standing firm, focused expression
+- If nervous: hesitant posture, uncertain expression
+"""
+        
         # Build prompt
         full_prompt = f'''Create a COLORING PAGE for children.
 
@@ -208,7 +225,12 @@ async def generate_adventure_episode_gemini(character_data: dict, scene_prompt: 
 - Children will add the colors themselves with crayons
 
 CHARACTER: {character_name}
-Match the reference image exactly - same proportions, same features, same distinctive elements.
+Use the reference image for the character's PHYSICAL APPEARANCE ONLY:
+- Body shape, proportions, and size
+- Distinctive features (number of eyes, horns, fur texture, etc.)
+- Clothing or accessories
+
+{emotion_guidance}
 
 STORY SCENE:
 {scene_prompt}
@@ -223,6 +245,7 @@ COLORING PAGE REQUIREMENTS:
 - Bold clear lines for children to color
 - All shapes enclosed so children can color them in
 - Fill the entire image with the illustration
+- Character's expression and pose MUST match the story scene emotion
 
 OUTPUT: Black and white coloring page. NO COLOR.'''
         
@@ -425,7 +448,8 @@ Return ONLY valid JSON in this exact format (no markdown, no extra text):
           "episode_num": 1,
           "title": "Episode Title",
           "scene_description": "Detailed description of scene with {character_name} doing something specific in a specific setting with specific objects and possibly other characters.",
-          "story_text": "Age-appropriate story text following the guidelines above."
+          "story_text": "Age-appropriate story text following the guidelines above.",
+          "character_emotion": "The emotion and pose {character_name} should have (e.g., 'nervous and hesitant', 'excited and jumping', 'scared and hiding', 'determined and brave', 'happy and waving', 'curious and leaning forward', 'sad with drooping posture', 'surprised with wide eye')"
         }}
       ]
     }}
