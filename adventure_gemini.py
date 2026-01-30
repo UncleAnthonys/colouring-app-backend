@@ -369,26 +369,10 @@ FINAL CHECK: Ensure every single pixel is either pure black (#000000) or pure wh
         
         # Build content with reveal image if provided
         if reveal_image_b64:
-            # Convert reveal to high-contrast edge map
-            # Removes all color/shade data, keeps only shape outlines
-            from PIL import Image, ImageFilter, ImageOps, ImageEnhance
-            import io as pil_io
-            reveal_bytes = base64.b64decode(reveal_image_b64)
-            img = Image.open(pil_io.BytesIO(reveal_bytes))
-            # Find edges and boost contrast for clearer lines
-            edges = img.convert('L').filter(ImageFilter.FIND_EDGES)
-            enhancer = ImageEnhance.Contrast(edges)
-            edges_contrast = enhancer.enhance(2.0)  # Double the contrast
-            edges_inverted = ImageOps.invert(edges_contrast)  # White bg, black lines
-            edges_rgb = edges_inverted.convert('RGB')
-            buffer = pil_io.BytesIO()
-            edges_rgb.save(buffer, format='PNG')
-            edge_bytes = buffer.getvalue()
-            
             contents = [
                 full_prompt,
                 types.Part.from_bytes(
-                    data=edge_bytes,
+                    data=base64.b64decode(reveal_image_b64),
                     mime_type="image/png"
                 )
             ]
