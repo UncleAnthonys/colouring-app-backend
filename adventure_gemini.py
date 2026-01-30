@@ -383,16 +383,7 @@ FINAL CHECK: Ensure every single pixel is either pure black (#000000) or pure wh
         # Extract image from response
         for part in response.candidates[0].content.parts:
             if hasattr(part, 'inline_data') and part.inline_data:
-                # Post-process to force strict black & white (removes any color leaks)
-                from PIL import Image
-                import io as pil_io
-                img = Image.open(pil_io.BytesIO(part.inline_data.data))
-                gray = img.convert('L')  # Convert to grayscale
-                bw = gray.point(lambda x: 0 if x < 200 else 255, '1')  # Threshold to pure B&W
-                bw_rgb = bw.convert('RGB')  # Convert back to RGB for compatibility
-                output_buffer = pil_io.BytesIO()
-                bw_rgb.save(output_buffer, format='PNG')
-                return base64.b64encode(output_buffer.getvalue()).decode('utf-8')
+                return base64.b64encode(part.inline_data.data).decode('utf-8')
         
         raise HTTPException(status_code=500, detail='No image generated')
         
