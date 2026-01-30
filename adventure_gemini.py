@@ -342,10 +342,18 @@ This is a COLORING BOOK PAGE - children color it themselves.'''
         
         # Build content with reveal image if provided
         if reveal_image_b64:
+            # Convert reveal to grayscale to prevent color bleeding
+            reveal_bytes = base64.b64decode(reveal_image_b64)
+            img = Image.open(io.BytesIO(reveal_bytes))
+            gray_img = img.convert('L').convert('RGB')  # Grayscale then back to RGB
+            gray_buffer = io.BytesIO()
+            gray_img.save(gray_buffer, format='PNG')
+            gray_bytes = gray_buffer.getvalue()
+            
             contents = [
                 full_prompt,
                 types.Part.from_bytes(
-                    data=base64.b64decode(reveal_image_b64),
+                    data=gray_bytes,
                     mime_type="image/png"
                 )
             ]
