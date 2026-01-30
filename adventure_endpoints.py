@@ -59,6 +59,8 @@ class GenerateEpisodeRequest(BaseModel):
     quality: str = "low"
     reveal_description: Optional[str] = None  # Text description for consistency
     reveal_image_b64: Optional[str] = None  # The reveal image for visual consistency
+    scene_prompt: Optional[str] = None  # Custom scene from personalized stories
+    character_emotion: Optional[str] = None  # Character emotion for this scene
 
 
 class GenerateEpisodeResponse(BaseModel):
@@ -294,12 +296,17 @@ async def generate_episode_gemini_endpoint(request: GenerateEpisodeRequest):
     story = get_story_for_age(stories if isinstance(stories, dict) else {"age_6": stories}, age_level)
     story = story.replace("{name}", char.name)
     
-    # Build scene prompt from episode data
+    # Build scene prompt - use custom if provided, otherwise from episode data
     age_rules = get_age_rules(age_level)
-    scene_template = ep_data.get("scene", "")
-    scene_prompt = scene_template.format(
-        name=char.name,
-        character_pose=char.pose,
+    if request.scene_prompt:
+        # Use personalized scene from Gemini-generated stories
+        scene_prompt = request.scene_prompt.replace("{name}", char.name)
+    else:
+        # Fallback to hardcoded episode data
+        scene_template = ep_data.get("scene", "")
+        scene_prompt = scene_template.format(
+            name=char.name,
+            character_pose=char.pose,
         character_must_include=f"MUST INCLUDE: {char.key_feature}",
         area_count=age_rules["colourable_areas"]
     )
@@ -314,7 +321,8 @@ async def generate_episode_gemini_endpoint(request: GenerateEpisodeRequest):
         scene_prompt=scene_prompt,
         age_rules=age_rules["rules"],
         reveal_image_b64=request.reveal_image_b64,  # Pass reveal for consistency
-        story_text=story  # For text at bottom of page
+        story_text=story,  # For text at bottom of page
+        character_emotion=request.character_emotion  # Pass emotion for scene-appropriate expression
     )
     
     return {
