@@ -259,9 +259,15 @@ But the EMOTION and POSE must match this scene: {character_emotion}
 """
         
         # Build prompt
-        full_prompt = f'''STRICT CONSTRAINT: Monochrome black and white only. ZERO COLORS allowed. No grayscale shading. Pure white background (#FFFFFF) with solid black outlines (#000000).
+        full_prompt = f'''[STRICT CONTROLS]: Monochrome black and white 1-bit line art only.
+[VISUAL DOMAIN]: Technical Vector Graphic / Die-cut sticker template.
+[COLOR CONSTRAINTS]: Strictly binary 1-bit color palette. Output must contain #000000 (Black) and #FFFFFF (White) ONLY. Any other color or shade of grey is a failure.
 
-STYLE: Pure black and white line art, solid bold outlines, clean vector style. High-contrast black ink on white paper. Zero shading, zero gradients, zero shadows. Bleached white background.
+[STYLE]: Clean, bold, uniform-weight black outlines. Pure white empty interiors. Thick, heavy marker outlines. Bold 5pt vector strokes.
+
+[MANDATORY EXCLUSIONS]: No gradients. No anti-aliasing. No volume. No depth. No shadows. No grayscale. No shading. No color leaks. No 3D volume. Paper-white fills only.
+
+[REFERENCE USE]: Use the attached image ONLY for the character's shape and silhouette. Completely ignore all color, value, and shading data from the reference. DO NOT use the colors or lighting from the reference.
 
 Create a professional kids' COLORING BOOK PAGE.
 
