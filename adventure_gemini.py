@@ -259,7 +259,11 @@ But the EMOTION and POSE must match this scene: {character_emotion}
 """
         
         # Build prompt
-        full_prompt = f'''Create a COLORING PAGE for children.
+        full_prompt = f'''STRICT CONSTRAINT: Monochrome black and white only. ZERO COLORS allowed. No grayscale shading. Pure white background (#FFFFFF) with solid black outlines (#000000).
+
+STYLE: Pure black and white line art, solid bold outlines, clean vector style. High-contrast black ink on white paper. Zero shading, zero gradients, zero shadows. Bleached white background.
+
+Create a professional kids' COLORING BOOK PAGE.
 
 *** CRITICAL: MONOCHROME OUTPUT ONLY ***
 This MUST be a pure BLACK and WHITE image.
@@ -346,7 +350,9 @@ Shading: NONE
 Gradients: NONE
 Tints: NONE
 
-This is a COLORING BOOK PAGE - children color it themselves.'''
+This is a COLORING BOOK PAGE - children color it themselves.
+
+FINAL CHECK: Ensure every single pixel is either pure black (#000000) or pure white (#FFFFFF). No colors from the reference character should be visible. No blue, no orange, no any color.'''
         
         # Build content with reveal image if provided
         if reveal_image_b64:
