@@ -333,6 +333,9 @@ Convert everything to BLACK OUTLINES on WHITE:
 - If reference shows a ROUND body → draw ROUND body
 - DO NOT change the character's body shape into a dress or human-like form
 - The character's distinctive body structure MUST match the reference exactly
+- DO NOT ADD CLOTHES that aren't in the reference - if character has plain body, keep it PLAIN
+- NO adding shirts, buttons, collars, pockets, belts, or any clothing details not in original
+- A plain/naked character body stays plain/naked - do not "dress" them
 - Only convert COLORS to white - keep all SHAPES identical
 
 **MONOCHROME MEANS:**
