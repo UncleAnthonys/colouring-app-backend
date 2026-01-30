@@ -183,22 +183,28 @@ BANNED: Very intricate patterns, tiny details under 0.5cm
         "rules": """
 AGE GROUP: 7 YEARS OLD
 
-RULES:
-- Medium outlines (1.5-2.5px stroke width)
-- 30-35 colourable areas
-- More detail WITHIN objects
-- Hair sections, clothing patterns allowed
-- Multiple characters okay
+DETAILED SCENE WITH DEPTH:
 - Character fills 25-35% of page
+- 30-35 colourable areas total
 
-SCENE COMPOSITION:
-- Rich, detailed story scene with 8-10 elements
-- Clear foreground/midground/background
-- Architectural details on buildings
-- Nature with texture (leaves, bark, grass)
-- Action and movement in the scene
-- Story-relevant props and environmental details
-- Depth through overlapping with clear outlines
+MUST INCLUDE ALL OF THESE:
+- Main character with detailed clothing
+- The enchanted tree with decorative door
+- 2 fairies with wings
+- 3-4 flowers of different sizes
+- 2-3 mushrooms
+- Sun or clouds
+- Grass with texture
+- 1 small animal (bunny, squirrel, or bird)
+- Leaves falling
+- A path or stepping stones
+
+BACKGROUND DEPTH:
+- Show distant trees or bushes behind main tree
+- Create foreground/midground/background layers
+- Some elements overlap others
+
+STYLE: Detailed children's book illustration
 """
     },
     "age_8": {
@@ -207,21 +213,30 @@ SCENE COMPOSITION:
         "rules": """
 AGE GROUP: 8 YEARS OLD
 
-RULES:
-- Medium-thin outlines (1-2px stroke width)
-- 40-45 colourable areas
-- More intricate patterns allowed
-- Detailed accessories
+RICH DETAILED SCENE:
 - Character fills 20-30% of page
+- 40-45 colourable areas total
 
-SCENE COMPOSITION:
-- Rich, detailed background scenes with 10-12 elements
-- Complex environments with depth
-- Texture variety (wood grain, stone, foliage, fabric)
-- Weather and atmospheric elements welcome
-- Dynamic compositions with interesting angles
-- Multiple characters with expressions
-- Detailed props and story elements
+MUST INCLUDE ALL OF THESE:
+- Main character with patterned/detailed clothing
+- Large enchanted tree with textured bark and decorative door
+- 2-3 fairies in different poses
+- 5-6 flowers scattered around
+- 3-4 mushrooms of varying sizes
+- Detailed grass throughout
+- 2 small animals (bunny AND squirrel or bird)
+- Butterflies (2-3)
+- Leaves falling from tree
+- Clouds in sky
+- Path leading to door
+
+BACKGROUND DEPTH - IMPORTANT:
+- Distant forest/trees visible behind main scene
+- Multiple layers: far background, mid-ground, foreground
+- Small details like pebbles, tiny flowers in grass
+- Some elements partially hidden behind others
+
+STYLE: Detailed illustration with lots to color
 """
     },
     "age_9": {
@@ -230,22 +245,34 @@ SCENE COMPOSITION:
         "rules": """
 AGE GROUP: 9 YEARS OLD
 
-RULES:
-- Fine outlines (0.75-1.5px stroke width)
-- 50-65 colourable areas
-- 90% of page filled with content
-- Large themed landmarks included
-- Complex patterns allowed
+HIGHLY DETAILED SCENE - FILL THE PAGE:
+- Character fills 20-25% of page
+- 50-65 colourable areas total
+- 90% of page should have content
 
-SCENE COMPOSITION:
-- Highly detailed scenes with 12-15 elements
-- Professional illustration quality
-- Strong sense of depth and perspective
-- Detailed textures throughout
-- Atmospheric effects (light rays, sparkles, mist)
-- Complex character poses and expressions
-- Rich environmental storytelling
-- Cinematic framing
+MUST INCLUDE ALL OF THESE:
+- Main character with intricate clothing patterns
+- Large enchanted tree with detailed bark texture, roots, branches
+- Ornate magical door with decorative frame
+- 3-4 fairies in various poses around the scene
+- 6-8 flowers of different types (daisies, tulips, roses)
+- 4-5 detailed mushrooms
+- Lush grass with individual blades visible
+- 2-3 small animals (bunny, squirrel, bird, hedgehog)
+- 3-4 butterflies
+- Many falling leaves
+- Decorative clouds
+- Sparkles and stars around magical elements
+- Winding path with stones
+
+BACKGROUND - CRITICAL:
+- Full forest visible in background with multiple trees
+- Distant hills or mountains
+- Clear depth: far, middle, near layers
+- Small fairy houses or structures in distance
+- Vines and climbing plants on tree
+
+STYLE: Professional coloring book quality, rich with detail
 """
     },
     "age_10": {
@@ -254,24 +281,36 @@ SCENE COMPOSITION:
         "rules": """
 AGE GROUP: 10+ YEARS OLD
 
-RULES:
-- Fine thin outlines (0.5-1px stroke width)
-- 70-90 colourable areas
-- Fill ALL empty space
-- Dense and intricate
-- Complex patterns and textures
-- Maximum detail
+MAXIMUM DETAIL - ADULT COLORING BOOK QUALITY:
+- Character fills 15-20% of page
+- 70-90 colourable areas total
+- FILL EVERY SPACE with detail
 
-SCENE COMPOSITION:
-- Adult coloring book quality
-- 15-20 detailed elements filling the scene
-- Sophisticated compositions with dynamic angles
-- Multiple depth layers with atmospheric perspective
-- Intricate textures on all surfaces
-- Detailed character anatomy and expressions
-- Complex environmental storytelling
-- Decorative patterns where appropriate
-- Cinematic, dramatic framing
+MUST INCLUDE ALL OF THESE:
+- Main character with highly detailed clothing (patterns, textures, layers)
+- Massive enchanted tree with intricate bark patterns, visible roots, many branches
+- Highly ornate magical door with scrollwork, gems, decorative hinges
+- 4-5 detailed fairies with intricate wings and clothing
+- 8-10 flowers of many different varieties with detailed petals
+- 5-6 mushrooms with spotted caps and detailed gills
+- Dense grass with individual blades and small clovers
+- 3-4 animals (bunny, squirrel, bird, hedgehog, mouse)
+- 5+ butterflies with wing patterns
+- Many falling leaves with vein details
+- Elaborate clouds with swirling patterns
+- Abundant sparkles, stars, magical swirls
+- Cobblestone or detailed path
+
+BACKGROUND - FILL IT ALL:
+- Dense forest with many trees receding into distance
+- Distant fairy village or castle silhouette
+- Multiple depth layers creating rich perspective
+- Vines, ivy, climbing roses on main tree
+- Small hidden details (tiny doors, insects, berries)
+- Decorative border elements if space allows
+- NO empty white space - fill everything
+
+STYLE: Adult coloring book, intricate mandala-level detail, every inch has something to color
 """
     }
 }
