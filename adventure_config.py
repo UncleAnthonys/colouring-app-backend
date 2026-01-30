@@ -26,20 +26,24 @@ AGE_RULES = {
         "rules": """
 AGE GROUP: UNDER 3 (TODDLER)
 
-STYLE: BLOB/KAWAII - everything is rounded chunky shapes
-- Character should be LARGE and CHUNKY - fills 70% of page
-- VERY BOLD thick outlines throughout
-- Round, simple BLOB shapes - no fine details
-- Total of about 8-12 things to color in entire image
+STYLE: BLOB/KAWAII - super chunky rounded shapes
+- Character is HUGE - fills 70-80% of page
+- VERY BOLD thick outlines
+- Everything is a simple BLOB shape
 
-SCENE ALLOWED:
-- Character + tree with door + 1-2 simple elements (flower, mushroom)
+SCENE: CHARACTER + ONE OBJECT ONLY
+- Draw the character as a big chunky blob
+- Add ONLY the ONE most important story object (the magic tree with door)
 - Simple ground line
-- Big simple sun or cloud okay
-- NO fairies (too detailed for toddlers)
-- NO tiny details, NO patterns
+- NOTHING ELSE - no sun, no clouds, no flowers, no mushrooms, no fairies, no stars
+- Just: CHARACTER + TREE WITH DOOR + GROUND
 
-BLOB STYLE MEANS: Chunky, rounded, kawaii-style shapes like a rubber stamp
+TOTAL COLORABLE AREAS: 5-8 maximum
+- The character (counts as a few areas)
+- The tree and door (counts as 2-3 areas)
+- That's it!
+
+BANNED: Multiple objects, flowers, mushrooms, fairies, sun, clouds, stars, patterns, details
 """
     },
     "age_3": {
