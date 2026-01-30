@@ -205,6 +205,8 @@ BACKGROUND DEPTH:
 - Some elements overlap others
 
 STYLE: Detailed children's book illustration
+
+⚠️ CHARACTER BODY: Keep structural lines (dress segments, buttons) but NO decorative patterns/swirls on the character. Background gets detailed, character stays clean.
 """
     },
     "age_8": {
@@ -237,6 +239,8 @@ BACKGROUND DEPTH - IMPORTANT:
 - Some elements partially hidden behind others
 
 STYLE: Detailed illustration with lots to color
+
+⚠️ CHARACTER BODY: Keep structural lines (dress segments, buttons) but NO decorative patterns/swirls/mandalas on the character's body. Intricate details go on BACKGROUND only.
 """
     },
     "age_9": {
@@ -273,6 +277,8 @@ BACKGROUND - CRITICAL:
 - Vines and climbing plants on tree
 
 STYLE: Professional coloring book quality, rich with detail
+
+⚠️ CHARACTER BODY: Keep structural lines but NO decorative patterns on the character. All the intricate mandala-style details go on trees, flowers, borders - NOT on the character's body or clothes.
 """
     },
     "age_10": {
@@ -311,6 +317,8 @@ BACKGROUND - FILL IT ALL:
 - NO empty white space - fill everything
 
 STYLE: Adult coloring book, intricate mandala-level detail, every inch has something to color
+
+⚠️ CHARACTER BODY: Keep structural lines (segments, buttons) but absolutely NO decorative swirls/patterns/mandalas on the character. The adult-level intricate details fill the BACKGROUND, trees, flowers, sky, borders - the character remains clean with simple structural outlines only.
 """
     }
 }

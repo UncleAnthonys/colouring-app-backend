@@ -273,6 +273,14 @@ Use the reference image for SHAPE AND FORM ONLY - completely ignore all colors:
 - Distinctive features (number of eyes, horns, fur texture, etc.)
 - Clothing style and accessories (but NOT their colors)
 
+⚠️ CRITICAL - CHARACTER BODY RULES:
+- Keep the character's STRUCTURAL LINES from the reference (e.g., dress segments, buttons, hair sections)
+- These structural lines define colorable areas - KEEP THEM
+- But DO NOT ADD decorative patterns, swirls, or ornamental designs to the character
+- NO spirals, NO mandala patterns, NO decorative flourishes ON the character's body/clothes
+- The character's body sections should be PLAIN WHITE inside, ready to color
+- BACKGROUND can have intricate details at older ages, but CHARACTER stays structurally simple
+
 {emotion_guidance}
 
 STORY SCENE:
@@ -292,7 +300,15 @@ Convert everything to BLACK OUTLINES on WHITE:
 - Blue dress section → WHITE area with BLACK outline  
 - Green dress section → WHITE area with BLACK outline
 - Yellow hair → WHITE area with BLACK outline strokes
+- Blue nose → WHITE area with BLACK outline (NOT blue!)
 - ALL colors → WHITE areas with BLACK outlines
+
+⚠️ ABSOLUTELY NO COLOR OR GREY ANYWHERE:
+- No blue tints on nose, legs, or any body part
+- No grey shading in trees, sky, or background
+- No gradient fills anywhere
+- Every single area must be PURE WHITE (#FFFFFF) inside
+- The ONLY non-white pixels are the BLACK lines (#000000)
 
 **MONOCHROME MEANS:**
 - Only 2 values: BLACK (#000000) and WHITE (#FFFFFF)
