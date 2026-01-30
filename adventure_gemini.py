@@ -387,6 +387,8 @@ FINAL CHECK: Ensure every single pixel is either pure black (#000000) or pure wh
             contents=contents,
             config=types.GenerateContentConfig(
                 response_modalities=['IMAGE', 'TEXT'],
+                temperature=0.2,  # Lower temp for more deterministic, less creative drifting
+                seed=42,  # Fixed seed for consistency (different from reveal)
                 image_config=types.ImageConfig(
                     aspect_ratio='3:4'  # Portrait for A4-style, standard resolution
                 )
