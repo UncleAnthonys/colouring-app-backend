@@ -24,28 +24,22 @@ AGE_RULES = {
         "age": "Under 3 years",
         "colourable_areas": "8-10",
         "rules": """
-AGE GROUP: UNDER 3 (BLOB STYLE)
+AGE GROUP: UNDER 3 (TODDLER)
 
-CRITICAL RULES:
-- EXTREMELY THICK outlines (6-8px stroke width)
-- BLOB/KAWAII style - everything is rounded chunky shapes
-- Maximum 5-7 colourable areas in ENTIRE image
-- Face: just 2 dots for eyes, simple curve smile
-- Character fills 80-90% of the page
-- Think "baby's very first coloring page"
+THIS IS FOR TODDLERS - KEEP IT EXTREMELY SIMPLE:
+- Character should be LARGE and CHUNKY - fills 70% of page
+- VERY BOLD thick outlines throughout
+- Round, simple shapes - no fine details
+- Total of about 8-12 things to color in entire image
 
-SCENE: MINIMAL
-- Pure white OR just a simple ground line
-- Maximum 1 story element (just the magic door OR just 1 mushroom)
-- NO fairies, NO detailed trees, NO multiple objects
-- The character IS the scene
+SCENE ALLOWED:
+- Character + tree with door + 1-2 simple elements (flower, mushroom)
+- Simple ground line
+- Big simple sun or cloud okay
+- NO fairies (too detailed for toddlers)
+- NO tiny details, NO patterns
 
-STYLE:
-- Like a rubber stamp or cookie cutter shape
-- Toddler-friendly chunky blob shapes
-- Could be colored with a fist holding a crayon
-
-BANNED: Multiple objects, thin lines, details, background scenery, patterns
+STYLE: Bold, chunky, simple shapes like a preschool coloring book
 """
     },
     "age_3": {
@@ -54,21 +48,19 @@ BANNED: Multiple objects, thin lines, details, background scenery, patterns
         "rules": """
 AGE GROUP: 3 YEARS OLD
 
-CRITICAL RULES:
-- EXTREMELY THICK outlines (5-6px stroke width)
-- Blob/kawaii style - super rounded chunky shapes
-- Maximum 8-10 colourable areas in ENTIRE image
-- Face: dots for eyes, simple curve for mouth
-- Character fills 70-80% of the page
-- Think "baby's first coloring book"
+SIMPLE PRESCHOOL STYLE:
+- Character should be LARGE - fills 60% of page
+- Bold thick outlines throughout
+- Simple rounded shapes
+- Total of about 12-15 things to color in entire image
 
-SIMPLE SCENE:
-- Add 1-2 VERY SIMPLE large shapes (big sun, big cloud, or big mushroom)
-- Ground line is okay
-- Keep background elements HUGE and SIMPLE - same blob style as character
-- Each element = 1 simple colourable area
+SCENE ALLOWED:
+- Character + tree with door + 2-3 simple elements
+- Simple flowers, big mushroom, sun, clouds
+- 1 simple fairy okay (but keep fairy simple/cute)
+- Ground with simple grass
 
-BANNED: Thin lines, patterns, small details, multiple objects, complex shapes
+STYLE: Like a 3-year-old's coloring book - bold and simple
 """
     },
     "age_4": {
@@ -77,20 +69,19 @@ BANNED: Thin lines, patterns, small details, multiple objects, complex shapes
         "rules": """
 AGE GROUP: 4 YEARS OLD
 
-RULES:
-- VERY THICK outlines (4-5px stroke width)
-- Maximum 10-14 colourable areas
-- Simple blob-like shapes
-- Face: dots for eyes, simple smile
-- Character fills 50-60% of page
+PRESCHOOL/KINDERGARTEN STYLE:
+- Character fills about 50% of page
+- Bold outlines
+- Simple but recognizable shapes
+- Total of about 15-20 things to color
 
-SIMPLE SCENE ELEMENTS:
-- Add 2-3 SIMPLE large shapes for setting (cloud, sun, tree, flower, mushroom)
-- Ground line with simple grass bumps
-- Keep all elements LARGE and ROUNDED
-- Scene elements use same thick lines as character
+SCENE ELEMENTS:
+- Character + tree with door + 3-4 background elements
+- Flowers, mushrooms, sun, clouds, simple fairies
+- Simple ground with grass tufts
+- A small animal (bunny, bird) okay
 
-BANNED: Patterns, small details, thin lines, complex shapes
+STYLE: Simple and clear, easy for a 4-year-old to color
 """
     },
     "age_5": {
@@ -99,21 +90,20 @@ BANNED: Patterns, small details, thin lines, complex shapes
         "rules": """
 AGE GROUP: 5 YEARS OLD
 
-RULES:
-- THICK outlines (3-4px stroke width)
-- Maximum 15-20 colourable areas
-- Simple rounded figures
-- Basic clothing shapes (no patterns)
-- Character fills 45-55% of page
+KINDERGARTEN STYLE:
+- Character fills about 45% of page
+- Medium-bold outlines
+- Clear recognizable shapes with some detail
+- Total of about 20-25 things to color
 
 SCENE ELEMENTS:
-- Add 3-4 simple background elements related to the story
-- Simple trees, flowers, clouds, sun, basic mushrooms
-- Ground with simple grass or path
-- Elements should be simple shapes but recognizable
-- Good spacing between all elements
+- Character + tree with door + 4-5 background elements
+- Multiple flowers, mushrooms, fairies
+- Sun, clouds, leaves falling
+- Small animals (bunny, squirrel, bird)
+- Path or ground with grass
 
-BANNED: Patterns, tiny details, complex overlapping
+STYLE: Fun detailed scene but still easy to color
 """
     },
     "age_6": {
