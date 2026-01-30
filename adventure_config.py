@@ -163,7 +163,7 @@ RULES:
 - 25-30 colourable areas
 - Full themed background
 - Character as shown in reference, expressive faces
-- Simple patterns on clothing okay
+- Character as shown in reference (no added patterns)
 - Character fills 30-40% of page
 
 SCENE COMPOSITION:
@@ -255,7 +255,7 @@ HIGHLY DETAILED SCENE - FILL THE PAGE:
 - 90% of page should have content
 
 MUST INCLUDE ALL OF THESE:
-- Main character with intricate clothing patterns
+- Main character EXACTLY as shown in reference (no added clothing/patterns)
 - Large enchanted tree with detailed bark texture, roots, branches
 - Ornate magical door with decorative frame
 - 3-4 fairies in various poses around the scene
@@ -293,7 +293,7 @@ MAXIMUM DETAIL - ADULT COLORING BOOK QUALITY:
 - FILL EVERY SPACE with detail
 
 MUST INCLUDE ALL OF THESE:
-- Main character with highly detailed clothing (patterns, textures, layers)
+- Main character EXACTLY as shown in reference (no added clothing/patterns)
 - Massive enchanted tree with intricate bark patterns, visible roots, many branches
 - Highly ornate magical door with scrollwork, gems, decorative hinges
 - 4-5 detailed fairies with intricate wings and clothing
