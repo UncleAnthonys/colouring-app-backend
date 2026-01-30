@@ -310,6 +310,14 @@ Convert everything to BLACK OUTLINES on WHITE:
 - Every single area must be PURE WHITE (#FFFFFF) inside
 - The ONLY non-white pixels are the BLACK lines (#000000)
 
+🎯 CRITICAL - PRESERVE CHARACTER'S EXACT SHAPE:
+- Copy the character's EXACT body shape from the reference (rectangular, round, blob, etc.)
+- If reference shows a RECTANGULAR/SQUARE body → draw RECTANGULAR/SQUARE body
+- If reference shows a ROUND body → draw ROUND body
+- DO NOT change the character's body shape into a dress or human-like form
+- The character's distinctive body structure MUST match the reference exactly
+- Only convert COLORS to white - keep all SHAPES identical
+
 **MONOCHROME MEANS:**
 - Only 2 values: BLACK (#000000) and WHITE (#FFFFFF)
 - No RGB colors at all - not even pale/light versions
@@ -342,20 +350,10 @@ This is a COLORING BOOK PAGE - children color it themselves.'''
         
         # Build content with reveal image if provided
         if reveal_image_b64:
-            # Convert reveal to grayscale to prevent color bleeding
-            from PIL import Image
-            import io as pil_io
-            reveal_bytes = base64.b64decode(reveal_image_b64)
-            img = Image.open(pil_io.BytesIO(reveal_bytes))
-            gray_img = img.convert('L').convert('RGB')  # Grayscale then back to RGB
-            gray_buffer = pil_io.BytesIO()
-            gray_img.save(gray_buffer, format='PNG')
-            gray_bytes = gray_buffer.getvalue()
-            
             contents = [
                 full_prompt,
                 types.Part.from_bytes(
-                    data=gray_bytes,
+                    data=base64.b64decode(reveal_image_b64),
                     mime_type="image/png"
                 )
             ]
