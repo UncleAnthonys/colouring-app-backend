@@ -356,22 +356,24 @@ FINAL CHECK: Ensure every single pixel is either pure black (#000000) or pure wh
         
         # Build content with reveal image if provided
         if reveal_image_b64:
-            # Desaturate reveal image to prevent color bleeding into coloring page
-            # Keeps shape/detail but removes color information
-            from PIL import Image
+            # Desaturate + sharpen reveal image to prevent color bleeding
+            # Sharpening helps Gemini see character features more clearly
+            from PIL import Image, ImageFilter
             import io as pil_io
             reveal_bytes = base64.b64decode(reveal_image_b64)
             img = Image.open(pil_io.BytesIO(reveal_bytes))
-            # Convert to grayscale then back to RGB (removes color, keeps detail)
-            desaturated = img.convert('L').convert('RGB')
+            # Convert to grayscale, sharpen, then back to RGB
+            gray = img.convert('L')
+            sharpened = gray.filter(ImageFilter.SHARPEN)
+            sharpened_rgb = sharpened.convert('RGB')
             buffer = pil_io.BytesIO()
-            desaturated.save(buffer, format='PNG')
-            desaturated_bytes = buffer.getvalue()
+            sharpened_rgb.save(buffer, format='PNG')
+            sharpened_bytes = buffer.getvalue()
             
             contents = [
                 full_prompt,
                 types.Part.from_bytes(
-                    data=desaturated_bytes,
+                    data=sharpened_bytes,
                     mime_type="image/png"
                 )
             ]
