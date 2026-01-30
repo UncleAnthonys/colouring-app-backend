@@ -24,26 +24,46 @@ AGE_RULES = {
         "age": "Under 3 years",
         "colourable_areas": "8-10",
         "rules": """
-AGE GROUP: UNDER 3 (TODDLER)
+AGE GROUP: UNDER 3 (TODDLER) - EXTREMELY SIMPLE
 
-STYLE: BLOB/KAWAII - super chunky rounded shapes
-- Character is HUGE - fills 70-80% of page
-- VERY BOLD thick outlines
-- Everything is a simple BLOB shape
+⚠️ THIS IS FOR BABIES/TODDLERS - MAXIMUM SIMPLICITY ⚠️
 
-SCENE: CHARACTER + ONE OBJECT ONLY
-- Draw the character as a big chunky blob
-- Add ONLY the ONE most important story object (the magic tree with door)
-- Simple ground line
-- NOTHING ELSE - no sun, no clouds, no flowers, no mushrooms, no fairies, no stars
-- Just: CHARACTER + TREE WITH DOOR + GROUND
+DRAW ONLY THESE 3 THINGS:
+1. CHARACTER - as a big chunky BLOB shape (fills 60% of page)
+2. TREE WITH DOOR - simple blob tree shape
+3. GROUND - just a simple curved line
 
-TOTAL COLORABLE AREAS: 5-8 maximum
-- The character (counts as a few areas)
-- The tree and door (counts as 2-3 areas)
-- That's it!
+THAT IS ALL. NOTHING ELSE.
 
-BANNED: Multiple objects, flowers, mushrooms, fairies, sun, clouds, stars, patterns, details
+STYLE REQUIREMENTS:
+- BLOB shapes only - like a rubber stamp or cookie cutter
+- Super thick bold outlines
+- Character is a simple rounded blob body
+- Tree is a simple blob shape with basic door
+
+DO NOT DRAW ANY OF THESE:
+❌ NO flowers
+❌ NO mushrooms  
+❌ NO fairies
+❌ NO butterflies
+❌ NO birds
+❌ NO sun
+❌ NO clouds
+❌ NO leaves
+❌ NO stars
+❌ NO sparkles
+❌ NO grass details
+❌ NO rabbits or animals
+❌ NO multiple objects
+
+TOTAL AREAS TO COLOR: 5-6 only
+- Character body (1-2 areas)
+- Character head/face (1 area)
+- Tree trunk (1 area)
+- Tree top (1 area)  
+- Door (1 area)
+
+If you add flowers, fairies, mushrooms, or any extra objects, you have FAILED this task.
 """
     },
     "age_3": {
