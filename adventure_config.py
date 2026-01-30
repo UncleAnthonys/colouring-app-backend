@@ -27,21 +27,25 @@ AGE_RULES = {
 AGE GROUP: UNDER 3 (BLOB STYLE)
 
 CRITICAL RULES:
-- EXTREMELY THICK outlines (5-6px stroke width)
-- Blob/kawaii style - super rounded and chunky shapes
-- Maximum 8-10 colourable areas in ENTIRE image
-- Face: just dots for eyes, simple curve for mouth
-- Character fills 60-70% of the page
-- NO small details whatsoever
-- Think "baby's first coloring book"
+- EXTREMELY THICK outlines (6-8px stroke width)
+- BLOB/KAWAII style - everything is rounded chunky shapes
+- Maximum 5-7 colourable areas in ENTIRE image
+- Face: just 2 dots for eyes, simple curve smile
+- Character fills 80-90% of the page
+- Think "baby's very first coloring page"
 
-SIMPLE SCENE ELEMENTS (because this is a STORY coloring book):
-- Add 2-3 VERY SIMPLE large shapes around character (big cloud, big sun, big flower)
-- Ground line is okay
-- Keep background elements HUGE and SIMPLE - same blob style as character
-- Each background element = 1 colourable area
+SCENE: MINIMAL
+- Pure white OR just a simple ground line
+- Maximum 1 story element (just the magic door OR just 1 mushroom)
+- NO fairies, NO detailed trees, NO multiple objects
+- The character IS the scene
 
-BANNED: Thin lines, patterns, small details, complex shapes
+STYLE:
+- Like a rubber stamp or cookie cutter shape
+- Toddler-friendly chunky blob shapes
+- Could be colored with a fist holding a crayon
+
+BANNED: Multiple objects, thin lines, details, background scenery, patterns
 """
     },
     "age_3": {
@@ -50,20 +54,21 @@ BANNED: Thin lines, patterns, small details, complex shapes
         "rules": """
 AGE GROUP: 3 YEARS OLD
 
-RULES:
-- VERY THICK outlines (4-5px stroke width)
-- Maximum 10-12 colourable areas
-- Simple blob-like shapes
-- Face: dots for eyes, simple smile
-- Character fills 50-60% of page
+CRITICAL RULES:
+- EXTREMELY THICK outlines (5-6px stroke width)
+- Blob/kawaii style - super rounded chunky shapes
+- Maximum 8-10 colourable areas in ENTIRE image
+- Face: dots for eyes, simple curve for mouth
+- Character fills 70-80% of the page
+- Think "baby's first coloring book"
 
-SIMPLE SCENE ELEMENTS (because this is a STORY coloring book):
-- Add 3-4 SIMPLE large shapes for setting (cloud, sun, tree, flower, mushroom)
-- Ground line with simple grass bumps
-- Keep all elements LARGE and ROUNDED
-- Scene elements use same thick lines as character
+SIMPLE SCENE:
+- Add 1-2 VERY SIMPLE large shapes (big sun, big cloud, or big mushroom)
+- Ground line is okay
+- Keep background elements HUGE and SIMPLE - same blob style as character
+- Each element = 1 simple colourable area
 
-BANNED: Patterns, small details, thin lines, complex shapes
+BANNED: Thin lines, patterns, small details, multiple objects, complex shapes
 """
     },
     "age_4": {
@@ -73,20 +78,19 @@ BANNED: Patterns, small details, thin lines, complex shapes
 AGE GROUP: 4 YEARS OLD
 
 RULES:
-- THICK outlines (3-4px stroke width)
-- Maximum 15-18 colourable areas
-- Simple rounded figures
-- Basic clothing shapes (no patterns)
-- Character fills 45-55% of page
+- VERY THICK outlines (4-5px stroke width)
+- Maximum 10-14 colourable areas
+- Simple blob-like shapes
+- Face: dots for eyes, simple smile
+- Character fills 50-60% of page
 
-SCENE ELEMENTS (because this is a STORY coloring book):
-- Add 4-5 simple background elements related to the story
-- Simple trees, flowers, clouds, sun, basic houses/mushrooms
-- Ground with simple grass or path
-- Elements should be simple shapes but recognizable
-- Good spacing between all elements
+SIMPLE SCENE ELEMENTS:
+- Add 2-3 SIMPLE large shapes for setting (cloud, sun, tree, flower, mushroom)
+- Ground line with simple grass bumps
+- Keep all elements LARGE and ROUNDED
+- Scene elements use same thick lines as character
 
-BANNED: Patterns, tiny details, complex overlapping
+BANNED: Patterns, small details, thin lines, complex shapes
 """
     },
     "age_5": {
@@ -96,21 +100,20 @@ BANNED: Patterns, tiny details, complex overlapping
 AGE GROUP: 5 YEARS OLD
 
 RULES:
-- Medium-thick outlines (2.5-3.5px stroke width)
-- Maximum 20-25 colourable areas
-- Simple but recognizable figures
-- Basic expressions allowed
-- Character fills 35-45% of page
+- THICK outlines (3-4px stroke width)
+- Maximum 15-20 colourable areas
+- Simple rounded figures
+- Basic clothing shapes (no patterns)
+- Character fills 45-55% of page
 
-SCENE ELEMENTS (because this is a STORY coloring book):
-- Add 5-6 background elements that tell the story
-- Trees with simple branches, flowers with petals, clouds, sun/moon
-- Simple buildings, mushroom houses, or setting-appropriate structures
-- Ground with texture (grass tufts, stones, path)
-- Can include 1 simple secondary character or animal
-- Elements can be adjacent but not overlapping
+SCENE ELEMENTS:
+- Add 3-4 simple background elements related to the story
+- Simple trees, flowers, clouds, sun, basic mushrooms
+- Ground with simple grass or path
+- Elements should be simple shapes but recognizable
+- Good spacing between all elements
 
-BANNED: Complex patterns, intricate details, overlapping elements
+BANNED: Patterns, tiny details, complex overlapping
 """
     },
     "age_6": {
