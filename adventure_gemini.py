@@ -277,13 +277,20 @@ Use the reference image for SHAPE AND FORM ONLY - completely ignore all colors:
 - Distinctive features (number of eyes, horns, fur texture, etc.)
 - Clothing style and accessories (but NOT their colors)
 
-⚠️ CRITICAL - CHARACTER BODY RULES:
-- Keep the character's STRUCTURAL LINES from the reference (e.g., dress segments, buttons, hair sections)
-- These structural lines define colorable areas - KEEP THEM
-- But DO NOT ADD decorative patterns, swirls, or ornamental designs to the character
-- NO spirals, NO mandala patterns, NO decorative flourishes ON the character's body/clothes
-- The character's body sections should be PLAIN WHITE inside, ready to color
-- BACKGROUND can have intricate details at older ages, but CHARACTER stays structurally simple
+🚨 CRITICAL - DO NOT ADD OR REMOVE BODY PARTS:
+- Count the arms in the reference - draw EXACTLY that many arms (usually 2)
+- Count the legs in the reference - draw EXACTLY that many legs (usually 2)
+- DO NOT add extra arms, tails, horns, wings, or appendages that aren't in the reference
+- DO NOT add stripes or patterns to the body that aren't in the reference
+- The character has a SPECIFIC anatomy - copy it EXACTLY
+
+⚠️ CHARACTER BODY RULES:
+- Keep STRUCTURAL LINES from reference (dress segments, buttons, hair sections)
+- These define colorable areas - KEEP THEM
+- But DO NOT ADD decorative patterns, swirls, or stripes to the character's body
+- NO spirals, NO mandala patterns, NO decorative flourishes ON the character
+- Character's body sections should be PLAIN WHITE inside, ready to color
+- BACKGROUND can have intricate details, but CHARACTER stays structurally simple
 
 {emotion_guidance}
 
