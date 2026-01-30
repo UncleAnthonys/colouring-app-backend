@@ -365,12 +365,13 @@ Tints: NONE
 
 This is a COLORING BOOK PAGE - children color it themselves.
 
-FINAL CHECK - CRITICAL RULES:
-1. Every pixel must be pure black (#000000) OR pure white (#FFFFFF) - nothing else
-2. NO colors from reference - no blue, no orange, no any color
-3. NO SOLID BLACK FILLS - clothing, hair, skin must be WHITE with black OUTLINES only
-4. Black is ONLY for outlines/lines, NEVER for filling areas
-5. All enclosed areas must be empty white space for children to color in'''
+FINAL CHECK - IRONCLAD RULES:
+Style: Technical 1-bit vector line art.
+Appearance: Ultra-thin #000000 black outlines on #FFFFFF pure white background.
+STRICTURE: Zero solid black fills. All internal areas must be 100% transparent white.
+The character must appear as a wireframe hollow shell.
+No grayscale, no shading, no volume, no fills.
+Every enclosed area = empty white space for children to color.'''
         
         # Build content with reveal image if provided
         if reveal_image_b64:
