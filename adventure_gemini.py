@@ -369,17 +369,14 @@ FINAL CHECK: Ensure every single pixel is either pure black (#000000) or pure wh
         
         # Build content with reveal image if provided
         if reveal_image_b64:
-            # Convert reveal to binary B&W threshold - removes all grey data
+            # Convert reveal to grayscale to prevent color leaking
             from PIL import Image
             import io as pil_io
             reveal_bytes = base64.b64decode(reveal_image_b64)
             img = Image.open(pil_io.BytesIO(reveal_bytes))
-            # Convert to grayscale then threshold to pure B&W
-            gray = img.convert('L')
-            binary = gray.point(lambda x: 255 if x > 128 else 0)  # Pure black or white
-            binary_rgb = binary.convert('RGB')
+            gray = img.convert('L').convert('RGB')  # Grayscale but keep RGB format
             buffer = pil_io.BytesIO()
-            binary_rgb.save(buffer, format='PNG')
+            gray.save(buffer, format='PNG')
             gray_bytes = buffer.getvalue()
             
             contents = [
