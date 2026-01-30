@@ -26,10 +26,10 @@ AGE_RULES = {
         "rules": """
 AGE GROUP: UNDER 3 (TODDLER)
 
-THIS IS FOR TODDLERS - KEEP IT EXTREMELY SIMPLE:
+STYLE: BLOB/KAWAII - everything is rounded chunky shapes
 - Character should be LARGE and CHUNKY - fills 70% of page
 - VERY BOLD thick outlines throughout
-- Round, simple shapes - no fine details
+- Round, simple BLOB shapes - no fine details
 - Total of about 8-12 things to color in entire image
 
 SCENE ALLOWED:
@@ -39,7 +39,7 @@ SCENE ALLOWED:
 - NO fairies (too detailed for toddlers)
 - NO tiny details, NO patterns
 
-STYLE: Bold, chunky, simple shapes like a preschool coloring book
+BLOB STYLE MEANS: Chunky, rounded, kawaii-style shapes like a rubber stamp
 """
     },
     "age_3": {
@@ -48,10 +48,10 @@ STYLE: Bold, chunky, simple shapes like a preschool coloring book
         "rules": """
 AGE GROUP: 3 YEARS OLD
 
-SIMPLE PRESCHOOL STYLE:
+STYLE: BLOB/KAWAII - super rounded chunky shapes
 - Character should be LARGE - fills 60% of page
 - Bold thick outlines throughout
-- Simple rounded shapes
+- Simple rounded BLOB shapes
 - Total of about 12-15 things to color in entire image
 
 SCENE ALLOWED:
@@ -60,7 +60,7 @@ SCENE ALLOWED:
 - 1 simple fairy okay (but keep fairy simple/cute)
 - Ground with simple grass
 
-STYLE: Like a 3-year-old's coloring book - bold and simple
+BLOB STYLE MEANS: Chunky, rounded, kawaii-style - like a cute preschool coloring book
 """
     },
     "age_4": {
@@ -69,10 +69,10 @@ STYLE: Like a 3-year-old's coloring book - bold and simple
         "rules": """
 AGE GROUP: 4 YEARS OLD
 
-PRESCHOOL/KINDERGARTEN STYLE:
+STYLE: Rounded simple shapes (transitioning from blob to more defined)
 - Character fills about 50% of page
 - Bold outlines
-- Simple but recognizable shapes
+- Simple but recognizable rounded shapes
 - Total of about 15-20 things to color
 
 SCENE ELEMENTS:
@@ -81,7 +81,7 @@ SCENE ELEMENTS:
 - Simple ground with grass tufts
 - A small animal (bunny, bird) okay
 
-STYLE: Simple and clear, easy for a 4-year-old to color
+Keep shapes rounded and friendly - still quite simple
 """
     },
     "age_5": {
