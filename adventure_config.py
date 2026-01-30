@@ -162,7 +162,7 @@ RULES:
 - Medium outlines (2-3px stroke width)
 - 25-30 colourable areas
 - Full themed background
-- Detailed costumes, expressive faces
+- Character as shown in reference, expressive faces
 - Simple patterns on clothing okay
 - Character fills 30-40% of page
 
@@ -188,7 +188,7 @@ DETAILED SCENE WITH DEPTH:
 - 30-35 colourable areas total
 
 MUST INCLUDE ALL OF THESE:
-- Main character with detailed clothing
+- Main character EXACTLY as shown in reference (no added clothing/patterns)
 - The enchanted tree with decorative door
 - 2 fairies with wings
 - 3-4 flowers of different sizes
@@ -220,7 +220,7 @@ RICH DETAILED SCENE:
 - 40-45 colourable areas total
 
 MUST INCLUDE ALL OF THESE:
-- Main character with patterned/detailed clothing
+- Main character EXACTLY as shown in reference (no added clothing/patterns)
 - Large enchanted tree with textured bark and decorative door
 - 2-3 fairies in different poses
 - 5-6 flowers scattered around
