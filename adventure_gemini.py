@@ -261,16 +261,17 @@ But the EMOTION and POSE must match this scene: {character_emotion}
         # Build prompt
         full_prompt = f'''Create a COLORING PAGE for children.
 
-╔══════════════════════════════════════════════════════════════════════════════╗
-║          COLORING BOOK PAGE - BLACK LINES ON WHITE ONLY                      ║
-║                    ***  ZERO COLOR ALLOWED  ***                              ║
-╚══════════════════════════════════════════════════════════════════════════════╝
+*** CRITICAL: MONOCHROME OUTPUT ONLY ***
+This MUST be a pure BLACK and WHITE image.
+- BLACK lines (#000000) 
+- WHITE background and fill areas (#FFFFFF)
+- ABSOLUTELY NOTHING ELSE
 
 CHARACTER: {character_name}
-Use the reference image for the character PHYSICAL APPEARANCE ONLY:
+Use the reference image for SHAPE AND FORM ONLY - completely ignore all colors:
 - Body shape, proportions, and size
 - Distinctive features (number of eyes, horns, fur texture, etc.)
-- Clothing or accessories
+- Clothing style and accessories (but NOT their colors)
 
 {emotion_guidance}
 
@@ -281,50 +282,47 @@ AGE-APPROPRIATE COMPLEXITY:
 {age_rules}
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║                        CRITICAL OUTPUT RULES                                  ║
+║  ABSOLUTE REQUIREMENT: 100% MONOCHROME - BLACK INK ON WHITE PAPER            ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
-**RULE 1: ABSOLUTELY ZERO COLOR**
-- Output ONLY black lines (#000000) on pure white background (#FFFFFF)
-- NO blue, NO pink, NO yellow, NO green, NO ANY color whatsoever
-- NO light blue, NO pale pink, NO cream, NO beige - ONLY pure white
-- The ONLY pixels allowed are BLACK (lines) and WHITE (background/fill areas)
-- If there is ANY color in the output, you have FAILED
+**THE REFERENCE IMAGE HAS COLORS - YOU MUST IGNORE THEM COMPLETELY**
+The reference shows a colorful character. DO NOT reproduce those colors.
+Convert everything to BLACK OUTLINES on WHITE:
+- Pink dress section → WHITE area with BLACK outline
+- Blue dress section → WHITE area with BLACK outline  
+- Green dress section → WHITE area with BLACK outline
+- Yellow hair → WHITE area with BLACK outline strokes
+- ALL colors → WHITE areas with BLACK outlines
 
-**RULE 2: MAXIMIZE COLORABLE OBJECTS**
-- Include MANY separate objects for children to color
-- Add extra elements: butterflies, birds, squirrels, rabbits, flowers, mushrooms
-- More fairies, more sparkles as enclosed shapes, more leaves
-- Each object should be a distinct enclosed shape
-- Think: "What else can a child color in this scene?"
-- Fill empty space with additional colorable elements
+**MONOCHROME MEANS:**
+- Only 2 values: BLACK (#000000) and WHITE (#FFFFFF)
+- No RGB colors at all - not even pale/light versions
+- No pink, no blue, no green, no yellow, no red, no orange
+- No grey, no cream, no beige, no any tint
+- Like a photocopied line drawing
 
-**RULE 3: ALL AREAS WHITE INSIDE**
-- Every shape must be WHITE inside with BLACK outline
-- Character clothes = WHITE (child colors them)
-- Character hair = WHITE sections with BLACK lines showing texture
-- Character skin = WHITE (child colors it)
-- Sky = WHITE, Ground = WHITE, Everything = WHITE inside
-- NO shading, NO grey, NO gradients, NO fills of any kind
+**EVERY AREA IS WHITE:**
+- Character's dress = WHITE (all sections)
+- Character's hair = WHITE  
+- Character's skin = WHITE
+- All clothing = WHITE
+- All background = WHITE
+- Children will add colors with their crayons
 
-**RULE 4: ENCLOSED SHAPES**
-- Every element must have fully closed outlines
-- No gaps in lines - children need to color inside the lines
-- Each flower, each leaf, each mushroom = separate enclosed shape
+**INCLUDE MANY COLORABLE OBJECTS:**
+- Butterflies, birds, squirrels, rabbits
+- Flowers, mushrooms, leaves
+- Fairies, sparkles as enclosed shapes
+- Fill the scene with things to color
 
-*** FAILURE CONDITIONS ***
-❌ ANY color (blue, pink, yellow, etc.) = FAILURE
-❌ ANY grey or shading = FAILURE  
-❌ ANY filled areas = FAILURE
-❌ NOT ENOUGH objects to color = FAILURE
+*** OUTPUT SPECIFICATION ***
+Format: Pure black line art on white background
+Colors allowed: BLACK and WHITE only
+Shading: NONE
+Gradients: NONE
+Tints: NONE
 
-*** SUCCESS CRITERIA ***
-✓ 100% black lines on 100% white background
-✓ Lots of distinct objects/shapes to color
-✓ All shapes fully enclosed
-✓ Rich scene with many colorable elements
-
-OUTPUT: Pure BLACK outlines on pure WHITE. No color. No grey. No shading. Maximum colorable objects.'''
+This is a COLORING BOOK PAGE - children color it themselves.'''
         
         # Build content with reveal image if provided
         if reveal_image_b64:
