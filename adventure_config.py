@@ -70,21 +70,43 @@ If you add flowers, fairies, mushrooms, or any extra objects, you have FAILED th
         "age": "3 years",
         "colourable_areas": "10-12",
         "rules": """
-AGE GROUP: 3 YEARS OLD
+AGE GROUP: 3 YEARS OLD - STILL VERY SIMPLE
 
-STYLE: BLOB/KAWAII - super rounded chunky shapes
-- Character should be LARGE - fills 60% of page
-- Bold thick outlines throughout
-- Simple rounded BLOB shapes
-- Total of about 12-15 things to color in entire image
+⚠️ THIS IS FOR 3 YEAR OLDS - KEEP IT BLOB STYLE ⚠️
 
-SCENE ALLOWED:
-- Character + tree with door + 2-3 simple elements
-- Simple flowers, big mushroom, sun, clouds
-- 1 simple fairy okay (but keep fairy simple/cute)
-- Ground with simple grass
+DRAW ONLY THESE THINGS:
+1. CHARACTER - big chunky BLOB shape (fills 50-60% of page)
+2. TREE WITH DOOR - simple blob tree
+3. GROUND - simple line
+4. ONE simple extra: a big sun OR a big mushroom OR a big flower
 
-BLOB STYLE MEANS: Chunky, rounded, kawaii-style - like a cute preschool coloring book
+THAT IS ALL. MAXIMUM 4 MAIN ELEMENTS.
+
+STYLE REQUIREMENTS:
+- BLOB/KAWAII shapes - everything chunky and rounded
+- Bold thick outlines
+- Simple shapes like cookie cutters
+- NO intricate details on the door
+- NO patterns or swirls
+
+DO NOT DRAW:
+❌ NO fairies
+❌ NO butterflies
+❌ NO birds
+❌ NO leaves falling
+❌ NO multiple flowers (1 big one max)
+❌ NO multiple mushrooms (1 big one max)
+❌ NO grass details/tufts
+❌ NO sparkles or stars
+❌ NO detailed door decorations
+
+TOTAL AREAS TO COLOR: 8-10 only
+- Character (2-3 areas)
+- Tree and door (2-3 areas)
+- 1 extra element (1-2 areas)
+- Ground (1 area)
+
+Keep it nearly as simple as under_3, just with ONE extra blob element.
 """
     },
     "age_4": {
