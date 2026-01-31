@@ -587,8 +587,10 @@ Return ONLY valid JSON in this exact format (no markdown, no extra text):
           "title": "Episode Title",
           "scene_description": "Detailed description of scene with {character_name} doing something specific in a specific setting with specific objects and possibly other characters.",
           "story_text": "Age-appropriate story text following the guidelines above.",
-          "character_emotion": "The emotion and pose {character_name} should have (e.g., nervous and hesitant, excited and jumping, scared and hiding, determined and brave, happy and waving, curious and leaning forward, sad with drooping posture, surprised with wide eye)"
+          "character_emotion": "REQUIRED - The emotion {character_name} shows (e.g., nervous, excited, scared, determined, happy, curious, sad, surprised, proud, worried)"
         }}
+
+⚠️ CRITICAL: Every episode MUST include "character_emotion" - this field is REQUIRED, not optional!
       ]
     }}
   ]
