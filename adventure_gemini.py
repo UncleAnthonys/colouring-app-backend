@@ -179,6 +179,7 @@ Transform the childs drawing into a character that looks like it belongs in:
 - Celebration background with confetti and sparkles
 - Portrait orientation - show FULL figure
 - ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image
+- ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image
 - This is original art - do not copy or include any watermarks from any source
 - NO TEXT anywhere on image
 - Character looks JOYFUL and ALIVE
@@ -609,11 +610,24 @@ For each theme, provide:
 
 IMPORTANT RULES:
 - {character_name} is ALWAYS the hero of the story
-- EVERY theme must be inspired by THIS character's unique features (colors, body parts, accessories)
-- The character's special traits should be ESSENTIAL to solving problems in the story
-- Example: A 3-eyed monster might have a story where each eye sees something different (past, present, future)
-- Example: A character with a stripy tail might use it as a rope, a flag, or to make friends with zebras
-- NEVER generate generic stories that could apply to any character
+
+*** THE STORY MUST COME FROM THE CHARACTER'S UNIQUE FEATURES ***
+Read the character description again. Pick out 3 SPECIFIC things:
+1. What COLORS does the character have? (Use these in the story - a green character might camouflage, a rainbow character might create rainbows)
+2. What BODY FEATURES are unique? (Extra eyes = super sight, long arms = reaching/rescuing, wings = flying adventures)
+3. What CLOTHING or ACCESSORIES? (Crown = royalty stories, boots = hiking/exploring, apron = cooking)
+
+Your 3 themes MUST each use a DIFFERENT unique feature from this character as the MAIN plot device.
+- Theme 1: Based on the character's COLOR or PATTERN
+- Theme 2: Based on the character's BODY SHAPE or FEATURES  
+- Theme 3: Based on the character's CLOTHING or ACCESSORIES
+
+The character's special trait should be WHY they can solve the problem - not just decoration.
+If a character has spots, maybe those spots glow in the dark and help them find things.
+If a character has big ears, maybe they can hear things others can't.
+If a character wears a cape, maybe the cape is magical or helps them fly.
+
+MAKE THE STORY IMPOSSIBLE WITHOUT THIS CHARACTER'S UNIQUE FEATURES.
 
 🚫 BANNED STORY IDEAS - DO NOT USE ANY OF THESE:
 - "Lost colors" or "fading colors" or "restore colors to the kingdom"
