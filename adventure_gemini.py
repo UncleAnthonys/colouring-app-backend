@@ -660,9 +660,11 @@ Generate 3 complete themes with all 10 episodes each. Return ONLY the JSON, no o
             
             for theme in data.get('themes', []):
                 for ep in theme.get('episodes', []):
-                    if not ep.get('emotion_tag') and not ep.get('emotion') and not ep.get('character_emotion'):
-                        story = ep.get('story_text', '') + ' ' + ep.get('scene_description', '')
-                        ep['character_emotion'] = ep.get('emotion_tag') or extract_emotion(story)
+                    # Always extract and set emotion
+                    story = ep.get('story_text', '') + ' ' + ep.get('scene_description', '')
+                    extracted = extract_emotion(story)
+                    ep['character_emotion'] = ep.get('emotion_tag') or ep.get('emotion') or extracted
+                    ep['_extraction_ran'] = True  # Debug marker
             
             return data
         
