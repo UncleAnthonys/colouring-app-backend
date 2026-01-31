@@ -571,10 +571,26 @@ AGE GROUP: 10+ YEARS OLD
         
         prompt = f'''You are creating personalized story adventures for a childrens coloring book app.
 
-Based on this character named "{character_name}", generate 3 DIFFERENT story themes. Each theme should have 10 episodes that tell a complete story.
+Based on this character named "{character_name}", generate 3 UNIQUE story themes that are PERSONALIZED to this specific character's features.
 
-CHARACTER ANALYSIS:
+CHARACTER TO ANALYZE:
 {character_description}
+
+STEP 1 - IDENTIFY UNIQUE FEATURES:
+Look at the character description above. What makes THIS character special?
+- Colors? (green skin = stories about camouflage, nature, jealousy, etc.)
+- Number of eyes? (8 eyes = seeing everything, being a lookout, detective stories)
+- Number of arms? (4 arms = juggling, multitasking, helping many friends at once)
+- Body shape? (round = rolling adventures, bouncy, ball games)
+- Clothing? (crown = royalty, cape = superhero, chef hat = cooking)
+- Accessories? (wand = magic, backpack = explorer, glasses = inventor)
+
+STEP 2 - BUILD STORIES FROM THOSE FEATURES:
+Each of your 3 themes MUST directly use the character's unique features as a plot point:
+- If they have multiple eyes → maybe one eye sees the future, or they're the best at hide and seek
+- If they have stretchy arms → they can reach things no one else can, rescue adventures
+- If they're a specific color → they blend in somewhere, or stand out somewhere
+- If they wear something specific → that item becomes magical or important to the story
 
 {age_guide}
 
@@ -591,6 +607,11 @@ For each theme, provide:
 
 IMPORTANT RULES:
 - {character_name} is ALWAYS the hero of the story
+- EVERY theme must be inspired by THIS character's unique features (colors, body parts, accessories)
+- The character's special traits should be ESSENTIAL to solving problems in the story
+- Example: A 3-eyed monster might have a story where each eye sees something different (past, present, future)
+- Example: A character with a stripy tail might use it as a rope, a flag, or to make friends with zebras
+- NEVER generate generic stories that could apply to any character
 - Match themes to character type (BE CREATIVE - avoid generic forests!):
   - Monster characters - monster school, cooking competitions, talent shows, making friends despite being different
   - Princess/girl characters - royal balls, magical kingdoms, art contests, fashion shows, underwater palaces, cloud castles
