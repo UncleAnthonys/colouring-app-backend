@@ -22,134 +22,71 @@ from enum import Enum
 AGE_RULES = {
     "under_3": {
         "age": "Under 3 years",
-        "colourable_areas": "8-10",
+        "colourable_areas": "5-8",
         "rules": """
-AGE GROUP: UNDER 3 (TODDLER) - EXTREMELY SIMPLE
+AGE GROUP: UNDER 3 (TODDLER)
 
-⚠️ THIS IS FOR BABIES/TODDLERS - MAXIMUM SIMPLICITY ⚠️
+COMPLEXITY: 5-8 colourable areas | Character fills 60% of page | Super thick outlines (5px+)
 
-DRAW ONLY THESE 3 THINGS:
-1. CHARACTER - as a big chunky BLOB shape (fills 60% of page)
-2. TREE WITH DOOR - simple blob tree shape
-3. GROUND - just a simple curved line
+SCENE: Draw what the STORY SCENE describes - 1-2 large simple background elements only.
 
-THAT IS ALL. NOTHING ELSE.
-
-STYLE REQUIREMENTS:
-- BLOB shapes only - like a rubber stamp or cookie cutter
-- Super thick bold outlines
-- Character is a simple rounded blob body
-- Tree is a simple blob shape with basic door
-
-DO NOT DRAW ANY OF THESE:
-❌ NO flowers
-❌ NO mushrooms  
-❌ NO fairies
-❌ NO butterflies
-❌ NO birds
-❌ NO sun
-❌ NO clouds
-❌ NO leaves
-❌ NO stars
-❌ NO sparkles
-❌ NO grass details
-❌ NO rabbits or animals
-❌ NO multiple objects
-
-TOTAL AREAS TO COLOR: 5-6 only
-- Character body (1-2 areas)
-- Character head/face (1 area)
-- Tree trunk (1 area)
-- Tree top (1 area)  
-- Door (1 area)
-
-If you add flowers, fairies, mushrooms, or any extra objects, you have FAILED this task.
+CHARACTER RULES:
+- Character EXACTLY as shown in reference - no added clothing/patterns
+- Keep body shape exactly as reference (rectangular, round, blob, etc.)
+- PLAIN WHITE inside all body sections - ready to color
+- NO decorative patterns, swirls, or stripes on character
 """
     },
     "age_3": {
         "age": "3 years",
-        "colourable_areas": "10-12",
+        "colourable_areas": "8-12",
         "rules": """
-AGE GROUP: 3 YEARS OLD - STILL VERY SIMPLE
+AGE GROUP: 3 YEARS OLD
 
-⚠️ THIS IS FOR 3 YEAR OLDS - KEEP IT BLOB STYLE ⚠️
+COMPLEXITY: 8-12 colourable areas | Character fills 55% of page | Bold thick outlines (4px+)
 
-DRAW ONLY THESE THINGS:
-1. CHARACTER - big chunky BLOB shape (fills 50-60% of page)
-2. TREE WITH DOOR - simple blob tree
-3. GROUND - simple line
-4. ONE simple extra: a big sun OR a big mushroom OR a big flower
+SCENE: Draw what the STORY SCENE describes - 2-3 simple background elements.
 
-THAT IS ALL. MAXIMUM 4 MAIN ELEMENTS.
-
-STYLE REQUIREMENTS:
-- BLOB/KAWAII shapes - everything chunky and rounded
-- Bold thick outlines
-- Simple shapes like cookie cutters
-- NO intricate details on the door
-- NO patterns or swirls
-
-DO NOT DRAW:
-❌ NO fairies
-❌ NO butterflies
-❌ NO birds
-❌ NO leaves falling
-❌ NO multiple flowers (1 big one max)
-❌ NO multiple mushrooms (1 big one max)
-❌ NO grass details/tufts
-❌ NO sparkles or stars
-❌ NO detailed door decorations
-
-TOTAL AREAS TO COLOR: 8-10 only
-- Character (2-3 areas)
-- Tree and door (2-3 areas)
-- 1 extra element (1-2 areas)
-- Ground (1 area)
-
-Keep it nearly as simple as under_3, just with ONE extra blob element.
+CHARACTER RULES:
+- Character EXACTLY as shown in reference - no added clothing/patterns
+- Keep body shape exactly as reference (rectangular, round, blob, etc.)
+- PLAIN WHITE inside all body sections - ready to color
+- NO decorative patterns, swirls, or stripes on character
 """
     },
     "age_4": {
         "age": "4 years",
-        "colourable_areas": "15-18",
+        "colourable_areas": "12-18",
         "rules": """
 AGE GROUP: 4 YEARS OLD
 
-STYLE: Rounded simple shapes (transitioning from blob to more defined)
-- Character fills about 50% of page
-- Bold outlines
-- Simple but recognizable rounded shapes
-- Total of about 15-20 things to color
+COMPLEXITY: 12-18 colourable areas | Character fills 50% of page | Bold outlines (3-4px)
 
-SCENE ELEMENTS:
-- Character + tree with door + 3-4 background elements
-- Flowers, mushrooms, sun, clouds, simple fairies
-- Simple ground with grass tufts
-- A small animal (bunny, bird) okay
+SCENE: Draw what the STORY SCENE describes - 3-4 background elements, 1 supporting character if in story.
 
-Keep shapes rounded and friendly - still quite simple
+CHARACTER RULES:
+- Character EXACTLY as shown in reference - no added clothing/patterns
+- Keep body shape exactly as reference (rectangular, round, blob, etc.)
+- PLAIN WHITE inside all body sections - ready to color
+- NO decorative patterns, swirls, or stripes on character
 """
     },
     "age_5": {
         "age": "5 years",
-        "colourable_areas": "20-25",
+        "colourable_areas": "18-25",
         "rules": """
 AGE GROUP: 5 YEARS OLD
 
-KINDERGARTEN STYLE:
-- Character fills about 45% of page
-- Medium-bold outlines
-- Clear recognizable shapes with some detail
-- Total of about 20-25 things to color
+COMPLEXITY: 18-25 colourable areas | Character fills 45% of page | Medium-bold outlines (3px)
 
-SCENE ELEMENTS:
-- Character + tree with door + 4-5 background elements
-- Multiple flowers, mushrooms, fairies
-- Sun, clouds, leaves falling
-- Small animals (bunny, squirrel, bird)
-- Path or ground with grass
+SCENE: Draw what the STORY SCENE describes - 4-5 background elements, 1-2 supporting characters.
 
-STYLE: Fun detailed scene but still easy to color
+CHARACTER RULES:
+- Character EXACTLY as shown in reference - no added clothing/patterns
+- Keep body shape exactly as reference (rectangular, round, blob, etc.)
+- Keep STRUCTURAL LINES from reference (dress segments, buttons, hair sections)
+- PLAIN WHITE inside all body sections - ready to color
+- NO decorative patterns, swirls, or stripes on character
 """
     },
     "age_6": {
@@ -158,89 +95,52 @@ STYLE: Fun detailed scene but still easy to color
         "rules": """
 AGE GROUP: 6 YEARS OLD
 
-RULES:
-- Medium outlines (2-3px stroke width)
-- 25-30 colourable areas
-- Full themed background
-- Detailed costumes, expressive faces
-- Simple patterns on clothing okay
-- Character fills 30-40% of page
+COMPLEXITY: 25-30 colourable areas | Character fills 40% of page | Medium outlines (2-3px)
 
-SCENE COMPOSITION:
-- Rich story scene with 6-8 background elements
-- Foreground and background separation
-- Setting-appropriate details (fairy village, forest, underwater, etc.)
-- Secondary characters welcome (fairies, animals, friends)
-- Environmental storytelling - props and objects from the story
-- Some layering okay with clear outlines
+SCENE: Draw what the STORY SCENE describes - 5-6 background elements, 2 supporting characters, foreground/background separation.
 
-BANNED: Very intricate patterns, tiny details under 0.5cm
+CHARACTER RULES:
+- Character EXACTLY as shown in reference - no added clothing/patterns
+- Keep body shape exactly as reference (rectangular, round, blob, etc.)
+- Keep STRUCTURAL LINES from reference (dress segments, buttons, hair sections)
+- PLAIN WHITE inside all body sections - ready to color
+- NO decorative patterns, swirls, or stripes on character
 """
     },
     "age_7": {
         "age": "7 years",
-        "colourable_areas": "30-35",
+        "colourable_areas": "30-40",
         "rules": """
 AGE GROUP: 7 YEARS OLD
 
-DETAILED SCENE WITH DEPTH:
-- Character fills 25-35% of page
-- 30-35 colourable areas total
+COMPLEXITY: 30-40 colourable areas | Character fills 30% of page | Medium outlines (2-3px)
 
-MUST INCLUDE ALL OF THESE:
-- Main character with detailed clothing
-- The enchanted tree with decorative door
-- 2 fairies with wings
-- 3-4 flowers of different sizes
-- 2-3 mushrooms
-- Sun or clouds
-- Grass with texture
-- 1 small animal (bunny, squirrel, or bird)
-- Leaves falling
-- A path or stepping stones
+SCENE: Draw what the STORY SCENE describes - 6-8 background elements, 2-3 supporting characters, foreground/midground/background layers.
 
-BACKGROUND DEPTH:
-- Show distant trees or bushes behind main tree
-- Create foreground/midground/background layers
-- Some elements overlap others
-
-STYLE: Detailed children's book illustration
-
-⚠️ CHARACTER BODY: Keep structural lines (dress segments, buttons) but NO decorative patterns/swirls on the character. Background gets detailed, character stays clean.
+CHARACTER RULES:
+- Character EXACTLY as shown in reference - no added clothing/patterns
+- Keep body shape exactly as reference (rectangular, round, blob, etc.)
+- Keep STRUCTURAL LINES from reference (dress segments, buttons, hair sections)
+- PLAIN WHITE inside all body sections - ready to color
+- NO decorative patterns, swirls, or stripes on character
 """
     },
     "age_8": {
         "age": "8 years",
-        "colourable_areas": "40-45",
+        "colourable_areas": "40-50",
         "rules": """
 AGE GROUP: 8 YEARS OLD
 
-RICH DETAILED SCENE:
-- Character fills 20-30% of page
-- 40-45 colourable areas total
+COMPLEXITY: 40-50 colourable areas | Character fills 25% of page | Medium-fine outlines (2px)
 
-MUST INCLUDE ALL OF THESE:
-- Main character with patterned/detailed clothing
-- Large enchanted tree with textured bark and decorative door
-- 2-3 fairies in different poses
-- 5-6 flowers scattered around
-- 3-4 mushrooms of varying sizes
-- Detailed grass throughout
-- 2 small animals (bunny AND squirrel or bird)
-- Butterflies (2-3)
-- Leaves falling from tree
-- Clouds in sky
-- Path leading to door
+SCENE: Draw what the STORY SCENE describes - 8-10 background elements, 3-4 supporting characters, multiple depth layers, small hidden details.
 
-BACKGROUND DEPTH - IMPORTANT:
-- Distant forest/trees visible behind main scene
-- Multiple layers: far background, mid-ground, foreground
-- Small details like pebbles, tiny flowers in grass
-- Some elements partially hidden behind others
-
-STYLE: Detailed illustration with lots to color
-
-⚠️ CHARACTER BODY: Keep structural lines (dress segments, buttons) but NO decorative patterns/swirls/mandalas on the character's body. Intricate details go on BACKGROUND only.
+CHARACTER RULES:
+- Character EXACTLY as shown in reference - no added clothing/patterns
+- Keep body shape exactly as reference (rectangular, round, blob, etc.)
+- Keep STRUCTURAL LINES from reference (dress segments, buttons, hair sections)
+- PLAIN WHITE inside all body sections - ready to color
+- NO decorative patterns, swirls, or stripes on character
 """
     },
     "age_9": {
@@ -249,80 +149,37 @@ STYLE: Detailed illustration with lots to color
         "rules": """
 AGE GROUP: 9 YEARS OLD
 
-HIGHLY DETAILED SCENE - FILL THE PAGE:
-- Character fills 20-25% of page
-- 50-65 colourable areas total
-- 90% of page should have content
+COMPLEXITY: 50-65 colourable areas | Character fills 22% of page | Fine outlines (1.5-2px)
 
-MUST INCLUDE ALL OF THESE:
-- Main character with intricate clothing patterns
-- Large enchanted tree with detailed bark texture, roots, branches
-- Ornate magical door with decorative frame
-- 3-4 fairies in various poses around the scene
-- 6-8 flowers of different types (daisies, tulips, roses)
-- 4-5 detailed mushrooms
-- Lush grass with individual blades visible
-- 2-3 small animals (bunny, squirrel, bird, hedgehog)
-- 3-4 butterflies
-- Many falling leaves
-- Decorative clouds
-- Sparkles and stars around magical elements
-- Winding path with stones
+SCENE: Draw what the STORY SCENE describes - 10-12 background elements, 4-5 supporting characters, complex layered depth, many small details.
 
-BACKGROUND - CRITICAL:
-- Full forest visible in background with multiple trees
-- Distant hills or mountains
-- Clear depth: far, middle, near layers
-- Small fairy houses or structures in distance
-- Vines and climbing plants on tree
-
-STYLE: Professional coloring book quality, rich with detail
-
-⚠️ CHARACTER BODY: Keep structural lines but NO decorative patterns on the character. All the intricate mandala-style details go on trees, flowers, borders - NOT on the character's body or clothes.
+CHARACTER RULES:
+- Character EXACTLY as shown in reference - no added clothing/patterns
+- Keep body shape exactly as reference (rectangular, round, blob, etc.)
+- Keep STRUCTURAL LINES from reference (dress segments, buttons, hair sections)
+- PLAIN WHITE inside all body sections - ready to color
+- NO decorative patterns, swirls, or stripes on character - intricate details go on BACKGROUND only
 """
     },
     "age_10": {
         "age": "10+ years",
-        "colourable_areas": "70-90",
+        "colourable_areas": "65-100",
         "rules": """
-AGE GROUP: 10+ YEARS OLD
+AGE GROUP: 10+ YEARS OLD (ADVANCED)
 
-MAXIMUM DETAIL - ADULT COLORING BOOK QUALITY:
-- Character fills 15-20% of page
-- 70-90 colourable areas total
-- FILL EVERY SPACE with detail
+COMPLEXITY: 65-100 colourable areas | Character fills 20% of page | Fine outlines (1-1.5px)
 
-MUST INCLUDE ALL OF THESE:
-- Main character with highly detailed clothing (patterns, textures, layers)
-- Massive enchanted tree with intricate bark patterns, visible roots, many branches
-- Highly ornate magical door with scrollwork, gems, decorative hinges
-- 4-5 detailed fairies with intricate wings and clothing
-- 8-10 flowers of many different varieties with detailed petals
-- 5-6 mushrooms with spotted caps and detailed gills
-- Dense grass with individual blades and small clovers
-- 3-4 animals (bunny, squirrel, bird, hedgehog, mouse)
-- 5+ butterflies with wing patterns
-- Many falling leaves with vein details
-- Elaborate clouds with swirling patterns
-- Abundant sparkles, stars, magical swirls
-- Cobblestone or detailed path
+SCENE: Draw what the STORY SCENE describes - 12+ background elements, 5+ supporting characters, complex multi-layered composition, decorative borders optional, many hidden details.
 
-BACKGROUND - FILL IT ALL:
-- Dense forest with many trees receding into distance
-- Distant fairy village or castle silhouette
-- Multiple depth layers creating rich perspective
-- Vines, ivy, climbing roses on main tree
-- Small hidden details (tiny doors, insects, berries)
-- Decorative border elements if space allows
-- NO empty white space - fill everything
-
-STYLE: Adult coloring book, intricate mandala-level detail, every inch has something to color
-
-⚠️ CHARACTER BODY: Keep structural lines (segments, buttons) but absolutely NO decorative swirls/patterns/mandalas on the character. The adult-level intricate details fill the BACKGROUND, trees, flowers, sky, borders - the character remains clean with simple structural outlines only.
+CHARACTER RULES:
+- Character EXACTLY as shown in reference - no added clothing/patterns
+- Keep body shape exactly as reference (rectangular, round, blob, etc.)
+- Keep STRUCTURAL LINES from reference (dress segments, buttons, hair sections)
+- PLAIN WHITE inside all body sections - ready to color
+- NO decorative patterns, swirls, or stripes on character - ALL intricate details go on BACKGROUND, borders, environment only
 """
-    }
+    },
 }
-
 
 # =============================================================================
 # MASTER PROMPTS
