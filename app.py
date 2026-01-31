@@ -882,7 +882,7 @@ async def generate_from_photo_endpoint(request: PhotoGenerateRequest):
     # Build prompt
     prompt = build_photo_prompt(
         age_level=normalize_age_level(request.age_level),
-        theme=request.theme,
+        theme=request.theme.lower() if request.theme else "none",
         custom_theme=request.custom_theme
     )
     
