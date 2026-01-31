@@ -60,6 +60,7 @@ class GenerateEpisodeRequest(BaseModel):
     reveal_description: Optional[str] = None  # Text description for consistency
     reveal_image_b64: Optional[str] = None  # The reveal image for visual consistency
     scene_prompt: Optional[str] = None  # Custom scene from personalized stories
+    story_text: Optional[str] = None  # Custom story text from personalized stories
     character_emotion: Optional[str] = None  # Character emotion for this scene
 
 
@@ -291,10 +292,15 @@ async def generate_episode_gemini_endpoint(request: GenerateEpisodeRequest):
     if not ep_data:
         raise HTTPException(status_code=404, detail=f"Episode {episode_num} not found")
     
-    # Get story text for age level
-    stories = ep_data.get("stories", {})
-    story = get_story_for_age(stories if isinstance(stories, dict) else {"age_6": stories}, age_level)
-    story = story.replace("{name}", char.name)
+    # Get story text - use custom if provided, otherwise fallback to hardcoded
+    if request.story_text:
+        # Use personalized story from Gemini-generated stories
+        story = request.story_text.replace("{name}", char.name)
+    else:
+        # Fallback to hardcoded episode data
+        stories = ep_data.get("stories", {})
+        story = get_story_for_age(stories if isinstance(stories, dict) else {"age_6": stories}, age_level)
+        story = story.replace("{name}", char.name)
     
     # Build scene prompt - use custom if provided, otherwise from episode data
     age_rules = get_age_rules(age_level)
