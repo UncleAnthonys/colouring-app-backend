@@ -570,6 +570,7 @@ IMPORTANT RULES:
 - Each theme must have a clear beginning, middle, and end across 10 episodes
 - Always use "{character_name}" (not "the character") in story text
 - Scene descriptions must be detailed enough to draw as coloring pages
+- EVERY episode MUST have a "character_emotion" field (happy, sad, excited, nervous, scared, curious, proud, worried, surprised, determined)
 - FOLLOW THE AGE GUIDELINES - this is for a {age_display} year old child!
 
 ⚠️ CRITICAL: Every episode MUST include ALL 5 fields: episode_num, title, scene_description, story_text, AND character_emotion. Missing fields will cause errors!
@@ -587,9 +588,9 @@ Return ONLY valid JSON in this exact format (no markdown, no extra text):
         {{
           "episode_num": 1,
           "title": "Episode Title",
-          "scene_description": "Detailed description of scene with {character_name} doing something specific in a specific setting with specific objects and possibly other characters.",
-          "story_text": "Age-appropriate story text following the guidelines above.",
-          "character_emotion": "REQUIRED - e.g. nervous, excited, scared, determined, happy, curious, sad, surprised"
+          "character_emotion": "happy",
+          "scene_description": "Detailed description of scene...",
+          "story_text": "Age-appropriate story text..."
         }}
       ]
     }}
