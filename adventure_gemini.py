@@ -572,6 +572,8 @@ IMPORTANT RULES:
 - Scene descriptions must be detailed enough to draw as coloring pages
 - FOLLOW THE AGE GUIDELINES - this is for a {age_display} year old child!
 
+⚠️ CRITICAL: Every episode MUST include ALL 5 fields: episode_num, title, scene_description, story_text, AND character_emotion. Missing fields will cause errors!
+
 Return ONLY valid JSON in this exact format (no markdown, no extra text):
 {{
   "character_name": "{character_name}",
@@ -587,10 +589,8 @@ Return ONLY valid JSON in this exact format (no markdown, no extra text):
           "title": "Episode Title",
           "scene_description": "Detailed description of scene with {character_name} doing something specific in a specific setting with specific objects and possibly other characters.",
           "story_text": "Age-appropriate story text following the guidelines above.",
-          "character_emotion": "REQUIRED - The emotion {character_name} shows (e.g., nervous, excited, scared, determined, happy, curious, sad, surprised, proud, worried)"
+          "character_emotion": "REQUIRED - e.g. nervous, excited, scared, determined, happy, curious, sad, surprised"
         }}
-
-⚠️ CRITICAL: Every episode MUST include "character_emotion" - this field is REQUIRED, not optional!
       ]
     }}
   ]
