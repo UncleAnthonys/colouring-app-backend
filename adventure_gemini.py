@@ -641,16 +641,16 @@ Generate 3 complete themes with all 10 episodes each. Return ONLY the JSON, no o
             def extract_emotion(text):
                 text = text.lower()
                 emotions = [
-                    ('scared', ['scared', 'frightened', 'afraid', 'terrified', 'fearful']),
-                    ('nervous', ['nervous', 'anxious', 'worried', 'uneasy', 'hesitant']),
-                    ('excited', ['excited', 'thrilled', 'eager', 'enthusiastic', 'overjoyed']),
-                    ('sad', ['sad', 'unhappy', 'disappointed', 'upset', 'heartbroken', 'crying']),
-                    ('curious', ['curious', 'wondering', 'intrigued', 'interested', 'puzzled']),
-                    ('determined', ['determined', 'resolute', 'focused', 'brave', 'courageous']),
-                    ('surprised', ['surprised', 'amazed', 'astonished', 'shocked', 'startled']),
-                    ('proud', ['proud', 'accomplished', 'satisfied', 'triumphant']),
-                    ('worried', ['worried', 'concerned', 'troubled', 'overwhelmed']),
-                    ('happy', ['happy', 'joyful', 'delighted', 'pleased', 'glad', 'cheerful']),
+                    ('scared', ['scared', 'frightened', 'afraid', 'terrified', 'fearful', 'fear', 'scary']),
+                    ('nervous', ['nervous', 'anxious', 'uneasy', 'hesitant', 'shy', 'timid', 'flutter']),
+                    ('excited', ['excited', 'thrilled', 'eager', 'enthusiastic', 'overjoyed', 'excitement', 'thrilling']),
+                    ('sad', ['sad', 'unhappy', 'disappointed', 'upset', 'heartbroken', 'crying', 'tears', 'lonely']),
+                    ('curious', ['curious', 'wondering', 'intrigued', 'interested', 'puzzled', 'wonder']),
+                    ('determined', ['determined', 'resolute', 'focused', 'brave', 'courageous', 'bravely', 'courage']),
+                    ('surprised', ['surprised', 'amazed', 'astonished', 'shocked', 'startled', 'gasp']),
+                    ('proud', ['proud', 'accomplished', 'satisfied', 'triumphant', 'pride', 'success']),
+                    ('worried', ['worried', 'concerned', 'troubled', 'overwhelmed', 'worry']),
+                    ('happy', ['happy', 'joyful', 'delighted', 'pleased', 'glad', 'cheerful', 'joy', 'smile']),
                 ]
                 for emotion, keywords in emotions:
                     if any(kw in text for kw in keywords):
