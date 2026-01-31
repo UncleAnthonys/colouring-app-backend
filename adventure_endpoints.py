@@ -61,6 +61,7 @@ class GenerateEpisodeRequest(BaseModel):
     reveal_image_b64: Optional[str] = None  # The reveal image for visual consistency
     scene_prompt: Optional[str] = None  # Custom scene from personalized stories
     story_text: Optional[str] = None  # Custom story text from personalized stories
+    episode_title: Optional[str] = None  # Custom episode title from personalized stories
     character_emotion: Optional[str] = None  # Character emotion for this scene
 
 
@@ -332,7 +333,10 @@ async def generate_episode_gemini_endpoint(request: GenerateEpisodeRequest):
     )
     
     # Create A4 page with title and story text
-    title = ep_data.get("title", f"Episode {episode_num}")
+    if request.episode_title:
+        title = request.episode_title
+    else:
+        title = ep_data.get("title", f"Episode {episode_num}")
     a4_page_b64 = create_a4_page_with_text(image_b64, story, title)
     
     return {
