@@ -588,9 +588,9 @@ Return ONLY valid JSON in this exact format (no markdown, no extra text):
         {{
           "episode_num": 1,
           "title": "Episode Title",
-          "character_emotion": "happy",
-          "scene_description": "Detailed description of scene...",
-          "story_text": "Age-appropriate story text..."
+          "scene_description": "Detailed description of scene with {character_name} doing something specific in a specific setting with specific objects and possibly other characters.",
+          "story_text": "Age-appropriate story text following the guidelines above.",
+          "character_emotion": "The emotion {character_name} should show (nervous, excited, scared, determined, happy, curious, sad, proud, worried, surprised)"
         }}
       ]
     }}
