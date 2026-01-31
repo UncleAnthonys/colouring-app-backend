@@ -348,10 +348,14 @@ Convert everything to BLACK OUTLINES on WHITE:
 - The ONLY non-white pixels are the BLACK lines (#000000)
 
 🎯 CRITICAL - PRESERVE CHARACTER'S EXACT SHAPE:
+*** CRITICAL - EXACT CHARACTER COPY ***
+- COUNT the arms in reference image - draw EXACTLY that many (usually 2)
+- COUNT the legs in reference image - draw EXACTLY that many (usually 2)
 - Copy the character's EXACT body shape from the reference (rectangular, round, blob, etc.)
 - If reference shows a RECTANGULAR/SQUARE body → draw RECTANGULAR/SQUARE body
 - If reference shows a ROUND body → draw ROUND body  
 - If reference shows a PLAIN/SIMPLE body → keep it PLAIN/SIMPLE
+- DO NOT add extra limbs, tails, wings, or features not in the reference
 - The character must look IDENTICAL to the reference - same simplicity level
 - Match the reference EXACTLY - no additions, no modifications
 - Only convert COLORS to white - keep all SHAPES identical
@@ -609,22 +613,22 @@ Return ONLY valid JSON. Here is a COMPLETE EXAMPLE of the exact format required:
   "age_level": "age_7",
   "themes": [
     {{
-      "theme_id": "magic_forest_adventure",
-      "theme_name": "Magic Forest Adventure",
-      "theme_description": "Example Monster explores an enchanted forest.",
+      "theme_id": "royal_baking_contest",
+      "theme_name": "The Royal Baking Contest",
+      "theme_description": "Example Monster enters a kingdom-wide baking competition at the palace.",
       "episodes": [
         {{
           "episode_num": 1,
-          "title": "A Strange Sound",
-          "scene_description": "Example Monster stands at the edge of a dark forest, ears perked up, hearing a mysterious sound from within the trees. Moonlight filters through the branches.",
-          "story_text": "Example Monster heard a strange noise coming from the forest. It sounded like someone crying! Should they go in and help?",
+          "title": "The Golden Invitation",
+          "scene_description": "Example Monster holds a sparkling golden envelope in the kitchen, eyes wide with excitement. Mixing bowls and ingredients cover the counter behind them.",
+          "story_text": "A golden letter arrived! Example Monster had been invited to the Royal Baking Contest at the palace. Could they bake something amazing enough to win?",
           "emotion": "curious"
         }},
         {{
           "episode_num": 2,
-          "title": "Into the Woods",
-          "scene_description": "Example Monster walks carefully along a winding path through tall trees, looking nervous but determined. Glowing mushrooms light the way.",
-          "story_text": "Taking a deep breath, Example Monster stepped into the forest. The path was dark and twisty, but they had to find out who needed help.",
+          "title": "Gathering Ingredients",
+          "scene_description": "Example Monster nervously browses a busy market stall filled with colorful fruits, chocolate, and flour bags. Other bakers rush past with shopping baskets.",
+          "story_text": "At the market, Example Monster felt nervous seeing all the other talented bakers. But they had a secret recipe from Grandma that just might work!",
           "emotion": "nervous"
         }}
       ]
