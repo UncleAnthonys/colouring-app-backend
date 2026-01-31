@@ -537,7 +537,13 @@ AGE GROUP: 10+ YEARS OLD
         age_display = "10+"
     
     try:
-        model = genai.GenerativeModel('gemini-2.5-flash')
+        # Use newer client API with response_mime_type for JSON
+        model = genai.GenerativeModel(
+            'gemini-2.5-flash',
+            generation_config=genai.GenerationConfig(
+                response_mime_type="application/json"
+            )
+        )
         
         prompt = f'''You are creating personalized story adventures for a childrens coloring book app.
 
