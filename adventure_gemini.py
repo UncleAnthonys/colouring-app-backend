@@ -587,12 +587,13 @@ For each theme, provide:
 
 IMPORTANT RULES:
 - {character_name} is ALWAYS the hero of the story
-- Match themes to character type:
-  - Monster characters - monster school, spooky adventures, making friends despite being different
-  - Princess/girl characters - fashion, art, friendship, magical adventures
-  - Robot characters - invention, space, technology adventures
-  - Animal characters - nature, forest, animal friends adventures
-  - Superhero characters - saving the day, helping others
+- Match themes to character type (BE CREATIVE - avoid generic forests!):
+  - Monster characters - monster school, cooking competitions, talent shows, making friends despite being different
+  - Princess/girl characters - royal balls, magical kingdoms, art contests, fashion shows, underwater palaces, cloud castles
+  - Robot characters - invention fairs, space stations, futuristic cities, time travel
+  - Animal characters - bakery adventures, music festivals, sports competitions, beach holidays
+  - Superhero characters - saving the city, secret missions, training academy
+  - AVOID: Generic "forest adventure" for every character - be creative with settings!
 - Each theme must have a clear beginning, middle, and end across 10 episodes
 - Always use "{character_name}" (not "the character") in story text
 - Scene descriptions must be detailed enough to draw as coloring pages
