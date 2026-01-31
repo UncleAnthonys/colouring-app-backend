@@ -242,7 +242,7 @@ async def generate_adventure_episode_gemini(character_data: dict, scene_prompt: 
         
         character_name = character_data.get("name", "Character")
         
-        # Build emotion/pose guidance
+        # Build emotion/pose guidance - auto-detect from story if not provided
         emotion_guidance = ""
         if character_emotion:
             emotion_guidance = f"""
@@ -256,6 +256,26 @@ But the EMOTION and POSE must match this scene: {character_emotion}
 - If sad: drooping posture, downturned expression
 - If determined: standing firm, focused expression
 - If nervous: hesitant posture, uncertain expression
+"""
+        elif story_text:
+            # Auto-detect emotion from story text
+            emotion_guidance = f"""
+*** CRITICAL - CHARACTER EMOTION AND POSE:
+Read the story text below and match {character_name}'s facial expression and body pose to the MOOD of the story.
+DO NOT copy the happy/celebratory pose from the reference image.
+The reference image shows the character APPEARANCE (body shape, features, size).
+
+STORY TEXT: {story_text}
+
+Based on this story, give {character_name} an appropriate expression and pose:
+- If the story feels scary/worried → hunched posture, worried expression
+- If the story feels excited/happy → energetic pose, big smile
+- If the story feels curious/wondering → leaning forward, wide eyes
+- If the story feels nervous/shy → hesitant posture, uncertain expression
+- If the story feels determined/brave → standing firm, confident expression
+- If the story feels sad → drooping posture, downturned expression
+
+The character's EMOTION must match the story's mood!
 """
         
         # Build prompt
