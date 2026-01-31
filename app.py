@@ -48,6 +48,23 @@ FAILURE_LOG = Path(__file__).parent / "generation_failures.log"
 # Load prompts
 PROMPTS_FILE = Path(__file__).parent / "prompts" / "themes.json"
 
+
+def normalize_age_level(age_input: str) -> str:
+    """Convert age inputs like age_2.0 to correct format"""
+    valid_levels = ["under_3", "age_3", "age_4", "age_5", "age_6", "age_7", "age_8", "age_9", "age_10"]
+    if age_input in valid_levels:
+        return age_input
+    try:
+        num_str = age_input.replace("age_", "").replace(".0", "")
+        age_num = int(float(num_str))
+        if age_num <= 2:
+            return "under_3"
+        elif age_num >= 10:
+            return "age_10"
+        else:
+            return f"age_{age_num}"
+    except:
+        return "age_5"
 def load_prompts():
     with open(PROMPTS_FILE) as f:
         return json.load(f)
@@ -860,7 +877,7 @@ async def generate_from_photo_endpoint(request: PhotoGenerateRequest):
     
     # Build prompt
     prompt = build_photo_prompt(
-        age_level=request.age_level,
+        age_level=normalize_age_level(request.age_level),
         theme=request.theme,
         custom_theme=request.custom_theme
     )
@@ -936,7 +953,7 @@ async def generate_from_text_endpoint(request: TextGenerateRequest):
         raise HTTPException(status_code=500, detail="OpenAI API key not configured")
     
     # Build prompt
-    prompt = build_text_to_image_prompt(request.description, request.age_level)
+    prompt = build_text_to_image_prompt(request.description, normalize_age_level(request.age_level))
     
     # Generate (with auto-retry for dark images)
     start = datetime.now()
