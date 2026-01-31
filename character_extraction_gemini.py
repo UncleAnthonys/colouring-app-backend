@@ -259,7 +259,7 @@ Be EXTREMELY thorough - every detail matters for the 3D reveal!"""
         return {
             "character": {
                 "name": character_name,
-                "description": detailed_analysis[:500] + "..." if len(detailed_analysis) > 500 else detailed_analysis,
+                "description": detailed_analysis,  # Full description - needed for story generation!
                 "key_feature": "Distinctive features from original drawing - see full analysis"
             },
             "reveal_description": detailed_analysis,
