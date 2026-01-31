@@ -634,15 +634,15 @@ IMPORTANT RULES:
 - {character_name} is ALWAYS the hero of the story
 
 *** THE STORY MUST COME FROM THE CHARACTER'S UNIQUE FEATURES ***
-Read the character description again. Pick out 3 SPECIFIC things:
-1. What COLORS does the character have? (Use these in the story - a green character might camouflage, a rainbow character might create rainbows)
-2. What BODY FEATURES are unique? (Extra eyes = super sight, long arms = reaching/rescuing, wings = flying adventures)
-3. What CLOTHING or ACCESSORIES? (Crown = royalty stories, boots = hiking/exploring, apron = cooking)
+Your 3 themes MUST each use a DIFFERENT unique feature as the MAIN plot device.
 
-Your 3 themes MUST each use a DIFFERENT unique feature from this character as the MAIN plot device.
-- Theme 1: Based on the character's COLOR or PATTERN
-- Theme 2: Based on the character's BODY SHAPE or FEATURES  
-- Theme 3: Based on the character's CLOTHING or ACCESSORIES
+THEME PRIORITY ORDER (most interesting first!):
+- Theme 1: Based on UNUSUAL BODY PARTS (multiple eyes, multiple arms, multiple mouths, wings, tails, etc.) - THESE ARE THE MOST INTERESTING!
+- Theme 2: Based on ANOTHER unusual body feature OR special accessory (horns, antennae, crown, wand, etc.)
+- Theme 3: Based on ANY remaining unique feature
+
+DO NOT make Theme 1 about color - color is the LEAST interesting feature!
+If the character has 8 eyes, 6 arms, and 3 mouths - those should be Themes 1, 2, and 3!
 
 The character's special trait should be WHY they can solve the problem - not just decoration.
 If a character has spots, maybe those spots glow in the dark and help them find things.
