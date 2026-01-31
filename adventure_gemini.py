@@ -579,21 +579,43 @@ Based on this character named "{character_name}", generate 3 UNIQUE story themes
 CHARACTER TO ANALYZE:
 {character_description}
 
-STEP 1 - IDENTIFY UNIQUE FEATURES:
-Look at the character description above. What makes THIS character special?
-- Colors? (green skin = stories about camouflage, nature, jealousy, etc.)
-- Number of eyes? (8 eyes = seeing everything, being a lookout, detective stories)
-- Number of arms? (4 arms = juggling, multitasking, helping many friends at once)
-- Body shape? (round = rolling adventures, bouncy, ball games)
-- Clothing? (crown = royalty, cape = superhero, chef hat = cooking)
-- Accessories? (wand = magic, backpack = explorer, glasses = inventor)
+STEP 1 - IDENTIFY THE MOST UNUSUAL FEATURES (in order of priority):
+Look at the character description. Find the WEIRDEST, most UNUSUAL things:
 
-STEP 2 - BUILD STORIES FROM THOSE FEATURES:
-Each of your 3 themes MUST directly use the character's unique features as a plot point:
-- If they have multiple eyes → maybe one eye sees the future, or they're the best at hide and seek
-- If they have stretchy arms → they can reach things no one else can, rescue adventures
-- If they're a specific color → they blend in somewhere, or stand out somewhere
-- If they wear something specific → that item becomes magical or important to the story
+PRIORITY 1 - UNUSUAL BODY PARTS (these are the MOST interesting for stories!):
+- Multiple eyes? (10 eyes = can see in all directions, never surprised, finds lost things)
+- Multiple arms? (8 arms = ultimate helper, best hugger, amazing juggler, one-monster band)
+- Multiple legs? (4+ legs = super fast, never falls over, great dancer)
+- Wings, tails, horns, antennae? (each one = special ability!)
+
+PRIORITY 2 - UNUSUAL NUMBERS:
+- More than 2 of anything = VERY interesting for stories
+- 10 eyes means 10 different things they can watch at once
+- 8 arms means they can do 8 things at once
+
+PRIORITY 3 - Colors and patterns (LEAST interesting - only use if nothing else):
+- Only use color if there's nothing more unusual about the character
+
+DO NOT make stories about:
+- "camouflage" or "blending in" (boring!)
+- "colors fading" or "restoring colors" (overdone!)
+- Body shape unless it's truly unusual
+
+STEP 2 - BUILD STORIES WHERE THE UNUSUAL FEATURE IS ESSENTIAL:
+The character's weirdest feature should be WHY they save the day!
+
+Examples for MULTIPLE EYES:
+- 10 eyes = World's best lifeguard (sees everyone at once), ultimate hide-and-seek champion, air traffic controller, teacher who sees every student, detective who spots every clue
+
+Examples for MULTIPLE ARMS:
+- 8 arms = Best chef ever (stirs 8 pots), one-monster band, ultimate babysitter, fastest gift wrapper, best at card games, amazing at sports
+
+Examples for MULTIPLE LEGS:
+- 4+ legs = Unbeatable at racing, never trips, best dancer, can carry friends everywhere
+
+THE STORY SHOULD BE IMPOSSIBLE WITHOUT THIS FEATURE!
+If a character has 10 eyes, the story should REQUIRE seeing 10 things at once.
+If a character has 8 arms, the story should REQUIRE doing 8 things at once.
 
 {age_guide}
 
