@@ -65,6 +65,15 @@ def normalize_age_level(age_input: str) -> str:
             return f"age_{age_num}"
     except:
         return "age_5"
+
+def normalize_theme(theme_input: str) -> str:
+    """Convert theme inputs to standard keys - handles caps, spaces, ampersands"""
+    if not theme_input:
+        return "none"
+    # Lowercase and replace spaces/ampersands with underscores
+    normalized = theme_input.lower().replace(" & ", "_").replace(" ", "_").replace("&", "_")
+    return normalized
+
 def load_prompts():
     with open(PROMPTS_FILE) as f:
         return json.load(f)
@@ -882,7 +891,7 @@ async def generate_from_photo_endpoint(request: PhotoGenerateRequest):
     # Build prompt
     prompt = build_photo_prompt(
         age_level=normalize_age_level(request.age_level),
-        theme=request.theme.lower() if request.theme else "none",
+        theme=normalize_theme(request.theme),
         custom_theme=request.custom_theme
     )
     
