@@ -306,7 +306,7 @@ CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in th
 
 DRAW:
 - The people from the photo as simple cute figures
-- ONE simple object from the photo background (e.g. their bike, a fence, a ball)
+- The most prominent object from the photo background (simplified)
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
@@ -318,7 +318,7 @@ STYLE:
 BACKGROUND:
 - PURE WHITE - no sky, no ground, no scenery
 
-OUTPUT: Simple figures with one object from the photo on pure white."""
+OUTPUT: Simple figures with the main background object from the photo on pure white."""
 
         theme_name = custom_theme if custom_theme else theme
         if theme_name == "none":
