@@ -636,6 +636,33 @@ Generate 3 complete themes with all 10 episodes each. Return ONLY the JSON, no o
             import json
             json_str = text[start:end]
             data = json.loads(json_str)
+            
+            # Extract emotion from story_text since Gemini won't add the field
+            def extract_emotion(text):
+                text = text.lower()
+                emotions = [
+                    ('scared', ['scared', 'frightened', 'afraid', 'terrified', 'fearful']),
+                    ('nervous', ['nervous', 'anxious', 'worried', 'uneasy', 'hesitant']),
+                    ('excited', ['excited', 'thrilled', 'eager', 'enthusiastic', 'overjoyed']),
+                    ('sad', ['sad', 'unhappy', 'disappointed', 'upset', 'heartbroken', 'crying']),
+                    ('curious', ['curious', 'wondering', 'intrigued', 'interested', 'puzzled']),
+                    ('determined', ['determined', 'resolute', 'focused', 'brave', 'courageous']),
+                    ('surprised', ['surprised', 'amazed', 'astonished', 'shocked', 'startled']),
+                    ('proud', ['proud', 'accomplished', 'satisfied', 'triumphant']),
+                    ('worried', ['worried', 'concerned', 'troubled', 'overwhelmed']),
+                    ('happy', ['happy', 'joyful', 'delighted', 'pleased', 'glad', 'cheerful']),
+                ]
+                for emotion, keywords in emotions:
+                    if any(kw in text for kw in keywords):
+                        return emotion
+                return 'happy'  # default
+            
+            for theme in data.get('themes', []):
+                for ep in theme.get('episodes', []):
+                    if not ep.get('emotion') and not ep.get('character_emotion'):
+                        story = ep.get('story_text', '') + ' ' + ep.get('scene_description', '')
+                        ep['character_emotion'] = extract_emotion(story)
+            
             return data
         
         raise HTTPException(status_code=500, detail='Failed to parse story response as JSON')
