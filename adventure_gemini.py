@@ -574,29 +574,37 @@ IMPORTANT RULES:
 - The emotion should match the story moment - scared for danger, happy for success, curious for discovery, etc.
 - FOLLOW THE AGE GUIDELINES - this is for a {age_display} year old child!
 
-⚠️ CRITICAL: Every episode MUST include ALL 5 fields: episode_num, title, scene_description, story_text, AND character_emotion. Missing fields will cause errors!
+Return ONLY valid JSON. Here is a COMPLETE EXAMPLE of the exact format required:
 
-Return ONLY valid JSON in this exact format (no markdown, no extra text):
 {{
-  "character_name": "{character_name}",
-  "age_level": "{age_level}",
+  "character_name": "Example Monster",
+  "age_level": "age_7",
   "themes": [
     {{
-      "theme_id": "theme_name_lowercase_underscore",
-      "theme_name": "Theme Display Name",
-      "theme_description": "One sentence description of the adventure.",
+      "theme_id": "magic_forest_adventure",
+      "theme_name": "Magic Forest Adventure",
+      "theme_description": "Example Monster explores an enchanted forest.",
       "episodes": [
         {{
           "episode_num": 1,
-          "title": "Episode Title",
-          "emotion": "nervous",
-          "scene_description": "Detailed scene description...",
-          "story_text": "Story text for this episode..."
+          "title": "A Strange Sound",
+          "scene_description": "Example Monster stands at the edge of a dark forest, ears perked up, hearing a mysterious sound from within the trees. Moonlight filters through the branches.",
+          "story_text": "Example Monster heard a strange noise coming from the forest. It sounded like someone crying! Should they go in and help?",
+          "emotion": "curious"
+        }},
+        {{
+          "episode_num": 2,
+          "title": "Into the Woods",
+          "scene_description": "Example Monster walks carefully along a winding path through tall trees, looking nervous but determined. Glowing mushrooms light the way.",
+          "story_text": "Taking a deep breath, Example Monster stepped into the forest. The path was dark and twisty, but they had to find out who needed help.",
+          "emotion": "nervous"
         }}
       ]
     }}
   ]
 }}
+
+NOW generate for {character_name} using this EXACT format. The "emotion" field MUST be one of: nervous, excited, scared, determined, happy, curious, sad, proud, worried, surprised
 
 Generate 3 complete themes with all 10 episodes each. Return ONLY the JSON, no other text.'''
         
