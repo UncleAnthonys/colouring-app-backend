@@ -7,7 +7,7 @@ Complete endpoint system for:
 3. Generating age-appropriate coloring page episodes (Gemini)
 """
 
-from adventure_gemini import generate_adventure_reveal_gemini, generate_adventure_episode_gemini, generate_personalized_stories
+from adventure_gemini import generate_adventure_reveal_gemini, generate_adventure_episode_gemini, generate_personalized_stories, create_a4_page_with_text
 from character_extraction_gemini import extract_character_with_extreme_accuracy
 import google.generativeai as genai
 import os
@@ -325,11 +325,16 @@ async def generate_episode_gemini_endpoint(request: GenerateEpisodeRequest):
         character_emotion=request.character_emotion  # Pass emotion for scene-appropriate expression
     )
     
+    # Create A4 page with title and story text
+    title = ep_data.get("title", f"Episode {episode_num}")
+    a4_page_b64 = create_a4_page_with_text(image_b64, story, title)
+    
     return {
-        "image_b64": image_b64,
+        "image_b64": image_b64,  # Just the coloring image
+        "page_b64": a4_page_b64,  # Full A4 page with title and story
         "story": story,
         "episode_num": episode_num,
-        "title": ep_data.get("title", f"Episode {episode_num}"),
+        "title": title,
         "is_choice_point": ep_data.get("is_choice_point", False),
         "choices": ep_data.get("choices"),
         "choice_prompt": ep_data.get("choice_prompt")
