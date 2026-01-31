@@ -655,7 +655,7 @@ Generate 3 complete themes with all 10 episodes each. Return ONLY the JSON, no o
                 for emotion, keywords in emotions:
                     if any(kw in text for kw in keywords):
                         return emotion
-                return 'happy'  # default
+                return 'curious'  # default - changed to verify deploy
             
             for theme in data.get('themes', []):
                 for ep in theme.get('episodes', []):
