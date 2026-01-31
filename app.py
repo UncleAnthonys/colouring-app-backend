@@ -875,6 +875,9 @@ async def generate_from_photo_endpoint(request: PhotoGenerateRequest):
     if not OPENAI_API_KEY:
         raise HTTPException(status_code=500, detail="OpenAI API key not configured")
     
+    # DEBUG - log received values
+    print(f"DEBUG: age_level={request.age_level}, normalized={normalize_age_level(request.age_level)}, theme={request.theme}, custom_theme={request.custom_theme}")
+    
     # Build prompt
     prompt = build_photo_prompt(
         age_level=normalize_age_level(request.age_level),
