@@ -17,7 +17,11 @@ from pattern_endpoints import pattern_router
 from PIL import Image
 import io
 from pdf_utils import create_a4_pdf
+import firebase_admin
+from firebase_admin import credentials, storage
+import uuid
 from adventure_endpoints import router as adventure_router
+from firebase_utils import init_firebase, upload_to_firebase
 
 app = FastAPI(title="Kids Colouring App API", version="1.0.0")
 
@@ -869,27 +873,43 @@ async def generate_from_photo_endpoint(request: PhotoGenerateRequest):
     # Get image
     image_data = result["data"][0]
     
-    # Return base64 or URL
+    # Get base64 image
     if "b64_json" in image_data:
-        output_image = image_data["b64_json"]
-        output_type = "base64"
+        output_b64 = image_data["b64_json"]
     else:
-        output_image = image_data["url"]
-        output_type = "url"
+        # If OpenAI returns URL, download it
+        async with httpx.AsyncClient() as client:
+            resp = await client.get(image_data["url"])
+            output_b64 = base64.b64encode(resp.content).decode('utf-8')
     
-    # Generate PDF if we have base64 image
-    pdf_b64 = None
-    if output_type == "base64":
-        try:
-            pdf_b64 = create_a4_pdf(output_image)
-        except Exception as e:
-            print(f"PDF generation failed: {e}")
+    # Upload image to Firebase and get URL
+    try:
+        image_url = upload_to_firebase(output_b64, folder="generations")
+    except Exception as e:
+        print(f"Firebase upload failed: {e}")
+        # Fallback to returning base64 if Firebase fails
+        return {
+            "success": True,
+            "image": output_b64,
+            "image_type": "base64",
+            "pdf": None,
+            "generation_time": elapsed,
+            "theme_used": request.custom_theme or request.theme,
+            "age_level": request.age_level
+        }
+    
+    # Generate PDF and upload to Firebase
+    pdf_url = None
+    try:
+        pdf_b64 = create_a4_pdf(output_b64)
+        pdf_url = upload_to_firebase(pdf_b64, folder="pdfs")
+    except Exception as e:
+        print(f"PDF generation/upload failed: {e}")
     
     return {
         "success": True,
-        "image": output_image,
-        "image_type": output_type,
-        "pdf": pdf_b64,
+        "image_url": image_url,
+        "pdf_url": pdf_url,
         "generation_time": elapsed,
         "theme_used": request.custom_theme or request.theme,
         "age_level": request.age_level
@@ -926,26 +946,43 @@ async def generate_from_text_endpoint(request: TextGenerateRequest):
     # Get image
     image_data = result["data"][0]
     
+    # Get base64 image
     if "b64_json" in image_data:
-        output_image = image_data["b64_json"]
-        output_type = "base64"
+        output_b64 = image_data["b64_json"]
     else:
-        output_image = image_data["url"]
-        output_type = "url"
+        # If OpenAI returns URL, download it
+        async with httpx.AsyncClient() as client:
+            resp = await client.get(image_data["url"])
+            output_b64 = base64.b64encode(resp.content).decode('utf-8')
     
-    # Generate PDF if we have base64 image
-    pdf_b64 = None
-    if output_type == "base64":
-        try:
-            pdf_b64 = create_a4_pdf(output_image)
-        except Exception as e:
-            print(f"PDF generation failed: {e}")
+    # Upload image to Firebase and get URL
+    try:
+        image_url = upload_to_firebase(output_b64, folder="generations")
+    except Exception as e:
+        print(f"Firebase upload failed: {e}")
+        # Fallback to returning base64 if Firebase fails
+        return {
+            "success": True,
+            "image": output_b64,
+            "image_type": "base64",
+            "pdf": None,
+            "generation_time": elapsed,
+            "description": request.description,
+            "age_level": request.age_level
+        }
+    
+    # Generate PDF and upload to Firebase
+    pdf_url = None
+    try:
+        pdf_b64 = create_a4_pdf(output_b64)
+        pdf_url = upload_to_firebase(pdf_b64, folder="pdfs")
+    except Exception as e:
+        print(f"PDF generation/upload failed: {e}")
     
     return {
         "success": True,
-        "image": output_image,
-        "image_type": output_type,
-        "pdf": pdf_b64,
+        "image_url": image_url,
+        "pdf_url": pdf_url,
         "generation_time": elapsed,
         "description": request.description,
         "age_level": request.age_level
