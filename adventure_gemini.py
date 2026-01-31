@@ -576,8 +576,9 @@ IMPORTANT RULES:
 - Each theme must have a clear beginning, middle, and end across 10 episodes
 - Always use "{character_name}" (not "the character") in story text
 - Scene descriptions must be detailed enough to draw as coloring pages
-- EVERY episode MUST have an "emotion" field - one word like: nervous, excited, scared, determined, happy, curious, sad, proud, worried, surprised
-- The emotion should match the story moment - scared for danger, happy for success, curious for discovery, etc.
+STRICT COMPLIANCE RULE: Every episode MUST include the "emotion_tag" field. This is MANDATORY metadata.
+- emotion_tag MUST be chosen from: nervous, excited, scared, determined, happy, curious, sad, proud, worried, surprised
+- Place emotion_tag immediately after title, before scene_description
 - FOLLOW THE AGE GUIDELINES - this is for a {age_display} year old child!
 
 Return ONLY valid JSON. Here is a COMPLETE EXAMPLE of the exact format required:
@@ -659,9 +660,9 @@ Generate 3 complete themes with all 10 episodes each. Return ONLY the JSON, no o
             
             for theme in data.get('themes', []):
                 for ep in theme.get('episodes', []):
-                    if not ep.get('emotion') and not ep.get('character_emotion'):
+                    if not ep.get('emotion_tag') and not ep.get('emotion') and not ep.get('character_emotion'):
                         story = ep.get('story_text', '') + ' ' + ep.get('scene_description', '')
-                        ep['character_emotion'] = extract_emotion(story)
+                        ep['character_emotion'] = ep.get('emotion_tag') or extract_emotion(story)
             
             return data
         
