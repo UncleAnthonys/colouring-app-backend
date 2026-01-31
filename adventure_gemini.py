@@ -178,6 +178,8 @@ Transform the childs drawing into a character that looks like it belongs in:
 ===== REQUIREMENTS =====
 - Celebration background with confetti and sparkles
 - Portrait orientation - show FULL figure
+- ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image
+- This is original art - do not copy or include any watermarks from any source
 - NO TEXT anywhere on image
 - Character looks JOYFUL and ALIVE
 
@@ -612,6 +614,15 @@ IMPORTANT RULES:
 - Example: A 3-eyed monster might have a story where each eye sees something different (past, present, future)
 - Example: A character with a stripy tail might use it as a rope, a flag, or to make friends with zebras
 - NEVER generate generic stories that could apply to any character
+
+🚫 BANNED STORY IDEAS - DO NOT USE ANY OF THESE:
+- "Lost colors" or "fading colors" or "restore colors to the kingdom"
+- "Magic crystal" or "color crystal" or "rainbow crystal" quests
+- "Enchanted forest" or "magical forest" adventures
+- "Tree with a magical door"
+- "Kingdom losing its magic/color/sparkle"
+- "Finding a special gem/jewel/crystal"
+These are OVERUSED. Be MORE CREATIVE than this!
 - Match themes to character type (BE CREATIVE - avoid generic forests!):
   - Monster characters - monster school, cooking competitions, talent shows, making friends despite being different
   - Princess/girl characters - royal balls, magical kingdoms, art contests, fashion shows, underwater palaces, cloud castles
