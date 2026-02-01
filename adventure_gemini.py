@@ -776,10 +776,9 @@ For each theme, provide:
 
 IMPORTANT RULES:
 - {character_name} is ALWAYS the hero of the story
-- When mentioning multiple body parts, DON'T use exact numbers - be descriptive instead:
-  - Instead of "6 arms" → "extra arms", "many arms", "lots of helping hands"
-  - Instead of "8 eyes" → "lots of eyes", "eyes everywhere", "extra eyes"
-  - This keeps stories accurate even if counts vary slightly
+- When mentioning body parts, use the EXACT numbers from the character description if given (e.g. if description says "exactly 8 eyes" then say "eight eyes")
+  - ONLY use numbers that appear in the character description - never guess or make up counts
+  - If no exact number is in the description, use vague terms like "many", "lots of", "extra"
 
 *** THE STORY MUST COME FROM THE CHARACTER'S UNIQUE FEATURES ***
 Your 3 themes MUST each use a DIFFERENT unique feature as the MAIN plot device.
