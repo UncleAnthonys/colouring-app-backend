@@ -479,9 +479,8 @@ Convert everything to BLACK OUTLINES on WHITE:
 - Children will add colors with their crayons
 
 **INCLUDE MANY COLORABLE OBJECTS:**
-- Butterflies, birds, squirrels, rabbits
-- Flowers, mushrooms, leaves
-- Fairies, sparkles as enclosed shapes
+- Add objects and details that fit the story scene
+- Each object should be a clear, enclosed shape for coloring
 - Fill the scene with things to color
 
 *** OUTPUT SPECIFICATION ***
