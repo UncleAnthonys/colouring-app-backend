@@ -16,6 +16,7 @@ import httpx
 from typing import Optional, List
 from fastapi import APIRouter, HTTPException, UploadFile, File, Form
 from pydantic import BaseModel
+from firebase_utils import upload_to_firebase
 
 from adventure_config import (
     ADVENTURE_THEMES,
@@ -261,10 +262,14 @@ async def extract_and_reveal(
             original_drawing_b64=image_b64
         )
         
+        # Upload reveal image to Firebase and return URL
+        reveal_image_url = upload_to_firebase(reveal_image, folder="adventure/reveals")
+        
         return {
             'character': extraction_result['character'],
             'reveal_description': extraction_result['reveal_description'],
             'reveal_image': reveal_image,
+            'reveal_image_url': reveal_image_url,
             'extraction_time': extraction_result['extraction_time'],
             'model_used': 'gemini-2.5-flash'
         }
