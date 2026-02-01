@@ -7,7 +7,7 @@ Complete endpoint system for:
 3. Generating age-appropriate coloring page episodes (Gemini)
 """
 
-from adventure_gemini import generate_adventure_reveal_gemini, generate_adventure_episode_gemini, generate_personalized_stories, create_a4_page_with_text
+from adventure_gemini import generate_adventure_reveal_gemini, generate_adventure_episode_gemini, generate_personalized_stories, create_a4_page_with_text, create_front_cover
 from character_extraction_gemini import extract_character_with_extreme_accuracy
 import google.generativeai as genai
 import os
@@ -516,6 +516,65 @@ async def complete_workflow(
 # =============================================================================
 # TEST ENDPOINTS
 # =============================================================================
+
+
+
+class GenerateFrontCoverRequest(BaseModel):
+    """Request to generate a story front cover."""
+    character: CharacterData
+    theme_name: str
+    theme_description: str
+    age_level: str = "age_6"
+    reveal_image_b64: str  # Character reveal for reference
+
+
+@router.post("/generate/front-cover")
+async def generate_front_cover_endpoint(request: GenerateFrontCoverRequest):
+    """
+    Generate a front cover for a story book.
+    
+    Creates a coloring page image representing the story theme,
+    then formats it as a book cover with title.
+    """
+    char = request.character
+    age_rules = get_age_rules(request.age_level)
+    
+    # Create a scene prompt for the front cover - character in an exciting pose related to theme
+    cover_scene = f"""{char.name} stands proudly in the center, ready for adventure!
+    
+Theme: {request.theme_name}
+{request.theme_description}
+
+This is a BOOK COVER image - make it exciting and inviting:
+- {char.name} should be large and central, looking confident/excited
+- Background hints at the adventure theme
+- Dynamic, eye-catching composition
+- Leave space at top and bottom for title text
+"""
+    
+    # Generate the cover coloring image
+    image_b64 = await generate_adventure_episode_gemini(
+        character_data={
+            "name": char.name,
+            "description": char.description,
+            "key_feature": char.key_feature
+        },
+        scene_prompt=cover_scene,
+        age_rules=age_rules["rules"],
+        reveal_image_b64=request.reveal_image_b64,
+        story_text=request.theme_description,
+        character_emotion="excited"
+    )
+    
+    # Create the front cover with title
+    cover_b64 = create_front_cover(image_b64, request.theme_name, char.name)
+    
+    return {
+        "cover_image_b64": image_b64,  # Just the coloring image
+        "cover_page_b64": cover_b64,   # Full cover with title
+        "title": f"{char.name} and {request.theme_name}"
+    }
+
 
 @router.post("/test/gemini-reveal")
 async def test_gemini_reveal():

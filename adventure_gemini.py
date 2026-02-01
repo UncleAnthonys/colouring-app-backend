@@ -112,6 +112,106 @@ def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None)
     return base64.b64encode(buffer.read()).decode('utf-8')
 
 
+
+
+def create_front_cover(image_b64: str, theme_name: str, character_name: str) -> str:
+    """
+    Create a front cover for the story book.
+    
+    Layout:
+    - Top: "A [Character Name] Adventure" 
+    - Middle: Large coloring illustration
+    - Bottom: Theme/Story title
+    
+    Returns: Base64 encoded A4 PNG image
+    """
+    from PIL import Image, ImageDraw, ImageFont
+    import io
+    import textwrap
+    
+    # A4 at 150 DPI
+    A4_WIDTH = 1240
+    A4_HEIGHT = 1754
+    
+    # Decode the coloring image
+    img_data = base64.b64decode(image_b64)
+    coloring_img = Image.open(io.BytesIO(img_data))
+    
+    # Create A4 canvas (white)
+    a4_page = Image.new('RGB', (A4_WIDTH, A4_HEIGHT), 'white')
+    draw = ImageDraw.Draw(a4_page)
+    
+    # Load fonts
+    try:
+        title_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 52)
+        subtitle_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 36)
+    except:
+        try:
+            title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 52)
+            subtitle_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 36)
+        except:
+            title_font = ImageFont.load_default()
+            subtitle_font = ImageFont.load_default()
+    
+    # Top text: "A Coloring Story Book"
+    top_text = "A Coloring Story Book"
+    top_bbox = draw.textbbox((0, 0), top_text, font=subtitle_font)
+    top_width = top_bbox[2] - top_bbox[0]
+    draw.text(((A4_WIDTH - top_width) // 2, 50), top_text, fill='black', font=subtitle_font)
+    
+    # Scale and center the coloring image
+    max_img_height = int(A4_HEIGHT * 0.65)
+    max_img_width = A4_WIDTH - 100
+    
+    img_ratio = coloring_img.width / coloring_img.height
+    if img_ratio > (max_img_width / max_img_height):
+        new_width = max_img_width
+        new_height = int(new_width / img_ratio)
+    else:
+        new_height = max_img_height
+        new_width = int(new_height * img_ratio)
+    
+    coloring_img = coloring_img.resize((new_width, new_height), Image.LANCZOS)
+    
+    # Center image vertically in middle section
+    x_offset = (A4_WIDTH - new_width) // 2
+    y_offset = 120  # Below top text
+    
+    a4_page.paste(coloring_img, (x_offset, y_offset))
+    
+    # Draw border around image
+    draw.rectangle(
+        [x_offset - 3, y_offset - 3, x_offset + new_width + 3, y_offset + new_height + 3],
+        outline='black',
+        width=3
+    )
+    
+    # Bottom: Full book title combining character and theme
+    title_y = y_offset + new_height + 40
+    
+    # Create full title: "Character Name and Theme Name"
+    # Clean up theme name if it already has "The" at start
+    clean_theme = theme_name
+    if not theme_name.lower().startswith("the "):
+        clean_theme = "the " + theme_name
+    
+    full_title = f"{character_name} and {clean_theme}"
+    
+    # Wrap title if too long
+    wrapped_title = textwrap.fill(full_title, width=35)
+    for line in wrapped_title.split('\n'):
+        line_bbox = draw.textbbox((0, 0), line, font=title_font)
+        line_width = line_bbox[2] - line_bbox[0]
+        draw.text(((A4_WIDTH - line_width) // 2, title_y), line, fill='black', font=title_font)
+        title_y += 60
+    
+    # Convert to base64
+    buffer = io.BytesIO()
+    a4_page.save(buffer, format='PNG', dpi=(150, 150))
+    buffer.seek(0)
+    return base64.b64encode(buffer.getvalue()).decode('utf-8')
+
+
 async def generate_adventure_reveal_gemini(character_data: dict, original_drawing_b64: str = None) -> str:
     """Generate Monsters Inc / Pixar style reveal - uses ORIGINAL DRAWING as visual reference
     
