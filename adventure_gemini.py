@@ -471,20 +471,23 @@ async def generate_personalized_stories(character_name: str, character_descripti
     age_guidelines = {
         "age_3": """
 AGE GROUP: 2-3 YEARS OLD (TODDLER)
+
+*** CRITICAL WRITING STYLE FOR TODDLERS ***
+Write like a classic rhyming picture book! Examples:
+- "Hop hop hop, will they stop? No no no, off they go!"
+- "Splish splash splish, like a fish!"
+- "One two three, what do we see?"
+Use rhymes, repetition, and fun sounds in EVERY episode.
+
+CONTENT RULES:
 - VERY simple sentences (5-8 words max)
 - Basic emotions only: happy, sad, scared, excited
 - Familiar settings: home, garden, playground, farm
 - Simple actions: walking, running, eating, sleeping, hugging
 - No complex plots - just simple discoveries and moments
 - No villains or scary elements
-- Story text: 1-2 very short sentences per episode
+- Story text: 1-2 very short rhyming sentences per episode
 - Scene descriptions: Simple, few elements (character + 2-3 objects max)
-
-WRITING STYLE - Gentle rhyming, soothing repetition:
-- Simple rhymes where natural ("run run run, having fun!")
-- Repeat key phrases for comfort
-- Sound words toddlers love (splish, splash, boom, whoosh)
-- Like a soothing bedtime story with rhythm
 """,
         "age_4": """
 AGE GROUP: 4 YEARS OLD
