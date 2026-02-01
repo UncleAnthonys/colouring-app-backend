@@ -767,7 +767,7 @@ CRITICAL: The stories MUST be appropriate for the age group above. Follow the se
 For each theme, provide:
 1. Theme name that fits this character personality and type
 2. Theme description (1 sentence, age-appropriate)
-3. Theme blurb (2-3 exciting sentences to help kids choose this story - make it sound fun and intriguing!)
+3. Theme blurb (1 exciting sentence to help kids choose - make it fun and intriguing!)
 4. 10 episodes, each with:
    - Episode number (1-10)
    - Title (short, age-appropriate)
@@ -832,7 +832,7 @@ Return ONLY valid JSON. Here is a COMPLETE EXAMPLE of the exact format required:
       "theme_id": "royal_baking_contest",
       "theme_name": "The Royal Baking Contest",
       "theme_description": "Example Monster enters a kingdom-wide baking competition at the palace.",
-      "theme_blurb": "Can Example Monster bake the most amazing cake ever? With whisks flying and frosting swirling, this is going to be one wild kitchen adventure! Will they win the golden chef's hat?",
+      "theme_blurb": "Can Example Monster bake the most amazing cake ever and win the golden chef's hat?",
       "episodes": [
         {{
           "episode_num": 1,
