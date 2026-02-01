@@ -765,9 +765,9 @@ If a character has 8 arms, the story should REQUIRE doing 8 things at once.
 CRITICAL: The stories MUST be appropriate for the age group above. Follow the sentence length, vocabulary, and complexity guidelines exactly.
 
 For each theme, provide:
-1. Theme name that fits this character personality and type
-2. Theme description (1 sentence, age-appropriate)
-3. Theme blurb (1 exciting sentence to help kids choose - make it fun and intriguing!)
+1. Theme name that fits this character personality and type (NEVER include specific body part numbers like "Eight-Armed" or "Six-Legged" in theme names)
+2. Theme description (1 sentence, age-appropriate - NO specific body part numbers)
+3. Theme blurb (1 exciting sentence to help kids choose - NO specific body part numbers)
 4. 10 episodes, each with:
    - Episode number (1-10)
    - Title (short, age-appropriate)
