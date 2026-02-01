@@ -539,17 +539,25 @@ async def generate_front_cover_endpoint(request: GenerateFrontCoverRequest):
     char = request.character
     age_rules = get_age_rules(request.age_level)
     
-    # Create a scene prompt for the front cover - character in an exciting pose related to theme
-    cover_scene = f"""{char.name} stands proudly in the center, ready for adventure!
+    # Create a scene prompt for the front cover
+    full_title = f"{char.name} and {request.theme_name}"
     
-Theme: {request.theme_name}
-{request.theme_description}
+    cover_scene = f"""Create a CHILDREN'S COLORING BOOK FRONT COVER.
 
-This is a BOOK COVER image - make it exciting and inviting:
-- {char.name} should be large and central, looking confident/excited
-- Background hints at the adventure theme
+This is a FULL PAGE book cover that must include:
+
+TEXT TO INCLUDE:
+- At the top: "{full_title}" in large, fun, hand-drawn style lettering
+- At the bottom: "A Coloring Story Book" in smaller text
+
+IMAGE:
+- {char.name} large and central, looking excited and confident
+- Background hints at the adventure: {request.theme_description}
 - Dynamic, eye-catching composition
-- Leave space at top and bottom for title text
+- BLACK AND WHITE LINE ART suitable for coloring in
+- Portrait orientation, fills the entire page
+
+Make it look like a real children's coloring book cover you'd see in a shop!
 """
     
     # Generate the cover coloring image
@@ -566,12 +574,10 @@ This is a BOOK COVER image - make it exciting and inviting:
         character_emotion="excited"
     )
     
-    # Create the front cover with title
-    cover_b64 = create_front_cover(image_b64, request.theme_name, char.name)
-    
+    # Return Gemini's image directly as the cover - it includes its own text
     return {
-        "cover_image_b64": image_b64,  # Just the coloring image
-        "cover_page_b64": cover_b64,   # Full cover with title
+        "cover_image_b64": image_b64,
+        "cover_page_b64": image_b64,  # Same image - Gemini handles text on cover
         "title": f"{char.name} and {request.theme_name}"
     }
 
