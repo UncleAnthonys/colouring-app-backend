@@ -476,10 +476,15 @@ AGE GROUP: 2-3 YEARS OLD (TODDLER)
 - Familiar settings: home, garden, playground, farm
 - Simple actions: walking, running, eating, sleeping, hugging
 - No complex plots - just simple discoveries and moments
-- Repetition is good ("Rainbow walked. Rainbow saw a flower. Rainbow smiled.")
 - No villains or scary elements
 - Story text: 1-2 very short sentences per episode
 - Scene descriptions: Simple, few elements (character + 2-3 objects max)
+
+WRITING STYLE - Gentle rhyming, soothing repetition:
+- Simple rhymes where natural ("run run run, having fun!")
+- Repeat key phrases for comfort
+- Sound words toddlers love (splish, splash, boom, whoosh)
+- Like a soothing bedtime story with rhythm
 """,
         "age_4": """
 AGE GROUP: 4 YEARS OLD
@@ -490,6 +495,12 @@ AGE GROUP: 4 YEARS OLD
 - Gentle challenges that are easily overcome
 - Story text: 2 short sentences per episode
 - Scene descriptions: Character + simple setting + 1 friend or object
+
+WRITING STYLE - Playful rhyming, fun repetition:
+- Rhyming couplets when natural ("What could it be? Let's go see!")
+- Catchphrases kids can join in with
+- Playful sounds (pitter-patter, tip-toe, ding-dong)
+- Questions that engage ("Can you guess what happened?")
 """,
         "age_5": """
 AGE GROUP: 5 YEARS OLD
@@ -500,6 +511,12 @@ AGE GROUP: 5 YEARS OLD
 - Settings can be more fantastical: castles, undersea, clouds
 - Story text: 2-3 sentences per episode
 - Scene descriptions: More detail, can include background characters
+
+WRITING STYLE - Bouncy rhythm, gentle humor:
+- Light rhymes sprinkled throughout (not every line)
+- Silly moments that make kids giggle
+- Fun words (enormous, teeny-tiny, super-duper)
+- Building anticipation ("And then... guess what!")
 """,
         "age_6": """
 AGE GROUP: 6 YEARS OLD
@@ -510,6 +527,12 @@ AGE GROUP: 6 YEARS OLD
 - Magical elements and fantasy settings welcome
 - Story text: 2-3 engaging sentences per episode
 - Scene descriptions: Rich detail with multiple elements
+
+WRITING STYLE - Engaging storytelling, light humor:
+- Occasional rhymes for memorable moments
+- Funny comparisons ("as tall as a giraffe on tippy-toes!")
+- Expressive dialogue with personality
+- Mini cliffhangers that build excitement
 """,
         "age_7": """
 AGE GROUP: 7 YEARS OLD
@@ -520,6 +543,12 @@ AGE GROUP: 7 YEARS OLD
 - Can include mild mystery or quest elements
 - Story text: 3 sentences with more detail
 - Scene descriptions: Complex scenes with action and emotion
+
+WRITING STYLE - Adventurous, slightly cheeky:
+- Clever wordplay and puns kids will get
+- Exciting action words (zoomed, crashed, exploded with color)
+- Characters with attitude and funny reactions
+- Moments of triumph that feel earned
 """,
         "age_8": """
 AGE GROUP: 8 YEARS OLD
@@ -530,6 +559,12 @@ AGE GROUP: 8 YEARS OLD
 - Can include mysteries, quests, competitions
 - Story text: 3-4 descriptive sentences
 - Scene descriptions: Dynamic scenes with multiple characters and action
+
+WRITING STYLE - Witty, clever, adventurous:
+- Smart wordplay kids feel clever for getting
+- Dramatic moments with exciting vocabulary
+- Snappy dialogue with personality
+- Descriptions that paint vivid pictures
 """,
         "age_9": """
 AGE GROUP: 9 YEARS OLD
@@ -540,6 +575,12 @@ AGE GROUP: 9 YEARS OLD
 - Can include multi-layered adventures
 - Story text: 3-4 rich, engaging sentences
 - Scene descriptions: Detailed, cinematic scenes
+
+WRITING STYLE - Sophisticated humor, vivid storytelling:
+- Clever observations and wit
+- Rich vocabulary that expands their world
+- Emotional depth - characters feel real
+- Building tension and satisfying payoffs
 """,
         "age_10": """
 AGE GROUP: 10+ YEARS OLD
@@ -550,6 +591,12 @@ AGE GROUP: 10+ YEARS OLD
 - Can include epic quests, mysteries, world-building
 - Story text: 4+ sentences with depth
 - Scene descriptions: Highly detailed, dramatic compositions
+
+WRITING STYLE - Mature wit, literary quality:
+- Sophisticated wordplay and humor
+- Metaphors and imagery that resonate
+- Dialogue that reveals character depth
+- The kind of writing that makes kids love books
 """
     }
     
