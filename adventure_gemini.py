@@ -776,9 +776,10 @@ For each theme, provide:
 
 IMPORTANT RULES:
 - {character_name} is ALWAYS the hero of the story
-- When mentioning body parts, use the EXACT numbers from the character description if given (e.g. if description says "exactly 8 eyes" then say "eight eyes")
-  - ONLY use numbers that appear in the character description - never guess or make up counts
-  - If no exact number is in the description, use vague terms like "many", "lots of", "extra"
+- NEVER use specific numbers for body parts (not "8 eyes" or "6 arms" or "3 mouths")
+  - Instead use creative descriptions: "lots of eyes", "extra arms", "all those mouths"
+  - Describe WHAT they do with the feature, not HOW MANY: "eyes scanning everywhere", "arms juggling everything at once"
+  - This is CRITICAL - the exact count may be wrong so never state a number
 
 *** THE STORY MUST COME FROM THE CHARACTER'S UNIQUE FEATURES ***
 Your 3 themes MUST each use a DIFFERENT unique feature as the MAIN plot device.
