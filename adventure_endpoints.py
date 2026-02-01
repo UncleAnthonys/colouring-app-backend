@@ -133,6 +133,7 @@ class StoryTheme(BaseModel):
     theme_id: str
     theme_name: str
     theme_description: str
+    theme_blurb: Optional[str] = None
     episodes: List[StoryEpisode]
 
 
