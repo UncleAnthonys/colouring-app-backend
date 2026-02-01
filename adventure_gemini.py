@@ -491,115 +491,108 @@ CONTENT RULES:
 """,
         "age_4": """
 AGE GROUP: 4 YEARS OLD
-- Simple sentences (8-12 words)
-- Basic story progression: beginning, simple problem, happy ending
-- Familiar settings with light magic: enchanted garden, friendly forest
-- Simple emotions and basic friendships
-- Gentle challenges that are easily overcome
-- Story text: 2 short sentences per episode
-- Scene descriptions: Character + simple setting + 1 friend or object
 
-WRITING STYLE - Playful rhyming, fun repetition:
-- Rhyming couplets when natural ("What could it be? Let's go see!")
-- Catchphrases kids can join in with
-- Playful sounds (pitter-patter, tip-toe, ding-dong)
-- Questions that engage ("Can you guess what happened?")
+*** MUST USE THIS WRITING STYLE ***
+Include rhymes and fun sounds! Examples:
+- "Tip-toe, tip-toe, where did it go?"
+- "Pitter-patter, splitter-splatter!"
+- End with questions: "What will happen next, do you think?"
+
+CONTENT:
+- Simple sentences (8-12 words)
+- Basic story: beginning, simple problem, happy ending
+- Familiar settings with light magic
+- Story text: 2 short sentences WITH rhymes or fun sounds
 """,
         "age_5": """
 AGE GROUP: 5 YEARS OLD
-- Medium sentences, slightly more vocabulary
-- Clear 3-part stories: setup, small adventure, resolution
-- Can include mild suspense (will they find the lost item?)
-- Friendship themes, helping others, being brave
-- Settings can be more fantastical: castles, undersea, clouds
-- Story text: 2-3 sentences per episode
-- Scene descriptions: More detail, can include background characters
 
-WRITING STYLE - Bouncy rhythm, gentle humor:
-- Light rhymes sprinkled throughout (not every line)
+*** MUST USE THIS WRITING STYLE ***
+Use silly, fun language! Examples:
+- Fun words: "super-duper", "teeny-tiny", "ginormous", "wibbly-wobbly"
 - Silly moments that make kids giggle
-- Fun words (enormous, teeny-tiny, super-duper)
-- Building anticipation ("And then... guess what!")
+- Build excitement: "And then... guess what!"
+
+CONTENT:
+- Medium sentences, slightly more vocabulary  
+- Clear 3-part stories: setup, adventure, resolution
+- Friendship themes, helping others, being brave
+- Story text: 2-3 sentences with fun/silly language
 """,
         "age_6": """
 AGE GROUP: 6 YEARS OLD
+
+*** MUST USE THIS WRITING STYLE ***
+Use vivid comparisons and excitement! Examples:
+- Funny comparisons: "as wobbly as a jelly on a trampoline!"
+- Expressive dialogue: "'Oh my goodness!' gasped Blobby"
+- Mini cliffhangers: "But then... something unexpected happened!"
+
+CONTENT:
 - Fuller sentences with descriptive words
 - Multi-episode story arcs that connect
-- Can include mild challenges and problem-solving
-- Themes: friendship, creativity, discovery, helping community
-- Magical elements and fantasy settings welcome
-- Story text: 2-3 engaging sentences per episode
-- Scene descriptions: Rich detail with multiple elements
-
-WRITING STYLE - Engaging storytelling, light humor:
-- Occasional rhymes for memorable moments
-- Funny comparisons ("as tall as a giraffe on tippy-toes!")
-- Expressive dialogue with personality
-- Mini cliffhangers that build excitement
+- Themes: friendship, creativity, discovery
+- Story text: 2-3 engaging sentences with comparisons/dialogue
 """,
         "age_7": """
 AGE GROUP: 7 YEARS OLD
-- Complex sentences with good vocabulary
-- Connected story arcs with cause and effect
-- Characters can face challenges and grow
-- Themes: teamwork, perseverance, creativity, adventure
-- Can include mild mystery or quest elements
-- Story text: 3 sentences with more detail
-- Scene descriptions: Complex scenes with action and emotion
 
-WRITING STYLE - Adventurous, slightly cheeky:
-- Clever wordplay and puns kids will get
-- Exciting action words (zoomed, crashed, exploded with color)
-- Characters with attitude and funny reactions
-- Moments of triumph that feel earned
+*** MUST USE THIS WRITING STYLE ***
+Use action words and cheeky humor! Examples:
+- Action: "zoomed", "crashed", "whooshed", "exploded with color"
+- Puns and wordplay kids will get
+- Cheeky reactions: "'Well, THAT was unexpected!' Blobby laughed"
+
+CONTENT:
+- Complex sentences with good vocabulary
+- Characters face challenges and grow
+- Themes: teamwork, perseverance, adventure
+- Story text: 3 sentences with action words and humor
 """,
         "age_8": """
 AGE GROUP: 8 YEARS OLD
-- Rich vocabulary and varied sentence structure
-- Complex plots with subplots
-- Character development across episodes
-- Themes: responsibility, friendship challenges, discovery
-- Can include mysteries, quests, competitions
-- Story text: 3-4 descriptive sentences
-- Scene descriptions: Dynamic scenes with multiple characters and action
 
-WRITING STYLE - Witty, clever, adventurous:
-- Smart wordplay kids feel clever for getting
-- Dramatic moments with exciting vocabulary
-- Snappy dialogue with personality
-- Descriptions that paint vivid pictures
+*** MUST USE THIS WRITING STYLE ***
+Witty and clever! Examples:
+- Wordplay: puns, double meanings kids feel smart getting
+- Dramatic vocabulary: "mysterious", "extraordinary", "impossible"
+- Snappy dialogue with personality and wit
+
+CONTENT:
+- Rich vocabulary and varied sentences
+- Complex plots with character development
+- Themes: responsibility, discovery, challenges
+- Story text: 3-4 sentences with clever wordplay
 """,
         "age_9": """
 AGE GROUP: 9 YEARS OLD
-- Advanced vocabulary and complex narrative
-- Sophisticated story arcs with twists
-- Deep character development and relationships
-- Themes: identity, belonging, overcoming obstacles, leadership
-- Can include multi-layered adventures
-- Story text: 3-4 rich, engaging sentences
-- Scene descriptions: Detailed, cinematic scenes
 
-WRITING STYLE - Sophisticated humor, vivid storytelling:
-- Clever observations and wit
-- Rich vocabulary that expands their world
-- Emotional depth - characters feel real
-- Building tension and satisfying payoffs
+*** MUST USE THIS WRITING STYLE ***
+Sophisticated and emotionally rich! Examples:
+- Clever observations about the world
+- Rich vocabulary: "contemplated", "flourished", "uncharted"
+- Emotional depth: show how characters FEEL inside
+
+CONTENT:
+- Advanced vocabulary and complex narrative
+- Deep character development and relationships
+- Themes: identity, belonging, leadership
+- Story text: 3-4 rich sentences with emotional depth
 """,
         "age_10": """
 AGE GROUP: 10+ YEARS OLD
-- Mature vocabulary and nuanced storytelling
-- Complex interconnected plots
-- Character growth and meaningful challenges
-- Themes: self-discovery, complex friendships, making hard choices
-- Can include epic quests, mysteries, world-building
-- Story text: 4+ sentences with depth
-- Scene descriptions: Highly detailed, dramatic compositions
 
-WRITING STYLE - Mature wit, literary quality:
-- Sophisticated wordplay and humor
-- Metaphors and imagery that resonate
-- Dialogue that reveals character depth
-- The kind of writing that makes kids love books
+*** MUST USE THIS WRITING STYLE ***
+Literary quality - like a real novel! Examples:
+- Metaphors: "hope flickered like a candle in the wind"
+- Sophisticated humor and irony
+- Dialogue that reveals character depth and motivation
+
+CONTENT:
+- Mature vocabulary and nuanced storytelling
+- Complex plots with character growth
+- Themes: self-discovery, hard choices, complex friendships
+- Story text: 4+ sentences with literary quality
 """
     }
     
