@@ -248,7 +248,7 @@ OUTPUT: Simple black outline blob figures on pure white. NO COLOUR."""
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The people from the photo as simple figures
+- The people from the photo as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
@@ -387,7 +387,7 @@ OUTPUT: Simple figures with friendly letter character and a few {letter} objects
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add extra people, characters, animals, or objects not in the original image.
 
 DRAW:
-- The people from the photo as simple figures with basic {theme_name} costumes
+- The people from the photo as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair) with basic {theme_name} costumes
 - One simple {theme_name} object next to them
 
 STYLE:
@@ -412,25 +412,28 @@ OUTPUT: Thick black outlines on pure white. No background."""
         if theme == "none" and not custom_theme:
             return """Create a colouring page for a 5 year old.
 
-CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, pets, or objects not in the original image.
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, pets, or objects not in the original image. Keep EVERY person visible - do NOT remove anyone (including babies being held).
 
 DRAW:
-- The people from the photo as simple figures
+- The people from the photo as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
 - Background elements from the photo (simplified)
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
-- Medium-thick black outlines
-- Simple but recognisable figures
-- Maximum 20-25 colourable areas
+- THICK black outlines - easy for small hands
+- Draw the REAL outline shapes of people and objects but with NO internal detail
+- NO tyre treads, NO window details, NO ground texture, NO clothing patterns
+- Faces: simple dot eyes, simple nose, simple smile - but CORRECT hair length and shape
+- Objects: just the outer silhouette shape, no internal lines
+- Maximum 15-20 colourable areas
 
 BACKGROUND:
-- MINIMAL - simple ground line, 1-2 clouds maximum
+- MINIMAL - simple ground line only, mostly white
 
 DO NOT ADD: Any pets, animals, or objects not in the original photo.
 
-OUTPUT: Simple figures with minimal background. Photo accurate."""
+OUTPUT: Thick simplified outlines of REAL shapes on white. Halfway between cartoon blobs and detailed drawing."""
 
         theme_name = custom_theme if custom_theme else theme
         if theme_name == "none":
@@ -485,19 +488,53 @@ BACKGROUND:
 
 OUTPUT: Clean black outlines with minimal simple background. Keep it simple."""
 
+    # AGE 6 - recognisable figures with face accuracy
+    if age_level == "age_6":
+        if theme == "none" and not custom_theme:
+            return """Create a colouring page for a 6 year old based on this photo.
+
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add extra people, animals, pets, or objects not in the original image. Keep EVERY person visible - do NOT remove anyone (including babies being held).
+
+FACE ACCURACY (HIGHEST PRIORITY):
+- TRACE the exact facial contours from the photo - do NOT reinterpret or stylize
+- Match the PRECISE nose shape, eye spacing, mouth width, chin shape for EVERY person
+- Copy the EXACT hairstyle for each person - length, parting, texture
+- A parent MUST instantly recognise their specific children
+- Keep real clothing details - specific shoes, patterns, stripes, accessories
+
+DRAW:
+- The people from the photo as recognisable figures
+- Background elements from the photo (simplified)
+- THAT IS ALL - NOTHING ELSE
+
+STYLE:
+- BLACK OUTLINES ON WHITE ONLY
+- Medium-thick black outlines
+- Simple but recognisable figures
+- Maximum 25-30 colourable areas
+
+BACKGROUND:
+- Simple background from the photo
+- 1-2 clouds, simple ground
+
+DO NOT ADD: Any pets, animals, or objects not in the original photo.
+
+OUTPUT: Recognisable figures with accurate faces and simple background."""
+
+
     # AGE 7 - more detail within objects, fuller scenes
     # PHOTO-ACCURATE MODE - completely different prompt for "none" theme
     if theme == "none" and not custom_theme:
         base_prompt = """Convert this photograph into a colouring book page.
 
-CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, people, or objects that are not in the original image.
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add extra people, animals, or objects not in the original image. Keep EVERY person visible in the photo - do NOT remove anyone (including babies being held).
 
-FACES AND PEOPLE (HIGHEST PRIORITY):
-- Faces MUST be recognisable as the actual people in the photo
-- Keep exact hairstyles - long hair stays long, short stays short
-- Keep real facial features - this is the most important thing
-- A parent must recognise their children
-- Simplify clothing but keep it accurate to photo
+FACE ACCURACY (HIGHEST PRIORITY):
+- TRACE the exact facial contours from the photo - do NOT reinterpret or stylize
+- Match the PRECISE nose shape, eye spacing, mouth width, chin shape for EVERY person
+- Copy the EXACT hairstyle for each person - length, parting, texture
+- A parent MUST instantly recognise their specific children
+- Keep real clothing details - specific shoes, patterns, stripes, accessories
 
 BACKGROUND (SIMPLIFY):
 - Keep the real setting from the photo
