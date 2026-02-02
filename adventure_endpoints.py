@@ -345,9 +345,15 @@ async def generate_episode_gemini_endpoint(request: GenerateEpisodeRequest):
         title = ep_data.get("title", f"Episode {episode_num}")
     a4_page_b64 = create_a4_page_with_text(image_b64, story, title)
     
+    # Upload images to Firebase and return URLs
+    image_url = upload_to_firebase(image_b64, folder="adventure/episodes")
+    page_url = upload_to_firebase(a4_page_b64, folder="adventure/pages")
+    
     return {
         "image_b64": image_b64,  # Just the coloring image
         "page_b64": a4_page_b64,  # Full A4 page with title and story
+        "image_url": image_url,
+        "page_url": page_url,
         "story": story,
         "episode_num": episode_num,
         "title": title,
@@ -580,10 +586,14 @@ Make it look like a real children's coloring book cover you'd see in a shop!
         character_emotion="excited"
     )
     
+    # Upload cover to Firebase and return URL
+    cover_image_url = upload_to_firebase(image_b64, folder="adventure/covers")
+    
     # Return Gemini's image directly as the cover - it includes its own text
     return {
         "cover_image_b64": image_b64,
         "cover_page_b64": image_b64,  # Same image - Gemini handles text on cover
+        "cover_image_url": cover_image_url,
         "title": f"{char.name} and {request.theme_name}"
     }
 
