@@ -598,6 +598,156 @@ Make it look like a real children's coloring book cover you'd see in a shop!
     }
 
 
+
+
+class GenerateFullStoryRequest(BaseModel):
+    """Request to generate a complete storybook."""
+    character: CharacterData
+    theme_name: str
+    theme_description: str
+    episodes: list  # List of episode dicts from generate-stories
+    age_level: str = "age_6"
+    reveal_image_b64: Optional[str] = None
+
+
+@router.post("/generate/full-story")
+async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
+    """
+    Generate an entire storybook: front cover + all episodes.
+    
+    Uses asyncio.gather to parallelize episode generation for speed.
+    Returns Firebase URLs for all pages.
+    """
+    import asyncio
+    
+    char = request.character
+    age_rules_data = get_age_rules(request.age_level)
+    
+    # --- 1. Generate front cover ---
+    full_title = f"{char.name} and {request.theme_name}"
+    
+    cover_scene = f"""Create a CHILDREN'S COLORING BOOK FRONT COVER.
+
+This is a FULL PAGE book cover that must include:
+
+TEXT TO INCLUDE:
+- At the top: "{full_title}" in large, fun, hand-drawn style lettering
+- At the bottom: "A Coloring Story Book" in smaller text
+
+IMAGE:
+- {char.name} large and central, looking excited and confident
+- Background hints at the adventure: {request.theme_description}
+- Dynamic, eye-catching composition
+- BLACK AND WHITE LINE ART suitable for coloring in
+- Portrait orientation, fills the entire page
+
+Make it look like a real children's coloring book cover you'd see in a shop!
+"""
+    
+    cover_b64 = await generate_adventure_episode_gemini(
+        character_data={
+            "name": char.name,
+            "description": char.description,
+            "key_feature": char.key_feature
+        },
+        scene_prompt=cover_scene,
+        age_rules=age_rules_data["rules"],
+        reveal_image_b64=request.reveal_image_b64,
+        story_text=request.theme_description,
+        character_emotion="excited"
+    )
+    
+    cover_url = upload_to_firebase(cover_b64, folder="adventure/covers")
+    
+    # --- 2. Generate all episodes in parallel ---
+    async def generate_single_episode(ep_data: dict, ep_num: int):
+        """Generate one episode and return its data."""
+        try:
+            story = ep_data.get("story_text", "").replace("{name}", char.name)
+            scene = ep_data.get("scene_description", "").replace("{name}", char.name)
+            title = ep_data.get("title", f"Episode {ep_num}")
+            emotion = ep_data.get("emotion", "excited")
+            
+            image_b64 = await generate_adventure_episode_gemini(
+                character_data={
+                    "name": char.name,
+                    "description": char.description,
+                    "key_feature": char.key_feature
+                },
+                scene_prompt=scene,
+                age_rules=age_rules_data["rules"],
+                reveal_image_b64=request.reveal_image_b64,
+                story_text=story,
+                character_emotion=emotion
+            )
+            
+            # Create A4 page with title and story
+            a4_page_b64 = create_a4_page_with_text(image_b64, story, title)
+            
+            # Upload to Firebase
+            page_url = upload_to_firebase(a4_page_b64, folder="adventure/pages")
+            
+            return {
+                "episode_num": ep_num,
+                "title": title,
+                "story": story,
+                "page_url": page_url,
+                "success": True
+            }
+        except Exception as e:
+            return {
+                "episode_num": ep_num,
+                "title": ep_data.get("title", f"Episode {ep_num}"),
+                "story": "",
+                "page_url": "",
+                "success": False,
+                "error": str(e)
+            }
+    
+    # Build tasks for all episodes
+    tasks = []
+    for i, ep in enumerate(request.episodes):
+        tasks.append(generate_single_episode(ep, i + 1))
+    
+    # Run all episodes in parallel
+    episode_results = await asyncio.gather(*tasks)
+    
+    # Sort by episode number to maintain order
+    episode_results = sorted(episode_results, key=lambda x: x["episode_num"])
+    
+    # --- 3. Build response ---
+    pages = []
+    
+    # Front cover is page 0
+    pages.append({
+        "page_num": 0,
+        "type": "cover",
+        "title": full_title,
+        "story": "",
+        "page_url": cover_url
+    })
+    
+    # Episodes
+    for ep in episode_results:
+        pages.append({
+            "page_num": ep["episode_num"],
+            "type": "episode",
+            "title": ep["title"],
+            "story": ep["story"],
+            "page_url": ep["page_url"],
+            "success": ep["success"]
+        })
+    
+    successful = sum(1 for ep in episode_results if ep["success"])
+    
+    return {
+        "title": full_title,
+        "total_pages": len(pages),
+        "successful_episodes": successful,
+        "failed_episodes": len(request.episodes) - successful,
+        "pages": pages
+    }
+
 @router.post("/test/gemini-reveal")
 async def test_gemini_reveal():
     """Test Gemini reveal generation with sample data"""
