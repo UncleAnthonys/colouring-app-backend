@@ -189,11 +189,20 @@ OUTPUT: Simple blob figures on pure white. ONLY the people."""
         # Special handling for alphabet themes
         if theme.startswith("alphabet_"):
             letter = theme.replace("alphabet_", "").upper()
+            best_object = {
+                'a': 'apple', 'b': 'ball', 'c': 'cat', 'd': 'dog', 'e': 'elephant',
+                'f': 'fish', 'g': 'goat', 'h': 'hat', 'i': 'ice cream', 'j': 'jellyfish',
+                'k': 'kite', 'l': 'lion', 'm': 'monkey', 'n': 'nose', 'o': 'owl',
+                'p': 'penguin', 'q': 'queen', 'r': 'rainbow', 's': 'star', 't': 'tiger',
+                'u': 'umbrella', 'v': 'violin', 'w': 'whale', 'x': 'xylophone',
+                'y': 'yo-yo', 'z': 'zebra'
+            }.get(letter.lower(), 'apple')
             return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
 
 DRAW:
 - The people from the photo as VERY simple blob shapes (round heads, simple body)
 - A big bold letter {letter} (plain block letter or bubble letter - NO face, NO arms, NO legs)
+- ONE simple {best_object} next to the letter
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
@@ -261,14 +270,21 @@ OUTPUT: Simple black outline figures on pure white. ONLY the people from the pho
         # Special handling for alphabet themes
         if theme.startswith("alphabet_"):
             letter = theme.replace("alphabet_", "").upper()
+            best_object = {
+                'a': 'apple', 'b': 'ball', 'c': 'cat', 'd': 'dog', 'e': 'elephant',
+                'f': 'fish', 'g': 'goat', 'h': 'hat', 'i': 'ice cream', 'j': 'jellyfish',
+                'k': 'kite', 'l': 'lion', 'm': 'monkey', 'n': 'nose', 'o': 'owl',
+                'p': 'penguin', 'q': 'queen', 'r': 'rainbow', 's': 'star', 't': 'tiger',
+                'u': 'umbrella', 'v': 'violin', 'w': 'whale', 'x': 'xylophone',
+                'y': 'yo-yo', 'z': 'zebra'
+            }.get(letter.lower(), 'apple')
             return f"""Create an EXTREMELY SIMPLE toddler alphabet colouring page for letter {letter}.
-
-CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, objects, or elements not in the original image.
 
 DRAW:
 - The people from the photo as VERY simple blob shapes (round heads, simple chunky body)
 - Plain simple clothing - NO patterns, NO costumes
 - A big bold letter {letter} (plain block letter or bubble letter - NO face, NO arms, NO legs)
+- ONE simple {best_object} next to the letter
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
@@ -337,14 +353,20 @@ OUTPUT: Simple blob figures with a basic outline of the main background object. 
         # Special handling for alphabet themes
         if theme.startswith("alphabet_"):
             letter = theme.replace("alphabet_", "").upper()
+            best_object = {
+                'a': 'apple', 'b': 'ball', 'c': 'cat', 'd': 'dog', 'e': 'elephant',
+                'f': 'fish', 'g': 'goat', 'h': 'hat', 'i': 'ice cream', 'j': 'jellyfish',
+                'k': 'kite', 'l': 'lion', 'm': 'monkey', 'n': 'nose', 'o': 'owl',
+                'p': 'penguin', 'q': 'queen', 'r': 'rainbow', 's': 'star', 't': 'tiger',
+                'u': 'umbrella', 'v': 'violin', 'w': 'whale', 'x': 'xylophone',
+                'y': 'yo-yo', 'z': 'zebra'
+            }.get(letter.lower(), 'apple')
             return f"""Create a SIMPLE alphabet colouring page for letter {letter} for a 4 year old.
-
-CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, objects, or elements not in the original image.
 
 DRAW:
 - The people from the photo as simple cute figures
 - A big bold letter {letter} (plain block letter or bubble letter - NO face, NO arms, NO legs)
-- 2-3 simple objects that start with {letter} (e.g. for E: elephant, egg)
+- A {best_object} and one other simple object that starts with {letter}
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
