@@ -599,67 +599,94 @@ Just the habitat scene with multiple {subject} hidden throughout to find."""
         
         return base_prompt
     
-    # Handle alphabet themes with age-specific prompts (mirrors photo mode)
+    # Handle alphabet themes with age-specific prompts
     if description.startswith("alphabet_"):
         letter = description.replace("alphabet_", "").upper()
+        letter_lower = letter.lower()
         
-        # UNDER 3 - blob letter character
+        # Best single object for each letter - hardcoded for consistency
+        best_object = {
+            'a': 'apple',
+            'b': 'ball',
+            'c': 'cat',
+            'd': 'dog',
+            'e': 'elephant',
+            'f': 'fish',
+            'g': 'goat',
+            'h': 'hat',
+            'i': 'ice cream',
+            'j': 'jellyfish',
+            'k': 'kite',
+            'l': 'lion',
+            'm': 'monkey',
+            'n': 'nose',
+            'o': 'owl',
+            'p': 'penguin',
+            'q': 'queen',
+            'r': 'rainbow',
+            's': 'star',
+            't': 'tiger',
+            'u': 'umbrella',
+            'v': 'violin',
+            'w': 'whale',
+            'x': 'xylophone',
+            'y': 'yo-yo',
+            'z': 'zebra',
+        }.get(letter_lower, 'apple')
+        
+        # UNDER 3 - big clear letter + one hardcoded object
         if age_level == "under_3":
             return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
 
 DRAW:
-- A big friendly letter {letter} CHARACTER with a cute face, arms and legs
-- ONE simple object that starts with {letter} next to it
+- A big bold letter {letter} taking up a large portion of the page (plain block letter or bubble letter - NO face, NO arms, NO legs)
+- ONE simple {best_object} next to it
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
 - NO pink cheeks, NO blush, NO rosy cheeks - pure black lines only
 - EXTREMELY THICK black outlines
-- Blob/kawaii style - super rounded and chunky
-- Faces: just dots for eyes, simple curve for mouth
+- The letter must be clearly recognizable as {letter}
 - Maximum 8-10 colourable areas TOTAL
 
 BACKGROUND:
 - PURE WHITE - absolutely nothing else
 
-OUTPUT: Simple blob letter {letter} character with one {letter} object on pure white."""
+OUTPUT: Big clear letter {letter} with one {best_object} on pure white. The letter must NOT have a face, arms, or legs."""
 
-        # AGE 3 - simple letter character
+        # AGE 3 - big clear letter + one hardcoded object
         if age_level == "age_3":
             return f"""Create an EXTREMELY SIMPLE toddler alphabet colouring page for letter {letter}.
 
 DRAW:
-- A big friendly letter {letter} CHARACTER with a cute face, arms and legs
-- 1-2 simple objects that start with {letter}
+- A big bold letter {letter} taking up a large portion of the page (plain block letter or bubble letter - NO face, NO arms, NO legs)
+- ONE simple {best_object} next to it
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
 - NO pink cheeks, NO blush, NO rosy cheeks - pure black lines only
 - EXTREMELY THICK black outlines
-- Blob/kawaii style - super rounded and chunky figures
-- Faces: just dots for eyes, simple curve for mouth
+- The letter must be clearly recognizable as {letter}
 - Maximum 10-12 colourable areas TOTAL
 
 BACKGROUND:
 - PURE WHITE - absolutely nothing else
 
-OUTPUT: Simple friendly letter {letter} character with a couple of {letter} objects on pure white."""
+OUTPUT: Big clear letter {letter} with one {best_object} on pure white. The letter must NOT have a face, arms, or legs."""
 
-        # AGE 4 - letter character with more objects
+        # AGE 4 - big clear letter + a couple objects
         if age_level == "age_4":
             return f"""Create a SIMPLE alphabet colouring page for letter {letter} for a 4 year old.
 
 DRAW:
-- 1-2 cute children in simple outfits
-- A big friendly letter {letter} CHARACTER with a cute face, arms and legs standing with them
-- 2-3 simple objects that start with {letter}
+- A big bold letter {letter} taking up a large portion of the page (plain block letter or bubble letter - NO face, NO arms, NO legs)
+- A {best_object} and one other simple object that starts with {letter}
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
 - NO pink cheeks, NO blush, NO rosy cheeks - pure black lines only
 - THICK black outlines
-- Simple rounded cartoon figures
-- The letter {letter} must be LARGE and clearly visible
+- The letter {letter} must be LARGE and clearly recognizable
 - Maximum 15-18 colourable areas
 
 NO TEXT - do not write any words or labels
@@ -667,19 +694,18 @@ NO TEXT - do not write any words or labels
 BACKGROUND:
 - PURE WHITE - no ground, no scenery
 
-OUTPUT: Simple figures with friendly letter {letter} character and a few {letter} objects. No text."""
+OUTPUT: Big clear letter {letter} with a {best_object} and one other {letter} object. The letter must NOT have a face, arms, or legs. No text."""
 
-        # AGE 5 - costumes, big letter (no arms/legs), more objects
+        # AGE 5 - big letter + children in costumes + objects
         if age_level == "age_5":
             return f"""Create an alphabet colouring page for letter {letter} for a 5 year old.
 
 DRAW:
+- A big bold letter {letter} displayed prominently in the scene (plain block letter or bubble letter - NO face, NO arms, NO legs)
 - 1-2 cute children wearing simple COSTUMES that start with {letter}
-- A big bold letter {letter} displayed prominently in the scene (NOT a character - just the letter)
 - 3-4 objects that start with {letter} scattered around the scene
 
 IMPORTANT: Do NOT put the letter {letter} printed on clothing - dress them in themed COSTUMES instead
-The letter {letter} should be a large decorative letter in the scene, NOT a character with face/arms/legs
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading
@@ -694,15 +720,15 @@ BACKGROUND:
 - MINIMAL - simple ground line, maybe 1-2 clouds
 - Keep mostly white
 
-OUTPUT: Children in {letter}-themed costumes with a large letter {letter} and several {letter} objects."""
+OUTPUT: Large clear letter {letter} with children in costumes and several {letter} objects. The letter must NOT have a face, arms, or legs."""
 
         # AGE 6 - themed scene with prominent letter
         if age_level == "age_6":
             return f"""Create an alphabet colouring page for letter {letter} for a 6 year old.
 
 DRAW:
+- A large bold letter {letter} prominently placed in the scene (block letter or bubble letter - NO face, NO arms, NO legs)
 - 1-2 children wearing costumes or outfits themed around {letter}
-- A large decorative letter {letter} prominently placed in the scene (NOT a character - just the letter)
 - 4-5 objects that start with {letter} arranged in a fun scene
 
 STYLE:
@@ -717,15 +743,15 @@ NO TEXT - do not write any words or labels (only the letter {letter} itself)
 BACKGROUND:
 - Simple themed background related to {letter}
 
-OUTPUT: Fun {letter}-themed scene with children, large letter {letter}, and multiple {letter} objects."""
+OUTPUT: Fun {letter}-themed scene with large letter {letter}, children, and multiple {letter} objects. The letter must NOT have a face, arms, or legs."""
 
         # AGE 7-8 - detailed scene
         if age_level in ("age_7", "age_8"):
             return f"""Create a detailed alphabet colouring page for letter {letter} for a {age_level.replace('age_', '')} year old.
 
 DRAW:
+- A large decorative letter {letter} as a focal point (ornate block letter or bubble letter - NO face, NO arms, NO legs)
 - A creative scene where EVERYTHING relates to the letter {letter}
-- A large decorative letter {letter} as a focal point (NOT a character - just the letter, can be ornate/decorated)
 - 5-6 objects that start with {letter} integrated naturally into the scene
 - Optional: 1-2 children interacting with the {letter} objects
 
@@ -738,15 +764,15 @@ STYLE:
 
 NO TEXT - do not write any words or labels (only the letter {letter} itself)
 
-OUTPUT: Detailed {letter}-themed scene with decorative letter and many {letter} objects to discover."""
+OUTPUT: Detailed {letter}-themed scene with decorative letter and many {letter} objects. The letter must NOT have a face, arms, or legs."""
 
         # AGE 9-10 - complex educational scene
         if age_level in ("age_9", "age_10"):
             return f"""Create a complex alphabet colouring page for letter {letter} for a {age_level.replace('age_', '')} year old.
 
 DRAW:
+- A large artistic letter {letter} as centrepiece (ornate block letter or bubble letter - NO face, NO arms, NO legs)
 - An elaborate scene built around the letter {letter}
-- A large artistic/decorative letter {letter} as centrepiece (NOT a character - ornate block letter or bubble letter)
 - 6-8 objects that start with {letter} woven throughout the scene
 - Detailed backgrounds and environments related to {letter} words
 
@@ -760,7 +786,7 @@ STYLE:
 
 NO TEXT - do not write any words or labels (only the letter {letter} itself)
 
-OUTPUT: Complex detailed {letter}-themed illustration with artistic letter and many {letter} objects."""
+OUTPUT: Complex detailed {letter}-themed illustration with artistic letter and many {letter} objects. The letter must NOT have a face, arms, or legs."""
 
         # Check in themes section for text_only themes
     if "themes" in CONFIG and description in CONFIG["themes"]:
