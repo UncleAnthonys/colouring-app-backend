@@ -218,7 +218,7 @@ OUTPUT: Simple blob figures with friendly letter {letter} character on pure whit
 
         return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
 
-CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, objects, or elements not in the original image.
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add extra people, characters, animals, or objects not in the original image.
 
 DRAW:
 - The people from the photo as VERY simple blob shapes (round heads, simple body)
@@ -303,7 +303,7 @@ OUTPUT: Simple black outline blob figures standing next to a friendly letter {le
         
         return f"""Create an EXTREMELY SIMPLE toddler colouring page.
 
-CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, objects, or elements not in the original image.
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add extra people, characters, animals, or objects not in the original image.
 
 STYLE: "My First Colouring Book" - for 3 year olds.
 
@@ -384,11 +384,11 @@ OUTPUT: Simple figures with friendly letter character and a few {letter} objects
         
         return f"""Create a SIMPLE colouring page for a 4 year old.
 
-CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, objects, or elements not in the original image.
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add extra people, characters, animals, or objects not in the original image.
 
 DRAW:
 - The people from the photo as simple figures with basic {theme_name} costumes
-- One simple {theme_name} character/object next to them
+- One simple {theme_name} object next to them
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture, NO gradients
@@ -467,7 +467,7 @@ OUTPUT: People in {letter}-themed costumes with friendly letter character and se
 
 DRAW:
 - The people from the photo wearing simple {theme_name} costumes (basic outfits, not elaborate)
-- One {theme_name} character/object next to them
+- One {theme_name} object next to them
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture
@@ -840,7 +840,7 @@ OUTPUT: Complex detailed {letter}-themed illustration with artistic letter and m
     if age_level == "age_3":
         return f"""Create an EXTREMELY SIMPLE toddler colouring page.
 
-CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, objects, or elements not in the original image.
+CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add extra people, characters, animals, or objects not in the original image.
 
 STYLE: "My First Colouring Book" - for 3 year olds.
 
