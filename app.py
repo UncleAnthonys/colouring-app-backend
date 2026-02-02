@@ -193,7 +193,7 @@ OUTPUT: Simple blob figures on pure white. ONLY the people."""
 
 DRAW:
 - The people from the photo as VERY simple blob shapes (round heads, simple body)
-- A big friendly letter {letter} CHARACTER with a cute face, arms and legs standing next to them
+- A big bold letter {letter} (plain block letter or bubble letter - NO face, NO arms, NO legs)
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
@@ -268,7 +268,7 @@ CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, objec
 DRAW:
 - The people from the photo as VERY simple blob shapes (round heads, simple chunky body)
 - Plain simple clothing - NO patterns, NO costumes
-- A big friendly letter {letter} CHARACTER standing next to them with a cute face, arms and legs
+- A big bold letter {letter} (plain block letter or bubble letter - NO face, NO arms, NO legs)
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
@@ -343,7 +343,7 @@ CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, objec
 
 DRAW:
 - The people from the photo as simple cute figures
-- A big friendly letter {letter} CHARACTER with a cute face, arms and legs standing with them
+- A big bold letter {letter} (plain block letter or bubble letter - NO face, NO arms, NO legs)
 - 2-3 simple objects that start with {letter} (e.g. for E: elephant, egg)
 
 STYLE:
@@ -421,7 +421,7 @@ OUTPUT: Simple figures with minimal background. Photo accurate."""
 
 DRAW:
 - The people from the photo wearing simple COSTUMES that start with {letter} (e.g. for E: explorer outfit with hat)
-- A big friendly letter {letter} CHARACTER with a cute face, arms and legs
+- A big bold letter {letter} displayed prominently (plain block letter or bubble letter - NO face, NO arms, NO legs)
 - 3-4 objects that start with {letter} (e.g. for E: elephant, eggs, envelope)
 
 IMPORTANT: Do NOT put the letter {letter} printed on clothing - dress them in themed COSTUMES instead
