@@ -704,13 +704,19 @@ Make it look like a real children's coloring book cover you'd see in a shop!
                 "error": str(e)
             }
     
-    # Build tasks for all episodes
-    tasks = []
-    for i, ep in enumerate(request.episodes):
-        tasks.append(generate_single_episode(ep, i + 1))
+    # Generate episodes in batches of 3 to avoid API rate limits
+    BATCH_SIZE = 3
+    episode_results = []
     
-    # Run all episodes in parallel
-    episode_results = await asyncio.gather(*tasks)
+    for batch_start in range(0, len(request.episodes), BATCH_SIZE):
+        batch = request.episodes[batch_start:batch_start + BATCH_SIZE]
+        tasks = []
+        for i, ep in enumerate(batch):
+            ep_num = batch_start + i + 1
+            tasks.append(generate_single_episode(ep, ep_num))
+        
+        batch_results = await asyncio.gather(*tasks)
+        episode_results.extend(batch_results)
     
     # Sort by episode number to maintain order
     episode_results = sorted(episode_results, key=lambda x: x["episode_num"])
