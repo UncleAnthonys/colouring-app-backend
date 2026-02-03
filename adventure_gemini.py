@@ -369,12 +369,32 @@ IMPORTANT: Look at the drawing! If it is a girl with brown hair and a rainbow sk
             )
         )
         
-        # Extract image from response
-        for part in response.candidates[0].content.parts:
-            if hasattr(part, 'inline_data') and part.inline_data:
-                return base64.b64encode(part.inline_data.data).decode('utf-8')
+        # Extract image from response (with retry)
+        for attempt in range(3):
+            if attempt > 0:
+                import asyncio
+                print(f"[REVEAL] Retry attempt {attempt + 1}/3...")
+                response = client.models.generate_content(
+                    model='gemini-2.5-flash-image',
+                    contents=contents,
+                    config=types.GenerateContentConfig(
+                        response_modalities=['IMAGE', 'TEXT'],
+                        image_config=types.ImageConfig(
+                            aspect_ratio='3:4',
+                        )
+                    )
+                )
+            
+            if (response.candidates 
+                and response.candidates[0].content 
+                and response.candidates[0].content.parts):
+                for part in response.candidates[0].content.parts:
+                    if hasattr(part, 'inline_data') and part.inline_data:
+                        return base64.b64encode(part.inline_data.data).decode('utf-8')
+            
+            print(f"[REVEAL] Attempt {attempt + 1} returned no image")
         
-        raise HTTPException(status_code=500, detail='No image generated')
+        raise HTTPException(status_code=500, detail='No image generated after 3 attempts')
         
     except ImportError as e:
         raise HTTPException(status_code=500, detail=f'google-genai package not installed: {str(e)}')
@@ -616,12 +636,32 @@ FINAL CHECK - CRITICAL RULES:
             )
         )
         
-        # Extract image from response
-        for part in response.candidates[0].content.parts:
-            if hasattr(part, 'inline_data') and part.inline_data:
-                return base64.b64encode(part.inline_data.data).decode('utf-8')
+        # Extract image from response (with retry)
+        for attempt in range(3):
+            if attempt > 0:
+                import asyncio
+                print(f"[REVEAL] Retry attempt {attempt + 1}/3...")
+                response = client.models.generate_content(
+                    model='gemini-2.5-flash-image',
+                    contents=contents,
+                    config=types.GenerateContentConfig(
+                        response_modalities=['IMAGE', 'TEXT'],
+                        image_config=types.ImageConfig(
+                            aspect_ratio='3:4',
+                        )
+                    )
+                )
+            
+            if (response.candidates 
+                and response.candidates[0].content 
+                and response.candidates[0].content.parts):
+                for part in response.candidates[0].content.parts:
+                    if hasattr(part, 'inline_data') and part.inline_data:
+                        return base64.b64encode(part.inline_data.data).decode('utf-8')
+            
+            print(f"[REVEAL] Attempt {attempt + 1} returned no image")
         
-        raise HTTPException(status_code=500, detail='No image generated')
+        raise HTTPException(status_code=500, detail='No image generated after 3 attempts')
         
     except ImportError as e:
         raise HTTPException(status_code=500, detail=f'google-genai package not installed: {str(e)}')
