@@ -571,12 +571,15 @@ AGE 7-8 DETAIL:
 - More intricate patterns okay"""
         
         return base_prompt
-
     # THEMED MODE - use master prompt + overlays
     parts = [CONFIG["master_base_prompt"]["prompt"]]
-    
+
     if age_level in CONFIG["age_levels"]:
         parts.append("\n\n" + CONFIG["age_levels"][age_level]["overlay"])
+
+    # Add face accuracy for age 6+ themed modes
+    if age_level not in ["under_3", "age_3", "age_4", "age_5"]:
+        parts.append("\n\nFACE ACCURACY (HIGHEST PRIORITY):\n- TRACE the exact facial contours from the photo - do NOT reinterpret or stylize\n- Match the PRECISE nose shape, eye spacing, mouth width, chin shape for EVERY person\n- Copy the EXACT hairstyle for each person - length, parting, texture\n- A parent MUST instantly recognise their specific children\n- Keep real clothing details - specific shoes, patterns, stripes, accessories\n- Keep EVERY person visible in the photo - do NOT remove anyone (including babies being held)")
     
     if custom_theme:
         parts.append("\n\n" + build_custom_theme_overlay(custom_theme))
@@ -693,6 +696,36 @@ Just the habitat scene with multiple {subject} hidden throughout to find."""
             'z': 'zebra',
         }.get(letter_lower, 'apple')
         
+        # Full objects list per letter for ages 6+
+        letter_objects = {
+            'a': 'apple, airplane, ant, alligator, anchor, arrow, acorn, avocado, axe, ambulance, armadillo, angelfish, apron',
+            'b': 'ball, butterfly, banana, bear, boat, book, balloon, bee, bell, bird, bicycle, bucket, bus, basket, bow, bridge, bone',
+            'c': 'cat, car, cake, castle, crown, cow, cloud, crab, candle, carrot, caterpillar, clock, cup, compass, cherry, camel',
+            'd': 'dog, dinosaur, dolphin, drum, duck, daisy, diamond, door, dragonfly, dice, deer, dragon, domino, dove',
+            'e': 'elephant, egg, envelope, eagle, ear, earth, elf, emerald, easel, emu, eye, engine',
+            'f': 'fish, flower, frog, flag, feather, fox, fire, flamingo, fan, fence, fork, fairy, flute, fern',
+            'g': 'giraffe, grapes, guitar, ghost, goat, glasses, globe, gorilla, gift, goldfish, garden gate, gem, glove, grasshopper',
+            'h': 'hat, horse, house, heart, helicopter, hippo, hammer, harp, hedgehog, hen, honey jar, hook, hose, hummingbird, harmonica',
+            'i': 'ice cream, igloo, iguana, iron, island, ivy, icicle, insect, ink bottle',
+            'j': 'jellyfish, jam jar, jigsaw puzzle, jug, jacket, jet, jewel, jump rope, jester hat',
+            'k': 'kite, key, kangaroo, king, kitten, kettle, kayak, koala, knight shield, kazoo',
+            'l': 'lion, ladder, leaf, lemon, lighthouse, lizard, lamp, lollipop, log, lobster, lock, llama, lantern',
+            'm': 'monkey, moon, mushroom, mouse, mountain, mermaid, mittens, magnet, map, muffin, medal, microscope, mailbox, mask, marble',
+            'n': 'nest, needle, newt, net, necklace, notebook, nut, narwhal',
+            'o': 'octopus, orange, owl, otter, onion, orchid, ostrich, orca, ornament, oar',
+            'p': 'penguin, pizza, parrot, pumpkin, piano, pear, pig, pirate hat, paintbrush, pencil, popcorn, panda, present, puzzle piece, palm tree',
+            'q': 'queen, quilt, question mark, quail, quiver of arrows',
+            'r': 'rocket, rainbow, robot, rabbit, rose, ring, ruler, rain cloud, reindeer, rooster, rope, racket, rhinoceros, radio',
+            's': 'star, sun, snake, ship, strawberry, snowman, scissors, shell, spider, skateboard, sword, sunflower, snail, scarf, seahorse',
+            't': 'turtle, train, tree, trumpet, tiger, telescope, tent, tractor, teapot, teddy bear, tooth, tomato, treasure chest, tambourine',
+            'u': 'umbrella, unicorn, ukulele, UFO, uniform',
+            'v': 'violin, volcano, vase, van, vine, vulture, valentine heart',
+            'w': 'whale, watermelon, windmill, wagon, watch, wizard hat, wolf, worm, web, window, watering can, walrus, wings, wand',
+            'x': 'xylophone, x-ray, x marks the spot',
+            'y': 'yacht, yo-yo, yak, yarn ball',
+            'z': 'zebra, zip, zoo gate, zigzag, zeppelin',
+        }.get(letter_lower, 'apple, airplane, ant')
+        
         # UNDER 3 - big clear letter + one hardcoded object
         if age_level == "under_3":
             return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
@@ -788,7 +821,8 @@ OUTPUT: Large clear letter {letter} with children in costumes and several {lette
 DRAW:
 - A large bold letter {letter} prominently placed in the scene (block letter or bubble letter - NO face, NO arms, NO legs)
 - 1-2 children wearing costumes or outfits themed around {letter}
-- 4-5 objects that start with {letter} arranged in a fun scene
+- 6-8 objects from this list: {letter_objects}
+- ONLY draw objects from the list above - nothing else
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading
@@ -811,14 +845,15 @@ OUTPUT: Fun {letter}-themed scene with large letter {letter}, children, and mult
 DRAW:
 - A large decorative letter {letter} as a focal point (ornate block letter or bubble letter - NO face, NO arms, NO legs)
 - A creative scene where EVERYTHING relates to the letter {letter}
-- 5-6 objects that start with {letter} integrated naturally into the scene
+- 8-10 objects from this list: {letter_objects}
+- ONLY draw objects from the list above - nothing else
 - Optional: 1-2 children interacting with the {letter} objects
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading
 - NO pink cheeks, NO blush, NO rosy cheeks - pure black lines only
 - Medium black outlines with more detail
-- More intricate patterns and details appropriate for older children
+
 - Maximum 30-40 colourable areas
 
 NO TEXT - do not write any words or labels (only the letter {letter} itself)
@@ -832,8 +867,9 @@ OUTPUT: Detailed {letter}-themed scene with decorative letter and many {letter} 
 DRAW:
 - A large artistic letter {letter} as centrepiece (ornate block letter or bubble letter - NO face, NO arms, NO legs)
 - An elaborate scene built around the letter {letter}
-- 6-8 objects that start with {letter} woven throughout the scene
-- Detailed backgrounds and environments related to {letter} words
+- 10-12 objects from this list: {letter_objects}
+- ONLY draw objects from the list above - nothing else
+
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading
