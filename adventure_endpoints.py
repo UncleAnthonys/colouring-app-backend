@@ -9,6 +9,7 @@ Complete endpoint system for:
 
 from adventure_gemini import generate_adventure_reveal_gemini, generate_adventure_episode_gemini, generate_personalized_stories, create_a4_page_with_text, create_front_cover
 from character_extraction_gemini import extract_character_with_extreme_accuracy
+from firebase_utils import upload_to_firebase
 import google.generativeai as genai
 import os
 import base64
@@ -263,10 +264,14 @@ async def extract_and_reveal(
             original_drawing_b64=image_b64
         )
         
+
+        # Upload reveal image to Firebase and get URL
+        reveal_image_url = upload_to_firebase(reveal_image, folder="adventure/reveals")
         return {
             'character': extraction_result['character'],
             'reveal_description': extraction_result['reveal_description'],
             'reveal_image': reveal_image,
+            'reveal_image_url': reveal_image_url,
             'extraction_time': extraction_result['extraction_time'],
             'model_used': 'gemini-2.5-flash',
             'source_type': extraction_result.get('source_type', 'drawing')
