@@ -232,8 +232,65 @@ async def generate_adventure_reveal_gemini(character_data: dict, original_drawin
         
         description = character_data.get("description", "")
         character_name = character_data.get("name", "Character")
+        source_type = character_data.get("source_type", "drawing")
         
-        prompt = f'''I am showing you a CHILDS DRAWING. Transform this EXACT character into a Disney/Pixar 3D movie character.
+        if source_type == "photo":
+            prompt = f'''I am showing you a REAL PHOTOGRAPH of a subject. Transform this EXACT subject into a Disney/Pixar 3D movie character.
+
+CHARACTER NAME: {character_name}
+
+===== CRITICAL: MATCH THE PHOTO SUBJECT =====
+Look at the photo I am showing you. Your output MUST be a Pixar 3D version of THIS EXACT subject:
+- If it is a STUFFED TOY / PLUSH → Bring it to LIFE like Toy Story (Lotso, Woody)
+- If it is a REAL ANIMAL / PET → Anthropomorphize like Zootopia, Bolt, Puss in Boots
+- If it is a CHILD / PERSON → Pixar-stylize like Inside Out, Coco, Brave
+- If it is an OBJECT → Personify like Cars, Forky
+- MATCH what you SEE in the photo!
+
+===== CHARACTER ANALYSIS =====
+{description}
+
+===== STYLE: PIXAR/DISNEY 3D =====
+Transform the photo subject into a character that looks like it belongs in:
+- Toy Story (for toys/plush - bring them to LIFE)
+- Zootopia (for animals - anthropomorphize with personality)
+- Inside Out / Coco (for humans - stylize with Pixar charm)
+- Cars / Forky (for objects - personify)
+
+===== THE 3 MOST IMPORTANT RULES =====
+
+**RULE 1 - MATCH THE PHOTO SUBJECT:**
+- Photo shows a STUFFED MONKEY → Output is a Pixar 3D MONKEY CHARACTER (alive, expressive, same proportions)
+- Photo shows a DOG → Output is a Pixar 3D DOG (like Bolt or Dug from Up)
+- Photo shows a CHILD → Output is a Pixar 3D CHILD (like Riley from Inside Out)
+- Keep ALL identifying features: colors, proportions, markings, texture
+
+**RULE 2 - EXACT FEATURES FROM PHOTO:**
+- Fur/hair color and pattern from the photo
+- Body proportions from the photo (long arms stay long, big head stays big)
+- Eye color and face shape from the photo
+- Any distinctive markings, patterns, or accessories
+- ALL details visible in the photo
+
+**RULE 3 - PIXAR QUALITY:**
+- Big expressive Disney/Pixar eyes (even if subject has small bead eyes - enlarge and add life!)
+- Smooth appealing 3D surfaces with appropriate texture
+- Emotion and personality in the face - JOYFUL and ALIVE
+- Professional movie-quality rendering
+
+===== REQUIREMENTS =====
+- Celebration background with confetti and sparkles
+- Portrait orientation - show FULL figure
+- ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image
+- ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image
+- This is original art - do not copy or include any watermarks from any source
+- NO TEXT anywhere on image
+- Character looks JOYFUL and ALIVE
+- Character should be STANDING/POSED (even if photo shows subject sitting/lying)
+
+IMPORTANT: Look at the photo! Transform the REAL subject into a living, breathing Pixar character!'''
+        else:
+            prompt = f'''I am showing you a CHILDS DRAWING. Transform this EXACT character into a Disney/Pixar 3D movie character.
 
 CHARACTER NAME: {character_name}
 
@@ -325,7 +382,7 @@ IMPORTANT: Look at the drawing! If it is a girl with brown hair and a rainbow sk
         raise HTTPException(status_code=500, detail=f'Reveal generation failed: {str(e)}')
 
 
-async def generate_adventure_episode_gemini(character_data: dict, scene_prompt: str, age_rules: str, reveal_image_b64: str = None, story_text: str = None, character_emotion: str = None) -> str:
+async def generate_adventure_episode_gemini(character_data: dict, scene_prompt: str, age_rules: str, reveal_image_b64: str = None, story_text: str = None, character_emotion: str = None, source_type: str = "drawing") -> str:
     """
     Generate black & white coloring page using the REVEAL IMAGE as reference.
     
@@ -406,7 +463,29 @@ Use the reference image for SHAPE AND FORM ONLY - completely ignore all colors:
 - Distinctive features (number of eyes, horns, fur texture, etc.)
 - Clothing style and accessories (but NOT their colors)
 
-🚨 CRITICAL - DO NOT ADD OR REMOVE BODY PARTS:
+'''
+        
+        # Add source-type specific guidance
+        if source_type == "photo":
+            full_prompt += f'''
+🚨 CRITICAL - THIS CHARACTER IS BASED ON A REAL PHOTO (toy/pet/person):
+- Draw the character EXACTLY as they appear in the reference - DO NOT add new clothing or accessories
+- If the character is an ANIMAL (dog, cat, etc): Draw them AS AN ANIMAL - no human clothes, no dresses, no shirts
+  - Keep their natural markings, spots, patches visible as line art areas to color
+  - They can stand on hind legs (anthropomorphized pose) but their BODY stays animal
+  - Fur patterns and markings become distinct outlined areas for coloring
+- If the character is a TOY/PLUSH: Keep their ORIGINAL outfit from the reference
+  - Do NOT change or replace their clothing - it is part of who they are
+  - A ballerina toy stays in their ballet dress, a superhero toy keeps their cape
+- If the character is a PERSON: Keep their actual clothing from the reference
+- The reference shows EXACTLY what this character looks like - match it precisely
+
+'''
+        else:
+            full_prompt += '''
+'''
+        
+        full_prompt += f'''🚨 CRITICAL - DO NOT ADD OR REMOVE BODY PARTS:
 - Count the arms in the reference - draw EXACTLY that many arms (usually 2)
 - Count the legs in the reference - draw EXACTLY that many legs (usually 2)
 - DO NOT add extra arms, tails, horns, wings, or appendages that aren't in the reference

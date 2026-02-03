@@ -13,6 +13,114 @@ genai.configure(api_key=os.environ.get("GOOGLE_API_KEY"))
 model = genai.GenerativeModel('gemini-2.5-flash')
 
 
+def detect_image_type(image_data: bytes) -> str:
+    """
+    Detect whether the uploaded image is a child's drawing or a real photo.
+    Uses pure image analysis - NO AI calls, zero cost.
+    
+    Photos: high color variety, smooth gradients, natural noise, many unique colors
+    Drawings: limited color palette, flat areas, harsh edges, paper-white backgrounds
+    
+    Returns: 'drawing' or 'photo'
+    """
+    from PIL import Image
+    import io
+    
+    try:
+        img = Image.open(io.BytesIO(image_data)).convert('RGB')
+        
+        # Resize to small size for fast analysis
+        thumb = img.resize((200, 200), Image.LANCZOS)
+        pixels = list(thumb.getdata())
+        total_pixels = len(pixels)
+        
+        # --- METRIC 1: Unique color count ---
+        # Photos have thousands of unique colors, drawings have very few
+        unique_colors = len(set(pixels))
+        color_ratio = unique_colors / total_pixels
+        
+        # --- METRIC 2: Near-white pixel ratio ---
+        # Kids' drawings on paper have lots of near-white (paper background)
+        near_white = sum(1 for r, g, b in pixels if r > 230 and g > 230 and b > 230)
+        white_ratio = near_white / total_pixels
+        
+        # --- METRIC 3: Color saturation distribution ---
+        # Drawings tend to have either very low (paper) or very high (crayon) saturation
+        # Photos have a smooth distribution of mid-range saturations
+        saturations = []
+        for r, g, b in pixels:
+            max_c = max(r, g, b)
+            min_c = min(r, g, b)
+            sat = (max_c - min_c) / max_c if max_c > 0 else 0
+            saturations.append(sat)
+        avg_sat = sum(saturations) / len(saturations)
+        
+        # --- METRIC 4: Gradient smoothness ---
+        # Photos have smooth gradients between neighboring pixels
+        # Drawings have abrupt color changes
+        import random
+        random.seed(42)
+        width, height = thumb.size
+        pixel_array = list(thumb.getdata())
+        
+        diffs = []
+        for _ in range(500):
+            x = random.randint(1, width - 2)
+            y = random.randint(1, height - 2)
+            idx = y * width + x
+            idx_right = idx + 1
+            idx_down = idx + width
+            
+            r1, g1, b1 = pixel_array[idx]
+            r2, g2, b2 = pixel_array[idx_right]
+            r3, g3, b3 = pixel_array[idx_down]
+            
+            diff_h = abs(r1-r2) + abs(g1-g2) + abs(b1-b2)
+            diff_v = abs(r1-r3) + abs(g1-g3) + abs(b1-b3)
+            diffs.append((diff_h + diff_v) / 2)
+        
+        avg_diff = sum(diffs) / len(diffs)
+        
+        # --- SCORING ---
+        # Each metric votes photo or drawing
+        score = 0  # positive = photo, negative = drawing
+        
+        # Color diversity: >40% unique = almost certainly photo
+        if color_ratio > 0.40:
+            score += 2
+        elif color_ratio > 0.20:
+            score += 1
+        elif color_ratio < 0.05:
+            score -= 2
+        else:
+            score -= 1
+        
+        # White background: >30% near-white suggests paper/drawing
+        if white_ratio > 0.40:
+            score -= 2
+        elif white_ratio > 0.25:
+            score -= 1
+        elif white_ratio < 0.10:
+            score += 1
+        
+        # Smooth gradients: photos have moderate avg diffs (5-30), drawings have extremes
+        if 5 < avg_diff < 35:
+            score += 1
+        elif avg_diff < 3 or avg_diff > 50:
+            score -= 1
+        
+        result = "photo" if score > 0 else "drawing"
+        
+        print(f"\n[IMAGE DETECTION] Result: {result}")
+        print(f"  Color ratio: {color_ratio:.3f} | White ratio: {white_ratio:.3f} | Avg gradient: {avg_diff:.1f} | Score: {score}")
+        
+        return result
+        
+    except Exception as e:
+        print(f"[IMAGE DETECTION] Error: {e}, defaulting to drawing")
+        return "drawing"
+
+
 async def extract_character_with_extreme_accuracy(image_data: bytes, character_name: str) -> str:
     """
     Extract character details with EXTREME ACCURACY focusing on:
@@ -21,9 +129,258 @@ async def extract_character_with_extreme_accuracy(image_data: bytes, character_n
     - Precise counting of elements
     - Distinctive features preservation
     - UNIQUE ATTACHMENTS (bolts, antennae, wings, etc.)
+    
+    Automatically detects whether input is a drawing or photo and adapts accordingly.
     """
     
     image_b64 = base64.b64encode(image_data).decode('utf-8')
+    
+    # Detect if this is a drawing or a photo (pure image analysis, zero cost)
+    image_type = detect_image_type(image_data)
+    print(f"\n[DETECTION] Image type: {image_type}")
+    
+    if image_type == "photo":
+        return await _extract_from_photo(image_b64, character_name)
+    
+    return await _extract_from_drawing(image_b64, character_name)
+
+
+async def _extract_from_photo(image_b64: str, character_name: str) -> dict:
+    """
+    Extract character details from a REAL PHOTO (toy, pet, child, object).
+    Adapts analysis for physical subjects rather than drawn characters.
+    """
+    
+    prompt = f"""You are analyzing a REAL PHOTOGRAPH of a subject named "{character_name}" to create a PERFECT 3D Disney/Pixar character version.
+
+This is NOT a child's drawing - it is a photograph of a real physical subject (could be a stuffed toy, a pet, a child, or any real object). Your job is to analyze it with extreme detail so we can create an amazing Pixar-style 3D character from it.
+
+# CRITICAL ANALYSIS PRINCIPLES
+
+## 1. SUBJECT IDENTIFICATION
+What is the subject?
+- Stuffed animal / plush toy (specify animal type)
+- Real pet / animal (specify species, breed if applicable)
+- Child / person
+- Action figure / doll / toy
+- Real-world object brought to life
+- Other (describe)
+
+**This determines how to "Pixar-ify" the character!**
+- Plush toy → Bring to life like Toy Story (Lotso, Woody, Forky)
+- Pet/animal → Anthropomorphize like Zootopia, Finding Nemo, Puss in Boots
+- Child/person → Stylize like Inside Out, Coco, Brave
+- Object → Give personality like Cars, Spoon from Toy Story
+
+## 2. PROPORTIONAL MEASUREMENTS (MOST IMPORTANT!)
+Measure EVERYTHING relative to the total figure:
+
+**HEAD-TO-BODY RATIO:**
+- What % of total height is the head?
+- Is this distinctive? (e.g., plush toys often have oversized heads)
+
+**LIMB PROPORTIONS:**
+- Arms/legs/paws: What % of total height?
+- Are they unusually long, short, floppy, stiff?
+- Record if proportions are UNUSUAL - these become story character traits!
+
+**BODY SHAPE:**
+- Round? Elongated? Squat? Lanky?
+- What makes this body shape distinctive?
+
+## 3. SURFACE & TEXTURE (Critical for photos!)
+- Fur texture: fluffy, smooth, shaggy, curly, wiry?
+- Material: plush fabric, real fur, skin, plastic, metal?
+- Color patterns: solid, multi-toned, patches, gradients?
+- Wear and character: any loved-looking patches, worn areas (adds personality!)
+
+## 4. FACIAL FEATURES
+- **Eyes:** Size, color, shape, material (bead eyes? glass? real?)
+- **Nose:** Shape, color, texture
+- **Mouth:** Visible? Stitched? Expression?
+- **Ears:** Shape, position, size relative to head
+- **Expression:** What emotion does the face convey?
+
+## 5. COLOR PALETTE (Precise!)
+Record all colors from top to bottom:
+1. Head/face colors
+2. Body colors
+3. Limb colors
+4. Any contrasting areas (paws, belly, face patches)
+5. Eye color
+
+## 6. DISTINCTIVE FEATURES (What makes THIS subject unique?)
+- Unusual proportions (extra long arms, tiny body, huge head)
+- Special markings or patterns
+- Accessories or clothing
+- Pose or personality cues
+- Texture contrasts (dark face, light body, etc.)
+
+**These become the CHARACTER TRAITS that drive personalized stories!**
+**Treat every distinctive feature as an INTENTIONAL character trait!**
+
+## 7. POSE AND POSITION
+- How is the subject positioned?
+- What personality does the pose suggest?
+- Relaxed? Playful? Alert? Floppy?
+
+## 8. CHARACTER TYPE FOR PIXAR TRANSFORMATION
+Based on what you see, how should this be rendered in Pixar style?
+- If stuffed animal → Alive toy (Toy Story style) with stitching details and fabric texture
+- If real animal → Anthropomorphized animal (Zootopia style) standing upright with expressions
+- If child → Pixar-stylized human (Inside Out, Coco style)
+- If object → Personified object (Cars, Forky style)
+
+# YOUR DETAILED ANALYSIS
+
+Now analyze this photograph of "{character_name}" following ALL rules above.
+
+Structure your response as:
+
+## SUBJECT TYPE
+[What is this? Stuffed animal, pet, child, toy, etc.]
+
+## PROPORTIONAL MEASUREMENTS
+[Exact % measurements of head, limbs, body relative to total figure]
+[Identify ANY unusual proportions as KEY FEATURES]
+
+## SURFACE & TEXTURE
+[Fur/material type, texture details, color patterns]
+
+## HEAD/FACE DETAILS
+[Eyes, nose, mouth, ears, expression - with precise descriptions]
+
+## BODY DETAILS
+[Shape, colors, markings, clothing/accessories]
+
+## LIMBS DETAILS
+[Arms/legs/paws - positions, proportions, details]
+
+## COLOR PALETTE
+[All colors in order from top to bottom]
+
+## POSE AND PERSONALITY
+[Body position, what personality it suggests]
+
+## CHARACTER TYPE
+[How this should be Pixar-ified]
+
+## DISTINCTIVE FEATURES SUMMARY
+[List the 3-5 MOST distinctive features that MUST be preserved in the Pixar 3D version]
+[These will drive personalized story generation!]
+
+Be EXTREMELY thorough - every detail matters for the 3D Pixar reveal!"""
+
+    try:
+        response = model.generate_content([
+            {"mime_type": "image/jpeg", "data": image_b64},
+            prompt
+        ])
+        
+        detailed_analysis = response.text
+        
+        print("\n" + "="*80)
+        print(f"[PHOTO MODE] Analysis length: {len(detailed_analysis)} characters")
+        print("="*80 + "\n")
+        
+        return {
+            "character": {
+                "name": character_name,
+                "description": detailed_analysis,
+                "key_feature": "Distinctive features from original photo - see full analysis"
+            },
+            "reveal_description": detailed_analysis,
+            "reveal_prompt": generate_reveal_from_photo_analysis(character_name, detailed_analysis),
+            "extraction_time": 0,
+            "source_type": "photo"
+        }
+        
+    except Exception as e:
+        print(f"Error during photo character extraction: {str(e)}")
+        raise
+
+
+def generate_reveal_from_photo_analysis(character_name: str, detailed_analysis: str) -> str:
+    """
+    Generate Disney/Pixar 3D reveal prompt from a PHOTO analysis.
+    Adapts the transformation language for real-world subjects.
+    """
+    
+    reveal_prompt = f"""Create a LIVING, BREATHING Disney/Pixar 3D character that brings this real-world subject to life.
+
+# CHARACTER ANALYSIS (from photo):
+{detailed_analysis}
+
+
+# 3D TRANSFORMATION RULES
+
+**CRITICAL: Transform the REAL subject into a Pixar character while preserving what makes it recognizable**
+
+## Transformation By Subject Type:
+- **Stuffed toy** → Bring to LIFE like Toy Story! Keep fabric texture hints but add real expressions and movement. Think Lotso the bear but with THIS character's exact features.
+- **Real animal/pet** → Anthropomorphize like Zootopia! Keep the species, breed characteristics, and coloring. Add big expressive eyes, standing posture, personality.
+- **Child/person** → Pixar-stylize like Riley from Inside Out or Miguel from Coco! Keep hair, skin tone, clothing, and personality.
+- **Object** → Personify like Forky or the Cars characters! Keep the shape and color but add face, limbs if needed, personality.
+
+## Proportion Preservation:
+- **PRESERVE unusual proportions from analysis** - they're character features!
+- Long floppy arms on a toy = Keep them long and expressive
+- Oversized head = Keep it larger (cute, appealing)
+- Stubby legs = Keep them short and endearing
+- These proportions ARE the character's personality!
+
+## Disney/Pixar Quality Standards:
+- **EXPRESSIVE PIXAR FACE (CRITICAL!):**
+  - BIG expressive eyes with visible highlights/reflections
+  - Eyes should show EMOTION and LIFE
+  - Proper eyebrows that convey expression
+  - Cute nose appropriate to character type
+  - Expressive mouth with personality
+  - The face should look like it belongs in a Pixar movie
+- Professional 3D rendering with proper lighting
+- Warm, appealing character design
+
+## Texture Translation:
+- Plush fur → Soft 3D fur with subsurface scattering (like Sulley or Lotso)
+- Real fur → Detailed 3D fur rendering (like Bolt)
+- Fabric → Realistic fabric with folds and texture
+- Skin → Smooth Pixar skin with warmth
+
+## Scene Requirements:
+- Celebration background (colorful balloons, confetti, magical sparkles)
+- Warm lighting that makes character glow
+- Character centered, full body visible
+- Portrait orientation (taller than wide)
+- Character looks joyful and alive
+- **ABSOLUTELY NO TEXT - no words, no letters, no captions anywhere**
+
+
+# FINAL PROMPT FOR IMAGE GENERATION:
+
+Transform "{character_name}" from a real-world subject into a living Disney/Pixar 3D character.
+
+{detailed_analysis}
+
+Create a magical, photorealistic 3D rendering with:
+- Disney/Pixar animation quality (like Toy Story, Zootopia, Inside Out)
+- Character's distinctive features and proportions preserved
+- Expressive face full of personality and JOY
+- Textures appropriate to the subject type
+- Celebration background with confetti and magical sparkles
+- Portrait format, character centered and joyful
+- Professional 3D lighting and rendering
+- ABSOLUTELY NO TEXT anywhere in image
+
+Bring this subject to LIFE as a real Pixar character!"""
+
+    return reveal_prompt
+
+
+async def _extract_from_drawing(image_b64: str, character_name: str) -> dict:
+    """
+    Extract character details from a CHILD'S DRAWING.
+    This is the original extraction logic, unchanged.
+    """
     
     prompt = f"""You are analyzing a child's drawing of a character named "{character_name}" to create a PERFECT 3D Disney/Pixar reveal.
 
@@ -253,7 +610,7 @@ Be EXTREMELY thorough - every detail matters for the 3D reveal!"""
         detailed_analysis = response.text
         
         print("\n" + "="*80)
-        print(f"Analysis length: {len(detailed_analysis)} characters")
+        print(f"[DRAWING MODE] Analysis length: {len(detailed_analysis)} characters")
         print("="*80 + "\n")
         
         return {
@@ -264,7 +621,8 @@ Be EXTREMELY thorough - every detail matters for the 3D reveal!"""
             },
             "reveal_description": detailed_analysis,
             "reveal_prompt": generate_reveal_from_analysis(character_name, detailed_analysis),
-            "extraction_time": 0
+            "extraction_time": 0,
+            "source_type": "drawing"
         }
         
     except Exception as e:
