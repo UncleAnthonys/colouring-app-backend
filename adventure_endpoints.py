@@ -278,7 +278,8 @@ async def extract_and_reveal(
         }
         
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f'Character extraction failed: {str(e)}')
+        import traceback; traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Character extraction failed: {str(e)}")
 
 
 @router.post("/generate/episode-gemini")
