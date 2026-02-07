@@ -88,9 +88,9 @@ def detect_image_type(image_data: bytes) -> str:
         # Color diversity: >40% unique = almost certainly photo
         if color_ratio > 0.40:
             score += 2
-        elif color_ratio > 0.20:
+        elif color_ratio > 0.15:
             score += 1
-        elif color_ratio < 0.05:
+        elif color_ratio < 0.10:
             score -= 2
         else:
             score -= 1
@@ -100,7 +100,7 @@ def detect_image_type(image_data: bytes) -> str:
             score -= 2
         elif white_ratio > 0.25:
             score -= 1
-        elif white_ratio < 0.10:
+        elif white_ratio < 0.001:
             score += 1
         
         # Smooth gradients: photos have moderate avg diffs (5-30), drawings have extremes
