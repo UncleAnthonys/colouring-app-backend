@@ -16,103 +16,38 @@ model = genai.GenerativeModel('gemini-2.5-flash')
 def detect_image_type(image_data: bytes) -> str:
     """
     Detect whether the uploaded image is a child's drawing or a real photo.
-    Uses pure image analysis - NO AI calls, zero cost.
-    
-    Photos: high color variety, smooth gradients, natural noise, many unique colors
-    Drawings: limited color palette, flat areas, harsh edges, paper-white backgrounds
+    Uses Gemini 2.0 Flash for accurate classification (~$0.0001 per call).
     
     Returns: 'drawing' or 'photo'
     """
-    from PIL import Image
-    import io
+    import google.generativeai as genai
     
     try:
-        img = Image.open(io.BytesIO(image_data)).convert('RGB')
+        api_key = os.environ.get('GOOGLE_API_KEY') or os.environ.get('GEMINI_API_KEY')
+        genai.configure(api_key=api_key)
         
-        # Resize to small size for fast analysis
-        thumb = img.resize((200, 200), Image.LANCZOS)
-        pixels = list(thumb.getdata())
-        total_pixels = len(pixels)
+        model = genai.GenerativeModel('gemini-2.0-flash')
         
-        # --- METRIC 1: Unique color count ---
-        # Photos have thousands of unique colors, drawings have very few
-        unique_colors = len(set(pixels))
-        color_ratio = unique_colors / total_pixels
+        # Convert bytes to base64 for Gemini
+        image_b64 = base64.b64encode(image_data).decode('utf-8')
         
-        # --- METRIC 2: Near-white pixel ratio ---
-        # Kids' drawings on paper have lots of near-white (paper background)
-        near_white = sum(1 for r, g, b in pixels if r > 230 and g > 230 and b > 230)
-        white_ratio = near_white / total_pixels
+        response = model.generate_content([
+            """Look at this image carefully. Classify it as ONE of these:
+
+DRAWING - A child's artwork made with crayons, markers, colored pencils, paint, etc. on paper. 
+          Includes: hand-drawn pictures, sketches, paintings, doodles by children.
+
+PHOTO - A real photograph taken with a camera/phone.
+        Includes: photos of toys, stuffed animals, pets, children, people, objects.
+
+Reply with EXACTLY one word: DRAWING or PHOTO""",
+            {"mime_type": "image/jpeg", "data": image_b64}
+        ])
         
-        # --- METRIC 3: Color saturation distribution ---
-        # Drawings tend to have either very low (paper) or very high (crayon) saturation
-        # Photos have a smooth distribution of mid-range saturations
-        saturations = []
-        for r, g, b in pixels:
-            max_c = max(r, g, b)
-            min_c = min(r, g, b)
-            sat = (max_c - min_c) / max_c if max_c > 0 else 0
-            saturations.append(sat)
-        avg_sat = sum(saturations) / len(saturations)
+        result_text = response.text.strip().upper()
+        result = "drawing" if "DRAWING" in result_text else "photo"
         
-        # --- METRIC 4: Gradient smoothness ---
-        # Photos have smooth gradients between neighboring pixels
-        # Drawings have abrupt color changes
-        import random
-        random.seed(42)
-        width, height = thumb.size
-        pixel_array = list(thumb.getdata())
-        
-        diffs = []
-        for _ in range(500):
-            x = random.randint(1, width - 2)
-            y = random.randint(1, height - 2)
-            idx = y * width + x
-            idx_right = idx + 1
-            idx_down = idx + width
-            
-            r1, g1, b1 = pixel_array[idx]
-            r2, g2, b2 = pixel_array[idx_right]
-            r3, g3, b3 = pixel_array[idx_down]
-            
-            diff_h = abs(r1-r2) + abs(g1-g2) + abs(b1-b2)
-            diff_v = abs(r1-r3) + abs(g1-g3) + abs(b1-b3)
-            diffs.append((diff_h + diff_v) / 2)
-        
-        avg_diff = sum(diffs) / len(diffs)
-        
-        # --- SCORING ---
-        # Each metric votes photo or drawing
-        score = 0  # positive = photo, negative = drawing
-        
-        # Color diversity: >40% unique = almost certainly photo
-        if color_ratio > 0.40:
-            score += 2
-        elif color_ratio > 0.15:
-            score += 1
-        elif color_ratio < 0.10:
-            score -= 2
-        else:
-            score -= 1
-        
-        # White background: >30% near-white suggests paper/drawing
-        if white_ratio > 0.40:
-            score -= 2
-        elif white_ratio > 0.25:
-            score -= 1
-        elif white_ratio < 0.001:
-            score += 1
-        
-        # Smooth gradients: photos have moderate avg diffs (5-30), drawings have extremes
-        if 5 < avg_diff < 35:
-            score += 1
-        elif avg_diff < 3 or avg_diff > 50:
-            score -= 1
-        
-        result = "photo" if score > 0 else "drawing"
-        
-        print(f"\n[IMAGE DETECTION] Result: {result}")
-        print(f"  Color ratio: {color_ratio:.3f} | White ratio: {white_ratio:.3f} | Avg gradient: {avg_diff:.1f} | Score: {score}")
+        print(f"\n[IMAGE DETECTION] Gemini says: {result_text} -> {result}")
         
         return result
         
