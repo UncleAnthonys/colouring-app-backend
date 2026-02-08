@@ -984,9 +984,25 @@ OUTPUT: Bold black lines on pure white background. No grey. No texture."""
 
 async def generate_from_photo(prompt: str, image_b64: str, quality: str = "low") -> dict:
     """Generate colouring page from photo using images/edits endpoint"""
+    from PIL import Image
+    import io
     
     headers = {"Authorization": f"Bearer {OPENAI_API_KEY}"}
     image_bytes = base64.b64decode(image_b64)
+    
+    # Detect orientation from input image
+    img = Image.open(io.BytesIO(image_bytes))
+    width, height = img.size
+    
+    # Match output orientation to input
+    if width > height:
+        # Landscape input -> landscape output
+        size = "1536x1024"
+    else:
+        # Portrait or square input -> portrait output
+        size = "1024x1536"
+    
+    print(f"[ORIENTATION] Input: {width}x{height} -> Output: {size}")
     
     files = [
         ("image[]", ("source.jpg", image_bytes, "image/jpeg")),
@@ -995,7 +1011,7 @@ async def generate_from_photo(prompt: str, image_b64: str, quality: str = "low")
         "model": "gpt-image-1.5",
         "prompt": prompt,
         "n": "1",
-        "size": "1024x1536",
+        "size": size,
         "quality": quality,
     }
     
