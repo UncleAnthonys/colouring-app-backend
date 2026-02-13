@@ -468,7 +468,7 @@ I am providing the PREVIOUS PAGE of this storybook for reference.
 IMPORTANT: Decide if this new scene CONTINUES in the same location or MOVES to a new location.
 
 Read the STORY SCENE description below carefully:
-- If the scene describes the SAME location/event as would logically continue from the previous page → MAINTAIN visual continuity (same environment, objects, setting)
+- If the scene describes the SAME location/event as would logically continue from the previous page → KEEP the same setting BUT CHANGE THE COMPOSITION (see rules below)
 - If the scene describes a NEW location, NEW event, or significant scene change → CREATE A FRESH SCENE (ignore the previous page's environment, design new setting from scratch)
 
 SIGNS OF A NEW SCENE (create fresh):
@@ -476,15 +476,26 @@ SIGNS OF A NEW SCENE (create fresh):
 - New event starting (e.g., "the next challenge", "later that day", "at the ceremony")
 - Major scene transition words
 
-SIGNS OF CONTINUING SCENE (maintain continuity):
+SIGNS OF CONTINUING SCENE (keep setting, change composition):
 - Same action continuing (e.g., "climbing higher", "kept running", "continued through")
 - Same location referenced (e.g., "the tower", "the path", "the cave")
 - Direct continuation of previous moment
 
-The CHARACTER must always look the same (use the reveal reference for that).
-But the ENVIRONMENT should only stay the same if the story is in the same place.
+🚨 CRITICAL - SAME LOCATION ≠ SAME IMAGE:
+This is a COLOURING BOOK. Each page must feel FRESH and WORTH COLOURING even if it is the same location.
+When continuing in the same location, you MUST change ALL of the following:
+1. CAMERA ANGLE - If the previous page was a wide shot, do a close-up. If it was front-on, show from the side or behind. If eye-level, try a low angle looking up or a bird's eye view.
+2. CHARACTER POSES - Characters must be in completely DIFFERENT positions and poses. Different body language, different actions, different gestures.
+3. FOREGROUND/BACKGROUND SWAP - Elements that were in the background should come to the foreground, or vice versa. Show DIFFERENT parts of the same environment.
+4. NEW DETAILS - Add elements that were NOT in the previous page (new objects, new characters entering, things that changed). Remove or hide some elements that WERE prominent before.
 
-Previous page is provided for reference - use it for continuity OR ignore it for new scenes based on the story text.
+Think of it like a MOVIE - the camera MOVES between shots. Two consecutive frames should never look the same.
+If the previous page showed characters standing on a bridge from the front → show them FROM BEHIND walking off the bridge, or CLOSE UP on their faces, or show the view FROM the bridge looking down.
+
+The CHARACTER must always look the same (use the reveal reference for that).
+The SETTING stays recognizable but the COMPOSITION must be dramatically different.
+
+Previous page is provided for reference - match the setting style but CHANGE the camera angle, poses, and composition.
 """
         
         # Build prompt
