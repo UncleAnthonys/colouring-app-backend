@@ -965,13 +965,41 @@ MAKE THE STORY IMPOSSIBLE WITHOUT THIS CHARACTER'S UNIQUE FEATURES.
 - "Kingdom losing its magic/color/sparkle"
 - "Finding a special gem/jewel/crystal"
 These are OVERUSED. Be MORE CREATIVE than this!
-- Match themes to character type (BE CREATIVE - avoid generic forests!):
-  - Monster characters - monster school, cooking competitions, talent shows, making friends despite being different
-  - Princess/girl characters - royal balls, magical kingdoms, art contests, fashion shows, underwater palaces, cloud castles
-  - Robot characters - invention fairs, space stations, futuristic cities, time travel
-  - Animal characters - bakery adventures, music festivals, sports competitions, beach holidays
-  - Superhero characters - saving the city, secret missions, training academy
-  - AVOID: Generic "forest adventure" for every character - be creative with settings!
+*** WHAT MAKES A GREAT CHILDREN'S STORY ***
+
+1. EMOTIONAL CORE - Every story needs a FEELING at its heart:
+   - Loneliness → finding connection
+   - Fear → discovering courage  
+   - Feeling different → finding where you belong
+   - Sadness → rediscovering joy
+   - Confusion → gaining understanding
+
+2. CHARACTER GROWTH - The character must CHANGE by the end:
+   - They learn something about themselves
+   - They overcome an internal struggle
+   - They see the world differently
+
+3. MEANINGFUL USE OF SPECIAL FEATURE:
+   - The character's unique trait should solve an EMOTIONAL problem, not just physical
+   - NOT: "Used strong arms to win a lifting contest"
+   - YES: "Used strong arms to hold a bridge together while scared villagers crossed to safety"
+
+ASK YOURSELF WHEN CREATING EACH THEME:
+- What emotional need does this character fulfill for others?
+- What fear might this character help someone overcome?
+- What unlikely friendship could form?
+- What broken relationship could they mend?
+- What forgotten place could they bring back to life through PURPOSE (not magic)?
+
+OVERUSED PATTERNS - use these SPARINGLY (max 1 per 3 themes):
+- Contests, competitions, talent shows, races, tournaments
+- "Restore the lost [color/magic/sparkle]"
+- "Find the special [crystal/gem/jewel]"
+- "Prove yourself to the doubters"
+
+GENERATE SOMETHING WE'VE NEVER SEEN BEFORE.
+Imagine 1000 children have used this app - what story would NONE of them have received yet?
+Be wildly creative. Surprise us. Make it unforgettable.
 - Each theme must have a clear beginning, middle, and end across 10 episodes
 - Always use "{character_name}" (not "the character") in story text
 - Scene descriptions must be detailed enough to draw as coloring pages
@@ -987,24 +1015,24 @@ Return ONLY valid JSON. Here is a COMPLETE EXAMPLE of the exact format required:
   "age_level": "age_7",
   "themes": [
     {{
-      "theme_id": "royal_baking_contest",
-      "theme_name": "The Royal Baking Contest",
-      "theme_description": "Example Monster enters a kingdom-wide baking competition at the palace.",
-      "theme_blurb": "Can Example Monster bake the most amazing cake ever and win the golden chef's hat?",
+      "theme_id": "lonely_lighthouse",
+      "theme_name": "The Lonely Lighthouse",
+      "theme_description": "Example Monster befriends an old lighthouse keeper who has forgotten how to laugh, and helps the village remember why the lighthouse matters.",
+      "theme_blurb": "Can Example Monster help a grumpy lighthouse keeper find joy again before the lighthouse closes forever?",
       "episodes": [
         {{
           "episode_num": 1,
-          "title": "The Golden Invitation",
-          "scene_description": "Example Monster holds a sparkling golden envelope in the kitchen, eyes wide with excitement. Mixing bowls and ingredients cover the counter behind them.",
-          "story_text": "A golden letter arrived! Example Monster had been invited to the Royal Baking Contest at the palace. Could they bake something amazing enough to win?",
+          "title": "The Flickering Light",
+          "scene_description": "Example Monster stands on a windy cliff path, looking up at an old lighthouse with a dim, flickering light. An elderly keeper watches sadly from the doorway.",
+          "story_text": "Everyone said the old lighthouse should be torn down. But Example Monster noticed something - the keeper looked so lonely up there.",
           "emotion": "curious"
         }},
         {{
           "episode_num": 2,
-          "title": "Gathering Ingredients",
-          "scene_description": "Example Monster nervously browses a busy market stall filled with colorful fruits, chocolate, and flour bags. Other bakers rush past with shopping baskets.",
-          "story_text": "At the market, Example Monster felt nervous seeing all the other talented bakers. But they had a secret recipe from Grandma that just might work!",
-          "emotion": "nervous"
+          "title": "An Unexpected Visit",
+          "scene_description": "Example Monster knocks on the lighthouse door while the grumpy keeper peers through a small window. Cobwebs and dusty furniture visible inside.",
+          "story_text": "The keeper hadn't had a visitor in years. At first he shouted 'Go away!' but Example Monster just smiled and waited.",
+          "emotion": "determined"
         }}
       ]
     }}
