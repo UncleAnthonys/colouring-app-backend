@@ -462,40 +462,12 @@ The character's EMOTION must match the story's mood!
         continuity_guidance = ""
         if previous_page_b64:
             continuity_guidance = f"""
-*** VISUAL CONTINUITY GUIDANCE ***
-I am providing the PREVIOUS PAGE of this storybook for reference.
-
-IMPORTANT: Decide if this new scene CONTINUES in the same location or MOVES to a new location.
-
-Read the STORY SCENE description below carefully:
-- If the scene describes the SAME location/event as would logically continue from the previous page → KEEP the same setting BUT CHANGE THE COMPOSITION (see rules below)
-- If the scene describes a NEW location, NEW event, or significant scene change → CREATE A FRESH SCENE (ignore the previous page's environment, design new setting from scratch)
-
-SIGNS OF A NEW SCENE (create fresh):
-- Different location mentioned (e.g., "at the castle", "in the forest", "at the competition arena")
-- New event starting (e.g., "the next challenge", "later that day", "at the ceremony")
-- Major scene transition words
-
-SIGNS OF CONTINUING SCENE (keep setting, change composition):
-- Same action continuing (e.g., "climbing higher", "kept running", "continued through")
-- Same location referenced (e.g., "the tower", "the path", "the cave")
-- Direct continuation of previous moment
-
-🚨 CRITICAL - SAME LOCATION ≠ SAME IMAGE:
-This is a COLOURING BOOK. Each page must feel FRESH and WORTH COLOURING even if it is the same location.
-When continuing in the same location, you MUST change ALL of the following:
-1. CAMERA ANGLE - If the previous page was a wide shot, do a close-up. If it was front-on, show from the side or behind. If eye-level, try a low angle looking up or a bird's eye view.
-2. CHARACTER POSES - Characters must be in completely DIFFERENT positions and poses. Different body language, different actions, different gestures.
-3. FOREGROUND/BACKGROUND SWAP - Elements that were in the background should come to the foreground, or vice versa. Show DIFFERENT parts of the same environment.
-4. NEW DETAILS - Add elements that were NOT in the previous page (new objects, new characters entering, things that changed). Remove or hide some elements that WERE prominent before.
-
-Think of it like a MOVIE - the camera MOVES between shots. Two consecutive frames should never look the same.
-If the previous page showed characters standing on a bridge from the front → show them FROM BEHIND walking off the bridge, or CLOSE UP on their faces, or show the view FROM the bridge looking down.
-
-The CHARACTER must always look the same (use the reveal reference for that).
-The SETTING stays recognizable but the COMPOSITION must be dramatically different.
-
-Previous page is provided for reference - match the setting style but CHANGE the camera angle, poses, and composition.
+*** PREVIOUS PAGE REFERENCE ***
+The previous storybook page is attached for LIGHT reference only.
+- Use it to keep the CHARACTER looking consistent (same body shape, features)
+- Do NOT copy the scene layout, composition, or background from it
+- Generate this page FRESH based on the scene description below
+- Each page should look like a COMPLETELY DIFFERENT illustration
 """
         
         # Build prompt
@@ -1011,13 +983,17 @@ GENERATE SOMETHING WE'VE NEVER SEEN BEFORE.
 Imagine 1000 children have used this app - what story would NONE of them have received yet?
 Be wildly creative. Surprise us. Make it unforgettable.
 - Each theme must have a clear beginning, middle, and end across 10 episodes
-- *** CRITICAL - NARRATIVE FLOW ***: Each episode MUST connect to the next one. The story_text for each episode should:
-  1. Follow logically from the previous episode - the reader should understand WHY they moved to this scene
-  2. Include TRANSITIONS when changing locations (e.g., "On the way home, they spotted...", "Following the sound, they found...", "The map led them to...")
-  3. NEVER jump to a completely unrelated scene without explanation
-  4. Think of it as ONE continuous story, not 10 separate scenes
-  - BAD: Episode 3 is in a library, Episode 4 suddenly on a bridge with no explanation
-  - GOOD: Episode 3 is in a library, Episode 4: "A note in the book led them outside to the old wobbly bridge..."
+- *** CRITICAL - NARRATIVE FLOW AND LOCATION VARIETY ***:
+  The story MUST visit AT LEAST 4-5 DIFFERENT LOCATIONS across 10 episodes. Do NOT stay in one place!
+  A good story is a JOURNEY - the character should MOVE through the world.
+  
+  LOCATION PACING: Spend 2-3 episodes max in one location, then MOVE somewhere new.
+  Example flow: meadow (ep 1-2) → river crossing (ep 3-4) → cave (ep 5-6) → mountain top (ep 7-8) → home (ep 9-10)
+  
+  When changing locations, include a BRIEF transition in the story_text:
+  - "Following the sound, they found..." / "The map led them to..." / "On the way home, they spotted..."
+  - BAD: Episode 3 in a library, Episode 4 suddenly on a bridge with NO explanation
+  - GOOD: Episode 3 in a library, Episode 4: "A note in the book led them outside to the old wobbly bridge..."
 - Always use "{character_name}" (not "the character") in story text
 - Scene descriptions must be detailed enough to draw as coloring pages
 STRICT COMPLIANCE RULE: Every episode MUST include the "emotion_tag" field. This is MANDATORY metadata.
