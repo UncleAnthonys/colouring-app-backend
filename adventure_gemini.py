@@ -461,23 +461,30 @@ The character's EMOTION must match the story's mood!
         # Build continuity guidance if previous page provided
         continuity_guidance = ""
         if previous_page_b64:
-            continuity_guidance = """
-*** CRITICAL - VISUAL CONTINUITY WITH PREVIOUS PAGE ***
-I am providing the PREVIOUS PAGE of this storybook. Your new image MUST maintain visual continuity:
+            continuity_guidance = f"""
+*** VISUAL CONTINUITY GUIDANCE ***
+I am providing the PREVIOUS PAGE of this storybook for reference.
 
-1. SETTING CONTINUITY:
-   - If the previous page shows a specific location (tower, forest, cave), this page should show the SAME or connected location
-   - Objects introduced in the previous scene should appear consistently
+IMPORTANT: Decide if this new scene CONTINUES in the same location or MOVES to a new location.
 
-2. STORY FLOW:
-   - This scene CONTINUES from the previous page
-   - If climbing a tower, show the SAME tower
-   - Keep architectural and environmental elements consistent
+Read the STORY SCENE description below carefully:
+- If the scene describes the SAME location/event as would logically continue from the previous page → MAINTAIN visual continuity (same environment, objects, setting)
+- If the scene describes a NEW location, NEW event, or significant scene change → CREATE A FRESH SCENE (ignore the previous page's environment, design new setting from scratch)
 
-3. OBJECT CONSISTENCY:
-   - Magical objects, buildings, creatures should look the SAME across pages
+SIGNS OF A NEW SCENE (create fresh):
+- Different location mentioned (e.g., "at the castle", "in the forest", "at the competition arena")
+- New event starting (e.g., "the next challenge", "later that day", "at the ceremony")
+- Major scene transition words
 
-The previous page image is provided - study it carefully and maintain consistency!
+SIGNS OF CONTINUING SCENE (maintain continuity):
+- Same action continuing (e.g., "climbing higher", "kept running", "continued through")
+- Same location referenced (e.g., "the tower", "the path", "the cave")
+- Direct continuation of previous moment
+
+The CHARACTER must always look the same (use the reveal reference for that).
+But the ENVIRONMENT should only stay the same if the story is in the same place.
+
+Previous page is provided for reference - use it for continuity OR ignore it for new scenes based on the story text.
 """
         
         # Build prompt
