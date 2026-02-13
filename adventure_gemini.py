@@ -749,7 +749,7 @@ AGE GROUP: 5 YEARS OLD
 
 *** MUST USE THIS WRITING STYLE ***
 Use silly, fun language! Examples:
-- Fun words: "super-duper", "teeny-tiny", "ginormous", "wibbly-wobbly"
+- Fun words: "super-duper", "teeny-tiny", "ginormous", "splashy-splashy", "rumbly-tumbly"
 - Silly moments that make kids giggle
 - Build excitement: "And then... guess what!"
 
@@ -764,7 +764,7 @@ AGE GROUP: 6 YEARS OLD
 
 *** MUST USE THIS WRITING STYLE ***
 Use vivid comparisons and excitement! Examples:
-- Funny comparisons: "as wobbly as a jelly on a trampoline!"
+- Funny comparisons: "as bouncy as a kangaroo on a trampoline!"
 - Expressive dialogue: "'Oh my goodness!' gasped Blobby"
 - Mini cliffhangers: "But then... something unexpected happened!"
 
@@ -887,14 +887,33 @@ DO NOT make stories about:
 STEP 2 - BUILD STORIES WHERE THE UNUSUAL FEATURE IS ESSENTIAL:
 The character's weirdest feature should be WHY they save the day!
 
-Examples for MULTIPLE EYES:
-- 10 eyes = World's best lifeguard (sees everyone at once), ultimate hide-and-seek champion, air traffic controller, teacher who sees every student, detective who spots every clue
+*** CREATIVE FEATURE USAGE - AVOID THE OBVIOUS! ***
+For EVERY feature, think beyond the most obvious use. Gemini tends to repeat the same ideas - FIGHT THIS!
 
-Examples for MULTIPLE ARMS:
-- 8 arms = Best chef ever (stirs 8 pots), one-monster band, ultimate babysitter, fastest gift wrapper, best at card games, amazing at sports
+MOUTHS/TEETH: Do NOT default to singing/humming/making sounds. Think bigger:
+- Big mouth = can blow enormous bubbles to float friends across a river
+- Big mouth = can gulp up flood water to save a village
+- Big mouth = can whisper secrets into the deepest caves to wake sleeping creatures
+- Teeth = can chew through tangled vines trapping a friend
+- Teeth = can carve beautiful patterns into ice/wood
+- BANNED for mouths: singing to make quiet places loud, humming magical tunes, making special sounds
 
-Examples for MULTIPLE LEGS:
-- 4+ legs = Unbeatable at racing, never trips, best dancer, can carry friends everywhere
+EYES: Do NOT default to "seeing special/hidden/magical things". Think bigger:
+- Many eyes = can cry enough tears to fill a dry well and save a garden
+- Many eyes = can wink in patterns to send secret messages across a battlefield
+- Many eyes = can each look at a different friend during a crisis so nobody feels alone
+- BANNED for eyes: seeing hidden magic, spotting invisible things, finding sparkly stuff
+
+ARMS: Do NOT default to "juggling" or "hugging everyone". Think bigger:
+- Many arms = can build a dam in seconds to stop a flood
+- Many arms = can hold up a collapsing roof while friends escape
+- Many arms = can paint a mural so fast it comes to life
+- Many arms = can knit a net big enough to catch a falling star
+
+LEGS: Do NOT default to "running fast". Think bigger:
+- Many legs = can stomp a rhythm that makes seeds grow instantly
+- Many legs = can form a bridge for tiny creatures to cross
+- Many legs = each leg dances differently, confusing a scary predator
 
 THE STORY SHOULD BE IMPOSSIBLE WITHOUT THIS FEATURE!
 If a character has 10 eyes, the story should REQUIRE seeing 10 things at once.
@@ -1011,7 +1030,13 @@ D. DIALOGUE IS REQUIRED:
 - Use speech marks and give characters distinct voices
 - 5-year-olds LOVE dialogue - characters talking, arguing, gasping, cheering
 
-E. THE ENDING MUST CONNECT TO THE BEGINNING:
+E. TEXT LENGTH - KEEP IT TIGHT:
+- Each episode should have 2-3 sentences MAX for the story text
+- The FINAL episode should be SHORT and punchy, not a long summary paragraph
+- Let the ILLUSTRATION tell the story - don't over-explain in text
+- NEVER cram 5+ sentences into one episode's text
+
+F. THE ENDING MUST CONNECT TO THE BEGINNING:
 - Episode 5 should reference or resolve something from episode 1
 - The character who needed help in ep 1 should be the one celebrating in ep 5
 - BAD ending: "And everything was wonderful forever!"
@@ -1020,6 +1045,14 @@ E. THE ENDING MUST CONNECT TO THE BEGINNING:
 GENERATE SOMETHING WE'VE NEVER SEEN BEFORE.
 Imagine 1000 children have used this app - what story would NONE of them have received yet?
 Be wildly creative. Surprise us. Make it unforgettable.
+
+*** ANTI-REPETITION CHECK ***
+Before finalising your story, ask yourself:
+- Am I using the character's feature in the MOST OBVIOUS way? If yes, think of 3 alternatives and pick the weirdest one.
+- Is my antagonist just "a grumpy thing blocking something"? Give them a REASON to be causing trouble.
+- Does my story follow the pattern "quiet/broken place → character uses feature → place is fixed"? If yes, SCRAP IT and try a completely different structure.
+- Is there physical comedy? A 5-year-old should LAUGH at least once.
+- Would a child say "that was SO COOL" about at least one moment? If not, make it cooler.
 - Each theme must have a clear beginning, middle, and end across 5 episodes
 - *** CRITICAL - NARRATIVE FLOW AND LOCATION VARIETY ***:
   The story MUST visit AT LEAST 3-4 DIFFERENT LOCATIONS across 5 episodes. Do NOT stay in one place!
@@ -1031,8 +1064,8 @@ Be wildly creative. Surprise us. Make it unforgettable.
   When changing locations, include a BRIEF transition in the story_text:
   - "Following the sound, they found..." / "The map led them to..." / "On the way home, they spotted..."
   - BAD: Episode 3 in a library, Episode 4 suddenly on a bridge with NO explanation
-  - GOOD: Episode 3 in a library, Episode 4: "A note in the book led them outside to the old wobbly bridge..."
-- Always use "{character_name}" (not "the character") in story text
+  - GOOD: Episode 3 in a library, Episode 4: "A strange map fell out of the book, pointing to the old clock tower..."
+- Always use "{character_name}" (not "the character") in story text - ALWAYS capitalise the name correctly
 - Scene descriptions must be detailed enough to draw as coloring pages
 STRICT COMPLIANCE RULE: Every episode MUST include the "emotion_tag" field. This is MANDATORY metadata.
 - emotion_tag MUST be chosen from: nervous, excited, scared, determined, happy, curious, sad, proud, worried, surprised
