@@ -131,7 +131,7 @@ class StoryEpisode(BaseModel):
 
 
 class StoryTheme(BaseModel):
-    """A complete story theme with 10 episodes."""
+    """A complete story theme with 5 episodes."""
     theme_id: str
     theme_name: str
     theme_description: str
@@ -387,7 +387,7 @@ async def get_episodes(theme: str):
     adventure = FOREST_ADVENTURE
     
     episodes = []
-    for ep_num in range(1, 11):
+    for ep_num in range(1, 6):
         if ep_num <= 5:
             ep_data = adventure["episodes"].get(ep_num, {})
         elif ep_num == 10:

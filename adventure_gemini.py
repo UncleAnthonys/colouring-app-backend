@@ -695,7 +695,7 @@ async def generate_personalized_stories(character_name: str, character_descripti
     """
     Generate 3 personalized story themes based on character type and child age.
     
-    Each theme has 10 episodes that tell a complete story featuring the character.
+    Each theme has 5 episodes that tell a complete story featuring the character.
     Stories are tailored to:
     - Character type (monster = monster themes, princess = fairy tale themes, etc.)
     - Child age (simpler stories for younger kids, more complex for older)
@@ -908,10 +908,10 @@ For each theme, provide:
 1. Theme name that fits this character personality and type (NEVER include specific body part numbers like "Eight-Armed" or "Six-Legged" in theme names)
 2. Theme description (1 sentence, age-appropriate - NO specific body part numbers)
 3. Theme blurb (1 exciting sentence to help kids choose - NO specific body part numbers)
-4. 10 episodes, each with:
+4. 5 episodes, each with:
    - Episode number (1-10)
    - Title (short, age-appropriate)
-   - Scene description (MUST include: {character_name}'s pose/action, specific setting details, any other characters present, at least 3-4 background objects to colour. Vary compositions: mix close-ups, wide shots, action scenes, and quiet moments across the 10 episodes)
+   - Scene description (MUST include: {character_name}'s pose/action, specific setting details, any other characters present, at least 3-4 background objects to colour. Vary compositions: mix close-ups, wide shots, action scenes, and quiet moments across the 5 episodes)
    - Story text (MUST follow the age guidelines above for length and complexity)
 
 IMPORTANT RULES:
@@ -1001,32 +1001,32 @@ B. THERE MUST BE A PROBLEM/ANTAGONIST:
 - NOT acceptable: "character wanders around looking at pretty things"
 - GOOD examples: a friend is trapped, a village is flooding, someone lost something precious to them, two friends had a fight
 
-C. THERE MUST BE A SETBACK (episode 5-7):
+C. THERE MUST BE A SETBACK (episode 3-4):
 - The character must TRY something and FAIL or face an unexpected complication
 - This creates tension and makes the resolution feel earned
 - Example: "They tried to use the special feature but it didn't work this time!"
 
 D. DIALOGUE IS REQUIRED:
-- At least 6 of the 10 episodes must include spoken dialogue in the story_text
+- At least 3 of the 5 episodes must include spoken dialogue in the story_text
 - Use speech marks and give characters distinct voices
 - 5-year-olds LOVE dialogue - characters talking, arguing, gasping, cheering
 
 E. THE ENDING MUST CONNECT TO THE BEGINNING:
-- Episode 10 should reference or resolve something from episode 1
-- The character who needed help in ep 1 should be the one celebrating in ep 10
+- Episode 5 should reference or resolve something from episode 1
+- The character who needed help in ep 1 should be the one celebrating in ep 5
 - BAD ending: "And everything was wonderful forever!"
 - GOOD ending: References the specific problem and how it was solved
 
 GENERATE SOMETHING WE'VE NEVER SEEN BEFORE.
 Imagine 1000 children have used this app - what story would NONE of them have received yet?
 Be wildly creative. Surprise us. Make it unforgettable.
-- Each theme must have a clear beginning, middle, and end across 10 episodes
+- Each theme must have a clear beginning, middle, and end across 5 episodes
 - *** CRITICAL - NARRATIVE FLOW AND LOCATION VARIETY ***:
-  The story MUST visit AT LEAST 4-5 DIFFERENT LOCATIONS across 10 episodes. Do NOT stay in one place!
+  The story MUST visit AT LEAST 3-4 DIFFERENT LOCATIONS across 5 episodes. Do NOT stay in one place!
   A good story is a JOURNEY - the character should MOVE through the world.
   
-  LOCATION PACING: Spend 2-3 episodes max in one location, then MOVE somewhere new.
-  Example flow: meadow (ep 1-2) → river crossing (ep 3-4) → cave (ep 5-6) → mountain top (ep 7-8) → home (ep 9-10)
+  LOCATION PACING: Spend 1-2 episodes max in one location, then MOVE somewhere new.
+  Example flow: meadow (ep 1) → river crossing (ep 2) → cave (ep 3) → mountain top (ep 4) → home (ep 5)
   
   When changing locations, include a BRIEF transition in the story_text:
   - "Following the sound, they found..." / "The map led them to..." / "On the way home, they spotted..."
@@ -1054,30 +1054,37 @@ Return ONLY valid JSON. Here is a COMPLETE EXAMPLE of the exact format required:
         {{
           "episode_num": 1,
           "title": "The Flickering Light",
-          "scene_description": "Example Monster stands on a windy cliff path, looking up at an old lighthouse with a dim, flickering light. An elderly keeper watches sadly from the doorway.",
-          "story_text": "Everyone said the old lighthouse should be torn down. But Example Monster noticed something - the keeper looked so lonely up there.",
+          "scene_description": "Example Monster stands on a windy cliff path, looking up at an old lighthouse with a dim, flickering light. An elderly keeper watches sadly from the doorway. Seagulls circle overhead, waves crash on rocks below.",
+          "story_text": "Everyone said the old lighthouse should be torn down. But Example Monster noticed something - the keeper looked so lonely up there. 'Hello!' called Example Monster. The keeper just frowned.",
           "emotion": "curious"
         }},
         {{
           "episode_num": 2,
-          "title": "An Unexpected Visit",
-          "scene_description": "Example Monster knocks on the lighthouse door while the grumpy keeper peers through a small window. Cobwebs and dusty furniture visible inside.",
-          "story_text": "The keeper hadn't had a visitor in years. At first he shouted 'Go away!' but Example Monster just smiled and waited.",
-          "emotion": "determined"
-        }},
-        {{
-          "episode_num": 3,
           "title": "Dusty Memories",
-          "scene_description": "Example Monster and the keeper sit inside the dusty lighthouse room. Old photos and maps cover the walls. The keeper points at a faded painting of ships.",
-          "story_text": "Slowly, the keeper let Example Monster inside. The walls were covered in old paintings of ships. 'I used to guide them all home,' the keeper whispered sadly.",
+          "scene_description": "CLOSE-UP: Example Monster and the grumpy keeper sit at a small table inside the dusty lighthouse. Old photos and maps cover the walls. A nervous little crab peeks from behind a teapot.",
+          "story_text": "The keeper hadn't had a visitor in years. 'Nobody cares about lighthouses anymore,' he grumbled. But then a tiny crab scuttled across the table. 'That's Captain Pinch,' the keeper smiled for the first time. 'He's the only one who stayed.'",
           "emotion": "sad"
         }},
         {{
-          "episode_num": 4,
+          "episode_num": 3,
           "title": "A Light in the Storm",
-          "scene_description": "Example Monster and the keeper climb the spiral staircase inside the lighthouse. Rain lashes the windows. A tiny boat is visible far out at sea.",
-          "story_text": "A rumble of thunder shook the lighthouse! Example Monster spotted a tiny boat struggling in the waves far below. 'We have to help!' cried Example Monster, racing up the spiral stairs.",
+          "scene_description": "Example Monster and the keeper climb the spiral staircase inside the lighthouse. Rain lashes the windows. A tiny fishing boat is visible far out at sea, tilting in huge waves. Captain Pinch clings to Example Monster's shoulder.",
+          "story_text": "A rumble of thunder shook the lighthouse! Example Monster spotted a tiny boat struggling in the waves. 'We have to help!' cried Example Monster. But the old lamp wouldn't light - it was completely broken!",
           "emotion": "scared"
+        }},
+        {{
+          "episode_num": 4,
+          "title": "A Monster-Sized Idea",
+          "scene_description": "WIDE SHOT: Example Monster stands at the very top of the lighthouse, using their special feature to create a bright signal. The keeper watches in amazement. The fishing boat below starts turning toward the light. Captain Pinch waves a tiny flag.",
+          "story_text": "The lamp was broken, but Example Monster had an idea! Using their special feature, they made the brightest light the cliff had ever seen. 'Over here!' shouted the keeper, waving his arms. The little boat began to turn.",
+          "emotion": "determined"
+        }},
+        {{
+          "episode_num": 5,
+          "title": "Home Safe",
+          "scene_description": "Example Monster, the keeper, Captain Pinch, and the rescued fisher (a grateful otter in a raincoat) all sit together in the warm lighthouse kitchen. The keeper is laughing. Through the window, the lighthouse beam shines brightly across the sea.",
+          "story_text": "The fisher was safe! 'Thank you,' she whispered, still shaking. The keeper put the kettle on and laughed - a real, big belly laugh. 'Maybe this old lighthouse isn't finished yet,' he said, looking at Example Monster. And from that night on, the light never went out again.",
+          "emotion": "happy"
         }}
       ]
     }}
@@ -1086,7 +1093,7 @@ Return ONLY valid JSON. Here is a COMPLETE EXAMPLE of the exact format required:
 
 NOW generate for {character_name} using this EXACT format. The "emotion" field MUST be one of: nervous, excited, scared, determined, happy, curious, sad, proud, worried, surprised
 
-Generate 3 complete themes with all 10 episodes each. Return ONLY the JSON, no other text.'''
+Generate 3 complete themes with all 5 episodes each. Return ONLY the JSON, no other text.'''
         
         response = model.generate_content([prompt])
         
