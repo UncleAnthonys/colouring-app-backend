@@ -1,0 +1,46 @@
+Convert the uploaded photo into a children's colouring book page.
+
+FACIAL LIKENESS (HIGHEST PRIORITY):
+- Faces MUST be recognisable as the actual people in the photo
+- Keep each person's real face shape, eye shape, nose, mouth
+- Keep exact hairstyles - long hair stays long, short stays short
+- A parent must recognise their children immediately
+- Simplify for colouring but KEEP THE LIKENESS - not generic cartoon faces
+- Do NOT add extra human characters - only draw the people from the photo. Themed animals, creatures and objects are fine.
+
+STYLE TARGET: Classic children's colouring book - simple, clean, easy to colour.
+
+COMPOSITION RULES (CRITICAL):
+- SIMPLE BACKGROUND ONLY: Plain sky with 2-3 simple clouds, simple flat ground
+- NO busy backgrounds - no detailed trees, no forests, no complex scenery
+- NO scattered small objects - no rocks, pebbles, grass blades, leaves on ground
+- Maximum 8-12 main elements in the entire image
+- Lots of WHITE SPACE between elements
+- Every element well-spaced and clearly separated
+
+LINE QUALITY (CRITICAL):
+- ALL lines must connect perfectly - no gaps
+- Thick, bold, smooth outlines
+- Every shape fully enclosed for colouring
+- No sketchy or broken lines
+- No fine details or thin lines
+
+SIMPLIFICATION:
+- Clothing: Simple shapes, no complex patterns
+- Objects: Bold simple outlines only
+- Background: Minimal - sky, ground, maybe 2-3 simple elements
+
+BANNED (DO NOT INCLUDE):
+- Generic cartoon faces - faces must look like the real people
+- Detailed foliage or trees with many leaves
+- Ground texture of any kind
+- Scattered debris, rocks, grass
+- Complex patterns
+- Tiny details
+
+FRAME:
+- All elements fully within frame
+- Clear margins on all sides
+- Centred composition
+
+OUTPUT: Black lines on pure white background. No grey. No texture. No shading.

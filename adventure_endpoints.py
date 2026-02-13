@@ -540,6 +540,17 @@ class GenerateFrontCoverRequest(BaseModel):
     source_type: Optional[str] = "drawing"  # 'drawing' or 'photo'
 
 
+class GenerateFullStoryRequest(BaseModel):
+    """Request to generate a complete storybook (front cover + all episodes)."""
+    character: CharacterData
+    theme_name: str
+    theme_description: str
+    episodes: List[dict]  # List of episode objects with title, scene_description, story_text, character_emotion
+    age_level: str = "age_6"
+    reveal_image_b64: str  # Character reveal for reference
+    source_type: Optional[str] = "drawing"  # 'drawing' or 'photo'
+
+
 @router.post("/generate/front-cover")
 async def generate_front_cover_endpoint(request: GenerateFrontCoverRequest):
     """
@@ -583,6 +594,65 @@ Make it look like a real children's coloring book cover you'd see in a shop!
         age_rules=age_rules["rules"],
         reveal_image_b64=request.reveal_image_b64,
         story_text=request.theme_description,
+
+
+@router.post("/generate/full-story")
+async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
+    """
+    Generate a complete storybook: front cover + all episode pages.
+    """
+    char = request.character
+    age_rules = get_age_rules(request.age_level)
+    pages = []
+    
+    full_title = f"{char.name} and {request.theme_name}"
+    
+    cover_scene = f"""Create a CHILDREN'S COLORING BOOK FRONT COVER.
+TEXT TO INCLUDE:
+- At the top: "{full_title}" in large, fun, hand-drawn style lettering
+- At the bottom: "A Coloring Story Book" in smaller text
+IMAGE:
+- {char.name} large and central, looking excited and confident
+- Background hints at the adventure: {request.theme_description}
+- BLACK AND WHITE LINE ART suitable for coloring in
+Make it look like a real children's coloring book cover!
+"""
+    
+    cover_image_b64 = await generate_adventure_episode_gemini(
+        character_data={"name": char.name, "description": char.description, "key_feature": char.key_feature},
+        scene_prompt=cover_scene,
+        age_rules=age_rules["rules"],
+        reveal_image_b64=request.reveal_image_b64,
+        story_text=request.theme_description,
+        character_emotion="excited",
+        source_type=request.source_type or "drawing"
+    )
+    
+    cover_url = upload_to_firebase(cover_image_b64, folder="adventure/storybooks")
+    pages.append({"page_num": 0, "page_type": "cover", "title": full_title, "page_url": cover_url, "story_text": ""})
+    
+    for i, episode in enumerate(request.episodes):
+        scene_prompt = episode.get("scene_description", "").replace("{name}", char.name)
+        story_text = episode.get("story_text", "").replace("{name}", char.name)
+        episode_title = episode.get("title", f"Episode {i+1}")
+        character_emotion = episode.get("character_emotion", "happy")
+        
+        image_b64 = await generate_adventure_episode_gemini(
+            character_data={"name": char.name, "description": char.description, "key_feature": char.key_feature},
+            scene_prompt=scene_prompt,
+            age_rules=age_rules["rules"],
+            reveal_image_b64=request.reveal_image_b64,
+            story_text=story_text,
+            character_emotion=character_emotion,
+            source_type=request.source_type or "drawing"
+        )
+        
+        a4_page_b64 = create_a4_page_with_text(image_b64, story_text, episode_title)
+        page_url = upload_to_firebase(a4_page_b64, folder="adventure/storybooks")
+        pages.append({"page_num": i+1, "page_type": "episode", "title": episode_title, "page_url": page_url, "story_text": story_text})
+    
+    return {"pages": pages, "title": full_title, "total_pages": len(pages)}
+
         character_emotion="excited",
         source_type=request.source_type or "drawing"
     )
