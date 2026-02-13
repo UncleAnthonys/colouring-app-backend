@@ -911,7 +911,7 @@ For each theme, provide:
 4. 10 episodes, each with:
    - Episode number (1-10)
    - Title (short, age-appropriate)
-   - Scene description (detailed for drawing - what to draw including {character_name}, setting, other characters, action, objects)
+   - Scene description (MUST include: {character_name}'s pose/action, specific setting details, any other characters present, at least 3-4 background objects to colour. Vary compositions: mix close-ups, wide shots, action scenes, and quiet moments across the 10 episodes)
    - Story text (MUST follow the age guidelines above for length and complexity)
 
 IMPORTANT RULES:
@@ -945,7 +945,10 @@ MAKE THE STORY IMPOSSIBLE WITHOUT THIS CHARACTER'S UNIQUE FEATURES.
 - "Enchanted forest" or "magical forest" adventures
 - "Tree with a magical door"
 - "Kingdom losing its magic/color/sparkle"
-- "Finding a special gem/jewel/crystal"
+- "Finding a special gem/jewel/crystal/stone/sparkle"
+- Any quest where the character just "finds" or "collects" magical items
+- Stories where the character's only action is LOOKING at things (seeing beauty, noticing sparkles)
+- Stories with no real problem to solve - just wandering from place to place
 These are OVERUSED. Be MORE CREATIVE than this!
 *** WHAT MAKES A GREAT CHILDREN'S STORY ***
 
@@ -976,8 +979,43 @@ ASK YOURSELF WHEN CREATING EACH THEME:
 OVERUSED PATTERNS - use these SPARINGLY (max 1 per 3 themes):
 - Contests, competitions, talent shows, races, tournaments
 - "Restore the lost [color/magic/sparkle]"
-- "Find the special [crystal/gem/jewel]"
+- "Find the special [crystal/gem/jewel/stone/sparkle stone]"
 - "Prove yourself to the doubters"
+- Treasure hunts or quests to "find" a magical object
+- Character just looks at things and notices they're special/magical
+- Going to a series of locations and doing the same action at each one
+
+*** MANDATORY STORY STRUCTURE ***
+
+A. SUPPORTING CHARACTERS ARE REQUIRED:
+- The story MUST include at least 2-3 named supporting characters with personalities
+- At least one should appear by episode 2 and recur throughout the story
+- Supporting characters should have their OWN feelings, problems, or funny quirks
+- Examples: a nervous little bird, a grumpy old tortoise, a silly baby dragon, a bossy squirrel
+- Do NOT have the main character alone for more than 2 consecutive episodes
+
+B. THERE MUST BE A PROBLEM/ANTAGONIST:
+- Something or someone must be causing trouble or be in need of help
+- This problem should be established by episode 2 and not fully resolved until episode 9-10
+- The problem should feel URGENT - someone is counting on the main character
+- NOT acceptable: "character wanders around looking at pretty things"
+- GOOD examples: a friend is trapped, a village is flooding, someone lost something precious to them, two friends had a fight
+
+C. THERE MUST BE A SETBACK (episode 5-7):
+- The character must TRY something and FAIL or face an unexpected complication
+- This creates tension and makes the resolution feel earned
+- Example: "They tried to use the special feature but it didn't work this time!"
+
+D. DIALOGUE IS REQUIRED:
+- At least 6 of the 10 episodes must include spoken dialogue in the story_text
+- Use speech marks and give characters distinct voices
+- 5-year-olds LOVE dialogue - characters talking, arguing, gasping, cheering
+
+E. THE ENDING MUST CONNECT TO THE BEGINNING:
+- Episode 10 should reference or resolve something from episode 1
+- The character who needed help in ep 1 should be the one celebrating in ep 10
+- BAD ending: "And everything was wonderful forever!"
+- GOOD ending: References the specific problem and how it was solved
 
 GENERATE SOMETHING WE'VE NEVER SEEN BEFORE.
 Imagine 1000 children have used this app - what story would NONE of them have received yet?
