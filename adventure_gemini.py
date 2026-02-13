@@ -1012,6 +1012,13 @@ GENERATE SOMETHING WE'VE NEVER SEEN BEFORE.
 Imagine 1000 children have used this app - what story would NONE of them have received yet?
 Be wildly creative. Surprise us. Make it unforgettable.
 - Each theme must have a clear beginning, middle, and end across 10 episodes
+- *** CRITICAL - NARRATIVE FLOW ***: Each episode MUST connect to the next one. The story_text for each episode should:
+  1. Follow logically from the previous episode - the reader should understand WHY they moved to this scene
+  2. Include TRANSITIONS when changing locations (e.g., "On the way home, they spotted...", "Following the sound, they found...", "The map led them to...")
+  3. NEVER jump to a completely unrelated scene without explanation
+  4. Think of it as ONE continuous story, not 10 separate scenes
+  - BAD: Episode 3 is in a library, Episode 4 suddenly on a bridge with no explanation
+  - GOOD: Episode 3 is in a library, Episode 4: "A note in the book led them outside to the old wobbly bridge..."
 - Always use "{character_name}" (not "the character") in story text
 - Scene descriptions must be detailed enough to draw as coloring pages
 STRICT COMPLIANCE RULE: Every episode MUST include the "emotion_tag" field. This is MANDATORY metadata.
@@ -1044,6 +1051,20 @@ Return ONLY valid JSON. Here is a COMPLETE EXAMPLE of the exact format required:
           "scene_description": "Example Monster knocks on the lighthouse door while the grumpy keeper peers through a small window. Cobwebs and dusty furniture visible inside.",
           "story_text": "The keeper hadn't had a visitor in years. At first he shouted 'Go away!' but Example Monster just smiled and waited.",
           "emotion": "determined"
+        }},
+        {{
+          "episode_num": 3,
+          "title": "Dusty Memories",
+          "scene_description": "Example Monster and the keeper sit inside the dusty lighthouse room. Old photos and maps cover the walls. The keeper points at a faded painting of ships.",
+          "story_text": "Slowly, the keeper let Example Monster inside. The walls were covered in old paintings of ships. 'I used to guide them all home,' the keeper whispered sadly.",
+          "emotion": "sad"
+        }},
+        {{
+          "episode_num": 4,
+          "title": "A Light in the Storm",
+          "scene_description": "Example Monster and the keeper climb the spiral staircase inside the lighthouse. Rain lashes the windows. A tiny boat is visible far out at sea.",
+          "story_text": "A rumble of thunder shook the lighthouse! Example Monster spotted a tiny boat struggling in the waves far below. 'We have to help!' cried Example Monster, racing up the spiral stairs.",
+          "emotion": "scared"
         }}
       ]
     }}
