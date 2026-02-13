@@ -638,6 +638,8 @@ Make it look like a real children's coloring book cover!
     cover_url = upload_to_firebase(cover_image_b64, folder="adventure/storybooks")
     pages.append({"page_num": 0, "page_type": "cover", "title": full_title, "page_url": cover_url, "story_text": ""})
     
+    previous_page_b64 = None  # Track previous page for continuity
+    
     for i, episode in enumerate(request.episodes):
         scene_prompt = episode.get("scene_description", "").replace("{name}", char.name)
         story_text = episode.get("story_text", "").replace("{name}", char.name)
@@ -651,8 +653,12 @@ Make it look like a real children's coloring book cover!
             reveal_image_b64=request.reveal_image_b64,
             story_text=story_text,
             character_emotion=character_emotion,
-            source_type=request.source_type or "drawing"
+            source_type=request.source_type or "drawing",
+            previous_page_b64=previous_page_b64
         )
+        
+        # Save this page as previous for next iteration
+        previous_page_b64 = image_b64
         
         a4_page_b64 = create_a4_page_with_text(image_b64, story_text, episode_title)
         page_url = upload_to_firebase(a4_page_b64, folder="adventure/storybooks")

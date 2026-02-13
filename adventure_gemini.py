@@ -402,7 +402,7 @@ IMPORTANT: Look at the drawing! If it is a girl with brown hair and a rainbow sk
         raise HTTPException(status_code=500, detail=f'Reveal generation failed: {str(e)}')
 
 
-async def generate_adventure_episode_gemini(character_data: dict, scene_prompt: str, age_rules: str, reveal_image_b64: str = None, story_text: str = None, character_emotion: str = None, source_type: str = "drawing") -> str:
+async def generate_adventure_episode_gemini(character_data: dict, scene_prompt: str, age_rules: str, reveal_image_b64: str = None, story_text: str = None, character_emotion: str = None, source_type: str = "drawing", previous_page_b64: str = None) -> str:
     """
     Generate black & white coloring page using the REVEAL IMAGE as reference.
     
@@ -456,6 +456,28 @@ Based on this story, give {character_name} an appropriate expression and pose:
 - If the story feels sad → drooping posture, downturned expression
 
 The character's EMOTION must match the story's mood!
+"""
+        
+        # Build continuity guidance if previous page provided
+        continuity_guidance = ""
+        if previous_page_b64:
+            continuity_guidance = """
+*** CRITICAL - VISUAL CONTINUITY WITH PREVIOUS PAGE ***
+I am providing the PREVIOUS PAGE of this storybook. Your new image MUST maintain visual continuity:
+
+1. SETTING CONTINUITY:
+   - If the previous page shows a specific location (tower, forest, cave), this page should show the SAME or connected location
+   - Objects introduced in the previous scene should appear consistently
+
+2. STORY FLOW:
+   - This scene CONTINUES from the previous page
+   - If climbing a tower, show the SAME tower
+   - Keep architectural and environmental elements consistent
+
+3. OBJECT CONSISTENCY:
+   - Magical objects, buildings, creatures should look the SAME across pages
+
+The previous page image is provided - study it carefully and maintain consistency!
 """
         
         # Build prompt
@@ -521,6 +543,8 @@ Use the reference image for SHAPE AND FORM ONLY - completely ignore all colors:
 - BACKGROUND can have intricate details, but CHARACTER stays structurally simple
 
 {emotion_guidance}
+
+{continuity_guidance}
 
 STORY SCENE:
 {scene_prompt}
@@ -598,7 +622,9 @@ FINAL CHECK - CRITICAL RULES:
 4. Black is ONLY for outlines/lines, NEVER for filling areas
 5. All enclosed areas must be empty white space for children to color in'''
         
-        # Build content with reveal image if provided
+        # Build content with reveal image and optional previous page
+        contents = [full_prompt]
+        
         if reveal_image_b64:
             # Convert reveal to grayscale to prevent color leaking
             from PIL import Image
@@ -610,14 +636,21 @@ FINAL CHECK - CRITICAL RULES:
             gray.save(buffer, format='PNG')
             gray_bytes = buffer.getvalue()
             
-            contents = [
-                full_prompt,
-                types.Part.from_bytes(
-                    data=gray_bytes,
-                    mime_type="image/png"
-                )
-            ]
-        else:
+            contents.append(types.Part.from_bytes(
+                data=gray_bytes,
+                mime_type="image/png"
+            ))
+        
+        if previous_page_b64:
+            # Add previous page for continuity reference
+            prev_bytes = base64.b64decode(previous_page_b64)
+            contents.append(types.Part.from_bytes(
+                data=prev_bytes,
+                mime_type="image/png"
+            ))
+        
+        # If no images, just use prompt string
+        if len(contents) == 1:
             contents = full_prompt
         
         # Generate with portrait aspect ratio - STANDARD pricing tier
