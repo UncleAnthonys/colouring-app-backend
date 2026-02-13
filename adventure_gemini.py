@@ -722,7 +722,7 @@ Use rhymes, repetition, and fun sounds in EVERY episode.
 CONTENT RULES:
 - VERY simple sentences (5-8 words max)
 - Basic emotions only: happy, sad, scared, excited
-- Familiar settings: home, garden, playground, farm
+- Familiar BUT exciting settings: a wobbly treehouse, a toy shop after dark, a kitchen where food comes alive, a bath-time ocean adventure, a blanket fort kingdom, a busy airport, a zoo at night
 - Simple actions: walking, running, eating, sleeping, hugging
 - No complex plots - just simple discoveries and moments
 - No villains or scary elements
@@ -1058,8 +1058,20 @@ Before finalising your story, ask yourself:
   The story MUST visit AT LEAST 3-4 DIFFERENT LOCATIONS across 5 episodes. Do NOT stay in one place!
   A good story is a JOURNEY - the character should MOVE through the world.
   
+  SETTING VARIETY - DO NOT DEFAULT TO NATURE/FORESTS/MEADOWS/VALLEYS:
+  Stories set entirely in forests, meadows, valleys, or generic outdoor nature are BANNED.
+  At least 2 of the 5 episodes must be in UNEXPECTED or EXCITING locations like:
+  cities, rooftops, factories, underwater, space, restaurants, schools, hospitals, airports,
+  castles, ships, trains, circuses, museums, stadiums, markets, construction sites, ice rinks,
+  volcanoes, cloud kingdoms, giant's house, inside a clock, inside a whale, a cheese moon.
+  Make the SETTING part of the fun - kids should want to colour the WORLD, not just the character.
+
   LOCATION PACING: Spend 1-2 episodes max in one location, then MOVE somewhere new.
-  Example flow: meadow (ep 1) → river crossing (ep 2) → cave (ep 3) → mountain top (ep 4) → home (ep 5)
+  Example flows (use VARIED and UNEXPECTED settings - NOT always nature/forests!):
+  - Underwater submarine (ep 1) → sunken pirate ship (ep 2) → whale's belly (ep 3) → coral reef village (ep 4) → beach celebration (ep 5)
+  - Busy pizza restaurant kitchen (ep 1) → delivery through a thunderstorm (ep 2) → rooftop of a skyscraper (ep 3) → underground train station (ep 4) → surprise party (ep 5)
+  - Space station (ep 1) → alien market on a moon (ep 2) → asteroid field (ep 3) → planet made of ice cream (ep 4) → home planet celebration (ep 5)
+  - Monster school classroom (ep 1) → haunted gymnasium (ep 2) → school bus breaking down in a swamp (ep 3) → candy factory (ep 4) → school talent show (ep 5)
   
   When changing locations, include a BRIEF transition in the story_text:
   - "Following the sound, they found..." / "The map led them to..." / "On the way home, they spotted..."
