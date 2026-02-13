@@ -22,14 +22,17 @@ MARGIN_MM = 0
 MARGIN_PT = MARGIN_MM * mm
 
 
-def upscale_image_for_print(image_b64: str) -> Image.Image:
+def upscale_image_for_print(image_b64: str) -> tuple[Image.Image, bool]:
     """
     Upscale image to 300 DPI for A4 printing.
-    Input: base64 PNG (1024x1536)
-    Output: PIL Image (2480x3508)
+    Input: base64 PNG (can be portrait or landscape)
+    Output: (PIL Image at 300 DPI, is_landscape bool)
     """
     image_bytes = base64.b64decode(image_b64)
     image = Image.open(io.BytesIO(image_bytes))
+    
+    # Detect orientation
+    is_landscape = image.width > image.height
     
     # Convert to RGB if necessary (PDF doesn't support RGBA well)
     if image.mode in ('RGBA', 'P'):
@@ -43,37 +46,51 @@ def upscale_image_for_print(image_b64: str) -> Image.Image:
         image = image.convert('RGB')
     
     # Upscale to 300 DPI A4 size using LANCZOS (best for line art)
-    upscaled = image.resize((A4_WIDTH_PX, A4_HEIGHT_PX), Image.LANCZOS)
+    if is_landscape:
+        # Landscape: swap dimensions
+        upscaled = image.resize((A4_HEIGHT_PX, A4_WIDTH_PX), Image.LANCZOS)
+    else:
+        # Portrait: normal dimensions
+        upscaled = image.resize((A4_WIDTH_PX, A4_HEIGHT_PX), Image.LANCZOS)
     
-    return upscaled
+    return upscaled, is_landscape
 
 
 def create_a4_pdf(image_b64: str) -> str:
     """
     Convert base64 PNG to print-ready A4 PDF at 300 DPI.
     
-    Input: base64 encoded PNG (1024x1536)
-    Output: base64 encoded PDF
+    Input: base64 encoded PNG (portrait or landscape)
+    Output: base64 encoded PDF (matching orientation)
     """
-    # Upscale image
-    upscaled_image = upscale_image_for_print(image_b64)
+    from reportlab.lib.pagesizes import landscape
+    
+    # Upscale image and detect orientation
+    upscaled_image, is_landscape = upscale_image_for_print(image_b64)
     
     # Save upscaled image to bytes
     img_buffer = io.BytesIO()
     upscaled_image.save(img_buffer, format='PNG', optimize=True)
     img_buffer.seek(0)
     
-    # Create PDF
+    # Create PDF with matching orientation
     pdf_buffer = io.BytesIO()
-    c = canvas.Canvas(pdf_buffer, pagesize=A4)
+    if is_landscape:
+        page_size = landscape(A4)
+    else:
+        page_size = A4
+    c = canvas.Canvas(pdf_buffer, pagesize=page_size)
     
     # Calculate drawable area (A4 minus margins)
-    drawable_width = A4_WIDTH_PT - (2 * MARGIN_PT)
-    drawable_height = A4_HEIGHT_PT - (2 * MARGIN_PT)
+    page_width, page_height = page_size
+    drawable_width = page_width - (2 * MARGIN_PT)
+    drawable_height = page_height - (2 * MARGIN_PT)
     
     # Calculate scale to fit image in drawable area while maintaining aspect ratio
     img_aspect = upscaled_image.width / upscaled_image.height
     drawable_aspect = drawable_width / drawable_height
+    
+    print(f"[PDF] Image: {upscaled_image.width}x{upscaled_image.height}, Landscape: {is_landscape}")
     
     if img_aspect > drawable_aspect:
         # Image is wider - fit to width
