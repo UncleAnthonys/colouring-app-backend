@@ -679,8 +679,7 @@ FINAL CHECK - CRITICAL RULES:
             contents=contents,
             config=types.GenerateContentConfig(
                 response_modalities=['IMAGE', 'TEXT'],
-                temperature=0,  # Lower temp for more deterministic, less creative drifting
-                seed=42,  # Fixed seed for consistency (different from reveal)
+                temperature=0.4,  # Moderate temp: enough variance for different compositions, not so high it drifts
                 image_config=types.ImageConfig(
                     aspect_ratio='3:4'  # Portrait for A4-style, standard resolution
                 )
