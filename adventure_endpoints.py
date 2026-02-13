@@ -593,8 +593,15 @@ Make it look like a real children's coloring book cover you'd see in a shop!
         scene_prompt=cover_scene,
         age_rules=age_rules["rules"],
         reveal_image_b64=request.reveal_image_b64,
-        story_text=request.theme_description,
-
+        character_emotion="excited",
+        source_type=request.source_type or "drawing"
+    )
+    
+    return {
+        "cover_image_b64": image_b64,
+        "cover_page_b64": image_b64,
+        "title": f"{char.name} and {request.theme_name}"
+    }
 
 @router.post("/generate/full-story")
 async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
