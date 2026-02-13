@@ -660,17 +660,6 @@ Make it look like a real children's coloring book cover!
     
     return {"pages": pages, "title": full_title, "total_pages": len(pages)}
 
-        character_emotion="excited",
-        source_type=request.source_type or "drawing"
-    )
-    
-    # Return Gemini's image directly as the cover - it includes its own text
-    return {
-        "cover_image_b64": image_b64,
-        "cover_page_b64": image_b64,  # Same image - Gemini handles text on cover
-        "title": f"{char.name} and {request.theme_name}"
-    }
-
 
 @router.post("/test/gemini-reveal")
 async def test_gemini_reveal():
