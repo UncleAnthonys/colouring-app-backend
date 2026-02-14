@@ -1084,7 +1084,7 @@ Below is a pool of 180 story scenarios. For each of your 3 themes:
 3. The character's feature should be essential to the story but in a SURPRISING way
 
 The scenario is the STARTING POINT. The character's feature determines HOW they deal with it.
-Example: "A popcorn machine at the cinema won't stop" + a character with a big mouth = the character tries to eat all the popcorn but can't keep up, gets buried in it, then discovers they can use their mouth to blow the popcorn into a giant popcorn sculpture that wins a prize instead.
+Example: "A duplicating machine made 50 copies of the headteacher" + a character with many eyes = each eye can track a different copy, but they keep getting confused when copies swap clothes. Eventually they spot the real one because only the original has a coffee stain on their tie.
 
 Each theme MUST use a DIFFERENT unique feature as the main plot device.
 NEVER include specific body part numbers in theme names.
@@ -1137,44 +1137,44 @@ Return ONLY valid JSON. Here is a COMPLETE EXAMPLE of the exact format required:
   "age_level": "age_5",
   "themes": [
     {{
-      "theme_id": "runaway_robot_chef",
-      "theme_name": "The Runaway Robot Chef",
-      "theme_description": "When a pizza restaurant's robot chef goes haywire, Example Monster must chase it through the city before it buries the Mayor's birthday party in cheese.",
-      "theme_blurb": "A robot chef has gone BONKERS and is covering the whole city in pizza! Can Example Monster stop the cheesy chaos before the Mayor's party is ruined?",
+      "theme_id": "the_great_gravity_mix_up",
+      "theme_name": "The Great Gravity Mix-Up",
+      "theme_description": "When the gym's gravity experiment goes wrong, everything starts floating and Example Monster must catch everyone before they drift out the windows.",
+      "theme_blurb": "Everything in the gym is floating and the PE teacher is stuck on the ceiling!",
       "episodes": [
         {{
           "episode_num": 1,
-          "title": "Too Much Cheese!",
-          "scene_description": "Inside a busy pizza restaurant kitchen. A robot chef with spinning arms sprays melted cheese everywhere. The restaurant owner (a tiny hamster in a chef hat) stands on a stool looking panicked. Pizza dough flies through the air. Pots and pans scattered on the floor.",
-          "story_text": "Chef Whizz the robot had gone completely bonkers! Melted cheese was flying EVERYWHERE. 'Help!' squeaked Mr. Pepperoni the hamster. 'He won't stop cooking!'",
+          "title": "Up, Up and Away!",
+          "scene_description": "Inside a school gymnasium. Basketballs, skipping ropes, and gym mats float in mid-air. The PE teacher (a muscular but panicking badger in a tracksuit) clings to a ceiling beam. A small nerdy hamster in goggles holds a sparking remote control looking guilty. Example Monster stands in the doorway, shocked.",
+          "story_text": "Professor Nutbolt's gravity experiment had gone VERY wrong! Everything in the gym was floating — balls, mats, even Mr. Crunch the PE teacher! 'Get me DOWN!' he bellowed from the ceiling.",
           "emotion": "surprised"
         }},
         {{
           "episode_num": 2,
-          "title": "The Great Cheese Chase",
-          "scene_description": "WIDE SHOT: Example Monster chases the runaway robot down a city street. The robot leaves a trail of tomato sauce. A postman duck slips on sauce. A grumpy cat on a balcony gets splattered with cheese. Buildings and shop fronts line the street.",
-          "story_text": "Chef Whizz zoomed out and down the street! 'After him!' yelled Mr. Pepperoni, riding on Example Monster's head. The robot was heading straight for the Mayor's big birthday party!",
-          "emotion": "excited"
-        }},
-        {{
-          "episode_num": 3,
-          "title": "Slippery Trouble",
-          "scene_description": "CLOSE-UP: Example Monster has slipped on a huge puddle of tomato sauce in the town square. Chef Whizz escapes in the background. Mr. Pepperoni has landed in a fountain. Mozzarella stretches across the square like silly string.",
-          "story_text": "Example Monster tried to grab Chef Whizz but — SPLAT! Slipped right on the sauce. Mr. Pepperoni landed in the fountain. 'He's getting away!' spluttered the soggy little hamster.",
+          "title": "Floating Chaos",
+          "scene_description": "WIDE SHOT: The school corridor outside the gym. Floating objects are drifting out through the doors — chairs, lunch boxes, a confused cat. Students dodge floating items. Professor Nutbolt floats past clutching the broken remote. Example Monster reaches for a floating student.",
+          "story_text": "The floating was spreading! Chairs drifted down the corridor and lunch boxes bumped along the ceiling. 'My remote broke!' wailed Professor Nutbolt, spinning slowly upside down. 'We need to fix it before the WHOLE school floats away!'",
           "emotion": "worried"
         }},
         {{
+          "episode_num": 3,
+          "title": "The Grab That Missed",
+          "scene_description": "CLOSE-UP: Example Monster reaching for the broken remote control but it floats just out of reach. Professor Nutbolt tries to throw it but it drifts in the wrong direction. Mr. Crunch the badger has floated out a window and is clinging to a flagpole outside. Floating sports equipment everywhere.",
+          "story_text": "Example Monster tried to grab the remote but — WHOOSH — it floated away! 'The off switch is on the back!' called Professor Nutbolt. But every time they got close, the remote drifted further. Mr. Crunch was now outside, hugging the flagpole. 'HURRY UP!' he yelled.",
+          "emotion": "scared"
+        }},
+        {{
           "episode_num": 4,
-          "title": "The Big Catch",
-          "scene_description": "ACTION SHOT: Example Monster uses their special feature creatively to catch Chef Whizz outside the town hall. The Mayor (a tall flamingo in a party hat) peeks from the doorway. Streamers and balloons everywhere. Mr. Pepperoni cheers from Example Monster's shoulder.",
-          "story_text": "Example Monster had a super-duper idea! Using their special feature, they caught Chef Whizz just in time. 'Whizz just wanted to make the biggest pizza ever,' beeped the little robot sadly.",
+          "title": "A Clever Trick",
+          "scene_description": "ACTION SHOT: Example Monster uses their special feature in a creative way to finally catch the remote. Professor Nutbolt watches with mouth open. The gym is full of floating objects creating an obstacle course. Through the window, Mr. Crunch gives a thumbs up from the flagpole.",
+          "story_text": "Then Example Monster had a brilliant idea! Using their special feature, they snagged the remote in the cleverest way. CLICK! Gravity came back all at once. Everything crashed down — BANG, CLATTER, BONK!",
           "emotion": "determined"
         }},
         {{
           "episode_num": 5,
-          "title": "The Biggest Pizza Party",
-          "scene_description": "The town square party. Everyone eating a GIANT pizza that Chef Whizz made properly. Example Monster, Mr. Pepperoni, the Mayor flamingo, and Chef Whizz all together. Bunting, balloons, and fairy lights everywhere.",
-          "story_text": "'What if Whizz makes the birthday pizza?' said Example Monster. The robot beeped happily and made the most ginormous, perfect pizza EVER. 'Best party ever!' laughed the Mayor.",
+          "title": "Back to Earth",
+          "scene_description": "The gym with everything crashed back to the ground in a huge pile. Mr. Crunch the badger sits dazed on a pile of gym mats. Professor Nutbolt hugs the broken remote. Example Monster stands proudly. A banner on the wall reads 'SCIENCE FAIR CANCELLED'.",
+          "story_text": "'No more gravity experiments,' groaned Mr. Crunch, pulling a basketball off his head. Professor Nutbolt quietly hid the remote behind his back. 'Deal,' he squeaked.",
           "emotion": "happy"
         }}
       ]
