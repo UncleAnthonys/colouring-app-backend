@@ -430,27 +430,16 @@ async def generate_adventure_episode_gemini(character_data: dict, scene_prompt: 
         emotion_guidance = ""
         if character_emotion:
             emotion_guidance = f"""
-*** CRITICAL - CHARACTER EMOTION AND POSE — THIS IS THE #1 THING THAT MAKES EACH PAGE DIFFERENT:
-{character_name} MUST look {character_emotion} in this scene.
-
-🚨 DO NOT draw the same happy open-mouth face on every page!
-🚨 DO NOT copy the pose from the reference image!
-The reference shows APPEARANCE ONLY (body shape, features). The EMOTION and POSE must change EVERY page.
-
-EMOTION: {character_emotion}
-Draw {character_name} with THIS expression and body language:
-- happy/proud: Big smile, arms up or hands on hips, confident stance
-- excited: Jumping or bouncing, arms wide, huge grin, movement lines
-- scared: Hunched small, hands up defensively, wide frightened eyes, mouth in O shape
-- worried/nervous: Biting lip or covering mouth, hunched shoulders, eyebrows up
-- sad: Slumped posture, droopy eyes looking down, mouth turned down, maybe sitting on ground
-- surprised: Hands on cheeks, mouth wide open, eyebrows way up, leaning back
-- determined: Leaning forward, fists clenched, focused narrow eyes, strong stance
-- curious: Head tilted, one eyebrow up, leaning toward something, hand on chin
-- embarrassed: Hands covering face partially, looking sideways, shrinking down
-- panicked: Running pose, arms flailing, sweat drops, wide eyes
-
-The POSE tells the story as much as the scene does. A sad character SITS DOWN. A scared character HIDES. A proud character STANDS TALL.
+*** CRITICAL - CHARACTER EMOTION AND POSE:
+{character_name} should look {character_emotion} in this scene.
+DO NOT copy the happy/celebratory pose from the reference image.
+The reference image shows the character APPEARANCE (body shape, features, size).
+But the EMOTION and POSE must match this scene: {character_emotion}
+- If scared: hunched, worried expression, maybe hiding partially
+- If curious: leaning forward, wide eye, reaching out
+- If sad: drooping posture, downturned expression
+- If determined: standing firm, focused expression
+- If nervous: hesitant posture, uncertain expression
 """
         elif story_text:
             # Auto-detect emotion from story text
@@ -1402,25 +1391,11 @@ For each theme provide:
 3. Theme blurb (ONE short punchy sentence, MAX 15 words. Describe the chaos/situation only. NEVER mention the character's body parts in the blurb)
 4. 5 episodes with: episode number (1-5), title, scene_description, story_text, emotion
 
-Scene descriptions MUST focus on THE MAIN ACTION of the episode:
-- What is the character DOING? (not just standing — show the action mid-happening)
-- What are the VISIBLE CONSEQUENCES? (ketchup on the floor, cake flying through air, toys scattered everywhere)
-- What is the character's BODY LANGUAGE? (slumped and sad, jumping with excitement, running away in panic)
-- Include specific setting details and 3-4 background objects to colour
-- Mix close-ups, wide shots, and action scenes across the 5 episodes
-- The scene description is what gets drawn — if you don't describe the mess, it won't be in the image!
+Scene descriptions MUST include: character's pose/action, specific setting details, other characters present, 3-4 background objects to colour. Mix close-ups, wide shots, and action scenes across the 5 episodes.
 
 Story text: Follow the age guidelines for length. Final episode should be short and punchy.
 
-Emotion must be one of: nervous, excited, scared, determined, happy, curious, sad, proud, worried, surprised, embarrassed, panicked
-
-*** EMOTION RULES — CRITICAL ***
-- You MUST use at LEAST 3 DIFFERENT emotions across the 5 episodes
-- Episodes 1-3 should ESCALATE emotionally (e.g. curious → worried → sad)
-- Episode 3 (the setback) MUST NOT be "happy" or "excited" — use sad, worried, scared, or panicked
-- Episode 5 (resolution) should be happy, proud, or excited
-- NEVER use "happy" for more than 2 episodes
-- The emotion should match what the character FEELS in that moment of the story
+Emotion must be one of: nervous, excited, scared, determined, happy, curious, sad, proud, worried, surprised
 
 *** 6 NON-NEGOTIABLE RULES ***
 
