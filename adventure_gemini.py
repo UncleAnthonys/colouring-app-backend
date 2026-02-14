@@ -1048,11 +1048,25 @@ Be wildly creative. Surprise us. Make it unforgettable.
 
 *** ANTI-REPETITION CHECK ***
 Before finalising your story, ask yourself:
-- Am I using the character's feature in the MOST OBVIOUS way? If yes, think of 3 alternatives and pick the weirdest one.
 - Is my antagonist just "a grumpy thing blocking something"? Give them a REASON to be causing trouble.
-- Does my story follow the pattern "quiet/broken place → character uses feature → place is fixed"? If yes, SCRAP IT and try a completely different structure.
+- Does my story follow the pattern "broken/sad/quiet place → character uses feature → place is restored to happy"? This is the #1 most overused AI story pattern. SCRAP IT. Instead try:
+  * A RESCUE (someone is in danger and needs saving before time runs out)
+  * A CHASE (something has escaped and is causing havoc - catch it!)
+  * A MYSTERY (something weird is happening and nobody knows why)
+  * A JOURNEY (character must deliver/transport something important through obstacles)
+  * A MISTAKE (character accidentally causes a problem and must fix it before anyone finds out)
+  * A COMPETITION GONE WRONG (the event itself becomes the adventure)
 - Is there physical comedy? A 5-year-old should LAUGH at least once.
 - Would a child say "that was SO COOL" about at least one moment? If not, make it cooler.
+
+*** THE FEATURE IS NOT THE STORY - THE SITUATION IS ***
+The character's special feature (big mouth, many eyes, strong arms etc.) is just a TOOL.
+What makes the story interesting is the SITUATION they're in, not what body part they use.
+A big mouth is interesting when it accidentally swallows the mayor's wig during a parade.
+A big mouth is BORING when it sings to make a sad place happy.
+Many eyes are interesting when each eye sees a different version of what happened during a mystery.
+Many eyes are BORING when they just "spot something hidden."
+Put the character in a WILD situation first, THEN figure out how their feature helps (or makes things worse!).
 - Each theme must have a clear beginning, middle, and end across 5 episodes
 - *** CRITICAL - NARRATIVE FLOW AND LOCATION VARIETY ***:
   The story MUST visit AT LEAST 3-4 DIFFERENT LOCATIONS across 5 episodes. Do NOT stay in one place!
