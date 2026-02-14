@@ -856,9 +856,8 @@ CONTENT:
             )
         )
         
-        
-    # Scenario pool - shuffled each time for variety
-    _scenario_pool = [
+        # Scenario pool - shuffled each time for variety
+        _scenario_pool = [
         "A popcorn machine at the cinema won\'t stop and popcorn is flooding the whole building",
         "A birthday cake has come alive and is running through the town leaving icing footprints everywhere",
         "Someone put magic beans in the school dinner and now vegetables are growing through the roof",
@@ -1039,11 +1038,11 @@ CONTENT:
         "Box of old letters in the attic tells the story of how grandparents met",
         "Night before starting new school — kid can\'t sleep, imagining everything that might happen",
         "Child stays up late to see the stars for the first time, wrapped in a blanket with their parent",
-    ]
-    random.shuffle(_scenario_pool)
-    shuffled_scenarios = "\n".join(f"{i+1}. {s}" for i, s in enumerate(_scenario_pool))
+        ]
+        random.shuffle(_scenario_pool)
+        shuffled_scenarios = "\n".join(f"{i+1}. {s}" for i, s in enumerate(_scenario_pool))
 
-    prompt = f'''You are creating personalized story adventures for a childrens coloring book app.
+        prompt = f'''You are creating personalized story adventures for a childrens coloring book app.
 
 Based on this character named "{character_name}", generate 3 UNIQUE story themes that are PERSONALIZED to this specific character's features.
 
