@@ -7,6 +7,7 @@ import os
 import base64
 import google.generativeai as genai
 import json
+import random
 from fastapi import HTTPException
 
 
@@ -857,7 +858,6 @@ CONTENT:
         
         
     # Scenario pool - shuffled each time for variety
-    import random
     _scenario_pool = [
         "A popcorn machine at the cinema won\'t stop and popcorn is flooding the whole building",
         "A birthday cake has come alive and is running through the town leaving icing footprints everywhere",
