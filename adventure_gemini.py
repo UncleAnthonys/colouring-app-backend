@@ -728,7 +728,7 @@ Use rhymes, repetition, and fun sounds in EVERY episode.
 CONTENT RULES:
 - VERY simple sentences (5-8 words max)
 - Basic emotions only: happy, sad, scared, excited
-- Familiar BUT exciting settings: a wobbly treehouse, a toy shop after dark, a kitchen where food comes alive, a bath-time ocean adventure, a blanket fort kingdom, a busy airport, a zoo at night
+- Familiar BUT exciting settings: a tall treehouse, a toy shop after dark, a kitchen where food comes alive, a bath-time ocean adventure, a blanket fort kingdom, a busy airport, a zoo at night
 - Simple actions: walking, running, eating, sleeping, hugging
 - No complex plots - just simple discoveries and moments
 - No villains or scary elements
