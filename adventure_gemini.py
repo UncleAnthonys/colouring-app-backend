@@ -464,11 +464,16 @@ The character's EMOTION must match the story's mood!
         if previous_page_b64:
             continuity_guidance = f"""
 *** PREVIOUS PAGE REFERENCE ***
-The previous storybook page is attached for LIGHT reference only.
-- Use it to keep the CHARACTER looking consistent (same body shape, features)
-- Do NOT copy the scene layout, composition, or background from it
-- Generate this page FRESH based on the scene description below
-- Each page should look like a COMPLETELY DIFFERENT illustration
+The previous storybook page is attached for SCENE CONTINUITY.
+- If the story is still in the same location, the SETTING should feel like the same place (same style of walls, machines, furniture etc.)
+- But the COMPOSITION must be significantly different:
+  * Different camera angle or zoom level (close-up vs wide shot vs action shot)
+  * Character in a different pose and position on the page
+  * Different objects in the foreground
+  * Different arrangement of supporting characters
+- If the previous page was mostly filled with one element (e.g. popcorn, bubbles, clouds), this page MUST NOT repeat that same visual pattern
+- A child colouring these pages back-to-back should feel like they're colouring something NEW each time
+- Same world, DIFFERENT picture
 """
         
         # Build prompt
