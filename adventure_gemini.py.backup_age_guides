@@ -721,263 +721,83 @@ async def generate_personalized_stories(character_name: str, character_descripti
         "age_3": """
 AGE GROUP: 2-3 YEARS OLD (TODDLER)
 
-*** WRITING STYLE ***
-- Rhyming and rhythmic text is ESSENTIAL - every episode should have a rhyme or repeated phrase
-- Sound effects on every page: "SPLISH!", "BANG!", "WHOOOOSH!", "POP POP POP!"
-- Very short sentences (5-8 words max)
-- Repetition with variation is the #1 tool - same phrase structure, different word each time
-- Fun made-up words: "splishy-sploshy", "rumbly-tumbly", "snore-a-saurus"
-- Basic emotions only: happy, sad, scared, excited, surprised
-- Direct address to the reader: "Uh oh!", "Oh no!", "Can YOU see it?"
+*** CRITICAL WRITING STYLE FOR TODDLERS ***
+Write like a classic rhyming picture book! Examples:
+- "Hop hop hop, will they stop? No no no, off they go!"
+- "Splish splash splish, like a fish!"
+- "One two three, what do we see?"
+Use rhymes, repetition, and fun sounds in EVERY episode.
 
-*** STORY STRUCTURE - USE ONE OF THESE 3 PROVEN PATTERNS ***
-
-PATTERN A: "REPETITION WITH SURPRISE" (like Dear Zoo, Brown Bear Brown Bear)
-- Episodes 1-3: Same pattern repeats with a different funny thing each time
-- Episode 4: The pattern changes or breaks in a surprising way
-- Episode 5: Satisfying conclusion that calls back to episode 1
-Example: Character tries to find something. Ep1: finds wrong thing (too big!). Ep2: finds wrong thing (too small!). Ep3: finds wrong thing (too noisy!). Ep4: surprise - the thing finds THEM! Ep5: happy together.
-
-PATTERN B: "ACCUMULATING CHAOS" (like The Very Hungry Caterpillar)
-- Each episode adds ONE more silly thing to a growing pile of chaos
-- By episode 3-4, everything is hilariously out of control
-- Episode 5: one big action fixes everything (or makes it even funnier)
-Example: Character accidentally makes one mess. Then a bigger mess. Then an ENORMOUS mess. Tries to clean up but makes it worse. Finally one silly accident fixes everything at once.
-
-PATTERN C: "JOURNEY WITH OBSTACLES" (like We're Going on a Bear Hunt)
-- Character goes somewhere, hits an obstacle, gets past it with a fun sound/action
-- Each obstacle is different and fun to act out
-- Final obstacle leads to a big surprise
-- Then rush back home!
-Example: Ep1: Can't get past the puddle (SPLASH!). Ep2: Can't get past the hill (WHEEE!). Ep3: Can't get past the sleeping dragon (SHHHHH tip-toe!). Ep4: Made it! But wait - surprise twist! Ep5: Rush home, funny ending.
-
-*** WHAT MAKES TODDLER STORIES WORK ***
-- A parent reading aloud should naturally do funny voices and actions
-- At least ONE moment where the kid will LAUGH (physical comedy, something going splat, a funny noise)
-- The character DOES things - never just looks or observes
-- Predictable pattern that kids can "join in" with after one hearing
-- A warm "everything's OK" ending
-
-*** BANNED FOR AGE 3 ***
-- Passive searching (look here, look there, found it, done)
-- Character just observing or noticing things
-- Abstract or conceptual themes
-- Stories with no funny moment or surprise
-
-*** SCENE DESCRIPTIONS FOR AGE 3 ***
-- Character should be LARGE in frame (40%+ of image)
-- Maximum 2-3 background objects per scene
-- Big chunky shapes, but still clearly narrative (viewer can tell what's happening in the story)
-- Supporting characters big and simple with clear expressions
-- Each scene looks VERY different from the last
-
-*** TEXT LENGTH ***
-- 1-2 very short sentences per episode (15-25 words max)
-- At least one sound effect or exclamation per episode
-- Final episode: shortest of all (1 sentence + a fun sound)
+CONTENT RULES:
+- VERY simple sentences (5-8 words max)
+- Basic emotions only: happy, sad, scared, excited
+- Familiar BUT exciting settings: a tall treehouse, a toy shop after dark, a kitchen where food comes alive, a bath-time ocean adventure, a blanket fort kingdom, a busy airport, a zoo at night
+- Simple actions: walking, running, eating, sleeping, hugging
+- No complex plots - just simple discoveries and moments
+- No villains or scary elements
+- Story text: 1-2 very short rhyming sentences per episode
+- Scene descriptions: Simple, few elements (character + 2-3 objects max)
 """,
-
         "age_4": """
 AGE GROUP: 4 YEARS OLD
 
-*** WRITING STYLE ***
-- Rhyming is great but not required on every line
-- Lots of sound effects: "KERPLUNK!", "tip-toe-tip-toe", "KABOOM!"
-- Simple sentences (8-12 words) with occasional longer ones for drama
-- A catchphrase or repeated question works great as a story thread
-- Funny comparisons: "as tall as a house!", "louder than a thunderstorm!"
-- Questions to the reader: "What do YOU think happened next?"
-- Named emotions: scared, brave, proud, grumpy, excited, worried, silly
+*** MUST USE THIS WRITING STYLE ***
+Include rhymes and fun sounds! Examples:
+- "Tip-toe, tip-toe, where did it go?"
+- "Pitter-patter, splitter-splatter!"
+- End with questions: "What will happen next, do you think?"
 
-*** STORY STRUCTURE - USE ONE OF THESE PATTERNS ***
-
-PATTERN A: "THE CLEVER TRICK" (like The Gruffalo)
-- Character faces a problem bigger than them
-- Uses their special feature in a CLEVER way (not the obvious way)
-- Moment of "oh no, it didn't work!"
-- They try a smarter version and it works
-- Everyone is impressed (or the trick is hilariously revealed)
-Key: Character should be SMART, not just lucky.
-
-PATTERN B: "THE GROWING TEAM" (like Room on the Broom)
-- Character sets off on a mission alone
-- Episodes 2-3: Meets helpers with funny personalities
-- Episode 4: Individual efforts fail - they must work TOGETHER
-- Episode 5: Team victory + celebration
-Key: Each helper adds something funny AND useful.
-
-PATTERN C: "THE BIG MISTAKE" (like Elmer, Oi Frog)
-- Character does something causing an unexpected chain reaction
-- Things get progressively sillier and more out of control
-- The "mistake" turns out to be something good or useful
-- Or the character learns they were great all along
-Key: Comedy from things going wrong in UNEXPECTED ways.
-
-*** WHAT MAKES AGE 4 STORIES GREAT ***
-- A moment where the kid gasps or says "oh no!"
-- A genuinely funny bit that makes the parent laugh too
-- Supporting characters with ONE clear personality trait (the grumpy one, the scared one, the bossy one)
-- The main character solving the problem THEMSELVES (no adult swooping in to fix it)
-- Physical comedy AND verbal comedy together
-
-*** SCENE DESCRIPTIONS FOR AGE 4 ***
-- Character prominent but not dominating (30-40% of image)
-- 3-5 background objects per scene
-- Moderate detail, some fun things to discover (a funny sign, a hidden creature)
-- Supporting characters with clear distinctive looks
-- Mix close-ups and wider shots across the 5 episodes
-
-*** TEXT LENGTH ***
-- 2-3 sentences per episode (25-40 words)
-- Dialogue in at least 3 episodes
-- Sound effects in at least 2 episodes
-- Final episode: 2 short punchy sentences
+CONTENT:
+- Simple sentences (8-12 words)
+- Basic story: beginning, simple problem, happy ending
+- Familiar settings with light magic
+- Story text: 2 short sentences WITH rhymes or fun sounds
 """,
-
         "age_5": """
 AGE GROUP: 5 YEARS OLD
 
-*** WRITING STYLE ***
-- Natural storytelling voice with personality
+*** MUST USE THIS WRITING STYLE ***
+Use silly, fun language! Examples:
 - Fun words: "super-duper", "teeny-tiny", "ginormous", "splashy-splashy", "rumbly-tumbly"
-- Sound effects for impact: "CRASH!", "SPLORT!", "WHOMP!"
-- Sentences 8-15 words, with occasional longer ones for dramatic moments
-- Dialogue is essential - characters TALK to each other with personality
-- Exclamations: "No way!", "That's impossible!", "Not AGAIN!"
-- Character thoughts: "Tommy scratched his head. This was going to be tricky..."
+- Silly moments that make kids giggle
+- Build excitement: "And then... guess what!"
 
-*** STORY STRUCTURE ***
-
-STRUCTURE A: "RESCUE/DELIVERY UNDER PRESSURE" (like Zog, Supertato)
-- Episode 1: Clear urgent problem - someone needs help or something must be delivered NOW
-- Episode 2: First attempt using the character's special feature
-- Episode 3: SETBACK - the attempt fails or makes things worse. Moment of doubt.
-- Episode 4: Creative solution - uses their feature DIFFERENTLY, or gets unexpected help
-- Episode 5: Victory! Resolution connects back to episode 1 in a satisfying way
-Key: The setback must feel real. The kid should worry it won't work out.
-
-STRUCTURE B: "MYSTERY/DETECTIVE"
-- Episode 1: Something weird is happening - clues are found
-- Episode 2: Follow clues, meet a witness/helper with a funny personality
-- Episode 3: Red herring! They blame the wrong person/thing (funny misunderstanding)
-- Episode 4: Real answer discovered - surprising and funny
-- Episode 5: Everything explained, problem solved, the "culprit" had a good/sweet reason
-Key: The mystery answer should be funny or heartwarming, not scary.
-
-STRUCTURE C: "ACCIDENTAL HERO" (like Dogger, Giraffes Can't Dance)
-- Episode 1: Character feels they can't do something or doesn't fit in
-- Episode 2: Forced into a situation where they HAVE to try
-- Episode 3: Their attempt goes hilariously wrong
-- Episode 4: But the "wrong" thing accidentally solves a bigger problem nobody noticed
-- Episode 5: Character celebrated for being exactly who they are
-Key: Message through ACTION not moralising. Show don't tell.
-
-*** WHAT MAKES AGE 5 STORIES GREAT ***
-- A setback that makes the kid say "uh oh, NOW what?!"
-- Dialogue that sounds like real characters talking (not narration dressed as speech)
-- At least one genuinely funny moment
-- Supporting characters who actively HELP or HINDER - not just stand around watching
-- An ending that makes the kid want to hear the story AGAIN
-- The character's feature used in a way that surprises even the character
-
-*** SCENE DESCRIPTIONS FOR AGE 5 ***
-- Rich detailed scenes with lots to colour
-- 4-6 background objects plus supporting characters
-- Mix compositions: wide establishing shots, close-up action, overhead views
-- Characters showing clear emotions through body language
-- Fun details that reward looking closely
-- Each scene genuinely different in setting and feel
-
-*** TEXT LENGTH ***
-- 2-3 sentences per episode (30-50 words)
-- Dialogue in at least 3 of 5 episodes
-- At least one sound effect or onomatopoeia
-- Final episode: short and punchy, don't summarise
+CONTENT:
+- Medium sentences, slightly more vocabulary  
+- Clear 3-part stories: setup, adventure, resolution
+- Friendship themes, helping others, being brave
+- Story text: 2-3 sentences with fun/silly language
 """,
-
         "age_6": """
 AGE GROUP: 6 YEARS OLD
 
-*** WRITING STYLE ***
-- Confident narrative voice with humour and personality
+*** MUST USE THIS WRITING STYLE ***
+Use vivid comparisons and excitement! Examples:
 - Funny comparisons: "as bouncy as a kangaroo on a trampoline!"
-- Dramatic pauses built into text: "And then... silence."
-- Character voice should be distinct - the way THEY would say it
-- Include thoughts AND dialogue: '"This is fine," thought Mo. It was NOT fine.'
-- Longer sentences OK for tension (up to 20 words)
-- Break the fourth wall occasionally: "Now, you might think this was a good idea. It was not."
+- Expressive dialogue: "'Oh my goodness!' gasped Blobby"
+- Mini cliffhangers: "But then... something unexpected happened!"
 
-*** STORY STRUCTURE ***
-Age 6 can handle real plot twists and emotional stakes:
-
-- Episode 1: Establish the character's world AND the problem in the same beat. Hook immediately.
-- Episode 2: First plan - starts well but a complication appears
-- Episode 3: MAJOR SETBACK - plan fails badly. Character's limitation exposed. Lowest point.
-- Episode 4: Realisation or unexpected help. New approach using what they LEARNED from failing.
-- Episode 5: Climax and resolution - clever solution, ending connects to opening, final joke or emotional beat.
-
-*** KEY PRINCIPLES ***
-- The setback must be REAL - not just "oops, wrong place." Something genuinely goes wrong.
-- Supporting characters have their own mini-motivations (not just cheerleaders)
-- Dramatic irony where possible (reader knows something the character doesn't)
-- The ending is EARNED - character MAKES things work out, things don't just happen to work
-- Humour from character and situation, not just random wackiness
-
-*** SCENE DESCRIPTIONS FOR AGE 6 ***
-- Detailed rich scenes appropriate for the age
-- 5-7 background objects/elements
-- Dynamic compositions: action mid-movement, dramatic angles
-- Environmental storytelling (background details that hint at the story)
-- Varied settings that feel like a real world
-
-*** TEXT LENGTH ***
-- 3-4 sentences per episode (40-60 words)
-- Mix of dialogue, action, and internal thought
-- Final episode: wrap up efficiently, don't drag
+CONTENT:
+- Fuller sentences with descriptive words
+- Multi-episode story arcs that connect
+- Themes: friendship, creativity, discovery
+- Story text: 2-3 engaging sentences with comparisons/dialogue
 """,
-
         "age_7": """
-AGE GROUP: 7-8 YEARS OLD
+AGE GROUP: 7 YEARS OLD
 
-*** WRITING STYLE ***
-- Witty, fast-paced narrative with a strong authorial voice
-- Humour through irony, exaggeration, and understatement
-- Characters have distinct speech patterns and personalities
-- Can include mild peril and genuine tension
-- Internal monologue: "This was either the bravest or the stupidest thing Mo had ever done. Probably both."
-- Wordplay and clever descriptions
-- Sophisticated emotions: embarrassment, determination, reluctant admiration
+*** MUST USE THIS WRITING STYLE ***
+Use action words and cheeky humor! Examples:
+- Action: "zoomed", "crashed", "whooshed", "exploded with color"
+- Puns and wordplay kids will get
+- Cheeky reactions: "'Well, THAT was unexpected!' Blobby laughed"
 
-*** STORY STRUCTURE ***
-Full 5-act structure with genuine stakes:
-
-- Episode 1: Hook immediately. Problem established with urgency and real consequences.
-- Episode 2: Investigation/preparation. Build the world. Introduce allies and obstacles with personality.
-- Episode 3: MAJOR FAILURE. Plan backfires spectacularly. Real consequences. Supporting characters affected too.
-- Episode 4: Character adapts. Uses their feature in an unexpected creative way. Combines what they learned from failure.
-- Episode 5: Climactic resolution with a twist. Ending reframes something from episode 1. Satisfying but not predictable.
-
-*** KEY PRINCIPLES ***
-- Real stakes: feelings get hurt, something important is at risk, time runs out
-- Multiple characters with competing goals (not just good vs evil)
-- The obstacle/villain should have an understandable motivation
-- Humour and tension ALTERNATE - don't be one or the other, be both
-- The character's special feature should have a COST or LIMITATION
-- Subvert expectations at least once
-
-*** SCENE DESCRIPTIONS ***
-- Complex detailed scenes with many colourable areas
-- Rich backgrounds with environmental storytelling
-- Dynamic action compositions with movement
-- Multiple characters interacting with clear body language
-- Intricate details that reward careful colouring
-
-*** TEXT LENGTH ***
-- 3-4 sentences per episode (50-70 words)
-- Heavy on dialogue and character interaction
-- Can include mini-cliffhangers between episodes
+CONTENT:
+- Complex sentences with good vocabulary
+- Characters face challenges and grow
+- Themes: teamwork, perseverance, adventure
+- Story text: 3 sentences with action words and humor
 """,
-
         "age_8": """
 AGE GROUP: 8 YEARS OLD
 
