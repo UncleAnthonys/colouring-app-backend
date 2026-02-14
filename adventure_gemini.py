@@ -914,7 +914,7 @@ Every theme should feel like a mini movie trailer that a kid would BEG to watch.
 For each theme provide:
 1. Theme name (fun, age-appropriate)
 2. Theme description (1 sentence)
-3. Theme blurb (1 sentence that makes a kid shout "THAT ONE!" - describe the WILD situation, not the feature)
+3. Theme blurb (ONE short sentence MAX - 15 words or fewer. Describe the CHAOS/PROBLEM only. NEVER mention the character's body parts or features in the blurb. Example: "A robot chef has gone bonkers and is burying the city in pizza!" NOT "Can Lenny use his big mouth to stop the robot chef?")
 4. 5 episodes with: episode number (1-5), title, scene_description, story_text, emotion
 
 Scene descriptions MUST include: character pose/action, specific setting, other characters present, at least 3-4 background objects to colour. Mix close-ups, wide shots, and action scenes.
@@ -925,9 +925,9 @@ Emotion must be one of: nervous, excited, scared, determined, happy, curious, sa
 
 *** 5 NON-NEGOTIABLE RULES ***
 
-1. SETTINGS: No forests, meadows, valleys, or generic nature. Use exciting places - cities, factories, space, underwater, restaurants, pirate ships, monster schools, circuses, inside a giant clock, a cheese moon, a haunted hotel, a dragon's kitchen, a rainbow waterpark. Every setting should be somewhere a kid thinks is COOL and wants to colour.
+1. SETTINGS: No forests, meadows, valleys, or generic outdoor nature. Think of places that would make a kid say "WHOA!" - places they've never been, places that are exciting to imagine, places packed with interesting things to colour. Invent your OWN unique settings - do NOT reuse settings from any examples in this prompt. Every story should feel like it's set somewhere completely new and unexpected.
 
-2. CHARACTERS: At least 2 named supporting characters with funny personalities who appear throughout. Not just once. Give them quirks - a hamster chef, a flamingo mayor, a robot that speaks in rhymes, a tiny dragon who sneezes glitter.
+2. CHARACTERS: At least 2 named supporting characters with funny personalities who appear throughout the story, not just once. Invent original characters - do NOT reuse character types from examples in this prompt.
 
 3. SETBACK ON EPISODE 3: Character tries their feature and it FAILS or makes things worse. This makes the eventual win feel earned.
 
@@ -936,6 +936,8 @@ Emotion must be one of: nervous, excited, scared, determined, happy, curious, sa
 5. ENDING: Episode 5 resolves the specific problem from episode 1. No generic "and everything was happy forever."
 
 *** BANNED ***
+- The word "wobbly" or "wibbly" in ANY title, blurb, or story text
+- The word "wobbly" or "wibbly" in ANY title, blurb, or story text
 - Restoring lost colour/magic/sparkle/music to a sad/quiet/broken place
 - Finding or collecting magical gems/crystals/stones/sparkles
 - Singing/humming/blowing to make a quiet world loud or sad world happy
