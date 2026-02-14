@@ -884,265 +884,110 @@ DO NOT make stories about:
 - "colors fading" or "restoring colors" (overdone!)
 - Body shape unless it's truly unusual
 
-STEP 2 - BUILD STORIES WHERE THE UNUSUAL FEATURE IS ESSENTIAL:
-The character's weirdest feature should be WHY they save the day!
+STEP 2 - CREATE THE STORY
 
-*** CREATIVE FEATURE USAGE - AVOID THE OBVIOUS! ***
-For EVERY feature, think beyond the most obvious use. Gemini tends to repeat the same ideas - FIGHT THIS!
-
-MOUTHS/TEETH: Do NOT default to singing/humming/making sounds. Think bigger:
-- Big mouth = can blow enormous bubbles to float friends across a river
-- Big mouth = can gulp up flood water to save a village
-- Big mouth = can whisper secrets into the deepest caves to wake sleeping creatures
-- Teeth = can chew through tangled vines trapping a friend
-- Teeth = can carve beautiful patterns into ice/wood
-- BANNED for mouths: singing to make quiet places loud, humming magical tunes, making special sounds
-
-EYES: Do NOT default to "seeing special/hidden/magical things". Think bigger:
-- Many eyes = can cry enough tears to fill a dry well and save a garden
-- Many eyes = can wink in patterns to send secret messages across a battlefield
-- Many eyes = can each look at a different friend during a crisis so nobody feels alone
-- BANNED for eyes: seeing hidden magic, spotting invisible things, finding sparkly stuff
-
-ARMS: Do NOT default to "juggling" or "hugging everyone". Think bigger:
-- Many arms = can build a dam in seconds to stop a flood
-- Many arms = can hold up a collapsing roof while friends escape
-- Many arms = can paint a mural so fast it comes to life
-- Many arms = can knit a net big enough to catch a falling star
-
-LEGS: Do NOT default to "running fast". Think bigger:
-- Many legs = can stomp a rhythm that makes seeds grow instantly
-- Many legs = can form a bridge for tiny creatures to cross
-- Many legs = each leg dances differently, confusing a scary predator
-
-THE STORY SHOULD BE IMPOSSIBLE WITHOUT THIS FEATURE!
-If a character has 10 eyes, the story should REQUIRE seeing 10 things at once.
-If a character has 8 arms, the story should REQUIRE doing 8 things at once.
+Your 3 themes MUST each use a DIFFERENT unique feature as the main plot device.
+NEVER include specific body part numbers in theme names (not "Eight-Armed" or "Six-Legged").
+The character's feature should be WHY they save the day - the story is IMPOSSIBLE without it.
 
 {age_guide}
 
-CRITICAL: The stories MUST be appropriate for the age group above. Follow the sentence length, vocabulary, and complexity guidelines exactly.
+CRITICAL: Follow the age guidelines above exactly for sentence length, vocabulary, and complexity.
 
-For each theme, provide:
-1. Theme name that fits this character personality and type (NEVER include specific body part numbers like "Eight-Armed" or "Six-Legged" in theme names)
-2. Theme description (1 sentence, age-appropriate - NO specific body part numbers)
-3. Theme blurb (1 exciting sentence to help kids choose - NO specific body part numbers)
-4. 5 episodes, each with:
-   - Episode number (1-10)
-   - Title (short, age-appropriate)
-   - Scene description (MUST include: {character_name}'s pose/action, specific setting details, any other characters present, at least 3-4 background objects to colour. Vary compositions: mix close-ups, wide shots, action scenes, and quiet moments across the 5 episodes)
-   - Story text (MUST follow the age guidelines above for length and complexity)
+*** HOW TO BUILD A GREAT STORY ***
 
-IMPORTANT RULES:
-- {character_name} is ALWAYS the hero of the story
-- NEVER use specific numbers for body parts (not "8 eyes" or "6 arms" or "3 mouths")
-  - Instead use creative descriptions: "lots of eyes", "extra arms", "all those mouths"
-  - Describe WHAT they do with the feature, not HOW MANY: "eyes scanning everywhere", "arms juggling everything at once"
-  - This is CRITICAL - the exact count may be wrong so never state a number
+FIRST: Invent a WILD SITUATION. Then figure out how the feature helps.
+DO NOT start with the feature and build a story around it - that creates boring, predictable stories.
 
-*** THE STORY MUST COME FROM THE CHARACTER'S UNIQUE FEATURES ***
-Your 3 themes MUST each use a DIFFERENT unique feature as the MAIN plot device.
+GOOD: "A robot chef has gone haywire and is firing spaghetti everywhere" -> THEN the character's big mouth catches it
+GOOD: "A pirate ship is sinking because a whale fell asleep on it" -> THEN the character's many arms tickle the whale awake
+GOOD: "All the zoo animals have swapped enclosures and nobody knows which animal goes where" -> THEN the character's many eyes watch them all at once
+BAD: "Character has big mouth so they sing to fix a sad/quiet place"
+BAD: "Character has big eyes so they spot hidden magical things"
+BAD: "Character has strong arms so they hold something up"
 
-THEME PRIORITY ORDER (most interesting first!):
-- Theme 1: Based on UNUSUAL BODY PARTS (multiple eyes, multiple arms, multiple mouths, wings, tails, etc.) - THESE ARE THE MOST INTERESTING!
-- Theme 2: Based on ANOTHER unusual body feature OR special accessory (horns, antennae, crown, wand, etc.)
-- Theme 3: Based on ANY remaining unique feature
+Think like a Pixar writer. What situation would make a cinema full of kids GASP, then LAUGH, then CHEER?
+Every theme should feel like a mini movie trailer that a kid would BEG to watch.
 
-DO NOT make Theme 1 about color - color is the LEAST interesting feature!
-If the character has 8 eyes, 6 arms, and 3 mouths - those should be Themes 1, 2, and 3!
+*** FORMAT ***
 
-The character's special trait should be WHY they can solve the problem - not just decoration.
-If a character has spots, maybe those spots glow in the dark and help them find things.
-If a character has big ears, maybe they can hear things others can't.
-If a character wears a cape, maybe the cape is magical or helps them fly.
+For each theme provide:
+1. Theme name (fun, age-appropriate)
+2. Theme description (1 sentence)
+3. Theme blurb (1 sentence that makes a kid shout "THAT ONE!" - describe the WILD situation, not the feature)
+4. 5 episodes with: episode number (1-5), title, scene_description, story_text, emotion
 
-MAKE THE STORY IMPOSSIBLE WITHOUT THIS CHARACTER'S UNIQUE FEATURES.
+Scene descriptions MUST include: character pose/action, specific setting, other characters present, at least 3-4 background objects to colour. Mix close-ups, wide shots, and action scenes.
 
-🚫 BANNED STORY IDEAS - DO NOT USE ANY OF THESE:
-- "Lost colors" or "fading colors" or "restore colors to the kingdom"
-- "Magic crystal" or "color crystal" or "rainbow crystal" quests
-- "Enchanted forest" or "magical forest" adventures
-- "Tree with a magical door"
-- "Kingdom losing its magic/color/sparkle"
-- "Finding a special gem/jewel/crystal/stone/sparkle"
-- Any quest where the character just "finds" or "collects" magical items
-- Stories where the character's only action is LOOKING at things (seeing beauty, noticing sparkles)
-- Stories with no real problem to solve - just wandering from place to place
-These are OVERUSED. Be MORE CREATIVE than this!
-*** WHAT MAKES A GREAT CHILDREN'S STORY ***
+Story text: Follow the age guidelines above for length. The FINAL episode should be SHORT and punchy - don't cram in a long summary.
 
-1. EMOTIONAL CORE - Every story needs a FEELING at its heart:
-   - Loneliness → finding connection
-   - Fear → discovering courage  
-   - Feeling different → finding where you belong
-   - Sadness → rediscovering joy
-   - Confusion → gaining understanding
+Emotion must be one of: nervous, excited, scared, determined, happy, curious, sad, proud, worried, surprised
 
-2. CHARACTER GROWTH - The character must CHANGE by the end:
-   - They learn something about themselves
-   - They overcome an internal struggle
-   - They see the world differently
+*** 5 NON-NEGOTIABLE RULES ***
 
-3. MEANINGFUL USE OF SPECIAL FEATURE:
-   - The character's unique trait should solve an EMOTIONAL problem, not just physical
-   - NOT: "Used strong arms to win a lifting contest"
-   - YES: "Used strong arms to hold a bridge together while scared villagers crossed to safety"
+1. SETTINGS: No forests, meadows, valleys, or generic nature. Use exciting places - cities, factories, space, underwater, restaurants, pirate ships, monster schools, circuses, inside a giant clock, a cheese moon, a haunted hotel, a dragon's kitchen, a rainbow waterpark. Every setting should be somewhere a kid thinks is COOL and wants to colour.
 
-ASK YOURSELF WHEN CREATING EACH THEME:
-- What emotional need does this character fulfill for others?
-- What fear might this character help someone overcome?
-- What unlikely friendship could form?
-- What broken relationship could they mend?
-- What forgotten place could they bring back to life through PURPOSE (not magic)?
+2. CHARACTERS: At least 2 named supporting characters with funny personalities who appear throughout. Not just once. Give them quirks - a hamster chef, a flamingo mayor, a robot that speaks in rhymes, a tiny dragon who sneezes glitter.
 
-OVERUSED PATTERNS - use these SPARINGLY (max 1 per 3 themes):
-- Contests, competitions, talent shows, races, tournaments
-- "Restore the lost [color/magic/sparkle]"
-- "Find the special [crystal/gem/jewel/stone/sparkle stone]"
-- "Prove yourself to the doubters"
-- Treasure hunts or quests to "find" a magical object
-- Character just looks at things and notices they're special/magical
-- Going to a series of locations and doing the same action at each one
+3. SETBACK ON EPISODE 3: Character tries their feature and it FAILS or makes things worse. This makes the eventual win feel earned.
 
-*** MANDATORY STORY STRUCTURE ***
+4. DIALOGUE: At least 3 of 5 episodes need characters talking in speech marks. Kids love speech - gasps, shouts, silly catchphrases.
 
-A. SUPPORTING CHARACTERS ARE REQUIRED:
-- The story MUST include at least 2-3 named supporting characters with personalities
-- At least one should appear by episode 2 and recur throughout the story
-- Supporting characters should have their OWN feelings, problems, or funny quirks
-- Examples: a nervous little bird, a grumpy old tortoise, a silly baby dragon, a bossy squirrel
-- Do NOT have the main character alone for more than 2 consecutive episodes
+5. ENDING: Episode 5 resolves the specific problem from episode 1. No generic "and everything was happy forever."
 
-B. THERE MUST BE A PROBLEM/ANTAGONIST:
-- Something or someone must be causing trouble or be in need of help
-- This problem should be established by episode 2 and not fully resolved until episode 9-10
-- The problem should feel URGENT - someone is counting on the main character
-- NOT acceptable: "character wanders around looking at pretty things"
-- GOOD examples: a friend is trapped, a village is flooding, someone lost something precious to them, two friends had a fight
-
-C. THERE MUST BE A SETBACK (episode 3-4):
-- The character must TRY something and FAIL or face an unexpected complication
-- This creates tension and makes the resolution feel earned
-- Example: "They tried to use the special feature but it didn't work this time!"
-
-D. DIALOGUE IS REQUIRED:
-- At least 3 of the 5 episodes must include spoken dialogue in the story_text
-- Use speech marks and give characters distinct voices
-- 5-year-olds LOVE dialogue - characters talking, arguing, gasping, cheering
-
-E. TEXT LENGTH - KEEP IT TIGHT:
-- Each episode should have 2-3 sentences MAX for the story text
-- The FINAL episode should be SHORT and punchy, not a long summary paragraph
-- Let the ILLUSTRATION tell the story - don't over-explain in text
-- NEVER cram 5+ sentences into one episode's text
-
-F. THE ENDING MUST CONNECT TO THE BEGINNING:
-- Episode 5 should reference or resolve something from episode 1
-- The character who needed help in ep 1 should be the one celebrating in ep 5
-- BAD ending: "And everything was wonderful forever!"
-- GOOD ending: References the specific problem and how it was solved
-
-GENERATE SOMETHING WE'VE NEVER SEEN BEFORE.
-Imagine 1000 children have used this app - what story would NONE of them have received yet?
-Be wildly creative. Surprise us. Make it unforgettable.
-
-*** ANTI-REPETITION CHECK ***
-Before finalising your story, ask yourself:
-- Is my antagonist just "a grumpy thing blocking something"? Give them a REASON to be causing trouble.
-- Does my story follow the pattern "broken/sad/quiet place → character uses feature → place is restored to happy"? This is the #1 most overused AI story pattern. SCRAP IT. Instead try:
-  * A RESCUE (someone is in danger and needs saving before time runs out)
-  * A CHASE (something has escaped and is causing havoc - catch it!)
-  * A MYSTERY (something weird is happening and nobody knows why)
-  * A JOURNEY (character must deliver/transport something important through obstacles)
-  * A MISTAKE (character accidentally causes a problem and must fix it before anyone finds out)
-  * A COMPETITION GONE WRONG (the event itself becomes the adventure)
-- Is there physical comedy? A 5-year-old should LAUGH at least once.
-- Would a child say "that was SO COOL" about at least one moment? If not, make it cooler.
-
-*** THE FEATURE IS NOT THE STORY - THE SITUATION IS ***
-The character's special feature (big mouth, many eyes, strong arms etc.) is just a TOOL.
-What makes the story interesting is the SITUATION they're in, not what body part they use.
-A big mouth is interesting when it accidentally swallows the mayor's wig during a parade.
-A big mouth is BORING when it sings to make a sad place happy.
-Many eyes are interesting when each eye sees a different version of what happened during a mystery.
-Many eyes are BORING when they just "spot something hidden."
-Put the character in a WILD situation first, THEN figure out how their feature helps (or makes things worse!).
-- Each theme must have a clear beginning, middle, and end across 5 episodes
-- *** CRITICAL - NARRATIVE FLOW AND LOCATION VARIETY ***:
-  The story MUST visit AT LEAST 3-4 DIFFERENT LOCATIONS across 5 episodes. Do NOT stay in one place!
-  A good story is a JOURNEY - the character should MOVE through the world.
-  
-  SETTING VARIETY - DO NOT DEFAULT TO NATURE/FORESTS/MEADOWS/VALLEYS:
-  Stories set entirely in forests, meadows, valleys, or generic outdoor nature are BANNED.
-  At least 2 of the 5 episodes must be in UNEXPECTED or EXCITING locations like:
-  cities, rooftops, factories, underwater, space, restaurants, schools, hospitals, airports,
-  castles, ships, trains, circuses, museums, stadiums, markets, construction sites, ice rinks,
-  volcanoes, cloud kingdoms, giant's house, inside a clock, inside a whale, a cheese moon.
-  Make the SETTING part of the fun - kids should want to colour the WORLD, not just the character.
-
-  LOCATION PACING: Spend 1-2 episodes max in one location, then MOVE somewhere new.
-  Example flows (use VARIED and UNEXPECTED settings - NOT always nature/forests!):
-  - Underwater submarine (ep 1) → sunken pirate ship (ep 2) → whale's belly (ep 3) → coral reef village (ep 4) → beach celebration (ep 5)
-  - Busy pizza restaurant kitchen (ep 1) → delivery through a thunderstorm (ep 2) → rooftop of a skyscraper (ep 3) → underground train station (ep 4) → surprise party (ep 5)
-  - Space station (ep 1) → alien market on a moon (ep 2) → asteroid field (ep 3) → planet made of ice cream (ep 4) → home planet celebration (ep 5)
-  - Monster school classroom (ep 1) → haunted gymnasium (ep 2) → school bus breaking down in a swamp (ep 3) → candy factory (ep 4) → school talent show (ep 5)
-  
-  When changing locations, include a BRIEF transition in the story_text:
-  - "Following the sound, they found..." / "The map led them to..." / "On the way home, they spotted..."
-  - BAD: Episode 3 in a library, Episode 4 suddenly on a bridge with NO explanation
-  - GOOD: Episode 3 in a library, Episode 4: "A strange map fell out of the book, pointing to the old clock tower..."
-- Always use "{character_name}" (not "the character") in story text - ALWAYS capitalise the name correctly
-- Scene descriptions must be detailed enough to draw as coloring pages
-STRICT COMPLIANCE RULE: Every episode MUST include the "emotion_tag" field. This is MANDATORY metadata.
-- emotion_tag MUST be chosen from: nervous, excited, scared, determined, happy, curious, sad, proud, worried, surprised
-- Place emotion_tag immediately after title, before scene_description
-- FOLLOW THE AGE GUIDELINES - this is for a {age_display} year old child!
+*** BANNED ***
+- Restoring lost colour/magic/sparkle/music to a sad/quiet/broken place
+- Finding or collecting magical gems/crystals/stones/sparkles
+- Singing/humming/blowing to make a quiet world loud or sad world happy
+- Character just looks at things and notices beauty/magic/sparkles
+- Wandering from place to place doing the same action at each stop
+- "Broken place -> use feature once -> place is fixed" (the #1 most overused AI story pattern)
 
 Return ONLY valid JSON. Here is a COMPLETE EXAMPLE of the exact format required:
 
 {{
   "character_name": "Example Monster",
-  "age_level": "age_7",
+  "age_level": "age_5",
   "themes": [
     {{
-      "theme_id": "lonely_lighthouse",
-      "theme_name": "The Lonely Lighthouse",
-      "theme_description": "Example Monster befriends an old lighthouse keeper who has forgotten how to laugh, and helps the village remember why the lighthouse matters.",
-      "theme_blurb": "Can Example Monster help a grumpy lighthouse keeper find joy again before the lighthouse closes forever?",
+      "theme_id": "runaway_robot_chef",
+      "theme_name": "The Runaway Robot Chef",
+      "theme_description": "When a pizza restaurant's robot chef goes haywire, Example Monster must chase it through the city before it buries the Mayor's birthday party in cheese.",
+      "theme_blurb": "A robot chef has gone BONKERS and is covering the whole city in pizza! Can Example Monster stop the cheesy chaos before the Mayor's party is ruined?",
       "episodes": [
         {{
           "episode_num": 1,
-          "title": "The Flickering Light",
-          "scene_description": "Example Monster stands on a windy cliff path, looking up at an old lighthouse with a dim, flickering light. An elderly keeper watches sadly from the doorway. Seagulls circle overhead, waves crash on rocks below.",
-          "story_text": "Everyone said the old lighthouse should be torn down. But Example Monster noticed something - the keeper looked so lonely up there. 'Hello!' called Example Monster. The keeper just frowned.",
-          "emotion": "curious"
+          "title": "Too Much Cheese!",
+          "scene_description": "Inside a busy pizza restaurant kitchen. A robot chef with spinning arms sprays melted cheese everywhere. The restaurant owner (a tiny hamster in a chef hat) stands on a stool looking panicked. Pizza dough flies through the air. Pots and pans scattered on the floor.",
+          "story_text": "Chef Whizz the robot had gone completely bonkers! Melted cheese was flying EVERYWHERE. 'Help!' squeaked Mr. Pepperoni the hamster. 'He won't stop cooking!'",
+          "emotion": "surprised"
         }},
         {{
           "episode_num": 2,
-          "title": "Dusty Memories",
-          "scene_description": "CLOSE-UP: Example Monster and the grumpy keeper sit at a small table inside the dusty lighthouse. Old photos and maps cover the walls. A nervous little crab peeks from behind a teapot.",
-          "story_text": "The keeper hadn't had a visitor in years. 'Nobody cares about lighthouses anymore,' he grumbled. But then a tiny crab scuttled across the table. 'That's Captain Pinch,' the keeper smiled for the first time. 'He's the only one who stayed.'",
-          "emotion": "sad"
+          "title": "The Great Cheese Chase",
+          "scene_description": "WIDE SHOT: Example Monster chases the runaway robot down a city street. The robot leaves a trail of tomato sauce. A postman duck slips on sauce. A grumpy cat on a balcony gets splattered with cheese. Buildings and shop fronts line the street.",
+          "story_text": "Chef Whizz zoomed out and down the street! 'After him!' yelled Mr. Pepperoni, riding on Example Monster's head. The robot was heading straight for the Mayor's big birthday party!",
+          "emotion": "excited"
         }},
         {{
           "episode_num": 3,
-          "title": "A Light in the Storm",
-          "scene_description": "Example Monster and the keeper climb the spiral staircase inside the lighthouse. Rain lashes the windows. A tiny fishing boat is visible far out at sea, tilting in huge waves. Captain Pinch clings to Example Monster's shoulder.",
-          "story_text": "A rumble of thunder shook the lighthouse! Example Monster spotted a tiny boat struggling in the waves. 'We have to help!' cried Example Monster. But the old lamp wouldn't light - it was completely broken!",
-          "emotion": "scared"
+          "title": "Slippery Trouble",
+          "scene_description": "CLOSE-UP: Example Monster has slipped on a huge puddle of tomato sauce in the town square. Chef Whizz escapes in the background. Mr. Pepperoni has landed in a fountain. Mozzarella stretches across the square like silly string.",
+          "story_text": "Example Monster tried to grab Chef Whizz but — SPLAT! Slipped right on the sauce. Mr. Pepperoni landed in the fountain. 'He's getting away!' spluttered the soggy little hamster.",
+          "emotion": "worried"
         }},
         {{
           "episode_num": 4,
-          "title": "A Monster-Sized Idea",
-          "scene_description": "WIDE SHOT: Example Monster stands at the very top of the lighthouse, using their special feature to create a bright signal. The keeper watches in amazement. The fishing boat below starts turning toward the light. Captain Pinch waves a tiny flag.",
-          "story_text": "The lamp was broken, but Example Monster had an idea! Using their special feature, they made the brightest light the cliff had ever seen. 'Over here!' shouted the keeper, waving his arms. The little boat began to turn.",
+          "title": "The Big Catch",
+          "scene_description": "ACTION SHOT: Example Monster uses their special feature creatively to catch Chef Whizz outside the town hall. The Mayor (a tall flamingo in a party hat) peeks from the doorway. Streamers and balloons everywhere. Mr. Pepperoni cheers from Example Monster's shoulder.",
+          "story_text": "Example Monster had a super-duper idea! Using their special feature, they caught Chef Whizz just in time. 'Whizz just wanted to make the biggest pizza ever,' beeped the little robot sadly.",
           "emotion": "determined"
         }},
         {{
           "episode_num": 5,
-          "title": "Home Safe",
-          "scene_description": "Example Monster, the keeper, Captain Pinch, and the rescued fisher (a grateful otter in a raincoat) all sit together in the warm lighthouse kitchen. The keeper is laughing. Through the window, the lighthouse beam shines brightly across the sea.",
-          "story_text": "The fisher was safe! 'Thank you,' she whispered, still shaking. The keeper put the kettle on and laughed - a real, big belly laugh. 'Maybe this old lighthouse isn't finished yet,' he said, looking at Example Monster. And from that night on, the light never went out again.",
+          "title": "The Biggest Pizza Party",
+          "scene_description": "The town square party. Everyone eating a GIANT pizza that Chef Whizz made properly. Example Monster, Mr. Pepperoni, the Mayor flamingo, and Chef Whizz all together. Bunting, balloons, and fairy lights everywhere.",
+          "story_text": "'What if Whizz makes the birthday pizza?' said Example Monster. The robot beeped happily and made the most ginormous, perfect pizza EVER. 'Best party ever!' laughed the Mayor.",
           "emotion": "happy"
         }}
       ]
