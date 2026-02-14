@@ -548,14 +548,6 @@ Use the reference image for SHAPE AND FORM ONLY - completely ignore all colors:
 STORY SCENE:
 {scene_prompt}
 
-*** CRITICAL — DRAW EXACTLY WHAT THE SCENE DESCRIBES ***
-- If the story says books fell on the floor, draw BOOKS ON THE FLOOR
-- If the story says water splashed everywhere, draw WATER EVERYWHERE
-- If the character is described as sad, draw them LOOKING SAD
-- Do NOT draw a generic "character standing in a location" — draw the SPECIFIC ACTION and CONSEQUENCES described above
-- The scene description tells you exactly what happened — SHOW IT in the image
-- Every object mentioned in the scene description should be VISIBLE in the image
-
 AGE-APPROPRIATE COMPLEXITY:
 {age_rules}
 
@@ -804,7 +796,6 @@ Example: Ep1: Can't get past the puddle (SPLASH!). Ep2: Can't get past the hill 
 - Character just observing or noticing things
 - Abstract or conceptual themes
 - Stories with no funny moment or surprise
-- RANDOM SCENE JUMPS: every episode must connect to the previous one. If the character was in a park, explain HOW they got to the next place. A toddler story is simple but it still makes SENSE.
 
 *** SCENE DESCRIPTIONS FOR AGE 3 ***
 - Character should be LARGE in frame (40%+ of image)
