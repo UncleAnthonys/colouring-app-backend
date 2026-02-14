@@ -1,0 +1,283 @@
+Story Generation Model Comparison
+Character: Tom
+Age: age_5
+Date: 2026-02-14 11:33
+
+
+======================================================================
+Claude Sonnet 4 (58.9s)
+======================================================================
+```json
+{
+  "themes": [
+    {
+      "theme_id": "toms_triple_detective_day",
+      "theme_name": "Tom's Triple Detective Day",
+      "theme_description": "Tom uses his three eyes to solve the mystery of the missing playground toys that keep disappearing every morning.",
+      "theme_blurb": "All the playground toys vanish overnight and nobody knows where they go!",
+      "episodes": [
+        {
+          "episode_num": 1,
+          "title": "The Missing Toy Mystery",
+          "scene_description": "Tom standing in the empty playground looking puzzled, with his three eyes wide open. The playground has empty swings, a lonely slide, scattered wood chips, and a forgotten juice box. His friend Bella the Butterfly and Zippy the Zebra are pointing at the empty toy box.",
+          "story_text": "Tom bounced into the playground with a big BOUNCE! But something was very wrong. All the playground toys had disappeared again! \"Where do they go every night?\" asked Bella the Butterfly. Tom's three eyes blinked with excitement. \"Let's solve this mystery!\"",
+          "emotion": "curious"
+        },
+        {
+          "episode_num": 2,
+          "title": "Three Eyes See Everything",
+          "scene_description": "Close-up of Tom's face showing his three eyes looking in different directions - one eye looking up at the trees, one looking down at the ground, and one looking straight ahead. Bella and Zippy are beside him. Background shows playground equipment, a bird's nest, some footprints, and scattered leaves.",
+          "story_text": "Tom had a brilliant idea! His three eyes could look everywhere at once. One eye watched the sky, one watched the ground, and one watched straight ahead. \"I can see EVERYTHING!\" Tom giggled. \"The toys must leave clues somewhere!\"",
+          "emotion": "excited"
+        },
+        {
+          "episode_num": 3,
+          "title": "Too Much Looking",
+          "scene_description": "Tom looking dizzy and confused with his three eyes spinning in circles, sitting on the ground. Bella and Zippy look worried. The playground scene shows a merry-go-round, some bushes, a water fountain, and a picnic table. Everything looks blurry from Tom's perspective.",
+          "story_text": "WHOOOOSH! Tom's eyes spun round and round trying to see everything. But looking three ways made him feel all wobbly and dizzy! \"Oooh, I feel funny,\" Tom said, sitting down with a PLOP. \"Maybe three eyes seeing different things isn't so helpful after all.\"",
+          "emotion": "worried"
+        },
+        {
+          "episode_num": 4,
+          "title": "Working Together Eyes",
+          "scene_description": "Tom crouched down with all three eyes focused on the same spot near some bushes, with Bella pointing excitedly. The scene shows a trail of tiny toy wheel marks leading behind the bushes, along with some scattered crayons, a small tunnel entrance, and flower petals.",
+          "story_text": "\"Wait!\" said Bella. \"Try looking at the same thing with all three eyes!\" Tom focused all three eyes on one tiny spot by the bushes. AMAZING! He could see super-clearly now. \"Look! Tiny wheel tracks leading to that tunnel!\" Tom shouted happily.",
+          "emotion": "determined"
+        },
+        {
+          "episode_num": 5,
+          "title": "The Toy Train Discovery",
+          "scene_description": "Tom, Bella, and Zippy watching happily as a tiny toy train emerges from the tunnel pulling all the missing playground toys in little carriages. The scene shows the colorful toy train, various playground toys like balls and jump ropes in the carriages, tunnel entrance, and some dandelions.",
+          "story_text": "CHUFF-CHUFF-CHOO! A tiny toy train puffed out of the tunnel pulling all the missing toys! \"The toys go on adventures every night!\" laughed Tom. His three eyes had solved the mystery perfectly when they worked together!",
+          "emotion": "happy"
+        }
+      ]
+    },
+    {
+      "theme_id": "toms_big_mouth_bakery_rescue",
+      "theme_name": "Tom's Big Mouth Bakery Rescue",
+      "theme_description": "Tom uses his enormous mouth to help when the town bakery's mixing machine breaks and there's no way to mix the giant wedding cake batter.",
+      "theme_blurb": "The bakery's mixer broke and a huge wedding cake needs making today!",
+      "episodes": [
+        {
+          "episode_num": 1,
+          "title": "Bakery Emergency",
+          "scene_description": "Tom standing outside Giggles Bakery with his friends Muffin the Mouse and Crumbly the Cat. The bakery has a big broken mixing machine with steam coming out, wedding cake pictures in the window, flour bags stacked outside, and a 'HELP WANTED' sign.",
+          "story_text": "Tom skipped past Giggles Bakery when he heard a loud CRASH! Baker Benny was standing next to his broken mixing machine looking very sad. \"Oh no!\" said Benny. \"I need to make a giant wedding cake today but my mixer is broken!\"",
+          "emotion": "worried"
+        },
+        {
+          "episode_num": 2,
+          "title": "Tom's Big Idea",
+          "scene_description": "Tom with his mouth open wide showing his excitement, talking to Muffin and Crumbly inside the bakery. The scene shows mixing bowls on the counter, cake ingredients like eggs and flour, measuring spoons, and a recipe book open to wedding cakes.",
+          "story_text": "Tom's mouth opened wide with excitement! \"My mouth is really big,\" he told his friends. \"Maybe I could help mix the cake batter!\" Muffin squeaked, \"That's a FANTASTIC idea, Tom!\" Crumbly purred, \"Let's ask Baker Benny!\"",
+          "emotion": "excited"
+        },
+        {
+          "episode_num": 3,
+          "title": "Messy Mixing Mistake",
+          "scene_description": "Tom covered in cake batter with flour in his hair and chocolate on his face, looking embarrassed. The bakery kitchen is messy with batter splattered everywhere, overturned bowls, flour footprints on the floor, and Muffin and Crumbly looking surprised.",
+          "story_text": "Tom opened his big mouth and tried to mix. SPLAT! WHOOSH! Cake batter flew everywhere! Tom was covered in flour and the kitchen was a big mess. \"Oops!\" Tom said sadly. \"I'm making it worse, not better!\"",
+          "emotion": "sad"
+        },
+        {
+          "episode_num": 4,
+          "title": "Learning to Mix Gently",
+          "scene_description": "Tom very carefully and gently mixing cake batter in a huge bowl with his mouth, while Baker Benny guides him. Muffin and Crumbly are cheering. The scene shows the big mixing bowl, clean measuring cups, a timer, and perfectly smooth cake batter.",
+          "story_text": "\"Try mixing very gently,\" said Baker Benny kindly. Tom took a deep breath and mixed the batter slowly and carefully. Round and round, nice and smooth! \"Perfect!\" cheered Baker Benny. \"You're the best mixer ever, Tom!\"",
+          "emotion": "determined"
+        },
+        {
+          "episode_num": 5,
+          "title": "Wedding Cake Success",
+          "scene_description": "Tom proudly standing next to a beautiful three-tier wedding cake decorated with flowers. Baker Benny, Muffin, and Crumbly are clapping. The bakery shows wedding decorations, a 'THANK YOU TOM' banner, cupcakes on display, and happy customers peeking through the window.",
+          "story_text": "The wedding cake was beautiful and delicious! Everyone at the wedding loved it. \"Thank you, Tom!\" said Baker Benny. \"Your big mouth saved the day!\" Tom beamed with pride.",
+          "emotion": "proud"
+        }
+      ]
+    },
+    {
+      "theme_id": "toms_six_legged_relay_race",
+      "theme_name": "Tom's Six-Legged Relay Race",
+      "theme_description": "Tom joins the playground relay race but discovers that having more legs doesn't always make you faster, and learns that helping friends is more important than winning.",
+      "theme_blurb": "It's relay race day and everyone wants to be the fastest runner!",
+      "episodes": [
+        {
+          "episode_num": 1,
+          "title": "Race Day Excitement",
+          "scene_description": "Tom at the playground starting line with his six little legs ready to run. Other animal friends are lined up including Speedy the Squirrel and Hopper the Rabbit. The scene shows racing flags, a finish line banner, spectator benches, and a trophy on a table.",
+          "story_text": "It was the big playground relay race! Tom looked down at his six little legs and grinned. \"With six legs, I'll be super fast!\" he said to Speedy the Squirrel. \"Ready, set, GO!\" shouted the referee.",
+          "emotion": "excited"
+        },
+        {
+          "episode_num": 2,
+          "title": "Off to a Great Start",
+          "scene_description": "Tom running confidently with all six legs moving in sync, slightly ahead of the other racers. The playground track shows lane markers, cheering spectators on the sidelines, colorful bunting, and a water station.",
+          "story_text": "Tom's six legs moved perfectly together - step, step, step, step, step, step! He was running really well and keeping up with everyone. \"This is fun!\" Tom puffed happily as he ran around the first corner.",
+          "emotion": "happy"
+        },
+        {
+          "episode_num": 3,
+          "title": "Legs Get Tangled",
+          "scene_description": "Tom tripped and tumbling with his six legs all tangled up together, while other racers run past him. The scene shows Tom on the ground looking frustrated, the race track, some scattered leaves, and his friends Speedy and Hopper looking back with concern.",
+          "story_text": "But then - OOPS! Tom's six legs got all mixed up and tangled! He tumbled down with a big THUMP! All the other racers zoomed past him. \"Oh no!\" Tom said, feeling upset. \"Six legs are harder than I thought!\"",
+          "emotion": "sad"
+        },
+        {
+          "episode_num": 4,
+          "title": "Helping a Friend",
+          "scene_description": "Tom using his six legs to carefully help Tiny the Turtle who has fallen over onto his back near the finish line. Other racers are crossing the finish line in the background. The scene shows the turtle upside down, Tom reaching down to help, finish line flags, and worried spectators.",
+          "story_text": "Tom got up and started running again, but then he saw Tiny the Turtle flipped over on his back! \"Help!\" called Tiny. Tom used all six legs to carefully flip his friend right-side up. \"Thank you, Tom!\" smiled Tiny gratefully.",
+          "emotion": "determined"
+        },
+        {
+          "episode_num": 5,
+          "title": "The Best Kind of Winning",
+          "scene_description": "Tom and Tiny crossing the finish line together, both smiling widely. All their friends are cheering and clapping. The scene shows the finish line banner, happy spectators, colorful balloons, and a 'FRIENDSHIP' medal being presented to both Tom and Tiny.",
+          "story_text": "Tom and Tiny crossed the finish line together, both smiling big smiles! Everyone cheered loudly. Tom didn't win the race, but he won something even better - he helped his friend!",
+          "emotion": "proud"
+        }
+      ]
+    }
+  ]
+}
+```
+
+
+======================================================================
+GPT-4o (36.5s)
+======================================================================
+{
+  "themes": [
+    {
+      "theme_id": "tom_juggling_chaos",
+      "theme_name": "Tom's Juggling Surprise",
+      "theme_description": "When a school performance goes awry, Tom discovers juggling could save the day.",
+      "theme_blurb": "Juggling chaos saves the tumbling performance.",
+      "episodes": [
+        {
+          "episode_num": 1,
+          "title": "Rehearsal Disaster",
+          "scene_description": "Tom with three floating balls above his head, a school auditorium with scattered props. Pip the Penguin juggling beside, students in colorful costumes panicking, and a giant curtain crumpling in the background.",
+          "story_text": "Tom was excited for the big show. But oh no, the props fell everywhere! 'What now?' asked Pip.",
+          "emotion": "nervous"
+        },
+        {
+          "episode_num": 2,
+          "title": "Finding a New Idea",
+          "scene_description": "Close-up of Tom's three eyes focused intensely on juggling balls, Pip holding a large feather helping Tom practice in a classroom. Bright posters of past shows and a clock ticking in the background.",
+          "story_text": "'Maybe you can juggle instead!' suggested Pip. Tom's eyes sparkled with ideas. 'Let's try!' he said.",
+          "emotion": "curious"
+        },
+        {
+          "episode_num": 3,
+          "title": "A Slip and a Fall",
+          "scene_description": "Tom slipping and stacks of colorful balls flying everywhere, Pip trying to catch them. A classroom filled with laughter, Tom's six tiny legs tangled, and papers flying like confetti.",
+          "story_text": "The balls whooshed left and right when Tom tripped! 'Oops!' giggled Pip, 'Almost had it!'",
+          "emotion": "surprised"
+        },
+        {
+          "episode_num": 4,
+          "title": "A Perfect Catch",
+          "scene_description": "Tom standing proudly, juggling smoothly with all three eyes focused, while Pip claps. Classroom now tidy, a rainbow-colored spotlight shines on Tom, school desks neatly arranged in rows.",
+          "story_text": "Tom was determined. After practice, the balls flew perfectly. 'You did it, Tom!' cheered Pip.",
+          "emotion": "proud"
+        },
+        {
+          "episode_num": 5,
+          "title": "Showtime Success",
+          "scene_description": "Tom on stage basking in applause, juggling shining brightly, Pip beside him waving. Happy audience with balloons, stage decorated with stars, and a big banner reading 'Bravo Tom!'",
+          "story_text": "During the show, Tom's juggling saved the day! Everyone clapped and cheered. What a hero!",
+          "emotion": "happy"
+        }
+      ]
+    },
+    {
+      "theme_id": "tom_movie_mayhem",
+      "theme_name": "Tom's Movie Madness",
+      "theme_description": "Tom's extra eyes are key to stopping a runaway popcorn machine at the cinema.",
+      "theme_blurb": "Popcorn chaos in the cinema!",
+      "episodes": [
+        {
+          "episode_num": 1,
+          "title": "Cinema Trouble",
+          "scene_description": "Tom with worried expression watching popcorn overflow from the machine, cinema lobby packed with kids. Popcorn-covered floors, a movie poster peeling off the wall, and Mr. Grumbles the Gorilla nervously munching popcorn.",
+          "story_text": "'The popcorn won't stop!' shouted Dotty Dragon. Tom's eyes widened, seeing the popping problem.",
+          "emotion": "nervous"
+        },
+        {
+          "episode_num": 2,
+          "title": "Spotting the Problem",
+          "scene_description": "Tom crouched close to the popcorn machine using his three eyes to look underneath, Dotty holding a toolkit beside him. Spilled popcorn everywhere, soda cans rolling on the floor, and a flashing 'Help!' button on the machine.",
+          "story_text": "'There's a button jammed!' said Tom. Dotty gasped, 'We need to reach it!'",
+          "emotion": "excited"
+        },
+        {
+          "episode_num": 3,
+          "title": "Machine Malfunction",
+          "scene_description": "Tom stumbling back as popcorn bursts out with force, Dotty slipping on scattered kernels. Machine lights flickering, popcorn creating a mountain behind them, and a broom leaning against the entrance.",
+          "story_text": "Tom pressed the button but SLAM! More popcorn flew out! 'Oh no!' cried Dotty.",
+          "emotion": "surprised"
+        },
+        {
+          "episode_num": 4,
+          "title": "A Brilliant Plan",
+          "scene_description": "Tom and Dotty brainstorming, drawing on a popcorn-covered paper, Dotty pointing to a diagram. Movie posters of action heroes in the background, a big red popcorn tub spilled over, and Tom's eyes glowing with ideas.",
+          "story_text": "Tom thought hard. 'I’ll climb up and pull the lever!' he decided. Dotty nodded.",
+          "emotion": "determined"
+        },
+        {
+          "episode_num": 5,
+          "title": "Popcorn Parade Success",
+          "scene_description": "Tom stands triumphant atop the popcorn mountain with the lever in hand, Dotty cheering. Happy cinema crowd below, popcorn now neatly tamed, and colorful movie lights shining bright.",
+          "story_text": "With a SWOOSH, the machine calmed. Tom grinned, 'We saved the day!' Everyone cheered!",
+          "emotion": "happy"
+        }
+      ]
+    },
+    {
+      "theme_id": "tom_gym_gravity",
+      "theme_name": "Tom's Gym Gravity Game",
+      "theme_description": "Tom's unexpected wings come in handy during a gym class gone haywire.",
+      "theme_blurb": "Gravity flip in gym class!",
+      "episodes": [
+        {
+          "episode_num": 1,
+          "title": "Upside Down Gym",
+          "scene_description": "Tom and classmates floating mid-air in a gym, gym teacher Mr. Grumbles clinging to a basketball hoop. Mats and sports balls floating around, tangled jump ropes hanging from the ceiling, and a scoreboard flickering on and off.",
+          "story_text": "'Whoa, we're flying!' squealed Pip. Tom giggled, 'What's going on, Mr. Grumbles?'",
+          "emotion": "excited"
+        },
+        {
+          "episode_num": 2,
+          "title": "Try to Tame",
+          "scene_description": "Tom trying to flap his tiny wing-like fins to steer, Pip alongside him attempting to grab onto a floor beam. Colorful gym posters upside down, a whistle on the floor, and tumbling orange cones.",
+          "story_text": "'Let's swim through the air!' said Tom. Pip wobbled, 'This is tricky!'",
+          "emotion": "curious"
+        },
+        {
+          "episode_num": 3,
+          "title": "Mid-air Mishaps",
+          "scene_description": "Tom spinning out of control, Pip bumping into a tumbling ball, both looking surprised. Floating gym equipment casting playful shadows, a deflated basketball spinning, and a torn pennant flapping.",
+          "story_text": "Swoosh! Tom flipped upside down. 'Oops!' he laughed. Pip tumbled, 'Whoa, dizzy!'",
+          "emotion": "surprised"
+        },
+        {
+          "episode_num": 4,
+          "title": "Flapping Forward",
+          "scene_description": "Tom finally steady, flapping wings strategically, Pip following his lead with a bright smile. Gym spectators clapping, ribbons gently swirling in the air, and Tom’s wings positioned with confidence.",
+          "story_text": "Tom flapped with purpose, 'Follow me!' Pip did too, 'This is fun!'",
+          "emotion": "proud"
+        },
+        {
+          "episode_num": 5,
+          "title": "Landing on Top",
+          "scene_description": "Tom and friends donning medals amidst gym cheers, Mr. Grumbles applauding. Gym floor now settled, banners hanging straight, and the class standing around amazed.",
+          "story_text": "Tom floated gracefully down, 'We did it!' Everyone landed safely. What an adventure!",
+          "emotion": "happy"
+        }
+      ]
+    }
+  ]
+}
+

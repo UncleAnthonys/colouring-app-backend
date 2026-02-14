@@ -8,3 +8,4 @@ reportlab
 google-genai
 google-generativeai
 firebase-admin
+anthropic

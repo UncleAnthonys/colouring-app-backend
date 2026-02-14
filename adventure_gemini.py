@@ -8,6 +8,9 @@ import base64
 import google.generativeai as genai
 import json
 import random
+import anthropic
+
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 from fastapi import HTTPException
 
 
@@ -853,13 +856,8 @@ CONTENT:
         age_display = "10+"
     
     try:
-        # Use newer client API with response_mime_type for JSON
-        model = genai.GenerativeModel(
-            'gemini-2.5-flash',
-            generation_config=genai.GenerationConfig(
-                response_mime_type="application/json"
-            )
-        )
+        # Use Claude Haiku 4.5 for story generation (much better creative quality)
+        claude_client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
         
         # Scenario pool - shuffled each time for variety
         _scenario_pool = [
@@ -1122,13 +1120,14 @@ Story text: Follow the age guidelines for length. Final episode should be short 
 
 Emotion must be one of: nervous, excited, scared, determined, happy, curious, sad, proud, worried, surprised
 
-*** 5 NON-NEGOTIABLE RULES ***
+*** 6 NON-NEGOTIABLE RULES ***
 
 1. CHARACTERS: At least 2 named supporting characters with funny personalities who appear throughout, not just once.
 2. SETBACK ON EPISODE 3: Character tries and FAILS or makes things worse. Makes the win feel earned.
 3. DIALOGUE: At least 3 of 5 episodes need characters talking in speech marks.
 4. ENDING: Episode 5 resolves the specific problem from episode 1. No generic happy endings.
 5. NEVER copy a scenario word-for-word. Adapt it, remix it, make it feel fresh and unique to this character.
+6. NUANCED RESOLUTION: The character's feature should NOT directly fix the problem alone. Instead, a SUPPORTING CHARACTER should suggest a new way to use the feature, OR the character should learn to use it differently after the setback. The solution should feel like a team effort or a moment of growth, not just "feature solves everything".
 
 Return ONLY valid JSON. Here is a COMPLETE EXAMPLE of the exact format required:
 
@@ -1186,10 +1185,14 @@ NOW generate for {character_name} using this EXACT format. The "emotion" field M
 
 Generate 3 complete themes with all 5 episodes each. Return ONLY the JSON, no other text.'''
         
-        response = model.generate_content([prompt])
+        claude_response = claude_client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=8000,
+            messages=[{"role": "user", "content": prompt}]
+        )
         
         # Parse the JSON response
-        text = response.text.strip()
+        text = claude_response.content[0].text.strip()
         
         # Remove markdown code blocks if present
         if text.startswith('```json'):
