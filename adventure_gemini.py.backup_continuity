@@ -477,29 +477,17 @@ The character's EMOTION must match the story's mood!
         continuity_guidance = ""
         if previous_page_b64:
             continuity_guidance = f"""
-*** PREVIOUS PAGE REFERENCE — LOOK AT THE ATTACHED PREVIOUS PAGE IMAGE ***
-A previous storybook page is attached. Use it for SCENE CONTINUITY:
-
-🚨 KEY OBJECTS MUST PERSIST:
-- Look at the previous page image carefully
-- Identify the KEY OBJECTS in that scene (climbing frame, oven, fountain, tree, building, vehicle, etc.)
-- If the current scene is in the SAME LOCATION, those key objects MUST STILL BE VISIBLE
-- A climbing frame doesn't disappear between pages. An oven doesn't vanish. A fountain stays there.
-- The story is happening IN a location — draw that location consistently
-
-📐 BUT CHANGE THE COMPOSITION:
-- Different camera angle (close-up vs wide shot vs overhead)
-- Character in a different pose and position on the page
-- Different objects in the FOREGROUND (but background setting stays consistent)
-- Different arrangement of supporting characters
-
-🎨 VISUAL CONTINUITY CHECKLIST:
-- Same location = same key landmarks visible (even if from a different angle)
-- Same supporting characters = same distinctive features (hat, size, species)
-- Same weather/time of day
-- Only change the setting when the STORY says they moved to a new place
-
-Think of it like a movie — the camera angle changes between shots but the SET stays the same.
+*** PREVIOUS PAGE REFERENCE ***
+The previous storybook page is attached for SCENE CONTINUITY.
+- If the story is still in the same location, the SETTING should feel like the same place (same style of walls, machines, furniture etc.)
+- But the COMPOSITION must be significantly different:
+  * Different camera angle or zoom level (close-up vs wide shot vs action shot)
+  * Character in a different pose and position on the page
+  * Different objects in the foreground
+  * Different arrangement of supporting characters
+- If the previous page was mostly filled with one element (e.g. popcorn, bubbles, clouds), this page MUST NOT repeat that same visual pattern
+- A child colouring these pages back-to-back should feel like they're colouring something NEW each time
+- Same world, DIFFERENT picture
 """
         
         # Build prompt
@@ -1418,14 +1406,12 @@ For each theme provide:
 4. 5 episodes with: episode number (1-5), title, scene_description, story_text, emotion
 
 Scene descriptions MUST focus on THE MAIN ACTION of the episode:
-- ALWAYS START with the LOCATION: "In the kitchen...", "At the park climbing frame...", "Still at the fountain..."
 - What is the character DOING? (not just standing — show the action mid-happening)
 - What are the VISIBLE CONSEQUENCES? (ketchup on the floor, cake flying through air, toys scattered everywhere)
 - What is the character's BODY LANGUAGE? (slumped and sad, jumping with excitement, running away in panic)
 - Include specific setting details and 3-4 background objects to colour
-- IMPORTANT: If the scene is in the SAME LOCATION as the previous episode, REPEAT the key setting objects (climbing frame, oven, fountain etc.) — don't assume the artist remembers them
 - Mix close-ups, wide shots, and action scenes across the 5 episodes
-- The scene description is what gets drawn — if you don't describe it, it won't be in the image!
+- The scene description is what gets drawn — if you don't describe the mess, it won't be in the image!
 
 Story text: Follow the age guidelines for length. Final episode should be short and punchy.
 
