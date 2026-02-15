@@ -864,7 +864,7 @@ The want should be specific and urgent — not vague:
 - BAD want: "Jerry wants to be helpful" (vague, no urgency)
 - GOOD want: "Jerry wants to win the talent show but his big mouth keeps scaring the judges"
 - BAD want: "Ted wants to explore" (no stakes, no obstacle)  
-- GOOD want: "Ted needs to deliver a wobbly cake across town before Grandma's party, but his big feet keep tripping"
+- GOOD want: "Ted needs to get the class hamster back in its cage before the teacher returns, but his big feet keep knocking things over"
 
 The character's special feature must create a SPECIFIC, FUNNY obstacle to getting what they want.
 The resolution must be CLEVER — not just "stop doing the bad thing" or "do the opposite."
@@ -1337,7 +1337,8 @@ CONTENT:
         "Child stays up late to see the stars for the first time, wrapped in a blanket with their parent",
         ]
         random.shuffle(_scenario_pool)
-        shuffled_scenarios = "\n".join(f"{i+1}. {s}" for i, s in enumerate(_scenario_pool))
+        _scenario_subset = _scenario_pool[:30]
+        shuffled_scenarios = "\n".join(f"{i+1}. {s}" for i, s in enumerate(_scenario_subset))
 
         prompt = f'''You are creating personalized story adventures for a childrens coloring book app.
 
@@ -1382,7 +1383,7 @@ Each theme MUST use a DIFFERENT unique feature as the main plot device.
 
 *** CRITICAL: EVERY THEME MUST HAVE A CLEAR "WANT" ***
 Before writing each theme, define:
-- WANT: What does the character specifically want? (NOT vague like "help others" or "explore" — SPECIFIC like "deliver the birthday cake" or "find their lost friend" or "win the sandcastle competition")
+- WANT: What does the character specifically want? (NOT vague like "help others" or "explore" — SPECIFIC like "rescue the stuck kitten" or "find their lost friend" or "win the sandcastle competition")
 - OBSTACLE: How does their special feature make this HARDER? (The feature should cause funny, specific problems)
 - TWIST: How does the feature eventually help in an UNEXPECTED way? (Not the obvious use)
 
