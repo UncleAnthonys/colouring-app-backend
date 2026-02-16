@@ -574,6 +574,10 @@ class GenerateFullStoryRequest(BaseModel):
     obstacle: Optional[str] = None
     twist: Optional[str] = None
     character_description: Optional[str] = None  # Full description for story generation
+    # Second character (friend/pet) - optional
+    second_character_image_b64: Optional[str] = None  # Reveal/photo of second character
+    second_character_name: Optional[str] = None  # Name of second character
+    second_character_description: Optional[str] = None  # Description (e.g. "springer spaniel dog")
 
 
 @router.post("/generate/front-cover")
@@ -645,6 +649,7 @@ TEXT TO INCLUDE:
 - At the bottom: "A Coloring Story Book" in smaller text
 IMAGE:
 - {char.name} large and central, looking excited and confident
+{f'- {request.second_character_name} next to {char.name}, looking happy and excited' if request.second_character_name else ''}
 - Background hints at the adventure: {request.theme_description}
 - BLACK AND WHITE LINE ART suitable for coloring in
 Make it look like a real children's coloring book cover!
@@ -657,7 +662,10 @@ Make it look like a real children's coloring book cover!
         reveal_image_b64=request.reveal_image_b64,
         story_text=request.theme_description,
         character_emotion="excited",
-        source_type=request.source_type or "drawing"
+        source_type=request.source_type or "drawing",
+        second_character_image_b64=request.second_character_image_b64,
+        second_character_name=request.second_character_name,
+        second_character_description=request.second_character_description
     )
     
     cover_url = upload_to_firebase(cover_image_b64, folder="adventure/storybooks")
@@ -681,6 +689,16 @@ Make it look like a real children's coloring book cover!
     if not episodes and request.feature_used:
         print(f"[FULL-STORY] No episodes provided, generating from pitch fields...")
         char_desc = request.character_description or request.character.description
+        
+        # If there's a second character, add them to the description so Sonnet includes them
+        if request.second_character_name:
+            sc_info = f"\n\nIMPORTANT - SECOND CHARACTER: {request.second_character_name}"
+            if request.second_character_description:
+                sc_info += f" ({request.second_character_description})"
+            sc_info += f". {request.second_character_name} MUST appear in every episode as {char.name}'s companion. Include them in every scene_description with a consistent bracketed tag. They are a main character, not a background extra."
+            char_desc += sc_info
+            print(f"[FULL-STORY] Second character added to story: {request.second_character_name}")
+        
         story_data = await generate_story_for_theme(
             character_name=char.name,
             character_description=char_desc,
@@ -712,7 +730,10 @@ Make it look like a real children's coloring book cover!
             story_text=story_text,
             character_emotion=character_emotion,
             source_type=request.source_type or "drawing",
-            previous_page_b64=previous_page_b64
+            previous_page_b64=previous_page_b64,
+            second_character_image_b64=request.second_character_image_b64,
+            second_character_name=request.second_character_name,
+            second_character_description=request.second_character_description
         )
         
         # Save this page as previous for next iteration

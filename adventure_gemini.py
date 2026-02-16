@@ -406,12 +406,13 @@ IMPORTANT: Look at the drawing! If it is a girl with brown hair and a rainbow sk
         raise HTTPException(status_code=500, detail=f'Reveal generation failed: {str(e)}')
 
 
-async def generate_adventure_episode_gemini(character_data: dict, scene_prompt: str, age_rules: str, reveal_image_b64: str = None, story_text: str = None, character_emotion: str = None, source_type: str = "drawing", previous_page_b64: str = None) -> str:
+async def generate_adventure_episode_gemini(character_data: dict, scene_prompt: str, age_rules: str, reveal_image_b64: str = None, story_text: str = None, character_emotion: str = None, source_type: str = "drawing", previous_page_b64: str = None, second_character_image_b64: str = None, second_character_name: str = None, second_character_description: str = None) -> str:
     """
     Generate black & white coloring page using the REVEAL IMAGE as reference.
     
     Uses 3:4 portrait aspect ratio for A4-style pages.
     character_emotion overrides the default reveal pose with scene-appropriate emotion.
+    Optionally accepts a second character (friend/pet) reference image.
     """
     
     api_key = os.environ.get('GOOGLE_API_KEY') or os.environ.get('GEMINI_API_KEY')
@@ -549,6 +550,26 @@ Use the reference image for SHAPE AND FORM ONLY - completely ignore all colors:
             full_prompt += '''
 '''
         
+        # Add second character guidance if provided
+        if second_character_name and second_character_image_b64:
+            sc_desc = second_character_description or "a companion character"
+            full_prompt += f'''
+*** SECOND CHARACTER: {second_character_name} ***
+A second reference image is attached for {second_character_name} ({sc_desc}).
+Use this second reference image for {second_character_name}'s SHAPE AND FORM ONLY — ignore all colors.
+
+RULES FOR TWO CHARACTERS:
+- BOTH {character_name} AND {second_character_name} MUST appear in the scene
+- Use the FIRST reference image for {character_name}'s appearance
+- Use the SECOND reference image for {second_character_name}'s appearance
+- Each character must be clearly recognizable from their respective reference
+- Both characters should be prominent in the scene — not one tiny in the background
+- If {second_character_name} is an animal: Draw them AS AN ANIMAL — no human clothes, keep their natural markings as line art areas to color, floppy ears stay floppy, spots stay spots
+- If {second_character_name} is a person: Keep their clothing and features from the reference
+- Both characters should be INTERACTING in the scene (looking at each other, working together, reacting to events)
+
+'''
+        
         full_prompt += f'''🚨 CRITICAL - DO NOT ADD OR REMOVE BODY PARTS:
 - Count the arms in the reference - draw EXACTLY that many arms (usually 2)
 - Count the legs in the reference - draw EXACTLY that many legs (usually 2)
@@ -571,13 +592,17 @@ Use the reference image for SHAPE AND FORM ONLY - completely ignore all colors:
 STORY SCENE:
 {scene_prompt}
 
-*** CRITICAL — DRAW EXACTLY WHAT THE SCENE DESCRIBES ***
-- If the story says books fell on the floor, draw BOOKS ON THE FLOOR
-- If the story says water splashed everywhere, draw WATER EVERYWHERE
-- If the character is described as sad, draw them LOOKING SAD
-- Do NOT draw a generic "character standing in a location" — draw the SPECIFIC ACTION and CONSEQUENCES described above
-- The scene description tells you exactly what happened — SHOW IT in the image
-- Every object mentioned in the scene description should be VISIBLE in the image
+*** STORY TEXT FOR THIS PAGE ***
+{story_text if story_text else "No story text provided."}
+
+*** CRITICAL — THE COLORING PAGE MUST SHOW THE KEY MOMENT FROM THE STORY ***
+- READ the story text above carefully. Identify the SINGLE MOST IMPORTANT ACTION or moment.
+- Draw THAT exact moment — not the moment before it, not the setup, THE KEY ACTION ITSELF.
+- Example: If the story says "Sid blocked the cake with his belly" → draw Sid WITH the cake pressed against his belly, NOT the cake rolling past him.
+- Example: If the story says "she caught the ball" → draw her HOLDING the ball, NOT the ball in mid-air approaching her.
+- The image must show the ACTION COMPLETED or IN PROGRESS, never just about to happen.
+- Every object mentioned in the scene description should be VISIBLE in the image.
+- Do NOT draw a generic "character standing in a location" — draw the SPECIFIC ACTION described.
 
 AGE-APPROPRIATE COMPLEXITY:
 {age_rules}
@@ -666,14 +691,37 @@ FINAL CHECK - CRITICAL RULES:
             gray.save(buffer, format='PNG')
             gray_bytes = buffer.getvalue()
             
+            if second_character_image_b64:
+                # Label the first image so Gemini knows which is which
+                contents.append(types.Part.from_text(text=f"[REFERENCE IMAGE 1 - {character_name}]"))
+            
             contents.append(types.Part.from_bytes(
                 data=gray_bytes,
+                mime_type="image/png"
+            ))
+        
+        # Add second character image if provided
+        if second_character_image_b64:
+            from PIL import Image
+            import io as pil_io
+            sc_bytes = base64.b64decode(second_character_image_b64)
+            sc_img = Image.open(pil_io.BytesIO(sc_bytes))
+            sc_gray = sc_img.convert('L').convert('RGB')
+            sc_buffer = pil_io.BytesIO()
+            sc_gray.save(sc_buffer, format='PNG')
+            sc_gray_bytes = sc_buffer.getvalue()
+            
+            sc_name = second_character_name or "Second Character"
+            contents.append(types.Part.from_text(text=f"[REFERENCE IMAGE 2 - {sc_name}]"))
+            contents.append(types.Part.from_bytes(
+                data=sc_gray_bytes,
                 mime_type="image/png"
             ))
         
         if previous_page_b64:
             # Add previous page for continuity reference
             prev_bytes = base64.b64decode(previous_page_b64)
+            contents.append(types.Part.from_text(text="[PREVIOUS PAGE - for continuity reference]"))
             contents.append(types.Part.from_bytes(
                 data=prev_bytes,
                 mime_type="image/png"
