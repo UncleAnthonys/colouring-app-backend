@@ -658,6 +658,14 @@ Make it look like a real children's coloring book cover!
     
     previous_page_b64 = None  # Track previous page for continuity
     
+    print(f"[FULL-STORY] Episodes received: {len(request.episodes)}")
+    print(f"[FULL-STORY] Episodes type: {type(request.episodes)}")
+    if request.episodes:
+        print(f"[FULL-STORY] First episode keys: {request.episodes[0].keys() if hasattr(request.episodes[0], 'keys') else 'not a dict'}")
+        print(f"[FULL-STORY] First episode: {request.episodes[0]}")
+    else:
+        print("[FULL-STORY] WARNING: Episodes list is EMPTY!")
+    
     for i, episode in enumerate(request.episodes):
         scene_prompt = episode.get("scene_description", "").replace("{name}", char.name)
         story_text = episode.get("story_text", "").replace("{name}", char.name)
