@@ -665,6 +665,17 @@ Make it look like a real children's coloring book cover!
     
     previous_page_b64 = None  # Track previous page for continuity
     
+    # Debug: log all pitch fields received
+    print(f"[FULL-STORY] theme_name: {request.theme_name}")
+    print(f"[FULL-STORY] theme_description: {request.theme_description}")
+    print(f"[FULL-STORY] theme_blurb: {request.theme_blurb}")
+    print(f"[FULL-STORY] feature_used: {request.feature_used}")
+    print(f"[FULL-STORY] want: {request.want}")
+    print(f"[FULL-STORY] obstacle: {request.obstacle}")
+    print(f"[FULL-STORY] twist: {request.twist}")
+    print(f"[FULL-STORY] character_description: {request.character_description}")
+    print(f"[FULL-STORY] episodes provided: {len(request.episodes) if request.episodes else 'None'}")
+    
     # If no episodes provided, generate them from pitch fields
     episodes = request.episodes or []
     if not episodes and request.feature_used:
