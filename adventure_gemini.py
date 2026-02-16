@@ -1596,6 +1596,7 @@ STORY PLAN:
 - Include character's BODY LANGUAGE
 - 3-4 background objects to colour
 - SUPPORTING CHARACTERS: Every time they appear, include species/size/accessories in brackets. Example: "Pip (small duck with bow tie)". NO COLOURS. Use SAME description each time.
+- IMPORTANT: The brackets with character descriptions are for scene_description ONLY. In story_text, just use the character's NAME — never include the bracketed description tags in story_text. Example: scene_description says "Pip (small duck with bow tie) runs over" but story_text says "Pip ran over".
 - Mix: wide shots, close-ups, action scenes across 5 episodes
 - If same location as previous episode, REPEAT key setting objects
 
