@@ -920,6 +920,11 @@ async def generate_storybook_pdf(request: dict):
     import httpx
     
     page_urls = request.get("page_urls", [])
+    
+    # Also accept full page objects and extract URLs
+    if not page_urls:
+        pages = request.get("pages", [])
+        page_urls = [p.get("page_url", "") for p in pages if p.get("page_url")]
     title = request.get("title", "Storybook")
     
     if not page_urls:
