@@ -587,6 +587,9 @@ AGE 7-8 DETAIL:
         overlay = CONFIG["themes"][theme].get("overlay", "")
         if overlay:
             parts.append("\n\n" + overlay)
+    elif theme != "none":
+        # Theme not in presets - treat as custom theme text
+        parts.append("\n\n" + build_custom_theme_overlay(theme))
     
     return "".join(parts)
 
