@@ -563,10 +563,17 @@ class GenerateFullStoryRequest(BaseModel):
     character: CharacterData
     theme_name: str
     theme_description: str
-    episodes: List[dict]  # List of episode objects with title, scene_description, story_text, character_emotion
+    episodes: Optional[List[dict]] = None  # If provided, use these. If empty/null, generate from pitch fields.
     age_level: str = "age_6"
     reveal_image_b64: str  # Character reveal for reference
     source_type: Optional[str] = "drawing"  # 'drawing' or 'photo'
+    # Pitch fields for server-side story generation
+    theme_blurb: Optional[str] = None
+    feature_used: Optional[str] = None
+    want: Optional[str] = None
+    obstacle: Optional[str] = None
+    twist: Optional[str] = None
+    character_description: Optional[str] = None  # Full description for story generation
 
 
 @router.post("/generate/front-cover")
@@ -658,15 +665,29 @@ Make it look like a real children's coloring book cover!
     
     previous_page_b64 = None  # Track previous page for continuity
     
-    print(f"[FULL-STORY] Episodes received: {len(request.episodes)}")
-    print(f"[FULL-STORY] Episodes type: {type(request.episodes)}")
-    if request.episodes:
-        print(f"[FULL-STORY] First episode keys: {request.episodes[0].keys() if hasattr(request.episodes[0], 'keys') else 'not a dict'}")
-        print(f"[FULL-STORY] First episode: {request.episodes[0]}")
-    else:
-        print("[FULL-STORY] WARNING: Episodes list is EMPTY!")
+    # If no episodes provided, generate them from pitch fields
+    episodes = request.episodes or []
+    if not episodes and request.feature_used:
+        print(f"[FULL-STORY] No episodes provided, generating from pitch fields...")
+        char_desc = request.character_description or request.character.description
+        story_data = await generate_story_for_theme(
+            character_name=char.name,
+            character_description=char_desc,
+            theme_name=request.theme_name,
+            theme_description=request.theme_description,
+            theme_blurb=request.theme_blurb or "",
+            feature_used=request.feature_used or "",
+            want=request.want or "",
+            obstacle=request.obstacle or "",
+            twist=request.twist or "",
+            age_level=request.age_level
+        )
+        episodes = story_data.get("episodes", [])
+        print(f"[FULL-STORY] Generated {len(episodes)} episodes from pitch")
     
-    for i, episode in enumerate(request.episodes):
+    print(f"[FULL-STORY] Episodes count: {len(episodes)}")
+    
+    for i, episode in enumerate(episodes):
         scene_prompt = episode.get("scene_description", "").replace("{name}", char.name)
         story_text = episode.get("story_text", "").replace("{name}", char.name)
         episode_title = episode.get("title", f"Episode {i+1}")
