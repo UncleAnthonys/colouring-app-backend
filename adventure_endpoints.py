@@ -131,12 +131,16 @@ class StoryEpisode(BaseModel):
 
 
 class StoryTheme(BaseModel):
-    """A complete story theme with 5 episodes."""
+    """A story theme - either a pitch (no episodes) or full story (with episodes)."""
     theme_id: str
     theme_name: str
     theme_description: str
     theme_blurb: Optional[str] = None
-    episodes: List[StoryEpisode]
+    feature_used: Optional[str] = None
+    want: Optional[str] = None
+    obstacle: Optional[str] = None
+    twist: Optional[str] = None
+    episodes: Optional[List[StoryEpisode]] = None
 
 
 class GenerateStoriesRequest(BaseModel):
