@@ -675,7 +675,8 @@ FINAL CHECK - CRITICAL RULES:
 2. NO colors from reference - no blue, no orange, no any color
 3. NO SOLID BLACK FILLS - clothing, hair, skin must be WHITE with black OUTLINES only
 4. Black is ONLY for outlines/lines, NEVER for filling areas
-5. All enclosed areas must be empty white space for children to color in'''
+5. All enclosed areas must be empty white space for children to color in
+6. NO LARGE BLACK AREAS — sky, backgrounds, and large surfaces must be WHITE, not black. Even space/night scenes: draw stars, planets, moon as outlines on a WHITE background. Small strategic black fills are OK (shadows, silhouettes, cave entrances) but NEVER fill more than 20% of the page with solid black. This is a COLORING BOOK — parents print these and large black areas waste ink.'''
         
         # Build content with reveal image and optional previous page
         contents = [full_prompt]
