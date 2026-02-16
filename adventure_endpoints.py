@@ -7,7 +7,7 @@ Complete endpoint system for:
 3. Generating age-appropriate coloring page episodes (Gemini)
 """
 
-from adventure_gemini import generate_adventure_reveal_gemini, generate_adventure_episode_gemini, generate_personalized_stories, create_a4_page_with_text, create_front_cover
+from adventure_gemini import generate_adventure_reveal_gemini, generate_adventure_episode_gemini, generate_personalized_stories, generate_story_for_theme, create_a4_page_with_text, create_front_cover
 from character_extraction_gemini import extract_character_with_extreme_accuracy
 from firebase_utils import upload_to_firebase
 import google.generativeai as genai
@@ -147,10 +147,24 @@ class GenerateStoriesRequest(BaseModel):
 
 
 class GenerateStoriesResponse(BaseModel):
-    """Response with 3 personalized story themes."""
+    """Response with 3 personalized story theme pitches."""
     character_name: str
     age_level: Optional[str] = None
     themes: List[StoryTheme]
+
+
+class GenerateStoryForThemeRequest(BaseModel):
+    """Request to generate full story for a chosen theme."""
+    character_name: str
+    character_description: str
+    theme_name: str
+    theme_description: str
+    theme_blurb: str = ""
+    feature_used: str = ""
+    want: str = ""
+    obstacle: str = ""
+    twist: str = ""
+    age_level: str = "age_6"
 
 
 # =============================================================================
@@ -760,6 +774,35 @@ async def generate_stories_endpoint(request: GenerateStoriesRequest):
         raise HTTPException(status_code=500, detail=f"Story generation failed: {str(e)}")
 
 
+@router.post("/generate-story-for-theme")
+async def generate_story_for_theme_endpoint(request: GenerateStoryForThemeRequest):
+    """
+    Generate full 5-episode story for a single chosen theme.
+    
+    Call this AFTER the user picks a theme from /generate-stories.
+    Pass all the theme fields (theme_name, theme_description, theme_blurb,
+    feature_used, want, obstacle, twist) plus the character info.
+    
+    Returns 5 episodes with scene_description, story_text, and emotion.
+    """
+    try:
+        result = await generate_story_for_theme(
+            character_name=request.character_name,
+            character_description=request.character_description,
+            theme_name=request.theme_name,
+            theme_description=request.theme_description,
+            theme_blurb=request.theme_blurb,
+            feature_used=request.feature_used,
+            want=request.want,
+            obstacle=request.obstacle,
+            twist=request.twist,
+            age_level=request.age_level
+        )
+        return result
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Story generation failed: {str(e)}")
 @router.post("/generate-stories-from-reveal")
 async def generate_stories_from_reveal(
     character_name: str = Form(...),

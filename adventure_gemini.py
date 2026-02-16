@@ -1452,7 +1452,7 @@ Emotion must be one of: nervous, excited, scared, determined, happy, curious, sa
 5. NEVER copy a scenario word-for-word. Adapt it, remix it, make it feel fresh and unique to this character.
 6. NUANCED RESOLUTION: The character's feature should NOT directly fix the problem alone. Instead, a SUPPORTING CHARACTER should suggest a new way to use the feature, OR the character should learn to use it differently after the setback. The solution should feel like a team effort or a moment of growth, not just "feature solves everything".
 
-Return ONLY valid JSON. Here is a COMPLETE EXAMPLE of the exact format required:
+Return ONLY valid JSON. Generate 3 theme PITCHES (no full episodes yet). Here is the exact format:
 
 {{
   "character_name": "Example Monster",
@@ -1463,54 +1463,39 @@ Return ONLY valid JSON. Here is a COMPLETE EXAMPLE of the exact format required:
       "theme_name": "The Great Gravity Mix-Up",
       "theme_description": "When the gym's gravity experiment goes wrong, everything starts floating and Example Monster must catch everyone before they drift out the windows.",
       "theme_blurb": "Everything in the gym is floating and the PE teacher is stuck on the ceiling!",
-      "episodes": [
-        {{
-          "episode_num": 1,
-          "title": "Up, Up and Away!",
-          "scene_description": "Inside a school gymnasium. Basketballs, skipping ropes, and gym mats float in mid-air. The PE teacher (a muscular but panicking badger in a tracksuit) clings to a ceiling beam. A small nerdy hamster in goggles holds a sparking remote control looking guilty. Example Monster stands in the doorway, shocked.",
-          "story_text": "Professor Nutbolt's gravity experiment had gone VERY wrong! Everything in the gym was floating — balls, mats, even Mr. Crunch the PE teacher! 'Get me DOWN!' he bellowed from the ceiling.",
-          "emotion": "surprised"
-        }},
-        {{
-          "episode_num": 2,
-          "title": "Floating Chaos",
-          "scene_description": "WIDE SHOT: The school corridor outside the gym. Floating objects are drifting out through the doors — chairs, lunch boxes, a confused cat. Students dodge floating items. Professor Nutbolt floats past clutching the broken remote. Example Monster reaches for a floating student.",
-          "story_text": "The floating was spreading! Chairs drifted down the corridor and lunch boxes bumped along the ceiling. 'My remote broke!' wailed Professor Nutbolt, spinning slowly upside down. 'We need to fix it before the WHOLE school floats away!'",
-          "emotion": "worried"
-        }},
-        {{
-          "episode_num": 3,
-          "title": "The Grab That Missed",
-          "scene_description": "CLOSE-UP: Example Monster reaching for the broken remote control but it floats just out of reach. Professor Nutbolt tries to throw it but it drifts in the wrong direction. Mr. Crunch the badger has floated out a window and is clinging to a flagpole outside. Floating sports equipment everywhere.",
-          "story_text": "Example Monster tried to grab the remote but — WHOOSH — it floated away! 'The off switch is on the back!' called Professor Nutbolt. But every time they got close, the remote drifted further. Mr. Crunch was now outside, hugging the flagpole. 'HURRY UP!' he yelled.",
-          "emotion": "scared"
-        }},
-        {{
-          "episode_num": 4,
-          "title": "A Clever Trick",
-          "scene_description": "ACTION SHOT: Example Monster uses their special feature in a creative way to finally catch the remote. Professor Nutbolt watches with mouth open. The gym is full of floating objects creating an obstacle course. Through the window, Mr. Crunch gives a thumbs up from the flagpole.",
-          "story_text": "Then Example Monster had a brilliant idea! Using their special feature, they snagged the remote in the cleverest way. CLICK! Gravity came back all at once. Everything crashed down — BANG, CLATTER, BONK!",
-          "emotion": "determined"
-        }},
-        {{
-          "episode_num": 5,
-          "title": "Back to Earth",
-          "scene_description": "The gym with everything crashed back to the ground in a huge pile. Mr. Crunch the badger sits dazed on a pile of gym mats. Professor Nutbolt hugs the broken remote. Example Monster stands proudly. A banner on the wall reads 'SCIENCE FAIR CANCELLED'.",
-          "story_text": "'No more gravity experiments,' groaned Mr. Crunch, pulling a basketball off his head. Professor Nutbolt quietly hid the remote behind his back. 'Deal,' he squeaked.",
-          "emotion": "happy"
-        }}
-      ]
+      "feature_used": "big eye",
+      "want": "catch all the floating students before they drift out the windows",
+      "obstacle": "the eye keeps getting distracted tracking too many floating objects at once",
+      "twist": "uses the eye as a magnifying glass to focus sunlight and melt the anti-gravity device"
+    }},
+    {{
+      "theme_id": "the_missing_socks_mystery",
+      "theme_name": "The Missing Socks Mystery",
+      "theme_description": "Every sock in town has vanished overnight and Example Monster must follow the trail of woolly clues to find the thief.",
+      "theme_blurb": "Every single sock in town has disappeared overnight!",
+      "feature_used": "long arms",
+      "want": "find who stole all the socks before the big football match",
+      "obstacle": "long arms keep accidentally knocking over clues and evidence",
+      "twist": "uses arms to reach into the tiny mouse hole where the sock-hoarding mice live"
+    }},
+    {{
+      "theme_id": "the_worlds_worst_haircut",
+      "theme_name": "The World's Worst Haircut",
+      "theme_description": "The new barber is a robot who has gone haywire, giving everyone ridiculous haircuts, and Example Monster must stop it.",
+      "theme_blurb": "The robot barber has gone BONKERS and nobody's hair is safe!",
+      "feature_used": "spiky head",
+      "want": "stop the robot barber before it reaches the school photo",
+      "obstacle": "the robot keeps trying to cut the character's spikes thinking they're messy hair",
+      "twist": "the spikes jam the robot's scissors, causing it to short-circuit and reset"
     }}
   ]
 }}
 
-NOW generate for {character_name} using this EXACT format. The "emotion" field MUST be one of: nervous, excited, scared, determined, happy, curious, sad, proud, worried, surprised
-
-Generate 3 complete themes with all 5 episodes each. Return ONLY the JSON, no other text.'''
+NOW generate 3 theme PITCHES for {character_name}. Each theme must use a DIFFERENT character feature. Include theme_id, theme_name, theme_description, theme_blurb, feature_used, want, obstacle, and twist. Do NOT generate full episodes — just the pitches. Return ONLY the JSON, no other text.'''
         
         claude_response = claude_client.messages.create(
             model="claude-sonnet-4-5-20250929",
-            max_tokens=8000,
+            max_tokens=2000,
             messages=[{"role": "user", "content": prompt}]
         )
         
@@ -1535,34 +1520,6 @@ Generate 3 complete themes with all 5 episodes each. Return ONLY the JSON, no ot
             json_str = text[start:end]
             data = json.loads(json_str)
             
-            # Extract emotion from story_text since Gemini won't add the field
-            def extract_emotion(text):
-                text = text.lower()
-                emotions = [
-                    ('scared', ['scared', 'frightened', 'afraid', 'terrified', 'fearful', 'fear', 'scary']),
-                    ('nervous', ['nervous', 'anxious', 'uneasy', 'hesitant', 'shy', 'timid', 'flutter']),
-                    ('excited', ['excited', 'thrilled', 'eager', 'enthusiastic', 'overjoyed', 'excitement', 'thrilling']),
-                    ('sad', ['sad', 'unhappy', 'disappointed', 'upset', 'heartbroken', 'crying', 'tears', 'lonely']),
-                    ('curious', ['curious', 'wondering', 'intrigued', 'interested', 'puzzled', 'wonder']),
-                    ('determined', ['determined', 'resolute', 'focused', 'brave', 'courageous', 'bravely', 'courage']),
-                    ('surprised', ['surprised', 'amazed', 'astonished', 'shocked', 'startled', 'gasp']),
-                    ('proud', ['proud', 'accomplished', 'satisfied', 'triumphant', 'pride', 'success']),
-                    ('worried', ['worried', 'concerned', 'troubled', 'overwhelmed', 'worry']),
-                    ('happy', ['happy', 'joyful', 'delighted', 'pleased', 'glad', 'cheerful', 'joy', 'smile']),
-                ]
-                for emotion, keywords in emotions:
-                    if any(kw in text for kw in keywords):
-                        return emotion
-                return 'curious'  # default - changed to verify deploy
-            
-            for theme in data.get('themes', []):
-                for ep in theme.get('episodes', []):
-                    # Always extract and set emotion
-                    story = ep.get('story_text', '') + ' ' + ep.get('scene_description', '')
-                    extracted = extract_emotion(story)
-                    ep['character_emotion'] = ep.get('emotion_tag') or ep.get('emotion') or extracted
-                    ep['_extraction_ran'] = True  # Debug marker
-            
             return data
         
         raise HTTPException(status_code=500, detail='Failed to parse story response as JSON')
@@ -1571,3 +1528,188 @@ Generate 3 complete themes with all 5 episodes each. Return ONLY the JSON, no ot
         raise HTTPException(status_code=500, detail=f'JSON parse error: {str(e)}')
     except Exception as e:
         raise HTTPException(status_code=500, detail=f'Story generation failed: {str(e)}')
+
+
+async def generate_story_for_theme(
+    character_name: str,
+    character_description: str,
+    theme_name: str,
+    theme_description: str,
+    theme_blurb: str,
+    feature_used: str,
+    want: str,
+    obstacle: str,
+    twist: str,
+    age_level: str = "age_6"
+) -> dict:
+    """Generate full 5-episode story for a single chosen theme."""
+    
+    anthropic_key = os.environ.get('ANTHROPIC_API_KEY')
+    if not anthropic_key:
+        raise HTTPException(status_code=500, detail='Anthropic API key not configured')
+    
+    import anthropic
+    claude_client = anthropic.Anthropic(api_key=anthropic_key)
+    
+    # Get age-specific guidelines
+    age_guidelines = {
+        "age_3": """AGE 3: Max 20 words per episode. Very simple sentences. 2-3 word sound effects. Familiar settings (home, garden, park). Basic emotions only (happy, sad, scared). No complex plots.""",
+        "age_4": """AGE 4: Max 30 words per episode. Simple sentences with one fun word per page. Sound effects like CRASH, SPLAT. Familiar settings with one magical element. Clear emotions.""",
+        "age_5": """AGE 5: 30-50 words per episode. Natural storytelling voice. Fun words: "super-duper", "ginormous". Sound effects: "CRASH!", "SPLORT!". Dialogue in at least 3 of 5 episodes. At least one genuinely funny moment. Supporting characters who actively HELP or HINDER.""",
+        "age_6": """AGE 6: 40-60 words per episode. Richer vocabulary. Subplots with supporting characters. Emotional complexity. Humor through situation and character. Dialogue-driven storytelling.""",
+        "age_7": """AGE 7: 50-70 words per episode. More sophisticated plots. Character development. Themes of friendship, perseverance. Multiple supporting characters with distinct personalities.""",
+        "age_8": """AGE 8: 60-80 words per episode. Complex narrative structure. Red herrings, plot twists. Deeper emotional arcs. Witty dialogue.""",
+        "age_9": """AGE 9: 70-90 words per episode. Sophisticated storytelling. Multiple storylines. Nuanced characters. Themes of identity and belonging.""",
+        "age_10": """AGE 10: 80-100 words per episode. Near-novel quality. Complex themes. Rich descriptions. Layered humor. Character growth across episodes.""",
+    }
+    
+    age_guide = age_guidelines.get(age_level, age_guidelines["age_5"])
+    
+    prompt = f'''You are writing a complete 5-episode story for a children's coloring book app.
+
+CHARACTER: {character_name}
+CHARACTER DESCRIPTION: {character_description}
+
+CHOSEN THEME: {theme_name}
+THEME DESCRIPTION: {theme_description}
+THEME BLURB: {theme_blurb}
+
+STORY PLAN:
+- Feature used: {feature_used}
+- WANT: {want}
+- OBSTACLE: {obstacle}
+- TWIST: {twist}
+
+{age_guide}
+
+*** STORY STRUCTURE ***
+- Episode 1: Set up the problem. Introduce 2 named supporting characters with funny personalities (include species, size, accessories in brackets after each name).
+- Episode 2: First attempt using the character's feature. Things start going wrong.
+- Episode 3: SETBACK — attempt fails or makes things worse. Real moment of doubt. This episode MUST NOT be happy.
+- Episode 4: Creative solution — uses feature DIFFERENTLY based on the twist. A supporting character helps or suggests the new approach.
+- Episode 5: Resolution that connects back to episode 1. Short and punchy ending. Do NOT summarise or moralise.
+
+*** SCENE DESCRIPTIONS ***
+- Start each with LOCATION: "In the kitchen...", "At the park..."
+- Show the ACTION mid-happening, not characters standing around
+- Include VISIBLE CONSEQUENCES (things scattered, flying, broken)
+- Include character's BODY LANGUAGE
+- 3-4 background objects to colour
+- SUPPORTING CHARACTERS: Every time they appear, include species/size/accessories in brackets. Example: "Pip (small duck with bow tie)". NO COLOURS. Use SAME description each time.
+- Mix: wide shots, close-ups, action scenes across 5 episodes
+- If same location as previous episode, REPEAT key setting objects
+
+NARRATIVE FLOW: Each scene must feel like a CONTINUATION of the previous page. If episode 2 ended running toward the park, episode 3 should START at the park.
+
+*** EMOTION RULES ***
+- Use at LEAST 3 DIFFERENT emotions across 5 episodes
+- Episodes 1-3 should ESCALATE (e.g. curious → worried → scared)
+- Episode 3 MUST NOT be happy or excited
+- Episode 5 should be happy, proud, or excited
+- Emotions: nervous, excited, scared, determined, happy, curious, sad, proud, worried, surprised, embarrassed, panicked
+
+*** NON-NEGOTIABLE RULES ***
+1. At least 2 named supporting characters throughout
+2. SETBACK on episode 3
+3. Dialogue in at least 3 of 5 episodes
+4. Episode 5 resolves the specific problem from episode 1
+5. The feature should NOT directly fix the problem alone — a supporting character helps or the character learns to use it differently
+
+Return ONLY valid JSON in this exact format:
+
+{{
+  "theme_name": "{theme_name}",
+  "episodes": [
+    {{
+      "episode_num": 1,
+      "title": "Episode Title",
+      "scene_description": "Detailed scene for the artist...",
+      "story_text": "The story text for this page...",
+      "emotion": "surprised"
+    }},
+    {{
+      "episode_num": 2,
+      "title": "Episode Title",
+      "scene_description": "Detailed scene...",
+      "story_text": "Story text...",
+      "emotion": "worried"
+    }},
+    {{
+      "episode_num": 3,
+      "title": "Episode Title",
+      "scene_description": "Detailed scene...",
+      "story_text": "Story text...",
+      "emotion": "scared"
+    }},
+    {{
+      "episode_num": 4,
+      "title": "Episode Title",
+      "scene_description": "Detailed scene...",
+      "story_text": "Story text...",
+      "emotion": "determined"
+    }},
+    {{
+      "episode_num": 5,
+      "title": "Episode Title",
+      "scene_description": "Detailed scene...",
+      "story_text": "Story text...",
+      "emotion": "happy"
+    }}
+  ]
+}}
+
+Write the full story for {character_name} now. Return ONLY valid JSON.'''
+
+    claude_response = claude_client.messages.create(
+        model="claude-sonnet-4-5-20250929",
+        max_tokens=4000,
+        messages=[{"role": "user", "content": prompt}]
+    )
+    
+    text = claude_response.content[0].text.strip()
+    
+    # Remove markdown code blocks if present
+    if text.startswith('```json'):
+        text = text[7:]
+    if text.startswith('```'):
+        text = text[3:]
+    if text.endswith('```'):
+        text = text[:-3]
+    text = text.strip()
+    
+    start = text.find('{')
+    end = text.rfind('}') + 1
+    
+    if start >= 0 and end > start:
+        import json
+        json_str = text[start:end]
+        data = json.loads(json_str)
+        
+        # Extract/set emotion for each episode
+        def extract_emotion(text):
+            text = text.lower()
+            emotions = [
+                ('scared', ['scared', 'frightened', 'afraid', 'terrified']),
+                ('nervous', ['nervous', 'anxious', 'uneasy', 'hesitant']),
+                ('excited', ['excited', 'thrilled', 'eager']),
+                ('sad', ['sad', 'unhappy', 'disappointed', 'crying']),
+                ('curious', ['curious', 'wondering', 'intrigued']),
+                ('determined', ['determined', 'resolute', 'focused', 'brave']),
+                ('surprised', ['surprised', 'amazed', 'astonished']),
+                ('proud', ['proud', 'accomplished', 'triumphant']),
+                ('worried', ['worried', 'concerned', 'troubled']),
+                ('happy', ['happy', 'joyful', 'delighted', 'cheerful']),
+            ]
+            for emotion, keywords in emotions:
+                if any(kw in text for kw in keywords):
+                    return emotion
+            return 'curious'
+        
+        for ep in data.get('episodes', []):
+            story = ep.get('story_text', '') + ' ' + ep.get('scene_description', '')
+            extracted = extract_emotion(story)
+            ep['character_emotion'] = ep.get('emotion') or extracted
+        
+        return data
+    
+    raise HTTPException(status_code=500, detail='Failed to parse story response as JSON')
