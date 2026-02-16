@@ -7,6 +7,11 @@ Complete endpoint system for:
 3. Generating age-appropriate coloring page episodes (Gemini)
 """
 
+import io
+from PIL import Image
+from reportlab.lib.pagesizes import A4
+from reportlab.pdfgen import canvas
+from reportlab.lib.utils import ImageReader
 from adventure_gemini import generate_adventure_reveal_gemini, generate_adventure_episode_gemini, generate_personalized_stories, generate_story_for_theme, create_a4_page_with_text, create_front_cover
 from character_extraction_gemini import extract_character_with_extreme_accuracy
 from firebase_utils import upload_to_firebase
@@ -903,3 +908,88 @@ async def generate_stories_from_reveal(
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Story generation failed: {str(e)}")
+
+
+@router.post("/generate/storybook-pdf")
+async def generate_storybook_pdf(request: dict):
+    """
+    Combine all storybook page URLs into a single downloadable PDF.
+    Expects: {"page_urls": ["https://...", ...], "title": "Story Title"}
+    Returns: {"pdf_url": "https://..."}
+    """
+    import httpx
+    
+    page_urls = request.get("page_urls", [])
+    title = request.get("title", "Storybook")
+    
+    if not page_urls:
+        return {"error": "No page URLs provided"}
+    
+    print(f"[STORYBOOK-PDF] Generating PDF with {len(page_urls)} pages: {title}")
+    
+    # Download all page images
+    page_images = []
+    async with httpx.AsyncClient(timeout=30.0) as client:
+        for i, url in enumerate(page_urls):
+            try:
+                resp = await client.get(url)
+                if resp.status_code == 200:
+                    img = Image.open(io.BytesIO(resp.content))
+                    if img.mode in ('RGBA', 'P'):
+                        background = Image.new('RGB', img.size, (255, 255, 255))
+                        if img.mode == 'P':
+                            img = img.convert('RGBA')
+                        background.paste(img, mask=img.split()[-1] if img.mode == 'RGBA' else None)
+                        img = background
+                    elif img.mode != 'RGB':
+                        img = img.convert('RGB')
+                    page_images.append(img)
+                    print(f"[STORYBOOK-PDF] Downloaded page {i+1}: {img.width}x{img.height}")
+                else:
+                    print(f"[STORYBOOK-PDF] Failed to download page {i+1}: {resp.status_code}")
+            except Exception as e:
+                print(f"[STORYBOOK-PDF] Error downloading page {i+1}: {e}")
+    
+    if not page_images:
+        return {"error": "Could not download any pages"}
+    
+    # Create multi-page PDF
+    pdf_buffer = io.BytesIO()
+    c = canvas.Canvas(pdf_buffer, pagesize=A4)
+    page_width, page_height = A4
+    
+    for i, img in enumerate(page_images):
+        # Scale image to fit A4
+        img_aspect = img.width / img.height
+        page_aspect = page_width / page_height
+        
+        if img_aspect > page_aspect:
+            final_width = page_width
+            final_height = page_width / img_aspect
+        else:
+            final_height = page_height
+            final_width = page_height * img_aspect
+        
+        x = (page_width - final_width) / 2
+        y = (page_height - final_height) / 2
+        
+        img_buffer = io.BytesIO()
+        img.save(img_buffer, format='PNG')
+        img_buffer.seek(0)
+        
+        img_reader = ImageReader(img_buffer)
+        c.drawImage(img_reader, x, y, width=final_width, height=final_height)
+        
+        if i < len(page_images) - 1:
+            c.showPage()
+    
+    c.save()
+    
+    # Upload PDF to Firebase
+    pdf_buffer.seek(0)
+    pdf_b64 = base64.b64encode(pdf_buffer.read()).decode('utf-8')
+    pdf_url = upload_to_firebase(pdf_b64, folder="adventure/storybook-pdfs")
+    
+    print(f"[STORYBOOK-PDF] Generated PDF: {len(page_images)} pages, uploaded to Firebase")
+    
+    return {"pdf_url": pdf_url}
