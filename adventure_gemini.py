@@ -1509,7 +1509,7 @@ NOW generate for {character_name} using this EXACT format. The "emotion" field M
 Generate 3 complete themes with all 5 episodes each. Return ONLY the JSON, no other text.'''
         
         claude_response = claude_client.messages.create(
-            model="claude-haiku-4-5-20251001",
+            model="claude-sonnet-4-5-20250929",
             max_tokens=8000,
             messages=[{"role": "user", "content": prompt}]
         )
