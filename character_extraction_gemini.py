@@ -119,6 +119,13 @@ Measure EVERYTHING relative to the total figure:
 - Are they unusually long, short, floppy, stiff?
 - Record if proportions are UNUSUAL - these become story character traits!
 
+**LIMB CLASSIFICATION (CRITICAL FOR MONSTERS/CREATURES):**
+- LEGS = limbs that touch or nearly touch the GROUND and support the body's weight
+- ARMS = limbs that are raised, positioned at the sides of the upper body, or used for grasping
+- If a creature has 6 limbs, count how many touch the ground (those are LEGS) and how many are raised/at sides (those are ARMS)
+- Do NOT classify a limb as a "leg" just because it's at the bottom — if it's raised and not touching the ground, it's an ARM
+- Example: A monster with 2 limbs touching ground + 4 limbs raised = 2 legs + 4 arms, NOT 4 legs + 2 arms
+
 **BODY SHAPE:**
 - Round? Elongated? Squat? Lanky?
 - What makes this body shape distinctive?
