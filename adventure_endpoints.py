@@ -692,10 +692,11 @@ class GenerateFullStoryRequest(BaseModel):
     twist: Optional[str] = None
     character_description: Optional[str] = None  # Full description for story generation
     # Second character (friend/pet) - optional
+    second_character: Optional[CharacterData] = None  # Full character JSON (preferred - matches 'character' format)
     second_character_image_b64: Optional[str] = None  # Reveal/photo of second character
     second_character_image_url: Optional[str] = None  # Firebase URL of second character reveal (preferred)
-    second_character_name: Optional[str] = None  # Name of second character
-    second_character_description: Optional[str] = None  # Description (e.g. "springer spaniel dog")
+    second_character_name: Optional[str] = None  # Name of second character (legacy - use second_character.name)
+    second_character_description: Optional[str] = None  # Description (legacy - use second_character.description)
     # Writing customization - optional
     writing_style: Optional[str] = None  # e.g. "Rhyming", "Funny", "Adventurous"
     life_lesson: Optional[str] = None  # e.g. "Friendship", "Being brave", "It's OK to make mistakes"
@@ -773,6 +774,14 @@ async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
         request.reveal_image_b64 = None
     if request.reveal_image_url is not None and request.reveal_image_url.strip() == "":
         request.reveal_image_url = None
+    
+    # If second_character JSON provided, extract name/description from it
+    if request.second_character:
+        if not request.second_character_name:
+            request.second_character_name = request.second_character.name
+        if not request.second_character_description:
+            request.second_character_description = request.second_character.description
+        print(f"[FULL-STORY] Extracted from second_character JSON: name={request.second_character_name}, desc={request.second_character_description[:50]}...")
     
     # If reveal_image_url provided but no b64, download and convert
     if request.reveal_image_url and not request.reveal_image_b64:
@@ -874,12 +883,6 @@ Make it look like a real children's coloring book cover!
     print(f"[FULL-STORY] obstacle: {request.obstacle}")
     print(f"[FULL-STORY] twist: {request.twist}")
     print(f"[FULL-STORY] character_description: {request.character_description}")
-    print(f"[FULL-STORY] second_character_name: {request.second_character_name}")
-    print(f"[FULL-STORY] second_character_description: {request.second_character_description}")
-    print(f"[FULL-STORY] second_character_image_url: {request.second_character_image_url}")
-    print(f"[FULL-STORY] second_character_image_b64: {len(request.second_character_image_b64) if request.second_character_image_b64 else 'None'}")
-    print(f"[FULL-STORY] writing_style: {request.writing_style}")
-    print(f"[FULL-STORY] life_lesson: {request.life_lesson}")
     print(f"[FULL-STORY] episodes provided: {len(request.episodes) if request.episodes else 'None'}")
     
     # If no episodes provided, generate them from pitch fields
