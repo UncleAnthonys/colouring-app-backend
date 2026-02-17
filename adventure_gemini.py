@@ -489,10 +489,11 @@ A previous storybook page is attached. Use it for SCENE CONTINUITY:
 - The story is happening IN a location — draw that location consistently
 
 📐 BUT CHANGE THE COMPOSITION:
-- Different camera angle (close-up vs wide shot vs overhead)
-- Character in a different pose and position on the page
+- If the scene_description specifies a camera angle (wide shot, close-up, overhead, low angle), FOLLOW IT EXACTLY
+- Character in a different pose and position on the page than the previous image
 - Different objects in the FOREGROUND (but background setting stays consistent)
 - Different arrangement of supporting characters
+- CRITICAL: If this image looks too similar to the previous page, CHANGE the character's position, the camera angle, and the foreground elements dramatically
 
 🎨 VISUAL CONTINUITY CHECKLIST:
 - Same location = same key landmarks visible (even if from a different angle)
@@ -500,7 +501,7 @@ A previous storybook page is attached. Use it for SCENE CONTINUITY:
 - Same weather/time of day
 - Only change the setting when the STORY says they moved to a new place
 
-Think of it like a movie — the camera angle changes between shots but the SET stays the same.
+Think of it like a movie storyboard — EVERY shot is framed differently. Wide establishing → medium action → close-up emotion → dynamic angle → resolution wide.
 """
         
         # Build prompt
@@ -558,15 +559,26 @@ Use the reference image for SHAPE AND FORM ONLY - completely ignore all colors:
 A second reference image is attached for {second_character_name} ({sc_desc}).
 Use this second reference image for {second_character_name}'s SHAPE AND FORM ONLY — ignore all colors.
 
+🔴 CRITICAL - MATCH THE SECOND CHARACTER'S REFERENCE EXACTLY:
+- Study the second reference image CAREFULLY before drawing
+- {second_character_name}'s BREED/SPECIES must match: if the reference shows a spaniel with long floppy ears, draw a spaniel with long floppy ears — NOT a generic dog
+- {second_character_name}'s SIZE relative to {character_name} must be realistic (a real dog comes up to a child's waist/hip, not tiny)
+- {second_character_name}'s DISTINCTIVE FEATURES must be preserved: ear shape, ear length, fur texture, body proportions, face shape
+- If the reference shows spots/patches → draw outlined patch areas for coloring
+- If the reference shows long wavy fur → draw wavy fur outlines
+- {second_character_name} should be IMMEDIATELY RECOGNIZABLE as the same character from the reference on every page
+
 RULES FOR TWO CHARACTERS:
 - BOTH {character_name} AND {second_character_name} MUST appear in the scene
 - Use the FIRST reference image for {character_name}'s appearance
 - Use the SECOND reference image for {second_character_name}'s appearance
 - Each character must be clearly recognizable from their respective reference
 - Both characters should be prominent in the scene — not one tiny in the background
+- VARY their positions: don't put them in the same arrangement every page. Sometimes side by side, sometimes one in foreground and one behind, sometimes on opposite sides of the scene
 - If {second_character_name} is an animal: Draw them AS AN ANIMAL — no human clothes, keep their natural markings as line art areas to color, floppy ears stay floppy, spots stay spots
 - If {second_character_name} is a person: Keep their clothing and features from the reference
 - Both characters should be INTERACTING in the scene (looking at each other, working together, reacting to events)
+- {second_character_name} should show EMOTION too — tail wagging, ears perked, crouching scared, jumping excitedly
 
 '''
         
@@ -667,14 +679,6 @@ Colors allowed: BLACK and WHITE only
 Shading: NONE
 Gradients: NONE
 Tints: NONE
-
-*** ABSOLUTELY NO TEXT ON THE IMAGE ***
-- DO NOT write any words, letters, sentences, or story text on the coloring page
-- DO NOT add speech bubbles, captions, titles, labels, or any written content
-- The story text is provided for SCENE CONTEXT ONLY — to help you understand what to draw
-- NEVER reproduce the story text or any part of it on the image
-- The ONLY acceptable text is small environmental text that naturally appears in a scene (e.g. "STOP" on a stop sign, "ZOO" on a zoo entrance)
-- Character names, dialogue, narration = FORBIDDEN on the image
 
 This is a COLORING BOOK PAGE - children color it themselves.
 
@@ -1708,9 +1712,22 @@ STORY PLAN:
 - 3-4 background objects to colour
 - SUPPORTING CHARACTERS: Every time they appear, include species/size/accessories in brackets. Example: "Pip (small duck with bow tie)". NO COLOURS. Use SAME description each time.
 - IMPORTANT: The brackets with character descriptions are for scene_description ONLY. In story_text, just use the character's NAME — never include the bracketed description tags in story_text. Example: scene_description says "Pip (small duck with bow tie) runs over" but story_text says "Pip ran over".
-- *** CRITICAL: story_text must NEVER contain parentheses () or brackets [] with character descriptions. NEVER write things like "Buttons (round teddy bear wearing a bow tie)" in story_text. Just write "Buttons". The story_text is read aloud to children — it must sound natural, not like a script with stage directions. If you include ANY bracketed or parenthesised descriptions in story_text, the output is WRONG. ***
-- Mix: wide shots, close-ups, action scenes across 5 episodes
 - If same location as previous episode, REPEAT key setting objects
+
+*** CRITICAL: SCENE VARIETY RULES (NON-NEGOTIABLE) ***
+Each of the 5 episodes MUST have a visually distinct composition. Use this mandatory pattern:
+- Episode 1: WIDE ESTABLISHING SHOT — show the full location, characters small in the scene, lots of environment detail
+- Episode 2: MEDIUM ACTION SHOT — characters bigger, doing something physical, different part of the location
+- Episode 3: CLOSE-UP EMOTIONAL SHOT — focus on character's face/upper body, showing the setback emotion, less background
+- Episode 4: DYNAMIC ANGLE — overhead view, low angle looking up, or side angle. Characters in motion, different area of the setting
+- Episode 5: NEW LOCATION OR DRAMATICALLY DIFFERENT VIEW — if the story allows, move to a new place for resolution. If same location, show it from the completely opposite angle
+
+LOCATION MOVEMENT: The story MUST move through at least 2-3 different specific locations across the 5 episodes. Characters should travel, chase, explore — NOT stay rooted in one spot. Example: starts at the park entrance → moves to the climbing frame → runs to the pond → ends at the bandstand.
+
+In scene_description, ALWAYS specify:
+1. The EXACT LOCATION (not just "the street" — say "outside the bakery on Maple Street" or "inside the bus on the top deck")
+2. The CAMERA ANGLE (wide shot, close-up, overhead, low angle looking up, side view)
+3. Where the main character is positioned (left, right, center, foreground, background)
 
 NARRATIVE FLOW: Each scene must feel like a CONTINUATION of the previous page. If episode 2 ended running toward the park, episode 3 should START at the park.
 
