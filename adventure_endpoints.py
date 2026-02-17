@@ -933,8 +933,8 @@ Make it look like a real children's coloring book cover!
         # Save this page as previous for next iteration
         previous_page_b64 = image_b64
         
-        a4_page_b64 = create_a4_page_with_text(image_b64, story_text, episode_title)
-        page_url = upload_to_firebase(a4_page_b64, folder="adventure/storybooks")
+        # Upload raw coloring image - app displays story text separately
+        page_url = upload_to_firebase(image_b64, folder="adventure/storybooks")
         pages.append({"page_num": i+1, "page_type": "episode", "title": episode_title, "page_url": page_url, "story_text": story_text})
     
     return {"pages": pages, "title": full_title, "total_pages": len(pages)}
