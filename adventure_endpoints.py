@@ -20,7 +20,7 @@ import os
 import base64
 import httpx
 from typing import Optional, List
-from fastapi import APIRouter, HTTPException, UploadFile, File, Form, Request
+from fastapi import APIRouter, HTTPException, UploadFile, File, Form
 from pydantic import BaseModel
 
 from adventure_config import (
@@ -752,26 +752,7 @@ Make it look like a real children's coloring book cover you'd see in a shop!
     }
 
 @router.post("/generate/full-story")
-async def generate_full_story_endpoint_debug(request: Request):
-    """Debug wrapper to see raw request body."""
-    body = await request.json()
-    print(f"[RAW-REQUEST] Keys: {list(body.keys())}")
-    print(f"[RAW-REQUEST] character type: {type(body.get('character'))}")
-    print(f"[RAW-REQUEST] episodes type: {type(body.get('episodes'))}")
-    for k, v in body.items():
-        if isinstance(v, str) and len(v) > 100:
-            print(f"[RAW-REQUEST] {k}: (string len {len(v)})")
-        else:
-            print(f"[RAW-REQUEST] {k}: {v}")
-    # Now validate manually
-    try:
-        parsed = GenerateFullStoryRequest(**body)
-    except Exception as e:
-        print(f"[RAW-REQUEST] VALIDATION ERROR: {e}")
-        raise HTTPException(status_code=422, detail=str(e))
-    return await generate_full_story_endpoint_real(parsed)
-
-async def generate_full_story_endpoint_real(request: GenerateFullStoryRequest):
+async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
     """
     Generate a complete storybook: front cover + all episode pages.
     """
