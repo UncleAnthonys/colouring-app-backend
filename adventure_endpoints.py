@@ -317,6 +317,7 @@ async def generate_episode_gemini_endpoint(request: GenerateEpisodeRequest):
     Uses reveal_image_b64 as reference for character consistency.
     The reveal image ensures the coloring page character matches exactly.
     """
+    print(f"[CLEAN-DEBUG] reveal_b64 first 50: {request.reveal_image_b64[:50] if request.reveal_image_b64 else None}")
     char = request.character
     age_level = request.age_level
     episode_num = request.episode_num
@@ -707,6 +708,7 @@ async def generate_front_cover_endpoint(request: GenerateFrontCoverRequest):
     Creates a coloring page image representing the story theme,
     then formats it as a book cover with title.
     """
+    print(f"[CLEAN-DEBUG] reveal_b64 first 50: {request.reveal_image_b64[:50] if request.reveal_image_b64 else None}")
     char = request.character
     age_rules = get_age_rules(request.age_level)
     
@@ -783,6 +785,7 @@ async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
             clean_b64 += '=' * padding
         request.second_character_image_b64 = clean_b64
     
+    print(f"[CLEAN-DEBUG] reveal_b64 first 50: {request.reveal_image_b64[:50] if request.reveal_image_b64 else None}")
     char = request.character
     age_rules = get_age_rules(request.age_level)
     pages = []
