@@ -874,6 +874,12 @@ Make it look like a real children's coloring book cover!
     print(f"[FULL-STORY] obstacle: {request.obstacle}")
     print(f"[FULL-STORY] twist: {request.twist}")
     print(f"[FULL-STORY] character_description: {request.character_description}")
+    print(f"[FULL-STORY] second_character_name: {request.second_character_name}")
+    print(f"[FULL-STORY] second_character_description: {request.second_character_description}")
+    print(f"[FULL-STORY] second_character_image_url: {request.second_character_image_url}")
+    print(f"[FULL-STORY] second_character_image_b64: {len(request.second_character_image_b64) if request.second_character_image_b64 else 'None'}")
+    print(f"[FULL-STORY] writing_style: {request.writing_style}")
+    print(f"[FULL-STORY] life_lesson: {request.life_lesson}")
     print(f"[FULL-STORY] episodes provided: {len(request.episodes) if request.episodes else 'None'}")
     
     # If no episodes provided, generate them from pitch fields
