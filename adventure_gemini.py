@@ -685,6 +685,7 @@ FINAL CHECK - CRITICAL RULES:
             from PIL import Image
             import io as pil_io
             reveal_bytes = base64.b64decode(reveal_image_b64)
+            print(f"[EPISODE-DEBUG] reveal_image first 50 chars: {reveal_image_b64[:50]}")
             img = Image.open(pil_io.BytesIO(reveal_bytes))
             gray = img.convert('L').convert('RGB')  # Grayscale but keep RGB format
             buffer = pil_io.BytesIO()
