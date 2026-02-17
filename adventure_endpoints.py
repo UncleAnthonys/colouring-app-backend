@@ -630,6 +630,7 @@ async def extract_and_reveal_second_b64(request: ExtractAndRevealSecondRequest):
     Returns same response as /extract-and-reveal-second.
     """
     try:
+        print(f"[EXTRACT-SECOND] character_name received: '{request.character_name}'")
         # Decode base64 to image bytes
         image_data = base64.b64decode(request.image_b64)
         
@@ -651,8 +652,13 @@ async def extract_and_reveal_second_b64(request: ExtractAndRevealSecondRequest):
         reveal_image_url = upload_to_firebase(reveal_image, folder="adventure/reveals-second")
         # Ensure the character name from user input is used (extraction may return "null" for photos)
         char_result_b64 = extraction_result["character"]
+        print(f"[EXTRACT-SECOND] character name from extraction: '{char_result_b64.get('name', 'MISSING')}'")
+        print(f"[EXTRACT-SECOND] character_name from request: '{request.character_name}'")
         if request.character_name and request.character_name.lower() not in ("null", "none", ""):
             char_result_b64["name"] = request.character_name
+            print(f"[EXTRACT-SECOND] Injected name: '{request.character_name}'")
+        else:
+            print(f"[EXTRACT-SECOND] Name NOT injected - was null/none/empty")
         return {
             'character': char_result_b64,
             'reveal_description': extraction_result['reveal_description'],
