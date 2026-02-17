@@ -592,8 +592,14 @@ async def extract_and_reveal_second(
         
         # Upload reveal image to Firebase and get URL
         reveal_image_url = upload_to_firebase(reveal_image, folder="adventure/reveals-second")
+        
+        # Ensure the character name from user input is used
+        char_result_non_b64 = extraction_result['character']
+        if character_name and character_name.lower() not in ("null", "none", ""):
+            char_result_non_b64['name'] = character_name
+        
         return {
-            'character': extraction_result['character'],
+            'character': char_result_non_b64,
             'reveal_description': extraction_result['reveal_description'],
             'reveal_image': reveal_image,
             'reveal_image_url': reveal_image_url,
@@ -643,8 +649,12 @@ async def extract_and_reveal_second_b64(request: ExtractAndRevealSecondRequest):
         
         # Upload reveal image to Firebase and get URL
         reveal_image_url = upload_to_firebase(reveal_image, folder="adventure/reveals-second")
+        # Ensure the character name from user input is used (extraction may return "null" for photos)
+        char_result_b64 = extraction_result["character"]
+        if request.character_name and request.character_name.lower() not in ("null", "none", ""):
+            char_result_b64["name"] = request.character_name
         return {
-            'character': extraction_result['character'],
+            'character': char_result_b64,
             'reveal_description': extraction_result['reveal_description'],
             'reveal_image': reveal_image,
             'reveal_image_url': reveal_image_url,
@@ -781,11 +791,18 @@ async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
     print(f"[FULL-STORY] second_character_description: {request.second_character_description}")
     print(f"[FULL-STORY] second_character_image_url: {request.second_character_image_url}")
     if request.second_character:
-        if not request.second_character_name:
-            request.second_character_name = request.second_character.name
+        # Extract description from JSON if not separately provided
         if not request.second_character_description:
             request.second_character_description = request.second_character.description
+        # Extract name from JSON, but skip if it's literally "null" (image analysis doesn't know the name)
+        if not request.second_character_name:
+            if request.second_character.name and request.second_character.name.lower() not in ("null", "none", ""):
+                request.second_character_name = request.second_character.name
         print(f"[FULL-STORY] Extracted from second_character JSON: name={request.second_character_name}, desc={request.second_character_description[:50]}...")
+    
+    # Clean up null-string names (FlutterFlow sometimes sends literal "null")
+    if request.second_character_name and request.second_character_name.lower() in ("null", "none", ""):
+        request.second_character_name = None
     
     # If reveal_image_url provided but no b64, download and convert
     if request.reveal_image_url and not request.reveal_image_b64:
@@ -897,10 +914,18 @@ Make it look like a real children's coloring book cover!
         
         # If there's a second character, add them to the description so Sonnet includes them
         if request.second_character_name:
-            sc_info = f"\n\nIMPORTANT - SECOND CHARACTER: {request.second_character_name}"
+            sc_info = f"\n\nCRITICAL - SECOND MAIN CHARACTER: {request.second_character_name}"
             if request.second_character_description:
                 sc_info += f" ({request.second_character_description})"
-            sc_info += f". {request.second_character_name} MUST appear in every episode as {char.name}'s companion. Include them in every scene_description with a consistent bracketed tag. They are a main character, not a background extra."
+            sc_info += f"""
+{request.second_character_name} is a CO-STAR in this story, NOT a background character. Requirements:
+- {request.second_character_name} MUST appear in EVERY SINGLE episode
+- {request.second_character_name} MUST have spoken dialogue in every episode (use their name before quotes)
+- {request.second_character_name} MUST actively participate in the plot — helping, suggesting, reacting, doing things
+- {char.name} and {request.second_character_name} interact together like best friends/companions
+- Include {request.second_character_name} in every scene_description with a consistent bracketed tag
+- {request.second_character_name} should have their own personality and reactions to events
+- If {request.second_character_name} is an animal, they can still communicate (bark excitedly, nuzzle, lead the way, etc.)"""
             char_desc += sc_info
             print(f"[FULL-STORY] Second character added to story: {request.second_character_name}")
         
