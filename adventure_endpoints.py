@@ -153,6 +153,8 @@ class GenerateStoriesRequest(BaseModel):
     character_name: str
     character_description: str
     age_level: str = "age_6"  # age_3, age_4, age_5, age_6, age_7, age_8, age_9, age_10
+    writing_style: Optional[str] = None  # e.g. "Rhyming", "Funny", "Adventurous"
+    story_theme: Optional[str] = None  # e.g. "Space", "Under the Sea", "Dinosaurs"
 
 
 class GenerateStoriesResponse(BaseModel):
@@ -174,6 +176,8 @@ class GenerateStoryForThemeRequest(BaseModel):
     obstacle: str = ""
     twist: str = ""
     age_level: str = "age_6"
+    writing_style: Optional[str] = None  # e.g. "Rhyming", "Funny", "Adventurous"
+    story_theme: Optional[str] = None  # e.g. "Space", "Under the Sea", "Dinosaurs"
 
 
 # =============================================================================
@@ -547,6 +551,62 @@ async def complete_workflow(
         raise HTTPException(status_code=500, detail=f"Complete workflow failed: {str(e)}")
 
 
+@router.post("/extract-and-reveal-second")
+async def extract_and_reveal_second(
+    image: UploadFile = File(...),
+    character_name: str = Form(...)
+):
+    """
+    Extract and reveal a SECOND character (supporting character / pet / friend).
+    
+    Same pipeline as /extract-and-reveal but labelled as a second character.
+    Call this BEFORE /generate/full-story when user has added a supporting character.
+    
+    Returns:
+    - character: extracted character data
+    - reveal_description: text description for story generation
+    - reveal_image: base64 reveal image 
+    - reveal_image_url: Firebase URL of reveal image
+    - source_type: 'drawing' or 'photo'
+    """
+    try:
+        # Read image data
+        image_data = await image.read()
+        
+        # Extract character with Gemini (uses extreme accuracy prompt)
+        extraction_result = await extract_character_with_extreme_accuracy(image_data, character_name)
+        
+        # Convert original to base64 for reveal generation
+        image_b64 = base64.b64encode(image_data).decode('utf-8')
+        
+        # Generate reveal image with Gemini
+        reveal_image = await generate_adventure_reveal_gemini(
+            character_data={
+                'name': character_name,
+                'description': extraction_result['reveal_description'],
+                'key_feature': extraction_result['character']['key_feature'],
+                'source_type': extraction_result.get('source_type', 'drawing')
+            },
+            original_drawing_b64=image_b64
+        )
+        
+        # Upload reveal image to Firebase and get URL
+        reveal_image_url = upload_to_firebase(reveal_image, folder="adventure/reveals-second")
+        return {
+            'character': extraction_result['character'],
+            'reveal_description': extraction_result['reveal_description'],
+            'reveal_image': reveal_image,
+            'reveal_image_url': reveal_image_url,
+            'extraction_time': extraction_result['extraction_time'],
+            'model_used': 'gemini-2.5-flash',
+            'source_type': extraction_result.get('source_type', 'drawing')
+        }
+        
+    except Exception as e:
+        import traceback; traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Second character extraction failed: {str(e)}")
+
+
 # =============================================================================
 # TEST ENDPOINTS
 # =============================================================================
@@ -583,6 +643,9 @@ class GenerateFullStoryRequest(BaseModel):
     second_character_image_b64: Optional[str] = None  # Reveal/photo of second character
     second_character_name: Optional[str] = None  # Name of second character
     second_character_description: Optional[str] = None  # Description (e.g. "springer spaniel dog")
+    # Writing customization - optional
+    writing_style: Optional[str] = None  # e.g. "Rhyming", "Funny", "Adventurous"
+    story_theme: Optional[str] = None  # e.g. "Space", "Under the Sea", "Dinosaurs"
 
 
 @router.post("/generate/front-cover")
@@ -714,7 +777,9 @@ Make it look like a real children's coloring book cover!
             want=request.want or "",
             obstacle=request.obstacle or "",
             twist=request.twist or "",
-            age_level=request.age_level
+            age_level=request.age_level,
+            writing_style=request.writing_style,
+            story_theme=request.story_theme
         )
         episodes = story_data.get("episodes", [])
         print(f"[FULL-STORY] Generated {len(episodes)} episodes from pitch")
@@ -833,7 +898,9 @@ async def generate_stories_endpoint(request: GenerateStoriesRequest):
         result = await generate_personalized_stories(
             character_name=request.character_name,
             character_description=request.character_description,
-            age_level=request.age_level
+            age_level=request.age_level,
+            writing_style=request.writing_style,
+            story_theme=request.story_theme
         )
         
         return result
@@ -866,7 +933,9 @@ async def generate_story_for_theme_endpoint(request: GenerateStoryForThemeReques
             want=request.want,
             obstacle=request.obstacle,
             twist=request.twist,
-            age_level=request.age_level
+            age_level=request.age_level,
+            writing_style=request.writing_style,
+            story_theme=request.story_theme
         )
         return result
     except HTTPException:

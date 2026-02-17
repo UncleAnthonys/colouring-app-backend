@@ -780,7 +780,7 @@ FINAL CHECK - CRITICAL RULES:
         raise HTTPException(status_code=500, detail=f'Episode generation failed: {str(e)}')
 
 
-async def generate_personalized_stories(character_name: str, character_description: str, age_level: str = "age_6") -> dict:
+async def generate_personalized_stories(character_name: str, character_description: str, age_level: str = "age_6", writing_style: str = None, story_theme: str = None) -> dict:
     """
     Generate 3 personalized story themes based on character type and child age.
     
@@ -1389,8 +1389,39 @@ CONTENT:
         _scenario_subset = _scenario_pool[:30]
         shuffled_scenarios = "\n".join(f"{i+1}. {s}" for i, s in enumerate(_scenario_subset))
 
-        prompt = f'''You are creating personalized story adventures for a childrens coloring book app.
+        # Build optional style/theme override block
+        style_theme_block = ""
+        if writing_style:
+            style_theme_block += f"""
+*** WRITING STYLE OVERRIDE ***
+The user has chosen a specific writing style: "{writing_style}"
+Adapt ALL story text to match this style:
+- If "Rhyming": Every episode's story_text should rhyme. Use couplets or AABB rhyme schemes. Make it flow like a poem.
+- If "Funny": Maximize humor — puns, physical comedy, absurd situations, ironic narration. Make the parent laugh too.
+- If "Adventurous": High stakes, cliffhangers between episodes, brave choices, exciting action verbs.
+- If "Gentle": Soft, calming language. Quiet moments of wonder. Cozy settings. Warm resolutions.
+- If "Silly": Over-the-top nonsense, made-up words, ridiculous situations, characters being goofy.
+- For any other style: interpret it naturally and apply it consistently across all episodes.
+This style should permeate the story_text, episode titles, and theme descriptions.
+"""
+        if story_theme:
+            style_theme_block += f"""
+*** STORY THEME OVERRIDE ***
+The user has chosen a specific theme setting: "{story_theme}"
+ALL 3 story pitches must be set in or heavily involve this theme world:
+- If "Space": Adventures happen on planets, space stations, rockets. Supporting characters can be aliens, robots, astronauts.
+- If "Under the Sea": Adventures happen underwater — coral reefs, sunken ships, ocean floor. Characters can be sea creatures.
+- If "Dinosaurs": Adventures involve dinosaurs — time travel, dino park, prehistoric world. Dinos as friends or obstacles.
+- If "Pirates": Adventures involve pirate ships, treasure maps, islands. Nautical language and settings.
+- If "Fairy Tale": Adventures set in fairy tale worlds — enchanted forests, castles, magical creatures.
+- If "Superheroes": Adventures involve powers, villains, saving the day. Comic book energy.
+- For any other theme: interpret it naturally and set ALL stories within that world.
+The scenario pool below should be ADAPTED to fit this theme. For example, "popcorn flooding the cinema" in a Space theme becomes "space popcorn flooding the rocket ship".
+IMPORTANT: The theme setting is the WORLD the story takes place in. Still use the character's features as the main story driver.
+"""
 
+        prompt = f'''You are creating personalized story adventures for a childrens coloring book app.
+{style_theme_block}
 Based on this character named "{character_name}", generate 3 UNIQUE story themes that are PERSONALIZED to this specific character's features.
 
 CHARACTER TO ANALYZE:
@@ -1589,7 +1620,9 @@ async def generate_story_for_theme(
     want: str,
     obstacle: str,
     twist: str,
-    age_level: str = "age_6"
+    age_level: str = "age_6",
+    writing_style: str = None,
+    story_theme: str = None
 ) -> dict:
     """Generate full 5-episode story for a single chosen theme."""
     
@@ -1614,8 +1647,29 @@ async def generate_story_for_theme(
     
     age_guide = age_guidelines.get(age_level, age_guidelines["age_5"])
     
-    prompt = f'''You are writing a complete 5-episode story for a children's coloring book app.
+    # Build optional style/theme override block for full story
+    style_theme_block = ""
+    if writing_style:
+        style_theme_block += f"""
+*** WRITING STYLE: {writing_style} ***
+The user chose "{writing_style}" style. Apply this to ALL story_text:
+- Rhyming: Every episode rhymes (couplets/AABB). Make it flow like a poem.
+- Funny: Maximize humor — puns, physical comedy, absurd situations, ironic narration.
+- Adventurous: High stakes, cliffhangers, brave choices, exciting action verbs.
+- Gentle: Soft, calming language. Quiet wonder. Cozy settings. Warm resolutions.
+- Silly: Over-the-top nonsense, made-up words, ridiculous situations.
+For any other style: interpret naturally and apply consistently.
+"""
+    if story_theme:
+        style_theme_block += f"""
+*** THEME WORLD: {story_theme} ***
+Set the story within this theme world: "{story_theme}".
+All locations, supporting characters, and settings should fit this world.
+Adapt the existing theme plan to take place in this setting.
+"""
 
+    prompt = f'''You are writing a complete 5-episode story for a children's coloring book app.
+{style_theme_block}
 CHARACTER: {character_name}
 CHARACTER DESCRIPTION: {character_description}
 
