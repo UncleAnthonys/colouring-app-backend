@@ -776,6 +776,10 @@ async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
         request.reveal_image_url = None
     
     # If second_character JSON provided, extract name/description from it
+    print(f"[FULL-STORY] second_character JSON: {request.second_character}")
+    print(f"[FULL-STORY] second_character_name: {request.second_character_name}")
+    print(f"[FULL-STORY] second_character_description: {request.second_character_description}")
+    print(f"[FULL-STORY] second_character_image_url: {request.second_character_image_url}")
     if request.second_character:
         if not request.second_character_name:
             request.second_character_name = request.second_character.name
