@@ -1708,6 +1708,7 @@ STORY PLAN:
 - 3-4 background objects to colour
 - SUPPORTING CHARACTERS: Every time they appear, include species/size/accessories in brackets. Example: "Pip (small duck with bow tie)". NO COLOURS. Use SAME description each time.
 - IMPORTANT: The brackets with character descriptions are for scene_description ONLY. In story_text, just use the character's NAME — never include the bracketed description tags in story_text. Example: scene_description says "Pip (small duck with bow tie) runs over" but story_text says "Pip ran over".
+- *** CRITICAL: story_text must NEVER contain parentheses () or brackets [] with character descriptions. NEVER write things like "Buttons (round teddy bear wearing a bow tie)" in story_text. Just write "Buttons". The story_text is read aloud to children — it must sound natural, not like a script with stage directions. If you include ANY bracketed or parenthesised descriptions in story_text, the output is WRONG. ***
 - Mix: wide shots, close-ups, action scenes across 5 episodes
 - If same location as previous episode, REPEAT key setting objects
 
