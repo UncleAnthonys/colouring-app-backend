@@ -153,8 +153,6 @@ class GenerateStoriesRequest(BaseModel):
     character_name: str
     character_description: str
     age_level: str = "age_6"  # age_3, age_4, age_5, age_6, age_7, age_8, age_9, age_10
-    writing_style: Optional[str] = None  # e.g. "Rhyming", "Funny", "Adventurous"
-    life_lesson: Optional[str] = None  # e.g. "Friendship", "Being brave", "It's OK to make mistakes"
 
 
 class GenerateStoriesResponse(BaseModel):
@@ -176,8 +174,6 @@ class GenerateStoryForThemeRequest(BaseModel):
     obstacle: str = ""
     twist: str = ""
     age_level: str = "age_6"
-    writing_style: Optional[str] = None  # e.g. "Rhyming", "Funny", "Adventurous"
-    life_lesson: Optional[str] = None  # e.g. "Friendship", "Being brave", "It's OK to make mistakes"
 
 
 # =============================================================================
@@ -551,113 +547,6 @@ async def complete_workflow(
         raise HTTPException(status_code=500, detail=f"Complete workflow failed: {str(e)}")
 
 
-@router.post("/extract-and-reveal-second")
-async def extract_and_reveal_second(
-    image: UploadFile = File(...),
-    character_name: str = Form(...)
-):
-    """
-    Extract and reveal a SECOND character (supporting character / pet / friend).
-    
-    Same pipeline as /extract-and-reveal but labelled as a second character.
-    Call this BEFORE /generate/full-story when user has added a supporting character.
-    
-    Returns:
-    - character: extracted character data
-    - reveal_description: text description for story generation
-    - reveal_image: base64 reveal image 
-    - reveal_image_url: Firebase URL of reveal image
-    - source_type: 'drawing' or 'photo'
-    """
-    try:
-        # Read image data
-        image_data = await image.read()
-        
-        # Extract character with Gemini (uses extreme accuracy prompt)
-        extraction_result = await extract_character_with_extreme_accuracy(image_data, character_name)
-        
-        # Convert original to base64 for reveal generation
-        image_b64 = base64.b64encode(image_data).decode('utf-8')
-        
-        # Generate reveal image with Gemini
-        reveal_image = await generate_adventure_reveal_gemini(
-            character_data={
-                'name': character_name,
-                'description': extraction_result['reveal_description'],
-                'key_feature': extraction_result['character']['key_feature'],
-                'source_type': extraction_result.get('source_type', 'drawing')
-            },
-            original_drawing_b64=image_b64
-        )
-        
-        # Upload reveal image to Firebase and get URL
-        reveal_image_url = upload_to_firebase(reveal_image, folder="adventure/reveals-second")
-        return {
-            'character': extraction_result['character'],
-            'reveal_description': extraction_result['reveal_description'],
-            'reveal_image': reveal_image,
-            'reveal_image_url': reveal_image_url,
-            'extraction_time': extraction_result['extraction_time'],
-            'model_used': 'gemini-2.5-flash',
-            'source_type': extraction_result.get('source_type', 'drawing')
-        }
-        
-    except Exception as e:
-        import traceback; traceback.print_exc()
-        raise HTTPException(status_code=500, detail=f"Second character extraction failed: {str(e)}")
-
-
-class ExtractAndRevealSecondRequest(BaseModel):
-    """JSON request for second character extraction (accepts base64 instead of file upload)."""
-    image_b64: str  # Base64 encoded image
-    character_name: str
-
-
-@router.post("/extract-and-reveal-second-b64")
-async def extract_and_reveal_second_b64(request: ExtractAndRevealSecondRequest):
-    """
-    Extract and reveal a SECOND character using base64 image input.
-    
-    JSON endpoint - accepts base64 string instead of file upload.
-    Use this from FlutterFlow where the image is already in base64 format.
-    
-    Returns same response as /extract-and-reveal-second.
-    """
-    try:
-        # Decode base64 to image bytes
-        image_data = base64.b64decode(request.image_b64)
-        
-        # Extract character with Gemini
-        extraction_result = await extract_character_with_extreme_accuracy(image_data, request.character_name)
-        
-        # Generate reveal image with Gemini
-        reveal_image = await generate_adventure_reveal_gemini(
-            character_data={
-                'name': request.character_name,
-                'description': extraction_result['reveal_description'],
-                'key_feature': extraction_result['character']['key_feature'],
-                'source_type': extraction_result.get('source_type', 'drawing')
-            },
-            original_drawing_b64=request.image_b64
-        )
-        
-        # Upload reveal image to Firebase and get URL
-        reveal_image_url = upload_to_firebase(reveal_image, folder="adventure/reveals-second")
-        return {
-            'character': extraction_result['character'],
-            'reveal_description': extraction_result['reveal_description'],
-            'reveal_image': reveal_image,
-            'reveal_image_url': reveal_image_url,
-            'extraction_time': extraction_result['extraction_time'],
-            'model_used': 'gemini-2.5-flash',
-            'source_type': extraction_result.get('source_type', 'drawing')
-        }
-        
-    except Exception as e:
-        import traceback; traceback.print_exc()
-        raise HTTPException(status_code=500, detail=f"Second character extraction failed: {str(e)}")
-
-
 # =============================================================================
 # TEST ENDPOINTS
 # =============================================================================
@@ -694,9 +583,6 @@ class GenerateFullStoryRequest(BaseModel):
     second_character_image_b64: Optional[str] = None  # Reveal/photo of second character
     second_character_name: Optional[str] = None  # Name of second character
     second_character_description: Optional[str] = None  # Description (e.g. "springer spaniel dog")
-    # Writing customization - optional
-    writing_style: Optional[str] = None  # e.g. "Rhyming", "Funny", "Adventurous"
-    life_lesson: Optional[str] = None  # e.g. "Friendship", "Being brave", "It's OK to make mistakes"
 
 
 @router.post("/generate/front-cover")
@@ -756,45 +642,6 @@ async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
     """
     Generate a complete storybook: front cover + all episode pages.
     """
-    # Convert empty strings to None - FlutterFlow sends "" instead of null for optional fields
-    if request.second_character_image_b64 is not None and request.second_character_image_b64.strip() == "":
-        request.second_character_image_b64 = None
-    if request.second_character_name is not None and request.second_character_name.strip() == "":
-        request.second_character_name = None
-    if request.second_character_description is not None and request.second_character_description.strip() == "":
-        request.second_character_description = None
-    if request.writing_style is not None and request.writing_style.strip() == "":
-        request.writing_style = None
-    if request.life_lesson is not None and request.life_lesson.strip() == "":
-        request.life_lesson = None
-    
-    # Clean base64 fields - FlutterFlow may escape special chars or add prefixes
-    if request.reveal_image_b64:
-        clean_b64 = request.reveal_image_b64
-        # Remove data URI prefix if present
-        if 'base64,' in clean_b64:
-            clean_b64 = clean_b64.split('base64,')[1]
-        # Remove any whitespace/newlines
-        clean_b64 = clean_b64.strip().replace('\n', '').replace('\r', '').replace(' ', '')
-        # Fix URL-safe base64
-        clean_b64 = clean_b64.replace('-', '+').replace('_', '/')
-        # Fix padding
-        padding = 4 - len(clean_b64) % 4
-        if padding != 4:
-            clean_b64 += '=' * padding
-        request.reveal_image_b64 = clean_b64
-    
-    if request.second_character_image_b64:
-        clean_b64 = request.second_character_image_b64
-        if 'base64,' in clean_b64:
-            clean_b64 = clean_b64.split('base64,')[1]
-        clean_b64 = clean_b64.strip().replace('\n', '').replace('\r', '').replace(' ', '')
-        clean_b64 = clean_b64.replace('-', '+').replace('_', '/')
-        padding = 4 - len(clean_b64) % 4
-        if padding != 4:
-            clean_b64 += '=' * padding
-        request.second_character_image_b64 = clean_b64
-    
     char = request.character
     age_rules = get_age_rules(request.age_level)
     pages = []
@@ -814,7 +661,6 @@ Make it look like a real children's coloring book cover!
 """
     
     cover_image_b64 = await generate_adventure_episode_gemini(
-    print(f"[FULL-STORY] About to generate cover image...")
         character_data={"name": char.name, "description": char.description, "key_feature": char.key_feature},
         scene_prompt=cover_scene,
         age_rules=age_rules["rules"],
@@ -829,7 +675,6 @@ Make it look like a real children's coloring book cover!
     
     cover_url = upload_to_firebase(cover_image_b64, folder="adventure/storybooks")
     pages.append({"page_num": 0, "page_type": "cover", "title": full_title, "page_url": cover_url, "story_text": ""})
-    print(f"[FULL-STORY] Cover generated successfully, uploading to Firebase...")
     
     previous_page_b64 = None  # Track previous page for continuity
     
@@ -869,9 +714,7 @@ Make it look like a real children's coloring book cover!
             want=request.want or "",
             obstacle=request.obstacle or "",
             twist=request.twist or "",
-            age_level=request.age_level,
-            writing_style=request.writing_style,
-            life_lesson=request.life_lesson
+            age_level=request.age_level
         )
         episodes = story_data.get("episodes", [])
         print(f"[FULL-STORY] Generated {len(episodes)} episodes from pitch")
@@ -990,9 +833,7 @@ async def generate_stories_endpoint(request: GenerateStoriesRequest):
         result = await generate_personalized_stories(
             character_name=request.character_name,
             character_description=request.character_description,
-            age_level=request.age_level,
-            writing_style=request.writing_style,
-            life_lesson=request.life_lesson
+            age_level=request.age_level
         )
         
         return result
@@ -1025,9 +866,7 @@ async def generate_story_for_theme_endpoint(request: GenerateStoryForThemeReques
             want=request.want,
             obstacle=request.obstacle,
             twist=request.twist,
-            age_level=request.age_level,
-            writing_style=request.writing_style,
-            life_lesson=request.life_lesson
+            age_level=request.age_level
         )
         return result
     except HTTPException:
@@ -1081,11 +920,6 @@ async def generate_storybook_pdf(request: dict):
     import httpx
     
     page_urls = request.get("page_urls", [])
-    
-    # Also accept full page objects and extract URLs
-    if not page_urls:
-        pages = request.get("pages", [])
-        page_urls = [p.get("page_url", "") for p in pages if p.get("page_url")]
     title = request.get("title", "Storybook")
     
     if not page_urls:
