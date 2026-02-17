@@ -919,21 +919,39 @@ Make it look like a real children's coloring book cover!
         char_desc = request.character_description or request.character.description
         
         # If there's a second character, add them to the description so Sonnet includes them
-        if request.second_character_name:
-            sc_info = f"\n\nCRITICAL - SECOND MAIN CHARACTER: {request.second_character_name}"
-            if request.second_character_description:
-                sc_info += f" ({request.second_character_description})"
+        # Try to get name from: second_character_name field, or second_character JSON
+        sc_name = request.second_character_name
+        if not sc_name and request.second_character and request.second_character.name and request.second_character.name.lower() not in ("null", "none", ""):
+            sc_name = request.second_character.name
+        if not sc_name and request.second_character:
+            sc_name = "Companion"  # Fallback if no name provided but character exists
+        
+        sc_desc = request.second_character_description
+        if not sc_desc and request.second_character:
+            sc_desc = request.second_character.description
+            
+        print(f"[FULL-STORY] Resolved second character: name={sc_name}, has_desc={bool(sc_desc)}, has_image={bool(request.second_character_image_b64)}")
+        
+        if sc_name:
+            sc_info = f"\n\nCRITICAL - SECOND MAIN CHARACTER: {sc_name}"
+            if sc_desc:
+                sc_info += f" ({sc_desc})"
             sc_info += f"""
-{request.second_character_name} is a CO-STAR in this story, NOT a background character. Requirements:
-- {request.second_character_name} MUST appear in EVERY SINGLE episode
-- {request.second_character_name} MUST have spoken dialogue in every episode (use their name before quotes)
-- {request.second_character_name} MUST actively participate in the plot — helping, suggesting, reacting, doing things
-- {char.name} and {request.second_character_name} interact together like best friends/companions
-- Include {request.second_character_name} in every scene_description with a consistent bracketed tag
-- {request.second_character_name} should have their own personality and reactions to events
-- If {request.second_character_name} is an animal, they can still communicate (bark excitedly, nuzzle, lead the way, etc.)"""
+{sc_name} is a CO-STAR in this story, NOT a background character. Requirements:
+- {sc_name} MUST appear in EVERY SINGLE episode
+- {sc_name} MUST have spoken dialogue in every episode (use their name before quotes)
+- {sc_name} MUST actively participate in the plot — helping, suggesting, reacting, doing things
+- {char.name} and {sc_name} interact together like best friends/companions
+- Include {sc_name} in every scene_description with a consistent bracketed tag
+- {sc_name} should have their own personality and reactions to events
+- If {sc_name} is an animal, they can still communicate (bark excitedly, nuzzle, lead the way, etc.)"""
             char_desc += sc_info
-            print(f"[FULL-STORY] Second character added to story: {request.second_character_name}")
+            print(f"[FULL-STORY] Second character added to story: {sc_name}")
+            
+            # Also update request fields so episode generation can use them
+            request.second_character_name = sc_name
+            if not request.second_character_description:
+                request.second_character_description = sc_desc
         
         story_data = await generate_story_for_theme(
             character_name=char.name,
