@@ -681,7 +681,8 @@ class GenerateFullStoryRequest(BaseModel):
     theme_description: str
     episodes: Optional[List[dict]] = None  # If provided, use these. If empty/null, generate from pitch fields.
     age_level: str = "age_6"
-    reveal_image_b64: str  # Character reveal for reference
+    reveal_image_b64: Optional[str] = None  # Character reveal base64 (legacy - use URL instead)
+    reveal_image_url: Optional[str] = None  # Firebase URL of reveal image (preferred - avoids JSON escaping issues)
     source_type: Optional[str] = "drawing"  # 'drawing' or 'photo'
     # Pitch fields for server-side story generation
     theme_blurb: Optional[str] = None
@@ -692,6 +693,7 @@ class GenerateFullStoryRequest(BaseModel):
     character_description: Optional[str] = None  # Full description for story generation
     # Second character (friend/pet) - optional
     second_character_image_b64: Optional[str] = None  # Reveal/photo of second character
+    second_character_image_url: Optional[str] = None  # Firebase URL of second character reveal (preferred)
     second_character_name: Optional[str] = None  # Name of second character
     second_character_description: Optional[str] = None  # Description (e.g. "springer spaniel dog")
     # Writing customization - optional
@@ -756,7 +758,7 @@ async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
     """
     Generate a complete storybook: front cover + all episode pages.
     """
-    # Convert empty strings to None - FlutterFlow sends "" instead of null
+    # Convert empty strings to None - FlutterFlow sends "" instead of null for optional fields
     if request.second_character_image_b64 is not None and request.second_character_image_b64.strip() == "":
         request.second_character_image_b64 = None
     if request.second_character_name is not None and request.second_character_name.strip() == "":
@@ -767,11 +769,67 @@ async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
         request.writing_style = None
     if request.life_lesson is not None and request.life_lesson.strip() == "":
         request.life_lesson = None
-    if request.reveal_image_b64 and request.reveal_image_b64.strip() == "":
+    if request.reveal_image_b64 is not None and request.reveal_image_b64.strip() == "":
         request.reveal_image_b64 = None
+    if request.reveal_image_url is not None and request.reveal_image_url.strip() == "":
+        request.reveal_image_url = None
+    
+    # If reveal_image_url provided but no b64, download and convert
+    if request.reveal_image_url and not request.reveal_image_b64:
+        try:
+            import httpx
+            async with httpx.AsyncClient(timeout=15.0) as client:
+                resp = await client.get(request.reveal_image_url)
+                if resp.status_code == 200:
+                    request.reveal_image_b64 = base64.b64encode(resp.content).decode('utf-8')
+                    print(f"[FULL-STORY] Downloaded reveal from URL, b64 length: {len(request.reveal_image_b64)}")
+                else:
+                    print(f"[FULL-STORY] Failed to download reveal URL: {resp.status_code}")
+        except Exception as e:
+            print(f"[FULL-STORY] Error downloading reveal URL: {e}")
+    
+    # If second_character_image_url provided but no b64, download and convert
+    if request.second_character_image_url and not request.second_character_image_b64:
+        try:
+            import httpx
+            async with httpx.AsyncClient(timeout=15.0) as client:
+                resp = await client.get(request.second_character_image_url)
+                if resp.status_code == 200:
+                    request.second_character_image_b64 = base64.b64encode(resp.content).decode('utf-8')
+                    print(f"[FULL-STORY] Downloaded second char from URL, b64 length: {len(request.second_character_image_b64)}")
+                else:
+                    print(f"[FULL-STORY] Failed to download second char URL: {resp.status_code}")
+        except Exception as e:
+            print(f"[FULL-STORY] Error downloading second char URL: {e}")
+    
+    # Clean base64 fields - FlutterFlow may escape special chars or add prefixes
+    if request.reveal_image_b64:
+        clean_b64 = request.reveal_image_b64
+        # Remove data URI prefix if present
+        if 'base64,' in clean_b64:
+            clean_b64 = clean_b64.split('base64,')[1]
+        # Remove any whitespace/newlines
+        clean_b64 = clean_b64.strip().replace('\n', '').replace('\r', '').replace(' ', '')
+        # Fix URL-safe base64
+        clean_b64 = clean_b64.replace('-', '+').replace('_', '/')
+        # Fix padding
+        padding = 4 - len(clean_b64) % 4
+        if padding != 4:
+            clean_b64 += '=' * padding
+        request.reveal_image_b64 = clean_b64
+    
+    if request.second_character_image_b64:
+        clean_b64 = request.second_character_image_b64
+        if 'base64,' in clean_b64:
+            clean_b64 = clean_b64.split('base64,')[1]
+        clean_b64 = clean_b64.strip().replace('\n', '').replace('\r', '').replace(' ', '')
+        clean_b64 = clean_b64.replace('-', '+').replace('_', '/')
+        padding = 4 - len(clean_b64) % 4
+        if padding != 4:
+            clean_b64 += '=' * padding
+        request.second_character_image_b64 = clean_b64
     
     char = request.character
-    print(f"[FULL-STORY-DEBUG] reveal_image_b64 length: {len(request.reveal_image_b64) if request.reveal_image_b64 else 0}")
     age_rules = get_age_rules(request.age_level)
     pages = []
     
