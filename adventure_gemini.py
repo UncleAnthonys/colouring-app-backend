@@ -780,7 +780,7 @@ FINAL CHECK - CRITICAL RULES:
         raise HTTPException(status_code=500, detail=f'Episode generation failed: {str(e)}')
 
 
-async def generate_personalized_stories(character_name: str, character_description: str, age_level: str = "age_6", writing_style: str = None, story_theme: str = None) -> dict:
+async def generate_personalized_stories(character_name: str, character_description: str, age_level: str = "age_6", writing_style: str = None, life_lesson: str = None) -> dict:
     """
     Generate 3 personalized story themes based on character type and child age.
     
@@ -1404,20 +1404,20 @@ Adapt ALL story text to match this style:
 - For any other style: interpret it naturally and apply it consistently across all episodes.
 This style should permeate the story_text, episode titles, and theme descriptions.
 """
-        if story_theme:
+        if life_lesson:
             style_theme_block += f"""
-*** STORY THEME OVERRIDE ***
-The user has chosen a specific theme setting: "{story_theme}"
-ALL 3 story pitches must be set in or heavily involve this theme world:
-- If "Space": Adventures happen on planets, space stations, rockets. Supporting characters can be aliens, robots, astronauts.
-- If "Under the Sea": Adventures happen underwater — coral reefs, sunken ships, ocean floor. Characters can be sea creatures.
-- If "Dinosaurs": Adventures involve dinosaurs — time travel, dino park, prehistoric world. Dinos as friends or obstacles.
-- If "Pirates": Adventures involve pirate ships, treasure maps, islands. Nautical language and settings.
-- If "Fairy Tale": Adventures set in fairy tale worlds — enchanted forests, castles, magical creatures.
-- If "Superheroes": Adventures involve powers, villains, saving the day. Comic book energy.
-- For any other theme: interpret it naturally and set ALL stories within that world.
-The scenario pool below should be ADAPTED to fit this theme. For example, "popcorn flooding the cinema" in a Space theme becomes "space popcorn flooding the rocket ship".
-IMPORTANT: The theme setting is the WORLD the story takes place in. Still use the character's features as the main story driver.
+*** LIFE LESSON OVERRIDE ***
+The user wants the story to teach or explore this life lesson: "{life_lesson}"
+ALL 3 story pitches must weave this lesson naturally into the narrative:
+- If "Friendship": The story should explore making friends, loyalty, helping each other, or what it means to be a good friend.
+- If "Being brave": The character should face fears, show courage, or learn that being brave doesn't mean not being scared.
+- If "It's OK to make mistakes": The character should mess up, feel bad, but discover that mistakes lead to learning or something good.
+- If "Kindness": The story should show acts of kindness, empathy, or helping others without expecting anything back.
+- If "Being yourself": The character should learn to embrace what makes them different or unique.
+- If "Sharing": The story should explore sharing, generosity, or discovering that sharing makes things better.
+- If "Perseverance": The character should keep trying when things get hard, showing that persistence pays off.
+- For any other lesson: interpret it naturally and weave it throughout the story arc.
+IMPORTANT: The lesson should emerge THROUGH THE STORY, not through lecturing or moralising. Show don't tell. The character EXPERIENCES the lesson through what happens to them.
 """
 
         prompt = f'''You are creating personalized story adventures for a childrens coloring book app.
@@ -1622,7 +1622,7 @@ async def generate_story_for_theme(
     twist: str,
     age_level: str = "age_6",
     writing_style: str = None,
-    story_theme: str = None
+    life_lesson: str = None
 ) -> dict:
     """Generate full 5-episode story for a single chosen theme."""
     
@@ -1660,12 +1660,12 @@ The user chose "{writing_style}" style. Apply this to ALL story_text:
 - Silly: Over-the-top nonsense, made-up words, ridiculous situations.
 For any other style: interpret naturally and apply consistently.
 """
-    if story_theme:
+    if life_lesson:
         style_theme_block += f"""
-*** THEME WORLD: {story_theme} ***
-Set the story within this theme world: "{story_theme}".
-All locations, supporting characters, and settings should fit this world.
-Adapt the existing theme plan to take place in this setting.
+*** LIFE LESSON: {life_lesson} ***
+Weave this life lesson naturally into the story: "{life_lesson}".
+The character should EXPERIENCE this lesson through what happens — not through lecturing.
+The lesson should emerge from the story events, especially through the setback in episode 3 and the resolution in episodes 4-5.
 """
 
     prompt = f'''You are writing a complete 5-episode story for a children's coloring book app.

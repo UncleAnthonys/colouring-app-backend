@@ -154,7 +154,7 @@ class GenerateStoriesRequest(BaseModel):
     character_description: str
     age_level: str = "age_6"  # age_3, age_4, age_5, age_6, age_7, age_8, age_9, age_10
     writing_style: Optional[str] = None  # e.g. "Rhyming", "Funny", "Adventurous"
-    story_theme: Optional[str] = None  # e.g. "Space", "Under the Sea", "Dinosaurs"
+    life_lesson: Optional[str] = None  # e.g. "Friendship", "Being brave", "It's OK to make mistakes"
 
 
 class GenerateStoriesResponse(BaseModel):
@@ -177,7 +177,7 @@ class GenerateStoryForThemeRequest(BaseModel):
     twist: str = ""
     age_level: str = "age_6"
     writing_style: Optional[str] = None  # e.g. "Rhyming", "Funny", "Adventurous"
-    story_theme: Optional[str] = None  # e.g. "Space", "Under the Sea", "Dinosaurs"
+    life_lesson: Optional[str] = None  # e.g. "Friendship", "Being brave", "It's OK to make mistakes"
 
 
 # =============================================================================
@@ -645,7 +645,7 @@ class GenerateFullStoryRequest(BaseModel):
     second_character_description: Optional[str] = None  # Description (e.g. "springer spaniel dog")
     # Writing customization - optional
     writing_style: Optional[str] = None  # e.g. "Rhyming", "Funny", "Adventurous"
-    story_theme: Optional[str] = None  # e.g. "Space", "Under the Sea", "Dinosaurs"
+    life_lesson: Optional[str] = None  # e.g. "Friendship", "Being brave", "It's OK to make mistakes"
 
 
 @router.post("/generate/front-cover")
@@ -779,7 +779,7 @@ Make it look like a real children's coloring book cover!
             twist=request.twist or "",
             age_level=request.age_level,
             writing_style=request.writing_style,
-            story_theme=request.story_theme
+            life_lesson=request.life_lesson
         )
         episodes = story_data.get("episodes", [])
         print(f"[FULL-STORY] Generated {len(episodes)} episodes from pitch")
@@ -900,7 +900,7 @@ async def generate_stories_endpoint(request: GenerateStoriesRequest):
             character_description=request.character_description,
             age_level=request.age_level,
             writing_style=request.writing_style,
-            story_theme=request.story_theme
+            life_lesson=request.life_lesson
         )
         
         return result
@@ -935,7 +935,7 @@ async def generate_story_for_theme_endpoint(request: GenerateStoryForThemeReques
             twist=request.twist,
             age_level=request.age_level,
             writing_style=request.writing_style,
-            story_theme=request.story_theme
+            life_lesson=request.life_lesson
         )
         return result
     except HTTPException:
