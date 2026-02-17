@@ -668,6 +668,14 @@ Shading: NONE
 Gradients: NONE
 Tints: NONE
 
+*** ABSOLUTELY NO TEXT ON THE IMAGE ***
+- DO NOT write any words, letters, sentences, or story text on the coloring page
+- DO NOT add speech bubbles, captions, titles, labels, or any written content
+- The story text is provided for SCENE CONTEXT ONLY — to help you understand what to draw
+- NEVER reproduce the story text or any part of it on the image
+- The ONLY acceptable text is small environmental text that naturally appears in a scene (e.g. "STOP" on a stop sign, "ZOO" on a zoo entrance)
+- Character names, dialogue, narration = FORBIDDEN on the image
+
 This is a COLORING BOOK PAGE - children color it themselves.
 
 FINAL CHECK - CRITICAL RULES:
