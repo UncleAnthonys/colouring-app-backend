@@ -675,7 +675,8 @@ FINAL CHECK - CRITICAL RULES:
 2. NO colors from reference - no blue, no orange, no any color
 3. NO SOLID BLACK FILLS - clothing, hair, skin must be WHITE with black OUTLINES only
 4. Black is ONLY for outlines/lines, NEVER for filling areas
-5. All enclosed areas must be empty white space for children to color in'''
+5. All enclosed areas must be empty white space for children to color in
+6. NO LARGE BLACK AREAS — sky, backgrounds, and large surfaces must be WHITE, not black. Even space/night scenes: draw stars, planets, moon as outlines on a WHITE background. Small strategic black fills are OK (shadows, silhouettes, cave entrances) but NEVER fill more than 20% of the page with solid black. This is a COLORING BOOK — parents print these and large black areas waste ink.'''
         
         # Build content with reveal image and optional previous page
         contents = [full_prompt]
@@ -685,7 +686,6 @@ FINAL CHECK - CRITICAL RULES:
             from PIL import Image
             import io as pil_io
             reveal_bytes = base64.b64decode(reveal_image_b64)
-            print(f"[EPISODE-DEBUG] reveal_image first 50 chars: {reveal_image_b64[:50]}")
             img = Image.open(pil_io.BytesIO(reveal_bytes))
             gray = img.convert('L').convert('RGB')  # Grayscale but keep RGB format
             buffer = pil_io.BytesIO()
@@ -780,7 +780,7 @@ FINAL CHECK - CRITICAL RULES:
         raise HTTPException(status_code=500, detail=f'Episode generation failed: {str(e)}')
 
 
-async def generate_personalized_stories(character_name: str, character_description: str, age_level: str = "age_6") -> dict:
+async def generate_personalized_stories(character_name: str, character_description: str, age_level: str = "age_6", writing_style: str = None, life_lesson: str = None) -> dict:
     """
     Generate 3 personalized story themes based on character type and child age.
     
@@ -1389,8 +1389,39 @@ CONTENT:
         _scenario_subset = _scenario_pool[:30]
         shuffled_scenarios = "\n".join(f"{i+1}. {s}" for i, s in enumerate(_scenario_subset))
 
-        prompt = f'''You are creating personalized story adventures for a childrens coloring book app.
+        # Build optional style/theme override block
+        style_theme_block = ""
+        if writing_style:
+            style_theme_block += f"""
+*** WRITING STYLE OVERRIDE ***
+The user has chosen a specific writing style: "{writing_style}"
+Adapt ALL story text to match this style:
+- If "Rhyming": Every episode's story_text should rhyme. Use couplets or AABB rhyme schemes. Make it flow like a poem.
+- If "Funny": Maximize humor — puns, physical comedy, absurd situations, ironic narration. Make the parent laugh too.
+- If "Adventurous": High stakes, cliffhangers between episodes, brave choices, exciting action verbs.
+- If "Gentle": Soft, calming language. Quiet moments of wonder. Cozy settings. Warm resolutions.
+- If "Silly": Over-the-top nonsense, made-up words, ridiculous situations, characters being goofy.
+- For any other style: interpret it naturally and apply it consistently across all episodes.
+This style should permeate the story_text, episode titles, and theme descriptions.
+"""
+        if life_lesson:
+            style_theme_block += f"""
+*** LIFE LESSON OVERRIDE ***
+The user wants the story to teach or explore this life lesson: "{life_lesson}"
+ALL 3 story pitches must weave this lesson naturally into the narrative:
+- If "Friendship": The story should explore making friends, loyalty, helping each other, or what it means to be a good friend.
+- If "Being brave": The character should face fears, show courage, or learn that being brave doesn't mean not being scared.
+- If "It's OK to make mistakes": The character should mess up, feel bad, but discover that mistakes lead to learning or something good.
+- If "Kindness": The story should show acts of kindness, empathy, or helping others without expecting anything back.
+- If "Being yourself": The character should learn to embrace what makes them different or unique.
+- If "Sharing": The story should explore sharing, generosity, or discovering that sharing makes things better.
+- If "Perseverance": The character should keep trying when things get hard, showing that persistence pays off.
+- For any other lesson: interpret it naturally and weave it throughout the story arc.
+IMPORTANT: The lesson should emerge THROUGH THE STORY, not through lecturing or moralising. Show don't tell. The character EXPERIENCES the lesson through what happens to them.
+"""
 
+        prompt = f'''You are creating personalized story adventures for a childrens coloring book app.
+{style_theme_block}
 Based on this character named "{character_name}", generate 3 UNIQUE story themes that are PERSONALIZED to this specific character's features.
 
 CHARACTER TO ANALYZE:
@@ -1589,7 +1620,9 @@ async def generate_story_for_theme(
     want: str,
     obstacle: str,
     twist: str,
-    age_level: str = "age_6"
+    age_level: str = "age_6",
+    writing_style: str = None,
+    life_lesson: str = None
 ) -> dict:
     """Generate full 5-episode story for a single chosen theme."""
     
@@ -1614,8 +1647,29 @@ async def generate_story_for_theme(
     
     age_guide = age_guidelines.get(age_level, age_guidelines["age_5"])
     
-    prompt = f'''You are writing a complete 5-episode story for a children's coloring book app.
+    # Build optional style/theme override block for full story
+    style_theme_block = ""
+    if writing_style:
+        style_theme_block += f"""
+*** WRITING STYLE: {writing_style} ***
+The user chose "{writing_style}" style. Apply this to ALL story_text:
+- Rhyming: Every episode rhymes (couplets/AABB). Make it flow like a poem.
+- Funny: Maximize humor — puns, physical comedy, absurd situations, ironic narration.
+- Adventurous: High stakes, cliffhangers, brave choices, exciting action verbs.
+- Gentle: Soft, calming language. Quiet wonder. Cozy settings. Warm resolutions.
+- Silly: Over-the-top nonsense, made-up words, ridiculous situations.
+For any other style: interpret naturally and apply consistently.
+"""
+    if life_lesson:
+        style_theme_block += f"""
+*** LIFE LESSON: {life_lesson} ***
+Weave this life lesson naturally into the story: "{life_lesson}".
+The character should EXPERIENCE this lesson through what happens — not through lecturing.
+The lesson should emerge from the story events, especially through the setback in episode 3 and the resolution in episodes 4-5.
+"""
 
+    prompt = f'''You are writing a complete 5-episode story for a children's coloring book app.
+{style_theme_block}
 CHARACTER: {character_name}
 CHARACTER DESCRIPTION: {character_description}
 
