@@ -607,6 +607,57 @@ async def extract_and_reveal_second(
         raise HTTPException(status_code=500, detail=f"Second character extraction failed: {str(e)}")
 
 
+class ExtractAndRevealSecondRequest(BaseModel):
+    """JSON request for second character extraction (accepts base64 instead of file upload)."""
+    image_b64: str  # Base64 encoded image
+    character_name: str
+
+
+@router.post("/extract-and-reveal-second-b64")
+async def extract_and_reveal_second_b64(request: ExtractAndRevealSecondRequest):
+    """
+    Extract and reveal a SECOND character using base64 image input.
+    
+    JSON endpoint - accepts base64 string instead of file upload.
+    Use this from FlutterFlow where the image is already in base64 format.
+    
+    Returns same response as /extract-and-reveal-second.
+    """
+    try:
+        # Decode base64 to image bytes
+        image_data = base64.b64decode(request.image_b64)
+        
+        # Extract character with Gemini
+        extraction_result = await extract_character_with_extreme_accuracy(image_data, request.character_name)
+        
+        # Generate reveal image with Gemini
+        reveal_image = await generate_adventure_reveal_gemini(
+            character_data={
+                'name': request.character_name,
+                'description': extraction_result['reveal_description'],
+                'key_feature': extraction_result['character']['key_feature'],
+                'source_type': extraction_result.get('source_type', 'drawing')
+            },
+            original_drawing_b64=request.image_b64
+        )
+        
+        # Upload reveal image to Firebase and get URL
+        reveal_image_url = upload_to_firebase(reveal_image, folder="adventure/reveals-second")
+        return {
+            'character': extraction_result['character'],
+            'reveal_description': extraction_result['reveal_description'],
+            'reveal_image': reveal_image,
+            'reveal_image_url': reveal_image_url,
+            'extraction_time': extraction_result['extraction_time'],
+            'model_used': 'gemini-2.5-flash',
+            'source_type': extraction_result.get('source_type', 'drawing')
+        }
+        
+    except Exception as e:
+        import traceback; traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Second character extraction failed: {str(e)}")
+
+
 # =============================================================================
 # TEST ENDPOINTS
 # =============================================================================
