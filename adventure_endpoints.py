@@ -757,6 +757,7 @@ async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
     Generate a complete storybook: front cover + all episode pages.
     """
     char = request.character
+    print(f"[FULL-STORY-DEBUG] reveal_image_b64 length: {len(request.reveal_image_b64) if request.reveal_image_b64 else 0}")
     age_rules = get_age_rules(request.age_level)
     pages = []
     
