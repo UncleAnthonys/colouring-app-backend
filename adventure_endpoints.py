@@ -814,6 +814,7 @@ Make it look like a real children's coloring book cover!
 """
     
     cover_image_b64 = await generate_adventure_episode_gemini(
+    print(f"[FULL-STORY] About to generate cover image...")
         character_data={"name": char.name, "description": char.description, "key_feature": char.key_feature},
         scene_prompt=cover_scene,
         age_rules=age_rules["rules"],
@@ -828,6 +829,7 @@ Make it look like a real children's coloring book cover!
     
     cover_url = upload_to_firebase(cover_image_b64, folder="adventure/storybooks")
     pages.append({"page_num": 0, "page_type": "cover", "title": full_title, "page_url": cover_url, "story_text": ""})
+    print(f"[FULL-STORY] Cover generated successfully, uploading to Firebase...")
     
     previous_page_b64 = None  # Track previous page for continuity
     
