@@ -756,8 +756,34 @@ async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
     """
     Generate a complete storybook: front cover + all episode pages.
     """
+    # Clean base64 fields - FlutterFlow may escape special chars or add prefixes
+    if request.reveal_image_b64:
+        clean_b64 = request.reveal_image_b64
+        # Remove data URI prefix if present
+        if 'base64,' in clean_b64:
+            clean_b64 = clean_b64.split('base64,')[1]
+        # Remove any whitespace/newlines
+        clean_b64 = clean_b64.strip().replace('\n', '').replace('\r', '').replace(' ', '')
+        # Fix URL-safe base64
+        clean_b64 = clean_b64.replace('-', '+').replace('_', '/')
+        # Fix padding
+        padding = 4 - len(clean_b64) % 4
+        if padding != 4:
+            clean_b64 += '=' * padding
+        request.reveal_image_b64 = clean_b64
+    
+    if request.second_character_image_b64:
+        clean_b64 = request.second_character_image_b64
+        if 'base64,' in clean_b64:
+            clean_b64 = clean_b64.split('base64,')[1]
+        clean_b64 = clean_b64.strip().replace('\n', '').replace('\r', '').replace(' ', '')
+        clean_b64 = clean_b64.replace('-', '+').replace('_', '/')
+        padding = 4 - len(clean_b64) % 4
+        if padding != 4:
+            clean_b64 += '=' * padding
+        request.second_character_image_b64 = clean_b64
+    
     char = request.character
-    print(f"[FULL-STORY-DEBUG] reveal_image_b64 length: {len(request.reveal_image_b64) if request.reveal_image_b64 else 0}")
     age_rules = get_age_rules(request.age_level)
     pages = []
     
