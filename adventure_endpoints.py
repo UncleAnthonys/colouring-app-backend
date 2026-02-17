@@ -756,6 +756,20 @@ async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
     """
     Generate a complete storybook: front cover + all episode pages.
     """
+    # Convert empty strings to None - FlutterFlow sends "" instead of null
+    if request.second_character_image_b64 is not None and request.second_character_image_b64.strip() == "":
+        request.second_character_image_b64 = None
+    if request.second_character_name is not None and request.second_character_name.strip() == "":
+        request.second_character_name = None
+    if request.second_character_description is not None and request.second_character_description.strip() == "":
+        request.second_character_description = None
+    if request.writing_style is not None and request.writing_style.strip() == "":
+        request.writing_style = None
+    if request.life_lesson is not None and request.life_lesson.strip() == "":
+        request.life_lesson = None
+    if request.reveal_image_b64 and request.reveal_image_b64.strip() == "":
+        request.reveal_image_b64 = None
+    
     char = request.character
     print(f"[FULL-STORY-DEBUG] reveal_image_b64 length: {len(request.reveal_image_b64) if request.reveal_image_b64 else 0}")
     age_rules = get_age_rules(request.age_level)
