@@ -263,8 +263,8 @@ For HUMAN subjects, apply these cartoon transformations:
 What to KEEP from the photo (the child MUST recognise themselves):
 - Face shape and overall look — this must clearly be THEM
 - Hair colour, style, and length EXACTLY as in the photo
-- Clothing and colours EXACTLY as in the photo (same outfit but cartoon-rendered)
-- Accessories (glasses, hat, bow, hairband, etc.) — keep them all
+- Clothing: SAME outfit, SAME colours, SAME patterns (stripes stay stripes, polka dots stay polka dots) — but rendered in smooth cartoon/Pixar style. The clothes must look like CARTOON CLOTHES on a Pixar character, not real fabric pasted onto a cartoon. A striped sweater becomes a smooth Pixar-rendered striped sweater. A floral dress becomes a clean cartoon floral dress. The patterns and colours are IDENTICAL but the rendering style is animated movie.
+- Accessories (glasses, hat, bow, hairband, etc.) — keep them all, cartoon-rendered
 - Skin tone (represented in the cartoon palette)
 - General proportions — if the child is small/tall/slim, keep that
 
