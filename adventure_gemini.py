@@ -652,6 +652,20 @@ Convert everything to BLACK OUTLINES on WHITE:
 - The ONLY non-white pixels are the BLACK lines (#000000)
 - If you are tempted to add grey to convey mood, darkness, or shadow — DO NOT. Use thicker lines, cross-hatching, or context objects instead. The paper stays WHITE.
 
+🚨 CLOTHING AND HAIR — THE BIGGEST PROBLEM AREA 🚨
+Gemini: you keep filling clothing with GREY and DARK FILLS. STOP. Every single test output has grey trousers, grey stripes, or solid black jackets. This RUINS the coloring page.
+
+SPECIFIC RULES FOR CLOTHING:
+- STRIPED clothing (sweaters, shirts, socks): ALL stripes are WHITE. Show stripes with BLACK OUTLINE LINES only. Do NOT fill alternating stripes with grey — the child will color in different stripe colors themselves. A striped sweater = white sweater with horizontal black lines creating stripe sections.
+- DARK clothing (black jackets, dark dresses, dark trousers): Draw as WHITE with black outlines. A "black jacket" in the story = WHITE jacket shape with black outline and maybe lapel/button details. NEVER fill it solid black or dark grey.
+- TROUSERS/PANTS: Always WHITE inside with black outlines. Never grey. Never shaded.
+- HAIR: Always WHITE inside with black outline strokes showing texture. Never solid black fill, even for black hair. Dark hair = white area with more texture lines, NOT black fill.
+- SHOES: WHITE with black outlines. Not grey, not black fill.
+- The child colors in ALL clothing — you provide the outlines, they provide the colors.
+- If you make ANY clothing item grey or black-filled, that area CANNOT be colored in and the page is RUINED.
+
+TEST YOURSELF: After generating, check EVERY piece of clothing on EVERY character. Is any clothing area filled with grey or black instead of white? If yes, you have failed.
+
 🎯 CRITICAL - PRESERVE CHARACTER'S EXACT SHAPE:
 - COUNT the arms in reference image - draw EXACTLY that many (usually 2)
 - COUNT the legs in reference image - draw EXACTLY that many (usually 2)
@@ -667,13 +681,16 @@ Convert everything to BLACK OUTLINES on WHITE:
 - No grey, no cream, no beige, no any tint
 - Like a photocopied line drawing
 
-**EVERY AREA IS WHITE:**
-- Character's dress = WHITE (all sections)
-- Character's hair = WHITE  
+**EVERY AREA IS WHITE — NO EXCEPTIONS:**
+- Character's dress = WHITE (all sections, all layers)
+- Character's hair = WHITE (even dark/black hair = white with texture lines)
 - Character's skin = WHITE
-- All clothing = WHITE
+- Striped sweater = WHITE with stripe LINES (not grey-filled stripes)
+- Dark jacket/coat = WHITE with outline details (not black-filled)
+- Trousers/pants = WHITE (never grey, never shaded)
+- Shoes and boots = WHITE with outlines
 - All background = WHITE
-- Children will add colors with their crayons
+- Children will add ALL colors with their crayons — you provide ZERO color, ZERO grey, ZERO black fills
 
 **INCLUDE MANY COLORABLE OBJECTS:**
 - Add objects and details that fit the story scene
@@ -687,6 +704,8 @@ FINAL CHECK - CRITICAL RULES:
 4. Black is ONLY for outlines/lines, NEVER for filling areas
 5. All enclosed areas must be empty white space for children to color in
 6. NO LARGE BLACK AREAS — roads, floors, tracks, sky, backgrounds, and large surfaces must be WHITE with texture lines, not solid black. Small strategic black fills are OK ONLY for tiny details like a shadow under a shoe, a small cave opening, or a silhouette in the distance — but NEVER fill a road, track, floor, wall, or any area larger than a fist with solid black. Parents print these pages and large black areas waste ink and leave nothing for kids to colour.
+7. GREY IS NOT ALLOWED — not for trousers, not for stripes, not for mood, not for anything. If you see grey in your output, regenerate. Grey = failure.
+8. SCAN EVERY CHARACTER'S CLOTHING — if any item is filled grey or black instead of white, fix it immediately
 
 🚨 DARK SCENES — UNDERGROUND, CAVES, SEWERS, NIGHT, SPACE:
 Even if the story takes place somewhere DARK (underground tunnel, sewer, cave, night time, space, deep sea), the page must STILL be pure black lines on pure white paper. There is NO exception.
