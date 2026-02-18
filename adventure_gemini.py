@@ -90,13 +90,7 @@ def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None)
     
     current_y = text_area_top
     
-    # Draw title if provided
-    if title:
-        title_bbox = draw.textbbox((0, 0), title, font=title_font)
-        title_width = title_bbox[2] - title_bbox[0]
-        title_x = (A4_WIDTH - title_width) // 2
-        draw.text((title_x, current_y), title, fill='black', font=title_font)
-        current_y += 50
+    # No title on episode pages — just story text (like a real storybook)
     
     # Wrap and draw story text - single line if short enough
     wrapped_text = textwrap.fill(story_text, width=65)
