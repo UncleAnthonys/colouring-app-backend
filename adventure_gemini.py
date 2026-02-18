@@ -1500,9 +1500,10 @@ Look at the character description. Find the WEIRDEST, most UNUSUAL things:
 ⚠️ CRITICAL — HUMAN/PERSON CHARACTERS:
 If the character is a REAL CHILD, PERSON, or HUMAN (not a monster, animal, toy, or drawing):
 - NEVER use their PHYSICAL BODY as a story feature: skin colour, hair type/texture, body shape, weight, height, facial features, disability, or any physical characteristic they were born with
-- Clothing and accessories ARE fine to use as features: a bow tie, cardigan, favourite hat, backpack, special shoes — these make great story elements
+- OBJECTS AND ACTIVITIES ARE THE #1 PRIORITY: If the child is holding, riding, or using something (ukulele, bike, scooter, tennis racket, paintbrush, magnifying glass, hula hoop, skateboard, football, kite, fishing rod, etc.) — this is the BEST possible story feature. Build the ENTIRE story around this object/activity. A child with a ukulele = music-themed adventure where strumming solves problems. A child on a bike = an epic ride through magical places. This is what makes the story feel truly personalized.
+- Clothing and accessories ARE also fine: a bow tie, cardigan, favourite hat, backpack, special shoes — these make great story elements
 - Poses and habits are fine too: always has hands in pockets, never takes off their hat, carries a lucky charm
-- If the description ONLY mentions physical body traits and no clothing/accessories, give the character a FUN PERSONALITY TRAIT instead: brave but clumsy, incredibly curious, talks to animals, amazing at building things, never gives up, always loses things
+- If the description ONLY mentions physical body traits and no clothing/accessories/objects, give the character a FUN PERSONALITY TRAIT instead: brave but clumsy, incredibly curious, talks to animals, amazing at building things, never gives up, always loses things
 - The key rule: a child should never see a story that makes fun of or centres on how their body naturally looks
 
 For NON-HUMAN characters (monsters, animals, toys, drawings): Use the feature analysis below as normal — multiple eyes, tentacles, unusual shapes etc. are all great story features.
