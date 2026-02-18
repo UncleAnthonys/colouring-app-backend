@@ -1450,6 +1450,10 @@ Adapt ALL story text to match this style:
 - If "Adventurous": High stakes, cliffhangers between episodes, brave choices, exciting action verbs.
 - If "Gentle": Soft, calming language. Quiet moments of wonder. Cozy settings. Warm resolutions.
 - If "Silly": Over-the-top nonsense, made-up words, ridiculous situations, characters being goofy.
+- If "Repetition": Use a repeating phrase or pattern that builds across episodes — like "He tried and he tried but it STILL wouldn't work!" The phrase should evolve slightly each time, building anticipation. Think We're Going on a Bear Hunt or The Gruffalo. Kids love predicting what comes next.
+- If "Call and Response": Write with questions and answers that a parent and child can read together — "Did Simon give up? NO HE DIDN'T! Did Simon run away? NO HE DIDN'T! Did Simon save the day? YES HE DID!" Each episode should have at least one call-and-response moment.
+- If "Suspenseful": End each episode (except the last) on a mini cliffhanger. Use dramatic pauses, "And then...", "But what they didn't know was...", "Behind the door was something NOBODY expected." Build tension across episodes.
+- If "Song-like": Write with a repeating chorus that appears in every episode, with verses that change. Should feel singable and rhythmic, like a nursery rhyme or campfire song. The chorus ties the whole story together.
 - For any other style: interpret it naturally and apply it consistently across all episodes.
 This style should permeate the story_text, episode titles, and theme descriptions.
 """
@@ -1465,6 +1469,12 @@ ALL 3 story pitches must weave this lesson naturally into the narrative:
 - If "Being yourself": The character should learn to embrace what makes them different or unique.
 - If "Sharing": The story should explore sharing, generosity, or discovering that sharing makes things better.
 - If "Perseverance": The character should keep trying when things get hard, showing that persistence pays off.
+- If "Patience": The character learns that rushing makes things worse and that waiting, slowing down, or taking their time leads to better results.
+- If "Teamwork": The character tries to do everything alone and struggles, then discovers that working together with others achieves much more.
+- If "Trying new things": The character is reluctant or scared to try something unfamiliar, but discovers something wonderful when they do.
+- If "Saying sorry": The character makes a mistake that hurts someone, struggles to apologise, but learns that saying sorry and making amends fixes things.
+- If "Listening to others": The character ignores advice or doesn't listen, things go wrong, then they learn that hearing other perspectives helps everyone.
+- If "Gratitude": The character takes something for granted, loses it or nearly loses it, and learns to appreciate what they have.
 - For any other lesson: interpret it naturally and weave it throughout the story arc.
 IMPORTANT: The lesson should emerge THROUGH THE STORY, not through lecturing or moralising. Show don't tell. The character EXPERIENCES the lesson through what happens to them.
 """
@@ -1738,6 +1748,10 @@ The user chose "{writing_style}" style. Apply this to ALL story_text:
 - Adventurous: High stakes, cliffhangers, brave choices, exciting action verbs.
 - Gentle: Soft, calming language. Quiet wonder. Cozy settings. Warm resolutions.
 - Silly: Over-the-top nonsense, made-up words, ridiculous situations.
+- Repetition: Use a repeating phrase that builds across episodes. The phrase evolves slightly each time. Think We're Going on a Bear Hunt.
+- Call and Response: Include questions and answers a parent and child read together — "Did they give up? NO! Did they make it? YES!"
+- Suspenseful: End episodes 1-4 on mini cliffhangers. Build tension. "And behind the door was..."
+- Song-like: Include a repeating chorus in every episode with changing verses. Should feel singable.
 For any other style: interpret naturally and apply consistently.
 """
     if life_lesson:
