@@ -155,6 +155,7 @@ class GenerateStoriesRequest(BaseModel):
     age_level: str = "age_6"  # age_3, age_4, age_5, age_6, age_7, age_8, age_9, age_10
     writing_style: Optional[str] = None  # e.g. "Rhyming", "Funny", "Adventurous"
     life_lesson: Optional[str] = None  # e.g. "Friendship", "Being brave", "It's OK to make mistakes"
+    custom_theme: Optional[str] = None  # e.g. "It's Tom's 5th birthday!", "Tom just started school"
     second_character_name: Optional[str] = None
     second_character_description: Optional[str] = None
 
@@ -180,6 +181,7 @@ class GenerateStoryForThemeRequest(BaseModel):
     age_level: str = "age_6"
     writing_style: Optional[str] = None  # e.g. "Rhyming", "Funny", "Adventurous"
     life_lesson: Optional[str] = None  # e.g. "Friendship", "Being brave", "It's OK to make mistakes"
+    custom_theme: Optional[str] = None  # e.g. "It's Tom's 5th birthday!", "Tom just started school"
     second_character_name: Optional[str] = None
     second_character_description: Optional[str] = None
 
@@ -720,6 +722,7 @@ class GenerateFullStoryRequest(BaseModel):
     # Writing customization - optional
     writing_style: Optional[str] = None  # e.g. "Rhyming", "Funny", "Adventurous"
     life_lesson: Optional[str] = None  # e.g. "Friendship", "Being brave", "It's OK to make mistakes"
+    custom_theme: Optional[str] = None  # e.g. "It's Tom's 5th birthday!", "Tom just started school"
 
 
 @router.post("/generate/front-cover")
@@ -790,6 +793,8 @@ async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
         request.writing_style = None
     if request.life_lesson is not None and request.life_lesson.strip() == "":
         request.life_lesson = None
+    if request.custom_theme is not None and request.custom_theme.strip() == "":
+        request.custom_theme = None
     if request.reveal_image_b64 is not None and request.reveal_image_b64.strip() == "":
         request.reveal_image_b64 = None
     if request.reveal_image_url is not None and request.reveal_image_url.strip() == "":
@@ -970,6 +975,7 @@ Make it look like a real children's coloring book cover!
             age_level=request.age_level,
             writing_style=request.writing_style,
             life_lesson=request.life_lesson,
+            custom_theme=request.custom_theme,
             second_character_name=request.second_character_name,
             second_character_description=request.second_character_description
         )
@@ -1093,6 +1099,7 @@ async def generate_stories_endpoint(request: GenerateStoriesRequest):
             age_level=request.age_level,
             writing_style=request.writing_style,
             life_lesson=request.life_lesson,
+            custom_theme=request.custom_theme,
             second_character_name=request.second_character_name,
             second_character_description=request.second_character_description
         )
@@ -1130,6 +1137,7 @@ async def generate_story_for_theme_endpoint(request: GenerateStoryForThemeReques
             age_level=request.age_level,
             writing_style=request.writing_style,
             life_lesson=request.life_lesson,
+            custom_theme=request.custom_theme,
             second_character_name=request.second_character_name,
             second_character_description=request.second_character_description
         )

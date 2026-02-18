@@ -829,7 +829,7 @@ ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image
         raise HTTPException(status_code=500, detail=f'Episode generation failed: {str(e)}')
 
 
-async def generate_personalized_stories(character_name: str, character_description: str, age_level: str = "age_6", writing_style: str = None, life_lesson: str = None, second_character_name: str = None, second_character_description: str = None) -> dict:
+async def generate_personalized_stories(character_name: str, character_description: str, age_level: str = "age_6", writing_style: str = None, life_lesson: str = None, custom_theme: str = None, second_character_name: str = None, second_character_description: str = None) -> dict:
     """
     Generate 3 personalized story themes based on character type and child age.
     
@@ -1478,6 +1478,16 @@ ALL 3 story pitches must weave this lesson naturally into the narrative:
 - For any other lesson: interpret it naturally and weave it throughout the story arc.
 IMPORTANT: The lesson should emerge THROUGH THE STORY, not through lecturing or moralising. Show don't tell. The character EXPERIENCES the lesson through what happens to them.
 """
+        if custom_theme:
+            style_theme_block += f"""
+*** CUSTOM THEME FROM PARENT ***
+The parent has written a personal note about what this story should include: "{custom_theme}"
+This could be a birthday ("It's Tom's 5th birthday!"), a milestone ("Tom just learned to ride a bike"), a new experience ("Tom starts school on Monday"), or anything personal.
+ALL 3 story pitches must weave this personal detail naturally into the story:
+- It should feel like the story was written specifically for THIS moment in the child's life
+- The custom theme should be a central part of the plot, not just a passing mention
+- Combine it creatively with the character's features — e.g. if the theme is "birthday" and the character has big boots, maybe the boots are a birthday present, or they bounce to their birthday party
+"""
 
         # Build second character block for the prompt
         second_char_block = ""
@@ -1711,6 +1721,7 @@ async def generate_story_for_theme(
     age_level: str = "age_6",
     writing_style: str = None,
     life_lesson: str = None,
+    custom_theme: str = None,
     second_character_name: str = None,
     second_character_description: str = None
 ) -> dict:
@@ -1760,6 +1771,12 @@ For any other style: interpret naturally and apply consistently.
 Weave this life lesson naturally into the story: "{life_lesson}".
 The character should EXPERIENCE this lesson through what happens — not through lecturing.
 The lesson should emerge from the story events, especially through the setback in episode 3 and the resolution in episodes 4-5.
+"""
+    if custom_theme:
+        style_theme_block += f"""
+*** CUSTOM THEME FROM PARENT ***
+The parent wants this personal detail woven into the story: "{custom_theme}"
+Make this a central part of the narrative — not just a passing mention. The story should feel like it was written specifically for this moment in the child's life.
 """
 
     # Build second character block
