@@ -683,7 +683,18 @@ FINAL CHECK - CRITICAL RULES:
 3. NO SOLID BLACK FILLS - clothing, hair, skin must be WHITE with black OUTLINES only
 4. Black is ONLY for outlines/lines, NEVER for filling areas
 5. All enclosed areas must be empty white space for children to color in
-6. NO LARGE BLACK AREAS — sky, backgrounds, and large surfaces must be WHITE, not black. Even space/night scenes: draw stars, planets, moon as outlines on a WHITE background. Small strategic black fills are OK (shadows, silhouettes, cave entrances) but NEVER fill more than 20% of the page with solid black. This is a COLORING BOOK — parents print these and large black areas waste ink.
+6. NO LARGE BLACK AREAS — roads, floors, tracks, sky, backgrounds, and large surfaces must be WHITE with texture lines, not solid black. Small strategic black fills are OK ONLY for tiny details like a shadow under a shoe, a small cave opening, or a silhouette in the distance — but NEVER fill a road, track, floor, wall, or any area larger than a fist with solid black. Parents print these pages and large black areas waste ink and leave nothing for kids to colour.
+
+🚨 DARK SCENES — UNDERGROUND, CAVES, SEWERS, NIGHT, SPACE:
+Even if the story takes place somewhere DARK (underground tunnel, sewer, cave, night time, space, deep sea), the page must STILL be pure black lines on pure white paper. There is NO exception.
+- Tunnel walls = WHITE with brick/stone texture LINES
+- Cave interior = WHITE with rock texture LINES
+- Sewer pipes = WHITE with rivet/joint LINES
+- Night sky = WHITE with star outlines and moon outline
+- Deep sea = WHITE with bubble outlines and seaweed outlines
+- Convey the SETTING through objects and texture lines, NEVER through grey shading or dark fills
+- A child colouring this page will ADD the darkness themselves with dark crayons if they want to
+- If you shade the walls grey, there is nothing left to colour — you have RUINED the page
 
 ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image.'''
         
