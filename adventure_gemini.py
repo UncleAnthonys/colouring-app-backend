@@ -539,6 +539,14 @@ If the scene_description specifies a CAMERA ANGLE or LOCATION, you MUST follow i
 
 DO NOT default to the same medium-distance, straight-on, standing-in-the-middle composition every time. Each page is a NEW cinematic shot.
 
+🚫 ABSOLUTELY NO TEXT IN THE IMAGE — THIS IS NON-NEGOTIABLE 🚫
+- Do NOT write ANY words, letters, sentences, story text, dialogue, captions, or speech bubbles in the image
+- Do NOT write the story text in the image — story text is added separately in post-processing
+- Do NOT add character names, titles, labels, signs with readable text, or any other text
+- The ONLY things in this image are ILLUSTRATIONS — black lines on white paper, nothing else
+- If you add ANY text to the image, the page is RUINED and must be regenerated
+- Text on signs/shopfronts in the background is OK ONLY if it is illegible scribble lines, NOT real words
+
 [FORMAT]: Monochrome black and white 1-bit line art. Clean coloring book page.
 [STYLE]: Clean, bold, uniform-weight black outlines. Pure white empty interiors. Thick, heavy marker outlines. Bold 5pt vector strokes.
 [COLOR]: Strictly BLACK (#000000) and WHITE (#FFFFFF) ONLY. No gradients, no grey, no shading, no color.
@@ -646,8 +654,12 @@ Convert everything to BLACK OUTLINES on WHITE:
 - No blue tints on nose, legs, or any body part
 - No grey shading in trees, sky, or background
 - No gradient fills anywhere
-- Every single area must be PURE WHITE (#FFFFFF) inside
+- No grey on pavements, roads, walls, ground, or ANY surface
+- No grey "mood lighting" or "atmosphere" — even sad/scary scenes are pure white paper
+- No grey puddle reflections or water shading — puddles are white with ripple LINES
+- Every single area must be PURE WHITE (#FFFFFF) inside with only black outlines
 - The ONLY non-white pixels are the BLACK lines (#000000)
+- If you are tempted to add grey to convey mood, darkness, or shadow — DO NOT. Use thicker lines, cross-hatching, or context objects instead. The paper stays WHITE.
 
 🎯 CRITICAL - PRESERVE CHARACTER'S EXACT SHAPE:
 - COUNT the arms in reference image - draw EXACTLY that many (usually 2)
@@ -696,7 +708,7 @@ Even if the story takes place somewhere DARK (underground tunnel, sewer, cave, n
 - A child colouring this page will ADD the darkness themselves with dark crayons if they want to
 - If you shade the walls grey, there is nothing left to colour — you have RUINED the page
 
-ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image.'''
+ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image. NO STORY TEXT, NO DIALOGUE, NO SPEECH BUBBLES, NO CAPTIONS. This is an ILLUSTRATION ONLY — text is added in post-processing.'''
         
         # Build content with reveal image and optional previous page
         contents = [full_prompt]
