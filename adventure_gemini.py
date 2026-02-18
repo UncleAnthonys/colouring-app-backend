@@ -1572,7 +1572,7 @@ CRITICAL: Follow the age guidelines above exactly for sentence length, vocabular
 For each theme provide:
 1. Theme name (fun, age-appropriate)
 2. Theme description (1 sentence)
-3. Theme blurb (ONE short punchy sentence, MAX 15 words. Describe the chaos/situation only. NEVER mention the character's body parts in the blurb)
+3. Theme blurb (ONE short punchy sentence, MAX 20 words. MUST include {character_name}'s name AND hint at how their specific feature matters to the story. The reader should think "this story was written just for MY character!" NEVER name the body part directly — instead hint at it. E.g. if feature is "big bouncy boots" don't say "boots" — say "only someone who can bounce high enough could save the day")
 4. 5 episodes with: episode number (1-5), title, scene_description, story_text, emotion
 
 Scene descriptions MUST focus on THE MAIN ACTION of the episode:
@@ -1619,7 +1619,7 @@ Return ONLY valid JSON. Generate 3 theme PITCHES (no full episodes yet). Here is
       "theme_id": "the_great_gravity_mix_up",
       "theme_name": "The Great Gravity Mix-Up",
       "theme_description": "When the gym's gravity experiment goes wrong, everything starts floating and Example Monster must catch everyone before they drift out the windows.",
-      "theme_blurb": "Everything in the gym is floating and the PE teacher is stuck on the ceiling!",
+      "theme_blurb": "Example Monster needs to spot every floating student before they escape — good thing nothing escapes that gaze!",
       "feature_used": "big eye",
       "want": "catch all the floating students before they drift out the windows",
       "obstacle": "the eye keeps getting distracted tracking too many floating objects at once",
@@ -1629,7 +1629,7 @@ Return ONLY valid JSON. Generate 3 theme PITCHES (no full episodes yet). Here is
       "theme_id": "the_missing_socks_mystery",
       "theme_name": "The Missing Socks Mystery",
       "theme_description": "Every sock in town has vanished overnight and Example Monster must follow the trail of woolly clues to find the thief.",
-      "theme_blurb": "Every single sock in town has disappeared overnight!",
+      "theme_blurb": "Example Monster must find the stolen socks — but can anyone reach into the thief's tiny hiding spot?",
       "feature_used": "long arms",
       "want": "find who stole all the socks before the big football match",
       "obstacle": "long arms keep accidentally knocking over clues and evidence",
@@ -1639,7 +1639,7 @@ Return ONLY valid JSON. Generate 3 theme PITCHES (no full episodes yet). Here is
       "theme_id": "the_worlds_worst_haircut",
       "theme_name": "The World's Worst Haircut",
       "theme_description": "The new barber is a robot who has gone haywire, giving everyone ridiculous haircuts, and Example Monster must stop it.",
-      "theme_blurb": "The robot barber has gone BONKERS and nobody's hair is safe!",
+      "theme_blurb": "The robot barber is out of control — but Example Monster might be the one thing its scissors can't handle!",
       "feature_used": "spiky head",
       "want": "stop the robot barber before it reaches the school photo",
       "obstacle": "the robot keeps trying to cut the character's spikes thinking they're messy hair",
