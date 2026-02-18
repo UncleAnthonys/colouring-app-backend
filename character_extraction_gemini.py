@@ -161,12 +161,35 @@ Record all colors from top to bottom:
 **These become the CHARACTER TRAITS that drive personalized stories!**
 **Treat every distinctive feature as an INTENTIONAL character trait!**
 
-## 7. POSE AND POSITION
+## 7. ACTIVITY AND OBJECTS (CRITICAL FOR STORY PERSONALIZATION!)
+
+**This is one of the MOST IMPORTANT sections. Look carefully at what the child is DOING and HOLDING.**
+
+**OBJECTS THE CHILD IS HOLDING OR USING:**
+- Is the child holding ANYTHING? (bike, scooter, hula hoop, tennis racket, skateboard, football, paintbrush, magnifying glass, kite, fishing rod, bucket and spade, musical instrument, toy sword, magic wand, balloon, book, etc.)
+- Is the child ON or IN something? (bicycle, scooter, climbing frame, swing, trampoline, skateboard, surfboard, kayak, horse, go-kart, etc.)
+- Is the child WEARING something activity-specific? (ballet shoes, swimming goggles, superhero cape, karate belt, football kit, chef hat, crown, fairy wings, etc.)
+
+**ACTIVITY THE CHILD IS DOING:**
+- What ACTION is the child performing? (riding, jumping, climbing, dancing, painting, digging, kicking, swinging, balancing, swimming, running, etc.)
+- Describe the activity in detail — this will become a KEY PLOT ELEMENT in their personalized story
+
+**FOR EACH OBJECT/ACTIVITY FOUND, DESCRIBE:**
+1. WHAT it is (be specific — not just "ball" but "football" or "tennis ball")
+2. HOW the child is interacting with it (holding, riding, wearing, standing on)
+3. WHAT IT LOOKS LIKE (color, size, any distinctive features)
+4. HOW IMPORTANT it seems (is it the main focus of the photo, or incidental?)
+
+**THIS IS CRITICAL BECAUSE:** The object/activity will be woven into the child's personalized story as a key plot device. A child photographed riding a bike will get a story where they ride that bike on an adventure. A child holding a magnifying glass will become a detective. A child in ballet shoes will dance their way through the story. The more detail you provide, the better the story.
+
+**If the child is NOT holding anything or doing a specific activity, say so explicitly: "No specific activity or held object detected — child is standing/sitting in a neutral pose."**
+
+## 8. POSE AND POSITION
 - How is the subject positioned?
 - What personality does the pose suggest?
 - Relaxed? Playful? Alert? Floppy?
 
-## 8. CHARACTER TYPE FOR PIXAR TRANSFORMATION
+## 9. CHARACTER TYPE FOR PIXAR TRANSFORMATION
 Based on what you see, how should this be rendered in Pixar style?
 - If stuffed animal → Alive toy (Toy Story style) with stitching details and fabric texture
 - If real animal → Anthropomorphized animal (Zootopia style) standing upright with expressions
@@ -200,6 +223,11 @@ Structure your response as:
 
 ## COLOR PALETTE
 [All colors in order from top to bottom]
+
+## ACTIVITY AND OBJECTS
+[What is the child DOING? What are they HOLDING or RIDING or WEARING?]
+[Describe each object/activity in detail — these become key story elements]
+[If no specific activity: state "No specific activity detected"]
 
 ## POSE AND PERSONALITY
 [Body position, what personality it suggests]
