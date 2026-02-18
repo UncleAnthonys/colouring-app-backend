@@ -495,7 +495,18 @@ The whole point of a storybook is that EVERY page gives the child something NEW 
 """
         
         # Build prompt
-        full_prompt = f'''
+        full_prompt = f'''[STRICT CONTROLS]: Monochrome black and white 1-bit line art only.
+[VISUAL DOMAIN]: Technical Vector Graphic / Die-cut sticker template.
+[COLOR CONSTRAINTS]: Strictly binary 1-bit color palette. Output must contain #000000 (Black) and #FFFFFF (White) ONLY. Any other color or shade of grey is a FAILURE and the image must be regenerated.
+
+[STYLE]: Clean, bold, uniform-weight black outlines. Pure white empty interiors. Thick, heavy marker outlines. Bold 5pt vector strokes.
+
+[MANDATORY EXCLUSIONS]: No gradients. No volume. No depth. No shadows. No grayscale. No shading. No color leaks. No 3D volume. Paper-white fills only. No grey fills on clothing. No solid black fills on clothing or hair.
+
+[REFERENCE USE]: Use the attached image ONLY for the character's shape and silhouette. Completely ignore all color, value, and shading data from the reference. DO NOT use the colors or lighting from the reference.
+
+Create a professional kids' COLORING BOOK PAGE — pure BLACK LINES on WHITE PAPER.
+
 ╔══════════════════════════════════════════════════════════════╗
 ║  #1 PRIORITY — THIS IS WHAT YOU MUST DRAW                   ║
 ╚══════════════════════════════════════════════════════════════╝
@@ -537,10 +548,6 @@ DO NOT default to the same medium-distance, straight-on, standing-in-the-middle 
 - The ONLY things in this image are ILLUSTRATIONS — black lines on white paper, nothing else
 - If you add ANY text to the image, the page is RUINED and must be regenerated
 - Text on signs/shopfronts in the background is OK ONLY if it is illegible scribble lines, NOT real words
-
-[FORMAT]: Monochrome black and white 1-bit line art. Clean coloring book page.
-[STYLE]: Clean, bold, uniform-weight black outlines. Pure white empty interiors. Thick, heavy marker outlines. Bold 5pt vector strokes.
-[COLOR]: Strictly BLACK (#000000) and WHITE (#FFFFFF) ONLY. No gradients, no grey, no shading, no color.
 
 [REFERENCE USE]: Use the attached reference image(s) ONLY for the character's shape and silhouette. Completely ignore all color, value, and shading data. DO NOT use the colors or lighting from the reference. DO NOT copy the POSE or COMPOSITION from the reference — only copy the character's APPEARANCE (body shape, features, clothing style).
 
