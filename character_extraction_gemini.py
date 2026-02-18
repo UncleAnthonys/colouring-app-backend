@@ -439,7 +439,25 @@ Describe in detail:
 - **Accessories:** Anything on/near face (crown, glasses, whiskers)
 
 
-## 8. POSE AND POSITION
+## 8. ARM AND LIMB COMPARISON (CRITICAL — PREVENTS MISIDENTIFICATION!)
+
+**BEFORE classifying ANY appendage as a "hook", "handle", "attachment", or "special feature":**
+
+COMPARE both sides of the character:
+- If the character has TWO similar-looking appendages on opposite sides of the body (same size, same color, same general shape) → they are BOTH ARMS
+- A curved or bent arm (e.g., hand on hip, arm akimbo) is NOT a hook, handle, or C-shaped attachment — it is just an ARM IN A DIFFERENT POSE
+- Children often draw one arm straight down and one arm curved on the hip — this is a COMMON POSE, not an extra feature
+- If both appendages end in similar hand/finger shapes → they are BOTH HANDS, regardless of arm angle
+
+**SPECIFIC RED FLAGS — DO NOT MAKE THESE MISTAKES:**
+- "C-shaped hook on right side" → WRONG if the left side has a similar arm. It's just a BENT ARM
+- "Handle on waist" → WRONG if it's an arm resting on the hip
+- "Unique attachment on one side" → CHECK if the other side has a matching limb first
+
+**RULE: If in doubt, it's an ARM. Only classify something as a hook/handle/attachment if it looks COMPLETELY DIFFERENT from any arm on the character (different material, different color, mechanical-looking, no hand shape).**
+
+
+## 9. POSE AND POSITION
 
 - Standing? Sitting? Action pose?
 - Arms position (up, down, out, one different than other)
@@ -447,7 +465,7 @@ Describe in detail:
 - Body orientation (front view, side view, 3/4 view)
 
 
-## 9. UNIQUE ATTACHMENTS & PROTRUSIONS (CRITICAL - OFTEN MISSED!)
+## 10. UNIQUE ATTACHMENTS & PROTRUSIONS (CRITICAL - OFTEN MISSED!)
 
 **THIS IS EXTREMELY IMPORTANT** - Look for ANY elements attached to or extending from the character that are NOT hair:
 
@@ -484,7 +502,7 @@ Describe in detail:
 **WARNING:** Do NOT confuse these with ears, hair, or other features. If there are rectangular/mechanical shapes on the sides of the head, they are likely BOLTS or ATTACHMENTS.
 
 
-## 10. CHARACTER TYPE IDENTIFICATION
+## 11. CHARACTER TYPE IDENTIFICATION
 
 What TYPE of character is this?
 - Human child/person
