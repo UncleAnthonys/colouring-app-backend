@@ -803,7 +803,7 @@ ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image
         raise HTTPException(status_code=500, detail=f'Episode generation failed: {str(e)}')
 
 
-async def generate_personalized_stories(character_name: str, character_description: str, age_level: str = "age_6", writing_style: str = None, life_lesson: str = None) -> dict:
+async def generate_personalized_stories(character_name: str, character_description: str, age_level: str = "age_6", writing_style: str = None, life_lesson: str = None, second_character_name: str = None, second_character_description: str = None) -> dict:
     """
     Generate 3 personalized story themes based on character type and child age.
     
@@ -1443,12 +1443,30 @@ ALL 3 story pitches must weave this lesson naturally into the narrative:
 IMPORTANT: The lesson should emerge THROUGH THE STORY, not through lecturing or moralising. Show don't tell. The character EXPERIENCES the lesson through what happens to them.
 """
 
+        # Build second character block for the prompt
+        second_char_block = ""
+        if second_character_name and second_character_description:
+            second_char_block = f"""
+*** SECOND CHARACTER (COMPANION/FRIEND/PET) ***
+Name: {second_character_name}
+Description: {second_character_description}
+
+This is {character_name}'s companion who appears in EVERY scene. {second_character_name}'s features and personality should ALSO drive the story:
+- Their features can cause problems (muddy paws track dirt everywhere, long tail knocks things over, curiosity leads them into trouble)
+- Their features can also help solve problems (keen nose sniffs out clues, strong arms lift heavy things, tiny size fits through gaps)
+- They should have their OWN personality and reactions — not just follow the main character silently
+- At least ONE of the 3 themes should use {second_character_name}'s features as a key story element
+- {second_character_name} and {character_name} should work as a TEAM — sometimes disagreeing, sometimes complementing each other
+"""
+
         prompt = f'''You are creating personalized story adventures for a childrens coloring book app.
 {style_theme_block}
-Based on this character named "{character_name}", generate 3 UNIQUE story themes that are PERSONALIZED to this specific character's features.
+Based on this character named "{character_name}"{f" and their companion {second_character_name}" if second_character_name else ""}, generate 3 UNIQUE story themes that are PERSONALIZED to the character's features.
 
 CHARACTER TO ANALYZE:
 {character_description}
+
+{second_char_block}
 
 STEP 1 - IDENTIFY THE MOST UNUSUAL FEATURES (in order of priority):
 Look at the character description. Find the WEIRDEST, most UNUSUAL things:
@@ -1655,7 +1673,9 @@ async def generate_story_for_theme(
     twist: str,
     age_level: str = "age_6",
     writing_style: str = None,
-    life_lesson: str = None
+    life_lesson: str = None,
+    second_character_name: str = None,
+    second_character_description: str = None
 ) -> dict:
     """Generate full 5-episode story for a single chosen theme."""
     
@@ -1701,10 +1721,27 @@ The character should EXPERIENCE this lesson through what happens — not through
 The lesson should emerge from the story events, especially through the setback in episode 3 and the resolution in episodes 4-5.
 """
 
+    # Build second character block
+    second_char_story_block = ""
+    if second_character_name and second_character_description:
+        second_char_story_block = f"""
+*** COMPANION CHARACTER: {second_character_name} ***
+Description: {second_character_description}
+
+{second_character_name} is {character_name}'s companion and appears in EVERY episode. They are NOT a supporting character — they are a CO-STAR.
+- {second_character_name} should have their OWN reactions, dialogue, and personality throughout the story
+- Their features should actively affect the plot: causing problems, providing solutions, creating funny moments
+- They should interact with {character_name} as a real partner — sometimes helping, sometimes accidentally making things worse, sometimes having their own ideas
+- In scene_description, ALWAYS include {second_character_name} with a brief description in brackets, e.g. "{second_character_name} ({second_character_description[:60]})"
+- {second_character_name} should be DOING things in every scene — not just standing next to {character_name}
+"""
+
     prompt = f'''You are writing a complete 5-episode story for a children's coloring book app.
 {style_theme_block}
 CHARACTER: {character_name}
 CHARACTER DESCRIPTION: {character_description}
+
+{second_char_story_block}
 
 CHOSEN THEME: {theme_name}
 THEME DESCRIPTION: {theme_description}
@@ -1724,10 +1761,10 @@ If the "feature used" describes a physical body trait, treat it as a minor chara
 {age_guide}
 
 *** STORY STRUCTURE ***
-- Episode 1: Set up the problem. Introduce 2 named supporting characters with funny personalities (include species, size, accessories in brackets after each name).
-- Episode 2: First attempt using the character's feature. Things start going wrong.
-- Episode 3: SETBACK — attempt fails or makes things worse. Real moment of doubt. This episode MUST NOT be happy.
-- Episode 4: Creative solution — uses feature DIFFERENTLY based on the twist. A supporting character helps or suggests the new approach.
+- Episode 1: Set up the problem. Introduce 2 named supporting characters with funny personalities (include species, size, accessories in brackets after each name). The companion character (if present) should react to the problem in their own way.
+- Episode 2: First attempt using the character's feature. Things start going wrong. The companion character's features or personality may contribute to the chaos.
+- Episode 3: SETBACK — attempt fails or makes things worse. Real moment of doubt. This episode MUST NOT be happy. The companion character provides emotional support or accidentally makes things worse.
+- Episode 4: Creative solution — uses feature DIFFERENTLY based on the twist. The companion character OR a supporting character helps or suggests the new approach. The companion's own features might be key to the solution.
 - Episode 5: Resolution that connects back to episode 1. Short and punchy ending. Do NOT summarise or moralise.
 
 *** SCENE DESCRIPTIONS ***
