@@ -233,60 +233,57 @@ async def generate_adventure_reveal_gemini(character_data: dict, original_drawin
         source_type = character_data.get("source_type", "drawing")
         
         if source_type == "photo":
-            prompt = f'''I am showing you a REAL PHOTOGRAPH of a subject. Transform this EXACT subject into a Disney/Pixar 3D movie character.
+            prompt = f'''I am showing you a REAL PHOTOGRAPH. Transform this subject into an ANIMATED CARTOON CHARACTER for a children's storybook.
 
 CHARACTER NAME: {character_name}
 
-===== CRITICAL: MATCH THE PHOTO SUBJECT =====
-Look at the photo I am showing you. Your output MUST be a Pixar 3D version of THIS EXACT subject:
-- If it is a STUFFED TOY / PLUSH → Bring it to LIFE like Toy Story (Lotso, Woody)
-- If it is a REAL ANIMAL / PET → Anthropomorphize like Zootopia, Bolt, Puss in Boots
-- If it is a CHILD / PERSON → Pixar-stylize like Inside Out, Coco, Brave
-- If it is an OBJECT → Personify like Cars, Forky
-- MATCH what you SEE in the photo!
+===== WHAT TO DO =====
+Look at the photo. Create a CARTOON VERSION of this subject — like a character from a Pixar/Disney/Dreamworks animated movie. 
+The result must be CLEARLY A CARTOON, not a realistic rendering of the photo.
+
+- If it is a CHILD / PERSON → Turn them into a cartoon character like Riley from Inside Out, Miguel from Coco, or Rapunzel. BIG expressive cartoon eyes (2-3x the size of real eyes), smooth rounded features, exaggerated expressions, simplified but charming. They should look like they BELONG in an animated movie, not like a photo with a filter.
+- If it is a STUFFED TOY / PLUSH → Bring it to LIFE like Toy Story characters (Lotso, Woody, Buzz). Give it real animated personality and movement.
+- If it is a REAL ANIMAL / PET → Anthropomorphize like Zootopia, Bolt, Puss in Boots. Big expressive cartoon eyes, personality in the face.
+- If it is an OBJECT → Personify like Cars, Forky.
 
 ===== CHARACTER ANALYSIS =====
 {description}
 
-===== STYLE: PIXAR/DISNEY 3D =====
-Transform the photo subject into a character that looks like it belongs in:
-- Toy Story (for toys/plush - bring them to LIFE)
-- Zootopia (for animals - anthropomorphize with personality)
-- Inside Out / Coco (for humans - stylize with Pixar charm)
-- Cars / Forky (for objects - personify)
+===== CARTOON STYLIZATION (THE MOST IMPORTANT PART) =====
 
-===== THE 3 MOST IMPORTANT RULES =====
+🚨 THE OUTPUT MUST LOOK LIKE AN ANIMATED MOVIE CHARACTER, NOT A PHOTO 🚨
 
-**RULE 1 - MATCH THE PHOTO SUBJECT:**
-- Photo shows a STUFFED MONKEY → Output is a Pixar 3D MONKEY CHARACTER (alive, expressive, same proportions)
-- Photo shows a DOG → Output is a Pixar 3D DOG (like Bolt or Dug from Up)
-- Photo shows a CHILD → Output is a Pixar 3D CHILD (like Riley from Inside Out)
-- Keep ALL identifying features: colors, proportions, markings, texture
+For HUMAN subjects, apply these cartoon transformations:
+- Eyes: Make them bigger with glossy irises, visible highlights/catchlights — classic Disney/Pixar style
+- Features: Smooth and rounded, simplified skin — no realistic pores/freckles/blemishes
+- Expression: Joyful and animated — huge smile, bright eyes, bursting with personality
+- Hair: SAME colour, SAME style, SAME length — but rendered in smooth cartoon style with volume
+- Overall: The character should look like they were rendered by Pixar, not photographed
 
-**RULE 2 - EXACT FEATURES FROM PHOTO:**
-- Fur/hair color and pattern from the photo
-- Body proportions from the photo (long arms stay long, big head stays big)
-- Eye color and face shape from the photo
-- Any distinctive markings, patterns, or accessories
-- ALL details visible in the photo
+What to KEEP from the photo (the child MUST recognise themselves):
+- Face shape and overall look — this must clearly be THEM
+- Hair colour, style, and length EXACTLY as in the photo
+- Clothing and colours EXACTLY as in the photo (same outfit but cartoon-rendered)
+- Accessories (glasses, hat, bow, hairband, etc.) — keep them all
+- Skin tone (represented in the cartoon palette)
+- General proportions — if the child is small/tall/slim, keep that
 
-**RULE 3 - PIXAR QUALITY:**
-- Big expressive Disney/Pixar eyes (even if subject has small bead eyes - enlarge and add life!)
-- Smooth appealing 3D surfaces with appropriate texture
-- Emotion and personality in the face - JOYFUL and ALIVE
-- Professional movie-quality rendering
+What to CHANGE from the photo:
+- The rendering style becomes 3D animated movie (NOT photorealistic)
+- Eyes become larger and more expressive (Pixar style)
+- Skin becomes smooth cartoon skin
+- Expression becomes more animated and joyful
+- Overall look is polished and stylized like a movie character
 
 ===== REQUIREMENTS =====
 - Celebration background with confetti and sparkles
 - Portrait orientation - show FULL figure
+- Character should be STANDING/POSED in a confident, joyful pose
+- Character looks JOYFUL and ALIVE — like the hero of their own movie
 - ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image
-- ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image
-- This is original art - do not copy or include any watermarks from any source
 - NO TEXT anywhere on image
-- Character looks JOYFUL and ALIVE
-- Character should be STANDING/POSED (even if photo shows subject sitting/lying)
 
-IMPORTANT: Look at the photo! Transform the REAL subject into a living, breathing Pixar character!'''
+IMPORTANT: The output should make a child say "WOW that's me as a CARTOON!" — not "that's just my photo with a weird filter." Go BIG on the cartoon stylization!'''
         else:
             prompt = f'''I am showing you a CHILDS DRAWING. Transform this EXACT character into a Disney/Pixar 3D movie character.
 
