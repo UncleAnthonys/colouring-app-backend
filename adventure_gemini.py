@@ -478,22 +478,28 @@ The character's EMOTION must match the story's mood!
         continuity_guidance = ""
         if previous_page_b64:
             continuity_guidance = f"""
-*** PREVIOUS PAGE — ANTI-REPETITION REFERENCE ***
-A previous storybook page is attached. Use it to ensure THIS page looks DIFFERENT:
+*** PREVIOUS PAGE — USE FOR ANTI-REPETITION + SUPPORTING CHARACTER CONSISTENCY ***
+A previous storybook page is attached. Use it for TWO purposes:
 
-🚨 THIS PAGE MUST HAVE A COMPLETELY DIFFERENT COMPOSITION:
+🚨 PURPOSE 1 — COMPOSITION MUST BE COMPLETELY DIFFERENT:
 - DIFFERENT camera angle / framing than the previous page
 - Characters in DIFFERENT positions (if they were center, put them left/right/foreground)
 - DIFFERENT background arrangement — do NOT reproduce the same skyline, buildings, or layout
 - If the previous page showed characters standing on the ground, THIS page must show them doing something else (sitting, climbing, riding, falling, running, crouching)
 - If the previous page was a medium shot, THIS page must be a different shot type
 
-📐 WHAT TO KEEP CONSISTENT:
-- Character APPEARANCE: same body shape, same clothing, same features (use reference images, not previous page, for this)
-- Supporting characters should look the same species/size/accessories IF they appear again
-- General story setting (if still at a fairground, it's still a fairground — but shown from a completely different angle and area)
+🎭 PURPOSE 2 — SUPPORTING CHARACTERS MUST LOOK THE SAME:
+- Look at the previous page image. Any SUPPORTING CHARACTERS (not the main character or second character — those use reference images) that appear again MUST look identical to the previous page
+- Same species, same size, same body shape, same accessories (hat, bow tie, apron, glasses, etc.)
+- Read the scene_description for character names and their bracketed descriptions — match them to the characters visible in the previous page
+- Example: if a fat penguin with a chef hat appeared on the previous page, draw that SAME fat penguin with chef hat — not a thin penguin with no hat
+- The main character and second character use their REFERENCE IMAGES for appearance — but supporting characters only exist in previous pages, so you MUST copy their look from there
 
-🚨 IF THIS IMAGE LOOKS SIMILAR TO THE PREVIOUS PAGE, YOU HAVE FAILED.
+📐 WHAT ELSE TO KEEP CONSISTENT:
+- General story setting (if still at a fairground, it's still a fairground — but shown from a completely different angle and area)
+- Time of day / weather
+
+🚨 IF THE OVERALL COMPOSITION LOOKS SIMILAR TO THE PREVIOUS PAGE, YOU HAVE FAILED.
 The whole point of a storybook is that EVERY page gives the child something NEW to look at and color.
 """
         
@@ -626,16 +632,58 @@ AGE-APPROPRIATE COMPLEXITY:
 ║  ABSOLUTE REQUIREMENT: 100% MONOCHROME - BLACK INK ON WHITE PAPER            ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
-The reference image has colors — IGNORE THEM. Convert everything to BLACK OUTLINES on WHITE fill.
-- Every area = WHITE (#FFFFFF) inside with BLACK (#000000) outline
-- No color, no grey, no gradients, no shading anywhere
-- No solid black fills for large areas — clothing, hair, skin, sky all WHITE with outlines only
-- This is a COLORING BOOK — children add colors with crayons
+**THE REFERENCE IMAGE HAS COLORS - YOU MUST IGNORE THEM COMPLETELY**
+The reference shows a colorful character. DO NOT reproduce those colors.
+Convert everything to BLACK OUTLINES on WHITE:
+- Pink dress section → WHITE area with BLACK outline
+- Blue dress section → WHITE area with BLACK outline  
+- Green dress section → WHITE area with BLACK outline
+- Yellow hair → WHITE area with BLACK outline strokes
+- Blue nose → WHITE area with BLACK outline (NOT blue!)
+- ALL colors → WHITE areas with BLACK outlines
 
-🎯 PRESERVE CHARACTER'S EXACT SHAPE from reference — same body shape, same number of limbs, same proportions.
-DO NOT add decorative patterns, swirls, or mandala designs ON the character's body. Background can have detail but character stays structurally simple.
+⚠️ ABSOLUTELY NO COLOR OR GREY ANYWHERE:
+- No blue tints on nose, legs, or any body part
+- No grey shading in trees, sky, or background
+- No gradient fills anywhere
+- Every single area must be PURE WHITE (#FFFFFF) inside
+- The ONLY non-white pixels are the BLACK lines (#000000)
 
-**INCLUDE MANY COLORABLE OBJECTS** — fill the scene with story-relevant objects as clear enclosed shapes.
+🎯 CRITICAL - PRESERVE CHARACTER'S EXACT SHAPE:
+- COUNT the arms in reference image - draw EXACTLY that many (usually 2)
+- COUNT the legs in reference image - draw EXACTLY that many (usually 2)
+- Copy the character's EXACT body shape from the reference
+- DO NOT add extra limbs, tails, wings, or features not in the reference
+- Match the reference EXACTLY - no additions, no modifications
+- Only convert COLORS to white - keep all SHAPES identical
+
+**MONOCHROME MEANS:**
+- Only 2 values: BLACK (#000000) and WHITE (#FFFFFF)
+- No RGB colors at all - not even pale/light versions
+- No pink, no blue, no green, no yellow, no red, no orange
+- No grey, no cream, no beige, no any tint
+- Like a photocopied line drawing
+
+**EVERY AREA IS WHITE:**
+- Character's dress = WHITE (all sections)
+- Character's hair = WHITE  
+- Character's skin = WHITE
+- All clothing = WHITE
+- All background = WHITE
+- Children will add colors with their crayons
+
+**INCLUDE MANY COLORABLE OBJECTS:**
+- Add objects and details that fit the story scene
+- Each object should be a clear, enclosed shape for coloring
+- Fill the scene with things to color
+
+FINAL CHECK - CRITICAL RULES:
+1. Every pixel must be pure black (#000000) OR pure white (#FFFFFF) - nothing else
+2. NO colors from reference - no blue, no orange, no any color
+3. NO SOLID BLACK FILLS - clothing, hair, skin must be WHITE with black OUTLINES only
+4. Black is ONLY for outlines/lines, NEVER for filling areas
+5. All enclosed areas must be empty white space for children to color in
+6. NO LARGE BLACK AREAS — sky, backgrounds, and large surfaces must be WHITE, not black. Even space/night scenes: draw stars, planets, moon as outlines on a WHITE background. Small strategic black fills are OK (shadows, silhouettes, cave entrances) but NEVER fill more than 20% of the page with solid black. This is a COLORING BOOK — parents print these and large black areas waste ink.
 
 ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image.'''
         
@@ -1391,6 +1439,16 @@ CHARACTER TO ANALYZE:
 STEP 1 - IDENTIFY THE MOST UNUSUAL FEATURES (in order of priority):
 Look at the character description. Find the WEIRDEST, most UNUSUAL things:
 
+⚠️ CRITICAL — HUMAN/PERSON CHARACTERS:
+If the character is a REAL CHILD, PERSON, or HUMAN (not a monster, animal, toy, or drawing):
+- NEVER use their PHYSICAL BODY as a story feature: skin colour, hair type/texture, body shape, weight, height, facial features, disability, or any physical characteristic they were born with
+- Clothing and accessories ARE fine to use as features: a bow tie, cardigan, favourite hat, backpack, special shoes — these make great story elements
+- Poses and habits are fine too: always has hands in pockets, never takes off their hat, carries a lucky charm
+- If the description ONLY mentions physical body traits and no clothing/accessories, give the character a FUN PERSONALITY TRAIT instead: brave but clumsy, incredibly curious, talks to animals, amazing at building things, never gives up, always loses things
+- The key rule: a child should never see a story that makes fun of or centres on how their body naturally looks
+
+For NON-HUMAN characters (monsters, animals, toys, drawings): Use the feature analysis below as normal — multiple eyes, tentacles, unusual shapes etc. are all great story features.
+
 PRIORITY 1 - UNUSUAL BODY PARTS (these are the MOST interesting for stories!):
 - Multiple eyes? (10 eyes = can see in all directions, never surprised, finds lost things)
 - Multiple arms? (8 arms = ultimate helper, best hugger, amazing juggler, one-monster band)
@@ -1643,6 +1701,11 @@ STORY PLAN:
 - WANT: {want}
 - OBSTACLE: {obstacle}
 - TWIST: {twist}
+
+⚠️ IF THE CHARACTER IS A REAL CHILD/PERSON (not a monster, animal, or toy):
+NEVER base the story on their PHYSICAL BODY features (skin colour, hair type, body shape, facial features, height, weight, disability).
+Clothing and accessories (bow tie, cardigan, hat, backpack) ARE fine as story features — keep using them.
+If the "feature used" describes a physical body trait, treat it as a minor character quirk and focus the story on the scenario, the character's personality, and their interactions with supporting characters instead.
 
 {age_guide}
 
