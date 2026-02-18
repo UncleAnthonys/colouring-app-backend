@@ -478,53 +478,69 @@ The character's EMOTION must match the story's mood!
         continuity_guidance = ""
         if previous_page_b64:
             continuity_guidance = f"""
-*** PREVIOUS PAGE REFERENCE — LOOK AT THE ATTACHED PREVIOUS PAGE IMAGE ***
-A previous storybook page is attached. Use it for SCENE CONTINUITY:
+*** PREVIOUS PAGE — ANTI-REPETITION REFERENCE ***
+A previous storybook page is attached. Use it to ensure THIS page looks DIFFERENT:
 
-🚨 KEY OBJECTS MUST PERSIST:
-- Look at the previous page image carefully
-- Identify the KEY OBJECTS in that scene (climbing frame, oven, fountain, tree, building, vehicle, etc.)
-- If the current scene is in the SAME LOCATION, those key objects MUST STILL BE VISIBLE
-- A climbing frame doesn't disappear between pages. An oven doesn't vanish. A fountain stays there.
-- The story is happening IN a location — draw that location consistently
+🚨 THIS PAGE MUST HAVE A COMPLETELY DIFFERENT COMPOSITION:
+- DIFFERENT camera angle / framing than the previous page
+- Characters in DIFFERENT positions (if they were center, put them left/right/foreground)
+- DIFFERENT background arrangement — do NOT reproduce the same skyline, buildings, or layout
+- If the previous page showed characters standing on the ground, THIS page must show them doing something else (sitting, climbing, riding, falling, running, crouching)
+- If the previous page was a medium shot, THIS page must be a different shot type
 
-📐 BUT CHANGE THE COMPOSITION:
-- If the scene_description specifies a camera angle (wide shot, close-up, overhead, low angle), FOLLOW IT EXACTLY
-- Character in a different pose and position on the page than the previous image
-- Different objects in the FOREGROUND (but background setting stays consistent)
-- Different arrangement of supporting characters
-- CRITICAL: If this image looks too similar to the previous page, CHANGE the character's position, the camera angle, and the foreground elements dramatically
+📐 WHAT TO KEEP CONSISTENT:
+- Character APPEARANCE: same body shape, same clothing, same features (use reference images, not previous page, for this)
+- Supporting characters should look the same species/size/accessories IF they appear again
+- General story setting (if still at a fairground, it's still a fairground — but shown from a completely different angle and area)
 
-🎨 VISUAL CONTINUITY CHECKLIST:
-- Same location = same key landmarks visible (even if from a different angle)
-- SUPPORTING CHARACTERS MUST MATCH: Look at the previous page image. Any supporting character that appears again MUST look identical — same species, same size, same shape, same accessories. Read the scene description for character names and match them to the characters visible in the previous page.
-- Same weather/time of day
-- Only change the setting when the STORY says they moved to a new place
-
-Think of it like a movie storyboard — EVERY shot is framed differently. Wide establishing → medium action → close-up emotion → dynamic angle → resolution wide.
+🚨 IF THIS IMAGE LOOKS SIMILAR TO THE PREVIOUS PAGE, YOU HAVE FAILED.
+The whole point of a storybook is that EVERY page gives the child something NEW to look at and color.
 """
         
         # Build prompt
-        full_prompt = f'''[STRICT CONTROLS]: Monochrome black and white 1-bit line art only.
-[VISUAL DOMAIN]: Technical Vector Graphic / Die-cut sticker template.
-[COLOR CONSTRAINTS]: Strictly binary 1-bit color palette. Output must contain #000000 (Black) and #FFFFFF (White) ONLY. Any other color or shade of grey is a failure.
+        full_prompt = f'''
+╔══════════════════════════════════════════════════════════════╗
+║  #1 PRIORITY — THIS IS WHAT YOU MUST DRAW                   ║
+╚══════════════════════════════════════════════════════════════╝
 
+SCENE TO ILLUSTRATE:
+{scene_prompt}
+
+STORY TEXT FOR THIS PAGE:
+{story_text if story_text else "No story text provided."}
+
+🚨 DRAW THE ACTION, NOT A PORTRAIT 🚨
+- Read the scene description and story text above. Identify the KEY ACTION happening.
+- Draw the characters DOING that action — NOT standing still, NOT posed for a photo.
+- If the story says a character "climbed aboard the rollercoaster" → draw them IN the rollercoaster cart, gripping the bar, moving along the track
+- If the story says a character "tumbled down" → draw them mid-fall, arms flailing, ground rushing up
+- If the story says a character "ran through the market" → draw them mid-stride, legs apart, stalls blurring past
+- Characters must be IN the situation, not standing nearby observing it
+- The SETTING must change to match the scene description — if it says "inside the rollercoaster cart" then the background is track, sky, motion — NOT a ground-level fairground view
+- EVERY page must look like a DIFFERENT FRAME from a movie, not the same frame with a different subtitle
+
+╔══════════════════════════════════════════════════════════════╗
+║  COMPOSITION — MANDATORY VARIETY                             ║
+╚══════════════════════════════════════════════════════════════╝
+
+If the scene_description specifies a CAMERA ANGLE or LOCATION, you MUST follow it exactly:
+- "WIDE SHOT" → characters are small (20-30% of frame), environment dominates
+- "CLOSE-UP" → character's face/upper body fills 60%+ of the frame, minimal background
+- "OVERHEAD VIEW" → looking straight down on the scene
+- "LOW ANGLE" → looking up at characters from below, they appear large/powerful
+- "MEDIUM SHOT" → characters at 40-50% of frame, balanced with environment
+- "NEW LOCATION" → the background must be COMPLETELY different from all previous pages
+
+DO NOT default to the same medium-distance, straight-on, standing-in-the-middle composition every time. Each page is a NEW cinematic shot.
+
+[FORMAT]: Monochrome black and white 1-bit line art. Clean coloring book page.
 [STYLE]: Clean, bold, uniform-weight black outlines. Pure white empty interiors. Thick, heavy marker outlines. Bold 5pt vector strokes.
+[COLOR]: Strictly BLACK (#000000) and WHITE (#FFFFFF) ONLY. No gradients, no grey, no shading, no color.
 
-[MANDATORY EXCLUSIONS]: No gradients. No volume. No depth. No shadows. No grayscale. No shading. No color leaks. No 3D volume. Paper-white fills only.
-
-[REFERENCE USE]: Use the attached image ONLY for the character's shape and silhouette. Completely ignore all color, value, and shading data from the reference. DO NOT use the colors or lighting from the reference.
-
-Create a professional kids' COLORING BOOK PAGE.
-
-*** CRITICAL: MONOCHROME OUTPUT ONLY ***
-This MUST be a pure BLACK and WHITE image.
-- BLACK lines (#000000) 
-- WHITE background and fill areas (#FFFFFF)
-- ABSOLUTELY NOTHING ELSE
+[REFERENCE USE]: Use the attached reference image(s) ONLY for the character's shape and silhouette. Completely ignore all color, value, and shading data. DO NOT use the colors or lighting from the reference. DO NOT copy the POSE or COMPOSITION from the reference — only copy the character's APPEARANCE (body shape, features, clothing style).
 
 CHARACTER: {character_name}
-Use the reference image for SHAPE AND FORM ONLY - completely ignore all colors:
+Use the reference image for SHAPE AND FORM ONLY — completely ignore all colors:
 - Body shape, proportions, and size
 - Distinctive features (number of eyes, horns, fur texture, etc.)
 - Clothing style and accessories (but NOT their colors)
@@ -601,94 +617,27 @@ RULES FOR TWO CHARACTERS:
 
 {continuity_guidance}
 
-STORY SCENE:
-{scene_prompt}
-
-*** STORY TEXT FOR THIS PAGE ***
-{story_text if story_text else "No story text provided."}
-
-*** CRITICAL — THE COLORING PAGE MUST SHOW THE KEY MOMENT FROM THE STORY ***
-- READ the story text above carefully. Identify the SINGLE MOST IMPORTANT ACTION or moment.
-- Draw THAT exact moment — not the moment before it, not the setup, THE KEY ACTION ITSELF.
-- Example: If the story says "Sid blocked the cake with his belly" → draw Sid WITH the cake pressed against his belly, NOT the cake rolling past him.
-- Example: If the story says "she caught the ball" → draw her HOLDING the ball, NOT the ball in mid-air approaching her.
-- The image must show the ACTION COMPLETED or IN PROGRESS, never just about to happen.
-- Every object mentioned in the scene description should be VISIBLE in the image.
-- Do NOT draw a generic "character standing in a location" — draw the SPECIFIC ACTION described.
 
 AGE-APPROPRIATE COMPLEXITY:
 {age_rules}
+
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║  ABSOLUTE REQUIREMENT: 100% MONOCHROME - BLACK INK ON WHITE PAPER            ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
-**THE REFERENCE IMAGE HAS COLORS - YOU MUST IGNORE THEM COMPLETELY**
-The reference shows a colorful character. DO NOT reproduce those colors.
-Convert everything to BLACK OUTLINES on WHITE:
-- Pink dress section → WHITE area with BLACK outline
-- Blue dress section → WHITE area with BLACK outline  
-- Green dress section → WHITE area with BLACK outline
-- Yellow hair → WHITE area with BLACK outline strokes
-- Blue nose → WHITE area with BLACK outline (NOT blue!)
-- ALL colors → WHITE areas with BLACK outlines
+The reference image has colors — IGNORE THEM. Convert everything to BLACK OUTLINES on WHITE fill.
+- Every area = WHITE (#FFFFFF) inside with BLACK (#000000) outline
+- No color, no grey, no gradients, no shading anywhere
+- No solid black fills for large areas — clothing, hair, skin, sky all WHITE with outlines only
+- This is a COLORING BOOK — children add colors with crayons
 
-⚠️ ABSOLUTELY NO COLOR OR GREY ANYWHERE:
-- No blue tints on nose, legs, or any body part
-- No grey shading in trees, sky, or background
-- No gradient fills anywhere
-- Every single area must be PURE WHITE (#FFFFFF) inside
-- The ONLY non-white pixels are the BLACK lines (#000000)
+🎯 PRESERVE CHARACTER'S EXACT SHAPE from reference — same body shape, same number of limbs, same proportions.
+DO NOT add decorative patterns, swirls, or mandala designs ON the character's body. Background can have detail but character stays structurally simple.
 
-🎯 CRITICAL - PRESERVE CHARACTER'S EXACT SHAPE:
-*** CRITICAL - EXACT CHARACTER COPY ***
-- COUNT the arms in reference image - draw EXACTLY that many (usually 2)
-- COUNT the legs in reference image - draw EXACTLY that many (usually 2)
-- Copy the character's EXACT body shape from the reference (rectangular, round, blob, etc.)
-- If reference shows a RECTANGULAR/SQUARE body → draw RECTANGULAR/SQUARE body
-- If reference shows a ROUND body → draw ROUND body  
-- If reference shows a PLAIN/SIMPLE body → keep it PLAIN/SIMPLE
-- DO NOT add extra limbs, tails, wings, or features not in the reference
-- The character must look IDENTICAL to the reference - same simplicity level
-- Match the reference EXACTLY - no additions, no modifications
-- Only convert COLORS to white - keep all SHAPES identical
+**INCLUDE MANY COLORABLE OBJECTS** — fill the scene with story-relevant objects as clear enclosed shapes.
 
-**MONOCHROME MEANS:**
-- Only 2 values: BLACK (#000000) and WHITE (#FFFFFF)
-- No RGB colors at all - not even pale/light versions
-- No pink, no blue, no green, no yellow, no red, no orange
-- No grey, no cream, no beige, no any tint
-- Like a photocopied line drawing
-
-**EVERY AREA IS WHITE:**
-- Character's dress = WHITE (all sections)
-- Character's hair = WHITE  
-- Character's skin = WHITE
-- All clothing = WHITE
-- All background = WHITE
-- Children will add colors with their crayons
-
-**INCLUDE MANY COLORABLE OBJECTS:**
-- Add objects and details that fit the story scene
-- Each object should be a clear, enclosed shape for coloring
-- Fill the scene with things to color
-
-*** OUTPUT SPECIFICATION ***
-Format: Pure black line art on white background
-Colors allowed: BLACK and WHITE only
-Shading: NONE
-Gradients: NONE
-Tints: NONE
-
-This is a COLORING BOOK PAGE - children color it themselves.
-
-FINAL CHECK - CRITICAL RULES:
-1. Every pixel must be pure black (#000000) OR pure white (#FFFFFF) - nothing else
-2. NO colors from reference - no blue, no orange, no any color
-3. NO SOLID BLACK FILLS - clothing, hair, skin must be WHITE with black OUTLINES only
-4. Black is ONLY for outlines/lines, NEVER for filling areas
-5. All enclosed areas must be empty white space for children to color in
-6. NO LARGE BLACK AREAS — sky, backgrounds, and large surfaces must be WHITE, not black. Even space/night scenes: draw stars, planets, moon as outlines on a WHITE background. Small strategic black fills are OK (shadows, silhouettes, cave entrances) but NEVER fill more than 20% of the page with solid black. This is a COLORING BOOK — parents print these and large black areas waste ink.'''
+ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image.'''
         
         # Build content with reveal image and optional previous page
         contents = [full_prompt]
@@ -752,7 +701,7 @@ FINAL CHECK - CRITICAL RULES:
             contents=contents,
             config=types.GenerateContentConfig(
                 response_modalities=['IMAGE', 'TEXT'],
-                temperature=0.4,  # Moderate temp: enough variance for different compositions, not so high it drifts
+                temperature=0.7,  # Higher temp for compositional variety across pages
                 image_config=types.ImageConfig(
                     aspect_ratio='3:4'  # Portrait for A4-style, standard resolution
                 )
@@ -1715,19 +1664,34 @@ STORY PLAN:
 - If same location as previous episode, REPEAT key setting objects
 
 *** CRITICAL: SCENE VARIETY RULES (NON-NEGOTIABLE) ***
-Each of the 5 episodes MUST have a visually distinct composition. Use this mandatory pattern:
-- Episode 1: WIDE ESTABLISHING SHOT — show the full location, characters small in the scene, lots of environment detail
-- Episode 2: MEDIUM ACTION SHOT — characters bigger, doing something physical, different part of the location
-- Episode 3: CLOSE-UP EMOTIONAL SHOT — focus on character's face/upper body, showing the setback emotion, less background
-- Episode 4: DYNAMIC ANGLE — overhead view, low angle looking up, or side angle. Characters in motion, different area of the setting
-- Episode 5: NEW LOCATION OR DRAMATICALLY DIFFERENT VIEW — if the story allows, move to a new place for resolution. If same location, show it from the completely opposite angle
+Each of the 5 episodes MUST have a visually distinct composition. The scene_description is an ILLUSTRATION BRIEF — it tells the artist exactly what to draw. Be specific about:
 
-LOCATION MOVEMENT: The story MUST move through at least 2-3 different specific locations across the 5 episodes. Characters should travel, chase, explore — NOT stay rooted in one spot. Example: starts at the park entrance → moves to the climbing frame → runs to the pond → ends at the bandstand.
+MANDATORY CAMERA PATTERN:
+- Episode 1: WIDE ESTABLISHING SHOT — show the full location. Characters are small (20-30% of frame). Lots of environment detail. This is the "setting the scene" shot.
+- Episode 2: MEDIUM ACTION SHOT — characters bigger (40-50%), actively DOING something physical. A different part of the location from episode 1. Characters are IN MOTION.
+- Episode 3: CLOSE-UP EMOTIONAL SHOT — character's face and upper body fill 60%+ of the frame. Minimal background. Focus on the SETBACK emotion. This should feel intimate and different from every other page.
+- Episode 4: DYNAMIC ANGLE — overhead view looking DOWN, or low angle looking UP, or dramatic side angle. Characters in active motion. Different area of the setting.
+- Episode 5: NEW LOCATION OR DRAMATICALLY DIFFERENT VIEW — move to a new place for resolution. If same location, show it from the OPPOSITE angle. This must feel fresh.
+
+SCENE DESCRIPTION MUST SPECIFY THE CHARACTER'S PHYSICAL ACTION:
+- BAD: "Tom is at the fairground feeling scared" (Gemini will draw Tom standing at the fairground)
+- GOOD: "CLOSE-UP: Tom is crouching on the ground, knees pulled up, hands over his ears. Behind him the rollercoaster track curves overhead. His face shows fear — wide eyes, mouth open."
+- BAD: "Tom tries to stop the rollercoaster" (vague)
+- GOOD: "LOW ANGLE looking up: Tom is climbing onto the rollercoaster cart, one leg over the side, both hands gripping the safety bar. The track stretches upward ahead of him. Wind blows his hair back."
+
+Every scene_description must include:
+1. CAMERA ANGLE (from the mandatory pattern above)
+2. CHARACTER'S EXACT PHYSICAL POSITION (crouching, climbing, running, sitting IN something, hanging from something — NOT standing)
+3. What SPECIFIC part of the location they are in
+4. At least 2-3 background objects unique to THIS scene (not repeated from other episodes)
+
+LOCATION MOVEMENT: The story MUST move through at least 2-3 different specific locations across the 5 episodes. Characters should travel, chase, explore — NOT stay rooted in one spot.
 
 In scene_description, ALWAYS specify:
-1. The EXACT LOCATION (not just "the street" — say "outside the bakery on Maple Street" or "inside the bus on the top deck")
-2. The CAMERA ANGLE (wide shot, close-up, overhead, low angle looking up, side view)
-3. Where the main character is positioned (left, right, center, foreground, background)
+1. The CAMERA ANGLE (from the mandatory pattern above)
+2. The EXACT LOCATION (not just "the street" — say "outside the bakery on Maple Street" or "inside the bus on the top deck")  
+3. The character's EXACT PHYSICAL ACTION (what their body is doing — climbing, crouching, riding, falling — NOT just standing)
+4. Where the main character is positioned in the frame (left, right, center, foreground, background)
 
 NARRATIVE FLOW: Each scene must feel like a CONTINUATION of the previous page. If episode 2 ended running toward the park, episode 3 should START at the park.
 
