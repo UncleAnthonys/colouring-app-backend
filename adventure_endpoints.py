@@ -777,11 +777,28 @@ Make it look like a real children's coloring book cover you'd see in a shop!
         "title": f"{char.name} and {request.theme_name}"
     }
 
+@router.post("/generate/full-story-debug")
+async def debug_full_story(request_body: dict):
+    """Debug endpoint to see raw request body."""
+    print(f"[DEBUG-FULL-STORY] Raw keys: {list(request_body.keys())}")
+    for key, value in request_body.items():
+        val_type = type(value).__name__
+        val_preview = str(value)[:100] if value is not None else "None"
+        print(f"[DEBUG-FULL-STORY] {key} ({val_type}): {val_preview}")
+    # Try to parse it
+    try:
+        parsed = GenerateFullStoryRequest(**request_body)
+        return {"status": "valid", "theme_name": parsed.theme_name, "custom_theme": parsed.custom_theme}
+    except Exception as e:
+        print(f"[DEBUG-FULL-STORY] VALIDATION ERROR: {e}")
+        return {"status": "error", "detail": str(e)}
+
 @router.post("/generate/full-story")
 async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
     """
     Generate a complete storybook: front cover + all episode pages.
     """
+    print(f"[FULL-STORY] Request received successfully - theme_name: {request.theme_name}, custom_theme: {request.custom_theme}")
     # Convert empty strings to None - FlutterFlow sends "" instead of null for optional fields
     if request.second_character_image_b64 is not None and request.second_character_image_b64.strip() == "":
         request.second_character_image_b64 = None
