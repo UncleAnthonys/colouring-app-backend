@@ -927,36 +927,6 @@ async def generate_full_story_endpoint(request_body: dict):
     age_rules = get_age_rules(request.age_level)
     pages = []
     
-    full_title = f"{char.name} and {request.theme_name}"
-    
-    cover_scene = f"""Create a CHILDREN'S COLORING BOOK FRONT COVER.
-TEXT TO INCLUDE:
-- At the top: "{full_title}" in large, fun, hand-drawn style lettering
-- At the bottom: "A Coloring Story Book" in smaller text
-IMAGE:
-- {char.name} large and central, looking excited and confident
-{f'- {request.second_character_name} next to {char.name}, looking happy and excited' if request.second_character_name else ''}
-- Background hints at the adventure: {request.theme_description}
-- BLACK AND WHITE LINE ART suitable for coloring in
-Make it look like a real children's coloring book cover!
-"""
-    
-    cover_image_b64 = await generate_adventure_episode_gemini(
-        character_data={"name": char.name, "description": char.description, "key_feature": char.key_feature},
-        scene_prompt=cover_scene,
-        age_rules=age_rules["rules"],
-        reveal_image_b64=request.reveal_image_b64,
-        story_text=request.theme_description,
-        character_emotion="excited",
-        source_type=request.source_type or "drawing",
-        second_character_image_b64=request.second_character_image_b64,
-        second_character_name=request.second_character_name,
-        second_character_description=request.second_character_description
-    )
-    
-    cover_url = upload_to_firebase(cover_image_b64, folder="adventure/storybooks")
-    pages.append({"page_num": 0, "page_type": "cover", "title": full_title, "page_url": cover_url, "story_text": ""})
-    
     previous_page_b64 = None  # Track previous page for continuity
     
     # Debug: log all pitch fields received
@@ -972,6 +942,7 @@ Make it look like a real children's coloring book cover!
     
     # If no episodes provided, generate them from pitch fields or custom theme
     episodes = request.episodes or []
+    generated_title = ""
     if not episodes and (request.feature_used or request.custom_theme):
         print(f"[FULL-STORY] No episodes provided, generating from {'custom theme' if request.custom_theme else 'pitch fields'}...")
         char_desc = request.character_description or request.character.description
@@ -1029,9 +1000,53 @@ Make it look like a real children's coloring book cover!
             second_character_description=request.second_character_description
         )
         episodes = story_data.get("episodes", [])
-        print(f"[FULL-STORY] Generated {len(episodes)} episodes from pitch")
+        # Extract story title from Sonnet's response (for custom themes especially)
+        generated_title = story_data.get("story_title", "")
+        print(f"[FULL-STORY] Generated {len(episodes)} episodes from {'custom theme' if request.custom_theme else 'pitch'}")
+        if generated_title:
+            print(f"[FULL-STORY] Sonnet generated title: {generated_title}")
     
     print(f"[FULL-STORY] Episodes count: {len(episodes)}")
+    
+    # Build the title - use Sonnet's generated title for custom themes, or standard format
+    if request.custom_theme and generated_title:
+        full_title = generated_title
+    elif request.theme_name:
+        full_title = f"{char.name} and {request.theme_name}"
+    else:
+        full_title = f"{char.name}'s Adventure"
+    
+    print(f"[FULL-STORY] Final title: {full_title}")
+    
+    # Generate front cover (after story so we have the title)
+    cover_description = request.theme_description or request.custom_theme or ""
+    cover_scene = f"""Create a CHILDREN'S COLORING BOOK FRONT COVER.
+TEXT TO INCLUDE:
+- At the top: "{full_title}" in large, fun, hand-drawn style lettering
+- At the bottom: "A Coloring Story Book" in smaller text
+IMAGE:
+- {char.name} large and central, looking excited and confident
+{f'- {request.second_character_name} next to {char.name}, looking happy and excited' if request.second_character_name else ''}
+- Background hints at the adventure: {cover_description}
+- BLACK AND WHITE LINE ART suitable for coloring in
+Make it look like a real children's coloring book cover!
+"""
+    
+    cover_image_b64 = await generate_adventure_episode_gemini(
+        character_data={"name": char.name, "description": char.description, "key_feature": char.key_feature},
+        scene_prompt=cover_scene,
+        age_rules=age_rules["rules"],
+        reveal_image_b64=request.reveal_image_b64,
+        story_text=cover_description,
+        character_emotion="excited",
+        source_type=request.source_type or "drawing",
+        second_character_image_b64=request.second_character_image_b64,
+        second_character_name=request.second_character_name,
+        second_character_description=request.second_character_description
+    )
+    
+    cover_url = upload_to_firebase(cover_image_b64, folder="adventure/storybooks")
+    pages.append({"page_num": 0, "page_type": "cover", "title": full_title, "page_url": cover_url, "story_text": ""})
     
     for i, episode in enumerate(episodes):
         scene_prompt = episode.get("scene_description", "").replace("{name}", char.name)
