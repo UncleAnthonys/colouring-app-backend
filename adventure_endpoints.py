@@ -1019,8 +1019,9 @@ async def generate_full_story_endpoint(request_body: dict):
     print(f"[FULL-STORY] Final title: {full_title}")
     
     # Generate front cover (after story so we have the title)
-    cover_description = request.theme_description or request.custom_theme or ""
-    cover_scene = f"""Create a CHILDREN'S COLORING BOOK FRONT COVER.
+    try:
+        cover_description = request.theme_description or request.custom_theme or ""
+        cover_scene = f"""Create a CHILDREN'S COLORING BOOK FRONT COVER.
 TEXT TO INCLUDE:
 - At the top: "{full_title}" in large, fun, hand-drawn style lettering
 - At the bottom: "A Little Lines Story Book" in smaller text
@@ -1031,22 +1032,28 @@ IMAGE:
 - BLACK AND WHITE LINE ART suitable for coloring in
 Make it look like a real children's coloring book cover!
 """
-    
-    cover_image_b64 = await generate_adventure_episode_gemini(
-        character_data={"name": char.name, "description": char.description, "key_feature": char.key_feature},
-        scene_prompt=cover_scene,
-        age_rules=age_rules["rules"],
-        reveal_image_b64=request.reveal_image_b64,
-        story_text=cover_description,
-        character_emotion="excited",
-        source_type=request.source_type or "drawing",
-        second_character_image_b64=request.second_character_image_b64,
-        second_character_name=request.second_character_name,
-        second_character_description=request.second_character_description
-    )
-    
-    cover_url = upload_to_firebase(cover_image_b64, folder="adventure/storybooks")
-    pages.append({"page_num": 0, "page_type": "cover", "title": full_title, "page_url": cover_url, "story_text": ""})
+        
+        cover_image_b64 = await generate_adventure_episode_gemini(
+            character_data={"name": char.name, "description": char.description, "key_feature": char.key_feature},
+            scene_prompt=cover_scene,
+            age_rules=age_rules["rules"],
+            reveal_image_b64=request.reveal_image_b64,
+            story_text=cover_description,
+            character_emotion="excited",
+            source_type=request.source_type or "drawing",
+            second_character_image_b64=request.second_character_image_b64,
+            second_character_name=request.second_character_name,
+            second_character_description=request.second_character_description
+        )
+        
+        cover_url = upload_to_firebase(cover_image_b64, folder="adventure/storybooks")
+        pages.append({"page_num": 0, "page_type": "cover", "title": full_title, "page_url": cover_url, "story_text": ""})
+        print(f"[FULL-STORY] Cover generated successfully")
+    except Exception as e:
+        print(f"[FULL-STORY] ERROR generating cover: {e}")
+        import traceback
+        traceback.print_exc()
+        raise
     
     for i, episode in enumerate(episodes):
         scene_prompt = episode.get("scene_description", "").replace("{name}", char.name)
