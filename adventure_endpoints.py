@@ -171,8 +171,8 @@ class GenerateStoryForThemeRequest(BaseModel):
     """Request to generate full story for a chosen theme."""
     character_name: str
     character_description: str
-    theme_name: str
-    theme_description: str
+    theme_name: Optional[str] = ""
+    theme_description: Optional[str] = ""
     theme_blurb: Optional[str] = ""
     feature_used: Optional[str] = ""
     want: Optional[str] = ""
@@ -806,6 +806,10 @@ async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
         request.twist = ""
     if request.theme_blurb is None:
         request.theme_blurb = ""
+    if request.theme_name is None:
+        request.theme_name = ""
+    if request.theme_description is None:
+        request.theme_description = ""
     if request.reveal_image_b64 is not None and request.reveal_image_b64.strip() == "":
         request.reveal_image_b64 = None
     if request.reveal_image_url is not None and request.reveal_image_url.strip() == "":
