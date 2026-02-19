@@ -699,8 +699,8 @@ class GenerateFrontCoverRequest(BaseModel):
 class GenerateFullStoryRequest(BaseModel):
     """Request to generate a complete storybook (front cover + all episodes)."""
     character: CharacterData
-    theme_name: str
-    theme_description: str
+    theme_name: Optional[str] = ""
+    theme_description: Optional[str] = ""
     episodes: Optional[List[dict]] = None  # If provided, use these. If empty/null, generate from pitch fields.
     age_level: str = "age_6"
     reveal_image_b64: Optional[str] = None  # Character reveal base64 (legacy - use URL instead)
