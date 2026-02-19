@@ -173,15 +173,15 @@ class GenerateStoryForThemeRequest(BaseModel):
     character_description: str
     theme_name: str
     theme_description: str
-    theme_blurb: str = ""
-    feature_used: str = ""
-    want: str = ""
-    obstacle: str = ""
-    twist: str = ""
+    theme_blurb: Optional[str] = ""
+    feature_used: Optional[str] = ""
+    want: Optional[str] = ""
+    obstacle: Optional[str] = ""
+    twist: Optional[str] = ""
     age_level: str = "age_6"
-    writing_style: Optional[str] = None  # e.g. "Rhyming", "Funny", "Adventurous"
-    life_lesson: Optional[str] = None  # e.g. "Friendship", "Being brave", "It's OK to make mistakes"
-    custom_theme: Optional[str] = None  # e.g. "It's Tom's 5th birthday!", "Tom just started school"
+    writing_style: Optional[str] = None
+    life_lesson: Optional[str] = None
+    custom_theme: Optional[str] = None
     second_character_name: Optional[str] = None
     second_character_description: Optional[str] = None
 
@@ -795,6 +795,17 @@ async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
         request.life_lesson = None
     if request.custom_theme is not None and request.custom_theme.strip() == "":
         request.custom_theme = None
+    # Sanitize optional pitch fields - convert None to empty string
+    if request.feature_used is None:
+        request.feature_used = ""
+    if request.want is None:
+        request.want = ""
+    if request.obstacle is None:
+        request.obstacle = ""
+    if request.twist is None:
+        request.twist = ""
+    if request.theme_blurb is None:
+        request.theme_blurb = ""
     if request.reveal_image_b64 is not None and request.reveal_image_b64.strip() == "":
         request.reveal_image_b64 = None
     if request.reveal_image_url is not None and request.reveal_image_url.strip() == "":
