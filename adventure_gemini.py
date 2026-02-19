@@ -1794,13 +1794,23 @@ Description: {second_character_description}
 - {second_character_name} should be DOING things in every scene — not just standing next to {character_name}
 """
 
-    prompt = f'''You are writing a complete 5-episode story for a children's coloring book app.
-{style_theme_block}
-CHARACTER: {character_name}
-CHARACTER DESCRIPTION: {character_description}
+    # Build theme block — custom theme replaces all pitch data
+    if custom_theme:
+        theme_block = f"""
+CUSTOM STORY THEME (written by the parent):
+"{custom_theme}"
 
-{second_char_story_block}
+This is a PERSONAL story request. The parent has described exactly what they want the story to be about.
+Build the ENTIRE 5-episode story around this custom theme. You must create your own:
+- Feature used: pick the most interesting feature from the character description
+- WANT: what does the character want in this story? Derive it from the custom theme.
+- OBSTACLE: what makes it hard? Create a fun, age-appropriate challenge.
+- TWIST: how do they solve it in a surprising way?
 
+The custom theme should be the HEART of the story — not a side detail.
+"""
+    else:
+        theme_block = f"""
 CHOSEN THEME: {theme_name}
 THEME DESCRIPTION: {theme_description}
 THEME BLURB: {theme_blurb}
@@ -1810,6 +1820,16 @@ STORY PLAN:
 - WANT: {want}
 - OBSTACLE: {obstacle}
 - TWIST: {twist}
+"""
+
+    prompt = f'''You are writing a complete 5-episode story for a children's coloring book app.
+{style_theme_block}
+CHARACTER: {character_name}
+CHARACTER DESCRIPTION: {character_description}
+
+{second_char_story_block}
+
+{theme_block}
 
 ⚠️ IF THE CHARACTER IS A REAL CHILD/PERSON (not a monster, animal, or toy):
 NEVER base the story on their PHYSICAL BODY features (skin colour, hair type, body shape, facial features, height, weight, disability).
