@@ -794,11 +794,27 @@ async def debug_full_story(request_body: dict):
         return {"status": "error", "detail": str(e)}
 
 @router.post("/generate/full-story")
-async def generate_full_story_endpoint(request: GenerateFullStoryRequest):
+async def generate_full_story_endpoint(request_body: dict):
     """
     Generate a complete storybook: front cover + all episode pages.
     """
-    print(f"[FULL-STORY] Request received successfully - theme_name: {request.theme_name}, custom_theme: {request.custom_theme}")
+    print(f"[FULL-STORY-DEBUG] Raw keys received: {list(request_body.keys())}")
+    for key, value in request_body.items():
+        val_type = type(value).__name__
+        if val_type == 'str' and len(str(value)) > 200:
+            val_preview = str(value)[:200] + "..."
+        else:
+            val_preview = str(value)[:200] if value is not None else "None"
+        print(f"[FULL-STORY-DEBUG] {key} ({val_type}): {val_preview}")
+    
+    # Try to parse
+    try:
+        request = GenerateFullStoryRequest(**request_body)
+    except Exception as e:
+        print(f"[FULL-STORY-DEBUG] VALIDATION ERROR: {e}")
+        raise HTTPException(status_code=422, detail=str(e))
+    
+    print(f"[FULL-STORY] Request parsed OK - theme_name: {request.theme_name}, custom_theme: {request.custom_theme}")
     # Convert empty strings to None - FlutterFlow sends "" instead of null for optional fields
     if request.second_character_image_b64 is not None and request.second_character_image_b64.strip() == "":
         request.second_character_image_b64 = None
