@@ -745,7 +745,7 @@ This is a FULL PAGE book cover that must include:
 
 TEXT TO INCLUDE:
 - At the top: "{full_title}" in large, fun, hand-drawn style lettering
-- At the bottom: "A Coloring Story Book" in smaller text
+- At the bottom: "A Little Lines Story Book" in smaller text
 
 IMAGE:
 - {char.name} large and central, looking excited and confident
@@ -1023,7 +1023,7 @@ async def generate_full_story_endpoint(request_body: dict):
     cover_scene = f"""Create a CHILDREN'S COLORING BOOK FRONT COVER.
 TEXT TO INCLUDE:
 - At the top: "{full_title}" in large, fun, hand-drawn style lettering
-- At the bottom: "A Coloring Story Book" in smaller text
+- At the bottom: "A Little Lines Story Book" in smaller text
 IMAGE:
 - {char.name} large and central, looking excited and confident
 {f'- {request.second_character_name} next to {char.name}, looking happy and excited' if request.second_character_name else ''}
