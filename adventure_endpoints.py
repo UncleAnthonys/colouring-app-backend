@@ -970,10 +970,10 @@ Make it look like a real children's coloring book cover!
     print(f"[FULL-STORY] character_description: {request.character_description}")
     print(f"[FULL-STORY] episodes provided: {len(request.episodes) if request.episodes else 'None'}")
     
-    # If no episodes provided, generate them from pitch fields
+    # If no episodes provided, generate them from pitch fields or custom theme
     episodes = request.episodes or []
-    if not episodes and request.feature_used:
-        print(f"[FULL-STORY] No episodes provided, generating from pitch fields...")
+    if not episodes and (request.feature_used or request.custom_theme):
+        print(f"[FULL-STORY] No episodes provided, generating from {'custom theme' if request.custom_theme else 'pitch fields'}...")
         char_desc = request.character_description or request.character.description
         
         # If there's a second character, add them to the description so Sonnet includes them
