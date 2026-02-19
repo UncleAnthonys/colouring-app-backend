@@ -798,20 +798,21 @@ async def generate_full_story_endpoint(request_body: dict):
     """
     Generate a complete storybook: front cover + all episode pages.
     """
-    print(f"[FULL-STORY-DEBUG] Raw keys received: {list(request_body.keys())}")
-    for key, value in request_body.items():
-        val_type = type(value).__name__
-        if val_type == 'str' and len(str(value)) > 200:
-            val_preview = str(value)[:200] + "..."
-        else:
-            val_preview = str(value)[:200] if value is not None else "None"
-        print(f"[FULL-STORY-DEBUG] {key} ({val_type}): {val_preview}")
+    # Sanitize empty dicts/strings that FlutterFlow sends instead of null
+    if request_body.get("second_character") in [None, {}, ""]:
+        request_body["second_character"] = None
+    if request_body.get("writing_style") in [None, "null", ""]:
+        request_body["writing_style"] = None
+    if request_body.get("life_lesson") in [None, "null", ""]:
+        request_body["life_lesson"] = None
+    if request_body.get("episodes") in [None, [], ""]:
+        request_body["episodes"] = None
     
-    # Try to parse
+    # Parse request
     try:
         request = GenerateFullStoryRequest(**request_body)
     except Exception as e:
-        print(f"[FULL-STORY-DEBUG] VALIDATION ERROR: {e}")
+        print(f"[FULL-STORY] VALIDATION ERROR: {e}")
         raise HTTPException(status_code=422, detail=str(e))
     
     print(f"[FULL-STORY] Request parsed OK - theme_name: {request.theme_name}, custom_theme: {request.custom_theme}")
