@@ -1770,7 +1770,14 @@ async def generate_story_for_theme(
 *** WRITING STYLE: {writing_style} ***
 The user chose "{writing_style}" style. Apply this to ALL story_text:
 - Rhyming: Every episode rhymes (couplets/AABB). Make it flow like a poem.
-- Funny: Maximize humor — puns, physical comedy, absurd situations, ironic narration.
+- Funny: This story MUST make the parent laugh out loud. Use these techniques in EVERY episode:
+  * Ironic narration: "This was, without a doubt, the WORST idea anyone had ever had. Naturally, they did it anyway."
+  * Physical comedy: Things falling, splashing, bouncing off heads, getting stuck in ridiculous positions
+  * Contrast humor: A tiny character trying something enormous, or a serious character in an absurd situation
+  * Running gags: One joke that gets funnier each time it happens across episodes
+  * Funny dialogue: Characters saying exactly the wrong thing at the wrong time
+  * Comic timing: Short punchy sentences after a build-up. "They pulled. They tugged. They heaved. It was the wrong door."
+  * At least ONE moment per episode that would make a 5-year-old belly laugh
 - Adventurous: High stakes, cliffhangers, brave choices, exciting action verbs.
 - Gentle: Soft, calming language. Quiet wonder. Cozy settings. Warm resolutions.
 - Silly: Over-the-top nonsense, made-up words, ridiculous situations.
