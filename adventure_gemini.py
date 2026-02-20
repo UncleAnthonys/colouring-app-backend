@@ -92,8 +92,10 @@ def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None)
     
     # No title on episode pages — just story text (like a real storybook)
     
-    # Wrap and draw story text - single line if short enough
-    wrapped_text = textwrap.fill(story_text, width=65)
+    # Wrap and draw story text - wider text area
+    text_margin = 60  # Left and right margin
+    max_text_width = A4_WIDTH - (text_margin * 2)
+    wrapped_text = textwrap.fill(story_text, width=85)
     
     for line in wrapped_text.split('\n'):
         line_bbox = draw.textbbox((0, 0), line, font=story_font)
@@ -1751,14 +1753,15 @@ async def generate_story_for_theme(
     
     # Get age-specific guidelines
     age_guidelines = {
-        "age_3": """AGE 3: Max 20 words per episode. Very simple sentences. 2-3 word sound effects. Familiar settings (home, garden, park). Basic emotions only (happy, sad, scared). No complex plots.""",
-        "age_4": """AGE 4: Max 30 words per episode. Simple sentences with one fun word per page. Sound effects like CRASH, SPLAT. Familiar settings with one magical element. Clear emotions.""",
-        "age_5": """AGE 5: 30-50 words per episode. Natural storytelling voice. Fun words: "super-duper", "ginormous". Sound effects: "CRASH!", "SPLORT!". Dialogue in at least 3 of 5 episodes. At least one genuinely funny moment. Supporting characters who actively HELP or HINDER.""",
-        "age_6": """AGE 6: 40-60 words per episode. Richer vocabulary. Subplots with supporting characters. Emotional complexity. Humor through situation and character. Dialogue-driven storytelling.""",
-        "age_7": """AGE 7: 50-70 words per episode. More sophisticated plots. Character development. Themes of friendship, perseverance. Multiple supporting characters with distinct personalities.""",
-        "age_8": """AGE 8: 60-80 words per episode. Complex narrative structure. Red herrings, plot twists. Deeper emotional arcs. Witty dialogue.""",
-        "age_9": """AGE 9: 70-90 words per episode. Sophisticated storytelling. Multiple storylines. Nuanced characters. Themes of identity and belonging.""",
-        "age_10": """AGE 10: 80-100 words per episode. Near-novel quality. Complex themes. Rich descriptions. Layered humor. Character growth across episodes.""",
+        "age_2": """AGE UNDER 3: Max 15 words per episode. ABSOLUTE MAXIMUM. One very short sentence. Simple words only (mummy, daddy, cat, dog, ball, big, small). Sound effects: "BOOM!", "SPLASH!". No complex plot — just fun moments. A parent is reading this aloud to a toddler. Example: 'The ball went BOUNCE! Hannah laughed and laughed.'""",
+        "age_3": """AGE 3: Max 25 words per episode. ABSOLUTE MAXIMUM. Two short sentences. Simple familiar words. Sound effects: "CRASH!", "WHOOSH!". Familiar settings (home, garden, park). A parent reads this aloud. Keep it snappy and fun.""",
+        "age_4": """AGE 4: Max 40 words per episode. ABSOLUTE MAXIMUM. Three short sentences. One fun word per page. Sound effects like CRASH, SPLAT. Familiar settings with one magical element. Clear emotions. A parent reads this aloud.""",
+        "age_5": """AGE 5: Max 60 words per episode. ABSOLUTE MAXIMUM. Natural storytelling voice. Fun words: "super-duper", "ginormous". Sound effects. Dialogue in at least 3 of 5 episodes. At least one genuinely funny moment. Parent reads aloud but child follows along.""",
+        "age_6": """AGE 6: Max 80 words per episode. ABSOLUTE MAXIMUM. Richer vocabulary. Subplots with supporting characters. Emotional complexity. Humor through situation and character. Dialogue-driven storytelling. Child starting to read along.""",
+        "age_7": """AGE 7: Max 100 words per episode. ABSOLUTE MAXIMUM. More sophisticated plots. Character development. Themes of friendship, perseverance. Multiple supporting characters with distinct personalities. Child reads with some help.""",
+        "age_8": """AGE 8: Max 120 words per episode. ABSOLUTE MAXIMUM. Complex narrative structure. Red herrings, plot twists. Deeper emotional arcs. Witty dialogue. Child reads independently.""",
+        "age_9": """AGE 9: Max 140 words per episode. ABSOLUTE MAXIMUM. Sophisticated storytelling. Multiple storylines. Nuanced characters. Themes of identity and belonging. Independent reader.""",
+        "age_10": """AGE 10+: Max 160 words per episode. ABSOLUTE MAXIMUM. Near-novel quality. Complex themes. Rich descriptions. Layered humor. Character growth across episodes. Confident independent reader.""",
     }
     
     age_guide = age_guidelines.get(age_level, age_guidelines["age_5"])
