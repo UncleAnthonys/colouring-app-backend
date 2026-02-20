@@ -659,6 +659,21 @@ Convert everything to BLACK OUTLINES on WHITE:
 - The ONLY non-white pixels are the BLACK lines (#000000)
 - If you are tempted to add grey to convey mood, darkness, or shadow — DO NOT. Use thicker lines, cross-hatching, or context objects instead. The paper stays WHITE.
 
+🚨 ENVIRONMENT SURFACES — COMMON COLOUR LEAK 🚨
+Gemini: you keep filling environment surfaces with their "real" colours. STOP. This is a COLORING BOOK — children add the colours themselves.
+- GRASS and FIELDS: WHITE with blade/texture lines. NOT green. Never green.
+- TENNIS COURTS / SPORTS FIELDS: WHITE with court line markings. NOT green. NOT any colour.
+- SKY: WHITE. Not blue. Not any tint. Just white with maybe cloud outlines.
+- WATER / OCEAN / RIVERS / POOLS: WHITE with ripple lines. NOT blue.
+- SAND / BEACHES: WHITE with texture dots/lines. NOT yellow or beige.
+- ROADS / PATHS: WHITE with edge lines. NOT grey.
+- TREE TRUNKS: WHITE with bark texture lines. NOT brown.
+- LEAVES / FOLIAGE: WHITE outlines of leaf shapes. NOT green.
+- FLOWERS: WHITE with petal outlines. NOT any colour.
+- MUD / DIRT: WHITE with speckle lines. NOT brown.
+- SUNSET / SUNRISE: WHITE. NOT orange or pink.
+THE CHILD COLOURS EVERYTHING. You draw ONLY black outlines on white paper.
+
 🚨 CLOTHING AND HAIR — THE BIGGEST PROBLEM AREA 🚨
 Gemini: you keep filling clothing with GREY and DARK FILLS. STOP. Every single test output has grey trousers, grey stripes, or solid black jackets. This RUINS the coloring page.
 
@@ -1905,6 +1920,7 @@ Return ONLY valid JSON in this exact format:
 
 {{
   "theme_name": "{theme_name}",
+  "story_title": "GENERATE A CREATIVE TITLE - format: {character_name} and The [Something Fun]",
   "episodes": [
     {{
       "episode_num": 1,
