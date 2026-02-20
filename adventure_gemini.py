@@ -1916,6 +1916,8 @@ NARRATIVE FLOW: Each scene must feel like a CONTINUATION of the previous page. I
 4. Episode 5 resolves the specific problem from episode 1
 5. The feature should NOT directly fix the problem alone — a supporting character helps or the character learns to use it differently
 
+⚠️ CRITICAL WORD LIMIT: Each story_text MUST respect the age guide word limit above. COUNT YOUR WORDS. If an episode's story_text exceeds the limit, CUT IT DOWN. Short punchy text is ALWAYS better than long rambling text. This text appears below an illustration on a single page — if it's too long it runs off the page and is unreadable.
+
 Return ONLY valid JSON in this exact format:
 
 {{
