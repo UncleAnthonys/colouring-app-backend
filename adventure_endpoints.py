@@ -805,6 +805,11 @@ async def generate_full_story_endpoint(request_body: dict):
         request_body["writing_style"] = None
     if request_body.get("life_lesson") in [None, "null", ""]:
         request_body["life_lesson"] = None
+    if request_body.get("custom_theme") in [None, "null", ""]:
+        request_body["custom_theme"] = None
+    # Extra: strip and check again in case of whitespace
+    if request_body.get("custom_theme") and str(request_body.get("custom_theme")).strip().lower() in ("null", "none", ""):
+        request_body["custom_theme"] = None
     if request_body.get("episodes") in [None, [], ""]:
         request_body["episodes"] = None
     
@@ -827,7 +832,7 @@ async def generate_full_story_endpoint(request_body: dict):
         request.writing_style = None
     if request.life_lesson is not None and request.life_lesson.strip() == "":
         request.life_lesson = None
-    if request.custom_theme is not None and request.custom_theme.strip() == "":
+    if request.custom_theme is not None and (request.custom_theme.strip() == "" or request.custom_theme.strip().lower() in ("null", "none")):
         request.custom_theme = None
     # Sanitize optional pitch fields - convert None to empty string
     if request.feature_used is None:
@@ -982,6 +987,8 @@ async def generate_full_story_endpoint(request_body: dict):
             if not request.second_character_description:
                 request.second_character_description = sc_desc
         
+        print(f"[FULL-STORY] ABOUT TO CALL SONNET - custom_theme={repr(request.custom_theme)}, theme_name={repr(request.theme_name)}, feature_used={repr(request.feature_used)}")
+        
         story_data = await generate_story_for_theme(
             character_name=char.name,
             character_description=char_desc,
@@ -1001,10 +1008,10 @@ async def generate_full_story_endpoint(request_body: dict):
         )
         episodes = story_data.get("episodes", [])
         # Extract story title from Sonnet's response (for custom themes especially)
+        print(f"[FULL-STORY] Sonnet response keys: {list(story_data.keys())}")
         generated_title = story_data.get("story_title", "")
         print(f"[FULL-STORY] Generated {len(episodes)} episodes from {'custom theme' if request.custom_theme else 'pitch'}")
-        if generated_title:
-            print(f"[FULL-STORY] Sonnet generated title: {generated_title}")
+        print(f"[FULL-STORY] Sonnet generated title: '{generated_title}'")
     
     print(f"[FULL-STORY] Episodes count: {len(episodes)}")
     
