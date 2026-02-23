@@ -820,7 +820,7 @@ async def generate_full_story_endpoint(request_body: dict):
         print(f"[FULL-STORY] VALIDATION ERROR: {e}")
         raise HTTPException(status_code=422, detail=str(e))
     
-    print(f"[FULL-STORY] Request parsed OK - theme_name: {request.theme_name}, custom_theme: {request.custom_theme}")
+    print(f"[FULL-STORY] Request parsed OK - theme_name: {request.theme_name}, custom_theme: {request.custom_theme}, age_level: {request.age_level}, writing_style: {request.writing_style}, life_lesson: {request.life_lesson}")
     # Convert empty strings to None - FlutterFlow sends "" instead of null for optional fields
     if request.second_character_image_b64 is not None and request.second_character_image_b64.strip() == "":
         request.second_character_image_b64 = None
