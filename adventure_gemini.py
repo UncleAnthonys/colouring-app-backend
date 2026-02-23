@@ -906,8 +906,8 @@ A GOOD toddler story has:
 - A CREATIVE resolution where the feature is used in a SURPRISING new way (not the obvious use, not just "stop using it")
 - The resolution connects emotionally to the want — not just "problem fixed" but "friendship strengthened" or "character accepted"
 
-CRITICAL: DO NOT use the same story as the examples above. Pick from the SCENARIO POOL below and apply these principles to create something ORIGINAL.
-The scenario pool has 180 creative starting points — USE THEM.
+CRITICAL: DO NOT use the same story as the examples above. Apply these principles to create something ORIGINAL.
+Create completely original scenarios based on the character.
 
 *** STORY STRUCTURE - USE ONE OF THESE 3 PROVEN PATTERNS ***
 
@@ -1055,7 +1055,7 @@ GOOD: Feature causes problems all story, then the character finds a creative sid
 The OBVIOUS use of a feature is always BORING. The SURPRISING use is what makes great stories:
 - BAD resolution: Feature does exactly what you'd expect (big mouth = shouts to save the day, many arms = grabs things)
 - GOOD resolution: Feature is used SIDEWAYS — in a way nobody expected (big mouth becomes a boat, many arms become a bridge, big eyes become mirrors)
-The weirder and more creative the use, the better the story. Pick from the SCENARIO POOL and find an unexpected angle.
+The weirder and more creative the use, the better the story. Find an unexpected angle.
 
 *** STORY STRUCTURE ***
 
@@ -1268,193 +1268,8 @@ CONTENT:
         # Use Claude Haiku 4.5 for story generation (much better creative quality)
         claude_client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
         
-        # Scenario pool - shuffled each time for variety
-        _scenario_pool = [
-        "A popcorn machine at the cinema won\'t stop and popcorn is flooding the whole building",
-        "A birthday cake has come alive and is running through the town leaving icing footprints everywhere",
-        "Someone put magic beans in the school dinner and now vegetables are growing through the roof",
-        "The world\'s longest spaghetti noodle has tangled around the entire city like a giant web",
-        "A chocolate fountain at the fair has gone turbo and is spraying chocolate over everything",
-        "A bubble gum machine exploded and giant sticky bubbles are trapping people inside",
-        "The ice cream van\'s freezer broke and a tidal wave of melting ice cream is sliding downhill toward the school",
-        "A baker\'s bread dough won\'t stop rising and is pushing the roof off the bakery",
-        "Someone mixed up the recipes — the pet shop is full of cake and the bakery is full of hamsters",
-        "A soup volcano erupted in the school canteen and tomato soup is flowing down the corridors",
-        "The sweet shop\'s pick-and-mix machine is firing sweets like cannonballs across the high street",
-        "A jam factory pipe burst and a river of strawberry jam is heading for the swimming pool",
-        "A double decker bus has started flying and the passengers don\'t know how to land it",
-        "A train has lost its driver and passengers must stop it before the end of the line",
-        "The world\'s biggest shopping trolley is rolling downhill toward the lake with no brakes",
-        "A hot air balloon got tangled in the town clock tower and passengers are stuck",
-        "A submarine\'s steering is broken and it\'s heading for an underwater volcano",
-        "The school bus accidentally drove into a car wash and can\'t find the way out",
-        "A spaceship\'s sat-nav is broken and keeps landing in wrong places — a farm, a wedding, a swimming pool",
-        "The roller coaster won\'t stop and riders have been going round for hours",
-        "A pirate ship appeared in the park boating lake and nobody knows where it came from",
-        "The new robot taxi is picking people up and dropping them at completely wrong places",
-        "All zoo animals swapped enclosures — penguin in the lion cage, lion in the aquarium",
-        "A magician\'s rabbit won\'t go back in the hat and is multiplying — 300 rabbits in the shopping centre",
-        "A parrot learned everyone\'s secrets and is shouting them at the school assembly",
-        "The dentist\'s goldfish grew to the size of a car overnight",
-        "Squirrels moved into the school computer room and are hoarding all the keyboards",
-        "The class hamster escaped and is now running the school from the headteacher\'s chair",
-        "A whale fell asleep across the harbour and no boats can get in or out",
-        "A cat stole the Mayor\'s golden chain and is sitting on top of the church spire",
-        "All dogs in town started walking backwards at the same time — nobody knows why",
-        "An octopus at the aquarium keeps stealing visitors\' phones and taking selfies",
-        "It\'s raining something different on every street — custard, bouncy balls, socks",
-        "A giant snowball rolling through town getting bigger, collecting everything in its path",
-        "Wind blew everyone\'s laundry and mixed it up — the Mayor is wearing a nappy",
-        "A rainbow fell out of the sky and is blocking the motorway",
-        "Clouds came down to ground level and nobody can see — chaos everywhere",
-        "A leaf tornado trapped all the playground equipment inside it",
-        "The sun went behind a cloud and forgot to come back — expedition to find it",
-        "A thunderstorm is only happening inside the library and nobody knows why",
-        "New playground built upside down — swings underground, sandpit on the roof",
-        "A skyscraper is slowly tilting and everyone inside is sliding to one side",
-        "Bouncy castle inflated too much — now the size of a real castle, floating above town",
-        "School maze built too well — all the teachers are lost inside",
-        "A crane picked up the swimming pool with people still in it",
-        "The new bridge is made of chocolate and it\'s a hot day",
-        "A treehouse growing by itself, adding rooms faster than anyone can explore",
-        "Clock tower gears jammed — some people in fast-forward, others in slow motion",
-        "All the festival fireworks went off at once inside the storage shed",
-        "Magician\'s show went wrong — half the audience invisible, half upside down",
-        "School nativity donkey is actually real and eating the set",
-        "Wedding cake delivered to fire station — they used it for training",
-        "Giant Christmas tree fell over blocking every road in town",
-        "Carnival floats moving on their own with no drivers",
-        "A pinata won\'t break, started moving, and is now chasing the children",
-        "Shrinking ray hit the teacher — class now has a pencil-sized teacher",
-        "Growing potion spilled on the goldfish — it\'s now the size of the school hall",
-        "Time machine sent packed lunches to the dinosaur age — T-Rex eating someone\'s sandwich",
-        "Science fair volcano actually erupted — school surrounded by bubbling goo",
-        "Invisibility experiment — the whole school building disappeared but everyone\'s still inside",
-        "Duplicating machine made 50 copies of the headteacher giving different instructions",
-        "Gravity experiment went wrong — everything in the gym floating, including PE teacher",
-        "Science fair robot decided it wants to be a student and won\'t leave class",
-        "Toy shop toys came alive at midnight for a party — shop opens in one hour",
-        "Board game became real-sized — dice the size of cars, whole town playing",
-        "Teddy bear wish came true — tiny teddy is now 10 feet tall, still wants cuddles",
-        "Arcade machines playing themselves, high scores going crazy",
-        "Jigsaw puzzle assembling itself into a portal — things coming through from the picture",
-        "LEGO built itself into a castle overnight — a LEGO knight guards the door",
-        "Remote control cars escaped the toy shop and are racing through town",
-        "Firefighter\'s hose spraying silly string instead of water during a real emergency",
-        "Postman\'s letters flying out and delivering themselves to wrong houses",
-        "Dentist\'s chair started flying around the surgery with patient still in it",
-        "Hairdresser\'s magic shampoo makes hair grow super fast — out the door in minutes",
-        "Painter used magic paint — everything painted is coming alive",
-        "Librarian\'s robot organising books by colour not title and refuses to stop",
-        "Alien spaceship crashed into school roof — needs fixing before home time or alien\'s mum will worry",
-        "Aliens visiting Earth think vinegar is perfume and chips are building blocks",
-        "Space station gravity keeps flipping — astronauts bouncing between ceiling and floor",
-        "Giant space snowball heading to Earth — unexpected snow day incoming",
-        "Ocean plug came loose — all water draining out, fish NOT happy",
-        "Underwater post office lost deliveries — shark got a seahorse\'s birthday card",
-        "Sunken treasure chest opened — gold coins floating up causing beach chaos",
-        "Coral reef talent show — three grumpy crab judges giving everyone zero",
-        "A mysterious door appeared at the back of the school gym that wasn\'t there yesterday",
-        "A treasure map blew in through the classroom window showing a route nobody recognises",
-        "The museum\'s oldest painting has a tiny staircase in the corner nobody noticed before",
-        "A message in a bottle with coordinates pointing underneath the town fountain",
-        "An old lift has a button for a floor that doesn\'t exist — Floor 13 and a half",
-        "New kid at school says they\'re from a country nobody can find on any map",
-        "Tunnels underneath the town being mapped for the first time — something\'s making noises down there",
-        "Lighthouse keeper missing — left behind strange inventions and half-finished notes",
-        "Hot air balloon landed in the playground with nobody in it — just a note saying HELP",
-        "A door in the big oak tree that only appears when it rains",
-        "Old boat washed up covered in barnacles with a logbook in an unknown language",
-        "Town hall attic locked for 100 years — today they found the key",
-        "New kid at school doesn\'t speak the same language and looks lonely at lunch",
-        "Two best friends both want the same part in the school play — it\'s tearing them apart",
-        "Grumpy neighbour who shouts at everyone secretly been feeding all the stray cats",
-        "Smallest kid always picked last for teams but has an amazing hidden talent",
-        "A kid\'s imaginary friend is sad because the kid is growing up and doesn\'t play pretend anymore",
-        "School bully caught crying behind the bins — having a really hard time at home",
-        "Two rival bakers must work together when a power cut hits both shops",
-        "Shy kid finds a lost dog and has to knock on strangers\' doors to find the owner",
-        "Elderly neighbour can\'t get to the shops anymore and nobody noticed except the character",
-        "Class goldfish is poorly — whole class works together on the best fish hospital ever",
-        "Kid who just moved to new town pretending everything\'s fine but secretly misses old friends",
-        "Grandparent forgetting things more and more — grandchild finds creative ways to help them remember",
-        "Loneliest tree in the park has no birds — every other tree does — someone investigates why",
-        "Child finds names carved on a park bench from decades ago and tries to find the people",
-        "Only kid who can\'t swim has to go to the pool party everyone else is excited about",
-        "A creature that looks completely different from everyone turns up at the market — nobody will talk to them",
-        "Kid who uses a wheelchair discovers a part of the playground only they can reach",
-        "Weirdest house on the street about to be knocked down but it\'s actually the most special one",
-        "Kid told they\'re \"too loud\" everywhere until they find a place where loud is exactly what\'s needed",
-        "One fish swimming opposite to all others discovers something amazing the rest missed",
-        "Kid who draws outside the lines enters a competition where that\'s the whole point",
-        "Wonky homemade cake enters a competition full of perfect professional cakes",
-        "Bird that can\'t fly lives among birds that can — until winter when flying isn\'t what\'s needed",
-        "Scruffiest dog at the rescue centre keeps getting overlooked while cute puppies get chosen",
-        "Birthday wish made everything opposite — up is down, cats bark, teachers are students",
-        "Copy machine left on overnight — 1000 newsletters flying through town",
-        "Town statue came alive but can only move when nobody\'s looking",
-        "Hiccup going around town — each person hiccups something different: bubbles, confetti, glitter",
-        "Kid\'s homework excuse came true — \"a dinosaur ate my homework\" and now there\'s a dinosaur",
-        "Everything the character says comes true literally — \"I could eat a horse\" and a horse appears on a plate",
-        "School camera takes photos of what people are THINKING not what they look like",
-        "Restaurant critic coming today but the chef lost their sense of taste — need a secret taster",
-        "Town crier got hiccups — all announcements coming out garbled and wrong",
-        "Picture day camera adds silly hats and moustaches to everyone and won\'t stop",
-        "Kid\'s shadow detached and is doing its own thing — going to classes, eating with other kids",
-        "Voice-activated town systems mishearing everything — \"lights on\" turns on sprinklers",
-        "Smart board learned to talk and won\'t stop giving opinions during lessons",
-        "Fancy dinner party where everything goes wrong — cold soup, collapsing chairs, exploding dessert",
-        "Kid terrified of the dark has to cross the school field at night to get something important",
-        "Child scared of water — their best friend\'s puppy just fell in the pond",
-        "Kid who hates thunder is at a sleepover when the biggest storm hits",
-        "Child afraid of heights — only way to rescue the stuck kite is to climb",
-        "Shy kid has exactly the information everyone needs but must say it in front of the whole school",
-        "Kid scared of dogs has to walk past one daily — one day the dog needs help",
-        "Kid who hates getting messy — the only fix involves getting VERY messy",
-        "Child who hates loud noises must cross the noisiest place in town for an important delivery",
-        "Town\'s only bridge broken — everyone stuck on one side, character must connect them",
-        "Oldest lady\'s garden destroyed by storm — it was the one thing that made her happy",
-        "Homeless kitten hiding under the school, too scared to come out, getting cold tonight",
-        "Local park becoming a car park unless someone proves it\'s special enough to keep",
-        "School dinner lady secretly using her own money so no kid goes hungry",
-        "Power out on coldest night — neighbours don\'t even know each other",
-        "Elderly toymaker\'s hands shake too much to make toys but Christmas is coming",
-        "Town\'s ice cream van broke down on the hottest day — ice cream melting fast",
-        "Cardboard box becomes a real spaceship when nobody\'s looking — must get back before bedtime",
-        "Drawings in a sketchbook climbing off the pages when the kid sleeps",
-        "Blanket fort became an actual kingdom with tiny citizens who need help",
-        "Bath time rubber ducks turned into real ducks — bath is now an ocean",
-        "Kid\'s imaginary world leaking into reality — imaginary dragon is in the kitchen",
-        "Toy dinosaur came alive in the museum — get it back to the exhibit before the guard notices",
-        "Chalk playground drawings become real when it rains — someone drew a lion",
-        "Bedtime story telling itself differently — characters going off-script",
-        "Snow globe on the shelf snowing for real — tiny town inside needs help with their blizzard",
-        "Kid\'s LEGO city comes alive at night — they shrink down but something\'s wrong in LEGO town",
-        "Sports day chaos — egg and spoon egg is an ostrich egg, sack race sacks have holes",
-        "School bake-off where the oven keeps changing temperature on its own",
-        "Dance competition where the floor tiles light up randomly and you must follow them",
-        "Paper boat race on the river but this year there are real tiny rapids",
-        "Hide and seek championship where hiding spots keep moving — wardrobe walks to new room",
-        "Spelling bee where correctly spelled words come alive and walk around the stage",
-        "School science fair — every project activates at once, hall becomes total chaos",
-        "Sandcastle competition but the tide is coming in fast",
-        "Kite competition on the windiest day ever — kites pulling owners into the sky",
-        "School team playing against robots that keep glitching in funny ways",
-        "Kid finds a tiny injured bird and nurses it back to health, not knowing if it will fly again",
-        "First snow of winter — whole town building the most spectacular snowman ever",
-        "Rainy afternoon baking with grandparent who shares stories from when they were young",
-        "Kid growing a sunflower for competition but starts caring more about the flower than winning",
-        "Moving day — saying goodbye to old room, old street, old climbing tree",
-        "Kid saving up pocket money for weeks to buy something special for someone they love",
-        "Last day of summer holidays — friends plan the perfect final adventure before school starts",
-        "Box of old letters in the attic tells the story of how grandparents met",
-        "Night before starting new school — kid can\'t sleep, imagining everything that might happen",
-        "Child stays up late to see the stars for the first time, wrapped in a blanket with their parent",
-        ]
-        random.shuffle(_scenario_pool)
-        _scenario_subset = _scenario_pool[:30]
-        shuffled_scenarios = "\n".join(f"{i+1}. {s}" for i, s in enumerate(_scenario_subset))
-
+        
+        # Build optional style/theme override block
         # Build optional style/theme override block
         style_theme_block = ""
         if writing_style:
@@ -1566,7 +1381,7 @@ DO NOT make stories about:
 
 STEP 2 - PICK AND ADAPT A SCENARIO
 
-Below is a pool of 180 story scenarios. For each of your 3 themes:
+For each of your 3 themes:
 1. Pick a scenario that the character's unique feature would be PERFECT for
 2. ADAPT it — don't copy it word-for-word. Change details, combine ideas, make it your own
 3. The character's feature should be essential to the story but in a SURPRISING way
@@ -1586,20 +1401,24 @@ Stories without a clear WANT are boring. "Character walks around and their featu
 "Character desperately wants X but their feature keeps causing Y" IS a story.
 NEVER include specific body part numbers in theme names.
 
-*** SCENARIO POOL ***
+*** CREATING ORIGINAL STORIES ***
 
-{shuffled_scenarios}
+DO NOT reuse common children's story tropes like runaway cakes, shrinking people, or broken machines unless they genuinely fit. 
+Think CREATIVELY and SPECIFICALLY about THIS character. What situations would be uniquely funny, challenging, or meaningful for a character with THESE specific features?
 
-*** HOW TO USE THESE SCENARIOS ***
+Consider scenarios from many different worlds:
+- Everyday situations gone wrong (school, home, park, shops, holidays)
+- Jobs and workplaces the character stumbles into (restaurant, hospital, space station, farm, theatre)
+- Competitions and events (talent show, sports day, cooking contest, science fair)
+- Adventures in unexpected places (underground, underwater, tiny world, upside-down town)
+- Helping someone with a specific problem (lost pet, broken thing, missing person, scared friend)
+- Celebrations and milestones (birthday, first day, moving house, new sibling)
 
-1. Read the character's features from STEP 1
-2. Scan ALL 180 scenarios — DO NOT just pick from the top of the list! Read the ENTIRE list before choosing.
-3. Pick the 3 where the character's feature would create the FUNNIEST, most SURPRISING story
-4. Each theme must use a DIFFERENT feature
-5. NEVER pick scenarios 1-20 unless they are genuinely the best fit — the top of the list is NOT better than the rest
-6. ADAPT the scenario — change names, settings, details, put your own spin on it. The scenario is a starting point not a script
-7. The character's feature should help in a SURPRISING way, not the obvious way
-8. NEVER use the scenario's exact wording in the theme blurb — rewrite it completely
+For EACH of the 3 themes:
+1. Pick a DIFFERENT character feature
+2. Invent a SPECIFIC, ORIGINAL scenario where that feature causes hilarious problems
+3. Make sure the want, obstacle, and twist are tightly connected to the character's actual features
+4. Each theme should feel completely different from the others — different setting, different tone, different type of story
 
 {age_guide}
 
