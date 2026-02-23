@@ -1028,16 +1028,15 @@ async def generate_full_story_endpoint(request_body: dict):
     # Generate front cover (after story so we have the title)
     try:
         cover_description = request.theme_description or request.custom_theme or ""
-        cover_scene = f"""Create a CHILDREN'S COLORING BOOK FRONT COVER.
-TEXT TO INCLUDE:
-- At the top: "{full_title}" in large, fun, hand-drawn style lettering
-- At the bottom: "A Little Lines Story Book" in smaller text
+        cover_scene = f"""Create a CHILDREN'S COLORING BOOK FRONT COVER illustration.
+DO NOT include ANY text, words, letters, or writing in the image. NO TITLE. NO TEXT AT ALL. Text will be added separately.
 IMAGE:
 - {char.name} large and central, looking excited and confident
 {f'- {request.second_character_name} next to {char.name}, looking happy and excited' if request.second_character_name else ''}
 - Background hints at the adventure: {cover_description}
 - BLACK AND WHITE LINE ART suitable for coloring in
-Make it look like a real children's coloring book cover!
+- Leave blank space at the top (20% of image) and bottom (10% of image) for text to be added later
+Make it look like a real children's coloring book cover illustration!
 """
         
         cover_image_b64 = await generate_adventure_episode_gemini(
@@ -1053,7 +1052,10 @@ Make it look like a real children's coloring book cover!
             second_character_description=request.second_character_description
         )
         
-        cover_url = upload_to_firebase(cover_image_b64, folder="adventure/storybooks")
+        # Add title text via PIL (not Gemini - Gemini can't spell)
+        cover_with_text_b64 = create_front_cover(cover_image_b64, full_title, char.name)
+        
+        cover_url = upload_to_firebase(cover_with_text_b64, folder="adventure/storybooks")
         pages.append({"page_num": 0, "page_type": "cover", "title": full_title, "page_url": cover_url, "story_text": ""})
         print(f"[FULL-STORY] Cover generated successfully")
     except Exception as e:

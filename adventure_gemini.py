@@ -114,14 +114,14 @@ def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None)
 
 
 
-def create_front_cover(image_b64: str, theme_name: str, character_name: str) -> str:
+def create_front_cover(image_b64: str, full_title: str, character_name: str) -> str:
     """
     Create a front cover for the story book.
     
     Layout:
-    - Top: "A [Character Name] Adventure" 
+    - Top: "A Little Lines Story Book" 
     - Middle: Large coloring illustration
-    - Bottom: Theme/Story title
+    - Bottom: Story title
     
     Returns: Base64 encoded A4 PNG image
     """
@@ -143,21 +143,20 @@ def create_front_cover(image_b64: str, theme_name: str, character_name: str) -> 
     
     # Load fonts
     try:
-        title_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 52)
-        subtitle_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 36)
+        title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 52)
+        subtitle_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 36)
     except:
-        try:
-            title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 52)
-            subtitle_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 36)
-        except:
-            title_font = ImageFont.load_default()
-            subtitle_font = ImageFont.load_default()
+        title_font = ImageFont.load_default()
+        subtitle_font = ImageFont.load_default()
     
-    # Top text: "A Coloring Story Book"
-    top_text = "A Coloring Story Book"
-    top_bbox = draw.textbbox((0, 0), top_text, font=subtitle_font)
-    top_width = top_bbox[2] - top_bbox[0]
-    draw.text(((A4_WIDTH - top_width) // 2, 50), top_text, fill='black', font=subtitle_font)
+    # Top: Story title
+    title_y = 40
+    wrapped_title = textwrap.fill(full_title, width=35)
+    for line in wrapped_title.split('\n'):
+        line_bbox = draw.textbbox((0, 0), line, font=title_font)
+        line_width = line_bbox[2] - line_bbox[0]
+        draw.text(((A4_WIDTH - line_width) // 2, title_y), line, fill='black', font=title_font)
+        title_y += 60
     
     # Scale and center the coloring image
     max_img_height = int(A4_HEIGHT * 0.65)
@@ -173,9 +172,9 @@ def create_front_cover(image_b64: str, theme_name: str, character_name: str) -> 
     
     coloring_img = coloring_img.resize((new_width, new_height), Image.LANCZOS)
     
-    # Center image vertically in middle section
+    # Center image below title
     x_offset = (A4_WIDTH - new_width) // 2
-    y_offset = 120  # Below top text
+    y_offset = title_y + 20
     
     a4_page.paste(coloring_img, (x_offset, y_offset))
     
@@ -186,24 +185,12 @@ def create_front_cover(image_b64: str, theme_name: str, character_name: str) -> 
         width=3
     )
     
-    # Bottom: Full book title combining character and theme
-    title_y = y_offset + new_height + 40
-    
-    # Create full title: "Character Name and Theme Name"
-    # Clean up theme name if it already has "The" at start
-    clean_theme = theme_name
-    if not theme_name.lower().startswith("the "):
-        clean_theme = "the " + theme_name
-    
-    full_title = f"{character_name} and {clean_theme}"
-    
-    # Wrap title if too long
-    wrapped_title = textwrap.fill(full_title, width=35)
-    for line in wrapped_title.split('\n'):
-        line_bbox = draw.textbbox((0, 0), line, font=title_font)
-        line_width = line_bbox[2] - line_bbox[0]
-        draw.text(((A4_WIDTH - line_width) // 2, title_y), line, fill='black', font=title_font)
-        title_y += 60
+    # Bottom: "A Little Lines Story Book"
+    bottom_text = "A Little Lines Story Book"
+    bottom_bbox = draw.textbbox((0, 0), bottom_text, font=subtitle_font)
+    bottom_width = bottom_bbox[2] - bottom_bbox[0]
+    bottom_y = y_offset + new_height + 30
+    draw.text(((A4_WIDTH - bottom_width) // 2, bottom_y), bottom_text, fill='black', font=subtitle_font)
     
     # Convert to base64
     buffer = io.BytesIO()
