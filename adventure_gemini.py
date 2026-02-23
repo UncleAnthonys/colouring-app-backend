@@ -1603,6 +1603,43 @@ DO NOT rhyme unless the style is "Rhyming". DO NOT use any other style — ONLY 
 
 {style_detail}
 """
+    else:
+        # Default style varies by age
+        default_styles = {
+            "age_2": """Write in a rhythmic, rhyming style perfect for toddlers being read to.
+Use LOTS of sound effects: "SPLASH!", "SPLORT!", "KABOOM!", "WHOOOOSH!"
+Repetition is key — repeat phrases with slight variation each time.
+Fun made-up words: "splishy-sploshy", "rumbly-tumbly", "snore-a-saurus"
+Direct address: "Uh oh!", "Oh no!", "Can YOU see it?"
+Keep it bouncy and musical — a parent should naturally do funny voices reading this.""",
+            "age_3": """Write in a rhythmic, rhyming style perfect for young children being read to.
+Use LOTS of sound effects: "SPLASH!", "SPLORT!", "KABOOM!", "WHOOOOSH!"
+Repetition is key — repeat phrases with slight variation each time.
+Fun made-up words: "splishy-sploshy", "rumbly-tumbly", "snore-a-saurus"
+Direct address: "Uh oh!", "Oh no!", "Can YOU see it?"
+A catchphrase or repeated question works great as a story thread.
+Keep it bouncy and musical — a parent should naturally do funny voices reading this.""",
+            "age_4": """Write in a fun, energetic style with some rhyming and lots of sound effects.
+Sound effects on every page: "KERPLUNK!", "tip-toe-tip-toe", "KABOOM!"
+Funny comparisons: "as tall as a house!", "louder than a thunderstorm!"
+Questions to the reader: "What do YOU think happened next?"
+A catchphrase or repeated question works great as a story thread.
+Simple but vivid — a parent reads this aloud and both parent and child enjoy it.""",
+            "age_5": """Write in a natural, engaging storytelling voice. Light rhyming is fine but not required.
+Fun vocabulary: "super-duper", "ginormous", "absolutely bonkers"
+Sound effects still welcome: "CRASH!", "SPLORT!"
+Mix of dialogue and narration. At least one genuinely funny moment per episode.
+Characters should have distinct voices when they speak.""",
+        }
+        default_style = default_styles.get(age_level, """Write in a natural, engaging storytelling voice — like a skilled children's book author.
+DO NOT rhyme. Use clear, vivid prose with a mix of dialogue, action, and description.
+Vary sentence length for rhythm. Show don't tell. Make every word count.
+Characters should have distinct voices when they speak.""")
+        
+        style_theme_block += f"""
+*** WRITING STYLE: Standard ***
+{default_style}
+"""
     if life_lesson:
         style_theme_block += f"""
 *** LIFE LESSON: {life_lesson} ***
