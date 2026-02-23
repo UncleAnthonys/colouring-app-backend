@@ -1983,6 +1983,11 @@ Return ONLY valid JSON in this exact format:
 
 Write the full story for {character_name} now. Return ONLY valid JSON.'''
 
+    # Debug: log key parts of the prompt
+    print(f"[STORY-GEN] theme_block preview: {theme_block[:300]}")
+    print(f"[STORY-GEN] style_theme_block preview: {style_theme_block[:300]}")
+    print(f"[STORY-GEN] custom_theme param: {custom_theme}")
+
     claude_response = claude_client.messages.create(
         model="claude-sonnet-4-5-20250929",
         max_tokens=4000,
