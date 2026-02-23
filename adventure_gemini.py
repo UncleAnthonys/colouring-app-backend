@@ -116,85 +116,58 @@ def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None)
 
 def create_front_cover(image_b64: str, full_title: str, character_name: str) -> str:
     """
-    Create a front cover for the story book.
+    Overlay title and brand text directly onto Gemini's cover image.
+    Gemini leaves blank space at top (20%) and bottom (10%) for text.
+    We write directly into those spaces on the image itself.
     
-    Layout:
-    - Top: "A Little Lines Story Book" 
-    - Middle: Large coloring illustration
-    - Bottom: Story title
-    
-    Returns: Base64 encoded A4 PNG image
+    Returns: Base64 encoded PNG image with text overlaid
     """
     from PIL import Image, ImageDraw, ImageFont
     import io
     import textwrap
     
-    # A4 at 150 DPI
-    A4_WIDTH = 1240
-    A4_HEIGHT = 1754
-    
-    # Decode the coloring image
+    # Decode Gemini's cover image
     img_data = base64.b64decode(image_b64)
-    coloring_img = Image.open(io.BytesIO(img_data))
+    cover_img = Image.open(io.BytesIO(img_data)).convert('RGB')
     
-    # Create A4 canvas (white)
-    a4_page = Image.new('RGB', (A4_WIDTH, A4_HEIGHT), 'white')
-    draw = ImageDraw.Draw(a4_page)
+    img_width, img_height = cover_img.size
+    draw = ImageDraw.Draw(cover_img)
+    
+    # Scale font sizes relative to image size
+    title_font_size = max(28, int(img_width * 0.045))
+    subtitle_font_size = max(20, int(img_width * 0.03))
     
     # Load fonts
     try:
-        title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 52)
-        subtitle_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 36)
+        title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", title_font_size)
+        subtitle_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", subtitle_font_size)
     except:
         title_font = ImageFont.load_default()
         subtitle_font = ImageFont.load_default()
     
-    # Top: Story title
-    title_y = 40
-    wrapped_title = textwrap.fill(full_title, width=35)
+    # Top area: Story title (in the top 20% blank space Gemini left)
+    title_y = int(img_height * 0.03)
+    wrapped_title = textwrap.fill(full_title, width=30)
     for line in wrapped_title.split('\n'):
         line_bbox = draw.textbbox((0, 0), line, font=title_font)
         line_width = line_bbox[2] - line_bbox[0]
-        draw.text(((A4_WIDTH - line_width) // 2, title_y), line, fill='black', font=title_font)
-        title_y += 60
+        line_height = line_bbox[3] - line_bbox[1]
+        line_x = (img_width - line_width) // 2
+        draw.text((line_x, title_y), line, fill='black', font=title_font)
+        title_y += line_height + 8
     
-    # Scale and center the coloring image
-    max_img_height = int(A4_HEIGHT * 0.65)
-    max_img_width = A4_WIDTH - 100
-    
-    img_ratio = coloring_img.width / coloring_img.height
-    if img_ratio > (max_img_width / max_img_height):
-        new_width = max_img_width
-        new_height = int(new_width / img_ratio)
-    else:
-        new_height = max_img_height
-        new_width = int(new_height * img_ratio)
-    
-    coloring_img = coloring_img.resize((new_width, new_height), Image.LANCZOS)
-    
-    # Center image below title
-    x_offset = (A4_WIDTH - new_width) // 2
-    y_offset = title_y + 20
-    
-    a4_page.paste(coloring_img, (x_offset, y_offset))
-    
-    # Draw border around image
-    draw.rectangle(
-        [x_offset - 3, y_offset - 3, x_offset + new_width + 3, y_offset + new_height + 3],
-        outline='black',
-        width=3
-    )
-    
-    # Bottom: "A Little Lines Story Book"
+    # Bottom area: "A Little Lines Story Book" (in the bottom 10% blank space)
     bottom_text = "A Little Lines Story Book"
     bottom_bbox = draw.textbbox((0, 0), bottom_text, font=subtitle_font)
     bottom_width = bottom_bbox[2] - bottom_bbox[0]
-    bottom_y = y_offset + new_height + 30
-    draw.text(((A4_WIDTH - bottom_width) // 2, bottom_y), bottom_text, fill='black', font=subtitle_font)
+    bottom_height = bottom_bbox[3] - bottom_bbox[1]
+    bottom_x = (img_width - bottom_width) // 2
+    bottom_y = img_height - bottom_height - int(img_height * 0.03)
+    draw.text((bottom_x, bottom_y), bottom_text, fill='black', font=subtitle_font)
     
     # Convert to base64
     buffer = io.BytesIO()
-    a4_page.save(buffer, format='PNG', dpi=(150, 150))
+    cover_img.save(buffer, format='PNG')
     buffer.seek(0)
     return base64.b64encode(buffer.getvalue()).decode('utf-8')
 
