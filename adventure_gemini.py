@@ -1467,6 +1467,14 @@ Return ONLY valid JSON. Generate 3 theme PITCHES (no full episodes yet). Here is
   ]
 }}
 
+⚠️ CRITICAL: OBSTACLE and TWIST must form ONE coherent cause-and-effect chain.
+The feature creates ONE specific problem (the obstacle). The twist must solve THAT EXACT problem — not a different one.
+- If the obstacle is "the coat knocks walls down," the twist must be about how the coat STOPS knocking walls down or how the knocking becomes useful
+- NEVER introduce a second unrelated problem in the twist
+- Test: read the obstacle, then read the twist. Does the twist DIRECTLY fix the obstacle? If not, rewrite.
+- BAD: obstacle="coat is too bulky to move fast" → twist="coat blocks the dog" (these are two different problems)
+- GOOD: obstacle="coat is too bulky to stack snow blocks" → twist="the puffy coat packs snow tighter when they hug the blocks, making super-strong walls"
+
 NOW generate 3 theme PITCHES for {character_name}. Each theme must use a DIFFERENT character feature. Include theme_id, theme_name, theme_description, theme_blurb, feature_used, want, obstacle, and twist. Do NOT generate full episodes — just the pitches. Return ONLY the JSON, no other text.'''
         
         claude_response = claude_client.messages.create(
@@ -1668,6 +1676,8 @@ STORY PLAN:
 - WANT: {want}
 - OBSTACLE: {obstacle}
 - TWIST: {twist}
+
+⚠️ ONE PROBLEM RULE: This story has ONE central problem, not two. The OBSTACLE is the problem. The TWIST is the solution to THAT SAME problem. Episodes 2-3 must show the OBSTACLE getting worse. Episodes 4-5 must show the TWIST solving THAT SAME OBSTACLE. Do not introduce a new unrelated problem partway through. Every episode must be about the same struggle. If the obstacle is about the coat knocking things down, the resolution must be about the coat NOT knocking things down or the knocking becoming useful — not about solving a completely different issue.
 """
 
     prompt = f'''You are writing a complete 5-episode story for a children's coloring book app.
@@ -1691,7 +1701,13 @@ If the "feature used" describes a physical body trait, treat it as a minor chara
 *** STORY STRUCTURE ***
 - Episode 1: Set up the problem. Introduce 2 named supporting characters with funny personalities (include species, size, accessories in brackets after each name). The companion character (if present) should react to the problem in their own way.
 - Episode 2: First attempt using the character's feature. Things start going wrong. The companion character's features or personality may contribute to the chaos.
-- Episode 3: SETBACK — attempt fails or makes things worse. Real moment of doubt. This episode MUST NOT be happy. The companion character provides emotional support or accidentally makes things worse.
+- Episode 3: SETBACK — but NOT always sad! Pick ONE setback style from below and commit to it:
+  * COMIC DISASTER: Everything goes hilariously, catastrophically wrong. Total chaos. Things flying, breaking, multiplying. The character isn't sad — they're overwhelmed by absurd mayhem. Think slapstick.
+  * SURPRISE REVERSAL: The character thinks they've fixed it, maybe even celebrates — then realises they haven't. Rug-pull moment. Emotion is shock, not sadness.
+  * ESCALATION: The problem gets BIGGER and WILDER. One mess becomes ten. One escaped animal becomes twenty. Character is frantically trying to contain the chaos, not sitting down crying.
+  * TICKING CLOCK: They run out of time, or something urgent forces a deadline. Panic and urgency, not defeat.
+  * EMOTIONAL MOMENT: Genuine sadness or frustration. Character sits with the failure. Quiet, intimate. USE THIS SPARINGLY — not every story needs a cry.
+  The setback must still make the OBSTACLE worse. But the TONE and ENERGY should vary. Not every setback is a child sitting alone looking sad.
 - Episode 4: Creative solution — uses feature DIFFERENTLY based on the twist. The companion character OR a supporting character helps or suggests the new approach. The companion's own features might be key to the solution.
 - Episode 5: Resolution that connects back to episode 1. Short and punchy ending. Do NOT summarise or moralise.
 
@@ -1711,7 +1727,12 @@ Each of the 5 episodes MUST have a visually distinct composition. The scene_desc
 MANDATORY CAMERA PATTERN:
 - Episode 1: WIDE ESTABLISHING SHOT — show the full location. Characters are small (20-30% of frame). Lots of environment detail. This is the "setting the scene" shot.
 - Episode 2: MEDIUM ACTION SHOT — characters bigger (40-50%), actively DOING something physical. A different part of the location from episode 1. Characters are IN MOTION.
-- Episode 3: CLOSE-UP EMOTIONAL SHOT — character's face and upper body fill 60%+ of the frame. Minimal background. Focus on the SETBACK emotion. This should feel intimate and different from every other page.
+- Episode 3: SETBACK SHOT — camera angle MUST match the setback type:
+  * If COMIC DISASTER or ESCALATION: WIDE CHAOS SHOT — pull back to show the full mess. Things scattered everywhere, multiple characters reacting, visual comedy. Character is 30-40% of frame surrounded by mayhem.
+  * If SURPRISE REVERSAL: MEDIUM REACTION SHOT — character in the moment of realising. Show both the character's face AND what went wrong. 40-50% of frame.
+  * If TICKING CLOCK: DYNAMIC ACTION SHOT — character running, reaching, scrambling. Motion and urgency. Low or tilted angle to add drama.
+  * If EMOTIONAL MOMENT: CLOSE-UP — character's face and upper body fill 60%+ of frame. Minimal background. Intimate and quiet.
+  Do NOT default to close-up sad face every time. The visual variety of episode 3 across different storybooks is critical.
 - Episode 4: DYNAMIC ANGLE — overhead view looking DOWN, or low angle looking UP, or dramatic side angle. Characters in active motion. Different area of the setting.
 - Episode 5: NEW LOCATION OR DRAMATICALLY DIFFERENT VIEW — move to a new place for resolution. If same location, show it from the OPPOSITE angle. This must feel fresh.
 
@@ -1750,6 +1771,14 @@ NARRATIVE FLOW: Each scene must feel like a CONTINUATION of the previous page. I
 3. Dialogue in at least 3 of 5 episodes
 4. Episode 5 resolves the specific problem from episode 1
 5. The feature should NOT directly fix the problem alone — a supporting character helps or the character learns to use it differently
+
+⚠️ SELF-CHECK BEFORE WRITING:
+Before you write, verify your plan:
+1. Does the TWIST solve the OBSTACLE? (Not a different problem — the SAME one)
+2. Does episode 3's setback make the OBSTACLE worse? (Not introduce something new)
+3. Does episode 4's solution come from the TWIST? (Not a random new idea)
+4. Is the story about ONE problem from start to finish?
+If any answer is NO, fix your plan before writing.
 
 ⚠️ CRITICAL WORD LIMIT: Each story_text MUST respect the age guide word limit above. COUNT YOUR WORDS. If an episode's story_text exceeds the limit, CUT IT DOWN. Short punchy text is ALWAYS better than long rambling text. This text appears below an illustration on a single page — if it's too long it runs off the page and is unreadable.
 
