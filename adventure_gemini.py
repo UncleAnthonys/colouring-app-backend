@@ -1590,26 +1590,31 @@ async def generate_story_for_theme(
     # Build optional style/theme override block for full story
     style_theme_block = ""
     if writing_style:
-        style_theme_block += f"""
-*** WRITING STYLE: {writing_style} ***
-The user chose "{writing_style}" style. Apply this to ALL story_text:
-- Rhyming: Every episode rhymes (couplets/AABB). Make it flow like a poem.
-- Funny: This story MUST make the parent laugh out loud. Use these techniques in EVERY episode:
+        style_descriptions = {
+            "Rhyming": "Every episode rhymes (couplets/AABB). Make it flow like a poem. Rhythm and rhyme should feel natural, not forced.",
+            "Funny": """This story MUST make the parent laugh out loud. Use these techniques in EVERY episode:
   * Ironic narration: "This was, without a doubt, the WORST idea anyone had ever had. Naturally, they did it anyway."
   * Physical comedy: Things falling, splashing, bouncing off heads, getting stuck in ridiculous positions
   * Contrast humor: A tiny character trying something enormous, or a serious character in an absurd situation
   * Running gags: One joke that gets funnier each time it happens across episodes
   * Funny dialogue: Characters saying exactly the wrong thing at the wrong time
   * Comic timing: Short punchy sentences after a build-up. "They pulled. They tugged. They heaved. It was the wrong door."
-  * At least ONE moment per episode that would make a 5-year-old belly laugh
-- Adventurous: High stakes, cliffhangers, brave choices, exciting action verbs.
-- Gentle: Soft, calming language. Quiet wonder. Cozy settings. Warm resolutions.
-- Silly: Over-the-top nonsense, made-up words, ridiculous situations.
-- Repetition: Use a repeating phrase that builds across episodes. The phrase evolves slightly each time. Think We're Going on a Bear Hunt.
-- Call and Response: Include questions and answers a parent and child read together — "Did they give up? NO! Did they make it? YES!"
-- Suspenseful: End episodes 1-4 on mini cliffhangers. Build tension. "And behind the door was..."
-- Song-like: Include a repeating chorus in every episode with changing verses. Should feel singable.
-For any other style: interpret naturally and apply consistently.
+  * At least ONE moment per episode that would make a 5-year-old belly laugh""",
+            "Adventurous": "High stakes, cliffhangers, brave choices, exciting action verbs. Each episode should feel like an adventure movie. Heart-pounding moments, narrow escapes, bold decisions.",
+            "Gentle": "Soft, calming language. Quiet moments of wonder. Cozy settings. Warm resolutions. Like being wrapped in a blanket. Soothing rhythm to the words.",
+            "Silly": "Over-the-top nonsense, made-up words, ridiculous situations, characters being goofy. The more absurd the better. Embrace chaos and fun.",
+            "Repetition": "Use a repeating phrase that builds across episodes. The phrase evolves slightly each time. Think We're Going on a Bear Hunt. Kids love predicting what comes next.",
+            "Call and Response": 'Include questions and answers a parent and child read together — "Did they give up? NO! Did they make it? YES!" Make it interactive and fun to read aloud.',
+            "Suspenseful": 'Build tension throughout. End episodes 1-4 on mini cliffhangers. "And behind the door was..." Use short sentences for tension. Longer sentences for relief. Keep the reader desperate to turn the page.',
+            "Song-like": "Include a repeating chorus in every episode with changing verses. Should feel singable and rhythmic, like a nursery rhyme or campfire song. The chorus ties the whole story together.",
+        }
+        style_detail = style_descriptions.get(writing_style, f"Interpret '{writing_style}' naturally and apply consistently.")
+        style_theme_block += f"""
+*** WRITING STYLE: {writing_style} ***
+The user chose "{writing_style}" style. Apply this to ALL story_text.
+DO NOT rhyme unless the style is "Rhyming". DO NOT use any other style — ONLY "{writing_style}".
+
+{style_detail}
 """
     if life_lesson:
         style_theme_block += f"""
