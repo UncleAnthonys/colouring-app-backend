@@ -1793,9 +1793,12 @@ For any other style: interpret naturally and apply consistently.
     if life_lesson:
         style_theme_block += f"""
 *** LIFE LESSON: {life_lesson} ***
-Weave this life lesson naturally into the story: "{life_lesson}".
+Weave this life lesson SUBTLY into the story: "{life_lesson}".
+IMPORTANT: The life lesson is a SECONDARY layer — it must NOT replace or override the main story theme/plot.
+The THEME and PLOT come first. The life lesson should emerge naturally through the character's experiences within that plot.
+For example: if the theme is "lighthouse adventure" and the lesson is "sharing", the story is about the lighthouse — and sharing happens to be something the character learns DURING the lighthouse adventure.
+NEVER make the life lesson the main plot. NEVER ignore the chosen theme to focus on the lesson.
 The character should EXPERIENCE this lesson through what happens — not through lecturing.
-The lesson should emerge from the story events, especially through the setback in episode 3 and the resolution in episodes 4-5.
 """
     if custom_theme:
         style_theme_block += f"""
@@ -1836,15 +1839,21 @@ The custom theme should be the HEART of the story — not a side detail.
 """
     else:
         theme_block = f"""
+⚠️ MANDATORY STORY THEME — DO NOT DEVIATE ⚠️
+The user chose this SPECIFIC story from 3 options. You MUST write THIS story, not a different one.
+
 CHOSEN THEME: {theme_name}
 THEME DESCRIPTION: {theme_description}
 THEME BLURB: {theme_blurb}
 
-STORY PLAN:
+STORY PLAN (USE THESE EXACT PLOT POINTS):
 - Feature used: {feature_used}
 - WANT: {want}
 - OBSTACLE: {obstacle}
 - TWIST: {twist}
+
+The story MUST be about "{theme_name}". The WANT, OBSTACLE, and TWIST above are the backbone of the plot.
+If a life lesson was selected, weave it into THIS plot — do NOT replace this plot with a different story about the life lesson.
 """
 
     prompt = f'''You are writing a complete 5-episode story for a children's coloring book app.
