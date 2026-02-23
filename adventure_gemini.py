@@ -868,7 +868,7 @@ async def generate_personalized_stories(character_name: str, character_descripti
 AGE GROUP: 2-3 YEARS OLD (TODDLER)
 
 *** WRITING STYLE ***
-- Rhyming and rhythmic text is ESSENTIAL - every episode should have a rhyme or repeated phrase
+- Rhythmic text works well but DO NOT rhyme unless the user specifically chose "Rhyming" style
 - Sound effects on every page: "SPLISH!", "BANG!", "WHOOOOSH!", "POP POP POP!"
 - Very short sentences (5-8 words max)
 - Repetition with variation is the #1 tool - same phrase structure, different word each time
@@ -965,7 +965,7 @@ Example: Ep1: Can't get past the puddle (SPLASH!). Ep2: Can't get past the hill 
 AGE GROUP: 4 YEARS OLD
 
 *** WRITING STYLE ***
-- Rhyming is great but not required on every line
+- DO NOT rhyme unless the user specifically chose "Rhyming" style
 - Lots of sound effects: "KERPLUNK!", "tip-toe-tip-toe", "KABOOM!"
 - Simple sentences (8-12 words) with occasional longer ones for drama
 - A catchphrase or repeated question works great as a story thread
@@ -1344,6 +1344,8 @@ Based on this character named "{character_name}"{f" and their companion {second_
 CHARACTER TO ANALYZE:
 {character_description}
 
+⚠️ GENDER: Do NOT assume the character's gender from their name. Use the character's NAME instead of pronouns wherever possible. If you must use pronouns, use "they/them" unless the character description explicitly states gender.
+
 {second_char_block}
 
 STEP 1 - IDENTIFY THE MOST UNUSUAL FEATURES (in order of priority):
@@ -1670,6 +1672,8 @@ STORY PLAN:
 {style_theme_block}
 CHARACTER: {character_name}
 CHARACTER DESCRIPTION: {character_description}
+
+⚠️ GENDER: Do NOT assume the character's gender from their name. Use the character's NAME instead of pronouns wherever possible. If you must use pronouns, use "they/them" unless the character description explicitly states gender. Getting a child's gender wrong ruins the story for the family.
 
 {second_char_story_block}
 
