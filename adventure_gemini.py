@@ -133,16 +133,46 @@ def create_front_cover(image_b64: str, full_title: str, character_name: str) -> 
     img_width, img_height = cover_img.size
     draw = ImageDraw.Draw(cover_img)
     
-    # Scale font sizes relative to image size
-    title_font_size = max(28, int(img_width * 0.045))
-    subtitle_font_size = max(20, int(img_width * 0.03))
+    # Scale font sizes relative to image size — title should be BIG and bold for a cover
+    title_font_size = max(36, int(img_width * 0.055))
+    subtitle_font_size = max(22, int(img_width * 0.032))
     
-    # Load fonts
-    try:
-        title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", title_font_size)
-        subtitle_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", subtitle_font_size)
-    except:
+    # Load fonts — try children's book style fonts, fall back gracefully
+    # On Render: apt-get install fonts-comic-neue (in build command)
+    title_font = None
+    subtitle_font = None
+    
+    # Try fonts in order of preference (children's book → clean bold → default)
+    title_font_candidates = [
+        "/usr/share/fonts/truetype/comic-neue/ComicNeue-Bold.ttf",       # Comic Neue (if installed)
+        "/usr/share/fonts/truetype/fonts-comic-neue/ComicNeue-Bold.ttf",  # Alternative path
+        "/app/fonts/ComicNeue-Bold.ttf",                                   # Bundled in repo
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",          # Fallback
+    ]
+    subtitle_font_candidates = [
+        "/usr/share/fonts/truetype/comic-neue/ComicNeue-Regular.ttf",
+        "/usr/share/fonts/truetype/fonts-comic-neue/ComicNeue-Regular.ttf",
+        "/app/fonts/ComicNeue-Regular.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    ]
+    
+    for font_path in title_font_candidates:
+        try:
+            title_font = ImageFont.truetype(font_path, title_font_size)
+            break
+        except (OSError, IOError):
+            continue
+    
+    for font_path in subtitle_font_candidates:
+        try:
+            subtitle_font = ImageFont.truetype(font_path, subtitle_font_size)
+            break
+        except (OSError, IOError):
+            continue
+    
+    if title_font is None:
         title_font = ImageFont.load_default()
+    if subtitle_font is None:
         subtitle_font = ImageFont.load_default()
     
     # Top area: Story title (in the top 20% blank space Gemini left)

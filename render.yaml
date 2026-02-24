@@ -2,7 +2,7 @@ services:
   - type: web
     name: kids-colouring-api
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: apt-get update && apt-get install -y fonts-comic-neue && pip install -r requirements.txt
     startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: OPENAI_API_KEY
