@@ -1572,7 +1572,15 @@ async def generate_story_for_theme(
             "Gentle": "Soft, calming language. Quiet moments of wonder. Cozy settings. Warm resolutions. Like being wrapped in a blanket. Soothing rhythm to the words.",
             "Silly": "Over-the-top nonsense, made-up words, ridiculous situations, characters being goofy. The more absurd the better. Embrace chaos and fun.",
             "Repetition": "Use a repeating phrase that builds across episodes. The phrase evolves slightly each time. Think We're Going on a Bear Hunt. Kids love predicting what comes next.",
-            "Call and Response": 'Include questions and answers a parent and child read together — "Did they give up? NO! Did they make it? YES!" Make it interactive and fun to read aloud.',
+            "Call and Response": """Write interactive text where the parent reads a line and the child responds. But NOT just "Was X? YES!" over and over — that's boring for age 4+.
+  USE THESE TECHNIQUES:
+  * Varied question types: "What do you think happened next?", "And WHO was standing behind the tree?", "How many sandwiches fell? Count them!"
+  * Response phrases, not just yes/no: Parent reads "And Incy shook and shook and..." Child finishes: "OUT fell the leaves!"
+  * Repeated refrains that BUILD: A catchphrase that gets bigger each time. Episode 1: "Uh oh, here we go again!" Episode 3: "UH OH, HERE WE GO AGAIN — and this time it's WORSE!"
+  * Character dialogue as call-and-response: One character asks, another answers. "Can you fix it?" / "I can TRY!"
+  * Physical participation: "Can you shake like Incy? SHAKE SHAKE SHAKE!" or "Blow on the page to help!"
+  * NEVER use more than 2 yes/no questions per episode. Mix in open questions, finish-the-sentence moments, and refrains.
+  * The interaction should feel like a GAME between parent and child, not a quiz with one-word answers.""",
             "Suspenseful": 'Build tension throughout. End episodes 1-4 on mini cliffhangers. "And behind the door was..." Use short sentences for tension. Longer sentences for relief. Keep the reader desperate to turn the page.',
             "Song-like": "Include a repeating chorus in every episode with changing verses. Should feel singable and rhythmic, like a nursery rhyme or campfire song. The chorus ties the whole story together.",
         }
