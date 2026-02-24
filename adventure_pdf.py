@@ -28,7 +28,7 @@ DPI = 300
 
 # PDF layout settings
 MARGIN_MM = 10
-TEXT_AREA_HEIGHT_MM = 45  # Space reserved for story text at bottom
+TEXT_AREA_HEIGHT_MM = 58  # Space reserved for story text at bottom
 
 
 # =============================================================================
@@ -125,7 +125,7 @@ def create_adventure_pdf(
     )
     
     # Draw story text (wrapped)
-    c.setFont("Helvetica", 10)
+    c.setFont("Helvetica", 9)
     max_width = available_width - 20
     
     # Simple text wrapping
@@ -136,7 +136,7 @@ def create_adventure_pdf(
     for word in words:
         current_line.append(word)
         test_line = ' '.join(current_line)
-        if c.stringWidth(test_line, "Helvetica", 10) > max_width:
+        if c.stringWidth(test_line, "Helvetica", 9) > max_width:
             current_line.pop()
             if current_line:
                 lines.append(' '.join(current_line))
@@ -146,10 +146,10 @@ def create_adventure_pdf(
         lines.append(' '.join(current_line))
     
     # Draw each line of story text
-    y_position = margin + text_area_height - 22
+    y_position = margin + text_area_height - 20
     for line in lines:
         c.drawString(margin + 10, y_position, line)
-        y_position -= 12
+        y_position -= 11
     
     # Draw choice info if present (italics)
     if choice_info:
