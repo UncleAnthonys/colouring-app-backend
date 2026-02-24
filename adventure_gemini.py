@@ -92,17 +92,57 @@ def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None)
     
     # No title on episode pages — just story text (like a real storybook)
     
-    # Wrap and draw story text - wider text area
-    text_margin = 60  # Left and right margin
-    max_text_width = A4_WIDTH - (text_margin * 2)
-    wrapped_text = textwrap.fill(story_text, width=85)
+    # Wrap and draw story text - DYNAMIC sizing to always fit
+    text_margin = 40  # Left and right margin
+    available_text_height = A4_HEIGHT - current_y - 20  # Space remaining to bottom
     
-    for line in wrapped_text.split('\n'):
-        line_bbox = draw.textbbox((0, 0), line, font=story_font)
+    # Try font sizes from large to small until text fits
+    font_sizes = [26, 23, 20, 18, 16]
+    char_widths = [85, 95, 105, 115, 125]  # Wrap width per font size
+    line_spacings = [34, 30, 27, 24, 22]
+    
+    best_font_size = font_sizes[-1]
+    best_wrap = char_widths[-1]
+    best_spacing = line_spacings[-1]
+    best_lines = []
+    
+    for fs, cw, ls in zip(font_sizes, char_widths, line_spacings):
+        try:
+            test_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", fs)
+        except:
+            test_font = ImageFont.load_default()
+        
+        wrapped = textwrap.fill(story_text, width=cw)
+        lines = wrapped.split('\n')
+        total_height = len(lines) * ls
+        
+        if total_height <= available_text_height:
+            best_font_size = fs
+            best_wrap = cw
+            best_spacing = ls
+            best_lines = lines
+            break
+    else:
+        # Even smallest font doesn't fit — use smallest and let it go
+        wrapped = textwrap.fill(story_text, width=char_widths[-1])
+        best_lines = wrapped.split('\n')
+    
+    # Load the chosen font size
+    try:
+        story_font_final = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", best_font_size)
+    except:
+        story_font_final = ImageFont.load_default()
+    
+    # Center text block vertically in available space
+    total_text_height = len(best_lines) * best_spacing
+    start_y = current_y + (available_text_height - total_text_height) // 2
+    
+    for line in best_lines:
+        line_bbox = draw.textbbox((0, 0), line, font=story_font_final)
         line_width = line_bbox[2] - line_bbox[0]
         line_x = (A4_WIDTH - line_width) // 2
-        draw.text((line_x, current_y), line, fill='black', font=story_font)
-        current_y += 35
+        draw.text((line_x, start_y), line, fill='black', font=story_font_final)
+        start_y += best_spacing
     
     # Convert to base64
     buffer = io.BytesIO()
@@ -146,13 +186,15 @@ def create_front_cover(image_b64: str, full_title: str, character_name: str) -> 
     title_font_candidates = [
         "/usr/share/fonts/truetype/comic-neue/ComicNeue-Bold.ttf",       # Comic Neue (if installed)
         "/usr/share/fonts/truetype/fonts-comic-neue/ComicNeue-Bold.ttf",  # Alternative path
-        "/app/fonts/ComicNeue-Bold.ttf",                                   # Bundled in repo
+        "/app/fonts/ComicNeue-Bold.ttf",                                   # Bundled in repo (Render)
+        "fonts/ComicNeue-Bold.ttf",                                            # Bundled in repo (local)
         "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",          # Fallback
     ]
     subtitle_font_candidates = [
         "/usr/share/fonts/truetype/comic-neue/ComicNeue-Regular.ttf",
         "/usr/share/fonts/truetype/fonts-comic-neue/ComicNeue-Regular.ttf",
         "/app/fonts/ComicNeue-Regular.ttf",
+        "fonts/ComicNeue-Regular.ttf",
         "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
     ]
     
