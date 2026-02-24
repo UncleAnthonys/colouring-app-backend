@@ -4,6 +4,12 @@ Focus on: PROPORTIONS, COLORS, PIXAR FACE - in that priority order
 """
 
 import os
+print(f"[FONT-DEBUG] CWD: {os.getcwd()}")
+print(f"[FONT-DEBUG] Script dir: {os.path.dirname(os.path.abspath(__file__))}")
+print(f"[FONT-DEBUG] fonts/ exists: {os.path.exists('fonts/ComicNeue-Bold.ttf')}")
+print(f"[FONT-DEBUG] /app/fonts/ exists: {os.path.exists('/app/fonts/ComicNeue-Bold.ttf')}")
+_script_dir = os.path.dirname(os.path.abspath(__file__))
+print(f"[FONT-DEBUG] script-relative exists: {os.path.exists(os.path.join(_script_dir, 'fonts', 'ComicNeue-Bold.ttf'))}")
 import base64
 import google.generativeai as genai
 import json
