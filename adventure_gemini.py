@@ -1238,14 +1238,11 @@ CONTENT:
 The user has chosen a specific writing style: "{writing_style}"
 Adapt ALL story text to match this style:
 - If "Rhyming": Every episode's story_text should rhyme. Use couplets or AABB rhyme schemes. Make it flow like a poem.
-- If "Funny": Maximize humor — puns, physical comedy, absurd situations, ironic narration. Make the parent laugh too.
-- If "Adventurous": High stakes, cliffhangers between episodes, brave choices, exciting action verbs.
 - If "Gentle": Soft, calming language. Quiet moments of wonder. Cozy settings. Warm resolutions.
 - If "Silly": Over-the-top nonsense, made-up words, ridiculous situations, characters being goofy.
 - If "Repetition": Use a repeating phrase or pattern that builds across episodes — like "He tried and he tried but it STILL wouldn't work!" The phrase should evolve slightly each time, building anticipation. Think We're Going on a Bear Hunt or The Gruffalo. Kids love predicting what comes next.
 - If "Call and Response": Write with questions and answers that a parent and child can read together — "Did Simon give up? NO HE DIDN'T! Did Simon run away? NO HE DIDN'T! Did Simon save the day? YES HE DID!" Each episode should have at least one call-and-response moment.
 - If "Suspenseful": End each episode (except the last) on a mini cliffhanger. Use dramatic pauses, "And then...", "But what they didn't know was...", "Behind the door was something NOBODY expected." Build tension across episodes.
-- If "Song-like": Write with a repeating chorus that appears in every episode, with verses that change. Should feel singable and rhythmic, like a nursery rhyme or campfire song. The chorus ties the whole story together.
 - For any other style: interpret it naturally and apply it consistently across all episodes.
 This style should permeate the story_text, episode titles, and theme descriptions.
 """
@@ -1575,25 +1572,6 @@ async def generate_story_for_theme(
   * Dialogue can break the rhyme scheme briefly — a character speaking doesn't need to rhyme
   * DO NOT sacrifice story quality for rhyme. If you can't make a plot point rhyme naturally, use a short prose bridge and resume rhyming
   * Example quality: "Mr Oink marched down the street, with muddy prints on both his feet. He knocked on doors, he rang each bell — but everyone just ran pell-mell!" """,
-            "Funny": """This story MUST make the parent laugh out loud. Use these techniques in EVERY episode:
-  * Ironic narration: "This was, without a doubt, the WORST idea anyone had ever had. Naturally, they did it anyway."
-  * Physical comedy: Things falling, splashing, bouncing off heads, getting stuck in ridiculous positions
-  * Contrast humor: A tiny character trying something enormous, or a serious character in an absurd situation
-  * Running gags: One joke that gets funnier each time it happens across episodes
-  * Funny dialogue: Characters saying exactly the wrong thing at the wrong time
-  * Comic timing: Short punchy sentences after a build-up. "They pulled. They tugged. They heaved. It was the wrong door."
-  * At least ONE moment per episode that would make a 5-year-old belly laugh
-  * The humor should come from CHARACTER and SITUATION, not random wackiness. A grumpy character trying to be nice is funny. A character just falling over for no reason is not.""",
-            "Adventurous": """This story should feel like a mini adventure movie. Every episode raises the stakes and pushes the character further.
-  USE THESE TECHNIQUES:
-  * High-energy action verbs: "LEAPT across", "SCRAMBLED up", "DIVED under" — not "went to" or "walked over"
-  * Cliffhanger beats: End episodes 1-4 with a moment of tension or a new challenge appearing. "And just when they thought it was safe..."
-  * Brave choices: The character must make at least 2 decisions that feel genuinely brave or risky across the story
-  * Danger that feels real (but age-appropriate): A ticking clock, a narrowing escape route, something chasing them, a bridge about to break
-  * Sensory details for immersion: "The wind howled. The branches creaked." — put the reader IN the scene
-  * The character should earn their victory through courage and cleverness, not luck
-  * Pacing: Short punchy sentences during action ("Run. NOW."), longer sentences during quiet moments before the next challenge
-  * Example quality: "The rope bridge swayed. One step. Two steps. CRACK! The plank beneath Mr Oink's foot snapped clean in half!" """,
             "Gentle": """This story should feel like a warm hug. Soft, calming, cozy — a bedtime story that leaves the child feeling safe and happy.
   USE THESE TECHNIQUES:
   * Soft sensory language: "The warm breeze whispered through the leaves", "Soft golden light danced on the water"
@@ -1650,20 +1628,6 @@ async def generate_story_for_theme(
   * The resolution should EARN the relief — the scarier the build-up, the more satisfying the ending
   * Keep it age-appropriate: The tension comes from mystery and uncertainty, NOT from anything genuinely frightening
   * Example quality: "Mr Oink tiptoed closer. Closer. The door handle was cold. He turned it slowly... slowly... CREEEEAK." """,
-            "Song-like": """Write with a repeating CHORUS that appears in every episode, with changing VERSES around it. The story should feel singable and rhythmic, like a nursery rhyme or campfire song.
-  USE THESE TECHNIQUES:
-  * A clear CHORUS of 2-4 lines that repeats in EVERY episode — same words, same rhythm each time. This is the anchor.
-  * VERSES that change each episode to tell the story — new events, new challenges, but same rhythmic feel
-  * The chorus should be catchy and simple enough that a child memorises it by episode 3 and sings along
-  * Musical rhythm: Read it aloud — could you clap along? If not, adjust the syllable count
-  * The chorus should connect to the theme: "Stir it up, stir it round, the best cake in town!" or "Stomp stomp stomp, here we go, through the mud and through the snow!"
-  * Verses can include dialogue and story progression, but should maintain the rhythmic feel
-  * The final chorus can have a small twist or addition that gives it a sense of completion
-  * Example quality:
-    Chorus: "Mix it up, mix it round, the silliest cake in town!"
-    Episode 1 verse: "Mr Oink got a bowl, a spoon, and a dream..."
-    Episode 3 verse: "The sugar was salt, the milk was cream..."
-    Final chorus: "Mix it up, mix it round — the BEST cake in town!" """,
         }
         style_detail = style_descriptions.get(writing_style, f"Interpret '{writing_style}' naturally and apply consistently.")
         
@@ -1675,14 +1639,6 @@ async def generate_story_for_theme(
             "Rhyming": {
                 "young": "FOR THIS YOUNG AGE: You MUST still rhyme — but use simple nursery rhyme patterns with very short lines. 'Hop hop hop, time to stop! Splish splosh splish, found a fish!' Short bouncy couplets. One or two couplets per episode is enough. Sound effects can be the rhyming words. The rhyme is MORE important at this age, not less — toddlers love rhythm and rhyme above all else.",
                 "older": "FOR THIS OLDER AGE: Use more sophisticated rhyming. Internal rhymes, varied line lengths, occasional half-rhymes for effect. Can sustain 3-4 couplets per episode. Wordplay and clever rhymes over simple ones."
-            },
-            "Funny": {
-                "young": "FOR THIS YOUNG AGE: Humour should be physical and visual — things falling, splashing, bouncing, getting stuck. Silly sounds and silly words. Slapstick over irony. 'SPLAT went the cake — right on Daddy's head!' No wordplay or sarcasm.",
-                "older": "FOR THIS OLDER AGE: Use irony, wordplay, running gags, and comic timing. Understated humour works well. Characters can be sarcastic or deadpan. 'This was, objectively speaking, the worst plan in the history of plans. They did it anyway.'"
-            },
-            "Adventurous": {
-                "young": "FOR THIS YOUNG AGE: Adventure means simple quests — finding, chasing, reaching. 'Let's GO! Over the hill! Through the puddle! FOUND IT!' Danger is peek-a-boo level — something hidden, a funny noise, a wobbly bridge. Never genuinely scary.",
-                "older": "FOR THIS OLDER AGE: Raise the stakes. Genuine tension, tough choices, near-misses. Characters can feel real fear and make brave decisions. Pacing can slow down for suspense then burst with action. More complex obstacles requiring clever solutions."
             },
             "Gentle": {
                 "young": "FOR THIS YOUNG AGE: Lullaby simplicity. 'Soft, soft, soft went the rain. Warm, warm, warm went the blanket.' Repeated soothing words. Bedtime rhythm. Almost no conflict — just gentle discovery and comfort.",
@@ -1703,10 +1659,6 @@ async def generate_story_for_theme(
             "Suspenseful": {
                 "young": "FOR THIS YOUNG AGE: Suspense means peek-a-boo and hide-and-seek tension. 'What's behind the door? One... two... THREE! A BUNNY!' Keep it exciting, never scary. The 'danger' should always be silly or immediately resolved. Short breath-holding moments only.",
                 "older": "FOR THIS OLDER AGE: Build genuine mystery. Red herrings, unreliable clues, multiple suspects. Cliffhangers can be more dramatic. Characters can sit with uncertainty. The atmosphere can be genuinely eerie (dark forest, strange sounds) as long as the resolution is reassuring."
-            },
-            "Song-like": {
-                "young": "FOR THIS YOUNG AGE: The chorus should be 1-2 lines max, instantly singable. Think 'Row Row Row Your Boat' simplicity. Verses should use the same melody pattern with just one or two words changed. A toddler should be able to sing the chorus after hearing it once.",
-                "older": "FOR THIS OLDER AGE: The chorus can be longer (3-4 lines) with a bridge section that appears once. Verses can tell more story. The musicality should feel like a real song with verse-chorus-verse structure. Can reference specific melodies or rhythmic patterns."
             },
         }
         
