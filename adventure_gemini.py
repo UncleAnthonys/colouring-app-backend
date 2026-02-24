@@ -1667,7 +1667,7 @@ async def generate_story_for_theme(
         
         age_style_modifiers = {
             "Rhyming": {
-                "young": "FOR THIS YOUNG AGE: Use simple nursery rhyme patterns with very short lines. 'Hop hop hop, time to stop! Splish splosh splish, found a fish!' Prioritise bouncy rhythm over complex rhyme. One couplet per episode max. Sound effects count as rhyming words.",
+                "young": "FOR THIS YOUNG AGE: You MUST still rhyme — but use simple nursery rhyme patterns with very short lines. 'Hop hop hop, time to stop! Splish splosh splish, found a fish!' Short bouncy couplets. One or two couplets per episode is enough. Sound effects can be the rhyming words. The rhyme is MORE important at this age, not less — toddlers love rhythm and rhyme above all else.",
                 "older": "FOR THIS OLDER AGE: Use more sophisticated rhyming. Internal rhymes, varied line lengths, occasional half-rhymes for effect. Can sustain 3-4 couplets per episode. Wordplay and clever rhymes over simple ones."
             },
             "Funny": {
@@ -1818,6 +1818,68 @@ STORY PLAN:
 ⚠️ ONE PROBLEM RULE: This story has ONE central problem, not two. The OBSTACLE is the problem. The TWIST is the solution to THAT SAME problem. Episodes 2-3 must show the OBSTACLE getting worse. Episodes 4-5 must show the TWIST solving THAT SAME OBSTACLE. Do not introduce a new unrelated problem partway through. Every episode must be about the same struggle. If the obstacle is about the coat knocking things down, the resolution must be about the coat NOT knocking things down or the knocking becoming useful — not about solving a completely different issue.
 """
 
+    # Build age-appropriate story structure
+    young_pattern_ages = ["age_2", "age_3"]
+    transitional_age = ["age_4"]
+    
+    if age_level in young_pattern_ages:
+        story_structure = f"""*** STORY STRUCTURE — REPEATING PATTERN (for ages 2-3) ***
+⚠️ THIS IS NOT A NARRATIVE ARC. Do NOT write a problem→setback→resolution story. Children this age don't follow plot — they follow PATTERNS.
+
+Structure: The SAME thing happens in episodes 1-4 with ONE thing different each time. Episode 5 is the satisfying payoff.
+
+HOW IT WORKS:
+- Episode 1: Establish a simple situation and a PATTERN. The character encounters something and the same outcome happens. Example: "{character_name}'s bow tie flew to a DOG! Is that {character_name}'s bow tie? That's not YOUR bow tie, dog! WHOOSH — off it flew!"
+- Episode 2: SAME pattern, different thing. "{character_name}'s bow tie flew to a CAT! Is that {character_name}'s bow tie? That's not YOUR bow tie, cat! WHOOSH — off it flew!"
+- Episode 3: SAME pattern, different thing, maybe BIGGER or SILLIER. "{character_name}'s bow tie flew to an ELEPHANT! Is that {character_name}'s bow tie? That's not YOUR bow tie, elephant! WHOOSH — off it flew!"
+- Episode 4: SAME pattern but something CHANGES — a twist on the pattern. The child notices it's different. "{character_name}'s bow tie flew to... a BUTTERFLY! The butterfly didn't let go! It flew it RIGHT BACK to {character_name}!"
+- Episode 5: Resolution. Short, warm, satisfying. Callback to the pattern. "{character_name}'s bow tie was back! No more WHOOSH! {character_name} smiled the BIGGEST smile."
+
+KEY RULES:
+- Use the EXACT SAME repeated phrase in episodes 1-3 (with only the subject changing)
+- A child hearing this should be SHOUTING the repeated phrase by episode 3
+- Each episode introduces ONE new animal/character/object — that's the variety
+- Sound effects are essential in the repeated phrase
+- Episode 4 BREAKS the pattern in a satisfying way
+- Episode 5 is short and warm
+
+The supporting characters should be the things/animals/objects the character encounters in each episode — NOT complex characters with backstories. Just "a dog", "a cat", "an elephant" etc. Include species/size in brackets for the scene_description.
+
+Think: Dear Zoo, Brown Bear Brown Bear, We're Going on a Bear Hunt, Each Peach Pear Plum."""
+    elif age_level in transitional_age:
+        story_structure = f"""*** STORY STRUCTURE — SIMPLE PATTERN WITH ARC (for age 4) ***
+This age is transitional. Use a REPEATING PATTERN but with a simple problem→solution thread running through it.
+
+Structure: Like Three Billy Goats Gruff — same situation repeats but ESCALATES, then resolves.
+
+- Episode 1: Set up a simple problem. Introduce the character and what they want. ONE named supporting character with a fun personality (include species/size/accessories in brackets). Keep it simple.
+- Episode 2: First attempt to solve it. Same obstacle appears. A pattern begins.
+- Episode 3: Second attempt. Same pattern but BIGGER or SILLIER. The problem escalates.
+- Episode 4: Third attempt — but this time something different happens. A helper or a new idea. The pattern breaks.
+- Episode 5: Happy ending. Short and punchy. Connects back to episode 1.
+
+KEY RULES:
+- Still has repetition and pattern — kids this age still love predicting
+- But now there's a simple WHY (character wants something) and a resolution (they get it)
+- Emotions can be named simply: "{character_name} felt sad", "{character_name} felt brave"
+- ONE supporting character is enough — don't overcomplicate
+- Each episode should have clear cause and effect
+
+Think: The Gruffalo, Three Billy Goats Gruff, Goldilocks, The Tiger Who Came to Tea."""
+    else:
+        story_structure = f"""*** STORY STRUCTURE ***
+- Episode 1: Set up the problem AND establish WHY the character wants what they want. The reader must understand what happened BEFORE the story starts. If the character is apologising — show or explain what they did wrong. If they're searching — show what they lost. If they're helping — show why it matters to them. Introduce 2 named supporting characters with funny personalities (include species, size, accessories in brackets after each name). The companion character (if present) should react to the problem in their own way.
+- Episode 2: First attempt using the character's feature. Things start going wrong. The companion character's features or personality may contribute to the chaos.
+- Episode 3: SETBACK — but NOT always sad! Pick ONE setback style from below and commit to it:
+  * COMIC DISASTER: Everything goes hilariously, catastrophically wrong. Total chaos. Things flying, breaking, multiplying. The character isn't sad — they're overwhelmed by absurd mayhem. Think slapstick.
+  * SURPRISE REVERSAL: The character thinks they've fixed it, maybe even celebrates — then realises they haven't. Rug-pull moment. Emotion is shock, not sadness.
+  * ESCALATION: The problem gets BIGGER and WILDER. One mess becomes ten. One escaped animal becomes twenty. Character is frantically trying to contain the chaos, not sitting down crying.
+  * TICKING CLOCK: They run out of time, or something urgent forces a deadline. Panic and urgency, not defeat.
+  * EMOTIONAL MOMENT: Genuine sadness or frustration. Character sits with the failure. Quiet, intimate. USE THIS SPARINGLY — not every story needs a cry.
+  The setback must still make the OBSTACLE worse. But the TONE and ENERGY should vary. Not every setback is a child sitting alone looking sad.
+- Episode 4: Creative solution — uses feature DIFFERENTLY based on the twist. The companion character OR a supporting character helps or suggests the new approach. The companion's own features might be key to the solution.
+- Episode 5: Resolution that connects back to episode 1. Short and punchy ending. Do NOT summarise or moralise."""
+
     prompt = f'''You are writing a complete 5-episode story for a children's coloring book app.
 {style_theme_block}
 CHARACTER: {character_name}
@@ -1836,18 +1898,7 @@ If the "feature used" describes a physical body trait, treat it as a minor chara
 
 {age_guide}
 
-*** STORY STRUCTURE ***
-- Episode 1: Set up the problem AND establish WHY the character wants what they want. The reader must understand what happened BEFORE the story starts. If the character is apologising — show or explain what they did wrong. If they're searching — show what they lost. If they're helping — show why it matters to them. Introduce 2 named supporting characters with funny personalities (include species, size, accessories in brackets after each name). The companion character (if present) should react to the problem in their own way.
-- Episode 2: First attempt using the character's feature. Things start going wrong. The companion character's features or personality may contribute to the chaos.
-- Episode 3: SETBACK — but NOT always sad! Pick ONE setback style from below and commit to it:
-  * COMIC DISASTER: Everything goes hilariously, catastrophically wrong. Total chaos. Things flying, breaking, multiplying. The character isn't sad — they're overwhelmed by absurd mayhem. Think slapstick.
-  * SURPRISE REVERSAL: The character thinks they've fixed it, maybe even celebrates — then realises they haven't. Rug-pull moment. Emotion is shock, not sadness.
-  * ESCALATION: The problem gets BIGGER and WILDER. One mess becomes ten. One escaped animal becomes twenty. Character is frantically trying to contain the chaos, not sitting down crying.
-  * TICKING CLOCK: They run out of time, or something urgent forces a deadline. Panic and urgency, not defeat.
-  * EMOTIONAL MOMENT: Genuine sadness or frustration. Character sits with the failure. Quiet, intimate. USE THIS SPARINGLY — not every story needs a cry.
-  The setback must still make the OBSTACLE worse. But the TONE and ENERGY should vary. Not every setback is a child sitting alone looking sad.
-- Episode 4: Creative solution — uses feature DIFFERENTLY based on the twist. The companion character OR a supporting character helps or suggests the new approach. The companion's own features might be key to the solution.
-- Episode 5: Resolution that connects back to episode 1. Short and punchy ending. Do NOT summarise or moralise.
+{story_structure}
 
 *** SCENE DESCRIPTIONS ***
 - Start each with LOCATION: "In the kitchen...", "At the park..."
@@ -1893,25 +1944,23 @@ NARRATIVE FLOW: Each scene must feel like a CONTINUATION of the previous page. I
 
 *** EMOTION RULES ***
 - Use at LEAST 3 DIFFERENT emotions across 5 episodes
-- Episodes 1-3 should ESCALATE (e.g. curious → worried → scared)
-- Episode 3 MUST NOT be happy or excited
 - Episode 5 should be happy, proud, or excited
 - Emotions: nervous, excited, scared, determined, happy, curious, sad, proud, worried, surprised, embarrassed, panicked
 
 *** NON-NEGOTIABLE RULES ***
-1. At least 2 named supporting characters throughout
-2. SETBACK on episode 3
-3. Dialogue in at least 3 of 5 episodes
-4. Episode 5 resolves the specific problem from episode 1
-5. The feature should NOT directly fix the problem alone — a supporting character helps or the character learns to use it differently
+1. Episode 5 resolves the specific problem/situation from episode 1
+2. Respect the age guide word limits — COUNT YOUR WORDS
+3. Use the character's NAME not pronouns
+4. Scene descriptions must specify camera angle, physical action, and position in frame
+5. Every story_text must match the chosen WRITING STYLE
 
 ⚠️ SELF-CHECK BEFORE WRITING:
 Before you write, verify your plan:
-1. Does the TWIST solve the OBSTACLE? (Not a different problem — the SAME one)
-2. Does episode 3's setback make the OBSTACLE worse? (Not introduce something new)
-3. Does episode 4's solution come from the TWIST? (Not a random new idea)
-4. Is the story about ONE problem from start to finish?
-5. Could a 5-year-old answer "WHY does the character want this?" from episode 1? If not, add the reason.
+1. Does the story follow the STORY STRUCTURE instructions above? (Pattern-based for young ages, narrative arc for older ages)
+2. Does episode 5 resolve or complete what started in episode 1?
+3. Is the story about ONE thing from start to finish? (Not two unrelated problems)
+4. Does every episode's story_text stay within the word limit?
+5. Does the writing style match what was requested?
 If any answer is NO, fix your plan before writing.
 
 ⚠️ CRITICAL WORD LIMIT: Each story_text MUST respect the age guide word limit above. COUNT YOUR WORDS. If an episode's story_text exceeds the limit, CUT IT DOWN. Short punchy text is ALWAYS better than long rambling text. This text appears below an illustration on a single page — if it's too long it runs off the page and is unreadable.
