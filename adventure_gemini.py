@@ -1627,6 +1627,7 @@ Characters should have distinct voices when they speak.""")
 Weave this life lesson naturally into the story: "{life_lesson}".
 The character should EXPERIENCE this lesson through what happens — not through lecturing.
 The lesson should emerge from the story events, especially through the setback in episode 3 and the resolution in episodes 4-5.
+At least ONE episode's story_text must have a moment where the character EXPLICITLY feels or talks about {life_lesson} — through dialogue, internal thought, or a clear action that demonstrates it. "Naturally" does not mean "invisible" — the reader should be able to point to a specific moment and say "that's the {life_lesson} part."
 """
     if custom_theme:
         style_theme_block += f"""
@@ -1727,12 +1728,7 @@ Each of the 5 episodes MUST have a visually distinct composition. The scene_desc
 MANDATORY CAMERA PATTERN:
 - Episode 1: WIDE ESTABLISHING SHOT — show the full location. Characters are small (20-30% of frame). Lots of environment detail. This is the "setting the scene" shot.
 - Episode 2: MEDIUM ACTION SHOT — characters bigger (40-50%), actively DOING something physical. A different part of the location from episode 1. Characters are IN MOTION.
-- Episode 3: SETBACK SHOT — camera angle MUST match the setback type:
-  * If COMIC DISASTER or ESCALATION: WIDE CHAOS SHOT — pull back to show the full mess. Things scattered everywhere, multiple characters reacting, visual comedy. Character is 30-40% of frame surrounded by mayhem.
-  * If SURPRISE REVERSAL: MEDIUM REACTION SHOT — character in the moment of realising. Show both the character's face AND what went wrong. 40-50% of frame.
-  * If TICKING CLOCK: DYNAMIC ACTION SHOT — character running, reaching, scrambling. Motion and urgency. Low or tilted angle to add drama.
-  * If EMOTIONAL MOMENT: CLOSE-UP — character's face and upper body fill 60%+ of frame. Minimal background. Intimate and quiet.
-  Do NOT default to close-up sad face every time. The visual variety of episode 3 across different storybooks is critical.
+- Episode 3: CLOSE-UP EMOTIONAL SHOT — character's face and upper body fill 60%+ of the frame. Minimal background. Focus on the SETBACK emotion. This should feel intimate and different from every other page.
 - Episode 4: DYNAMIC ANGLE — overhead view looking DOWN, or low angle looking UP, or dramatic side angle. Characters in active motion. Different area of the setting.
 - Episode 5: NEW LOCATION OR DRAMATICALLY DIFFERENT VIEW — move to a new place for resolution. If same location, show it from the OPPOSITE angle. This must feel fresh.
 
