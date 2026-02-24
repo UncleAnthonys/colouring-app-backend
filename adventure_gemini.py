@@ -190,11 +190,12 @@ def create_front_cover(image_b64: str, full_title: str, character_name: str) -> 
     
     # Try fonts in order of preference (children's book → clean bold → default)
     title_font_candidates = [
-        "/usr/share/fonts/truetype/comic-neue/ComicNeue-Bold.ttf",       # Comic Neue (if installed)
-        "/usr/share/fonts/truetype/fonts-comic-neue/ComicNeue-Bold.ttf",  # Alternative path
-        "/app/fonts/ComicNeue-Bold.ttf",                                   # Bundled in repo (Render)
-        "fonts/ComicNeue-Bold.ttf",                                            # Bundled in repo (local)
-        os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts", "ComicNeue-Bold.ttf"),  # Relative to script
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts", "LilitaOne-Regular.ttf"),
+        "/app/fonts/LilitaOne-Regular.ttf",
+        "fonts/LilitaOne-Regular.ttf",
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts", "ComicNeue-Bold.ttf"),
+        "/app/fonts/ComicNeue-Bold.ttf",
+        "fonts/ComicNeue-Bold.ttf",
         "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",          # Fallback
     ]
     subtitle_font_candidates = [
