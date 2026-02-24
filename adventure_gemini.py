@@ -1559,7 +1559,16 @@ async def generate_story_for_theme(
     style_theme_block = ""
     if writing_style:
         style_descriptions = {
-            "Rhyming": "Every episode rhymes (couplets/AABB). Make it flow like a poem. Rhythm and rhyme should feel natural, not forced.",
+            "Rhyming": """Every episode MUST rhyme in couplets (AABB pattern). The rhythm and rhyme should feel NATURAL, like a real children's book poet wrote it — not forced or awkward.
+  USE THESE TECHNIQUES:
+  * Consistent meter: Each line should have a similar beat/syllable count. Read it aloud — does it bounce? If not, rewrite.
+  * Natural word order: "The cake fell SPLAT upon the floor" NOT "Upon the floor the cake did fall" — don't twist sentences just to make them rhyme
+  * Strong rhymes: Use real rhymes (cat/hat, blue/flew), not near-rhymes (gone/room) or forced ones
+  * Sound effects still work: "CRASH went the plates, BANG went the door — now there was cake upon the floor!"
+  * Vary line length for drama: Short lines for impact ("And then... SPLAT!"), longer lines for storytelling
+  * Dialogue can break the rhyme scheme briefly — a character speaking doesn't need to rhyme
+  * DO NOT sacrifice story quality for rhyme. If you can't make a plot point rhyme naturally, use a short prose bridge and resume rhyming
+  * Example quality: "Mr Oink marched down the street, with muddy prints on both his feet. He knocked on doors, he rang each bell — but everyone just ran pell-mell!" """,
             "Funny": """This story MUST make the parent laugh out loud. Use these techniques in EVERY episode:
   * Ironic narration: "This was, without a doubt, the WORST idea anyone had ever had. Naturally, they did it anyway."
   * Physical comedy: Things falling, splashing, bouncing off heads, getting stuck in ridiculous positions
@@ -1567,11 +1576,54 @@ async def generate_story_for_theme(
   * Running gags: One joke that gets funnier each time it happens across episodes
   * Funny dialogue: Characters saying exactly the wrong thing at the wrong time
   * Comic timing: Short punchy sentences after a build-up. "They pulled. They tugged. They heaved. It was the wrong door."
-  * At least ONE moment per episode that would make a 5-year-old belly laugh""",
-            "Adventurous": "High stakes, cliffhangers, brave choices, exciting action verbs. Each episode should feel like an adventure movie. Heart-pounding moments, narrow escapes, bold decisions.",
-            "Gentle": "Soft, calming language. Quiet moments of wonder. Cozy settings. Warm resolutions. Like being wrapped in a blanket. Soothing rhythm to the words.",
-            "Silly": "Over-the-top nonsense, made-up words, ridiculous situations, characters being goofy. The more absurd the better. Embrace chaos and fun.",
-            "Repetition": "Use a repeating phrase that builds across episodes. The phrase evolves slightly each time. Think We're Going on a Bear Hunt. Kids love predicting what comes next.",
+  * At least ONE moment per episode that would make a 5-year-old belly laugh
+  * The humor should come from CHARACTER and SITUATION, not random wackiness. A grumpy character trying to be nice is funny. A character just falling over for no reason is not.""",
+            "Adventurous": """This story should feel like a mini adventure movie. Every episode raises the stakes and pushes the character further.
+  USE THESE TECHNIQUES:
+  * High-energy action verbs: "LEAPT across", "SCRAMBLED up", "DIVED under" — not "went to" or "walked over"
+  * Cliffhanger beats: End episodes 1-4 with a moment of tension or a new challenge appearing. "And just when they thought it was safe..."
+  * Brave choices: The character must make at least 2 decisions that feel genuinely brave or risky across the story
+  * Danger that feels real (but age-appropriate): A ticking clock, a narrowing escape route, something chasing them, a bridge about to break
+  * Sensory details for immersion: "The wind howled. The branches creaked." — put the reader IN the scene
+  * The character should earn their victory through courage and cleverness, not luck
+  * Pacing: Short punchy sentences during action ("Run. NOW."), longer sentences during quiet moments before the next challenge
+  * Example quality: "The rope bridge swayed. One step. Two steps. CRACK! The plank beneath Mr Oink's foot snapped clean in half!" """,
+            "Gentle": """This story should feel like a warm hug. Soft, calming, cozy — a bedtime story that leaves the child feeling safe and happy.
+  USE THESE TECHNIQUES:
+  * Soft sensory language: "The warm breeze whispered through the leaves", "Soft golden light danced on the water"
+  * Slow pacing: Let moments breathe. Don't rush from one event to the next. Describe the quiet details.
+  * Cozy settings: Warm kitchens, soft blankets, gentle rain outside a window, a garden on a still afternoon
+  * Emotions described gently: "A small, wobbly feeling grew in Mr Oink's tummy" rather than "Mr Oink was scared"
+  * Nature and seasons: Falling leaves, snow settling, flowers opening, stars appearing
+  * The setback should be quiet disappointment, not chaos: Something doesn't work, something goes missing, a friend is sad
+  * Resolution through kindness, patience, or quiet understanding — not through big dramatic action
+  * Repetitive soothing phrases: "And everything was just right" or "Soft and warm and still"
+  * Example quality: "The last leaf floated down, slow and easy, and landed right on Mr Oink's nose. He blinked. Then he smiled — just a little." """,
+            "Silly": """This story should be ABSURD. Over-the-top, ridiculous, chaotic, and gleefully nonsensical. The kind of story where kids are shrieking with laughter.
+  USE THESE TECHNIQUES:
+  * Made-up words: "flibbertigibbet", "splonktacular", "wobbledy-bonk" — invent silly words and use them confidently
+  * Ridiculous escalation: Things don't just go wrong, they go IMPOSSIBLY wrong. One sandwich becomes a hundred. A small puddle becomes a lake. A tiny noise becomes an earthquake.
+  * Absurd characters: Supporting characters with ridiculous traits — a fish who's afraid of water, a bird who can't remember how to fly, a chef who only cooks invisible food
+  * Physical slapstick in the text: "BONK! Right on the head. SPLAT! Right in the face. WHOMP! Right on the bottom."
+  * Breaking expectations: Set up something serious, then make it completely silly. "The king stood up. He cleared his throat. He opened his mouth and said... 'BAAAA!' He was actually a sheep."
+  * Character reactions should be exaggerated: Eyes popping, jaws dropping, spinning around in circles
+  * NEVER explain the joke. Let the absurdity speak for itself.
+  * Example quality: "The cake didn't just fall. It BOUNCED. Off the table, off the cat, off the ceiling, and — SPLODGE — right onto the mayor's hat. 'Delicious hat,' said the mayor." """,
+            "Repetition": """Use a repeating phrase or pattern that builds across ALL 5 episodes. The phrase should evolve slightly each time, getting bigger or changing meaning. Think "We're Going on a Bear Hunt" or "Brown Bear, Brown Bear."
+  USE THESE TECHNIQUES:
+  * ONE core phrase that appears in EVERY episode — not a different phrase each time
+  * The phrase EVOLVES: It gets longer, louder, or changes meaning as the story progresses
+    - Episode 1: "Not yet, not yet!"
+    - Episode 2: "Not yet, NOT YET!"
+    - Episode 3: "NOT YET, NOT YET — oh no, too late!"
+    - Episode 4: "Not yet... wait... almost..."
+    - Episode 5: "NOW! RIGHT NOW!"
+  * The phrase should feel like a drumbeat — kids should be ANTICIPATING it on each page and joining in
+  * Surrounding text can vary freely, but the repeated element must anchor each episode
+  * The phrase should connect to the story's emotional arc: hopeful at start, desperate in the middle, triumphant at the end
+  * Consider call-backs: The final episode's version of the phrase should echo the first but with a twist
+  * AVOID just repeating the same sentence identically — that's boring. The repetition must BUILD.
+  * Example quality: Episode 1: "Shake, shake, shake — nothing happened." Episode 3: "SHAKE, SHAKE, SHAKE — everything happened AT ONCE!" Episode 5: "One tiny shake... and it was perfect." """,
             "Call and Response": """Write interactive text where the parent reads a line and the child responds. But NOT just "Was X? YES!" over and over — that's boring for age 4+.
   USE THESE TECHNIQUES:
   * Varied question types: "What do you think happened next?", "And WHO was standing behind the tree?", "How many sandwiches fell? Count them!"
@@ -1581,8 +1633,31 @@ async def generate_story_for_theme(
   * Physical participation: "Can you shake like Incy? SHAKE SHAKE SHAKE!" or "Blow on the page to help!"
   * NEVER use more than 2 yes/no questions per episode. Mix in open questions, finish-the-sentence moments, and refrains.
   * The interaction should feel like a GAME between parent and child, not a quiz with one-word answers.""",
-            "Suspenseful": 'Build tension throughout. End episodes 1-4 on mini cliffhangers. "And behind the door was..." Use short sentences for tension. Longer sentences for relief. Keep the reader desperate to turn the page.',
-            "Song-like": "Include a repeating chorus in every episode with changing verses. Should feel singable and rhythmic, like a nursery rhyme or campfire song. The chorus ties the whole story together.",
+            "Suspenseful": """Build genuine tension throughout the story. Each page should make the reader DESPERATE to turn to the next one.
+  USE THESE TECHNIQUES:
+  * End episodes 1-4 on mini cliffhangers: "And behind the door was..." / "But then they heard a sound..." / "The light flickered and went OUT."
+  * Short sentences for tension: "It was dark. Very dark. Something moved." — let the gaps between sentences create fear
+  * Longer sentences for relief: When tension breaks, let the prose flow and breathe
+  * Sensory dread: "A cold drip landed on Mr Oink's ear. Then another. Then another." — build unease through small details
+  * False relief: Something seems safe... then it ISN'T. "They laughed. They relaxed. Then the floor began to SHAKE."
+  * Countdown pressure: "Three doors. Two were wrong. One chance." / "The clock showed five minutes. Then four."
+  * The resolution should EARN the relief — the scarier the build-up, the more satisfying the ending
+  * Keep it age-appropriate: The tension comes from mystery and uncertainty, NOT from anything genuinely frightening
+  * Example quality: "Mr Oink tiptoed closer. Closer. The door handle was cold. He turned it slowly... slowly... CREEEEAK." """,
+            "Song-like": """Write with a repeating CHORUS that appears in every episode, with changing VERSES around it. The story should feel singable and rhythmic, like a nursery rhyme or campfire song.
+  USE THESE TECHNIQUES:
+  * A clear CHORUS of 2-4 lines that repeats in EVERY episode — same words, same rhythm each time. This is the anchor.
+  * VERSES that change each episode to tell the story — new events, new challenges, but same rhythmic feel
+  * The chorus should be catchy and simple enough that a child memorises it by episode 3 and sings along
+  * Musical rhythm: Read it aloud — could you clap along? If not, adjust the syllable count
+  * The chorus should connect to the theme: "Stir it up, stir it round, the best cake in town!" or "Stomp stomp stomp, here we go, through the mud and through the snow!"
+  * Verses can include dialogue and story progression, but should maintain the rhythmic feel
+  * The final chorus can have a small twist or addition that gives it a sense of completion
+  * Example quality:
+    Chorus: "Mix it up, mix it round, the silliest cake in town!"
+    Episode 1 verse: "Mr Oink got a bowl, a spoon, and a dream..."
+    Episode 3 verse: "The sugar was salt, the milk was cream..."
+    Final chorus: "Mix it up, mix it round — the BEST cake in town!" """,
         }
         style_detail = style_descriptions.get(writing_style, f"Interpret '{writing_style}' naturally and apply consistently.")
         style_theme_block += f"""
