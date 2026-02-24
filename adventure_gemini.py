@@ -1900,7 +1900,7 @@ KEY RULES:
 Think: The Gruffalo, Three Billy Goats Gruff, Goldilocks, The Tiger Who Came to Tea."""
     else:
         story_structure = f"""*** STORY STRUCTURE ***
-- Episode 1: Set up the problem AND establish WHY the character wants what they want. The reader must understand what happened BEFORE the story starts. If the character is apologising — show or explain what they did wrong. If they're searching — show what they lost. If they're helping — show why it matters to them. Introduce 2 named supporting characters with funny personalities (include species, size, accessories in brackets after each name). The companion character (if present) should react to the problem in their own way.
+- Episode 1: Set up the problem AND establish WHY the character wants what they want. The reader must understand what happened BEFORE the story starts. If the character is apologising — show or explain what they did wrong. If they're searching — show what they lost. If they're helping — show why it matters to them. Introduce 2 named supporting characters with funny personalities (in scene_description, include species/size/accessories in brackets after each name — but NEVER in story_text). The companion character (if present) should react to the problem in their own way.
 - Episode 2: First attempt using the character's feature. Things start going wrong. The companion character's features or personality may contribute to the chaos.
 - Episode 3: SETBACK — but NOT always sad! Pick ONE setback style from below and commit to it:
   * COMIC DISASTER: Everything goes hilariously, catastrophically wrong. Total chaos. Things flying, breaking, multiplying. The character isn't sad — they're overwhelmed by absurd mayhem. Think slapstick.
@@ -1939,7 +1939,7 @@ If the "feature used" describes a physical body trait, treat it as a minor chara
 - Include character's BODY LANGUAGE
 - 3-4 background objects to colour
 - SUPPORTING CHARACTERS: Every time they appear, include species/size/accessories in brackets. Example: "Pip (small duck with bow tie)". NO COLOURS. Use SAME description each time.
-- IMPORTANT: The brackets with character descriptions are for scene_description ONLY. In story_text, just use the character's NAME — never include the bracketed description tags in story_text. Example: scene_description says "Pip (small duck with bow tie) runs over" but story_text says "Pip ran over".
+- CRITICAL: Bracketed character descriptions are for scene_description ONLY — NEVER in story_text. In story_text, introduce characters naturally through narrative: "A small duck in a bow tie waddled over. 'I'm Pip!' he said." NEVER write "Pip (small duck with bow tie)" or "Rangers Maya (tall woman with backpack)" in story_text. If you put brackets in story_text, the story is BROKEN.
 - If same location as previous episode, REPEAT key setting objects
 
 *** CRITICAL: SCENE VARIETY RULES (NON-NEGOTIABLE) ***
