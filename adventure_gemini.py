@@ -1555,7 +1555,13 @@ async def generate_story_for_theme(
     
     age_guide = age_guidelines.get(age_level, age_guidelines["age_5"])
     
-    # Build optional style/theme override block for full story
+    # Reinforce writing style within the age guide so it doesn't get overridden
+    if writing_style:
+        age_guide += f"""
+⚠️ STYLE REMINDER: The writing style "{writing_style}" MUST be applied to ALL story_text at this age level. The age guide above tells you HOW MUCH to write and what vocabulary to use — the writing style tells you HOW it should sound. Both apply simultaneously. Do NOT drop the style to simplify for the age."""
+        if writing_style == "Rhyming":
+            age_guide += """
+⚠️ RHYMING IS NON-NEGOTIABLE: Every episode MUST contain at least one rhyming couplet. Simple nursery-rhyme rhymes are PERFECT for young ages. Example for age 3: "The ball rolled IN with a PLOP and a PLIP! Pip started crying — 'My ball took a trip!' Incy looked at the bush, all prickly and mean. The sharpest and thorniest bush they had seen!" — This is simple vocabulary AND it rhymes. BOTH ARE POSSIBLE AT EVERY AGE."""
     style_theme_block = ""
     if writing_style:
         style_descriptions = {
