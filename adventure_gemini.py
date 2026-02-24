@@ -1660,12 +1660,66 @@ async def generate_story_for_theme(
     Final chorus: "Mix it up, mix it round — the BEST cake in town!" """,
         }
         style_detail = style_descriptions.get(writing_style, f"Interpret '{writing_style}' naturally and apply consistently.")
+        
+        # Age-aware style modifiers — adjust HOW the style is applied based on age bracket
+        young_ages = ["age_2", "age_3", "age_4"]
+        older_ages = ["age_8", "age_9", "age_10"]
+        
+        age_style_modifiers = {
+            "Rhyming": {
+                "young": "FOR THIS YOUNG AGE: Use simple nursery rhyme patterns with very short lines. 'Hop hop hop, time to stop! Splish splosh splish, found a fish!' Prioritise bouncy rhythm over complex rhyme. One couplet per episode max. Sound effects count as rhyming words.",
+                "older": "FOR THIS OLDER AGE: Use more sophisticated rhyming. Internal rhymes, varied line lengths, occasional half-rhymes for effect. Can sustain 3-4 couplets per episode. Wordplay and clever rhymes over simple ones."
+            },
+            "Funny": {
+                "young": "FOR THIS YOUNG AGE: Humour should be physical and visual — things falling, splashing, bouncing, getting stuck. Silly sounds and silly words. Slapstick over irony. 'SPLAT went the cake — right on Daddy's head!' No wordplay or sarcasm.",
+                "older": "FOR THIS OLDER AGE: Use irony, wordplay, running gags, and comic timing. Understated humour works well. Characters can be sarcastic or deadpan. 'This was, objectively speaking, the worst plan in the history of plans. They did it anyway.'"
+            },
+            "Adventurous": {
+                "young": "FOR THIS YOUNG AGE: Adventure means simple quests — finding, chasing, reaching. 'Let's GO! Over the hill! Through the puddle! FOUND IT!' Danger is peek-a-boo level — something hidden, a funny noise, a wobbly bridge. Never genuinely scary.",
+                "older": "FOR THIS OLDER AGE: Raise the stakes. Genuine tension, tough choices, near-misses. Characters can feel real fear and make brave decisions. Pacing can slow down for suspense then burst with action. More complex obstacles requiring clever solutions."
+            },
+            "Gentle": {
+                "young": "FOR THIS YOUNG AGE: Lullaby simplicity. 'Soft, soft, soft went the rain. Warm, warm, warm went the blanket.' Repeated soothing words. Bedtime rhythm. Almost no conflict — just gentle discovery and comfort.",
+                "older": "FOR THIS OLDER AGE: Poetic and reflective. Can explore quiet emotions — loneliness, nostalgia, wonder. Metaphor and imagery: 'The last leaf didn't fall — it floated, like it had somewhere important to be.' Gentle doesn't mean simple."
+            },
+            "Silly": {
+                "young": "FOR THIS YOUNG AGE: Maximum silliness through sounds and visuals. Made-up words are ESSENTIAL: 'wobbledy-bonk', 'splonk', 'flibberty-gibbets'. Toilet humour is fine — burps, splats, bottoms. Physical chaos over verbal cleverness.",
+                "older": "FOR THIS OLDER AGE: Absurdist humour. Fourth-wall breaks ('This story is going terribly wrong'). Subverted expectations — set up something serious then make it ridiculous. Characters can be self-aware about the absurdity."
+            },
+            "Repetition": {
+                "young": "FOR THIS YOUNG AGE: The repeated phrase should be VERY simple — 3-5 words max. It should barely change between episodes. Kids this age want to predict and chant along: 'Not in there! Not in THERE! NOT IN THERE!' Sameness is comfort.",
+                "older": "FOR THIS OLDER AGE: The repeated phrase can be longer and evolve more dramatically in meaning across episodes. It can shift from funny to serious and back. The repetition should feel like a literary device, not just a chant."
+            },
+            "Call and Response": {
+                "young": "FOR THIS YOUNG AGE: Keep questions VERY simple. 'Where's the ball? Is it HERE? Nooooo! Is it THERE? ... YESSS!' Mostly yes/no and where/who questions. Physical actions: 'Can you clap? CLAP CLAP CLAP!' The child should feel like they're playing a game.",
+                "older": "FOR THIS OLDER AGE: Questions can be more complex — 'What do you think will happen next?', 'Can you guess who was hiding?' Include moments where the reader predicts outcomes. Less physical participation, more intellectual engagement."
+            },
+            "Suspenseful": {
+                "young": "FOR THIS YOUNG AGE: Suspense means peek-a-boo and hide-and-seek tension. 'What's behind the door? One... two... THREE! A BUNNY!' Keep it exciting, never scary. The 'danger' should always be silly or immediately resolved. Short breath-holding moments only.",
+                "older": "FOR THIS OLDER AGE: Build genuine mystery. Red herrings, unreliable clues, multiple suspects. Cliffhangers can be more dramatic. Characters can sit with uncertainty. The atmosphere can be genuinely eerie (dark forest, strange sounds) as long as the resolution is reassuring."
+            },
+            "Song-like": {
+                "young": "FOR THIS YOUNG AGE: The chorus should be 1-2 lines max, instantly singable. Think 'Row Row Row Your Boat' simplicity. Verses should use the same melody pattern with just one or two words changed. A toddler should be able to sing the chorus after hearing it once.",
+                "older": "FOR THIS OLDER AGE: The chorus can be longer (3-4 lines) with a bridge section that appears once. Verses can tell more story. The musicality should feel like a real song with verse-chorus-verse structure. Can reference specific melodies or rhythmic patterns."
+            },
+        }
+        
+        style_modifier = ""
+        if writing_style in age_style_modifiers:
+            if age_level in young_ages:
+                style_modifier = age_style_modifiers[writing_style].get("young", "")
+            elif age_level in older_ages:
+                style_modifier = age_style_modifiers[writing_style].get("older", "")
+            # Middle ages (5-7) use the base description as-is — no modifier needed
+        
+        modifier_block = f"\n\n{style_modifier}" if style_modifier else ""
+        
         style_theme_block += f"""
 *** WRITING STYLE: {writing_style} ***
 The user chose "{writing_style}" style. Apply this to ALL story_text.
 DO NOT rhyme unless the style is "Rhyming". DO NOT use any other style — ONLY "{writing_style}".
 
-{style_detail}
+{style_detail}{modifier_block}
 """
     else:
         # Default style varies by age
