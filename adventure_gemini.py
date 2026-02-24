@@ -1355,7 +1355,7 @@ Each theme MUST use a DIFFERENT unique feature as the main plot device.
 
 *** CRITICAL: EVERY THEME MUST HAVE A CLEAR "WANT" ***
 Before writing each theme, define:
-- WANT: What does the character specifically want? (NOT vague like "help others" or "explore" — SPECIFIC like "rescue the stuck kitten" or "find their lost friend" or "win the sandcastle competition")
+- WANT: What does the character specifically want, and WHY? (NOT vague like "help others" or "explore" — SPECIFIC like "rescue the stuck kitten before the tide comes in" or "find their lost friend who wandered into the spooky forest" or "win the sandcastle competition to prove the grumpy judge wrong"). The WHY is essential — a 5-year-old listening should understand what happened to make the character want this. If the character is apologising, what did they DO? If they're searching, what did they LOSE and how? If they're helping, why does it MATTER?
 - OBSTACLE: How does their special feature make this HARDER? (The feature should cause funny, specific problems)
 - TWIST: How does the feature eventually help in an UNEXPECTED way? (Not the obvious use)
 
@@ -1440,7 +1440,7 @@ Return ONLY valid JSON. Generate 3 theme PITCHES (no full episodes yet). Here is
       "theme_description": "When the gym's gravity experiment goes wrong, everything starts floating and Example Monster must catch everyone before they drift out the windows.",
       "theme_blurb": "Example Monster needs to spot every floating student before they escape — good thing nothing escapes that gaze!",
       "feature_used": "big eye",
-      "want": "catch all the floating students before they drift out the windows",
+      "want": "catch all the floating students before they drift out the windows — the gravity experiment was Example Monster's idea so it's their responsibility to fix it",
       "obstacle": "the eye keeps getting distracted tracking too many floating objects at once",
       "twist": "uses the eye as a magnifying glass to focus sunlight and melt the anti-gravity device"
     }},
@@ -1450,7 +1450,7 @@ Return ONLY valid JSON. Generate 3 theme PITCHES (no full episodes yet). Here is
       "theme_description": "Every sock in town has vanished overnight and Example Monster must follow the trail of woolly clues to find the thief.",
       "theme_blurb": "Example Monster must find the stolen socks — but can anyone reach into the thief's tiny hiding spot?",
       "feature_used": "long arms",
-      "want": "find who stole all the socks before the big football match",
+      "want": "find who stole all the socks before the big football match — Example Monster promised the team they'd solve it",
       "obstacle": "long arms keep accidentally knocking over clues and evidence",
       "twist": "uses arms to reach into the tiny mouse hole where the sock-hoarding mice live"
     }},
@@ -1460,7 +1460,7 @@ Return ONLY valid JSON. Generate 3 theme PITCHES (no full episodes yet). Here is
       "theme_description": "The new barber is a robot who has gone haywire, giving everyone ridiculous haircuts, and Example Monster must stop it.",
       "theme_blurb": "The robot barber is out of control — but Example Monster might be the one thing its scissors can't handle!",
       "feature_used": "spiky head",
-      "want": "stop the robot barber before it reaches the school photo",
+      "want": "stop the robot barber before it reaches the school photo — Example Monster accidentally turned it on by pressing the wrong button",
       "obstacle": "the robot keeps trying to cut the character's spikes thinking they're messy hair",
       "twist": "the spikes jam the robot's scissors, causing it to short-circuit and reset"
     }}
@@ -1708,7 +1708,7 @@ If the "feature used" describes a physical body trait, treat it as a minor chara
 {age_guide}
 
 *** STORY STRUCTURE ***
-- Episode 1: Set up the problem. Introduce 2 named supporting characters with funny personalities (include species, size, accessories in brackets after each name). The companion character (if present) should react to the problem in their own way.
+- Episode 1: Set up the problem AND establish WHY the character wants what they want. The reader must understand what happened BEFORE the story starts. If the character is apologising — show or explain what they did wrong. If they're searching — show what they lost. If they're helping — show why it matters to them. Introduce 2 named supporting characters with funny personalities (include species, size, accessories in brackets after each name). The companion character (if present) should react to the problem in their own way.
 - Episode 2: First attempt using the character's feature. Things start going wrong. The companion character's features or personality may contribute to the chaos.
 - Episode 3: SETBACK — but NOT always sad! Pick ONE setback style from below and commit to it:
   * COMIC DISASTER: Everything goes hilariously, catastrophically wrong. Total chaos. Things flying, breaking, multiplying. The character isn't sad — they're overwhelmed by absurd mayhem. Think slapstick.
@@ -1782,6 +1782,7 @@ Before you write, verify your plan:
 2. Does episode 3's setback make the OBSTACLE worse? (Not introduce something new)
 3. Does episode 4's solution come from the TWIST? (Not a random new idea)
 4. Is the story about ONE problem from start to finish?
+5. Could a 5-year-old answer "WHY does the character want this?" from episode 1? If not, add the reason.
 If any answer is NO, fix your plan before writing.
 
 ⚠️ CRITICAL WORD LIMIT: Each story_text MUST respect the age guide word limit above. COUNT YOUR WORDS. If an episode's story_text exceeds the limit, CUT IT DOWN. Short punchy text is ALWAYS better than long rambling text. This text appears below an illustration on a single page — if it's too long it runs off the page and is unreadable.
