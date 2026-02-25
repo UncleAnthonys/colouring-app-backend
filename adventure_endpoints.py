@@ -1034,7 +1034,7 @@ IMAGE:
 - Background hints at the adventure: {cover_description}
 - BLACK AND WHITE LINE ART suitable for coloring in
 - Fill the ENTIRE image with the illustration — no blank space needed, text will be overlaid on top
-- Keep the top area slightly less busy/detailed so overlaid title text is readable
+- Keep the top and bottom areas slightly less busy/detailed so overlaid title text is readable
 Make it look like a real children's coloring book cover illustration!
 """
         
