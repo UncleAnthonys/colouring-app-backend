@@ -195,9 +195,9 @@ def create_front_cover(image_b64: str, full_title: str, character_name: str) -> 
                 continue
         return ImageFont.load_default()
     
-    # Scale font sizes relative to image
-    title_size = max(42, int(img_width * 0.065))
-    subtitle_size = max(22, int(img_width * 0.032))
+    # Scale font sizes relative to image — BIG and bold like a real children's book
+    title_size = max(56, int(img_width * 0.09))
+    subtitle_size = max(24, int(img_width * 0.035))
     
     title_font = load_font(title_size)
     subtitle_font = load_font(subtitle_size)
@@ -212,10 +212,10 @@ def create_front_cover(image_b64: str, full_title: str, character_name: str) -> 
     
     # === TITLE at top — bubble text overlaid on image ===
     title_y = int(img_height * 0.02)
-    wrapped_title = textwrap.fill(full_title, width=20)
+    wrapped_title = textwrap.fill(full_title, width=16)
     title_lines = wrapped_title.split('\n')
     
-    outline_w = max(3, int(img_width * 0.005))
+    outline_w = max(4, int(img_width * 0.007))
     
     for line in title_lines:
         bbox = draw.textbbox((0, 0), line, font=title_font)
