@@ -217,12 +217,26 @@ def create_front_cover(image_b64: str, full_title: str, character_name: str) -> 
     
     outline_w = max(4, int(img_width * 0.007))
     
+    padding = int(img_width * 0.05)  # 5% padding each side
+    max_title_width = img_width - (padding * 2)
+    
     for line in title_lines:
         bbox = draw.textbbox((0, 0), line, font=title_font)
         line_width = bbox[2] - bbox[0]
         line_height = bbox[3] - bbox[1]
+        
+        # If line is too wide, reduce font size for this cover
+        actual_font = title_font
+        if line_width > max_title_width:
+            scale = max_title_width / line_width
+            smaller_size = int(title_size * scale)
+            actual_font = load_font(smaller_size)
+            bbox = draw.textbbox((0, 0), line, font=actual_font)
+            line_width = bbox[2] - bbox[0]
+            line_height = bbox[3] - bbox[1]
+        
         line_x = (img_width - line_width) // 2
-        draw_bubble_text(draw, line_x, title_y, line, title_font, outline_width=outline_w)
+        draw_bubble_text(draw, line_x, title_y, line, actual_font, outline_width=outline_w)
         title_y += line_height + int(img_height * 0.008)
     
     # === BRANDING at bottom — smaller bubble text ===
