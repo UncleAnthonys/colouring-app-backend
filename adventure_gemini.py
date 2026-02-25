@@ -212,7 +212,7 @@ def create_front_cover(image_b64: str, full_title: str, character_name: str) -> 
     
     # === TITLE at top — bubble text overlaid on image ===
     title_y = int(img_height * 0.02)
-    wrapped_title = textwrap.fill(full_title, width=16)
+    wrapped_title = textwrap.fill(full_title, width=28)
     title_lines = wrapped_title.split('\n')
     
     outline_w = max(4, int(img_width * 0.007))
