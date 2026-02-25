@@ -743,9 +743,7 @@ async def generate_front_cover_endpoint(request: GenerateFrontCoverRequest):
 
 This is a FULL PAGE book cover that must include:
 
-TEXT TO INCLUDE:
-- At the top: "{full_title}" in large, fun, hand-drawn style lettering
-- At the bottom: "A Little Lines Story Book" in smaller text
+DO NOT include ANY text, words, letters, or writing in the image. NO TITLE. NO TEXT AT ALL. Text will be added separately by code.
 
 IMAGE:
 - {char.name} large and central, looking excited and confident
@@ -1035,7 +1033,8 @@ IMAGE:
 {f'- {request.second_character_name} next to {char.name}, looking happy and excited' if request.second_character_name else ''}
 - Background hints at the adventure: {cover_description}
 - BLACK AND WHITE LINE ART suitable for coloring in
-- Leave blank space at the top (20% of image) and bottom (10% of image) for text to be added later
+- Fill the ENTIRE image with the illustration — no blank space needed, text will be overlaid on top
+- Keep the top area slightly less busy/detailed so overlaid title text is readable
 Make it look like a real children's coloring book cover illustration!
 """
         
