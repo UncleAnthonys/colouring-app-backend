@@ -211,13 +211,13 @@ def create_front_cover(image_b64: str, full_title: str, character_name: str) -> 
         draw.text((x, y), text, fill='white', font=font)
     
     # === TITLE at top — bubble text overlaid on image ===
-    title_y = int(img_height * 0.02)
+    title_y = int(img_height * 0.04)
     wrapped_title = textwrap.fill(full_title, width=28)
     title_lines = wrapped_title.split('\n')
     
     outline_w = max(4, int(img_width * 0.007))
     
-    padding = int(img_width * 0.05)  # 5% padding each side
+    padding = int(img_width * 0.08)  # 8% padding each side
     max_title_width = img_width - (padding * 2)
     
     for line in title_lines:
@@ -245,7 +245,7 @@ def create_front_cover(image_b64: str, full_title: str, character_name: str) -> 
     bottom_width = bottom_bbox[2] - bottom_bbox[0]
     bottom_height = bottom_bbox[3] - bottom_bbox[1]
     bottom_x = (img_width - bottom_width) // 2
-    bottom_y = img_height - bottom_height - int(img_height * 0.025)
+    bottom_y = img_height - bottom_height - int(img_height * 0.05)
     draw_bubble_text(draw, bottom_x, bottom_y, bottom_text, subtitle_font, outline_width=max(2, outline_w - 1))
     
     # Convert to base64
