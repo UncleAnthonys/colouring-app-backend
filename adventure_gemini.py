@@ -162,121 +162,81 @@ def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None)
 
 def create_front_cover(image_b64: str, full_title: str, character_name: str) -> str:
     """
-    Create an A4 front cover with title on white space above the image.
+    Overlay bubble-letter title directly onto Gemini's cover image.
+    Big bold white text with black outline — reads over any illustration and is colourable!
     
-    Layout:
-    - Top: Story title (Lilita One, bold, chunky)
-    - Middle: Large coloring illustration with border
-    - Bottom: "A Little Lines Story Book" branding
-    
-    Returns: Base64 encoded A4 PNG image
+    Returns: Base64 encoded PNG image with text overlaid
     """
     from PIL import Image, ImageDraw, ImageFont
     import io
     import textwrap
     
-    # A4 at 150 DPI
-    A4_WIDTH = 1240
-    A4_HEIGHT = 1754
-    
-    # Decode the coloring image
+    # Decode Gemini's cover image
     img_data = base64.b64decode(image_b64)
-    coloring_img = Image.open(io.BytesIO(img_data)).convert('RGB')
+    cover_img = Image.open(io.BytesIO(img_data)).convert('RGB')
     
-    # Create A4 canvas (white)
-    a4_page = Image.new('RGB', (A4_WIDTH, A4_HEIGHT), 'white')
-    draw = ImageDraw.Draw(a4_page)
+    img_width, img_height = cover_img.size
+    draw = ImageDraw.Draw(cover_img)
     
     # Load fonts
     _script_dir = os.path.dirname(os.path.abspath(__file__))
-    
-    title_font = None
-    title_font_candidates = [
+    font_candidates = [
         os.path.join(_script_dir, "fonts", "LilitaOne-Regular.ttf"),
         "/app/fonts/LilitaOne-Regular.ttf",
         "fonts/LilitaOne-Regular.ttf",
         "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
     ]
-    subtitle_font_candidates = [
-        os.path.join(_script_dir, "fonts", "LilitaOne-Regular.ttf"),
-        "/app/fonts/LilitaOne-Regular.ttf",
-        "fonts/LilitaOne-Regular.ttf",
-        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
-    ]
     
-    # Title font — large and chunky
-    for font_path in title_font_candidates:
-        try:
-            title_font = ImageFont.truetype(font_path, 56)
-            print(f"[FRONT-COVER] Loaded title font: {font_path}")
-            break
-        except (OSError, IOError):
-            continue
-    if title_font is None:
-        title_font = ImageFont.load_default()
+    def load_font(size):
+        for fp in font_candidates:
+            try:
+                return ImageFont.truetype(fp, size)
+            except (OSError, IOError):
+                continue
+        return ImageFont.load_default()
     
-    # Subtitle font — smaller
-    subtitle_font = None
-    for font_path in subtitle_font_candidates:
-        try:
-            subtitle_font = ImageFont.truetype(font_path, 32)
-            break
-        except (OSError, IOError):
-            continue
-    if subtitle_font is None:
-        subtitle_font = ImageFont.load_default()
+    # Scale font sizes relative to image
+    title_size = max(42, int(img_width * 0.065))
+    subtitle_size = max(22, int(img_width * 0.032))
     
-    # === TITLE at top ===
-    title_y = 40
-    wrapped_title = textwrap.fill(full_title, width=28)
+    title_font = load_font(title_size)
+    subtitle_font = load_font(subtitle_size)
+    
+    def draw_bubble_text(draw, x, y, text, font, outline_width=5):
+        """Draw text with black outline and white fill — bubble letter effect."""
+        for ox in range(-outline_width, outline_width + 1):
+            for oy in range(-outline_width, outline_width + 1):
+                if ox * ox + oy * oy <= outline_width * outline_width:
+                    draw.text((x + ox, y + oy), text, fill='black', font=font)
+        draw.text((x, y), text, fill='white', font=font)
+    
+    # === TITLE at top — bubble text overlaid on image ===
+    title_y = int(img_height * 0.02)
+    wrapped_title = textwrap.fill(full_title, width=20)
     title_lines = wrapped_title.split('\n')
     
+    outline_w = max(3, int(img_width * 0.005))
+    
     for line in title_lines:
-        line_bbox = draw.textbbox((0, 0), line, font=title_font)
-        line_width = line_bbox[2] - line_bbox[0]
-        line_height = line_bbox[3] - line_bbox[1]
-        line_x = (A4_WIDTH - line_width) // 2
-        draw.text((line_x, title_y), line, fill='black', font=title_font)
-        title_y += line_height + 12
+        bbox = draw.textbbox((0, 0), line, font=title_font)
+        line_width = bbox[2] - bbox[0]
+        line_height = bbox[3] - bbox[1]
+        line_x = (img_width - line_width) // 2
+        draw_bubble_text(draw, line_x, title_y, line, title_font, outline_width=outline_w)
+        title_y += line_height + int(img_height * 0.008)
     
-    # === COLORING IMAGE in middle ===
-    image_top = title_y + 20
-    image_bottom_margin = 100  # Space for branding at bottom
-    max_img_height = A4_HEIGHT - image_top - image_bottom_margin
-    max_img_width = A4_WIDTH - 80  # 40px margin each side
-    
-    img_ratio = coloring_img.width / coloring_img.height
-    if img_ratio > (max_img_width / max_img_height):
-        new_width = max_img_width
-        new_height = int(new_width / img_ratio)
-    else:
-        new_height = max_img_height
-        new_width = int(new_height * img_ratio)
-    
-    coloring_img = coloring_img.resize((new_width, new_height), Image.LANCZOS)
-    
-    x_offset = (A4_WIDTH - new_width) // 2
-    y_offset = image_top + (max_img_height - new_height) // 2
-    
-    a4_page.paste(coloring_img, (x_offset, y_offset))
-    
-    # Border around image
-    draw.rectangle(
-        [x_offset - 3, y_offset - 3, x_offset + new_width + 3, y_offset + new_height + 3],
-        outline='black', width=3
-    )
-    
-    # === BRANDING at bottom ===
+    # === BRANDING at bottom — smaller bubble text ===
     bottom_text = "A Little Lines Story Book"
     bottom_bbox = draw.textbbox((0, 0), bottom_text, font=subtitle_font)
     bottom_width = bottom_bbox[2] - bottom_bbox[0]
-    bottom_x = (A4_WIDTH - bottom_width) // 2
-    bottom_y = A4_HEIGHT - 60
-    draw.text((bottom_x, bottom_y), bottom_text, fill='black', font=subtitle_font)
+    bottom_height = bottom_bbox[3] - bottom_bbox[1]
+    bottom_x = (img_width - bottom_width) // 2
+    bottom_y = img_height - bottom_height - int(img_height * 0.025)
+    draw_bubble_text(draw, bottom_x, bottom_y, bottom_text, subtitle_font, outline_width=max(2, outline_w - 1))
     
     # Convert to base64
     buffer = io.BytesIO()
-    a4_page.save(buffer, format='PNG', dpi=(150, 150))
+    cover_img.save(buffer, format='PNG')
     buffer.seek(0)
     return base64.b64encode(buffer.getvalue()).decode('utf-8')
 
