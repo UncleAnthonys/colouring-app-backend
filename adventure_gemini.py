@@ -143,12 +143,38 @@ def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None)
     total_text_height = len(best_lines) * best_spacing
     start_y = current_y + (available_text_height - total_text_height) // 2
     
+    max_text_width = A4_WIDTH - (text_margin * 2)
+    
     for line in best_lines:
         line_bbox = draw.textbbox((0, 0), line, font=story_font_final)
         line_width = line_bbox[2] - line_bbox[0]
-        line_x = (A4_WIDTH - line_width) // 2
-        draw.text((line_x, start_y), line, fill='black', font=story_font_final)
-        start_y += best_spacing
+        
+        # If line is too wide, re-wrap this line into smaller chunks
+        if line_width > max_text_width:
+            words = line.split()
+            sub_line = []
+            for word in words:
+                test = ' '.join(sub_line + [word])
+                tw = draw.textbbox((0, 0), test, font=story_font_final)[2] - draw.textbbox((0, 0), test, font=story_font_final)[0]
+                if tw > max_text_width and sub_line:
+                    final_line = ' '.join(sub_line)
+                    lw = draw.textbbox((0, 0), final_line, font=story_font_final)[2] - draw.textbbox((0, 0), final_line, font=story_font_final)[0]
+                    lx = max(text_margin, (A4_WIDTH - lw) // 2)
+                    draw.text((lx, start_y), final_line, fill='black', font=story_font_final)
+                    start_y += best_spacing
+                    sub_line = [word]
+                else:
+                    sub_line.append(word)
+            if sub_line:
+                final_line = ' '.join(sub_line)
+                lw = draw.textbbox((0, 0), final_line, font=story_font_final)[2] - draw.textbbox((0, 0), final_line, font=story_font_final)[0]
+                lx = max(text_margin, (A4_WIDTH - lw) // 2)
+                draw.text((lx, start_y), final_line, fill='black', font=story_font_final)
+                start_y += best_spacing
+        else:
+            line_x = max(text_margin, (A4_WIDTH - line_width) // 2)
+            draw.text((line_x, start_y), line, fill='black', font=story_font_final)
+            start_y += best_spacing
     
     # Convert to base64
     buffer = io.BytesIO()
