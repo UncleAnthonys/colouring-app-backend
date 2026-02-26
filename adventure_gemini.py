@@ -1610,6 +1610,12 @@ NOW generate 3 theme PITCHES for {character_name}. Each theme must use a DIFFERE
             json_str = text[start:end]
             data = json.loads(json_str)
             
+            # Ensure every theme has a blurb — fallback to description if missing
+            if "themes" in data:
+                for theme in data["themes"]:
+                    if not theme.get("theme_blurb"):
+                        theme["theme_blurb"] = theme.get("theme_description", "A brand new adventure awaits!")
+            
             return data
         
         raise HTTPException(status_code=500, detail='Failed to parse story response as JSON')
