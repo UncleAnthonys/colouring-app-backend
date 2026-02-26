@@ -1033,10 +1033,10 @@ IMAGE:
 {f'- {request.second_character_name} next to {char.name}, looking happy and excited' if request.second_character_name else ''}
 - Background hints at the adventure: {cover_description}
 - BLACK AND WHITE LINE ART suitable for coloring in
-- CRITICAL: Fill the ENTIRE image edge-to-edge. NO border. NO frame. NO white margin. NO rectangular outline. The artwork must touch ALL FOUR edges of the image.
-- DO NOT draw a rectangular border or frame around the illustration
-- Keep the top 25% slightly less busy (open sky/clouds) so overlaid text is readable
-Make it look like a real children's coloring book cover — full bleed illustration!
+- COMPOSITION CRITICAL: The main character and ALL important story elements (buildings, objects, animals) must be in the LOWER 70% of the image. The TOP 30% should be simple background only — open sky, simple clouds, empty space. NO important elements in the top 30%. The title text will be placed over this area and must not cover anything important.
+- The bottom 10% should also be simple (ground, grass, path) for branding text.
+- A border/frame is fine if it suits the style.
+Make it look like a real children's coloring book cover!
 """
         
         cover_image_b64 = await generate_adventure_episode_gemini(
