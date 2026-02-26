@@ -140,11 +140,11 @@ class StoryTheme(BaseModel):
     theme_id: str
     theme_name: str
     theme_description: str
-    theme_blurb: Optional[str] = None
-    feature_used: Optional[str] = None
-    want: Optional[str] = None
-    obstacle: Optional[str] = None
-    twist: Optional[str] = None
+    theme_blurb: Optional[str] = ""
+    feature_used: Optional[str] = ""
+    want: Optional[str] = ""
+    obstacle: Optional[str] = ""
+    twist: Optional[str] = ""
     episodes: Optional[List[StoryEpisode]] = None
 
 
@@ -707,11 +707,11 @@ class GenerateFullStoryRequest(BaseModel):
     reveal_image_url: Optional[str] = None  # Firebase URL of reveal image (preferred - avoids JSON escaping issues)
     source_type: Optional[str] = "drawing"  # 'drawing' or 'photo'
     # Pitch fields for server-side story generation
-    theme_blurb: Optional[str] = None
-    feature_used: Optional[str] = None
-    want: Optional[str] = None
-    obstacle: Optional[str] = None
-    twist: Optional[str] = None
+    theme_blurb: Optional[str] = ""
+    feature_used: Optional[str] = ""
+    want: Optional[str] = ""
+    obstacle: Optional[str] = ""
+    twist: Optional[str] = ""
     character_description: Optional[str] = None  # Full description for story generation
     # Second character (friend/pet) - optional
     second_character: Optional[CharacterData] = None  # Full character JSON (preferred - matches 'character' format)
