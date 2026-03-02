@@ -1199,7 +1199,7 @@ Age 6 can handle real plot twists and emotional stakes:
 - Episode 2: First plan - starts well but a complication appears
 - Episode 3: MAJOR SETBACK - plan fails badly. Character's limitation exposed. Lowest point.
 - Episode 4: Realisation or unexpected help. New approach using what they LEARNED from failing.
-- Episode 5: Climax and resolution - clever solution, ending connects to opening, final joke or emotional beat.
+- Episode 5: Climax and resolution — but NOT the obvious solution. The ending must surprise the reader while still making sense. A specific detail from episode 1 must reappear in a new light. The final line lands with a laugh, a warm punch, or an unexpected image — NEVER a lesson or summary statement like "[name] learned that..." or "Sometimes all you need is..."
 
 *** KEY PRINCIPLES ***
 - The setback must be REAL - not just "oops, wrong place." Something genuinely goes wrong.
@@ -1248,7 +1248,7 @@ Full 5-act structure with genuine stakes:
 - Episode 2: Investigation/preparation. Build the world. Introduce allies and obstacles with personality.
 - Episode 3: MAJOR FAILURE. Plan backfires spectacularly. Real consequences. Supporting characters affected too.
 - Episode 4: Character adapts. Uses their feature in an unexpected creative way. Combines what they learned from failure.
-- Episode 5: Climactic resolution with a twist. Ending reframes something from episode 1. Satisfying but not predictable.
+- Episode 5: Climactic resolution with a genuine twist — not the solution the reader predicted. The ending reframes something specific from episode 1 in a new light. The final line must be specific to THIS character and THIS story — a laugh, an image, or an emotional beat. NEVER a moral lesson, NEVER a summary statement like "[name] learned that..." or "And from that day on..."
 
 *** KEY PRINCIPLES ***
 - Real stakes: feelings get hurt, something important is at risk, time runs out
@@ -1525,7 +1525,7 @@ Emotion must be one of: nervous, excited, scared, determined, happy, curious, sa
 1. CHARACTERS: At least 2 named supporting characters with funny personalities who appear throughout, not just once.
 2. SETBACK ON EPISODE 3: Character tries and FAILS or makes things worse. Makes the win feel earned.
 3. DIALOGUE: At least 3 of 5 episodes need characters talking in speech marks.
-4. ENDING: Episode 5 resolves the specific problem from episode 1. No generic happy endings.
+4. ENDING: Episode 5 resolves the specific problem from episode 1. No generic happy endings. The resolution must be SURPRISING — not the obvious solution the reader predicted. The final line must be specific to THIS story and THIS character, never a moral lesson or summary statement.
 5. NEVER copy a scenario word-for-word. Adapt it, remix it, make it feel fresh and unique to this character.
 6. NUANCED RESOLUTION: The character's feature should NOT directly fix the problem alone. Instead, a SUPPORTING CHARACTER should suggest a new way to use the feature, OR the character should learn to use it differently after the setback. The solution should feel like a team effort or a moment of growth, not just "feature solves everything".
 
@@ -1904,7 +1904,7 @@ Follow the WANT/OBSTACLE/TWIST precisely:
 - Episode 1: Set up the WANT — why does the character want this? Make it urgent and specific. Show how the character's distinctive feature reacts to the situation.
 - Episodes 2-3: Show the OBSTACLE getting worse. Each attempt to solve the problem makes it funnier/bigger/more chaotic. The character's feature should add comedy or complications.
 - Episode 4: The TWIST begins — something unexpected happens that reframes the whole situation. The character's feature may play a surprising role.
-- Episode 5: The TWIST resolves everything. Connect back to episode 1.
+- Episode 5: The TWIST resolves everything — but NOT in the obvious way. The resolution must surprise the reader. Ask: what is the LEAST expected way this could resolve while still making sense? The final beat should reveal something about the character (not just fix the plot). Avoid "character uses their skill/feature and it magically works" — instead the resolution should come from a decision, a mistake that becomes useful, or an unexpected consequence of the chaos. One specific detail from episode 1 must reappear in episode 5 in a new light. The final LINE of story_text should land emotionally or with a laugh — NOT a generic lesson or summary statement like "Han learned that..." or "Some problems just need the right song."
 
 ⚠️ ONE PROBLEM RULE: This story has ONE central problem, not two. The OBSTACLE is the problem. The TWIST is the solution to THAT SAME problem. Do not introduce a new unrelated problem partway through.
 
