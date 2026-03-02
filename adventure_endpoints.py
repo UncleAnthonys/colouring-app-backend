@@ -946,7 +946,7 @@ async def generate_full_story_endpoint(request_body: dict):
     # If no episodes provided, generate them from pitch fields or custom theme
     episodes = request.episodes or []
     generated_title = ""
-    if not episodes and (request.feature_used or request.custom_theme):
+    if not episodes and (request.feature_used or request.custom_theme or request.want):
         print(f"[FULL-STORY] No episodes provided, generating from {'custom theme' if request.custom_theme else 'pitch fields'}...")
         char_desc = request.character_description or request.character.description
         
