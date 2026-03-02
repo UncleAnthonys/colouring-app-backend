@@ -1872,7 +1872,9 @@ Build the ENTIRE 5-episode story around this custom theme. You must create your 
 The custom theme should be the HEART of the story — not a side detail.
 """
     else:
-        theme_block = f"""
+        # Build feature line only if feature_used is provided
+        if feature_used:
+            theme_block = f"""
 CHOSEN THEME: {theme_name}
 THEME DESCRIPTION: {theme_description}
 THEME BLURB: {theme_blurb}
@@ -1884,6 +1886,31 @@ STORY PLAN:
 - TWIST: {twist}
 
 ⚠️ ONE PROBLEM RULE: This story has ONE central problem, not two. The OBSTACLE is the problem. The TWIST is the solution to THAT SAME problem. Episodes 2-3 must show the OBSTACLE getting worse. Episodes 4-5 must show the TWIST solving THAT SAME OBSTACLE. Do not introduce a new unrelated problem partway through. Every episode must be about the same struggle. If the obstacle is about the coat knocking things down, the resolution must be about the coat NOT knocking things down or the knocking becoming useful — not about solving a completely different issue.
+"""
+        else:
+            theme_block = f"""
+CHOSEN THEME: {theme_name}
+THEME BLURB: {theme_blurb}
+
+STORY PLAN (this is a PRE-WRITTEN story structure — follow it EXACTLY):
+- WANT: {want}
+- OBSTACLE: {obstacle}
+- TWIST: {twist}
+
+⚠️ CHARACTER FEATURE: Look at the CHARACTER DESCRIPTION above and pick ONE distinctive physical feature (e.g. floppy ears, shaggy fur, big paws, long tail, sparkly wings, wobbly antenna). Weave this feature into the story naturally — it should cause funny moments, help or hinder the character, and play a role in the resolution. The feature adds personality and comedy but the WANT/OBSTACLE/TWIST above are the PRIMARY story drivers.
+
+⚠️ HARDCODED THEME RULES:
+Follow the WANT/OBSTACLE/TWIST precisely:
+- Episode 1: Set up the WANT — why does the character want this? Make it urgent and specific. Show how the character's distinctive feature reacts to the situation.
+- Episodes 2-3: Show the OBSTACLE getting worse. Each attempt to solve the problem makes it funnier/bigger/more chaotic. The character's feature should add comedy or complications.
+- Episode 4: The TWIST begins — something unexpected happens that reframes the whole situation. The character's feature may play a surprising role.
+- Episode 5: The TWIST resolves everything. Connect back to episode 1.
+
+⚠️ ONE PROBLEM RULE: This story has ONE central problem, not two. The OBSTACLE is the problem. The TWIST is the solution to THAT SAME problem. Do not introduce a new unrelated problem partway through.
+
+⚠️ SUPPORTING CHARACTERS: Every new character MUST have a NAME and a BRACKETED DESCRIPTION that includes species/size/one accessory. Example: "Captain Zoom (tall rabbit with goggles and cape)". Use the EXACT SAME bracketed description every time that character appears in a scene_description. The artist has NO MEMORY between pages.
+
+⚠️ THE TWIST CHARACTER: If the twist involves a specific character (e.g. a villain, a helper, a creature), that character MUST be visually distinct and named from their FIRST appearance. Give them a memorable name and clear visual description. They must be clearly visible and recognisable in the illustrations — not tiny or hidden.
 """
 
     # Build age-appropriate story structure
