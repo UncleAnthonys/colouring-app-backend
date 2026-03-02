@@ -2008,6 +2008,7 @@ If the "feature used" describes a physical body trait, treat it as a minor chara
 - If same location as previous episode, REPEAT key setting objects
 
 *** STORY TEXT RULES ***
+⚠️ Apply these rules at the appropriate level for the age. For ages 2-4, keep language simple but the PRINCIPLES still apply — the character should still drive the action, funny details should still be specific, and dialogue should still have personality.
 - PROTAGONIST AGENCY: The main character must DRIVE the action — they make decisions, hatch plans, cause chaos. They should NOT just react to what other characters do. Ask: whose idea was it? Who took the risk? Who made the key move? It must be the protagonist EVERY time.
 - INNER VOICE: At least 2 episodes must include what the character is THINKING — not just what they do. Example: "This was NOT how Han had planned it." or "Seven unicorns. SEVEN. This was getting out of hand." This is what makes readers feel close to the character.
 - DIALOGUE QUALITY: Dialogue must sound like a real personality, not a plot update. BAD: "Oh no, the magic is fading!" GOOD: "Dewdrop pressed their nose against Han's knee. 'You're our only hope,' they whispered. 'Also we are very sorry about the confetti.'" Every line of dialogue should be funny, reveal character, or both.
