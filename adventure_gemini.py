@@ -2007,6 +2007,13 @@ If the "feature used" describes a physical body trait, treat it as a minor chara
 - CRITICAL: Bracketed character descriptions are for scene_description ONLY — NEVER in story_text. In story_text, introduce characters naturally through narrative: "A small duck in a bow tie waddled over. 'I'm Pip!' he said." NEVER write "Pip (small duck with bow tie)" or "Rangers Maya (tall woman with backpack)" in story_text. If you put brackets in story_text, the story is BROKEN.
 - If same location as previous episode, REPEAT key setting objects
 
+*** STORY TEXT RULES ***
+- PROTAGONIST AGENCY: The main character must DRIVE the action — they make decisions, hatch plans, cause chaos. They should NOT just react to what other characters do. Ask: whose idea was it? Who took the risk? Who made the key move? It must be the protagonist EVERY time.
+- INNER VOICE: At least 2 episodes must include what the character is THINKING — not just what they do. Example: "This was NOT how Han had planned it." or "Seven unicorns. SEVEN. This was getting out of hand." This is what makes readers feel close to the character.
+- DIALOGUE QUALITY: Dialogue must sound like a real personality, not a plot update. BAD: "Oh no, the magic is fading!" GOOD: "Dewdrop pressed their nose against Han's knee. 'You're our only hope,' they whispered. 'Also we are very sorry about the confetti.'" Every line of dialogue should be funny, reveal character, or both.
+- COMIC SPECIFICITY: Funny details must be SPECIFIC not generic. BAD: "everything went wrong" GOOD: "the confetti cannon fired directly into Han's left ear". The more specific the chaos, the funnier it is.
+- VARY SENTENCE RHYTHM: Mix short punchy sentences with longer ones. Short sentences land jokes and dramatic moments. Example: "Han played louder. And louder. And then — silence."
+
 *** CRITICAL: SCENE VARIETY RULES (NON-NEGOTIABLE) ***
 Each of the 5 episodes MUST have a visually distinct composition. The scene_description is an ILLUSTRATION BRIEF — it tells the artist exactly what to draw. Be specific about:
 
