@@ -52,7 +52,32 @@ Reply with EXACTLY one word: DRAWING or PHOTO""",
         return result
         
     except Exception as e:
-        print(f"[IMAGE DETECTION] Error: {e}, defaulting to drawing")
+        import time
+        error_str = str(e)
+        if "429" in error_str:
+            print(f"[IMAGE DETECTION] Rate limited, retrying in 5s...")
+            time.sleep(5)
+            try:
+                response = model.generate_content([
+                    """Look at this image carefully. Classify it as ONE of these:
+
+DRAWING - A child's artwork made with crayons, markers, colored pencils, paint, etc. on paper. 
+          Includes: hand-drawn pictures, sketches, paintings, doodles by children.
+
+PHOTO - A real photograph taken with a camera/phone.
+        Includes: photos of toys, stuffed animals, pets, children, people, objects.
+
+Reply with EXACTLY one word: DRAWING or PHOTO""",
+                    {"mime_type": "image/jpeg", "data": image_b64}
+                ])
+                result_text = response.text.strip().upper()
+                result = "drawing" if "DRAWING" in result_text else "photo"
+                print(f"\n[IMAGE DETECTION] Retry success: {result_text} -> {result}")
+                return result
+            except Exception as e2:
+                print(f"[IMAGE DETECTION] Retry failed: {e2}, defaulting to drawing")
+        else:
+            print(f"[IMAGE DETECTION] Error: {e}, defaulting to drawing")
         return "drawing"
 
 
