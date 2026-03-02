@@ -98,83 +98,78 @@ def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None)
     
     # No title on episode pages — just story text (like a real storybook)
     
-    # Wrap and draw story text - DYNAMIC sizing to always fit
-    text_margin = 40  # Left and right margin
-    available_text_height = A4_HEIGHT - current_y - 20  # Space remaining to bottom
+    # Wrap and draw story text - DYNAMIC sizing with PIXEL-BASED wrapping
+    text_margin = 70  # Left and right margin for comfortable reading
+    available_text_height = A4_HEIGHT - current_y - 30  # Space remaining to bottom
+    max_text_width = A4_WIDTH - (text_margin * 2)
+    
+    # Pixel-based word wrapping function
+    def wrap_text_pixel(text, font, max_width):
+        """Wrap text based on actual pixel width, not character count."""
+        paragraphs = text.split('\n')
+        all_lines = []
+        for para in paragraphs:
+            words = para.split()
+            if not words:
+                all_lines.append('')
+                continue
+            current_line = []
+            for word in words:
+                test_line = ' '.join(current_line + [word])
+                tw = font.getbbox(test_line)[2] - font.getbbox(test_line)[0]
+                if tw > max_width and current_line:
+                    all_lines.append(' '.join(current_line))
+                    current_line = [word]
+                else:
+                    current_line.append(word)
+            if current_line:
+                all_lines.append(' '.join(current_line))
+        return all_lines
     
     # Try font sizes from large to small until text fits
-    font_sizes = [26, 23, 20, 18, 16]
-    char_widths = [85, 95, 105, 115, 125]  # Wrap width per font size
+    font_sizes = [24, 21, 19, 17, 15]
     line_spacings = [34, 30, 27, 24, 22]
     
     best_font_size = font_sizes[-1]
-    best_wrap = char_widths[-1]
     best_spacing = line_spacings[-1]
     best_lines = []
+    best_font = None
     
-    for fs, cw, ls in zip(font_sizes, char_widths, line_spacings):
+    for fs, ls in zip(font_sizes, line_spacings):
         try:
             test_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", fs)
         except:
             test_font = ImageFont.load_default()
         
-        wrapped = textwrap.fill(story_text, width=cw)
-        lines = wrapped.split('\n')
+        lines = wrap_text_pixel(story_text, test_font, max_text_width)
         total_height = len(lines) * ls
         
         if total_height <= available_text_height:
             best_font_size = fs
-            best_wrap = cw
             best_spacing = ls
             best_lines = lines
+            best_font = test_font
             break
     else:
-        # Even smallest font doesn't fit — use smallest and let it go
-        wrapped = textwrap.fill(story_text, width=char_widths[-1])
-        best_lines = wrapped.split('\n')
+        # Even smallest font doesn't fit — use smallest
+        try:
+            best_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", font_sizes[-1])
+        except:
+            best_font = ImageFont.load_default()
+        best_lines = wrap_text_pixel(story_text, best_font, max_text_width)
     
-    # Load the chosen font size
-    try:
-        story_font_final = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", best_font_size)
-    except:
-        story_font_final = ImageFont.load_default()
+    story_font_final = best_font
     
     # Center text block vertically in available space
     total_text_height = len(best_lines) * best_spacing
     start_y = current_y + (available_text_height - total_text_height) // 2
     
-    max_text_width = A4_WIDTH - (text_margin * 2)
-    
     for line in best_lines:
         line_bbox = draw.textbbox((0, 0), line, font=story_font_final)
         line_width = line_bbox[2] - line_bbox[0]
-        
-        # If line is too wide, re-wrap this line into smaller chunks
-        if line_width > max_text_width:
-            words = line.split()
-            sub_line = []
-            for word in words:
-                test = ' '.join(sub_line + [word])
-                tw = draw.textbbox((0, 0), test, font=story_font_final)[2] - draw.textbbox((0, 0), test, font=story_font_final)[0]
-                if tw > max_text_width and sub_line:
-                    final_line = ' '.join(sub_line)
-                    lw = draw.textbbox((0, 0), final_line, font=story_font_final)[2] - draw.textbbox((0, 0), final_line, font=story_font_final)[0]
-                    lx = max(text_margin, (A4_WIDTH - lw) // 2)
-                    draw.text((lx, start_y), final_line, fill='black', font=story_font_final)
-                    start_y += best_spacing
-                    sub_line = [word]
-                else:
-                    sub_line.append(word)
-            if sub_line:
-                final_line = ' '.join(sub_line)
-                lw = draw.textbbox((0, 0), final_line, font=story_font_final)[2] - draw.textbbox((0, 0), final_line, font=story_font_final)[0]
-                lx = max(text_margin, (A4_WIDTH - lw) // 2)
-                draw.text((lx, start_y), final_line, fill='black', font=story_font_final)
-                start_y += best_spacing
-        else:
-            line_x = max(text_margin, (A4_WIDTH - line_width) // 2)
-            draw.text((line_x, start_y), line, fill='black', font=story_font_final)
-            start_y += best_spacing
+        line_x = max(text_margin, (A4_WIDTH - line_width) // 2)
+        draw.text((line_x, start_y), line, fill='black', font=story_font_final)
+        start_y += best_spacing
     
     # Convert to base64
     buffer = io.BytesIO()
