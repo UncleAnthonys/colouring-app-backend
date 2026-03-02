@@ -1025,7 +1025,7 @@ async def generate_full_story_endpoint(request_body: dict):
     
     # Generate front cover (after story so we have the title)
     try:
-        cover_description = request.theme_description or request.custom_theme or ""
+        cover_description = request.theme_description or request.theme_blurb or request.custom_theme or request.theme_name or ""
         cover_scene = f"""Create a CHILDREN'S COLORING BOOK FRONT COVER illustration.
 DO NOT include ANY text, words, letters, or writing in the image. NO TITLE. NO TEXT AT ALL. Text will be added separately.
 IMAGE:
