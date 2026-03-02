@@ -1228,6 +1228,83 @@
       "description": "Lotus flower",
       "overlay": "COLORING PAGE - ONE BIG FLOWER:\n\nMAIN SUBJECT: One large lotus flower with layered petals floating on water with large round leaf taking up most of the page, cute cartoon style. NO other flowers, NO people.\n\nBACKGROUND: Simple pond setting - water, lily pads, or plain white. NO other flowers or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LOTUS at the bottom in large hollow outline letters that can be colored in.",
       "text_only": true
+    },
+    "animal_cat": {
+      "name": "Cat",
+      "category": "pets",
+      "description": "Cat relaxing",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly cat with whiskers and fluffy tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple home setting - cushion, ball of yarn, food bowl, window with curtains. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CAT at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
+    },
+    "animal_dog": {
+      "name": "Dog",
+      "category": "pets",
+      "description": "Dog playing",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly dog with floppy ears and wagging tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - kennel, bone, ball, fence, grass. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write DOG at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
+    },
+    "animal_parrot": {
+      "name": "Parrot",
+      "category": "pets",
+      "description": "Parrot on perch",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly parrot with curved beak and long tail feathers taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple setting - wooden perch, cage, seed bowl, small bell toy. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PARROT at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
+    },
+    "animal_budgie": {
+      "name": "Budgie",
+      "category": "pets",
+      "description": "Budgie in cage",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly budgerigar with small beak and long tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple setting - bird cage, mirror toy, seed holder, little swing perch. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BUDGIE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
+    },
+    "animal_tarantula": {
+      "name": "Tarantula",
+      "category": "pets",
+      "description": "Tarantula in tank",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly tarantula with eight fuzzy legs and big round body taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple setting - glass tank, small log, rocks, leaves. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write TARANTULA at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
+    },
+    "animal_mouse": {
+      "name": "Mouse",
+      "category": "pets",
+      "description": "Mouse exploring",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly mouse with round ears and long thin tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple setting - exercise wheel, wood shavings, little house, water bottle. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write MOUSE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
+    },
+    "animal_rat": {
+      "name": "Rat",
+      "category": "pets",
+      "description": "Rat playing",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly rat with round ears and long tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple setting - hammock, tunnel tube, rope toy, food bowl. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write RAT at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
+    },
+    "animal_guinea_pig": {
+      "name": "Guinea Pig",
+      "category": "pets",
+      "description": "Guinea pig munching",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly guinea pig with round body and no visible tail taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple setting - hay pile, water bottle, carrot, little wooden shelter. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write GUINEA PIG at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
+    },
+    "animal_hamster": {
+      "name": "Hamster",
+      "category": "pets",
+      "description": "Hamster with cheeks full",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly hamster with big puffy cheeks and tiny paws taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple setting - exercise wheel, tunnel, sunflower seeds, cozy bedding. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write HAMSTER at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
+    },
+    "animal_tortoise": {
+      "name": "Tortoise",
+      "category": "pets",
+      "description": "Tortoise walking",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly tortoise with patterned shell and sturdy legs taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - lettuce leaf, shallow water dish, rocks, dandelions. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write TORTOISE at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
+    },
+    "animal_gecko": {
+      "name": "Gecko",
+      "category": "pets",
+      "description": "Gecko on rock",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly gecko with spotted skin and big round eyes taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple setting - warm rock, heat lamp, branch, small desert plants. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write GECKO at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
     }
   },
   "custom_modifiers": {
