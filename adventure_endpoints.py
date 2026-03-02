@@ -1010,6 +1010,8 @@ async def generate_full_story_endpoint(request_body: dict):
         generated_title = story_data.get("story_title", "")
         print(f"[FULL-STORY] Generated {len(episodes)} episodes from {'custom theme' if request.custom_theme else 'pitch'}")
         print(f"[FULL-STORY] Sonnet generated title: '{generated_title}'")
+        for ep in episodes:
+            print(f"[SCENE-DEBUG] Episode {ep.get('episode_num')}: {ep.get('scene_description', '')[:300]}")
     
     print(f"[FULL-STORY] Episodes count: {len(episodes)}")
     
