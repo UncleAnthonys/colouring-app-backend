@@ -1910,6 +1910,8 @@ Follow the WANT/OBSTACLE/TWIST precisely:
 
 ⚠️ SUPPORTING CHARACTERS: Every new character MUST have a NAME and a BRACKETED DESCRIPTION that includes species/size/one accessory. Example: "Captain Zoom (tall rabbit with goggles and cape)". Use the EXACT SAME bracketed description every time that character appears in a scene_description. The artist has NO MEMORY between pages.
 
+⚠️ ABSENT OR REPLACED BODY PARTS: If the story involves a character missing a normally-present body part (e.g. a unicorn without its horn, a bird with clipped wings, a robot missing an arm), the scene_description MUST explicitly state what is NOT there. Example: "Sparkle (medium unicorn — NO HORN, flat forehead, wearing a party hat where the horn would be)". Never rely on the artist to infer this from the story — they will draw the default version of the creature unless you explicitly negate the missing part every single time that character appears.
+
 ⚠️ THE TWIST CHARACTER: If the twist involves a specific character (e.g. a villain, a helper, a creature), that character MUST be visually distinct and named from their FIRST appearance. Give them a memorable name and clear visual description. They must be clearly visible and recognisable in the illustrations — not tiny or hidden.
 """
 
@@ -2026,6 +2028,7 @@ Every scene_description must include:
 2. CHARACTER'S EXACT PHYSICAL POSITION (crouching, climbing, running, sitting IN something, hanging from something — NOT standing)
 3. What SPECIFIC part of the location they are in
 4. At least 2-3 background objects unique to THIS scene (not repeated from other episodes)
+5. NEGATIONS: If any character is missing a normally-present body part (horn, wings, tail, etc.), write it explicitly: "NO horn — flat forehead with party hat instead". The illustrator defaults to the standard version of every creature — you must override this every time.
 
 LOCATION MOVEMENT: The story MUST move through at least 2-3 different specific locations across the 5 episodes. Characters should travel, chase, explore — NOT stay rooted in one spot.
 
