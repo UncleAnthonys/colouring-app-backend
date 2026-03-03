@@ -2144,8 +2144,23 @@ Write the full story for {character_name} now. Return ONLY valid JSON.'''
     
     if start >= 0 and end > start:
         import json
+        import re
         json_str = text[start:end]
-        data = json.loads(json_str)
+        
+        try:
+            data = json.loads(json_str)
+        except json.JSONDecodeError:
+            repaired = json_str
+            repaired = re.sub(r'(?<!\\)\n', ' ', repaired)
+            repaired = re.sub(r'(?<!\\)\t', ' ', repaired)
+            try:
+                data = json.loads(repaired)
+            except json.JSONDecodeError as e:
+                try:
+                    from json_repair import repair_json
+                    data = json.loads(repair_json(json_str))
+                except ImportError:
+                    raise ValueError(f"Story JSON could not be parsed after repair attempts: {e}")
         
         # Extract/set emotion for each episode
         def extract_emotion(text):
