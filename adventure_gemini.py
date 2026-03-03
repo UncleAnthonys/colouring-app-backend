@@ -97,6 +97,11 @@ def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None)
     current_y = text_area_top
     
     # No title on episode pages — just story text (like a real storybook)
+
+    # Collapse Sonnet's sentence-per-line newlines into flowing paragraph text
+    import re
+    story_text = re.sub(r'
++', ' ', story_text).strip()
     
     # Wrap and draw story text - DYNAMIC sizing with PIXEL-BASED wrapping
     text_margin = 70  # Left and right margin for comfortable reading
@@ -162,9 +167,11 @@ def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None)
     
     # Center text block vertically in available space
     total_text_height = len(best_lines) * best_spacing
-    start_y = current_y + (available_text_height - total_text_height) // 2
-    
+    start_y = current_y + max(0, (available_text_height - total_text_height) // 2)
+
     for line in best_lines:
+        if start_y + best_spacing > A4_HEIGHT - 10:
+            break  # Safety — never draw below page
         line_bbox = draw.textbbox((0, 0), line, font=story_font_final)
         line_width = line_bbox[2] - line_bbox[0]
         line_x = max(text_margin, (A4_WIDTH - line_width) // 2)
@@ -1407,6 +1414,13 @@ CHARACTER TO ANALYZE:
 
 ⚠️ GENDER: Do NOT assume the character's gender from their name. Use the character's NAME instead of pronouns wherever possible. If you must use pronouns, use "they/them" unless the character description explicitly states gender.
 
+⚠️ ABSOLUTELY NO FAMILY MEMBERS OR RELATIVES IN ANY STORY:
+- No grandparents, grandmas, grandads, nans, grandpas
+- No cousins, aunts, uncles, siblings, brothers, sisters, mums, dads, parents
+- Family members may be deceased or estranged in real life — including them can cause genuine distress
+- Use FRIENDS, CLASSMATES, NEIGHBOURS, or invented named characters instead
+- This rule is absolute, no exceptions
+
 {second_char_block}
 
 STEP 1 - IDENTIFY THE MOST UNUSUAL FEATURES (in order of priority):
@@ -1464,6 +1478,13 @@ DO NOT make stories about:
 - "camouflage" or "blending in" (boring!)
 - "colors fading" or "restoring colors" (overdone!)
 - Body shape unless it is truly unusual
+
+⚠️ ABSOLUTELY NO FAMILY MEMBERS OR RELATIVES IN ANY STORY:
+- No grandparents, grandmas, grandads, nans, grandpas
+- No cousins, aunts, uncles, siblings, brothers, sisters, mums, dads, parents
+- Family members may be deceased or estranged in real life — including them can cause genuine distress
+- Use FRIENDS, CLASSMATES, NEIGHBOURS, or invented named characters instead
+- This rule is absolute and applies to every single story, no exceptions
 
 THE GOLDEN RULE FOR ALL FEATURES:
 Every story must pass this test: "Could this exact story exist with a different character?"
