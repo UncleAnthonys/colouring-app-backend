@@ -100,8 +100,7 @@ def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None)
 
     # Collapse Sonnet's sentence-per-line newlines into flowing paragraph text
     import re
-    story_text = re.sub(r'
-+', ' ', story_text).strip()
+    story_text = re.sub(r'\n+', ' ', story_text).strip()
     
     # Wrap and draw story text - DYNAMIC sizing with PIXEL-BASED wrapping
     text_margin = 70  # Left and right margin for comfortable reading
