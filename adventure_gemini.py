@@ -1520,15 +1520,19 @@ CRITICAL: Follow the age guidelines above exactly for sentence length, vocabular
 For each theme provide:
 1. Theme name (fun, age-appropriate)
 2. Theme description (1 sentence)
-3. Theme blurb (ONE short punchy sentence, MAX 20 words. This is the most important line — it must make a parent gasp and think "this was written ONLY for my child." Rules:
+3. Theme blurb (ONE short punchy sentence, MAX 25 words. This is the most important line — it must make a parent gasp and think "this was written ONLY for my child." Rules:
 - MUST include {character_name}'s name
-- MUST hint at the specific feature in a way that feels magical or exciting — never clinical
-- The reader should feel: "nobody else's character could star in this story"
-- NEVER name the body part or object directly — hint at what it CAN DO instead
-- E.g. if feature is "glasses": don't say "glasses" — say "only {character_name} can spot what everyone else missed"
-- E.g. if feature is "curly hair": don't say "hair" — say "when the wind picks up, {character_name}'s secret power is the only thing that can help"
-- E.g. if feature is "ukulele": don't say "ukulele" — say "one song from {character_name} could change everything — if only the right moment arrives"
-- The blurb should create CURIOSITY and EXCITEMENT, not just describe the plot)
+- MUST name the feature DIRECTLY — glasses, curls, jumper, tail, hat, whatever it is. Naming it IS what makes it feel personal.
+- Make the feature sound MAGICAL or EXCITING — not clinical or boring
+- The sentence should make the reader immediately curious about the story
+- NEVER be vague — vague blurbs feel generic and could be about anyone
+- NEVER use the formula "good thing [character] knows how to..." or "but will it be enough?" — these are weak and lazy
+- NEVER end with a generic personality trait like "never gives up" or "always finds a way"
+- E.g. if feature is "glasses": "Our Gav's glasses can see through walls — but what's hiding on the other side?"
+- E.g. if feature is "curly hair": "Our Gav's curls caught something in the wind that nobody else could feel — and now everything depends on it"
+- E.g. if feature is "ukulele": "One song from Our Gav's ukulele could save the whole town — if only the strings would stop tangling"
+- E.g. if feature is "Illinois jumper": "The answer was written on Our Gav's jumper all along — nobody thought to look until now"
+- The blurb should make a parent think: "my child is going to LOVE seeing their [feature] do that")
 4. 5 episodes with: episode number (1-5), title, scene_description, story_text, emotion
 
 Scene descriptions MUST focus on THE MAIN ACTION of the episode:
