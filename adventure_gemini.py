@@ -1325,6 +1325,7 @@ CONTENT:
     }
     
     # Get age guidelines or default to age_6
+    age_level = "age_3" if age_level == "under_3" else age_level
     age_guide = age_guidelines.get(age_level, age_guidelines["age_6"])
     
     # Extract just the age number for display
@@ -1720,6 +1721,7 @@ async def generate_story_for_theme(
         "age_10": """AGE 10+: Target 150-180 words per episode. Near-novel quality. Complex themes. Rich descriptions. Layered humor. Character growth across episodes. Confident independent reader.""",
     }
     
+    age_level = "age_3" if age_level == "under_3" else age_level
     age_guide = age_guidelines.get(age_level, age_guidelines["age_5"])
     
     # Reinforce writing style within the age guide so it doesn't get overridden
