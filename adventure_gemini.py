@@ -1414,12 +1414,26 @@ Look at the character description. Find the WEIRDEST, most UNUSUAL things:
 
 ⚠️ CRITICAL — HUMAN/PERSON CHARACTERS:
 If the character is a REAL CHILD, PERSON, or HUMAN (not a monster, animal, toy, or drawing):
-- NEVER use their PHYSICAL BODY as a story feature: skin colour, hair type/texture, body shape, weight, height, facial features, disability, or any physical characteristic they were born with
-- OBJECTS AND ACTIVITIES ARE THE #1 PRIORITY: If the child is holding, riding, or using something (ukulele, bike, scooter, tennis racket, paintbrush, magnifying glass, hula hoop, skateboard, football, kite, fishing rod, etc.) — this is the BEST possible story feature. Build the ENTIRE story around this object/activity. A child with a ukulele = music-themed adventure where strumming solves problems. A child on a bike = an epic ride through magical places. This is what makes the story feel truly personalized.
-- Clothing and accessories ARE also fine: a bow tie, cardigan, favourite hat, backpack, special shoes — these make great story elements
-- Poses and habits are fine too: always has hands in pockets, never takes off their hat, carries a lucky charm
-- If the description ONLY mentions physical body traits and no clothing/accessories/objects, give the character a FUN PERSONALITY TRAIT instead: brave but clumsy, incredibly curious, talks to animals, amazing at building things, never gives up, always loses things
-- The key rule: a child should never see a story that makes fun of or centres on how their body naturally looks
+
+PHYSICAL APPEARANCE CAN AND SHOULD BE USED — but ONLY as a SUPERPOWER or something WONDERFUL:
+- Glasses → can see things others can't, spots the tiny clue nobody else noticed, lenses catch light in a magical way
+- Curly hair → catches the wind like a sail, collects magical seeds, springs back from anything
+- Freckles → glow under moonlight, form a map, each one marks a different adventure
+- Braces → pick up radio signals, let them talk to robots, make the most amazing smile that unlocks something
+- ANY physical feature → find the magical version of it. What superpower does it secretly grant?
+- RULE: the physical feature must make the child feel AMAZING about it after reading. A child with glasses should finish the story wanting to wear them MORE. A child with curly hair should feel their hair is the coolest thing about them.
+- NEVER use a physical feature as something to be fixed, hidden, overcome, or apologised for. It is always already perfect and powerful.
+
+OBJECTS AND ACTIVITIES ARE ALSO BRILLIANT — use these if present:
+- If the child is holding, riding, or using something (ukulele, bike, scooter, tennis racket, paintbrush, magnifying glass, hula hoop, skateboard, football, kite, fishing rod, etc.) — build the ENTIRE story around this. A child with a ukulele = music-themed adventure where strumming solves problems. A child on a bike = an epic ride through magical places.
+- Clothing and accessories: a bow tie, cardigan, favourite hat, backpack, special shoes — all great story elements
+- Poses and habits: always has hands in pockets, never takes off their hat, carries a lucky charm
+
+PRIORITY ORDER FOR HUMAN CHARACTERS:
+1. Objects being held or used (most specific, most personal)
+2. Distinctive clothing or accessories
+3. Physical features — used as superpowers only, always in a positive, magical way
+4. Personality trait — if truly nothing else is available
 
 For NON-HUMAN characters (monsters, animals, toys, drawings): Use the feature analysis below as normal — multiple eyes, tentacles, unusual shapes etc. are all great story features.
 
@@ -1434,13 +1448,27 @@ PRIORITY 2 - UNUSUAL NUMBERS:
 - 10 eyes means 10 different things they can watch at once
 - 8 arms means they can do 8 things at once
 
-PRIORITY 3 - Colors and patterns (LEAST interesting - only use if nothing else):
-- Only use color if there's nothing more unusual about the character
+PRIORITY 3 - Distinctive features treated as SUPERPOWERS:
+- Every feature has a magical version. Your job is to find it.
+- Big ears → hears things from miles away, picks up magical frequencies, fans away danger
+- Long nose → sniffs out treasure, detects lies, reaches around corners
+- Tiny size → fits through gaps nobody else can, sees the world differently, invisible to danger
+- Unusual texture → sticks to walls, repels water, conducts electricity
+- Distinctive markings → form a map, glow at certain times, each one means something
+- Think: "what is the MAGICAL VERSION of this feature?" — then build the story around that
+
+PRIORITY 4 - Colors and patterns (only use if nothing else):
+- Only use color if there is truly nothing more unusual about the character
 
 DO NOT make stories about:
 - "camouflage" or "blending in" (boring!)
 - "colors fading" or "restoring colors" (overdone!)
-- Body shape unless it's truly unusual
+- Body shape unless it is truly unusual
+
+THE GOLDEN RULE FOR ALL FEATURES:
+Every story must pass this test: "Could this exact story exist with a different character?"
+If yes — the story is not personalised enough. Keep rewriting until the answer is NO.
+The character's specific feature must be the ONLY reason the story resolves the way it does.
 
 STEP 2 - PICK AND ADAPT A SCENARIO
 
@@ -1492,7 +1520,15 @@ CRITICAL: Follow the age guidelines above exactly for sentence length, vocabular
 For each theme provide:
 1. Theme name (fun, age-appropriate)
 2. Theme description (1 sentence)
-3. Theme blurb (ONE short punchy sentence, MAX 20 words. MUST include {character_name}'s name AND hint at how their specific feature matters to the story. The reader should think "this story was written just for MY character!" NEVER name the body part directly — instead hint at it. E.g. if feature is "big bouncy boots" don't say "boots" — say "only someone who can bounce high enough could save the day")
+3. Theme blurb (ONE short punchy sentence, MAX 20 words. This is the most important line — it must make a parent gasp and think "this was written ONLY for my child." Rules:
+- MUST include {character_name}'s name
+- MUST hint at the specific feature in a way that feels magical or exciting — never clinical
+- The reader should feel: "nobody else's character could star in this story"
+- NEVER name the body part or object directly — hint at what it CAN DO instead
+- E.g. if feature is "glasses": don't say "glasses" — say "only {character_name} can spot what everyone else missed"
+- E.g. if feature is "curly hair": don't say "hair" — say "when the wind picks up, {character_name}'s secret power is the only thing that can help"
+- E.g. if feature is "ukulele": don't say "ukulele" — say "one song from {character_name} could change everything — if only the right moment arrives"
+- The blurb should create CURIOSITY and EXCITEMENT, not just describe the plot)
 4. 5 episodes with: episode number (1-5), title, scene_description, story_text, emotion
 
 Scene descriptions MUST focus on THE MAIN ACTION of the episode:
