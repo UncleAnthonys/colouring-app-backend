@@ -1424,7 +1424,7 @@
       "name": "Martial Arts",
       "category": "sports",
       "description": "Martial arts practice",
-      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: A boy and a girl in a martial arts gi with a coloured belt doing a karate pose, cute cartoon style with friendly face. NO other people beyond the two children.\n\nBACKGROUND: Simple dojo setting - wooden floor, wall scroll, training mat, punching bag. NO other people beyond the two children.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: A boy and a girl in martial arts gi doing karate poses, cute cartoon style with friendly faces. The belt must be drawn as HOLLOW OUTLINE ONLY - not filled in black. NO other people beyond the two children.\n\nBACKGROUND: Simple dojo setting - wooden floor, training mat, punching bag. NO yin yang symbols. NO other people beyond the two children.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- ALL elements must be hollow outlines only - nothing filled in with black\n- Belts must be OUTLINE ONLY so children can colour them any colour\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
       "text_only": true
     },
     "athletics": {
