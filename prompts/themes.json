@@ -761,10 +761,10 @@
       "text_only": true
     },
     "animal_ladybug": {
-      "name": "Ladybug",
+      "name": "Ladybird",
       "category": "insects",
       "description": "Ladybug on leaf",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly ladybug with spots and tiny legs taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - big leaf, flowers, grass. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LADYBUG at the bottom in large hollow outline letters that can be colored in.",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly ladybird with spots and tiny legs taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - big leaf, flowers, grass. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LADYBIRD at the bottom in large hollow outline letters that can be colored in.",
       "text_only": true
     },
     "animal_caterpillar": {
@@ -964,7 +964,7 @@
       "text_only": true
     },
     "fruit_cherry": {
-      "name": "Cherry",
+      "name": "Cherries",
       "category": "fruits",
       "description": "Cherries on stem",
       "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large pair of round cherries connected by stems with a leaf taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple setting - tree branch, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write CHERRIES at the bottom in large hollow outline letters that can be colored in.",
@@ -1013,7 +1013,7 @@
       "text_only": true
     },
     "fruit_blueberry": {
-      "name": "Blueberry",
+      "name": "Blueberries",
       "category": "fruits",
       "description": "Big blueberries",
       "overlay": "COLORING PAGE - ONE BIG FRUIT:\n\nMAIN SUBJECT: One large cluster of round blueberries with tiny crown tops taking up most of the page, cute cartoon style with friendly face. NO other fruits, NO people.\n\nBACKGROUND: Simple garden setting - bush leaves, or plain white. NO other fruits or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BLUEBERRIES at the bottom in large hollow outline letters that can be colored in.",
@@ -1069,10 +1069,10 @@
       "text_only": true
     },
     "veg_pepper": {
-      "name": "Bell Pepper",
+      "name": "Pepper",
       "category": "vegetables",
       "description": "Bell pepper",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large bell pepper with bumpy bottom and green stem taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BELL PEPPER at the bottom in large hollow outline letters that can be colored in.",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large pepper with bumpy bottom and green stem taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write PEPPER at the bottom in large hollow outline letters that can be colored in.",
       "text_only": true
     },
     "veg_cucumber": {
@@ -1104,10 +1104,10 @@
       "text_only": true
     },
     "veg_eggplant": {
-      "name": "Eggplant",
+      "name": "Aubergine",
       "category": "vegetables",
       "description": "Purple eggplant",
-      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large oval eggplant with green cap and stem taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write EGGPLANT at the bottom in large hollow outline letters that can be colored in.",
+      "overlay": "COLORING PAGE - ONE BIG VEGETABLE:\n\nMAIN SUBJECT: One large oval aubergine with green cap and stem taking up most of the page, cute cartoon style with friendly face. NO other vegetables, NO people.\n\nBACKGROUND: Simple garden setting - or plain white. NO other vegetables or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write AUBERGINE at the bottom in large hollow outline letters that can be colored in.",
       "text_only": true
     },
     "veg_radish": {
