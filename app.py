@@ -366,7 +366,9 @@ OUTPUT: Simple blob figures with a basic outline of the main background object. 
 DRAW:
 - The people from the photo as simple cute figures
 - A big bold letter {letter} (plain block letter or bubble letter - NO face, NO arms, NO legs)
-- A {best_object} and one other simple object that starts with {letter}
+- A {best_object} and one other object ONLY from this list: {letter_objects}
+
+CRITICAL: EVERY object in this image MUST start with the letter {letter}. Do NOT draw anything that does not start with {letter}.
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
@@ -775,7 +777,9 @@ OUTPUT: Big clear letter {letter} with one {best_object} on pure white. The lett
 
 DRAW:
 - A big bold letter {letter} taking up a large portion of the page (plain block letter or bubble letter - NO face, NO arms, NO legs)
-- A {best_object} and one other simple object that starts with {letter}
+- A {best_object} and one other object ONLY from this list: {letter_objects}
+
+CRITICAL: EVERY object in this image MUST start with the letter {letter}. Do NOT draw anything that does not start with {letter}.
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
@@ -798,8 +802,9 @@ OUTPUT: Big clear letter {letter} with a {best_object} and one other {letter} ob
 DRAW:
 - A big bold letter {letter} displayed prominently in the scene (plain block letter or bubble letter - NO face, NO arms, NO legs)
 - 1-2 cute children wearing simple COSTUMES that start with {letter}
-- 3-4 objects that start with {letter} scattered around the scene
+- 3-4 objects ONLY from this list: {letter_objects}
 
+CRITICAL: EVERY single object and costume in this image MUST start with the letter {letter}. If it does not start with {letter}, DO NOT DRAW IT. ONLY use objects from the list above.
 IMPORTANT: Do NOT put the letter {letter} printed on clothing - dress them in themed COSTUMES instead
 
 STYLE:
