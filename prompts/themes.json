@@ -411,11 +411,6 @@
       "description": "Royal princess fairy tale",
       "overlay": "Apply theme: Princesses\n\nCOSTUME REQUIREMENT:\n- Dress ALL people as princesses/princes in royal gowns and crowns\n- Add tiaras, flowing dresses, capes, glass slippers\n\nSCENE ELEMENTS:\n- Fairy tale castle with towers and flags\n- Royal throne room or palace ballroom\n- Magical carriage or white horse\n- Rose gardens, fountain, topiary hedges\n- Chandelier, royal banner, velvet curtains\n- Crown jewels, magic mirror, glass slipper\n- Sparkles, stars, fairy dust\n\nSETTING:\n- Fairy tale kingdom\n- Elegant and magical atmosphere\n- Do NOT add extra human characters - fill scene with royal objects and castle elements instead"
     },
-    "ballerina": {
-      "name": "Ballerina",
-      "description": "Ballet tutus, ballet shoes, stage and dance elements",
-      "overlay": "Apply theme: Ballerina\n\nCOSTUME REQUIREMENT (CRITICAL - DO THIS FIRST):\n- Dress ALL people in ballet outfits\n- Must include: tutus, ballet slippers/pointe shoes, hair in buns with tiaras or flowers\n- This is the most important part of the theme\n\nAdditional ballet elements:\n- Ballet studio with mirrors and barre, or grand stage with curtains\n- Spotlights, chandelier, stage lights\n- Musical notes floating in air\n- Bouquet of roses, ribbon streamers\n- Ballet positions - graceful poses\n- Wooden stage floor, velvet curtains with tassels\n- Do NOT add extra human characters - fill scene with ballet and stage elements instead"
-    },
     "trains": {
       "name": "Trains",
       "description": "Train conductor outfits, steam trains, railway elements",
@@ -1304,6 +1299,216 @@
       "category": "pets",
       "description": "Gecko on rock",
       "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly gecko with spotted skin and big round eyes taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple setting - warm rock, heat lamp, branch, small desert plants. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write GECKO at the bottom in large hollow outline letters that can be colored in.",
+      "text_only": true
+    },
+    "football": {
+      "name": "Football",
+      "category": "sports",
+      "description": "Football match",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child playing football, kicking a football on a pitch, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple football pitch - goal, grass, corner flag, football. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "basketball": {
+      "name": "Basketball",
+      "category": "sports",
+      "description": "Basketball game",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child playing basketball, bouncing or shooting a basketball, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple basketball court - hoop, backboard, court lines. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "rugby": {
+      "name": "Rugby",
+      "category": "sports",
+      "description": "Rugby game",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child holding a rugby ball and running, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple rugby pitch - goalposts, grass, try line. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "netball": {
+      "name": "Netball",
+      "category": "sports",
+      "description": "Netball game",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child shooting a netball towards a hoop, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple netball court - tall hoop with no backboard, court lines. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "swimming": {
+      "name": "Swimming",
+      "category": "sports",
+      "description": "Swimming in pool",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child swimming in a pool wearing goggles, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple swimming pool - lane ropes, water ripples, pool edge, diving board. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "gymnastics": {
+      "name": "Gymnastics",
+      "category": "sports",
+      "description": "Gymnastics routine",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child doing a gymnastics pose on a balance beam, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple gymnasium - balance beam, mat, ribbons, medal. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "skateboarding": {
+      "name": "Skateboarding",
+      "category": "sports",
+      "description": "Skateboarding at park",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child riding a skateboard wearing a helmet, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple skate park - ramp, rails, half pipe. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "cycling": {
+      "name": "Cycling",
+      "category": "sports",
+      "description": "Cycling ride",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child riding a bicycle wearing a helmet, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple path - trees, flowers, sunshine, park bench. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "horse_riding": {
+      "name": "Horse Riding",
+      "category": "sports",
+      "description": "Horse riding lesson",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child sitting on a friendly horse wearing a riding helmet, cute cartoon style with friendly faces. NO other people.\n\nBACKGROUND: Simple stable setting - fence, hay bale, riding arena, rosette. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "ballet": {
+      "name": "Ballet",
+      "category": "sports",
+      "description": "Ballet dancing",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child in a tutu and ballet shoes doing a ballet pose, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple dance studio - mirror, barre, wooden floor, curtains. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "singing": {
+      "name": "Singing",
+      "category": "hobbies",
+      "description": "Singing on stage",
+      "overlay": "COLORING PAGE - HOBBY SCENE:\n\nMAIN SUBJECT: One child singing into a microphone with musical notes floating around, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple stage setting - microphone stand, spotlight, musical notes, stars. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "american_football": {
+      "name": "American Football",
+      "category": "sports",
+      "description": "American football game",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child in American football helmet and jersey holding an oval American football, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple American football field - goalposts, yard lines, grass. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "baseball": {
+      "name": "Baseball",
+      "category": "sports",
+      "description": "Baseball game",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child in baseball cap swinging a baseball bat, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple baseball diamond - home plate, bases, pitcher's mound, fence. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "scouts_guides": {
+      "name": "Scouts & Guides",
+      "category": "hobbies",
+      "description": "Scouts and guides activities",
+      "overlay": "COLORING PAGE - HOBBY SCENE:\n\nMAIN SUBJECT: One child in scout uniform with neckerchief and woggle giving a thumbs up, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple outdoor campsite - tent, campfire, trees, scout flag, rope knot. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "tennis": {
+      "name": "Tennis",
+      "category": "sports",
+      "description": "Tennis match",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child holding a tennis racket and hitting a tennis ball, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple tennis court - net, court lines, tennis balls. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "cricket": {
+      "name": "Cricket",
+      "category": "sports",
+      "description": "Cricket match",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child in cricket whites holding a cricket bat ready to hit, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple cricket pitch - stumps, wickets, crease line, grass. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "ice_skating": {
+      "name": "Ice Skating",
+      "category": "sports",
+      "description": "Ice skating on rink",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child ice skating with arms out for balance wearing ice skates, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple ice rink - ice surface, barrier, snowflakes, sparkles. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "martial_arts": {
+      "name": "Martial Arts",
+      "category": "sports",
+      "description": "Martial arts practice",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child in a martial arts gi with a coloured belt doing a karate pose, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple dojo setting - wooden floor, wall scroll, training mat, punching bag. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "athletics": {
+      "name": "Athletics",
+      "category": "sports",
+      "description": "Athletics race",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child running on a track wearing running shoes and a number bib, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple athletics track - lanes, finish line, hurdles, medal podium. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "hockey": {
+      "name": "Hockey",
+      "category": "sports",
+      "description": "Hockey game",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child holding a hockey stick and hitting a ball on grass, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple hockey pitch - goal, pitch lines, grass. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "surfing": {
+      "name": "Surfing",
+      "category": "sports",
+      "description": "Surfing waves",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child standing on a surfboard riding a wave, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple ocean scene - waves, sunshine, seagull, beach in distance. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "climbing": {
+      "name": "Climbing",
+      "category": "sports",
+      "description": "Rock climbing",
+      "overlay": "COLORING PAGE - SPORTS SCENE:\n\nMAIN SUBJECT: One child climbing a rock wall wearing a harness and helmet, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple climbing wall - coloured holds, rope, safety mat. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "fishing": {
+      "name": "Fishing",
+      "category": "hobbies",
+      "description": "Fishing by a lake",
+      "overlay": "COLORING PAGE - HOBBY SCENE:\n\nMAIN SUBJECT: One child sitting on a riverbank holding a fishing rod with a fish on the line, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple lakeside - water, reeds, bucket, lily pads, dragonfly. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "camping": {
+      "name": "Camping",
+      "category": "hobbies",
+      "description": "Camping adventure",
+      "overlay": "COLORING PAGE - HOBBY SCENE:\n\nMAIN SUBJECT: One child sitting outside a tent roasting a marshmallow on a stick, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple campsite - tent, campfire, trees, stars, moon, sleeping bag. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "painting": {
+      "name": "Painting",
+      "category": "hobbies",
+      "description": "Painting art",
+      "overlay": "COLORING PAGE - HOBBY SCENE:\n\nMAIN SUBJECT: One child holding a paintbrush and palette standing at an easel painting a picture, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple art studio - easel, paint pots, canvas, paint splashes, brushes in jar. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "dancing": {
+      "name": "Dancing",
+      "category": "hobbies",
+      "description": "Dancing fun",
+      "overlay": "COLORING PAGE - HOBBY SCENE:\n\nMAIN SUBJECT: One child dancing with arms up and one leg lifted, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple dance studio - mirror, wooden floor, boombox, musical notes, disco ball. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "cooking": {
+      "name": "Cooking",
+      "category": "hobbies",
+      "description": "Cooking in kitchen",
+      "overlay": "COLORING PAGE - HOBBY SCENE:\n\nMAIN SUBJECT: One child wearing a chef hat and apron stirring a bowl in a kitchen, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple kitchen - mixing bowl, wooden spoon, cupcakes, oven, recipe book. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "gardening": {
+      "name": "Gardening",
+      "category": "hobbies",
+      "description": "Gardening fun",
+      "overlay": "COLORING PAGE - HOBBY SCENE:\n\nMAIN SUBJECT: One child wearing gardening gloves kneeling and planting a flower in soil, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple garden - watering can, plant pots, spade, sunflowers, fence. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "reading": {
+      "name": "Reading",
+      "category": "hobbies",
+      "description": "Reading a book",
+      "overlay": "COLORING PAGE - HOBBY SCENE:\n\nMAIN SUBJECT: One child sitting in a cozy armchair reading a big book with a happy face, cute cartoon style with friendly face. NO other people.\n\nBACKGROUND: Simple reading nook - bookshelf, lamp, cushions, stack of books, teddy bear. NO other people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
+      "text_only": true
+    },
+    "easter": {
+      "name": "Easter",
+      "category": "seasonal",
+      "description": "Easter celebration",
+      "overlay": "COLORING PAGE - SEASONAL SCENE:\n\nMAIN SUBJECT: One friendly Easter bunny holding a decorated Easter egg surrounded by more eggs, cute cartoon style with friendly face. NO people.\n\nBACKGROUND: Simple spring garden - Easter eggs hidden in grass, flowers, chicks, basket. NO people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE",
       "text_only": true
     }
   },
