@@ -361,6 +361,34 @@ OUTPUT: Simple blob figures with a basic outline of the main background object. 
                 'u': 'umbrella', 'v': 'violin', 'w': 'whale', 'x': 'xylophone',
                 'y': 'yo-yo', 'z': 'zebra'
             }.get(letter.lower(), 'apple')
+            letter_objects = {
+                'a': 'apple, airplane, ant, alligator, anchor, arrow, acorn, avocado, axe, ambulance, armadillo, angelfish, apron',
+                'b': 'ball, butterfly, banana, bear, boat, book, balloon, bee, bell, bird, bicycle, bucket, bus, basket, bow, bridge, bone',
+                'c': 'cat, car, cake, castle, crown, cow, cloud, crab, candle, carrot, caterpillar, clock, cup, compass, cherry, camel',
+                'd': 'dog, dinosaur, dolphin, drum, duck, daisy, diamond, door, dragonfly, dice, deer, dragon, domino, dove',
+                'e': 'elephant, egg, envelope, eagle, ear, earth, elf, emerald, easel, emu, eye, engine',
+                'f': 'fish, flower, frog, flag, feather, fox, fire, flamingo, fan, fence, fork, fairy, flute, fern',
+                'g': 'giraffe, grapes, guitar, ghost, goat, glasses, globe, gorilla, gift, goldfish, garden gate, gem, glove, grasshopper',
+                'h': 'hat, horse, house, heart, helicopter, hippo, hammer, harp, hedgehog, hen, honey jar, hook, hose, hummingbird, harmonica',
+                'i': 'ice cream, igloo, iguana, iron, island, ivy, icicle, insect, ink bottle',
+                'j': 'jellyfish, jam jar, jigsaw puzzle, jug, jacket, jet, jewel, jump rope, jester hat',
+                'k': 'kite, key, kangaroo, king, kitten, kettle, kayak, koala, knight shield, kazoo',
+                'l': 'lion, ladder, leaf, lemon, lighthouse, lizard, lamp, lollipop, log, lobster, lock, llama, lantern',
+                'm': 'monkey, moon, mushroom, mouse, mountain, mermaid, mittens, magnet, map, muffin, medal, microscope, mailbox, mask, marble',
+                'n': 'nest, needle, newt, net, necklace, notebook, nut, narwhal',
+                'o': 'octopus, orange, owl, otter, onion, orchid, ostrich, orca, ornament, oar',
+                'p': 'penguin, pizza, parrot, pumpkin, piano, pear, pig, pirate hat, paintbrush, pencil, popcorn, panda, present, puzzle piece, palm tree',
+                'q': 'queen, quilt, question mark, quail, quiver of arrows',
+                'r': 'rocket, rainbow, robot, rabbit, rose, ring, ruler, rain cloud, reindeer, rooster, rope, racket, rhinoceros, radio',
+                's': 'star, sun, snake, ship, strawberry, snowman, scissors, shell, spider, skateboard, sword, sunflower, snail, scarf, seahorse',
+                't': 'turtle, train, tree, trumpet, tiger, telescope, tent, tractor, teapot, teddy bear, tooth, tomato, treasure chest, tambourine',
+                'u': 'umbrella, unicorn, ukulele, UFO, uniform',
+                'v': 'violin, volcano, vase, van, vine, vulture, valentine heart',
+                'w': 'whale, watermelon, windmill, wagon, watch, wizard hat, wolf, worm, web, window, watering can, walrus, wings, wand',
+                'x': 'xylophone, x-ray, x marks the spot',
+                'y': 'yacht, yo-yo, yak, yarn ball',
+                'z': 'zebra, zip, zoo gate, zigzag, zeppelin',
+            }.get(letter.lower(), 'apple, airplane, ant')
             return f"""Create a SIMPLE alphabet colouring page for letter {letter} for a 4 year old.
 
 DRAW:
@@ -444,13 +472,42 @@ OUTPUT: Thick simplified outlines of REAL shapes on white. Halfway between carto
         # Special handling for alphabet themes
         if theme.startswith("alphabet_"):
             letter = theme.replace("alphabet_", "").upper()
+            letter_objects = {
+                'a': 'apple, airplane, ant, alligator, anchor, arrow, acorn, avocado, axe, ambulance, armadillo, angelfish, apron',
+                'b': 'ball, butterfly, banana, bear, boat, book, balloon, bee, bell, bird, bicycle, bucket, bus, basket, bow, bridge, bone',
+                'c': 'cat, car, cake, castle, crown, cow, cloud, crab, candle, carrot, caterpillar, clock, cup, compass, cherry, camel',
+                'd': 'dog, dinosaur, dolphin, drum, duck, daisy, diamond, door, dragonfly, dice, deer, dragon, domino, dove',
+                'e': 'elephant, egg, envelope, eagle, ear, earth, elf, emerald, easel, emu, eye, engine',
+                'f': 'fish, flower, frog, flag, feather, fox, fire, flamingo, fan, fence, fork, fairy, flute, fern',
+                'g': 'giraffe, grapes, guitar, ghost, goat, glasses, globe, gorilla, gift, goldfish, garden gate, gem, glove, grasshopper',
+                'h': 'hat, horse, house, heart, helicopter, hippo, hammer, harp, hedgehog, hen, honey jar, hook, hose, hummingbird, harmonica',
+                'i': 'ice cream, igloo, iguana, iron, island, ivy, icicle, insect, ink bottle',
+                'j': 'jellyfish, jam jar, jigsaw puzzle, jug, jacket, jet, jewel, jump rope, jester hat',
+                'k': 'kite, key, kangaroo, king, kitten, kettle, kayak, koala, knight shield, kazoo',
+                'l': 'lion, ladder, leaf, lemon, lighthouse, lizard, lamp, lollipop, log, lobster, lock, llama, lantern',
+                'm': 'monkey, moon, mushroom, mouse, mountain, mermaid, mittens, magnet, map, muffin, medal, microscope, mailbox, mask, marble',
+                'n': 'nest, needle, newt, net, necklace, notebook, nut, narwhal',
+                'o': 'octopus, orange, owl, otter, onion, orchid, ostrich, orca, ornament, oar',
+                'p': 'penguin, pizza, parrot, pumpkin, piano, pear, pig, pirate hat, paintbrush, pencil, popcorn, panda, present, puzzle piece, palm tree',
+                'q': 'queen, quilt, question mark, quail, quiver of arrows',
+                'r': 'rocket, rainbow, robot, rabbit, rose, ring, ruler, rain cloud, reindeer, rooster, rope, racket, rhinoceros, radio',
+                's': 'star, sun, snake, ship, strawberry, snowman, scissors, shell, spider, skateboard, sword, sunflower, snail, scarf, seahorse',
+                't': 'turtle, train, tree, trumpet, tiger, telescope, tent, tractor, teapot, teddy bear, tooth, tomato, treasure chest, tambourine',
+                'u': 'umbrella, unicorn, ukulele, UFO, uniform',
+                'v': 'violin, volcano, vase, van, vine, vulture, valentine heart',
+                'w': 'whale, watermelon, windmill, wagon, watch, wizard hat, wolf, worm, web, window, watering can, walrus, wings, wand',
+                'x': 'xylophone, x-ray, x marks the spot',
+                'y': 'yacht, yo-yo, yak, yarn ball',
+                'z': 'zebra, zip, zoo gate, zigzag, zeppelin',
+            }.get(letter.lower(), 'apple, airplane, ant')
             return f"""Create an alphabet colouring page for letter {letter} for a 5 year old.
 
 DRAW:
 - The people from the photo wearing simple COSTUMES that start with {letter} (e.g. for E: explorer outfit with hat)
 - A big bold letter {letter} displayed prominently (plain block letter or bubble letter - NO face, NO arms, NO legs)
-- 3-4 objects that start with {letter} (e.g. for E: elephant, eggs, envelope)
+- 3-4 objects ONLY from this list: {letter_objects}
 
+CRITICAL: EVERY single object and costume in this image MUST start with the letter {letter}. If it does not start with {letter}, DO NOT DRAW IT. ONLY use objects from the list above.
 IMPORTANT: Do NOT put the letter {letter} printed on clothing - dress them in themed COSTUMES instead
 
 STYLE:
