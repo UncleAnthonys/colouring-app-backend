@@ -210,6 +210,10 @@ STYLE:
 - Blob/kawaii style - super rounded and chunky
 - Faces: just dots for eyes, simple curve for mouth
 - Maximum 8-10 colourable areas TOTAL
+- NO dots, NO speckles, NO texture, NO noise anywhere on the page
+- Every area must be PURE WHITE inside black outlines
+- ALL lines must connect perfectly - no gaps
+- Clean, smooth lines - no sketchy or broken lines
 
 BACKGROUND:
 - PURE WHITE - absolutely nothing else
@@ -294,6 +298,10 @@ STYLE:
 - NO fingers, NO detailed features
 - Bodies as simple rounded shapes
 - Maximum 10-12 colourable areas TOTAL
+- NO dots, NO speckles, NO texture, NO noise anywhere on the page
+- Every area must be PURE WHITE inside black outlines
+- ALL lines must connect perfectly - no gaps
+- Clean, smooth lines - no sketchy or broken lines
 
 BACKGROUND:
 - PURE WHITE - absolutely nothing else
@@ -404,6 +412,10 @@ STYLE:
 - Simple rounded cartoon figures
 - The letter {letter} must be LARGE and clearly visible
 - Maximum 15-18 colourable areas
+- NO dots, NO speckles, NO texture, NO noise anywhere on the page
+- Every area must be PURE WHITE inside black outlines
+- ALL lines must connect perfectly - no gaps
+- Clean, smooth lines - no sketchy or broken lines
 
 NO TEXT - do not write any words or labels
 
@@ -544,6 +556,10 @@ STYLE:
 - Simple but clear figures
 - The letter {letter} must be LARGE and clearly visible
 - Maximum 20-25 colourable areas
+- NO dots, NO speckles, NO texture, NO noise anywhere on the page
+- Every area must be PURE WHITE inside black outlines
+- ALL lines must connect perfectly - no gaps
+- Clean, smooth lines - no sketchy or broken lines
 
 NO TEXT - do not write any words or labels
 
