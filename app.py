@@ -500,10 +500,38 @@ OUTPUT: Thick simplified outlines of REAL shapes on white. Halfway between carto
                 'y': 'yacht, yo-yo, yak, yarn ball',
                 'z': 'zebra, zip, zoo gate, zigzag, zeppelin',
             }.get(letter.lower(), 'apple, airplane, ant')
+            letter_costumes = {
+                'a': 'astronaut, archer, artist, acrobat',
+                'b': 'builder, ballerina, beekeeper',
+                'c': 'cowboy, chef, clown',
+                'd': 'doctor, dinosaur onesie, detective',
+                'e': 'explorer with hat and binoculars, elf',
+                'f': 'firefighter, fairy, farmer',
+                'g': 'gardener with tools and apron, gorilla onesie, gymnast',
+                'h': 'hippo onesie, horse rider outfit, hiker',
+                'i': 'ice skater, insect onesie',
+                'j': 'jester, jockey',
+                'k': 'king, knight, karate outfit',
+                'l': 'lion onesie, ladybird onesie, lifeguard',
+                'm': 'magician, mermaid costume, monkey onesie',
+                'n': 'ninja, nurse',
+                'o': 'owl onesie, octopus costume',
+                'p': 'pirate, princess, pilot',
+                'q': 'queen',
+                'r': 'robot costume, racing driver, Robin Hood',
+                's': 'superhero, sailor, scientist',
+                't': 'train conductor, tiger onesie',
+                'u': 'unicorn onesie, umpire',
+                'v': 'viking, vet',
+                'w': 'wizard, witch',
+                'x': 'superhero with X on chest, x-ray technician',
+                'y': 'yak onesie, yachtsman',
+                'z': 'zookeeper, zebra onesie',
+            }.get(letter.lower(), 'astronaut')
             return f"""Create an alphabet colouring page for letter {letter} for a 5 year old.
 
 DRAW:
-- The people from the photo wearing simple COSTUMES that start with {letter} (e.g. for E: explorer outfit with hat)
+- The people from the photo wearing COSTUMES from this list ONLY: {letter_costumes}
 - A big bold letter {letter} displayed prominently (plain block letter or bubble letter - NO face, NO arms, NO legs)
 - 3-4 objects ONLY from this list: {letter_objects}
 
@@ -788,6 +816,35 @@ Just the habitat scene with multiple {subject} hidden throughout to find."""
             'z': 'zebra, zip, zoo gate, zigzag, zeppelin',
         }.get(letter_lower, 'apple, airplane, ant')
         
+        letter_costumes = {
+            'a': 'astronaut, archer, artist, acrobat',
+            'b': 'builder, ballerina, beekeeper',
+            'c': 'cowboy, chef, clown',
+            'd': 'doctor, dinosaur onesie, detective',
+            'e': 'explorer with hat and binoculars, elf',
+            'f': 'firefighter, fairy, farmer',
+            'g': 'gardener with tools and apron, gorilla onesie, gymnast',
+            'h': 'hippo onesie, horse rider outfit, hiker',
+            'i': 'ice skater, insect onesie',
+            'j': 'jester, jockey',
+            'k': 'king, knight, karate outfit',
+            'l': 'lion onesie, ladybird onesie, lifeguard',
+            'm': 'magician, mermaid costume, monkey onesie',
+            'n': 'ninja, nurse',
+            'o': 'owl onesie, octopus costume',
+            'p': 'pirate, princess, pilot',
+            'q': 'queen',
+            'r': 'robot costume, racing driver, Robin Hood',
+            's': 'superhero, sailor, scientist',
+            't': 'train conductor, tiger onesie',
+            'u': 'unicorn onesie, umpire',
+            'v': 'viking, vet',
+            'w': 'wizard, witch',
+            'x': 'superhero with X on chest, x-ray technician',
+            'y': 'yak onesie, yachtsman',
+            'z': 'zookeeper, zebra onesie',
+        }.get(letter_lower, 'astronaut')
+
         # UNDER 3 - big clear letter + one hardcoded object
         if age_level == "under_3":
             return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
@@ -858,7 +915,7 @@ OUTPUT: Big clear letter {letter} with a {best_object} and one other {letter} ob
 
 DRAW:
 - A big bold letter {letter} displayed prominently in the scene (plain block letter or bubble letter - NO face, NO arms, NO legs)
-- 1-2 cute children wearing simple COSTUMES that start with {letter}
+- 1-2 cute children wearing COSTUMES from this list ONLY: {letter_costumes}
 - 3-4 objects ONLY from this list: {letter_objects}
 
 CRITICAL: EVERY single object and costume in this image MUST start with the letter {letter}. If it does not start with {letter}, DO NOT DRAW IT. ONLY use objects from the list above.
@@ -885,7 +942,7 @@ OUTPUT: Large clear letter {letter} with children in costumes and several {lette
 
 DRAW:
 - A large bold letter {letter} prominently placed in the scene (block letter or bubble letter - NO face, NO arms, NO legs)
-- 1-2 children wearing costumes or outfits themed around {letter}
+- 1-2 children wearing COSTUMES from this list ONLY: {letter_costumes}
 - 6-8 objects from this list: {letter_objects}
 - ONLY draw objects from the list above - nothing else
 
