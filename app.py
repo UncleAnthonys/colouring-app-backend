@@ -969,7 +969,7 @@ DRAW:
 - A creative scene where EVERYTHING relates to the letter {letter}
 - 8-10 objects from this list: {letter_objects}
 - ONLY draw objects from the list above - nothing else
-- Optional: 1-2 children interacting with the {letter} objects
+- Optional: 1-2 children wearing COSTUMES from this list ONLY: {letter_costumes}
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading
