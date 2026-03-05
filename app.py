@@ -1003,7 +1003,7 @@ OUTPUT: Fun {letter}-themed scene with large letter {letter}, children, and mult
             return f"""Create a detailed alphabet colouring page for letter {letter} for a {age_level.replace('age_', '')} year old.
 
 DRAW:
-- A large decorative letter {letter} as a focal point (ornate block letter or bubble letter - NO face, NO arms, NO legs)
+- A large bold letter {letter} as a focal point (plain block letter or bubble letter - NO face, NO arms, NO legs, NO patterns or detail inside the letter - keep it HOLLOW and clean)
 - A creative scene where EVERYTHING relates to the letter {letter}
 - 8-10 objects from this list: {letter_objects}
 - ONLY draw objects from the list above - nothing else
@@ -1023,14 +1023,14 @@ STYLE:
 
 NO TEXT - do not write any words or labels (only the letter {letter} itself)
 
-OUTPUT: Detailed {letter}-themed scene with decorative letter and many {letter} objects. The letter must NOT have a face, arms, or legs."""
+OUTPUT: Detailed {letter}-themed scene with clean hollow letter and many {letter} objects. The letter must NOT have a face, arms, or legs."""
 
         # AGE 9-10 - complex educational scene
         if age_level in ("age_9", "age_10"):
             return f"""Create a complex alphabet colouring page for letter {letter} for a {age_level.replace('age_', '')} year old.
 
 DRAW:
-- A large artistic letter {letter} as centrepiece (ornate block letter or bubble letter - NO face, NO arms, NO legs)
+- A large bold letter {letter} as centrepiece (plain block letter or bubble letter - NO face, NO arms, NO legs, NO patterns or detail inside the letter - keep it HOLLOW and clean)
 - An elaborate scene built around the letter {letter}
 - 10-12 objects from this list: {letter_objects}
 - ONLY draw objects from the list above - nothing else
