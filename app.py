@@ -988,6 +988,8 @@ STYLE:
 - Every area must be PURE WHITE inside black outlines
 - ALL lines must connect perfectly - no gaps
 - Clean, smooth lines - no sketchy or broken lines
+- BACKGROUND BETWEEN OBJECTS MUST BE PURE WHITE - no decorative stars, flowers, dots, swirls, or filler shapes between objects
+- Leave WHITE SPACE between objects - do not fill every gap
 
 NO TEXT - do not write any words or labels (only the letter {letter} itself)
 
@@ -1015,6 +1017,8 @@ STYLE:
 - Every area must be PURE WHITE inside black outlines
 - ALL lines must connect perfectly - no gaps
 - Clean, smooth lines - no sketchy or broken lines
+- BACKGROUND BETWEEN OBJECTS MUST BE PURE WHITE - no decorative stars, flowers, dots, swirls, or filler shapes between objects
+- Leave WHITE SPACE between objects - do not fill every gap
 - Maximum 30-40 colourable areas
 
 NO TEXT - do not write any words or labels (only the letter {letter} itself)
@@ -1043,6 +1047,8 @@ STYLE:
 - Every area must be PURE WHITE inside black outlines
 - ALL lines must connect perfectly - no gaps
 - Clean, smooth lines - no sketchy or broken lines
+- BACKGROUND BETWEEN OBJECTS MUST BE PURE WHITE - no decorative stars, flowers, dots, swirls, or filler shapes between objects
+- Leave WHITE SPACE between objects - do not fill every gap
 
 NO TEXT - do not write any words or labels (only the letter {letter} itself)
 
