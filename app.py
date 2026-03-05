@@ -859,6 +859,10 @@ STYLE:
 - EXTREMELY THICK black outlines
 - The letter must be clearly recognizable as {letter}
 - Maximum 8-10 colourable areas TOTAL
+- NO dots, NO speckles, NO texture, NO noise anywhere on the page
+- Every area must be PURE WHITE inside black outlines
+- ALL lines must connect perfectly - no gaps
+- Clean, smooth lines - no sketchy or broken lines
 
 BACKGROUND:
 - PURE WHITE - absolutely nothing else
@@ -879,6 +883,10 @@ STYLE:
 - EXTREMELY THICK black outlines
 - The letter must be clearly recognizable as {letter}
 - Maximum 10-12 colourable areas TOTAL
+- NO dots, NO speckles, NO texture, NO noise anywhere on the page
+- Every area must be PURE WHITE inside black outlines
+- ALL lines must connect perfectly - no gaps
+- Clean, smooth lines - no sketchy or broken lines
 
 BACKGROUND:
 - PURE WHITE - absolutely nothing else
@@ -901,6 +909,10 @@ STYLE:
 - THICK black outlines
 - The letter {letter} must be LARGE and clearly recognizable
 - Maximum 15-18 colourable areas
+- NO dots, NO speckles, NO texture, NO noise anywhere on the page
+- Every area must be PURE WHITE inside black outlines
+- ALL lines must connect perfectly - no gaps
+- Clean, smooth lines - no sketchy or broken lines
 
 NO TEXT - do not write any words or labels
 
@@ -927,6 +939,10 @@ STYLE:
 - Medium-thick black outlines
 - Simple but clear figures
 - Maximum 20-25 colourable areas
+- NO dots, NO speckles, NO texture, NO noise anywhere on the page
+- Every area must be PURE WHITE inside black outlines
+- ALL lines must connect perfectly - no gaps
+- Clean, smooth lines - no sketchy or broken lines
 
 NO TEXT - do not write any words or labels (only the letter {letter} itself)
 
@@ -952,6 +968,10 @@ STYLE:
 - Medium-thick black outlines
 - More detail than younger ages but still clear
 - Maximum 25-30 colourable areas
+- NO dots, NO speckles, NO texture, NO noise anywhere on the page
+- Every area must be PURE WHITE inside black outlines
+- ALL lines must connect perfectly - no gaps
+- Clean, smooth lines - no sketchy or broken lines
 
 NO TEXT - do not write any words or labels (only the letter {letter} itself)
 
@@ -975,7 +995,10 @@ STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading
 - NO pink cheeks, NO blush, NO rosy cheeks - pure black lines only
 - Medium black outlines with more detail
-
+- NO dots, NO speckles, NO texture, NO noise anywhere on the page
+- Every area must be PURE WHITE inside black outlines
+- ALL lines must connect perfectly - no gaps
+- Clean, smooth lines - no sketchy or broken lines
 - Maximum 30-40 colourable areas
 
 NO TEXT - do not write any words or labels (only the letter {letter} itself)
@@ -997,9 +1020,13 @@ STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading
 - NO pink cheeks, NO blush, NO rosy cheeks - pure black lines only
 - Finer black outlines with lots of detail
-- Intricate patterns, textures suggested by line work
+- Intricate patterns suggested by line work only - NO filled textures
 - Many small colourable areas for patient colouring
 - Maximum 40-50+ colourable areas
+- NO dots, NO speckles, NO texture, NO noise anywhere on the page
+- Every area must be PURE WHITE inside black outlines
+- ALL lines must connect perfectly - no gaps
+- Clean, smooth lines - no sketchy or broken lines
 
 NO TEXT - do not write any words or labels (only the letter {letter} itself)
 
