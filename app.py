@@ -54,6 +54,11 @@ def normalize_age_level(age_input: str) -> str:
     valid_levels = ["under_3", "age_3", "age_4", "age_5", "age_6", "age_7", "age_8", "age_9", "age_10"]
     if age_input in valid_levels:
         return age_input
+    # Handle slider display values like "age_Under 3" and "age_10+"
+    if "Under 3" in age_input or "under_3" in age_input or "under 3" in age_input.lower():
+        return "under_3"
+    if "10+" in age_input:
+        return "age_10"
     try:
         num_str = age_input.replace("age_", "").replace(".0", "")
         age_num = int(float(num_str))
