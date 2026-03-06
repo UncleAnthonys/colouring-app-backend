@@ -1080,6 +1080,31 @@ OUTPUT: Complex detailed {letter}-themed illustration with artistic letter and m
         
         return base_prompt
     
+    # BABY MODE (under 3) - simplest possible single object
+    if age_level == "under_3":
+        return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
+
+DRAW:
+- ONE simple {description} character or object in the centre of the page
+- THAT IS ALL - NOTHING ELSE
+
+STYLE:
+- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
+- NO pink cheeks, NO blush, NO rosy cheeks - pure black lines only
+- EXTREMELY THICK black outlines
+- Blob/kawaii style - super rounded and chunky
+- Maximum 8-10 colourable areas TOTAL
+- NO dots, NO speckles, NO texture, NO noise anywhere on the page
+- Every area must be PURE WHITE inside black outlines
+- ALL lines must connect perfectly - no gaps
+- Clean, smooth lines - no sketchy or broken lines
+
+BACKGROUND:
+- PURE WHITE - absolutely nothing else
+- No ground, no sky, no clouds, no grass, nothing
+
+OUTPUT: One simple chunky {description} on pure white. Nothing else on the page."""
+
     # TODDLER MODE (age 3-4) - super simple single object
     if age_level == "age_3":
         return f"""Create an EXTREMELY SIMPLE toddler colouring page.
