@@ -10,7 +10,6 @@ import random
 
 import base64
 from firebase_utils import upload_to_firebase
-from app import create_a4_pdf
 
 from pattern_config import (
     generate_pattern_prompt,
@@ -102,6 +101,7 @@ async def generate_pattern_coloring(request: PatternRequest):
         # Generate PDF and upload
         pdf_url = None
         try:
+            from app import create_a4_pdf
             pdf_b64 = create_a4_pdf(output_b64)
             pdf_url = upload_to_firebase(pdf_b64, folder="pdfs")
         except Exception as e:
