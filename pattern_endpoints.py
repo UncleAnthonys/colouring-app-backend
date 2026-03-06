@@ -8,6 +8,10 @@ from pydantic import BaseModel
 from typing import Optional
 import random
 
+import base64
+from firebase_utils import upload_to_firebase
+from app import create_a4_pdf
+
 from pattern_config import (
     generate_pattern_prompt,
     generate_pattern_prompt_deterministic,
@@ -30,8 +34,9 @@ class PatternRequest(BaseModel):
 
 class PatternResponse(BaseModel):
     """Response model for pattern coloring"""
-    image: str  # Base64 encoded image
-    prompt_used: str  # The prompt that was generated
+    success: bool
+    image_url: str  # Firebase URL
+    pdf_url: Optional[str] = None  # Firebase PDF URL
     shape: str
     age_level: str
     pattern_count: int
@@ -81,9 +86,31 @@ async def generate_pattern_coloring(request: PatternRequest):
             quality=request.quality
         )
         
+        # Get base64 image
+        image_data = result["data"][0]
+        if "b64_json" in image_data:
+            output_b64 = image_data["b64_json"]
+        else:
+            import httpx as hx
+            async with hx.AsyncClient() as client:
+                resp = await client.get(image_data["url"])
+                output_b64 = base64.b64encode(resp.content).decode('utf-8')
+        
+        # Upload to Firebase
+        image_url = upload_to_firebase(output_b64, folder="generations")
+        
+        # Generate PDF and upload
+        pdf_url = None
+        try:
+            pdf_b64 = create_a4_pdf(output_b64)
+            pdf_url = upload_to_firebase(pdf_b64, folder="pdfs")
+        except Exception as e:
+            print(f"Pattern PDF generation/upload failed: {e}")
+        
         return PatternResponse(
-            image=result["data"][0]["b64_json"],
-            prompt_used=prompt,
+            success=True,
+            image_url=image_url,
+            pdf_url=pdf_url,
             shape=request.shape,
             age_level=request.age_level,
             pattern_count=pattern_count
