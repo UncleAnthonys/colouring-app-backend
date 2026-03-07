@@ -752,7 +752,19 @@ IMAGE:
 - BLACK AND WHITE LINE ART suitable for coloring in
 - Portrait orientation, fills the entire page
 
-ABSOLUTELY NO BORDER, NO FRAME, NO OUTLINE around the edge of the page. The art must go edge to edge with NO border lines.
+⚠️ NO BORDER - CRITICAL:
+- There must be NO border, NO frame, NO outline, NO decorative edge around the image
+- NO thin black line around the edge
+- NO thick black line around the edge
+- NO curly or decorative frame
+- NO flower or leaf border
+- The artwork fades into white at the edges - no hard line boundary
+
+⚠️ COMPOSITION:
+- Character's HEAD must be in the MIDDLE of the image, NOT near the top
+- TOP 30% must be completely empty — just plain white or simple sky. NOTHING ELSE
+- All characters and objects in the LOWER 65% of the image
+
 Make it look like a real children's coloring book cover you'd see in a shop!
 """
     
@@ -1036,9 +1048,22 @@ IMAGE:
 {f'- {request.second_character_name} next to {char.name}, looking happy and excited' if request.second_character_name else ''}
 - Background hints at the adventure: {cover_description}
 - BLACK AND WHITE LINE ART suitable for coloring in
-- COMPOSITION CRITICAL: The main character and ALL important story elements (buildings, objects, animals) must be in the LOWER 70% of the image. The TOP 30% should be simple background only — open sky, simple clouds, empty space. NO important elements in the top 30%. The title text will be placed over this area and must not cover anything important.
-- The bottom 10% should also be simple (ground, grass, path) for branding text.
-- ABSOLUTELY NO BORDER, NO FRAME, NO OUTLINE around the edge of the page. The art must go edge to edge with NO border lines.
+⚠️ COMPOSITION - THIS IS THE MOST IMPORTANT RULE:
+- The character's HEAD must be in the MIDDLE of the image, NOT near the top
+- The TOP 30% of the image MUST be completely empty — just plain white or simple sky with 1-2 clouds. NOTHING ELSE in the top 30%. No buildings, no trees, no objects, no part of the character
+- All characters, buildings, objects, animals must be in the LOWER 65% of the image
+- The bottom 10% should be simple (ground, path) for branding text
+- Think of it like a photo where the subject is in the lower half and there's lots of sky above
+
+⚠️ NO BORDER - CRITICAL:
+- There must be NO border, NO frame, NO outline, NO decorative edge around the image
+- NO thin black line around the edge
+- NO thick black line around the edge  
+- NO curly or decorative frame
+- NO flower or leaf border
+- The artwork fades into white at the edges - no hard line boundary
+- If you draw ANY kind of line around the edge of the page, the image is WRONG
+
 Make it look like a real children's coloring book cover!
 """
         
