@@ -752,6 +752,7 @@ IMAGE:
 - BLACK AND WHITE LINE ART suitable for coloring in
 - Portrait orientation, fills the entire page
 
+ABSOLUTELY NO BORDER, NO FRAME, NO OUTLINE around the edge of the page. The art must go edge to edge with NO border lines.
 Make it look like a real children's coloring book cover you'd see in a shop!
 """
     
@@ -1037,7 +1038,7 @@ IMAGE:
 - BLACK AND WHITE LINE ART suitable for coloring in
 - COMPOSITION CRITICAL: The main character and ALL important story elements (buildings, objects, animals) must be in the LOWER 70% of the image. The TOP 30% should be simple background only — open sky, simple clouds, empty space. NO important elements in the top 30%. The title text will be placed over this area and must not cover anything important.
 - The bottom 10% should also be simple (ground, grass, path) for branding text.
-- A border/frame is fine if it suits the style.
+- ABSOLUTELY NO BORDER, NO FRAME, NO OUTLINE around the edge of the page. The art must go edge to edge with NO border lines.
 Make it look like a real children's coloring book cover!
 """
         
