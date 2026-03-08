@@ -1171,7 +1171,9 @@ BANNED:
 - Sketchy or broken lines
 - Any visual noise
 
-OUTPUT: Bold black lines on pure white background. No grey. No texture."""
+OUTPUT: Bold black lines on pure white background. No grey. No texture.
+
+CRITICAL - NO BORDER: Do NOT add any border, frame, or rounded corners around the image. The drawing must fill the entire canvas edge to edge with NO border whatsoever."""
 
     if age_level in CONFIG["age_levels"]:
         base += "\n\n" + CONFIG["age_levels"][age_level]["overlay"]
