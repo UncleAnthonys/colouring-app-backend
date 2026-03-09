@@ -759,7 +759,7 @@
       "name": "Ladybird",
       "category": "insects",
       "description": "Ladybug on leaf",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly ladybird with spots and tiny legs taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - big leaf, flowers, grass. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write LADYBIRD at the bottom in large hollow outline letters that can be colored in.",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly ladybird with spots and tiny legs taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - big leaf, flowers, grass. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- Ladybird spots must be HOLLOW OUTLINES ONLY - do NOT fill spots with black. Every spot must be white inside with black outline so children can colour them in\n- NO filled black areas anywhere\n- NO border, NO frame around the image\n\nLABEL: Write LADYBIRD at the bottom in large hollow outline letters that can be colored in.",
       "text_only": true
     },
     "animal_caterpillar": {
@@ -794,7 +794,7 @@
       "name": "Spider",
       "category": "insects",
       "description": "Friendly spider on web",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly FRIENDLY cute spider with 8 legs and big friendly eyes - NOT scary taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple web setting - spider web, leaves, dewdrops. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write SPIDER at the bottom in large hollow outline letters that can be colored in.",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly FRIENDLY cute spider with 8 legs and big friendly eyes - NOT scary taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple web setting - spider web, leaves, dewdrops. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO filled black areas anywhere\n- NO border, NO frame around the image\n\nLABEL: Write SPIDER at the bottom in large hollow outline letters that can be colored in.",
       "text_only": true
     },
     "animal_ant": {
