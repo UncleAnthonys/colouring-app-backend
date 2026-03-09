@@ -535,7 +535,7 @@
       "name": "Gorilla",
       "category": "zoo",
       "description": "Gorilla in jungle",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly gorilla with gentle expression taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple jungle setting - trees, leaves, vines, plants. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write GORILLA at the bottom in large hollow outline letters that can be colored in.",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly gorilla with gentle expression taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple jungle setting - trees, leaves, vines, plants. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- Gorilla fur must be HOLLOW OUTLINES ONLY - do NOT fill any area with black or dark grey. Every area must be white inside with black outline so children can colour them in\n- NO filled black areas anywhere\n- NO border, NO frame around the image\n\nLABEL: Write GORILLA at the bottom in large hollow outline letters that can be colored in.",
       "text_only": true
     },
     "animal_hippo": {
@@ -556,7 +556,7 @@
       "name": "Tiger",
       "category": "zoo",
       "description": "Tiger in jungle",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly tiger with stripes and whiskers taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple jungle setting - bamboo, trees, leaves, rocks. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write TIGER at the bottom in large hollow outline letters that can be colored in.",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly tiger with stripes and whiskers taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple jungle setting - bamboo, trees, leaves, rocks. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- Tiger stripes must be HOLLOW OUTLINES ONLY - do NOT fill stripes with black. Every stripe area must be white inside with black outline so children can colour them in\n- NO filled black areas anywhere\n- NO border, NO frame around the image\n\nLABEL: Write TIGER at the bottom in large hollow outline letters that can be colored in.",
       "text_only": true
     },
     "animal_panda": {
@@ -752,7 +752,7 @@
       "name": "Bee",
       "category": "insects",
       "description": "Bee near flowers",
-      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly friendly bee with stripes and tiny wings taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - flowers, beehive, leaves. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n\nLABEL: Write BEE at the bottom in large hollow outline letters that can be colored in.",
+      "overlay": "COLORING PAGE - ONE BIG ANIMAL:\n\nMAIN SUBJECT: One large friendly friendly bee with stripes and tiny wings taking up most of the page, cute cartoon style with friendly face. NO other animals, NO people.\n\nBACKGROUND: Simple garden setting - flowers, beehive, leaves. NO other animals or people.\n\nSTYLE: \n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- Bee stripes must be HOLLOW OUTLINES ONLY - do NOT fill stripes with black. Every stripe area must be white inside with black outline so children can colour them in\n- NO filled black areas anywhere\n- NO border, NO frame around the image\n\nLABEL: Write BEE at the bottom in large hollow outline letters that can be colored in.",
       "text_only": true
     },
     "animal_ladybug": {
