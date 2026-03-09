@@ -12,7 +12,6 @@ from PIL import Image
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
-from app import normalize_age_level
 from adventure_gemini import generate_adventure_reveal_gemini, generate_adventure_episode_gemini, generate_personalized_stories, generate_story_for_theme, create_a4_page_with_text, create_front_cover
 from character_extraction_gemini import extract_character_with_extreme_accuracy
 from firebase_utils import upload_to_firebase
@@ -325,6 +324,7 @@ async def generate_episode_gemini_endpoint(request: GenerateEpisodeRequest):
     The reveal image ensures the coloring page character matches exactly.
     """
     char = request.character
+    from app import normalize_age_level
     age_level = normalize_age_level(request.age_level)
     episode_num = request.episode_num
     
@@ -486,6 +486,7 @@ async def complete_workflow(
     age_level: str = Form("age_6"),
     choice_path: str = Form("")
 ):
+    from app import normalize_age_level
     age_level = normalize_age_level(age_level)
     """
     Complete workflow: Upload drawing -> Extract -> Reveal -> Generate Episode
@@ -1262,6 +1263,7 @@ async def generate_stories_from_reveal(
     reveal_description: str = Form(...),
     age_level: str = Form("age_6")
 ):
+    from app import normalize_age_level
     age_level = normalize_age_level(age_level)
     """
     Generate personalized stories directly from reveal description.
