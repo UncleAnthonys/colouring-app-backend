@@ -53,6 +53,7 @@ async def generate_pattern_coloring(request: PatternRequest):
     - **pattern_index**: Starting index for deterministic pattern selection
     """
     # Normalize age level (handles "age_Under 3", "age_10+" etc)
+    from app import normalize_age_level
     request.age_level = normalize_age_level(request.age_level)
     
     # Map to pattern_config age keys (uses age_2 instead of under_3)
@@ -85,7 +86,7 @@ async def generate_pattern_coloring(request: PatternRequest):
     # This assumes you have a generate_image function that takes a prompt
     try:
         # Import your existing image generation function
-        from app import generate_from_text, normalize_age_level  # Adjust import as needed
+        from app import generate_from_text  # Adjust import as needed
         
         result = await generate_from_text(
             prompt=prompt,
