@@ -54,6 +54,10 @@ async def generate_pattern_coloring(request: PatternRequest):
     """
     # Normalize age level (handles "age_Under 3", "age_10+" etc)
     request.age_level = normalize_age_level(request.age_level)
+    
+    # Map to pattern_config age keys (uses age_2 instead of under_3)
+    pattern_age_map = {"under_3": "age_2"}
+    request.age_level = pattern_age_map.get(request.age_level, request.age_level)
 
     # Validate age level
     if request.age_level not in AGE_CONFIG:
