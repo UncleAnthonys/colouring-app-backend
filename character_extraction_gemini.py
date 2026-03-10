@@ -151,6 +151,15 @@ Measure EVERYTHING relative to the total figure:
 - Do NOT classify a limb as a "leg" just because it's at the bottom — if it's raised and not touching the ground, it's an ARM
 - Example: A monster with 2 limbs touching ground + 4 limbs raised = 2 legs + 4 arms, NOT 4 legs + 2 arms
 
+⚠️ DO NOT NORMALISE LIMB COUNTS ⚠️
+- Count EXACTLY what you see in the drawing — do NOT round to symmetrical or "normal" numbers
+- If you see 3 legs, report 3 legs — it is NOT a mistake, it is NOT 2 legs
+- If you see 1 arm, report 1 arm — do NOT assume there should be 2
+- If you see 5 eyes, report 5 eyes — do NOT reduce to 2
+- Children's imaginary creatures can have ANY number of limbs, eyes, fingers etc.
+- The drawing is the TRUTH — count what you SEE, not what you EXPECT
+- ODD NUMBERS ARE VALID: 1, 3, 5, 7 limbs are all intentional design choices
+
 **BODY SHAPE:**
 - Round? Elongated? Squat? Lanky?
 - What makes this body shape distinctive?
