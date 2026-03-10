@@ -1438,11 +1438,16 @@ async def generate_from_photo_endpoint(request: PhotoGenerateRequest):
         pdf_url = upload_to_firebase(pdf_b64, folder="pdfs")
     except Exception as e:
         print(f"PDF generation/upload failed: {e}")
-    
+
+    # Detect orientation from generated image
+    output_img = Image.open(io.BytesIO(base64.b64decode(output_b64)))
+    is_landscape = output_img.width > output_img.height
+
     return {
         "success": True,
         "image_url": image_url,
         "pdf_url": pdf_url,
+        "is_landscape": is_landscape,
         "generation_time": elapsed,
         "theme_used": request.custom_theme or request.theme,
         "age_level": request.age_level
