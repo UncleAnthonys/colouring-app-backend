@@ -1194,7 +1194,9 @@ async def generate_from_photo(prompt: str, image_b64: str, quality: str = "low")
     image_bytes = base64.b64decode(image_b64)
     
     # Detect orientation from input image
+    from PIL import ImageOps
     img = Image.open(io.BytesIO(image_bytes))
+    img = ImageOps.exif_transpose(img)
     width, height = img.size
     
     # Match output orientation to input
