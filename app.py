@@ -1246,7 +1246,7 @@ async def _generate_from_text_single(prompt: str, quality: str = "low") -> dict:
         "n": 1,
         "size": "1024x1536",
         "quality": quality,
-        "background": "white",
+        "background": "opaque",
     }
     
     async with httpx.AsyncClient(timeout=180.0) as client:
