@@ -206,7 +206,7 @@ OUTPUT: Simple blob figures on pure white. ONLY the people."""
 
 DRAW:
 - The people from the photo as VERY simple blob shapes (round heads, simple body)
-- A big bold letter {letter} (plain block letter or bubble letter - NO face, NO arms, NO legs)
+- A big bold UPPERCASE CAPITAL letter {letter} as a FLAT 2D PROP (plain block letter or bubble letter - NOT a character - NO face, NO arms, NO legs, NO shoes, NO eyes, NO mouth - just a plain letter shape). Nobody holds or wears the letter.
 - ONE simple {best_object} next to the letter
 
 STYLE:
@@ -292,7 +292,7 @@ OUTPUT: Simple black outline figures on pure white. ONLY the people from the pho
 DRAW:
 - The people from the photo as VERY simple blob shapes (round heads, simple chunky body)
 - Plain simple clothing - NO patterns, NO costumes
-- A big bold letter {letter} (plain block letter or bubble letter - NO face, NO arms, NO legs)
+- A big bold UPPERCASE CAPITAL letter {letter} as a FLAT 2D PROP (plain block letter or bubble letter - NOT a character - NO face, NO arms, NO legs, NO shoes, NO eyes, NO mouth - just a plain letter shape). Nobody holds or wears the letter.
 - ONE simple {best_object} next to the letter
 
 STYLE:
@@ -406,7 +406,7 @@ OUTPUT: Simple blob figures with a basic outline of the main background object. 
 
 DRAW:
 - The people from the photo as simple cute figures
-- A big bold letter {letter} (plain block letter or bubble letter - NO face, NO arms, NO legs)
+- A big bold UPPERCASE CAPITAL letter {letter} as a FLAT 2D PROP (plain block letter or bubble letter - NOT a character - NO face, NO arms, NO legs, NO shoes, NO eyes, NO mouth - just a plain letter shape). Nobody holds or wears the letter.
 - A {best_object} and one other object ONLY from this list: {letter_objects}
 
 CRITICAL: EVERY object in this image MUST start with the letter {letter}. Do NOT draw anything that does not start with {letter}.
