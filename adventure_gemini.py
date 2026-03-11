@@ -575,7 +575,7 @@ The whole point of a storybook is that EVERY page gives the child something NEW 
 
 [STYLE]: Clean, bold, uniform-weight black outlines. Pure white empty interiors. Thick, heavy marker outlines. Bold 5pt vector strokes.
 
-[MANDATORY EXCLUSIONS]: No gradients. No volume. No depth. No shadows. No grayscale. No shading. No color leaks. No 3D volume. Paper-white fills only. No grey fills on clothing. No solid black fills on clothing or hair.
+[MANDATORY EXCLUSIONS]: No gradients. No volume. No depth. No shadows. No grayscale. No shading. No color leaks. No 3D volume. Paper-white fills only. No grey fills on clothing. No solid black fills on clothing or hair. ALL markings, spots, stripes, patterns, masks, and eye patches must be HOLLOW OUTLINES ONLY.
 
 [REFERENCE USE]: Use the attached image ONLY for the character's shape and silhouette. Completely ignore all color, value, and shading data from the reference. DO NOT use the colors or lighting from the reference.
 
@@ -798,7 +798,7 @@ FINAL CHECK - CRITICAL RULES:
 2. NO colors from reference - no blue, no orange, no any color
 3. NO SOLID BLACK FILLS - clothing, hair, skin must be WHITE with black OUTLINES only
 4. Black is ONLY for outlines/lines, NEVER for filling areas
-5. All enclosed areas must be empty white space for children to color in
+5. All enclosed areas must be HOLLOW - empty white space inside black outlines for children to color in
 6. NO LARGE BLACK AREAS — roads, floors, tracks, sky, backgrounds, and large surfaces must be WHITE with texture lines, not solid black. Small strategic black fills are OK ONLY for tiny details like a shadow under a shoe, a small cave opening, or a silhouette in the distance — but NEVER fill a road, track, floor, wall, or any area larger than a fist with solid black. Parents print these pages and large black areas waste ink and leave nothing for kids to colour.
 7. GREY IS NOT ALLOWED — not for trousers, not for stripes, not for mood, not for anything. If you see grey in your output, regenerate. Grey = failure.
 8. SCAN EVERY CHARACTER'S CLOTHING — if any item is filled grey or black instead of white, fix it immediately
