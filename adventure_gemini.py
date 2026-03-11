@@ -351,7 +351,7 @@ What to CHANGE from the photo:
 - Celebration background with confetti and sparkles
 - Portrait orientation - show FULL figure
 - Character should be STANDING/POSED in a confident, joyful pose
-- Character looks JOYFUL and ALIVE — like the hero of their own movie
+- Character looks ALIVE and full of personality — MATCH the expression from the drawing (if angry, be angry. if happy, be happy. if scared, be scared) — like the hero of their own movie
 - ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image
 - NO TEXT anywhere on image
 
@@ -393,11 +393,13 @@ Transform the childs drawing into a character that looks like it belongs in:
 - Eye color from the drawing
 - ALL details visible in the drawing
 
-**RULE 3 - PIXAR QUALITY:**
-- Big expressive Disney/Pixar eyes
-- Smooth appealing 3D surfaces
-- Emotion and personality in the face
-- Professional movie-quality rendering
+**RULE 3 - PIXAR MOVIE STILL QUALITY:**
+- This should look like a CHARACTER from an actual Pixar film — same rendering quality, same level of detail and life
+- Eyes: Big expressive eyes with GLOSSY IRISES, multiple SPECULAR CATCHLIGHTS, visible light reflections, and depth — even on angry or scary characters
+- Skin: Warm SUBSURFACE SCATTERING (light glowing through skin like real Pixar characters)
+- Lighting: Cinematic THREE-POINT LIGHTING with warm key light and cool rim light to make the character POP
+- Surfaces: Smooth appealing 3D with proper material definition — NOT a toy, NOT a figurine, a LIVING character
+- This is a movie character with LIFE and SOUL, not a 3D render of a doll
 
 ===== REQUIREMENTS =====
 - Celebration background with confetti and sparkles
@@ -406,7 +408,7 @@ Transform the childs drawing into a character that looks like it belongs in:
 - ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image
 - This is original art - do not copy or include any watermarks from any source
 - NO TEXT anywhere on image
-- Character looks JOYFUL and ALIVE
+- Character looks ALIVE and full of personality — MATCH the expression from the drawing (if angry, be angry. if happy, be happy. if scared, be scared)
 
 IMPORTANT: Look at the drawing! If it is a girl with brown hair and a rainbow skirt, create a 3D GIRL - not a rainbow blob!'''
         
