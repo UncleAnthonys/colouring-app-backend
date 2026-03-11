@@ -549,7 +549,7 @@ OUTPUT: Thick simplified outlines of REAL shapes on white. Halfway between carto
 
 DRAW:
 - The people from the photo wearing COSTUMES from this list ONLY: {letter_costumes}
-- A big bold letter {letter} displayed prominently (plain block letter or bubble letter - NO face, NO arms, NO legs)
+- A big bold UPPERCASE CAPITAL letter {letter} displayed prominently as a FLAT 2D PROP in the background (plain block letter or bubble letter - NOT a character - NO face, NO arms, NO legs, NO shoes, NO eyes, NO mouth - just a plain letter shape). Nobody holds or wears the letter.
 - 3-4 objects ONLY from this list: {letter_objects}
 
 CRITICAL: EVERY single object and costume in this image MUST start with the letter {letter}. If it does not start with {letter}, DO NOT DRAW IT. ONLY use objects from the list above.
@@ -572,7 +572,7 @@ BACKGROUND:
 - MINIMAL - simple ground line, maybe 1-2 clouds
 - Keep mostly white
 
-OUTPUT: People in {letter}-themed costumes with friendly letter character and several {letter} objects."""
+OUTPUT: People in {letter}-themed costumes with a big flat UPPERCASE CAPITAL letter {letter} and several {letter} objects. The letter must be a flat 2D shape - NOT a character, NOT held by anyone, NOT worn as clothing."""
         
         return f"""Create a colouring page for a 5 year old.
 
