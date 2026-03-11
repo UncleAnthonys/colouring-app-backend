@@ -1485,91 +1485,106 @@
       "name": "London",
       "category": "world_cities",
       "description": "London landmarks",
-      "overlay": "Apply theme: London\n\nSCENE: Iconic London landmarks and culture\n- Big Ben, Tower Bridge, red double-decker bus, red telephone box\n- London Eye, Buckingham Palace guards, black taxi cab\n- Union Jack flags, cup of tea, fish and chips\n- Rain clouds and umbrellas\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY"
+      "overlay": "COLORING PAGE - WORLD CITY:\n\nFILL THE PAGE with iconic London landmarks and objects. NO people, NO characters.\n\nLANDMARKS AND OBJECTS to include:\nBig Ben, Tower Bridge, red double-decker bus, red telephone box, London Eye, Buckingham Palace guard, black taxi cab, Union Jack flag, cup of tea, crown, corgi dog, fish and chips, umbrella\n\nDraw as many of these as possible, filling the whole page. Each object should be clearly recognisable and simple enough to colour.\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- All shapes fully enclosed for colouring\n- PURE WHITE background\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY\n- NO dots, NO speckles, NO texture, NO noise\n\nLABEL: Write LONDON at the bottom in large hollow outline bubble letters that can be colored in.",
+      "text_only": true
     },
     "city_paris": {
       "name": "Paris",
       "category": "world_cities",
       "description": "Paris landmarks",
-      "overlay": "Apply theme: Paris\n\nSCENE: Iconic Paris landmarks and culture\n- Eiffel Tower, Arc de Triomphe, Notre-Dame\n- Croissants, baguettes, macarons, cafe table\n- French beret, artist with easel, bicycle with basket\n- River Seine, Mona Lisa painting\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY"
+      "overlay": "COLORING PAGE - WORLD CITY:\n\nFILL THE PAGE with iconic Paris landmarks and objects. NO people, NO characters.\n\nLANDMARKS AND OBJECTS to include:\nEiffel Tower, Arc de Triomphe, croissant, baguette, macarons, cafe table, French beret, artist easel, bicycle with basket, Mona Lisa painting, poodle dog\n\nDraw as many of these as possible, filling the whole page. Each object should be clearly recognisable and simple enough to colour.\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- All shapes fully enclosed for colouring\n- PURE WHITE background\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY\n- NO dots, NO speckles, NO texture, NO noise\n\nLABEL: Write PARIS at the bottom in large hollow outline bubble letters that can be colored in.",
+      "text_only": true
     },
     "city_new_york": {
       "name": "New York",
       "category": "world_cities",
       "description": "New York landmarks",
-      "overlay": "Apply theme: New York\n\nSCENE: Iconic New York landmarks and culture\n- Statue of Liberty, Empire State Building, Brooklyn Bridge\n- Yellow taxi cab, Central Park, hot dog cart\n- Skyscrapers, Times Square billboards, subway train\n- Pizza slice, pretzel, baseball cap\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY"
+      "overlay": "COLORING PAGE - WORLD CITY:\n\nFILL THE PAGE with iconic New York landmarks and objects. NO people, NO characters.\n\nLANDMARKS AND OBJECTS to include:\nStatue of Liberty, Empire State Building, Brooklyn Bridge, yellow taxi cab, hot dog cart, pizza slice, pretzel, baseball cap, skyscrapers, apple, subway train\n\nDraw as many of these as possible, filling the whole page. Each object should be clearly recognisable and simple enough to colour.\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- All shapes fully enclosed for colouring\n- PURE WHITE background\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY\n- NO dots, NO speckles, NO texture, NO noise\n\nLABEL: Write NEW YORK at the bottom in large hollow outline bubble letters that can be colored in.",
+      "text_only": true
     },
     "city_rome": {
       "name": "Rome",
       "category": "world_cities",
       "description": "Rome landmarks",
-      "overlay": "Apply theme: Rome\n\nSCENE: Iconic Rome landmarks and culture\n- Colosseum, Leaning Tower of Pisa, Roman columns\n- Pizza, pasta, gelato cart, espresso cup\n- Vespa scooter, fountain, gladiator helmet\n- Roman arch, olive branch\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY"
+      "overlay": "COLORING PAGE - WORLD CITY:\n\nFILL THE PAGE with iconic Rome landmarks and objects. NO people, NO characters.\n\nLANDMARKS AND OBJECTS to include:\nColosseum, Roman columns, Trevi Fountain, pizza, pasta, gelato cart, espresso cup, Vespa scooter, gladiator helmet, Roman arch, olive branch\n\nDraw as many of these as possible, filling the whole page. Each object should be clearly recognisable and simple enough to colour.\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- All shapes fully enclosed for colouring\n- PURE WHITE background\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY\n- NO dots, NO speckles, NO texture, NO noise\n\nLABEL: Write ROME at the bottom in large hollow outline bubble letters that can be colored in.",
+      "text_only": true
     },
     "city_tokyo": {
       "name": "Tokyo",
       "category": "world_cities",
       "description": "Tokyo landmarks",
-      "overlay": "Apply theme: Tokyo\n\nSCENE: Iconic Tokyo landmarks and culture\n- Mount Fuji, torii gate, pagoda temple\n- Cherry blossom trees, sushi, ramen bowl, chopsticks\n- Bullet train, lucky cat, paper fan\n- Lanterns, bonsai tree, koi fish\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY"
+      "overlay": "COLORING PAGE - WORLD CITY:\n\nFILL THE PAGE with iconic Tokyo landmarks and objects. NO people, NO characters.\n\nLANDMARKS AND OBJECTS to include:\nMount Fuji, torii gate, pagoda temple, cherry blossom trees, sushi, ramen bowl, chopsticks, bullet train, lucky cat, paper fan, lanterns, bonsai tree, koi fish\n\nDraw as many of these as possible, filling the whole page. Each object should be clearly recognisable and simple enough to colour.\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- All shapes fully enclosed for colouring\n- PURE WHITE background\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY\n- NO dots, NO speckles, NO texture, NO noise\n\nLABEL: Write TOKYO at the bottom in large hollow outline bubble letters that can be colored in.",
+      "text_only": true
     },
     "city_sydney": {
       "name": "Sydney",
       "category": "world_cities",
       "description": "Sydney landmarks",
-      "overlay": "Apply theme: Sydney\n\nSCENE: Iconic Sydney landmarks and culture\n- Sydney Opera House, Harbour Bridge, Bondi Beach\n- Surfboard, kangaroo, koala in tree\n- Boomerang, didgeridoo, barbecue\n- Palm trees, sunshine, lifeguard tower\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY"
+      "overlay": "COLORING PAGE - WORLD CITY:\n\nFILL THE PAGE with iconic Sydney landmarks and objects. NO people, NO characters.\n\nLANDMARKS AND OBJECTS to include:\nSydney Opera House, Harbour Bridge, surfboard, kangaroo, koala in tree, boomerang, barbecue, palm trees, lifeguard tower, didgeridoo\n\nDraw as many of these as possible, filling the whole page. Each object should be clearly recognisable and simple enough to colour.\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- All shapes fully enclosed for colouring\n- PURE WHITE background\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY\n- NO dots, NO speckles, NO texture, NO noise\n\nLABEL: Write SYDNEY at the bottom in large hollow outline bubble letters that can be colored in.",
+      "text_only": true
     },
     "city_dubai": {
       "name": "Dubai",
       "category": "world_cities",
       "description": "Dubai landmarks",
-      "overlay": "Apply theme: Dubai\n\nSCENE: Iconic Dubai landmarks and culture\n- Burj Khalifa, Burj Al Arab hotel, Palm Jumeirah island\n- Desert sand dunes, camel, magic carpet\n- Dhow boat, gold souk market stall\n- Fountain, palm trees, sunshine\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY"
+      "overlay": "COLORING PAGE - WORLD CITY:\n\nFILL THE PAGE with iconic Dubai landmarks and objects. NO people, NO characters.\n\nLANDMARKS AND OBJECTS to include:\nBurj Khalifa, Burj Al Arab hotel, desert sand dunes, camel, magic carpet, dhow boat, palm trees, fountain, yacht, hot air balloon\n\nDraw as many of these as possible, filling the whole page. Each object should be clearly recognisable and simple enough to colour.\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- All shapes fully enclosed for colouring\n- PURE WHITE background\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY\n- NO dots, NO speckles, NO texture, NO noise\n\nLABEL: Write DUBAI at the bottom in large hollow outline bubble letters that can be colored in.",
+      "text_only": true
     },
     "city_barcelona": {
       "name": "Barcelona",
       "category": "world_cities",
       "description": "Barcelona landmarks",
-      "overlay": "Apply theme: Barcelona\n\nSCENE: Iconic Barcelona landmarks and culture\n- Sagrada Familia, Park Guell mosaic lizard\n- Paella pan, tapas, flamenco dancer\n- Football, beach, palm trees\n- Gaudi colourful buildings, Spanish guitar\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY"
+      "overlay": "COLORING PAGE - WORLD CITY:\n\nFILL THE PAGE with iconic Barcelona landmarks and objects. NO people, NO characters.\n\nLANDMARKS AND OBJECTS to include:\nSagrada Familia, Park Guell mosaic lizard, paella pan, tapas, flamenco fan, football, beach, palm trees, Spanish guitar, sangria jug\n\nDraw as many of these as possible, filling the whole page. Each object should be clearly recognisable and simple enough to colour.\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- All shapes fully enclosed for colouring\n- PURE WHITE background\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY\n- NO dots, NO speckles, NO texture, NO noise\n\nLABEL: Write BARCELONA at the bottom in large hollow outline bubble letters that can be colored in.",
+      "text_only": true
     },
     "city_amsterdam": {
       "name": "Amsterdam",
       "category": "world_cities",
       "description": "Amsterdam landmarks",
-      "overlay": "Apply theme: Amsterdam\n\nSCENE: Iconic Amsterdam landmarks and culture\n- Canal houses, windmill, tulip fields\n- Bicycle, wooden clogs, cheese wheel\n- Canal boat, bridge, stroopwafel\n- Crown, Dutch flag elements\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY"
+      "overlay": "COLORING PAGE - WORLD CITY:\n\nFILL THE PAGE with iconic Amsterdam landmarks and objects. NO people, NO characters.\n\nLANDMARKS AND OBJECTS to include:\nCanal houses, windmill, tulip fields, bicycle, wooden clogs, cheese wheel, canal boat, bridge, stroopwafel, crown\n\nDraw as many of these as possible, filling the whole page. Each object should be clearly recognisable and simple enough to colour.\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- All shapes fully enclosed for colouring\n- PURE WHITE background\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY\n- NO dots, NO speckles, NO texture, NO noise\n\nLABEL: Write AMSTERDAM at the bottom in large hollow outline bubble letters that can be colored in.",
+      "text_only": true
     },
     "city_cairo": {
       "name": "Cairo",
       "category": "world_cities",
       "description": "Cairo landmarks",
-      "overlay": "Apply theme: Cairo\n\nSCENE: Iconic Cairo landmarks and culture\n- Great Pyramids of Giza, Sphinx\n- Pharaoh mask, hieroglyphics, scarab beetle\n- Camel, palm trees, River Nile\n- Desert sand, treasure chest, ancient scrolls\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY"
+      "overlay": "COLORING PAGE - WORLD CITY:\n\nFILL THE PAGE with iconic Cairo landmarks and objects. NO people, NO characters.\n\nLANDMARKS AND OBJECTS to include:\nGreat Pyramids of Giza, Sphinx, pharaoh mask, hieroglyphics, scarab beetle, camel, palm trees, River Nile, treasure chest, ancient scrolls\n\nDraw as many of these as possible, filling the whole page. Each object should be clearly recognisable and simple enough to colour.\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- All shapes fully enclosed for colouring\n- PURE WHITE background\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY\n- NO dots, NO speckles, NO texture, NO noise\n\nLABEL: Write CAIRO at the bottom in large hollow outline bubble letters that can be colored in.",
+      "text_only": true
     },
     "city_rio": {
       "name": "Rio de Janeiro",
       "category": "world_cities",
-      "description": "Rio landmarks",
-      "overlay": "Apply theme: Rio de Janeiro\n\nSCENE: Iconic Rio landmarks and culture\n- Christ the Redeemer statue, Sugarloaf Mountain\n- Copacabana beach, carnival mask, maracas\n- Toucan, tropical flowers, palm trees\n- Football, samba dancer, carnival headdress\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY"
+      "description": "Rio de Janeiro landmarks",
+      "overlay": "COLORING PAGE - WORLD CITY:\n\nFILL THE PAGE with iconic Rio de Janeiro landmarks and objects. NO people, NO characters.\n\nLANDMARKS AND OBJECTS to include:\nChrist the Redeemer statue, Sugarloaf Mountain, beach, carnival mask, maracas, toucan, tropical flowers, palm trees, football, carnival headdress\n\nDraw as many of these as possible, filling the whole page. Each object should be clearly recognisable and simple enough to colour.\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- All shapes fully enclosed for colouring\n- PURE WHITE background\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY\n- NO dots, NO speckles, NO texture, NO noise\n\nLABEL: Write RIO at the bottom in large hollow outline bubble letters that can be colored in.",
+      "text_only": true
     },
     "city_los_angeles": {
       "name": "Los Angeles",
       "category": "world_cities",
       "description": "Los Angeles landmarks",
-      "overlay": "Apply theme: Los Angeles\n\nSCENE: Iconic Los Angeles landmarks and culture\n- Hollywood sign, Walk of Fame star, movie camera\n- Palm trees, beach, surfboard, roller skates\n- Movie clapperboard, sunglasses, convertible car\n- Sunset, lifeguard tower, smoothie\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY"
+      "overlay": "COLORING PAGE - WORLD CITY:\n\nFILL THE PAGE with iconic Los Angeles landmarks and objects. NO people, NO characters.\n\nLANDMARKS AND OBJECTS to include:\nHollywood sign, Walk of Fame star, movie camera, palm trees, surfboard, roller skates, movie clapperboard, sunglasses, convertible car, lifeguard tower\n\nDraw as many of these as possible, filling the whole page. Each object should be clearly recognisable and simple enough to colour.\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- All shapes fully enclosed for colouring\n- PURE WHITE background\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY\n- NO dots, NO speckles, NO texture, NO noise\n\nLABEL: Write LOS ANGELES at the bottom in large hollow outline bubble letters that can be colored in.",
+      "text_only": true
     },
     "city_san_francisco": {
       "name": "San Francisco",
       "category": "world_cities",
       "description": "San Francisco landmarks",
-      "overlay": "Apply theme: San Francisco\n\nSCENE: Iconic San Francisco landmarks and culture\n- Golden Gate Bridge, cable car, painted ladies houses\n- Fisherman's Wharf, sea lion, crab\n- Steep hills, fog, sourdough bread bowl\n- Pier 39, Alcatraz island in distance\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY"
+      "overlay": "COLORING PAGE - WORLD CITY:\n\nFILL THE PAGE with iconic San Francisco landmarks and objects. NO people, NO characters.\n\nLANDMARKS AND OBJECTS to include:\nGolden Gate Bridge, cable car, painted ladies houses, sea lion, crab, steep hills, sourdough bread bowl, Alcatraz island, pier, fog\n\nDraw as many of these as possible, filling the whole page. Each object should be clearly recognisable and simple enough to colour.\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- All shapes fully enclosed for colouring\n- PURE WHITE background\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY\n- NO dots, NO speckles, NO texture, NO noise\n\nLABEL: Write SAN FRANCISCO at the bottom in large hollow outline bubble letters that can be colored in.",
+      "text_only": true
     },
     "city_venice": {
       "name": "Venice",
       "category": "world_cities",
       "description": "Venice landmarks",
-      "overlay": "Apply theme: Venice\n\nSCENE: Iconic Venice landmarks and culture\n- Gondola on canal, gondolier, Rialto Bridge\n- St Mark's Basilica, carnival mask\n- Pizza, gelato, Italian flag\n- Pigeons, bridge, colourful buildings along canal\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY"
+      "overlay": "COLORING PAGE - WORLD CITY:\n\nFILL THE PAGE with iconic Venice landmarks and objects. NO people, NO characters.\n\nLANDMARKS AND OBJECTS to include:\nGondola on canal, Rialto Bridge, St Mark's Basilica, carnival mask, pizza, gelato, pigeons, colourful buildings along canal, bridge, gondolier pole\n\nDraw as many of these as possible, filling the whole page. Each object should be clearly recognisable and simple enough to colour.\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- All shapes fully enclosed for colouring\n- PURE WHITE background\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY\n- NO dots, NO speckles, NO texture, NO noise\n\nLABEL: Write VENICE at the bottom in large hollow outline bubble letters that can be colored in.",
+      "text_only": true
     },
     "city_athens": {
       "name": "Athens",
       "category": "world_cities",
       "description": "Athens landmarks",
-      "overlay": "Apply theme: Athens\n\nSCENE: Iconic Athens landmarks and culture\n- Parthenon temple, Greek columns, amphitheatre\n- Olympic torch, laurel wreath, Greek vase\n- Olive tree, donkey, fishing boat\n- Mediterranean sea, sunshine, Greek salad\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- Simple shapes suitable for coloring\n- PURE WHITE background\n- NO TEXT OR WORDS ANYWHERE ON THE PAGE\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY"
+      "overlay": "COLORING PAGE - WORLD CITY:\n\nFILL THE PAGE with iconic Athens landmarks and objects. NO people, NO characters.\n\nLANDMARKS AND OBJECTS to include:\nParthenon temple, Greek columns, amphitheatre, Olympic torch, laurel wreath, Greek vase, olive tree, fishing boat, Mediterranean sea, Greek salad\n\nDraw as many of these as possible, filling the whole page. Each object should be clearly recognisable and simple enough to colour.\n\nSTYLE:\n- BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading\n- Bold black outlines\n- All shapes fully enclosed for colouring\n- PURE WHITE background\n- ALL markings and patterns must be HOLLOW OUTLINES ONLY\n- NO dots, NO speckles, NO texture, NO noise\n\nLABEL: Write ATHENS at the bottom in large hollow outline bubble letters that can be colored in.",
+      "text_only": true
     }
   },
   "custom_modifiers": {
