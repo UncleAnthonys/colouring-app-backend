@@ -26,7 +26,7 @@ def detect_image_type(image_data: bytes) -> str:
         api_key = os.environ.get('GOOGLE_API_KEY') or os.environ.get('GEMINI_API_KEY')
         genai.configure(api_key=api_key)
         
-        model = genai.GenerativeModel('gemini-2.0-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         
         # Convert bytes to base64 for Gemini
         image_b64 = base64.b64encode(image_data).decode('utf-8')
