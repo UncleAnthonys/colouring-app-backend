@@ -228,6 +228,7 @@ OUTPUT: Simple blob figures with friendly letter {letter} character on pure whit
         return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
 
 CRITICAL - COUNT THE PEOPLE: Look at the photo. Count the humans. Draw EXACTLY that many humans - NO MORE. If there is 1 person, draw 1 person. If there are 2, draw 2. NEVER add extra people, children, girls, boys, or any human characters not in the photo.
+Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
 - The people from the photo as VERY simple blob shapes (round heads, simple body)
@@ -320,6 +321,7 @@ OUTPUT: Simple black outline blob figures standing next to a friendly letter {le
         return f"""Create an EXTREMELY SIMPLE toddler colouring page for a 3 year old.
 
 CRITICAL - COUNT THE PEOPLE: Look at the photo. Count the humans. Draw EXACTLY that many humans - NO MORE. If there is 1 person, draw 1 person. If there are 2, draw 2. NEVER add extra people, children, girls, boys, or any human characters not in the photo.
+Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 STYLE: "My First Colouring Book" - simple and chunky.
 
@@ -442,6 +444,7 @@ OUTPUT: Simple figures with friendly letter character and a few {letter} objects
         return f"""Create a SIMPLE colouring page for a 4 year old.
 
 CRITICAL - COUNT THE PEOPLE: Look at the photo. Count the humans. Draw EXACTLY that many humans - NO MORE. If there is 1 person, draw 1 person. If there are 2, draw 2. NEVER add extra people, children, girls, boys, or any human characters not in the photo.
+Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
 - The people from the photo as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
@@ -590,6 +593,7 @@ OUTPUT: People in {letter}-themed costumes with a big flat UPPERCASE CAPITAL let
         return f"""Create a colouring page for a 5 year old.
 
 CRITICAL - COUNT THE PEOPLE: Look at the photo. Count the humans. Draw EXACTLY that many humans - NO MORE. If there is 1 person, draw 1 person. If there are 2, draw 2. NEVER add extra people, children, girls, boys, or any human characters not in the photo.
+Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
 - The people from the photo wearing simple {theme_name} costumes (basic outfits, not elaborate)
