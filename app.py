@@ -685,9 +685,9 @@ AGE 7-8 DETAIL:
     if age_level in CONFIG["age_levels"]:
         parts.append("\n\n" + CONFIG["age_levels"][age_level]["overlay"])
 
-    # Add face accuracy for age 6+ themed modes
-    if age_level not in ["under_3", "age_3", "age_4", "age_5"]:
-        parts.append("\n\nFACE ACCURACY (HIGHEST PRIORITY):\n- TRACE the exact facial contours from the photo - do NOT reinterpret or stylize\n- Match the PRECISE nose shape, eye spacing, mouth width, chin shape for EVERY person\n- Copy the EXACT hairstyle for each person - length, parting, texture\n- A parent MUST instantly recognise their specific children\n- Keep real clothing details - specific shoes, patterns, stripes, accessories\n- Keep EVERY person visible in the photo - do NOT remove anyone (including babies being held)")
+    # Add face accuracy for all themed modes
+    if age_level not in ["under_3"]:
+        parts.append("\n\nFACE ACCURACY (HIGHEST PRIORITY):\n- TRACE the exact facial contours from the photo - do NOT reinterpret or stylize\n- Match the PRECISE nose shape, eye spacing, mouth width, chin shape for EVERY person\n- Copy the EXACT hairstyle for each person - length, parting, texture\n- A parent MUST instantly recognise their specific children\n- Keep real clothing details - specific shoes, patterns, stripes, accessories\n- Keep EVERY person visible in the photo - do NOT remove anyone (including babies being held)\n- Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler, a child like a child. Do NOT age up or age down anyone\n- Do NOT make faces cartoonish or generic - this is a likeness, not a cartoon character")
     
     if custom_theme:
         parts.append("\n\n" + build_custom_theme_overlay(custom_theme))
