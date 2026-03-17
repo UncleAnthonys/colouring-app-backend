@@ -232,7 +232,7 @@ CRITICAL - COUNT THE PEOPLE: Look at the photo. Count the humans. Draw EXACTLY t
 DRAW:
 - The people from the photo as VERY simple blob shapes (round heads, simple body)
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
-- ONE simple {theme_name} animal next to them (NOT a person)
+- ONE simple {theme_name} character or item next to them (NOT a person)
 - Keep ONLY the single most important or memorable object from the photo (e.g. a bike, vehicle, toy, building - whatever makes the photo special) as a very simple outline shape
 
 STYLE:
@@ -326,7 +326,8 @@ STYLE: "My First Colouring Book" - simple and chunky.
 DRAW:
 - The people from the photo as very simple blob-like figures
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
-- ONE simple {theme_name} animal next to them (NOT a person)
+- 1-2 simple {theme_name} characters or items next to them (NOT extra people)
+- ONE simple {theme_name} scene element (e.g. a tree, vehicle, or landscape feature)
 - Keep ONLY the single most important or memorable object from the photo (e.g. a bike, vehicle, toy, building - whatever makes the photo special) as a very simple outline shape
 
 STYLE:
@@ -445,7 +446,8 @@ CRITICAL - COUNT THE PEOPLE: Look at the photo. Count the humans. Draw EXACTLY t
 DRAW:
 - The people from the photo as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
 - Dress them in simple {theme_name} costumes (e.g. hats, outfits)
-- ONE simple {theme_name} animal next to them (NOT a person)
+- 2-3 {theme_name} characters or items around them (NOT extra people)
+- 1-2 simple {theme_name} scene elements (e.g. trees, vehicles, landscape features)
 - Keep ONLY the single most important or memorable object from the photo (e.g. a bike, vehicle, toy, building - whatever makes the photo special) as a simple outline shape
 
 STYLE:
@@ -591,7 +593,8 @@ CRITICAL - COUNT THE PEOPLE: Look at the photo. Count the humans. Draw EXACTLY t
 
 DRAW:
 - The people from the photo wearing simple {theme_name} costumes (basic outfits, not elaborate)
-- ONE simple {theme_name} animal or item next to them (NOT a person)
+- 3-4 {theme_name} characters or items around the scene (NOT extra people)
+- 2-3 {theme_name} scene elements to build a fuller themed scene (e.g. trees, vehicles, landscape features)
 - Keep ONLY the single most important or memorable object from the photo (e.g. a bike, vehicle, toy, building - whatever makes the photo special) as a simplified outline
 
 STYLE:
