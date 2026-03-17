@@ -12,7 +12,7 @@ from PIL import Image
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
-from adventure_gemini import generate_adventure_reveal_gemini, generate_adventure_episode_gemini, generate_personalized_stories, generate_story_for_theme, create_a4_page_with_text, create_front_cover
+from adventure_gemini import generate_adventure_reveal_gemini, generate_adventure_episode_gemini, generate_personalized_stories, generate_story_for_theme, create_a4_page_with_text, create_front_cover, validate_episode_image
 from character_extraction_gemini import extract_character_with_extreme_accuracy
 from firebase_utils import upload_to_firebase
 import google.generativeai as genai
@@ -1114,6 +1114,24 @@ Make it look like a real children's coloring book cover!
             second_character_name=request.second_character_name,
             second_character_description=request.second_character_description
         )
+        
+        # Validate for duplicate main characters — retry once if failed
+        validation = await validate_episode_image(image_b64)
+        if not validation["pass"]:
+            print(f"[VALIDATION] Episode {i+1} failed, regenerating once...")
+            image_b64 = await generate_adventure_episode_gemini(
+                character_data={"name": char.name, "description": char.description, "key_feature": char.key_feature},
+                scene_prompt=scene_prompt,
+                age_rules=age_rules["rules"],
+                reveal_image_b64=request.reveal_image_b64,
+                story_text=story_text,
+                character_emotion=character_emotion,
+                source_type=request.source_type or "drawing",
+                previous_page_b64=previous_page_b64,
+                second_character_image_b64=request.second_character_image_b64,
+                second_character_name=request.second_character_name,
+                second_character_description=request.second_character_description
+            )
         
         # Save this page as previous for next iteration
         previous_page_b64 = image_b64

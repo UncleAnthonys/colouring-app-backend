@@ -187,6 +187,45 @@ def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None)
 
 
 
+
+
+async def validate_episode_image(image_b64: str) -> dict:
+    """Check a generated episode image for duplicate main characters.
+    Returns {"pass": True/False, "reason": "..."} 
+    Cost: ~$0.0005 per call
+    """
+    import google.generativeai as genai
+    
+    api_key = os.environ.get('GOOGLE_API_KEY') or os.environ.get('GEMINI_API_KEY')
+    if not api_key:
+        return {"pass": True, "reason": "No API key, skipping validation"}
+    
+    try:
+        genai.configure(api_key=api_key)
+        model = genai.GenerativeModel('gemini-2.5-flash')
+        
+        response = model.generate_content([
+            """You are a quality control checker for a children's coloring book image.
+
+Check for ONE thing only: Is the MAIN character duplicated?
+
+- Is the same main character (same hair, face, outfit) drawn MORE THAN ONCE in the scene?
+- If there are meant to be two different main characters, do they actually look like DIFFERENT people or are they the same character drawn twice?
+
+Supporting/background characters are fine. Only check the 1-2 largest, most prominent characters.
+
+Answer with ONLY one word: PASS or FAIL""",
+            {"mime_type": "image/png", "data": base64.b64decode(image_b64)}
+        ])
+        
+        result = response.text.strip().upper()
+        passed = "PASS" in result
+        print(f"[VALIDATION] {'✅ PASS' if passed else '❌ FAIL'}: {response.text.strip()[:100]}")
+        return {"pass": passed, "reason": response.text.strip()[:200]}
+    except Exception as e:
+        print(f"[VALIDATION] ⚠️ Error, skipping: {str(e)[:100]}")
+        return {"pass": True, "reason": f"Validation error: {str(e)[:100]}"}
+
 def create_front_cover(image_b64: str, full_title: str, character_name: str) -> str:
     """
     Overlay bubble-letter title directly onto Gemini's cover image.
