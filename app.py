@@ -173,7 +173,7 @@ def build_photo_prompt(age_level: str = "age_5", theme: str = "none", custom_the
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The people from the photo as VERY simple blob shapes
+- The subjects from the photo (people and/or animals) as VERY simple blob shapes
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
@@ -205,7 +205,7 @@ OUTPUT: Simple blob figures on pure white. ONLY the people."""
             return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
 
 DRAW:
-- The people from the photo as VERY simple blob shapes (round heads, simple body)
+- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body)
 - A big bold UPPERCASE CAPITAL letter {letter} as a FLAT 2D PROP (plain block letter or bubble letter - NOT a character - NO face, NO arms, NO legs, NO shoes, NO eyes, NO mouth - just a plain letter shape). Nobody holds or wears the letter.
 - ONE simple {best_object} next to the letter
 
@@ -231,7 +231,7 @@ CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
-- The people from the photo as VERY simple blob shapes (round heads, simple body)
+- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body)
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
 - ONE simple {theme_name} creature or object next to them (NOT a person)
 - If there is a prominent object from the photo (e.g. a bike, vehicle, toy, building), keep it in the scene as a simplified outline as a very simple outline shape
@@ -261,7 +261,7 @@ OUTPUT: Simple blob figures in {theme_name} costumes with theme items on mostly 
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The people from the photo as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
+- The subjects from the photo (people and/or animals) as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
@@ -294,7 +294,7 @@ OUTPUT: Simple black outline figures on pure white. ONLY the people from the pho
             return f"""Create an EXTREMELY SIMPLE toddler alphabet colouring page for letter {letter}.
 
 DRAW:
-- The people from the photo as VERY simple blob shapes (round heads, simple chunky body)
+- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple chunky body)
 - Plain simple clothing - NO patterns, NO costumes
 - A big bold UPPERCASE CAPITAL letter {letter} as a FLAT 2D PROP (plain block letter or bubble letter - NOT a character - NO face, NO arms, NO legs, NO shoes, NO eyes, NO mouth - just a plain letter shape). Nobody holds or wears the letter.
 - ONE simple {best_object} next to the letter
@@ -326,7 +326,7 @@ Keep the EXACT age of every person - a baby MUST look like a baby, a toddler lik
 STYLE: "My First Colouring Book" - simple and chunky.
 
 DRAW:
-- The people from the photo as very simple blob-like figures
+- The subjects from the photo (people and/or animals) as very simple blob-like figures
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
 - 1-2 simple {theme_name} creatures or objects next to them (NOT extra people)
 - ONE simple {theme_name} scene element (e.g. a tree, vehicle, or landscape feature)
@@ -355,7 +355,7 @@ OUTPUT: Simple blob figures in {theme_name} costumes with theme items."""
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The people from the photo as simple cute blob figures
+- The subjects from the photo (people and/or animals) as simple cute blob figures
 - The most prominent object from the photo background as a VERY SIMPLE outline only (no internal details, no complex parts - just the basic shape)
 - THAT IS ALL - NOTHING ELSE
 
@@ -417,7 +417,7 @@ OUTPUT: Simple blob figures with a basic outline of the main background object. 
             return f"""Create a SIMPLE alphabet colouring page for letter {letter} for a 4 year old.
 
 DRAW:
-- The people from the photo as simple cute figures
+- The subjects from the photo (people and/or animals) as simple cute figures
 - A big bold UPPERCASE CAPITAL letter {letter} as a FLAT 2D PROP (plain block letter or bubble letter - NOT a character - NO face, NO arms, NO legs, NO shoes, NO eyes, NO mouth - just a plain letter shape). Nobody holds or wears the letter.
 - A {best_object} and one other object ONLY from this list: {letter_objects}
 
@@ -447,7 +447,7 @@ CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
-- The people from the photo as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
+- The subjects from the photo (people and/or animals) as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
 - Dress them in simple {theme_name} costumes (e.g. hats, outfits)
 - 2-3 {theme_name} creatures or objects around them (NOT extra people)
 - 1-2 simple {theme_name} scene elements (e.g. trees, vehicles, landscape features)
@@ -478,7 +478,7 @@ OUTPUT: Thick black outlines on pure white. No background."""
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add any animals, pets, or objects not in the original image. Keep EVERY person visible - do NOT remove anyone (including babies being held).
 
 DRAW:
-- The people from the photo as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
+- The subjects from the photo (people and/or animals) as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
 - Background elements from the photo (simplified)
 - THAT IS ALL - NOTHING ELSE
 
@@ -564,7 +564,7 @@ OUTPUT: Thick simplified outlines of REAL shapes on white. Halfway between carto
             return f"""Create an alphabet colouring page for letter {letter} for a 5 year old.
 
 DRAW:
-- The people from the photo wearing COSTUMES from this list ONLY: {letter_costumes}
+- The subjects from the photo (people and/or animals) wearing COSTUMES from this list ONLY: {letter_costumes}
 - A big bold UPPERCASE CAPITAL letter {letter} displayed prominently as a FLAT 2D PROP in the background (plain block letter or bubble letter - NOT a character - NO face, NO arms, NO legs, NO shoes, NO eyes, NO mouth - just a plain letter shape). Nobody holds or wears the letter.
 - 3-4 objects ONLY from this list: {letter_objects}
 
@@ -596,7 +596,7 @@ CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
-- The people from the photo wearing simple {theme_name} costumes (basic outfits, not elaborate)
+- The subjects from the photo (people and/or animals) wearing simple {theme_name} costumes (basic outfits, not elaborate)
 - 3-4 {theme_name} creatures or objects around the scene (NOT extra people)
 - 2-3 {theme_name} scene elements to build a fuller themed scene (e.g. trees, vehicles, landscape features)
 - If there is a prominent object from the photo (e.g. a bike, vehicle, toy, building), keep it in the scene as a simplified outline as a simplified outline
@@ -634,7 +634,7 @@ FACE ACCURACY (HIGHEST PRIORITY):
 - Keep real clothing details - specific shoes, patterns, stripes, accessories
 
 DRAW:
-- The people from the photo as recognisable figures
+- The subjects from the photo (people and/or animals) as recognisable figures
 - Background elements from the photo (simplified)
 - THAT IS ALL - NOTHING ELSE
 
