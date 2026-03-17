@@ -227,14 +227,14 @@ OUTPUT: Simple blob figures with friendly letter {letter} character on pure whit
 
         return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
 
-CRITICAL - COUNT THE PEOPLE: Look at the photo. Count the humans. Draw EXACTLY that many humans - NO MORE. If there is 1 person, draw 1 person. If there are 2, draw 2. NEVER add extra people, children, girls, boys, or any human characters not in the photo.
+CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and count the pets/animals. Draw EXACTLY that many of each - NO MORE, NO LESS. If there are 0 people, draw 0 people. If there is 1 person, draw 1 person. If there is 1 dog, draw 1 dog. NEVER add extra humans not in the photo - no random girls, boys, men, women, babies or children. NEVER duplicate pets from the photo. Themed creatures and objects (e.g. safari animals, dinosaurs) ARE allowed as separate additions to the scene.
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
 - The people from the photo as VERY simple blob shapes (round heads, simple body)
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
 - ONE simple {theme_name} creature or object next to them (NOT a person)
-- Keep ONLY the single most important or memorable object from the photo (e.g. a bike, vehicle, toy, building - whatever makes the photo special) as a very simple outline shape
+- If there is a prominent object from the photo (e.g. a bike, vehicle, toy, building), keep it in the scene as a simplified outline as a very simple outline shape
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
@@ -320,7 +320,7 @@ OUTPUT: Simple black outline blob figures standing next to a friendly letter {le
         
         return f"""Create an EXTREMELY SIMPLE toddler colouring page for a 3 year old.
 
-CRITICAL - COUNT THE PEOPLE: Look at the photo. Count the humans. Draw EXACTLY that many humans - NO MORE. If there is 1 person, draw 1 person. If there are 2, draw 2. NEVER add extra people, children, girls, boys, or any human characters not in the photo.
+CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and count the pets/animals. Draw EXACTLY that many of each - NO MORE, NO LESS. If there are 0 people, draw 0 people. If there is 1 person, draw 1 person. If there is 1 dog, draw 1 dog. NEVER add extra humans not in the photo - no random girls, boys, men, women, babies or children. NEVER duplicate pets from the photo. Themed creatures and objects (e.g. safari animals, dinosaurs) ARE allowed as separate additions to the scene.
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 STYLE: "My First Colouring Book" - simple and chunky.
@@ -330,7 +330,7 @@ DRAW:
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
 - 1-2 simple {theme_name} creatures or objects next to them (NOT extra people)
 - ONE simple {theme_name} scene element (e.g. a tree, vehicle, or landscape feature)
-- Keep ONLY the single most important or memorable object from the photo (e.g. a bike, vehicle, toy, building - whatever makes the photo special) as a very simple outline shape
+- If there is a prominent object from the photo (e.g. a bike, vehicle, toy, building), keep it in the scene as a simplified outline as a very simple outline shape
 
 STYLE:
 - VERY THICK black outlines only
@@ -443,7 +443,7 @@ OUTPUT: Simple figures with friendly letter character and a few {letter} objects
         
         return f"""Create a SIMPLE colouring page for a 4 year old.
 
-CRITICAL - COUNT THE PEOPLE: Look at the photo. Count the humans. Draw EXACTLY that many humans - NO MORE. If there is 1 person, draw 1 person. If there are 2, draw 2. NEVER add extra people, children, girls, boys, or any human characters not in the photo.
+CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and count the pets/animals. Draw EXACTLY that many of each - NO MORE, NO LESS. If there are 0 people, draw 0 people. If there is 1 person, draw 1 person. If there is 1 dog, draw 1 dog. NEVER add extra humans not in the photo - no random girls, boys, men, women, babies or children. NEVER duplicate pets from the photo. Themed creatures and objects (e.g. safari animals, dinosaurs) ARE allowed as separate additions to the scene.
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
@@ -451,7 +451,7 @@ DRAW:
 - Dress them in simple {theme_name} costumes (e.g. hats, outfits)
 - 2-3 {theme_name} creatures or objects around them (NOT extra people)
 - 1-2 simple {theme_name} scene elements (e.g. trees, vehicles, landscape features)
-- Keep ONLY the single most important or memorable object from the photo (e.g. a bike, vehicle, toy, building - whatever makes the photo special) as a simple outline shape
+- If there is a prominent object from the photo (e.g. a bike, vehicle, toy, building), keep it in the scene as a simplified outline as a simple outline shape
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture, NO gradients
@@ -592,14 +592,14 @@ OUTPUT: People in {letter}-themed costumes with a big flat UPPERCASE CAPITAL let
         
         return f"""Create a colouring page for a 5 year old.
 
-CRITICAL - COUNT THE PEOPLE: Look at the photo. Count the humans. Draw EXACTLY that many humans - NO MORE. If there is 1 person, draw 1 person. If there are 2, draw 2. NEVER add extra people, children, girls, boys, or any human characters not in the photo.
+CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and count the pets/animals. Draw EXACTLY that many of each - NO MORE, NO LESS. If there are 0 people, draw 0 people. If there is 1 person, draw 1 person. If there is 1 dog, draw 1 dog. NEVER add extra humans not in the photo - no random girls, boys, men, women, babies or children. NEVER duplicate pets from the photo. Themed creatures and objects (e.g. safari animals, dinosaurs) ARE allowed as separate additions to the scene.
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
 - The people from the photo wearing simple {theme_name} costumes (basic outfits, not elaborate)
 - 3-4 {theme_name} creatures or objects around the scene (NOT extra people)
 - 2-3 {theme_name} scene elements to build a fuller themed scene (e.g. trees, vehicles, landscape features)
-- Keep ONLY the single most important or memorable object from the photo (e.g. a bike, vehicle, toy, building - whatever makes the photo special) as a simplified outline
+- If there is a prominent object from the photo (e.g. a bike, vehicle, toy, building), keep it in the scene as a simplified outline as a simplified outline
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture
