@@ -227,11 +227,12 @@ OUTPUT: Simple blob figures with friendly letter {letter} character on pure whit
 
         return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
 
-CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add extra people, characters, animals, or objects not in the original image.
-
 DRAW:
 - The people from the photo as VERY simple blob shapes (round heads, simple body)
-- ONE simple {theme_name} object next to them
+- Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
+- 1-2 simple {theme_name} animals or items next to them (NOT extra people)
+- Keep any PROMINENT background object from the photo (e.g. a large vehicle, building) as a very simple outline shape
+- Do NOT add extra people not in the photo
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
@@ -240,13 +241,14 @@ STYLE:
 - Faces: just dots for eyes, simple curve for mouth
 - NO fingers, NO detailed features, NO hair details
 - Bodies as simple rounded shapes
-- Maximum 8-10 colourable areas TOTAL
+- Maximum 10-12 colourable areas TOTAL
 
 BACKGROUND:
-- PURE WHITE - absolutely nothing else
-- No ground, no shadows, nothing
+- Keep any large/prominent object from the photo as a simple outline
+- Otherwise keep mostly white
+- No small details, no ground texture
 
-OUTPUT: Simple black outline blob figures on pure white. NO COLOUR."""
+OUTPUT: Simple blob figures in {theme_name} costumes with theme items on mostly white background."""
 
     # AGE 3 - super simple bypass
     if age_level == "age_3":
@@ -314,25 +316,30 @@ BACKGROUND:
 
 OUTPUT: Simple black outline blob figures standing next to a friendly letter {letter} character on pure white."""
         
-        return f"""Create an EXTREMELY SIMPLE toddler colouring page.
+        return f"""Create an EXTREMELY SIMPLE toddler colouring page for a 3 year old.
 
-CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add extra people, characters, animals, or objects not in the original image.
+STYLE: "My First Colouring Book" - simple and chunky.
 
-STYLE: "My First Colouring Book" - for 3 year olds.
+DRAW:
+- The people from the photo as very simple blob-like figures
+- Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
+- 1-2 simple {theme_name} animals or items next to them (NOT extra people)
+- Keep any PROMINENT background object from the photo (e.g. a large vehicle, building) as a very simple outline shape
+- Do NOT add extra people not in the photo
 
-DRAW ONLY:
-- One or two simple figures (people from photo as very basic shapes)
-- One simple {theme_name} object next to them
-- THAT IS ALL - NOTHING ELSE
-
-ABSOLUTE REQUIREMENTS:
-- PURE WHITE BACKGROUND - no sky, no clouds, no ground, no grass, nothing
+STYLE:
 - VERY THICK black outlines only
-- MAXIMUM 10-12 large colourable areas in the ENTIRE image
-- NO patterns, NO details, NO small elements
+- BLACK OUTLINES ON WHITE ONLY
 - Simple blob-like shapes
+- MAXIMUM 12-15 large colourable areas in the ENTIRE image
+- NO patterns, NO small details
 
-OUTPUT: Thick simple outlines on pure white. Nothing in background."""
+BACKGROUND:
+- Keep any large/prominent object from the photo as a simple outline
+- Otherwise keep mostly white
+- No small details, no ground texture
+
+OUTPUT: Simple blob figures in {theme_name} costumes with theme items."""
 
     # AGE 4 - simple figures with costumes bypass
     if age_level == "age_4":
@@ -431,25 +438,26 @@ OUTPUT: Simple figures with friendly letter character and a few {letter} objects
         
         return f"""Create a SIMPLE colouring page for a 4 year old.
 
-CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add extra people, characters, animals, or objects not in the original image.
-
 DRAW:
-- The people from the photo as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair) with basic {theme_name} costumes
-- One simple {theme_name} object next to them
+- The people from the photo as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
+- Dress them in simple {theme_name} costumes (e.g. hats, outfits)
+- 1-2 simple {theme_name} animals or items next to them (NOT extra people)
+- Keep any PROMINENT background object from the photo (e.g. a large vehicle, building) as a simple outline shape
+- Do NOT add extra people not in the photo
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture, NO gradients
 - THICK black outlines
 - Simple rounded figures
 - Faces: dots for eyes, simple smile, basic hair shape
-- Simple clothing - NO frills, NO layered skirts, NO patterns
+- Simple clothing shapes - NO frills, NO layered skirts, NO patterns
 - Bodies still chunky and simple
 - Maximum 15-18 colourable areas
 
 BACKGROUND:
-- PURE WHITE BACKGROUND - NOTHING ELSE
-- NO ground, NO sky, NO clouds, NO rainbow
-- Just figures on white
+- Keep any large/prominent object from the photo as a simple outline
+- Otherwise keep mostly white
+- No small details, no ground texture
 
 OUTPUT: Thick black outlines on pure white. No background."""
 
@@ -578,7 +586,9 @@ OUTPUT: People in {letter}-themed costumes with a big flat UPPERCASE CAPITAL let
 
 DRAW:
 - The people from the photo wearing simple {theme_name} costumes (basic outfits, not elaborate)
-- One {theme_name} object next to them
+- 1-2 simple {theme_name} animals or items around them (NOT extra people)
+- Keep any PROMINENT background object from the photo (e.g. a large vehicle, building) as a simplified outline
+- Do NOT add extra people not in the photo
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture
@@ -592,12 +602,11 @@ STYLE:
 - Maximum 20-25 colourable areas
 
 BACKGROUND:
-- MINIMAL background only
-- Simple ground line
-- Maybe 1-2 simple clouds
-- NO rainbow, NO detailed scenery, NO flowers, NO stars scattered around
+- Keep any large/prominent object from the photo as a simplified outline
+- Simple ground line, maybe 1-2 simple clouds
+- Keep mostly clean and simple
 
-OUTPUT: Clean black outlines with minimal simple background. Keep it simple."""
+OUTPUT: Recognisable figures in {theme_name} costumes with theme items and simplified photo background."""
 
     # AGE 6 - recognisable figures with face accuracy
     if age_level == "age_6":
