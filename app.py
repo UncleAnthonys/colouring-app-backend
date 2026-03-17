@@ -227,12 +227,13 @@ OUTPUT: Simple blob figures with friendly letter {letter} character on pure whit
 
         return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
 
+CRITICAL - COUNT THE PEOPLE: Look at the photo. Count the humans. Draw EXACTLY that many humans - NO MORE. If there is 1 person, draw 1 person. If there are 2, draw 2. NEVER add extra people, children, girls, boys, or any human characters not in the photo.
+
 DRAW:
 - The people from the photo as VERY simple blob shapes (round heads, simple body)
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
-- 1-2 simple {theme_name} animals or items next to them (NOT extra people)
-- Keep any PROMINENT background object from the photo (e.g. a large vehicle, building) as a very simple outline shape
-- Do NOT add extra people not in the photo
+- ONE simple {theme_name} animal next to them (NOT a person)
+- Keep ONLY the single most prominent background object from the photo (e.g. a large vehicle, building) as a very simple outline shape
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
@@ -318,14 +319,15 @@ OUTPUT: Simple black outline blob figures standing next to a friendly letter {le
         
         return f"""Create an EXTREMELY SIMPLE toddler colouring page for a 3 year old.
 
+CRITICAL - COUNT THE PEOPLE: Look at the photo. Count the humans. Draw EXACTLY that many humans - NO MORE. If there is 1 person, draw 1 person. If there are 2, draw 2. NEVER add extra people, children, girls, boys, or any human characters not in the photo.
+
 STYLE: "My First Colouring Book" - simple and chunky.
 
 DRAW:
 - The people from the photo as very simple blob-like figures
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
-- 1-2 simple {theme_name} animals or items next to them (NOT extra people)
-- Keep any PROMINENT background object from the photo (e.g. a large vehicle, building) as a very simple outline shape
-- Do NOT add extra people not in the photo
+- ONE simple {theme_name} animal next to them (NOT a person)
+- Keep ONLY the single most prominent background object from the photo (e.g. a large vehicle, building) as a very simple outline shape
 
 STYLE:
 - VERY THICK black outlines only
@@ -438,12 +440,13 @@ OUTPUT: Simple figures with friendly letter character and a few {letter} objects
         
         return f"""Create a SIMPLE colouring page for a 4 year old.
 
+CRITICAL - COUNT THE PEOPLE: Look at the photo. Count the humans. Draw EXACTLY that many humans - NO MORE. If there is 1 person, draw 1 person. If there are 2, draw 2. NEVER add extra people, children, girls, boys, or any human characters not in the photo.
+
 DRAW:
 - The people from the photo as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
 - Dress them in simple {theme_name} costumes (e.g. hats, outfits)
-- 1-2 simple {theme_name} animals or items next to them (NOT extra people)
-- Keep any PROMINENT background object from the photo (e.g. a large vehicle, building) as a simple outline shape
-- Do NOT add extra people not in the photo
+- ONE simple {theme_name} animal next to them (NOT a person)
+- Keep ONLY the single most prominent background object from the photo (e.g. a large vehicle, building) as a simple outline shape
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture, NO gradients
@@ -584,11 +587,12 @@ OUTPUT: People in {letter}-themed costumes with a big flat UPPERCASE CAPITAL let
         
         return f"""Create a colouring page for a 5 year old.
 
+CRITICAL - COUNT THE PEOPLE: Look at the photo. Count the humans. Draw EXACTLY that many humans - NO MORE. If there is 1 person, draw 1 person. If there are 2, draw 2. NEVER add extra people, children, girls, boys, or any human characters not in the photo.
+
 DRAW:
 - The people from the photo wearing simple {theme_name} costumes (basic outfits, not elaborate)
-- 1-2 simple {theme_name} animals or items around them (NOT extra people)
-- Keep any PROMINENT background object from the photo (e.g. a large vehicle, building) as a simplified outline
-- Do NOT add extra people not in the photo
+- ONE simple {theme_name} animal or item next to them (NOT a person)
+- Keep ONLY the single most prominent background object from the photo (e.g. a large vehicle, building) as a simplified outline
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture
