@@ -233,7 +233,7 @@ DRAW:
 - The people from the photo as VERY simple blob shapes (round heads, simple body)
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
 - ONE simple {theme_name} animal next to them (NOT a person)
-- Keep ONLY the single most prominent background object from the photo (e.g. a large vehicle, building) as a very simple outline shape
+- Keep ONLY the single most important or memorable object from the photo (e.g. a bike, vehicle, toy, building - whatever makes the photo special) as a very simple outline shape
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
@@ -327,7 +327,7 @@ DRAW:
 - The people from the photo as very simple blob-like figures
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
 - ONE simple {theme_name} animal next to them (NOT a person)
-- Keep ONLY the single most prominent background object from the photo (e.g. a large vehicle, building) as a very simple outline shape
+- Keep ONLY the single most important or memorable object from the photo (e.g. a bike, vehicle, toy, building - whatever makes the photo special) as a very simple outline shape
 
 STYLE:
 - VERY THICK black outlines only
@@ -446,7 +446,7 @@ DRAW:
 - The people from the photo as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
 - Dress them in simple {theme_name} costumes (e.g. hats, outfits)
 - ONE simple {theme_name} animal next to them (NOT a person)
-- Keep ONLY the single most prominent background object from the photo (e.g. a large vehicle, building) as a simple outline shape
+- Keep ONLY the single most important or memorable object from the photo (e.g. a bike, vehicle, toy, building - whatever makes the photo special) as a simple outline shape
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture, NO gradients
@@ -592,7 +592,7 @@ CRITICAL - COUNT THE PEOPLE: Look at the photo. Count the humans. Draw EXACTLY t
 DRAW:
 - The people from the photo wearing simple {theme_name} costumes (basic outfits, not elaborate)
 - ONE simple {theme_name} animal or item next to them (NOT a person)
-- Keep ONLY the single most prominent background object from the photo (e.g. a large vehicle, building) as a simplified outline
+- Keep ONLY the single most important or memorable object from the photo (e.g. a bike, vehicle, toy, building - whatever makes the photo special) as a simplified outline
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture
