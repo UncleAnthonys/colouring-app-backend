@@ -584,7 +584,10 @@ STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture
 - Medium-thick black outlines
 - Simple but recognisable figures
-- Faces: simple eyes, smile, basic hair shape
+- Faces: keep REAL facial features from the photo - recognisable nose, eyes, mouth shape
+- Keep the EXACT age of every person - a baby MUST look like a baby, not a child
+- Copy the EXACT hairstyle - length, parting, texture
+- Do NOT make faces cartoonish or generic - this is a likeness
 - Clothing: simple shapes, NO frills, NO layered skirts, NO intricate patterns
 - Maximum 20-25 colourable areas
 
