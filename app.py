@@ -232,24 +232,23 @@ CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body)
+- The subjects from the photo (people and/or animals) as VERY simple blob characters with full body (round head, stubby arms, stubby legs) even if the photo is cropped
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
-- ONE simple {theme_name} themed element next to them
+- ONE simple {theme_name} themed element next to them (NOT a person - e.g. safari animal, pirate treasure chest, superhero lightning bolt)
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
 - EXTREMELY THICK black outlines
 - Blob/kawaii style - super rounded and chunky
-- Faces: just dots for eyes, simple curve for mouth
+- Faces: TINY pinpoint dots for eyes (like a period, not big circles), simple curve for mouth
 - NO fingers, NO detailed features, NO hair details
 - Bodies as simple rounded shapes
-- Maximum 8-10 colourable areas TOTAL
+- Maximum 10-12 colourable areas TOTAL
 
 BACKGROUND:
-- PURE WHITE - absolutely nothing else
-- No ground, no shadows, nothing
+- PURE WHITE - no background scene
 
-OUTPUT: Simple blob figures in {theme_name} costumes on pure white. NO COLOUR."""
+OUTPUT: Simple blob figures in {theme_name} costumes with one themed element on white."""
 
     # AGE 3 - super simple bypass
     if age_level == "age_3":
