@@ -349,14 +349,14 @@ OUTPUT: Thick simple outlines on pure white. Nothing in background."""
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as simple cute blob figures
+- The subjects from the photo (people and/or animals) as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
 - The most prominent object from the photo background as a VERY SIMPLE outline only (no internal details, no complex parts - just the basic shape)
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - THICK black outlines
-- Simple rounded shapes throughout
+- Simple rounded shapes
 - NO internal details on objects - just outer outline
 - Maximum 15-18 colourable areas TOTAL
 
