@@ -173,13 +173,13 @@ def build_photo_prompt(age_level: str = "age_5", theme: str = "none", custom_the
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as VERY simple blob shapes
+- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body)
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - EXTREMELY THICK black outlines
-- Blob style - round heads, TINY pinpoint dot eyes (like a period, not big circles), simple smile
+- Blob/kawaii style - super rounded and chunky. Visible hair shape (length and style recognisable). TINY pinpoint dots for eyes (like a period, not big circles), simple curve for mouth
 - Maximum 8-10 colourable areas TOTAL
 
 BACKGROUND:
@@ -205,7 +205,7 @@ OUTPUT: Simple blob figures on pure white. ONLY the people."""
             return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body)
+- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body) (round heads, simple body)
 - A big bold UPPERCASE CAPITAL letter {letter} as a FLAT 2D PROP (plain block letter or bubble letter - NOT a character - NO face, NO arms, NO legs, NO shoes, NO eyes, NO mouth - just a plain letter shape). Nobody holds or wears the letter.
 - ONE simple {best_object} next to the letter
 
@@ -231,7 +231,7 @@ CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body)
+- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body) (round heads, simple body)
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
 - ONE simple {theme_name} themed element next to them (NOT a person - e.g. safari animal, pirate treasure chest, superhero lightning bolt)
 
@@ -293,7 +293,7 @@ OUTPUT: Simple black outline figures on pure white. ONLY the people from the pho
             return f"""Create an EXTREMELY SIMPLE toddler alphabet colouring page for letter {letter}.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple chunky body)
+- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body) (round heads, simple chunky body)
 - Plain simple clothing - NO patterns, NO costumes
 - A big bold UPPERCASE CAPITAL letter {letter} as a FLAT 2D PROP (plain block letter or bubble letter - NOT a character - NO face, NO arms, NO legs, NO shoes, NO eyes, NO mouth - just a plain letter shape). Nobody holds or wears the letter.
 - ONE simple {best_object} next to the letter
