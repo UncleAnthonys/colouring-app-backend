@@ -328,7 +328,7 @@ Keep the EXACT age of every person - a baby MUST look like a baby, a toddler lik
 STYLE: "My First Colouring Book" - simple and chunky.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as very simple blob-like figures
+- The subjects from the photo (people and/or animals) as simplified but recognisable chunky figures - proper body shapes, visible hair styles, simple clothing shapes
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
 - 1-2 simple {theme_name} creatures or objects next to them (NOT extra people)
 - ONE simple {theme_name} scene element (e.g. a tree, vehicle, or landscape feature)
@@ -451,7 +451,7 @@ CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
+- The subjects from the photo (people and/or animals) as simplified cartoon figures - more detail than age 3 with clearer facial features, proper body proportions, recognisable clothing and hair
 - Dress them in simple {theme_name} costumes (e.g. hats, outfits)
 - 2-3 {theme_name} creatures or objects around them (NOT extra people)
 - 1-2 simple {theme_name} scene elements (e.g. trees, vehicles, landscape features)
