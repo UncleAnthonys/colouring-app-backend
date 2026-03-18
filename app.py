@@ -173,13 +173,15 @@ def build_photo_prompt(age_level: str = "age_5", theme: str = "none", custom_the
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as VERY simple blob shapes
+- The subjects from the photo (people and/or animals) as very simple thick-outlined characters - still clearly recognisable (you can tell who is who and what they are doing) but drawn in the simplest possible kawaii/chibi style with round heads, simple stubby bodies, tiny arms and legs
+- Keep their activity visible (e.g. if someone is pushing a bike, show that)
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - EXTREMELY THICK black outlines
-- Blob/kawaii style
+- Kawaii/chibi style - round heads, dot eyes, simple smile, stubby limbs
+- Simple hair shape to tell subjects apart
 - Maximum 8-10 colourable areas TOTAL
 
 BACKGROUND:
@@ -231,7 +233,7 @@ CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body)
+- The subjects from the photo (people and/or animals) as very simple thick-outlined characters in kawaii/chibi style - round heads, stubby bodies, tiny arms and legs but still clearly recognisable (you can tell who is who and what they are doing)
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
 - ONE simple {theme_name} themed element next to them (NOT a person - e.g. safari animal, pirate treasure chest, superhero lightning bolt)
 
