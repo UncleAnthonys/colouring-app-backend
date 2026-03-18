@@ -173,7 +173,7 @@ def build_photo_prompt(age_level: str = "age_5", theme: str = "none", custom_the
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as VERY simple blob characters with full body (round head, stubby arms, stubby legs) even if the photo is cropped
+- The subjects from the photo (people and/or animals) as VERY simple blob characters
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
@@ -181,6 +181,7 @@ STYLE:
 - EXTREMELY THICK black outlines
 - Blob/kawaii style - super rounded and chunky
 - Faces: just dots for eyes, simple curve for mouth
+- Hair as simple outline shape only - NOT filled in, NOT solid black
 - Maximum 8-10 colourable areas TOTAL
 
 BACKGROUND:
@@ -232,7 +233,7 @@ CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as VERY simple blob characters with full body (round head, stubby arms, stubby legs) even if the photo is cropped
+- The subjects from the photo (people and/or animals) as VERY simple blob characters
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
 - ONE simple {theme_name} themed element next to them (NOT a person - e.g. safari animal, pirate treasure chest, superhero lightning bolt)
 
@@ -241,7 +242,8 @@ STYLE:
 - EXTREMELY THICK black outlines
 - Blob/kawaii style - super rounded and chunky
 - Faces: TINY pinpoint dots for eyes (like a period, not big circles), simple curve for mouth
-- NO fingers, NO detailed features, NO hair details
+- NO fingers, NO detailed features
+- Hair as simple outline shape only - NOT filled in, NOT solid black
 - Bodies as simple rounded shapes
 - Maximum 10-12 colourable areas TOTAL
 
