@@ -233,8 +233,7 @@ Keep the EXACT age of every person - a baby MUST look like a baby, a toddler lik
 DRAW:
 - The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body)
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
-- ONE simple {theme_name} creature or object next to them (NOT a person)
-- If there is a prominent object from the photo (e.g. a bike, vehicle, toy, building), keep it in the scene as a simplified outline as a very simple outline shape
+- ONE simple {theme_name} themed element next to them (NOT a person - e.g. safari animal, pirate treasure chest, superhero lightning bolt)
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
@@ -246,11 +245,9 @@ STYLE:
 - Maximum 10-12 colourable areas TOTAL
 
 BACKGROUND:
-- Keep any large/prominent object from the photo as a simple outline
-- Otherwise keep mostly white
-- No small details, no ground texture
+- PURE WHITE - no background scene
 
-OUTPUT: Simple blob figures in {theme_name} costumes with theme items on mostly white background."""
+OUTPUT: Simple blob figures in {theme_name} costumes with one themed element on white."""
 
     # AGE 3 - super simple bypass
     if age_level == "age_3":
@@ -330,9 +327,8 @@ STYLE: "My First Colouring Book" - simple and chunky.
 DRAW:
 - The subjects from the photo (people and/or animals) as simplified but recognisable chunky figures - proper body shapes, visible hair styles, simple clothing shapes
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
-- 1-2 simple {theme_name} creatures or objects next to them (NOT extra people)
+- 1-2 simple {theme_name} themed elements next to them (NOT extra people - e.g. safari animals, pirate treasure, superhero lightning bolts)
 - ONE simple {theme_name} scene element (e.g. a tree, vehicle, or landscape feature)
-- If there is a prominent object from the photo (e.g. a bike, vehicle, toy, building), keep it in the scene as a simplified outline as a very simple outline shape
 
 STYLE:
 - VERY THICK black outlines only
@@ -342,11 +338,9 @@ STYLE:
 - NO patterns, NO small details
 
 BACKGROUND:
-- Keep any large/prominent object from the photo as a simple outline
-- Otherwise keep mostly white
-- No small details, no ground texture
+- PURE WHITE - no background scene
 
-OUTPUT: Simple blob figures in {theme_name} costumes with theme items."""
+OUTPUT: Chunky figures in {theme_name} costumes with themed elements on white."""
 
     # AGE 4 - simple figures with costumes bypass
     if age_level == "age_4":
@@ -453,9 +447,8 @@ Keep the EXACT age of every person - a baby MUST look like a baby, a toddler lik
 DRAW:
 - The subjects from the photo (people and/or animals) as simplified cartoon figures - more detail than age 3 with clearer facial features, proper body proportions, recognisable clothing and hair
 - Dress them in simple {theme_name} costumes (e.g. hats, outfits)
-- 2-3 {theme_name} creatures or objects around them (NOT extra people)
+- 2-3 {theme_name} themed elements around them (NOT extra people - e.g. safari animals, pirate treasure, superhero shields)
 - 1-2 simple {theme_name} scene elements (e.g. trees, vehicles, landscape features)
-- If there is a prominent object from the photo (e.g. a bike, vehicle, toy, building), keep it in the scene as a simplified outline as a simple outline shape
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture, NO gradients
@@ -467,11 +460,10 @@ STYLE:
 - Maximum 15-18 colourable areas
 
 BACKGROUND:
-- Keep any large/prominent object from the photo as a simple outline
-- Otherwise keep mostly white
-- No small details, no ground texture
+- Simple {theme_name} themed background (e.g. simple trees, ground, sky for safari / city buildings for superhero / beach for pirates)
+- Keep it simple - just enough to set the scene
 
-OUTPUT: Thick black outlines on pure white. No background."""
+OUTPUT: Cartoon figures in {theme_name} costumes with themed elements and simple themed background."""
 
     # AGE 5 - slightly more detail, minimal background
     if age_level == "age_5":
@@ -601,9 +593,8 @@ Keep the EXACT age of every person - a baby MUST look like a baby, a toddler lik
 
 DRAW:
 - The subjects from the photo (people and/or animals) wearing simple {theme_name} costumes (basic outfits, not elaborate)
-- 3-4 {theme_name} creatures or objects around the scene (NOT extra people)
+- 3-4 {theme_name} themed elements around the scene (NOT extra people - e.g. safari animals, pirate ships, superhero city elements)
 - 2-3 {theme_name} scene elements to build a fuller themed scene (e.g. trees, vehicles, landscape features)
-- If there is a prominent object from the photo (e.g. a bike, vehicle, toy, building), keep it in the scene as a simplified outline as a simplified outline
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture
@@ -617,9 +608,8 @@ STYLE:
 - Maximum 20-25 colourable areas
 
 BACKGROUND:
-- Keep any large/prominent object from the photo as a simplified outline
-- Simple ground line, maybe 1-2 simple clouds
-- Keep mostly clean and simple
+- Fully immersive {theme_name} scene with themed scenery
+- Themed landscape, ground, sky elements
 
 OUTPUT: Recognisable figures in {theme_name} costumes with theme items and simplified photo background."""
 
