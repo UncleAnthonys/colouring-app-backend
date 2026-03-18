@@ -178,10 +178,13 @@ DRAW:
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
-- EXTREMELY THICK black outlines
+- EXTREMELY THICK black outlines - thicker than a normal colouring book
 - Blob/kawaii style - super rounded and chunky
 - Faces: just dots for eyes, simple curve for mouth
 - Hair as simple outline shape only - NOT filled in, NOT solid black
+- Clothing as simple outer shapes only (e.g. t-shirt neckline, shorts outline) - NO internal detail, NO pockets, NO buttons, NO patterns, NO stitching
+- Match the crop of the photo - if photo shows waist up, draw waist up. If full body visible, arms and legs as short thick rounded stubs - same chunky thickness as the body, NOT thin sticks
+- Small slits on ends of hands and feet to suggest fingers/toes - NOT full fingers, just small indentations
 - Maximum 8-10 colourable areas TOTAL
 
 BACKGROUND:
@@ -239,11 +242,14 @@ DRAW:
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
-- EXTREMELY THICK black outlines
+- EXTREMELY THICK black outlines - thicker than a normal colouring book
 - Blob/kawaii style - super rounded and chunky
 - Faces: TINY pinpoint dots for eyes (like a period, not big circles), simple curve for mouth
-- NO fingers, NO detailed features
+- NO detailed features
+- Small slits on ends of hands and feet to suggest fingers/toes - NOT full fingers, just small indentations
 - Hair as simple outline shape only - NOT filled in, NOT solid black
+- Clothing as simple outer shapes only (e.g. t-shirt neckline, shorts outline) - NO internal detail, NO pockets, NO buttons, NO patterns, NO stitching
+- Rounded feet on every character (chunky shoes if wearing them, rounded blob feet if barefoot or animal)
 - Bodies as simple rounded shapes
 - Maximum 10-12 colourable areas TOTAL
 
@@ -268,6 +274,7 @@ STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - VERY THICK black outlines
 - Simple blob-like shapes
+- Match the crop of the photo - if photo shows waist up, draw waist up. If full body visible, draw rounded feet (chunky shoes if wearing them, rounded blob feet if barefoot or animal)
 - Maximum 10-12 colourable areas TOTAL
 
 BACKGROUND:
