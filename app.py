@@ -261,16 +261,16 @@ OUTPUT: Simple blob figures in {theme_name} costumes with theme items on mostly 
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as chunky simplified figures - still very rounded and simple like under_3 blobs but with slightly more shape (basic body proportions, simple hair outline, simple clothing shapes)
+- The subjects from the photo (people and/or animals) as simplified but recognisable figures - chunky thick outlines but with proper body shapes, visible hair styles, and simple clothing shapes so you can tell who they are
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
-- VERY THICK black outlines
-- Still blob-like and chunky - NOT realistic
-- Faces: simple dot eyes, simple smile, basic hair shape
-- NO detailed features, NO realistic proportions
-- Maximum 10-12 colourable areas TOTAL
+- THICK black outlines (thinner than under_3 but still bold)
+- Simplified cartoon style - recognisable but not realistic
+- Faces: simple eyes, simple smile, correct hair shape and length
+- Simple clothing shapes visible
+- Maximum 12-15 colourable areas TOTAL
 
 BACKGROUND:
 - PURE WHITE - absolutely nothing else
@@ -357,21 +357,23 @@ OUTPUT: Simple blob figures in {theme_name} costumes with theme items."""
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as simple cute blob figures
-- The most prominent object from the photo background as a VERY SIMPLE outline only (no internal details, no complex parts - just the basic shape)
+- The subjects from the photo (people and/or animals) as simplified cartoon figures - more detail than age 3 with clearer facial features, proper body proportions, recognisable clothing and hair
+- The most prominent object from the photo background as a simple outline (basic shape with minimal internal detail)
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
-- THICK black outlines
-- Simple rounded shapes throughout
-- NO internal details on objects - just outer outline
+- THICK black outlines (slightly thinner than age 3)
+- Simplified cartoon style - clear and recognisable
+- Faces: proper eyes, nose, smile - recognisable features
+- Clothing clearly visible with simple shapes
 - Maximum 15-18 colourable areas TOTAL
 
 BACKGROUND:
-- PURE WHITE - no sky, no ground, no scenery
+- ONE background element from the photo only
+- Otherwise PURE WHITE
 
-OUTPUT: Simple blob figures with a basic outline of the main background object. Keep everything chunky and simple."""
+OUTPUT: Recognisable simplified figures with one background element. More detail than age 3 but still simple."""
 
         theme_name = custom_theme if custom_theme else theme
         if theme_name == "none":
