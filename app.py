@@ -173,19 +173,19 @@ def build_photo_prompt(age_level: str = "age_5", theme: str = "none", custom_the
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body)
+- The subjects from the photo (people and/or animals) as VERY simple blob shapes
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - EXTREMELY THICK black outlines
-- Blob/kawaii style - super rounded and chunky. Visible hair shape (length and style recognisable). TINY pinpoint dots for eyes (like a period, not big circles), simple curve for mouth
+- Blob/kawaii style
 - Maximum 8-10 colourable areas TOTAL
 
 BACKGROUND:
 - PURE WHITE - absolutely nothing else
 
-OUTPUT: Simple blob figures on pure white. ONLY the people."""
+OUTPUT: Simple blob figures on pure white. ONLY the subjects from the photo."""
 
         theme_name = custom_theme if custom_theme else theme
 
@@ -205,7 +205,7 @@ OUTPUT: Simple blob figures on pure white. ONLY the people."""
             return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body) (round heads, simple body)
+- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body)
 - A big bold UPPERCASE CAPITAL letter {letter} as a FLAT 2D PROP (plain block letter or bubble letter - NOT a character - NO face, NO arms, NO legs, NO shoes, NO eyes, NO mouth - just a plain letter shape). Nobody holds or wears the letter.
 - ONE simple {best_object} next to the letter
 
@@ -213,7 +213,7 @@ STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
 - EXTREMELY THICK black outlines
 - Blob/kawaii style - super rounded and chunky
-- Faces: TINY pinpoint dots for eyes (like a period, not big circles), simple curve for mouth
+- Faces: just dots for eyes, simple curve for mouth
 - Maximum 8-10 colourable areas TOTAL
 - NO dots, NO speckles, NO texture, NO noise anywhere on the page
 - Every area must be PURE WHITE inside black outlines
@@ -227,27 +227,28 @@ OUTPUT: Simple blob figures with friendly letter {letter} character on pure whit
 
         return f"""Create the SIMPLEST possible BLACK AND WHITE colouring page for a 2 year old baby.
 
-CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and count the pets/animals. Draw EXACTLY that many of each - NO MORE, NO LESS. If there are 0 people, draw 0 people. If there is 1 person, draw 1 person. If there is 1 dog, draw 1 dog. NEVER add extra humans not in the photo - no random girls, boys, men, women, babies or children. NEVER duplicate pets from the photo. Themed creatures and objects (e.g. safari animals, dinosaurs) ARE allowed as separate additions to the scene.
+CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and count the pets/animals. Draw EXACTLY that many of each - NO MORE, NO LESS. If there are 0 people, draw 0 people. If there is 1 person, draw 1 person. If there is 1 dog, draw 1 dog. NEVER add extra humans not in the photo - no random girls, boys, men, women, babies or children. NEVER duplicate pets from the photo. Themed elements (e.g. safari animals, dinosaurs) ARE allowed as separate additions to the scene.
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body) (round heads, simple body)
+- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body)
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
-- ONE simple {theme_name} themed element next to them (NOT a person - e.g. safari animal, pirate treasure chest, superhero lightning bolt)
+- ONE simple {theme_name} themed element next to them
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
 - EXTREMELY THICK black outlines
 - Blob/kawaii style - super rounded and chunky
-- Faces: TINY pinpoint dots for eyes (like a period, not big circles), simple curve for mouth
+- Faces: just dots for eyes, simple curve for mouth
 - NO fingers, NO detailed features, NO hair details
 - Bodies as simple rounded shapes
-- Maximum 10-12 colourable areas TOTAL
+- Maximum 8-10 colourable areas TOTAL
 
 BACKGROUND:
-- PURE WHITE - no background scene
+- PURE WHITE - absolutely nothing else
+- No ground, no shadows, nothing
 
-OUTPUT: Simple blob figures in {theme_name} costumes with one themed element on white."""
+OUTPUT: Simple blob figures in {theme_name} costumes on pure white. NO COLOUR."""
 
     # AGE 3 - super simple bypass
     if age_level == "age_3":
@@ -258,21 +259,19 @@ OUTPUT: Simple blob figures in {theme_name} costumes with one themed element on 
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as simplified but recognisable figures - thick outlines with proper body shapes, visible hair styles, and simple clothing shapes so you can tell who they are
+- The subjects from the photo (people and/or animals) as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
-- THICK black outlines (thinner than under_3 but still bold)
-- Simplified coloring book style - recognisable but not detailed
-- Faces: TINY pinpoint dot eyes (like a period), simple smile, correct hair shape and length
-- Simple clothing shapes visible
-- Maximum 12-15 colourable areas TOTAL
+- VERY THICK black outlines
+- Simple rounded shapes
+- Maximum 10-12 colourable areas TOTAL
 
 BACKGROUND:
 - PURE WHITE - absolutely nothing else
 
-OUTPUT: Simple black outline figures on pure white. ONLY the people from the photo."""
+OUTPUT: Simple black outline figures on pure white. ONLY the subjects from the photo."""
 
         theme_name = custom_theme if custom_theme else theme
 
@@ -293,7 +292,7 @@ OUTPUT: Simple black outline figures on pure white. ONLY the people from the pho
             return f"""Create an EXTREMELY SIMPLE toddler alphabet colouring page for letter {letter}.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body) (round heads, simple chunky body)
+- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple chunky body)
 - Plain simple clothing - NO patterns, NO costumes
 - A big bold UPPERCASE CAPITAL letter {letter} as a FLAT 2D PROP (plain block letter or bubble letter - NOT a character - NO face, NO arms, NO legs, NO shoes, NO eyes, NO mouth - just a plain letter shape). Nobody holds or wears the letter.
 - ONE simple {best_object} next to the letter
@@ -302,7 +301,7 @@ STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
 - EXTREMELY THICK black outlines
 - Blob/kawaii style - super rounded and chunky figures
-- Faces: TINY pinpoint dots for eyes (like a period, not big circles), simple curve for mouth
+- Faces: just dots for eyes, simple curve for mouth
 - NO fingers, NO detailed features
 - Bodies as simple rounded shapes
 - Maximum 10-12 colourable areas TOTAL
@@ -317,30 +316,27 @@ BACKGROUND:
 
 OUTPUT: Simple black outline blob figures standing next to a friendly letter {letter} character on pure white."""
         
-        return f"""Create an EXTREMELY SIMPLE toddler colouring page for a 3 year old.
+        return f"""Create an EXTREMELY SIMPLE toddler colouring page.
 
-CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and count the pets/animals. Draw EXACTLY that many of each - NO MORE, NO LESS. If there are 0 people, draw 0 people. If there is 1 person, draw 1 person. If there is 1 dog, draw 1 dog. NEVER add extra humans not in the photo - no random girls, boys, men, women, babies or children. NEVER duplicate pets from the photo. Themed creatures and objects (e.g. safari animals, dinosaurs) ARE allowed as separate additions to the scene.
+CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and count the pets/animals. Draw EXACTLY that many of each - NO MORE, NO LESS. If there are 0 people, draw 0 people. If there is 1 person, draw 1 person. If there is 1 dog, draw 1 dog. NEVER add extra humans not in the photo - no random girls, boys, men, women, babies or children. NEVER duplicate pets from the photo. Themed elements (e.g. safari animals, dinosaurs) ARE allowed as separate additions to the scene.
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
-STYLE: "My First Colouring Book" - simple and chunky.
+STYLE: "My First Colouring Book" - for 3 year olds.
 
-DRAW:
-- The subjects from the photo (people and/or animals) as simplified but recognisable figures - thick outlines, proper body shapes, visible hair styles, simple clothing shapes
+DRAW ONLY:
+- The subjects from the photo (people and/or animals) as very basic shapes
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
-- 1-2 simple {theme_name} themed elements next to them (NOT extra people - e.g. safari animals, pirate treasure, superhero lightning bolts)
-- ONE simple {theme_name} scene element (e.g. a tree, vehicle, or landscape feature)
+- One simple {theme_name} themed element next to them
+- THAT IS ALL - NOTHING ELSE
 
-STYLE:
+ABSOLUTE REQUIREMENTS:
+- PURE WHITE BACKGROUND - no sky, no clouds, no ground, no grass, nothing
 - VERY THICK black outlines only
-- BLACK OUTLINES ON WHITE ONLY
+- MAXIMUM 10-12 large colourable areas in the ENTIRE image
+- NO patterns, NO details, NO small elements
 - Simple blob-like shapes
-- MAXIMUM 12-15 large colourable areas in the ENTIRE image
-- NO patterns, NO small details
 
-BACKGROUND:
-- PURE WHITE - no background scene
-
-OUTPUT: Chunky figures in {theme_name} costumes with themed elements on white."""
+OUTPUT: Thick simple outlines on pure white. Nothing in background."""
 
     # AGE 4 - simple figures with costumes bypass
     if age_level == "age_4":
@@ -351,23 +347,21 @@ OUTPUT: Chunky figures in {theme_name} costumes with themed elements on white.""
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as clean simplified line drawings - proper body proportions, recognisable facial features, correct hair and clothing. a clean coloring book line drawing
-- The most prominent object from the photo background as a simple outline (basic shape with minimal internal detail)
+- The subjects from the photo (people and/or animals) as simple cute blob figures
+- The most prominent object from the photo background as a VERY SIMPLE outline only (no internal details, no complex parts - just the basic shape)
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - THICK black outlines
-- Clean coloring book line drawing style
-- Faces: recognisable real features simplified into clean lines
-- Clothing clearly visible with simple shapes
+- Simple rounded shapes throughout
+- NO internal details on objects - just outer outline
 - Maximum 15-18 colourable areas TOTAL
 
 BACKGROUND:
-- ONE background element from the photo only
-- Otherwise PURE WHITE
+- PURE WHITE - no sky, no ground, no scenery
 
-OUTPUT: Clean line drawing figures with one background element. Recognisable but simplified."""
+OUTPUT: Simple blob figures with a basic outline of the main background object. Keep everything chunky and simple."""
 
         theme_name = custom_theme if custom_theme else theme
         if theme_name == "none":
@@ -441,29 +435,28 @@ OUTPUT: Simple figures with friendly letter character and a few {letter} objects
         
         return f"""Create a SIMPLE colouring page for a 4 year old.
 
-CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and count the pets/animals. Draw EXACTLY that many of each - NO MORE, NO LESS. If there are 0 people, draw 0 people. If there is 1 person, draw 1 person. If there is 1 dog, draw 1 dog. NEVER add extra humans not in the photo - no random girls, boys, men, women, babies or children. NEVER duplicate pets from the photo. Themed creatures and objects (e.g. safari animals, dinosaurs) ARE allowed as separate additions to the scene.
+CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and count the pets/animals. Draw EXACTLY that many of each - NO MORE, NO LESS. If there are 0 people, draw 0 people. If there is 1 person, draw 1 person. If there is 1 dog, draw 1 dog. NEVER add extra humans not in the photo - no random girls, boys, men, women, babies or children. NEVER duplicate pets from the photo. Themed elements (e.g. safari animals, dinosaurs) ARE allowed as separate additions to the scene.
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as clean simplified line drawings - proper body proportions, recognisable facial features, correct hair and clothing. a clean coloring book line drawing
-- Dress them in simple {theme_name} costumes (e.g. hats, outfits)
-- 2-3 {theme_name} themed elements around them (NOT extra people - e.g. safari animals, pirate treasure, superhero shields)
-- 1-2 simple {theme_name} scene elements (e.g. trees, vehicles, landscape features)
+- The subjects from the photo (people and/or animals) as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair) with basic {theme_name} costumes
+- One simple {theme_name} themed element next to them
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture, NO gradients
 - THICK black outlines
 - Simple rounded figures
-- Faces: simple small drawn eyes (not dots - small line-drawn eyes like a basic coloring book), simple smile, basic hair shape
-- Simple clothing shapes - NO frills, NO layered skirts, NO patterns
+- Faces: dots for eyes, simple smile, basic hair shape
+- Simple clothing - NO frills, NO layered skirts, NO patterns
 - Bodies still chunky and simple
 - Maximum 15-18 colourable areas
 
 BACKGROUND:
-- Simple {theme_name} themed background (e.g. simple trees, ground, sky for safari / city buildings for superhero / beach for pirates)
-- Keep it simple - just enough to set the scene
+- PURE WHITE BACKGROUND - NOTHING ELSE
+- NO ground, NO sky, NO clouds, NO rainbow
+- Just figures on white
 
-OUTPUT: Cartoon figures in {theme_name} costumes with themed elements and simple themed background."""
+OUTPUT: Thick black outlines on pure white. No background."""
 
     # AGE 5 - slightly more detail, minimal background
     if age_level == "age_5":
