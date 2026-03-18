@@ -173,13 +173,14 @@ def build_photo_prompt(age_level: str = "age_5", theme: str = "none", custom_the
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as VERY simple blob shapes
+- The subjects from the photo (people and/or animals) as VERY simple blob characters with full body (round head, stubby arms, stubby legs) even if the photo is cropped
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - EXTREMELY THICK black outlines
-- Blob/kawaii style
+- Blob/kawaii style - super rounded and chunky
+- Faces: just dots for eyes, simple curve for mouth
 - Maximum 8-10 colourable areas TOTAL
 
 BACKGROUND:
