@@ -173,15 +173,13 @@ def build_photo_prompt(age_level: str = "age_5", theme: str = "none", custom_the
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as very simple thick-outlined characters - still clearly recognisable (you can tell who is who and what they are doing) but drawn in the simplest possible kawaii/chibi style with round heads, simple stubby bodies, tiny arms and legs
-- Keep their activity visible (e.g. if someone is pushing a bike, show that)
+- The subjects from the photo (people and/or animals) as VERY simple blob shapes
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - EXTREMELY THICK black outlines
-- Kawaii/chibi style - round heads, dot eyes, simple smile, stubby limbs
-- Simple hair shape to tell subjects apart
+- Blob style - round heads, dot eyes, simple smile
 - Maximum 8-10 colourable areas TOTAL
 
 BACKGROUND:
@@ -233,7 +231,7 @@ CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as very simple thick-outlined characters in kawaii/chibi style - round heads, stubby bodies, tiny arms and legs but still clearly recognisable (you can tell who is who and what they are doing)
+- The subjects from the photo (people and/or animals) as VERY simple blob shapes (round heads, simple body)
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
 - ONE simple {theme_name} themed element next to them (NOT a person - e.g. safari animal, pirate treasure chest, superhero lightning bolt)
 
@@ -260,13 +258,13 @@ OUTPUT: Simple blob figures in {theme_name} costumes with one themed element on 
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as simplified but recognisable figures - chunky thick outlines but with proper body shapes, visible hair styles, and simple clothing shapes so you can tell who they are
+- The subjects from the photo (people and/or animals) as simplified but recognisable figures - thick outlines with proper body shapes, visible hair styles, and simple clothing shapes so you can tell who they are
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - THICK black outlines (thinner than under_3 but still bold)
-- Simplified cartoon style - recognisable but not realistic
+- Simplified coloring book style - recognisable but not detailed
 - Faces: simple eyes, simple smile, correct hair shape and length
 - Simple clothing shapes visible
 - Maximum 12-15 colourable areas TOTAL
@@ -327,7 +325,7 @@ Keep the EXACT age of every person - a baby MUST look like a baby, a toddler lik
 STYLE: "My First Colouring Book" - simple and chunky.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as simplified but recognisable chunky figures - proper body shapes, visible hair styles, simple clothing shapes
+- The subjects from the photo (people and/or animals) as simplified but recognisable figures - thick outlines, proper body shapes, visible hair styles, simple clothing shapes
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
 - 1-2 simple {theme_name} themed elements next to them (NOT extra people - e.g. safari animals, pirate treasure, superhero lightning bolts)
 - ONE simple {theme_name} scene element (e.g. a tree, vehicle, or landscape feature)
@@ -353,14 +351,14 @@ OUTPUT: Chunky figures in {theme_name} costumes with themed elements on white.""
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as clean simplified line drawings - proper body proportions, recognisable facial features, correct hair and clothing. NOT cartoon or anime style - a clean coloring book line drawing
+- The subjects from the photo (people and/or animals) as clean simplified line drawings - proper body proportions, recognisable facial features, correct hair and clothing. a clean coloring book line drawing
 - The most prominent object from the photo background as a simple outline (basic shape with minimal internal detail)
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - THICK black outlines
-- Clean coloring book line drawing style - NOT cartoon, NOT anime, NOT chibi
+- Clean coloring book line drawing style
 - Faces: recognisable real features simplified into clean lines
 - Clothing clearly visible with simple shapes
 - Maximum 15-18 colourable areas TOTAL
@@ -426,7 +424,7 @@ CRITICAL: EVERY object in this image MUST start with the letter {letter}. Do NOT
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - THICK black outlines  
-- Simple rounded cartoon figures
+- Simple rounded figures
 - The letter {letter} must be LARGE and clearly visible
 - Maximum 15-18 colourable areas
 - NO dots, NO speckles, NO texture, NO noise anywhere on the page
@@ -447,7 +445,7 @@ CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as clean simplified line drawings - proper body proportions, recognisable facial features, correct hair and clothing. NOT cartoon or anime style
+- The subjects from the photo (people and/or animals) as clean simplified line drawings - proper body proportions, recognisable facial features, correct hair and clothing. a clean coloring book line drawing
 - Dress them in simple {theme_name} costumes (e.g. hats, outfits)
 - 2-3 {theme_name} themed elements around them (NOT extra people - e.g. safari animals, pirate treasure, superhero shields)
 - 1-2 simple {theme_name} scene elements (e.g. trees, vehicles, landscape features)
