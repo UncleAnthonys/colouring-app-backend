@@ -261,13 +261,13 @@ OUTPUT: Simple blob figures in {theme_name} costumes with one themed element on 
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
+- The subjects from the photo (people and/or animals) as very basic shapes - blob-like but recognisable
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - VERY THICK black outlines
-- Simple rounded shapes
+- Simple blob-like shapes
 - Maximum 10-12 colourable areas TOTAL
 
 BACKGROUND:
