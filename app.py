@@ -246,10 +246,11 @@ STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
 - EXTREMELY THICK black outlines - thicker than a normal colouring book
 - Blob/kawaii style - super rounded and chunky
-- Faces: TINY pinpoint dots for eyes (like a period, not big circles), simple curve for mouth
+- Faces: TINY pinpoint dots for eyes (like a period, not big circles), single curved line smile - NOT an open mouth, just one simple upward curve
 - NO detailed features
 - Small slits on ends of hands and feet to suggest fingers/toes - NOT full fingers, just small indentations
 - Hair as simple outline shape only - NOT filled in, NOT solid black
+- NO solid black fill anywhere - sunglasses, hair, accessories must all be HOLLOW outlines only
 - Clothing as simple outer shapes only (e.g. t-shirt neckline, shorts outline) - NO internal detail, NO pockets, NO buttons, NO patterns, NO stitching
 - Rounded feet on every character (chunky shoes if wearing them, rounded blob feet if barefoot or animal)
 - Bodies as simple rounded shapes
@@ -335,8 +336,6 @@ OUTPUT: Simple black outline blob figures standing next to a friendly letter {le
 CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and count the pets/animals. Draw EXACTLY that many of each - NO MORE, NO LESS. If there are 0 people, draw 0 people. If there is 1 person, draw 1 person. If there is 1 dog, draw 1 dog. NEVER add extra humans not in the photo - no random girls, boys, men, women, babies or children. NEVER duplicate pets from the photo. Themed elements (e.g. safari animals, dinosaurs) ARE allowed as separate additions to the scene.
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
-STYLE: "My First Colouring Book" - for 3 year olds.
-
 DRAW ONLY:
 - The subjects from the photo (people and/or animals) as very basic shapes
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
@@ -346,9 +345,12 @@ DRAW ONLY:
 ABSOLUTE REQUIREMENTS:
 - PURE WHITE BACKGROUND - no sky, no clouds, no ground, no grass, nothing
 - VERY THICK black outlines only
+- Simple blob-like shapes
+- Faces: dot eyes, small curved line nose on EVERY face, single curved line smile - NOT an open mouth
+- Hair as simple outline shape only - NOT filled in, NOT solid black
+- NO solid black fill anywhere - sunglasses, hair, accessories must all be HOLLOW outlines only
 - MAXIMUM 10-12 large colourable areas in the ENTIRE image
 - NO patterns, NO details, NO small elements
-- Simple blob-like shapes
 
 OUTPUT: Thick simple outlines on pure white. Nothing in background."""
 
@@ -460,7 +462,9 @@ STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture, NO gradients
 - THICK black outlines
 - Simple rounded figures
-- Faces: dots for eyes, simple smile, basic hair shape
+- Faces: dots for eyes, small curved line nose on EVERY face, single curved line smile - NOT an open mouth, basic hair shape
+- Hair as simple outline shape only - NOT filled in, NOT solid black
+- NO solid black fill anywhere - sunglasses, hair, accessories must all be HOLLOW outlines only
 - Simple clothing - NO frills, NO layered skirts, NO patterns
 - Bodies still chunky and simple
 - Maximum 15-18 colourable areas
@@ -611,6 +615,8 @@ STYLE:
 - Keep the EXACT age of every person - a baby MUST look like a baby, not a child
 - Copy the EXACT hairstyle - length, parting, texture
 - Do NOT make faces cartoonish or generic - this is a likeness
+- Hair as simple outline shape only - NOT filled in, NOT solid black
+- NO solid black fill anywhere - sunglasses, hair, accessories must all be HOLLOW outlines only
 - Clothing: simple shapes, NO frills, NO layered skirts, NO intricate patterns
 - Maximum 20-25 colourable areas
 
