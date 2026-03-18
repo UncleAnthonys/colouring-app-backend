@@ -261,13 +261,15 @@ OUTPUT: Simple blob figures in {theme_name} costumes with theme items on mostly 
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair)
+- The subjects from the photo (people and/or animals) as chunky simplified figures - still very rounded and simple like under_3 blobs but with slightly more shape (basic body proportions, simple hair outline, simple clothing shapes)
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - VERY THICK black outlines
-- Simple rounded shapes
+- Still blob-like and chunky - NOT realistic
+- Faces: simple dot eyes, simple smile, basic hair shape
+- NO detailed features, NO realistic proportions
 - Maximum 10-12 colourable areas TOTAL
 
 BACKGROUND:
