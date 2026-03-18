@@ -353,15 +353,15 @@ OUTPUT: Chunky figures in {theme_name} costumes with themed elements on white.""
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as simplified cartoon figures - more detail than age 3 with clearer facial features, proper body proportions, recognisable clothing and hair
+- The subjects from the photo (people and/or animals) as clean simplified line drawings - proper body proportions, recognisable facial features, correct hair and clothing. NOT cartoon or anime style - a clean coloring book line drawing
 - The most prominent object from the photo background as a simple outline (basic shape with minimal internal detail)
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
-- THICK black outlines (slightly thinner than age 3)
-- Simplified cartoon style - clear and recognisable
-- Faces: proper eyes, nose, smile - recognisable features
+- THICK black outlines
+- Clean coloring book line drawing style - NOT cartoon, NOT anime, NOT chibi
+- Faces: recognisable real features simplified into clean lines
 - Clothing clearly visible with simple shapes
 - Maximum 15-18 colourable areas TOTAL
 
@@ -369,7 +369,7 @@ BACKGROUND:
 - ONE background element from the photo only
 - Otherwise PURE WHITE
 
-OUTPUT: Recognisable simplified figures with one background element. More detail than age 3 but still simple."""
+OUTPUT: Clean line drawing figures with one background element. Recognisable but simplified."""
 
         theme_name = custom_theme if custom_theme else theme
         if theme_name == "none":
@@ -447,7 +447,7 @@ CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW:
-- The subjects from the photo (people and/or animals) as simplified cartoon figures - more detail than age 3 with clearer facial features, proper body proportions, recognisable clothing and hair
+- The subjects from the photo (people and/or animals) as clean simplified line drawings - proper body proportions, recognisable facial features, correct hair and clothing. NOT cartoon or anime style
 - Dress them in simple {theme_name} costumes (e.g. hats, outfits)
 - 2-3 {theme_name} themed elements around them (NOT extra people - e.g. safari animals, pirate treasure, superhero shields)
 - 1-2 simple {theme_name} scene elements (e.g. trees, vehicles, landscape features)
