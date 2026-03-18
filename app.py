@@ -180,10 +180,13 @@ STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - EXTREMELY THICK black outlines - thicker than a normal colouring book
 - Blob/kawaii style - super rounded and chunky
-- Faces: just dots for eyes, simple curve for mouth
+- Faces: just dots for eyes, clear UPWARD curved smile for mouth - characters must look HAPPY
 - Hair as simple outline shape only - NOT filled in, NOT solid black
+- NO solid black fill anywhere - sunglasses, hair, accessories must all be HOLLOW outlines only
 - Clothing as simple outer shapes only (e.g. t-shirt neckline, shorts outline) - NO internal detail, NO pockets, NO buttons, NO patterns, NO stitching
-- Match the crop of the photo - if photo shows waist up, draw waist up. If full body visible, arms and legs as short thick rounded stubs - same chunky thickness as the body, NOT thin sticks
+- Match the crop of the photo EXACTLY - if photo is waist up, ONLY draw waist up, do NOT invent legs or feet below the crop line
+- If full body visible, arms and legs as short thick rounded stubs - same chunky thickness as the body, NOT thin sticks
+- If wearing clothes, assume shoes - draw simple chunky shoe shapes, NOT bare feet
 - Small slits on ends of hands and feet to suggest fingers/toes - NOT full fingers, just small indentations
 - Maximum 8-10 colourable areas TOTAL
 
