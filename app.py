@@ -179,7 +179,7 @@ DRAW:
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - EXTREMELY THICK black outlines
-- Blob style - round heads, dot eyes, simple smile
+- Blob style - round heads, TINY pinpoint dot eyes (like a period, not big circles), simple smile
 - Maximum 8-10 colourable areas TOTAL
 
 BACKGROUND:
@@ -213,7 +213,7 @@ STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
 - EXTREMELY THICK black outlines
 - Blob/kawaii style - super rounded and chunky
-- Faces: just dots for eyes, simple curve for mouth
+- Faces: TINY pinpoint dots for eyes (like a period, not big circles), simple curve for mouth
 - Maximum 8-10 colourable areas TOTAL
 - NO dots, NO speckles, NO texture, NO noise anywhere on the page
 - Every area must be PURE WHITE inside black outlines
@@ -239,7 +239,7 @@ STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
 - EXTREMELY THICK black outlines
 - Blob/kawaii style - super rounded and chunky
-- Faces: just dots for eyes, simple curve for mouth
+- Faces: TINY pinpoint dots for eyes (like a period, not big circles), simple curve for mouth
 - NO fingers, NO detailed features, NO hair details
 - Bodies as simple rounded shapes
 - Maximum 10-12 colourable areas TOTAL
@@ -265,7 +265,7 @@ STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - THICK black outlines (thinner than under_3 but still bold)
 - Simplified coloring book style - recognisable but not detailed
-- Faces: simple eyes, simple smile, correct hair shape and length
+- Faces: TINY pinpoint dot eyes (like a period), simple smile, correct hair shape and length
 - Simple clothing shapes visible
 - Maximum 12-15 colourable areas TOTAL
 
@@ -302,7 +302,7 @@ STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
 - EXTREMELY THICK black outlines
 - Blob/kawaii style - super rounded and chunky figures
-- Faces: just dots for eyes, simple curve for mouth
+- Faces: TINY pinpoint dots for eyes (like a period, not big circles), simple curve for mouth
 - NO fingers, NO detailed features
 - Bodies as simple rounded shapes
 - Maximum 10-12 colourable areas TOTAL
@@ -454,7 +454,7 @@ STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture, NO gradients
 - THICK black outlines
 - Simple rounded figures
-- Faces: dots for eyes, simple smile, basic hair shape
+- Faces: simple small drawn eyes (not dots - small line-drawn eyes like a basic coloring book), simple smile, basic hair shape
 - Simple clothing shapes - NO frills, NO layered skirts, NO patterns
 - Bodies still chunky and simple
 - Maximum 15-18 colourable areas
@@ -483,7 +483,7 @@ STYLE:
 - THICK black outlines - easy for small hands
 - Draw the REAL outline shapes of people and objects but with NO internal detail
 - NO tyre treads, NO window details, NO ground texture, NO clothing patterns
-- Faces: simple dot eyes, simple nose, simple smile - but CORRECT hair length and shape
+- Faces: properly drawn eyes with simple detail, nose, smile - recognisable features matching the photo
 - Objects: just the outer silhouette shape, no internal lines
 - Maximum 15-20 colourable areas
 
