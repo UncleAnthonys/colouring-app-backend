@@ -240,7 +240,7 @@ Keep the EXACT age of every person - a baby MUST look like a baby, a toddler lik
 DRAW:
 - The subjects from the photo (people and/or animals) as VERY simple blob characters
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
-- ONE simple {theme_name} themed element next to them (NOT a person - e.g. safari animal, pirate treasure chest, superhero lightning bolt)
+- 1-2 simple {theme_name} themed elements next to them (NOT a person - e.g. safari animal, pirate treasure chest, superhero lightning bolt)
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
@@ -259,7 +259,7 @@ STYLE:
 BACKGROUND:
 - PURE WHITE - no background scene
 
-OUTPUT: Simple blob figures in {theme_name} costumes with one themed element on white."""
+OUTPUT: Simple blob figures in {theme_name} costumes with themed elements on white."""
 
     # AGE 3 - super simple bypass
     if age_level == "age_3":
@@ -339,7 +339,7 @@ Keep the EXACT age of every person - a baby MUST look like a baby, a toddler lik
 DRAW ONLY:
 - The subjects from the photo (people and/or animals) as very basic shapes
 - Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
-- One simple {theme_name} themed element next to them
+- 2 simple {theme_name} themed elements next to them
 - THAT IS ALL - NOTHING ELSE
 
 ABSOLUTE REQUIREMENTS:
@@ -456,7 +456,8 @@ Keep the EXACT age of every person - a baby MUST look like a baby, a toddler lik
 
 DRAW:
 - The subjects from the photo (people and/or animals) as simplified but real outlines (NOT round blobs - actual shapes of people, clothes, hair) with basic {theme_name} costumes
-- One simple {theme_name} themed element next to them
+- 2-3 {theme_name} themed elements around them (NOT extra people - e.g. safari animals, pirate treasure, superhero shields)
+- 1 simple {theme_name} scene element (e.g. simple building outline, tree, vehicle)
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture, NO gradients
