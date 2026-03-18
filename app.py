@@ -276,6 +276,8 @@ STYLE:
 - BLACK OUTLINES ON WHITE ONLY
 - VERY THICK black outlines
 - Simple blob-like shapes
+- Faces: dot eyes, small curved line nose, single curved line smile - NOT an open mouth
+- Hair as simple outline shape only - NOT filled in, NOT solid black
 - Match the crop of the photo - if photo shows waist up, draw waist up. If full body visible, draw rounded feet (chunky shoes if wearing them, rounded blob feet if barefoot or animal)
 - Maximum 10-12 colourable areas TOTAL
 
