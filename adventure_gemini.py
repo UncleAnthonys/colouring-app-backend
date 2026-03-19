@@ -1687,6 +1687,18 @@ The feature creates ONE specific problem (the obstacle). The twist must solve TH
 - BAD: obstacle="coat is too bulky to move fast" → twist="coat blocks the dog" (these are two different problems)
 - GOOD: obstacle="coat is too bulky to stack snow blocks" → twist="the puffy coat packs snow tighter when they hug the blocks, making super-strong walls"
 
+*** THE 3 THEMES MUST BE IN 3 DIFFERENT WORLDS ***
+Theme 1 must be set in an EVERYDAY location (school, park, shops, home, neighbourhood)
+Theme 2 must be set in an UNUSUAL or FANTASTICAL location (underwater, space, tiny world, jungle, castle, inside a machine, upside-down town, cloud kingdom)
+Theme 3 must involve a SPECIFIC JOB, EVENT, or MISSION (detective mystery, cooking contest, sports day, rescue mission, science fair, treasure hunt, talent show audition)
+No two themes can share the same type of setting, premise, or story structure.
+
+*** FINAL QUALITY CHECK BEFORE GENERATING ***
+For each theme, ask yourself:
+1. "Would a parent read this blurb and think 'wow, this is clever and unique to my child'?" — if the answer is "this could be about any character", throw it away and start again.
+2. "Does the want/obstacle/twist chain make LOGICAL sense?" — read them as one sentence: "[character] wants [want] but [obstacle] until [twist]". If it sounds forced, contrived, or silly in a bad way, rewrite it.
+3. "Is this story ACTUALLY interesting?" — would a real children's book author be proud of this idea, or is it lazy filler? Be honest. If a 5-year-old would say "that's boring" after hearing the premise, it IS boring.
+
 NOW generate 3 theme PITCHES for {character_name}. Each theme must use a DIFFERENT character feature. Include theme_id, theme_name, theme_description, theme_blurb, feature_used, want, obstacle, and twist. Do NOT generate full episodes — just the pitches. Return ONLY the JSON, no other text.'''
         
         claude_response = claude_client.messages.create(
