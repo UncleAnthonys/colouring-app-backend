@@ -7,8 +7,7 @@ import json
 import uuid
 from datetime import datetime
 from fastapi import APIRouter, HTTPException, Request
-from pydantic import BaseModel
-from typing import Optional, Dict, Any
+from typing import Optional
 import redis as redis_lib
 
 job_router = APIRouter(prefix="/job", tags=["jobs"])
@@ -25,18 +24,19 @@ def get_redis():
 async def submit_job(request: Request):
     """
     Submit a job to the queue. Returns job_id instantly.
-    Accepts raw JSON to avoid Pydantic validation issues with FlutterFlow.
+    Accepts the EXACT same body format as the original endpoints.
+    Just add "job_type" field to tell us which task to run.
     """
     from celery_app import celery_app
     
-    body = await request.json()
+    body = await request.body()
+    params = json.loads(body)
     
-    job_type = body.get("job_type", "")
-    params = body.get("params", {})
+    job_type = params.pop("job_type", "full_story")
     
     # Debug logging
     print(f"[JOB-SUBMIT] job_type: {job_type}")
-    print(f"[JOB-SUBMIT] params keys: {list(params.keys()) if params else 'empty'}")
+    print(f"[JOB-SUBMIT] params keys: {list(params.keys())}")
     
     job_id = str(uuid.uuid4())
     now = datetime.utcnow().isoformat()
@@ -67,7 +67,7 @@ async def submit_job(request: Request):
     if not task_name:
         raise HTTPException(status_code=400, detail=f"Unknown job type: {job_type}")
     
-    # Send task to Celery queue
+    # Send task to Celery queue — params is the SAME body the original endpoint gets
     celery_app.send_task(task_name, args=[job_id, params])
     
     return {"job_id": job_id, "status": "queued"}
