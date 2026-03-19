@@ -236,7 +236,6 @@ def extract_and_reveal_task(self, job_id: str, params: dict):
         task_dir = os.path.dirname(os.path.abspath(__file__))
         if task_dir not in sys.path:
             sys.path.insert(0, task_dir)
-        print(f"[WORKER] task_dir={task_dir}, files={[f for f in os.listdir(task_dir) if 'character' in f]}")
         
         from character_extraction_gemini import extract_character_with_extreme_accuracy
         from adventure_gemini import generate_adventure_reveal_gemini
