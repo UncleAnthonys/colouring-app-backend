@@ -1,0 +1,40 @@
+"""
+Little Lines — Celery Configuration
+Async task queue for heavy AI generation workloads
+"""
+import os
+import ssl
+
+redis_url = os.environ.get('REDIS_URL', 'redis://localhost:6379/0')
+
+# Upstash requires SSL — Celery needs broker_use_ssl config
+from celery import Celery
+
+celery_app = Celery(
+    'little_lines',
+    broker=redis_url,
+    backend=redis_url,
+    include=['tasks']
+)
+
+# SSL config for Upstash (rediss:// URLs)
+if redis_url.startswith('rediss://'):
+    celery_app.conf.broker_use_ssl = {
+        'ssl_cert_reqs': ssl.CERT_NONE
+    }
+    celery_app.conf.redis_backend_use_ssl = {
+        'ssl_cert_reqs': ssl.CERT_NONE
+    }
+
+celery_app.conf.update(
+    task_serializer='json',
+    accept_content=['json'],
+    result_serializer='json',
+    timezone='UTC',
+    task_track_started=True,
+    task_time_limit=600,       # 10 min hard limit per task
+    task_soft_time_limit=540,  # 9 min soft limit
+    worker_prefetch_multiplier=1,  # One task at a time per worker
+    worker_concurrency=1,          # One concurrent task per worker
+    result_expires=3600,           # Results expire after 1 hour
+)
