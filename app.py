@@ -21,6 +21,7 @@ import firebase_admin
 from firebase_admin import credentials, storage
 import uuid
 from adventure_endpoints import router as adventure_router
+from job_endpoints import job_router
 from firebase_utils import init_firebase, upload_to_firebase
 
 app = FastAPI(title="Kids Colouring App API", version="1.0.0")
@@ -37,6 +38,7 @@ app.add_middleware(
 # Include pattern coloring router
 app.include_router(pattern_router)
 app.include_router(adventure_router, prefix="/adventure", tags=["Adventure"])
+app.include_router(job_router, tags=["Jobs"])
 
 # Config
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -771,7 +773,10 @@ The child's task is to connect the dots to reveal the {subject}."""
     # Handle "find_the X" dynamic theme
     if description.startswith("find_the "):
         subject = description.replace("find_the ", "")
-        base_prompt = f"""Create a children's colouring book page - a "find and seek" game featuring: {subject}
+        base_prompt = f"""Create a children's colouring book page - a "find and seek" game.
+
+The OBJECT to find is: {subject}
+Draw {subject} as a LITERAL OBJECT — the actual physical thing called "{subject}". NOT an animal, NOT a character, NOT a mascot. The actual real-world object/thing.
 
 ⚠️ ABSOLUTE REQUIREMENT - 100% BLACK AND WHITE:
 - ONLY black lines on pure white background
@@ -779,29 +784,30 @@ The child's task is to connect the dots to reveal the {subject}."""
 - NO shading, NO gradients, NO filled areas
 - Every area must be PURE WHITE inside black outlines
 
-SCENE: Think about where {subject} ACTUALLY lives or is used in real life. Draw THAT specific location. Do NOT default to a generic outdoor park scene.
-- Food/drink items: MUST be a kitchen, dining table, or restaurant - NOT outdoors
-- Musical instruments: MUST be a music room, stage, or concert hall - NOT outdoors
-- Animals: their natural habitat
-- Outdoor sports/vehicles: the place you'd use them
-- Indoor items/toys: the room you'd find them in
+SCENE: Think about where {subject} ACTUALLY lives or is used in real life. Draw THAT specific location as a detailed scene. Do NOT default to a generic outdoor park scene.
+- Food/drink items (e.g. ketchup, pizza, cupcake): MUST be a kitchen, dining table, pantry, or restaurant
+- Musical instruments: MUST be a music room, stage, or concert hall
+- Animals (e.g. cat, dog, giraffe): their natural habitat or a home
+- Outdoor sports/vehicles (e.g. planes, bikes): the place you'd find them (airport, road, sky)
+- Toys/dolls (e.g. barbie, teddy bear): a playroom, bedroom, or toy shop
+- Indoor items: the room you'd find them in
 
-Fill the scene with things that are NOT {subject} (furniture, plants, objects, scenery) and hide 8-12 copies of {subject} among them.
+Fill the scene with objects, furniture, and scenery that BELONG in that location. Then hide 8-12 copies of {subject} (the LITERAL object, drawn the SAME WAY each time) scattered among the scene objects.
 
-IMPORTANT - How to hide the {subject}:
+HOW TO HIDE {subject}:
 - Some fully visible in the open
-- Some peeking out from behind other objects in the scene
-- Some partially hidden
+- Some peeking out from behind other objects
+- Some partially hidden behind furniture/scenery
 - Some small in the background
-- Scatter them ALL OVER the scene
+- Scatter them ALL OVER the scene — top, bottom, left, right, centre
 
-DO NOT INCLUDE:
-- Any numbers
-- Any text or words
-- Any people or children
-- Any animals or characters that are NOT {subject} - absolutely NONE
-
-ONLY {subject} hidden throughout the scene. Nothing else alive."""
+STRICT RULES:
+- Every hidden item MUST be {subject} — the same literal object repeated
+- Do NOT draw any animals, people, children, or living characters
+- Do NOT draw mascots, cartoon characters, or anthropomorphic versions
+- Do NOT include any numbers or text
+- The ONLY living/recognisable thing in the scene should be copies of {subject} (if {subject} is alive) or NOTHING alive (if {subject} is an object)
+- NOTHING alive in the scene except copies of {subject} if it is an animal"""
         
         if age_level in CONFIG["age_levels"]:
             base_prompt += "\n\n" + CONFIG["age_levels"][age_level]["overlay"]
