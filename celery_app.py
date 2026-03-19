@@ -3,7 +3,13 @@ Little Lines — Celery Configuration
 Async task queue for heavy AI generation workloads
 """
 import os
+import sys
 import ssl
+
+# Ensure source directory is in Python path (fixes Render worker imports)
+src_dir = os.path.dirname(os.path.abspath(__file__))
+if src_dir not in sys.path:
+    sys.path.insert(0, src_dir)
 
 redis_url = os.environ.get('REDIS_URL', 'redis://localhost:6379/0')
 
