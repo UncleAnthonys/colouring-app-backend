@@ -42,6 +42,12 @@ def generate_full_story_task(self, job_id: str, params: dict):
     try:
         update_job_status(job_id, "processing", progress="Starting story generation...")
         
+        # Force path fix inside task
+        import sys, os
+        task_dir = os.path.dirname(os.path.abspath(__file__))
+        if task_dir not in sys.path:
+            sys.path.insert(0, task_dir)
+        
         # Import here to avoid circular imports and ensure env vars are loaded
         from adventure_gemini import (
             generate_story_for_theme,
