@@ -785,19 +785,17 @@ Draw {subject} as a LITERAL OBJECT — the actual physical thing called "{subjec
 
 ⚠️ 100% BLACK AND WHITE - ONLY black lines on pure white background. NO grey, NO shading, NO gradients, NO filled areas, NO stippling, NO dots for texture.
 
-STYLE: Blob/kawaii style — super rounded and chunky. EXTREMELY THICK black outlines — thicker than a normal colouring book.
+STYLE: Blob/kawaii style — super rounded and chunky. EXTREMELY THICK black outlines — thicker than a normal colouring book. Everything drawn in cute kawaii style.
 
-SCENE: Almost entirely WHITE background. Draw ONLY 1 simple object in the centre of the page (e.g. a single box, a single cloud, a single flower — just ONE thing). The rest of the page is white space with 8-10 copies of {subject} scattered around.
+SCENE: Draw a simple kawaii version of where {subject} ACTUALLY belongs in real life. The scene should match {subject} — a kawaii workshop for tools, a kawaii kitchen for food, a kawaii garden for animals, etc. But draw it VERY simply — only 2-3 basic background objects (e.g. a workbench and a toolbox for spanners, a table and an oven for food). All drawn in the same chunky kawaii style with thick outlines. Plenty of white space.
 
-This should look like a nearly EMPTY page with {subject} repeated across it — NOT a room, NOT a workshop, NOT a detailed scene. Think: white page, one simple kawaii object in the middle, {subject} scattered everywhere around it in different sizes.
-
-Draw every copy of {subject} the SAME WAY — big, chunky, kawaii style. Some bigger, some smaller, but all the same simple design.
+Hide exactly 5 copies of {subject} in the scene. Draw every copy the SAME WAY — big, chunky, kawaii. Most should be easy to spot — a couple slightly behind background objects but still obvious.
 
 STRICT RULES:
-- Do NOT draw a room, furniture, shelves, or any detailed background
+- Scene MUST match where {subject} belongs — NOT a random scene
+- Maximum 2-3 background objects, all kawaii style
 - Do NOT draw any animals, people, children, or characters that are NOT {subject}
-- NOTHING alive in the scene except copies of {subject} if it is an animal
-- Maximum 1 background object — the rest is white space and copies of {subject}"""
+- NOTHING alive in the scene except copies of {subject} if it is an animal"""
 
         # ── AGE_3 find and seek ──
         if age_level == "age_3":
@@ -812,15 +810,13 @@ Draw {subject} as a LITERAL OBJECT — the actual physical thing called "{subjec
 
 STYLE: Blob-like but recognisable shapes. VERY THICK black outlines. Simple and chunky — NOT detailed or realistic.
 
-SCENE: Mostly WHITE background. Draw only 2-3 very simple objects related to where {subject} belongs (e.g. a table and a plant, or a tree and a rock). Keep MOST of the page as white space. NOT a room full of furniture. NOT a detailed scene.
+SCENE: Draw a simple version of where {subject} ACTUALLY belongs in real life. The scene should match {subject} — a simple workshop for tools, a simple kitchen for food, a simple garden for animals, etc. Draw 3-4 background objects that belong in that location, all in chunky simple style. Keep good white space between objects.
 
-Scatter 8-10 copies of {subject} across the page — some near the background objects, some floating in the white space. Draw every copy the SAME WAY — chunky, simple style.
-
-Some copies slightly behind the 2-3 background objects, but most clearly visible. All easy to spot for a young child.
+Hide 6-7 copies of {subject} in the scene. Draw every copy the SAME WAY — chunky, simple style. Most clearly visible, some peeking out from behind background objects. Easy to spot for a young child.
 
 STRICT RULES:
-- Maximum 2-3 background objects — the rest is white space and copies of {subject}
-- Do NOT draw a fully furnished room or detailed scene
+- Scene MUST match where {subject} belongs — NOT a random scene
+- Maximum 3-4 background objects
 - Do NOT draw any animals, people, children, or characters that are NOT {subject}
 - NOTHING alive in the scene except copies of {subject} if it is an animal"""
 
@@ -837,19 +833,15 @@ Draw {subject} as a LITERAL OBJECT — the actual physical thing called "{subjec
 
 STYLE: Simplified but real outlines (NOT blobs). THICK black outlines. Simple shapes with minimal internal detail.
 
-SCENE: Draw 4-5 simple background objects related to where {subject} belongs. Keep it clean with plenty of white space between objects. This is NOT a fully detailed room — just a few objects spread across the page with space between them.
-- Food/drink items: a table, a shelf, a jar — simple items, spread out
-- Animals: a tree, a rock, some grass patches — spread out
-- Toys: a box, a shelf, a rug — spread out
-- Other: a few simple items from where you'd find {subject}
+SCENE: Draw a simplified version of where {subject} ACTUALLY belongs in real life. The scene should match {subject} — a workshop for tools, a kitchen for food, a habitat for animals, a playroom for toys, etc. Draw 5-6 background objects that belong in that location. Keep it clean with white space — not overly cluttered.
 
-Hide 8-12 copies of {subject} among and around these objects. Draw every copy the SAME WAY each time.
+Hide 8-10 copies of {subject} among and around the scene objects. Draw every copy the SAME WAY each time.
 
-HOW TO HIDE: Some in plain sight, some peeking out from behind the background objects, some partially hidden. Mix of easy and slightly harder to spot.
+HOW TO HIDE: Some in plain sight, some peeking out from behind background objects, some partially hidden. Mix of easy and slightly harder to spot.
 
 STRICT RULES:
-- Maximum 4-5 background objects
-- Do NOT fill the entire page with detail — leave white space
+- Scene MUST match where {subject} belongs — NOT a random scene
+- Maximum 5-6 background objects
 - Do NOT draw any animals, people, children, or characters that are NOT {subject}
 - NOTHING alive in the scene except copies of {subject} if it is an animal"""
 
