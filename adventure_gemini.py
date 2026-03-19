@@ -1703,6 +1703,15 @@ Theme 2 must be set in an UNUSUAL or FANTASTICAL location (underwater, space, ti
 Theme 3 must involve a SPECIFIC JOB, EVENT, or MISSION (detective mystery, cooking contest, sports day, rescue mission, science fair, treasure hunt, talent show audition)
 No two themes can share the same type of setting, premise, or story structure.
 
+*** NUMBERS AND COUNTS — GET THEM RIGHT ***
+When mentioning a character's features in theme names, blurbs, or descriptions:
+- READ the character description carefully for EXACT counts (how many legs, arms, eyes, fingers, etc.)
+- NEVER guess or round numbers. If the description says 3 legs, it is 3 legs — not 4, not "several"
+- NEVER claim a feature can do something that requires a specific number unless you've checked the actual count
+- If you say "exactly the right number of fingers" — you better have counted them from the description
+- Getting a number wrong is WORSE than not mentioning the number at all
+- When in doubt, describe the feature WITHOUT a number: "Tim's sturdy legs" not "Tim's four sturdy legs"
+
 *** FINAL QUALITY CHECK BEFORE GENERATING ***
 For each theme, ask yourself:
 1. "Would a parent read this blurb and think 'wow, this is clever and unique to my child'?" — if the answer is "this could be about any character", throw it away and start again.
