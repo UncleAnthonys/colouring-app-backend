@@ -771,10 +771,93 @@ The child's task is to connect the dots to reveal the {subject}."""
         return base_prompt
 
     # Handle "find_the X" dynamic theme
-    print(f"DEBUG find_the: description='{description}'")
     if description.startswith("find_the "):
         subject = description.replace("find_the ", "")
-        print(f"DEBUG find_the: subject='{subject}'")
+
+        # ── UNDER_3 find and seek ──
+        if age_level == "under_3":
+            return f"""Create a children's colouring book page - a "find and seek" game.
+
+⚠️ CRITICAL: Do NOT write ANY text, words, titles, labels, or numbers ANYWHERE on the image. ZERO text of any kind.
+
+The OBJECT to find is: {subject}
+Draw {subject} as a LITERAL OBJECT — the actual physical thing called "{subject}".
+
+⚠️ 100% BLACK AND WHITE - ONLY black lines on pure white background. NO grey, NO shading, NO gradients, NO filled areas.
+
+STYLE: Blob/kawaii style — super rounded and chunky. EXTREMELY THICK black outlines — thicker than a normal colouring book.
+
+SCENE: A very simple scene with only 3-4 large background objects related to where {subject} belongs. Lots of white space. Think: one table, one shelf, one plant — NOT a busy room full of detail. Keep it minimal and easy to colour.
+
+Hide 8-10 copies of {subject} in the scene. Draw every copy of {subject} the SAME WAY — big, chunky, kawaii style matching the scene.
+
+HOW TO HIDE: Most should be clearly visible and easy to spot. A few peeking out from behind the simple background objects. Make them BIG — easy for tiny hands to point at.
+
+STRICT RULES:
+- Every hidden item MUST be {subject}
+- Do NOT draw any animals, people, children, or characters that are NOT {subject}
+- Do NOT draw mascots or anthropomorphic versions
+- NOTHING alive in the scene except copies of {subject} if it is an animal"""
+
+        # ── AGE_3 find and seek ──
+        if age_level == "age_3":
+            return f"""Create a children's colouring book page - a "find and seek" game.
+
+⚠️ CRITICAL: Do NOT write ANY text, words, titles, labels, or numbers ANYWHERE on the image. ZERO text of any kind.
+
+The OBJECT to find is: {subject}
+Draw {subject} as a LITERAL OBJECT — the actual physical thing called "{subject}".
+
+⚠️ 100% BLACK AND WHITE - ONLY black lines on pure white background. NO grey, NO shading, NO gradients, NO filled areas.
+
+STYLE: Blob-like but recognisable shapes. VERY THICK black outlines. Simple and chunky — NOT detailed or realistic.
+
+SCENE: A simple scene with 5-6 background objects related to where {subject} belongs. Keep it clean with good white space between objects. NOT a busy cluttered scene.
+- Food/drink items: a simple kitchen with a table, oven, shelf
+- Animals: a simple version of their habitat with a few trees/rocks
+- Toys: a simple playroom with a shelf and rug
+- Other: the simplest version of where you'd find them
+
+Hide 8-10 copies of {subject} in the scene. Draw every copy the SAME WAY — chunky, simple style matching the scene.
+
+HOW TO HIDE: Most clearly visible. Some peeking out from behind objects. A couple partially hidden. All easy to spot for a young child.
+
+STRICT RULES:
+- Every hidden item MUST be {subject}
+- Do NOT draw any animals, people, children, or characters that are NOT {subject}
+- Do NOT draw mascots or anthropomorphic versions
+- NOTHING alive in the scene except copies of {subject} if it is an animal"""
+
+        # ── AGE_4 find and seek ──
+        if age_level == "age_4":
+            return f"""Create a children's colouring book page - a "find and seek" game.
+
+⚠️ CRITICAL: Do NOT write ANY text, words, titles, labels, or numbers ANYWHERE on the image. ZERO text of any kind.
+
+The OBJECT to find is: {subject}
+Draw {subject} as a LITERAL OBJECT — the actual physical thing called "{subject}".
+
+⚠️ 100% BLACK AND WHITE - ONLY black lines on pure white background. NO grey, NO shading, NO gradients, NO filled areas.
+
+STYLE: Simplified but real outlines (NOT blobs). THICK black outlines. Simple shapes with minimal internal detail.
+
+SCENE: A moderate scene with 7-8 background objects related to where {subject} belongs. More detail than a toddler page but still clean and not overwhelming.
+- Food/drink items: a kitchen or dining room with furniture and a few items on shelves
+- Animals: their habitat with several plants, rocks, trees
+- Toys: a playroom or bedroom with shelves, a bed, some furniture
+- Other: a realistic but simplified version of where you'd find them
+
+Hide 8-12 copies of {subject} in the scene. Draw every copy the SAME WAY each time.
+
+HOW TO HIDE: Mix of visible and hidden. Some in plain sight, some peeking out, some partially behind objects, some smaller in the background.
+
+STRICT RULES:
+- Every hidden item MUST be {subject}
+- Do NOT draw any animals, people, children, or characters that are NOT {subject}
+- Do NOT draw mascots or anthropomorphic versions
+- NOTHING alive in the scene except copies of {subject} if it is an animal"""
+
+        # ── AGE_5+ find and seek (full detail) ──
         base_prompt = f"""Create a children's colouring book page - a "find and seek" game.
 
 ⚠️ CRITICAL: Do NOT write ANY text, words, titles, labels, or numbers ANYWHERE on the image. NO title like "Find and Seek". NO count like "Find 10". The image must contain ZERO text of any kind.
