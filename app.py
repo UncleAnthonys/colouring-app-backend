@@ -777,6 +777,8 @@ The child's task is to connect the dots to reveal the {subject}."""
         print(f"DEBUG find_the: subject='{subject}'")
         base_prompt = f"""Create a children's colouring book page - a "find and seek" game.
 
+⚠️ CRITICAL: Do NOT write ANY text, words, titles, labels, or numbers ANYWHERE on the image. NO title like "Find and Seek". NO count like "Find 10". The image must contain ZERO text of any kind.
+
 The OBJECT to find is: {subject}
 Draw {subject} as a LITERAL OBJECT — the actual physical thing called "{subject}". NOT an animal, NOT a character, NOT a mascot. The actual real-world object/thing.
 
