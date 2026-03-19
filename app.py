@@ -779,9 +779,11 @@ The child's task is to connect the dots to reveal the {subject}."""
 - NO shading, NO gradients, NO filled areas
 - Every area must be PURE WHITE inside black outlines
 
-SCENE: Create an appropriate NATURAL HABITAT for {subject}:
+SCENE: Create the most natural and appropriate setting for {subject}:
 - If animal: their natural environment (rabbit=field with grass and burrows, fish=underwater with coral, bird=forest with trees)
-- If object: where you would find it (football=pitch with goals, car=street with buildings)
+- If food/kitchen item: a kitchen or dining scene (ketchup=kitchen counter with plates, cake=bakery with shelves)
+- If outdoor object: where you would find it outdoors (football=pitch with goals, car=street with buildings)
+- If toy/indoor item: a playroom or bedroom scene
 
 IMPORTANT - Hide 8-12 copies of {subject} throughout the scene:
 - Some fully visible in the open
