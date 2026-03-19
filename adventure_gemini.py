@@ -2286,6 +2286,7 @@ Write the full story for {character_name} now. Return ONLY valid JSON.'''
     claude_response = claude_client.messages.create(
         model="claude-sonnet-4-6",
         max_tokens=4000,
+        system="You are the most imaginative children\'s story writer alive. You NEVER write boring, predictable stories. You HATE clichés. Every page should make someone say \'I\'ve never read that before!\' Think like Roald Dahl — weird, surprising, darkly funny, completely original. Every sentence must earn its place. If a line is filler, cut it. If a joke isn\'t funny, replace it. The story must be so good that parents enjoy reading it as much as kids enjoy hearing it.",
         messages=[{"role": "user", "content": prompt}]
     )
     
