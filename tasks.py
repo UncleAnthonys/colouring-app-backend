@@ -3,9 +3,16 @@ Little Lines — Celery Tasks
 Heavy AI generation work that runs on workers, not the API server.
 """
 import os
+import sys
 import json
 import asyncio
 import traceback
+
+# Ensure source directory is in Python path (fixes Render worker imports)
+src_dir = os.path.dirname(os.path.abspath(__file__))
+if src_dir not in sys.path:
+    sys.path.insert(0, src_dir)
+
 from celery_app import celery_app
 from job_endpoints import update_job_status
 
