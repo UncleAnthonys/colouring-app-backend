@@ -783,21 +783,21 @@ The child's task is to connect the dots to reveal the {subject}."""
 The OBJECT to find is: {subject}
 Draw {subject} as a LITERAL OBJECT — the actual physical thing called "{subject}".
 
-⚠️ 100% BLACK AND WHITE - ONLY black lines on pure white background. NO grey, NO shading, NO gradients, NO filled areas.
+⚠️ 100% BLACK AND WHITE - ONLY black lines on pure white background. NO grey, NO shading, NO gradients, NO filled areas, NO stippling, NO dots for texture.
 
 STYLE: Blob/kawaii style — super rounded and chunky. EXTREMELY THICK black outlines — thicker than a normal colouring book.
 
-SCENE: A very simple scene with only 3-4 large background objects related to where {subject} belongs. Lots of white space. Think: one table, one shelf, one plant — NOT a busy room full of detail. Keep it minimal and easy to colour.
+SCENE: Almost entirely WHITE background. Draw ONLY 1 simple object in the centre of the page (e.g. a single box, a single cloud, a single flower — just ONE thing). The rest of the page is white space with 8-10 copies of {subject} scattered around.
 
-Hide 8-10 copies of {subject} in the scene. Draw every copy of {subject} the SAME WAY — big, chunky, kawaii style matching the scene.
+This should look like a nearly EMPTY page with {subject} repeated across it — NOT a room, NOT a workshop, NOT a detailed scene. Think: white page, one simple kawaii object in the middle, {subject} scattered everywhere around it in different sizes.
 
-HOW TO HIDE: Most should be clearly visible and easy to spot. A few peeking out from behind the simple background objects. Make them BIG — easy for tiny hands to point at.
+Draw every copy of {subject} the SAME WAY — big, chunky, kawaii style. Some bigger, some smaller, but all the same simple design.
 
 STRICT RULES:
-- Every hidden item MUST be {subject}
+- Do NOT draw a room, furniture, shelves, or any detailed background
 - Do NOT draw any animals, people, children, or characters that are NOT {subject}
-- Do NOT draw mascots or anthropomorphic versions
-- NOTHING alive in the scene except copies of {subject} if it is an animal"""
+- NOTHING alive in the scene except copies of {subject} if it is an animal
+- Maximum 1 background object — the rest is white space and copies of {subject}"""
 
         # ── AGE_3 find and seek ──
         if age_level == "age_3":
@@ -808,24 +808,20 @@ STRICT RULES:
 The OBJECT to find is: {subject}
 Draw {subject} as a LITERAL OBJECT — the actual physical thing called "{subject}".
 
-⚠️ 100% BLACK AND WHITE - ONLY black lines on pure white background. NO grey, NO shading, NO gradients, NO filled areas.
+⚠️ 100% BLACK AND WHITE - ONLY black lines on pure white background. NO grey, NO shading, NO gradients, NO filled areas, NO stippling, NO dots for texture.
 
 STYLE: Blob-like but recognisable shapes. VERY THICK black outlines. Simple and chunky — NOT detailed or realistic.
 
-SCENE: A simple scene with 5-6 background objects related to where {subject} belongs. Keep it clean with good white space between objects. NOT a busy cluttered scene.
-- Food/drink items: a simple kitchen with a table, oven, shelf
-- Animals: a simple version of their habitat with a few trees/rocks
-- Toys: a simple playroom with a shelf and rug
-- Other: the simplest version of where you'd find them
+SCENE: Mostly WHITE background. Draw only 2-3 very simple objects related to where {subject} belongs (e.g. a table and a plant, or a tree and a rock). Keep MOST of the page as white space. NOT a room full of furniture. NOT a detailed scene.
 
-Hide 8-10 copies of {subject} in the scene. Draw every copy the SAME WAY — chunky, simple style matching the scene.
+Scatter 8-10 copies of {subject} across the page — some near the background objects, some floating in the white space. Draw every copy the SAME WAY — chunky, simple style.
 
-HOW TO HIDE: Most clearly visible. Some peeking out from behind objects. A couple partially hidden. All easy to spot for a young child.
+Some copies slightly behind the 2-3 background objects, but most clearly visible. All easy to spot for a young child.
 
 STRICT RULES:
-- Every hidden item MUST be {subject}
+- Maximum 2-3 background objects — the rest is white space and copies of {subject}
+- Do NOT draw a fully furnished room or detailed scene
 - Do NOT draw any animals, people, children, or characters that are NOT {subject}
-- Do NOT draw mascots or anthropomorphic versions
 - NOTHING alive in the scene except copies of {subject} if it is an animal"""
 
         # ── AGE_4 find and seek ──
@@ -837,24 +833,24 @@ STRICT RULES:
 The OBJECT to find is: {subject}
 Draw {subject} as a LITERAL OBJECT — the actual physical thing called "{subject}".
 
-⚠️ 100% BLACK AND WHITE - ONLY black lines on pure white background. NO grey, NO shading, NO gradients, NO filled areas.
+⚠️ 100% BLACK AND WHITE - ONLY black lines on pure white background. NO grey, NO shading, NO gradients, NO filled areas, NO stippling, NO dots for texture.
 
 STYLE: Simplified but real outlines (NOT blobs). THICK black outlines. Simple shapes with minimal internal detail.
 
-SCENE: A moderate scene with 7-8 background objects related to where {subject} belongs. More detail than a toddler page but still clean and not overwhelming.
-- Food/drink items: a kitchen or dining room with furniture and a few items on shelves
-- Animals: their habitat with several plants, rocks, trees
-- Toys: a playroom or bedroom with shelves, a bed, some furniture
-- Other: a realistic but simplified version of where you'd find them
+SCENE: Draw 4-5 simple background objects related to where {subject} belongs. Keep it clean with plenty of white space between objects. This is NOT a fully detailed room — just a few objects spread across the page with space between them.
+- Food/drink items: a table, a shelf, a jar — simple items, spread out
+- Animals: a tree, a rock, some grass patches — spread out
+- Toys: a box, a shelf, a rug — spread out
+- Other: a few simple items from where you'd find {subject}
 
-Hide 8-12 copies of {subject} in the scene. Draw every copy the SAME WAY each time.
+Hide 8-12 copies of {subject} among and around these objects. Draw every copy the SAME WAY each time.
 
-HOW TO HIDE: Mix of visible and hidden. Some in plain sight, some peeking out, some partially behind objects, some smaller in the background.
+HOW TO HIDE: Some in plain sight, some peeking out from behind the background objects, some partially hidden. Mix of easy and slightly harder to spot.
 
 STRICT RULES:
-- Every hidden item MUST be {subject}
+- Maximum 4-5 background objects
+- Do NOT fill the entire page with detail — leave white space
 - Do NOT draw any animals, people, children, or characters that are NOT {subject}
-- Do NOT draw mascots or anthropomorphic versions
 - NOTHING alive in the scene except copies of {subject} if it is an animal"""
 
         # ── AGE_5+ find and seek (full detail) ──
