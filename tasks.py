@@ -20,7 +20,7 @@ from job_endpoints import update_job_status
 print(f"[TASKS] Loaded from: {os.path.abspath(__file__)}")
 print(f"[TASKS] CWD: {os.getcwd()}")
 print(f"[TASKS] sys.path[0]: {sys.path[0]}")
-print(f"[TASKS] .py files in src_dir: {[f for f in os.listdir(src_dir) if f.endswith('.py')][:10]}")
+print(f"[TASKS] .py files in src_dir: {[f for f in os.listdir(src_dir) if 'character' in f.lower()]}")
 
 
 def run_async(coro):
