@@ -30,7 +30,14 @@ async def submit_job(request: Request):
     from celery_app import celery_app
     
     body = await request.body()
-    params = json.loads(body)
+    body_str = body.decode('utf-8', errors='replace')
+    print(f"[JOB-SUBMIT] Raw body first 500 chars: {body_str[:500]}")
+    try:
+        params = json.loads(body)
+    except json.JSONDecodeError as e:
+        print(f"[JOB-SUBMIT] JSON parse error: {e}")
+        print(f"[JOB-SUBMIT] Full body: {body_str[:2000]}")
+        raise HTTPException(status_code=400, detail=f"Invalid JSON: {str(e)}")
     
     job_type = params.pop("job_type", "full_story")
     
