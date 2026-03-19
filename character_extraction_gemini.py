@@ -635,6 +635,76 @@ Be EXTREMELY thorough - every detail matters for the 3D reveal!"""
         print(f"[DRAWING MODE] Analysis length: {len(detailed_analysis)} characters")
         print("="*80 + "\n")
         
+        # === LIMB COUNTING VERIFICATION ===
+        # Separate focused call to count body parts accurately
+        # The main extraction often normalises odd numbers (e.g. 3 legs → 2)
+        # This call forces left-to-right counting which is much more accurate
+        try:
+            print("[LIMB-COUNT] Running body part verification...")
+            count_response = model.generate_content([
+                """Count EVERY body part on this character one by one, LEFT TO RIGHT. Children draw creatures with ANY number of body parts — 3 legs is normal, 5 eyes is normal. Do NOT default to human numbers.
+
+LEGS (limbs touching the ground):
+- Leftmost leg: describe position
+- Next leg to the right: describe position
+- Keep going until no more legs.
+TOTAL LEGS: ?
+
+ARMS (limbs NOT touching the ground, on sides of body):
+- Leftmost arm: describe position
+- Next arm: describe position
+- Keep going until no more arms.
+TOTAL ARMS: ?
+
+EYES:
+- Leftmost eye: describe position
+- Next eye: describe position
+- Keep going until no more eyes.
+TOTAL EYES: ?
+
+ANTENNAE/HORNS on top of head:
+- Count each one left to right.
+TOTAL ANTENNAE: ?
+
+TEETH visible in mouth:
+- Count each one.
+TOTAL TEETH: ?
+
+Give FINAL COUNTS on separate lines:
+LEGS: [number]
+ARMS: [number]
+EYES: [number]
+ANTENNAE: [number]
+TEETH: [number]""",
+                {"mime_type": "image/png", "data": base64.b64decode(image_b64)}
+            ])
+            
+            count_text = count_response.text
+            print(f"[LIMB-COUNT] Raw response: {count_text[-200:]}")
+            
+            # Parse the final counts
+            import re
+            counts = {}
+            for line in count_text.split("\n"):
+                line = line.strip()
+                for part in ["LEGS", "ARMS", "EYES", "ANTENNAE", "TEETH"]:
+                    match = re.match(rf"^{part}:\s*(\d+)", line)
+                    if match:
+                        counts[part] = int(match.group(1))
+            
+            if counts:
+                count_summary = "\n\n⚠️ VERIFIED BODY PART COUNTS (override any counts above):\n"
+                for part, num in counts.items():
+                    count_summary += f"- {part}: exactly {num}\n"
+                count_summary += "These counts were verified by individual left-to-right counting and are CORRECT. Use these numbers, not any other counts in this description.\n"
+                detailed_analysis += count_summary
+                print(f"[LIMB-COUNT] ✅ Verified counts: {counts}")
+            else:
+                print("[LIMB-COUNT] ⚠️ Could not parse counts, using original extraction")
+                
+        except Exception as e:
+            print(f"[LIMB-COUNT] ⚠️ Counting failed, using original: {str(e)[:100]}")
+        
         return {
             "character": {
                 "name": character_name,
