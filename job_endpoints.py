@@ -36,6 +36,13 @@ class JobStatusResponse(BaseModel):
     updated_at: Optional[str] = None
 
 
+@job_router.post("/submit-debug")
+async def submit_job_debug(request: dict):
+    """Temporary debug endpoint to see raw request"""
+    print(f"[JOB-DEBUG] Raw request: {str(request)[:2000]}")
+    return {"debug": "logged", "keys": list(request.keys())}
+
+
 @job_router.post("/submit")
 async def submit_job(request: JobSubmitRequest):
     """
