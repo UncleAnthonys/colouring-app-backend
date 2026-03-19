@@ -223,6 +223,14 @@ Make it look like a real children's coloring book cover you'd see in a shop!
             "total_pages": len(pages),
         })
         
+        # Send push notification
+        try:
+            from push_notifications import send_push
+            user_id = params.get("user_id", "")
+            send_push(user_id, "Story Complete! 📖", f"{full_title} is ready to read!", {"type": "story", "job_id": job_id})
+        except Exception as e:
+            print(f"[WORKER] Push notification failed (non-fatal): {e}")
+        
         print(f"[WORKER] ✅ Story complete: {full_title}")
         
     except Exception as e:
@@ -280,6 +288,14 @@ def extract_and_reveal_task(self, job_id: str, params: dict):
             "reveal_image_b64": reveal_image_b64,
             "source_type": extraction_result.get("source_type", "drawing"),
         })
+        
+        # Send push notification
+        try:
+            from push_notifications import send_push
+            user_id = params.get("user_id", "")
+            send_push(user_id, "Character Revealed! ✨", f"Meet {character_name}!", {"type": "reveal", "job_id": job_id})
+        except Exception as e:
+            print(f"[WORKER] Push notification failed (non-fatal): {e}")
         
         print(f"[WORKER] ✅ Reveal complete: {character_name}")
         
