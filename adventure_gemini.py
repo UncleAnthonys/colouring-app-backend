@@ -1731,7 +1731,7 @@ For each theme, ask yourself:
 NOW generate 3 theme PITCHES for {character_name}. Each theme must use a DIFFERENT character feature. Include theme_id, theme_name, theme_description, theme_blurb, feature_used, want, obstacle, and twist. Do NOT generate full episodes — just the pitches. Return ONLY the JSON, no other text.'''
         
         claude_response = claude_client.messages.create(
-            model="claude-sonnet-4-5-20250929",
+            model="claude-sonnet-4-6-20250217",
             max_tokens=2000,
             system="You are the most imaginative children's story writer alive. You NEVER write boring, predictable stories. You HATE clichés. Every story idea you create should make someone say 'I've never heard that before!' Think like Roald Dahl — weird, surprising, darkly funny, completely original. If an idea feels safe or obvious, throw it away immediately. You would rather write something bizarre and memorable than something safe and forgettable.",
             messages=[{"role": "user", "content": prompt}]
@@ -2284,7 +2284,7 @@ Write the full story for {character_name} now. Return ONLY valid JSON.'''
     print(f"[STORY-GEN] custom_theme param: {custom_theme}")
 
     claude_response = claude_client.messages.create(
-        model="claude-sonnet-4-5-20250929",
+        model="claude-sonnet-4-6-20250217",
         max_tokens=4000,
         messages=[{"role": "user", "content": prompt}]
     )
