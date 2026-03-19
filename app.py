@@ -771,8 +771,10 @@ The child's task is to connect the dots to reveal the {subject}."""
         return base_prompt
 
     # Handle "find_the X" dynamic theme
+    print(f"DEBUG find_the: description='{description}'")
     if description.startswith("find_the "):
         subject = description.replace("find_the ", "")
+        print(f"DEBUG find_the: subject='{subject}'")
         base_prompt = f"""Create a children's colouring book page - a "find and seek" game.
 
 The OBJECT to find is: {subject}
