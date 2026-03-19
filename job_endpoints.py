@@ -6,7 +6,7 @@ import os
 import json
 import uuid
 from datetime import datetime
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Request
 from pydantic import BaseModel
 from typing import Optional, Dict, Any
 import redis as redis_lib
@@ -21,43 +21,22 @@ def get_redis():
     return redis_lib.Redis.from_url(redis_url)
 
 
-class JobSubmitRequest(BaseModel):
-    job_type: str  # "extract_and_reveal", "full_story", "colouring_page", "storybook_pdf"
-    params: Dict[str, Any]
-
-
-class JobStatusResponse(BaseModel):
-    job_id: str
-    status: str  # "queued", "processing", "complete", "failed"
-    progress: Optional[str] = None
-    result: Optional[Dict[str, Any]] = None
-    error: Optional[str] = None
-    created_at: Optional[str] = None
-    updated_at: Optional[str] = None
-
-
-@job_router.post("/submit-debug")
-async def submit_job_debug(request: dict):
-    """Temporary debug endpoint to see raw request"""
-    print(f"[JOB-DEBUG] Raw request: {str(request)[:2000]}")
-    return {"debug": "logged", "keys": list(request.keys())}
-
-
 @job_router.post("/submit")
-async def submit_job(request: JobSubmitRequest):
+async def submit_job(request: Request):
     """
     Submit a job to the queue. Returns job_id instantly.
-    FlutterFlow then polls /job/{job_id}/status for results.
+    Accepts raw JSON to avoid Pydantic validation issues with FlutterFlow.
     """
     from celery_app import celery_app
     
-    # Debug: log what was sent
-    print(f"[JOB-SUBMIT] job_type: {request.job_type}")
-    if request.params:
-        for k, v in request.params.items():
-            val_type = type(v).__name__
-            val_preview = str(v)[:100] if v is not None else "None"
-            print(f"[JOB-SUBMIT]   {k} ({val_type}): {val_preview}")
+    body = await request.json()
+    
+    job_type = body.get("job_type", "")
+    params = body.get("params", {})
+    
+    # Debug logging
+    print(f"[JOB-SUBMIT] job_type: {job_type}")
+    print(f"[JOB-SUBMIT] params keys: {list(params.keys()) if params else 'empty'}")
     
     job_id = str(uuid.uuid4())
     now = datetime.utcnow().isoformat()
@@ -67,14 +46,14 @@ async def submit_job(request: JobSubmitRequest):
     job_data = {
         "job_id": job_id,
         "status": "queued",
-        "job_type": request.job_type,
+        "job_type": job_type,
         "progress": None,
         "result": None,
         "error": None,
         "created_at": now,
         "updated_at": now,
     }
-    r.setex(f"job:{job_id}", 3600, json.dumps(job_data))  # Expires in 1 hour
+    r.setex(f"job:{job_id}", 3600, json.dumps(job_data))
     
     # Map job types to Celery tasks
     task_map = {
@@ -84,12 +63,12 @@ async def submit_job(request: JobSubmitRequest):
         "storybook_pdf": "tasks.generate_storybook_pdf_task",
     }
     
-    task_name = task_map.get(request.job_type)
+    task_name = task_map.get(job_type)
     if not task_name:
-        raise HTTPException(status_code=400, detail=f"Unknown job type: {request.job_type}")
+        raise HTTPException(status_code=400, detail=f"Unknown job type: {job_type}")
     
     # Send task to Celery queue
-    celery_app.send_task(task_name, args=[job_id, request.params])
+    celery_app.send_task(task_name, args=[job_id, params])
     
     return {"job_id": job_id, "status": "queued"}
 
@@ -106,7 +85,7 @@ async def get_job_status(job_id: str):
         raise HTTPException(status_code=404, detail="Job not found or expired")
     
     job_data = json.loads(job_raw)
-    return JobStatusResponse(**job_data)
+    return job_data
 
 
 def update_job_status(job_id: str, status: str, progress: str = None, result: dict = None, error: str = None):
