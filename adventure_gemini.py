@@ -1687,6 +1687,16 @@ The feature creates ONE specific problem (the obstacle). The twist must solve TH
 - BAD: obstacle="coat is too bulky to move fast" → twist="coat blocks the dog" (these are two different problems)
 - GOOD: obstacle="coat is too bulky to stack snow blocks" → twist="the puffy coat packs snow tighter when they hug the blocks, making super-strong walls"
 
+*** BANNED STORY PATTERNS — THESE WILL BE REJECTED ***
+- "Runaway" anything (runaway cake, runaway pancake, runaway cart, runaway balloon, runaway pet, runaway anything)
+- Hair getting caught/tangled in things
+- Carrying a tray/plate and spilling it
+- Chasing something that rolled/bounced/flew away
+- A bake sale gone wrong
+- Paint/ink/colour splashing everywhere
+- Something stuck in a tree
+If your theme matches ANY of these patterns, DELETE IT and write something original.
+
 *** THE 3 THEMES MUST BE IN 3 DIFFERENT WORLDS ***
 Theme 1 must be set in an EVERYDAY location (school, park, shops, home, neighbourhood)
 Theme 2 must be set in an UNUSUAL or FANTASTICAL location (underwater, space, tiny world, jungle, castle, inside a machine, upside-down town, cloud kingdom)
@@ -1704,6 +1714,7 @@ NOW generate 3 theme PITCHES for {character_name}. Each theme must use a DIFFERE
         claude_response = claude_client.messages.create(
             model="claude-sonnet-4-5-20250929",
             max_tokens=2000,
+            system="You are the most imaginative children's story writer alive. You NEVER write boring, predictable stories. You HATE clichés. Every story idea you create should make someone say 'I've never heard that before!' Think like Roald Dahl — weird, surprising, darkly funny, completely original. If an idea feels safe or obvious, throw it away immediately. You would rather write something bizarre and memorable than something safe and forgettable.",
             messages=[{"role": "user", "content": prompt}]
         )
         
