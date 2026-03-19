@@ -44,6 +44,14 @@ async def submit_job(request: JobSubmitRequest):
     """
     from celery_app import celery_app
     
+    # Debug: log what was sent
+    print(f"[JOB-SUBMIT] job_type: {request.job_type}")
+    if request.params:
+        for k, v in request.params.items():
+            val_type = type(v).__name__
+            val_preview = str(v)[:100] if v is not None else "None"
+            print(f"[JOB-SUBMIT]   {k} ({val_type}): {val_preview}")
+    
     job_id = str(uuid.uuid4())
     now = datetime.utcnow().isoformat()
     
