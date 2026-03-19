@@ -779,26 +779,28 @@ The child's task is to connect the dots to reveal the {subject}."""
 - NO shading, NO gradients, NO filled areas
 - Every area must be PURE WHITE inside black outlines
 
-SCENE: Create the most natural and appropriate setting for {subject}:
-- If animal: their natural environment (rabbit=field with grass and burrows, fish=underwater with coral, bird=forest with trees)
-- If food/kitchen item: a kitchen or dining scene (ketchup=kitchen counter with plates, cake=bakery with shelves)
-- If outdoor object: where you would find it outdoors (football=pitch with goals, car=street with buildings)
-- If toy/indoor item: a playroom or bedroom scene
+SCENE: {subject} is the ONLY thing to find in this image. Create a setting where {subject} naturally belongs:
+- Food/drink items: kitchen, dining table, restaurant, picnic
+- Animals: their natural habitat
+- Outdoor sports/vehicles: the place you'd use them
+- Indoor items/toys: the room you'd find them in
 
-IMPORTANT - Hide 8-12 copies of {subject} throughout the scene:
+Fill the scene with things that are NOT {subject} (furniture, plants, objects, scenery) and hide 8-12 copies of {subject} among them.
+
+IMPORTANT - How to hide the {subject}:
 - Some fully visible in the open
-- Some peeking out from behind things (bushes, rocks, trees)
+- Some peeking out from behind other objects in the scene
 - Some partially hidden
 - Some small in the background
 - Scatter them ALL OVER the scene
 
 DO NOT INCLUDE:
 - Any numbers
-- Any text or words  
+- Any text or words
 - Any people or children
-- Any other animals (ONLY {subject})
+- Any animals or characters that are NOT {subject} - absolutely NONE
 
-Just the habitat scene with multiple {subject} hidden throughout to find."""
+ONLY {subject} hidden throughout the scene. Nothing else alive."""
         
         if age_level in CONFIG["age_levels"]:
             base_prompt += "\n\n" + CONFIG["age_levels"][age_level]["overlay"]
