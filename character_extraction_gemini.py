@@ -693,10 +693,13 @@ TEETH: [number]""",
                         counts[part] = int(match.group(1))
             
             if counts:
-                count_summary = "\n\n⚠️ VERIFIED BODY PART COUNTS (override any counts above):\n"
+                # Build a strong override that explicitly calls out wrong numbers
+                count_summary = "\n\n⚠️🚨 CRITICAL OVERRIDE — VERIFIED BODY PART COUNTS 🚨⚠️\n"
+                count_summary += "THE FOLLOWING COUNTS ARE THE ONLY CORRECT ONES.\n"
+                count_summary += "ANY OTHER COUNTS MENTIONED EARLIER IN THIS DESCRIPTION ARE WRONG AND MUST BE IGNORED:\n"
                 for part, num in counts.items():
                     count_summary += f"- {part}: exactly {num}\n"
-                count_summary += "These counts were verified by individual left-to-right counting and are CORRECT. Use these numbers, not any other counts in this description.\n"
+                count_summary += "DRAW THESE EXACT NUMBERS. NO MORE. NO LESS.\n"
                 detailed_analysis += count_summary
                 print(f"[LIMB-COUNT] ✅ Verified counts: {counts}")
             else:
