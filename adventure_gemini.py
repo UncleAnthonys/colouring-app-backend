@@ -241,10 +241,10 @@ def create_front_cover(image_b64: str, full_title: str, character_name: str) -> 
     img_data = base64.b64decode(image_b64)
     cover_img = Image.open(io.BytesIO(img_data)).convert('RGB')
     
-    # Remove any border line Gemini may have added — paint outer 12px white
+    # Remove any border line Gemini may have added — paint outer 20px white
     img_w, img_h = cover_img.size
     border_kill = ImageDraw.Draw(cover_img)
-    strip = 12
+    strip = 20
     border_kill.rectangle([0, 0, img_w, strip], fill='white')           # top
     border_kill.rectangle([0, img_h - strip, img_w, img_h], fill='white')  # bottom
     border_kill.rectangle([0, 0, strip, img_h], fill='white')           # left
