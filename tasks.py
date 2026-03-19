@@ -60,24 +60,32 @@ def generate_full_story_task(self, job_id: str, params: dict):
         from firebase_utils import upload_to_firebase
         from adventure_config import ADVENTURE_THEMES
         
-        # Extract params
-        character_name = params.get("character_name", "Character")
-        character_description = params.get("character_description", "")
-        character_key_feature = params.get("character_key_feature", "")
-        theme_name = params.get("theme_name", "")
-        theme_description = params.get("theme_description", "")
-        theme_blurb = params.get("theme_blurb", "")
-        feature_used = params.get("feature_used", "")
+        # Extract params — names match FlutterFlow generateFullStory API call
+        character_json = params.get("character", {})
+        if isinstance(character_json, str):
+            try:
+                import json as json_mod
+                character_json = json_mod.loads(character_json)
+            except:
+                character_json = {}
+        
+        character_name = character_json.get("name", "Character")
+        character_description = params.get("characterDescription", character_json.get("description", ""))
+        character_key_feature = character_json.get("key_feature", params.get("featureUsed", ""))
+        theme_name = params.get("themeName", "")
+        theme_description = params.get("themeDescription", "")
+        theme_blurb = params.get("themeBlurb", "")
+        feature_used = params.get("featureUsed", "")
         want = params.get("want", "")
         obstacle = params.get("obstacle", "")
         twist = params.get("twist", "")
-        age_level = params.get("age_level", "age_5")
-        writing_style = params.get("writing_style")
-        life_lesson = params.get("life_lesson")
-        custom_theme = params.get("custom_theme")
-        reveal_image_b64 = params.get("reveal_image_b64")
-        reveal_image_url = params.get("reveal_image_url")
-        source_type = params.get("source_type", "drawing")
+        age_level = params.get("ageLevel", "age_5")
+        writing_style = params.get("writingStyle")
+        life_lesson = params.get("lifeLesson")
+        custom_theme = params.get("customTheme")
+        reveal_image_b64 = params.get("revealImageB64")
+        reveal_image_url = params.get("revealImageUrl")
+        source_type = params.get("sourceType", "drawing")
         
         # Download reveal from URL if b64 not provided (keeps Redis payload small)
         if reveal_image_url and not reveal_image_b64:
@@ -90,10 +98,10 @@ def generate_full_story_task(self, job_id: str, params: dict):
                     print(f"[WORKER] Downloaded reveal from URL, b64 length: {len(reveal_image_b64)}")
             except Exception as e:
                 print(f"[WORKER] Failed to download reveal URL: {e}")
-        second_character_name = params.get("second_character_name")
-        second_character_description = params.get("second_character_description")
-        second_character_image_b64 = params.get("second_character_image_b64")
-        second_character_image_url = params.get("second_character_image_url")
+        second_character_name = params.get("secondCharacterName")
+        second_character_description = params.get("secondCharacterDescription")
+        second_character_image_b64 = params.get("secondCharacterImageB64")
+        second_character_image_url = params.get("secondCharacterImageUrl")
         
         # Download second character from URL if b64 not provided
         if second_character_image_url and not second_character_image_b64:
