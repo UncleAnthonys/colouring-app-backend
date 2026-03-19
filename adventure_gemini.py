@@ -679,6 +679,16 @@ Use the reference image for SHAPE AND FORM ONLY — completely ignore all colors
 - Distinctive features (number of eyes, horns, fur texture, etc.)
 - Clothing style and accessories (but NOT their colors)
 
+⚠️ CRITICAL — COUNT AND MATCH EVERY FEATURE FROM THE REFERENCE IMAGE EXACTLY:
+- Count the EXACT number of LEGS in the reference. If there are 3 legs, draw 3 legs. Not 2. Not 4. Exactly 3.
+- Count the EXACT number of ARMS in the reference. Match it precisely.
+- Count the EXACT number of EYES in the reference. Match it precisely.
+- Count the EXACT number of ANTENNAE in the reference. Match it precisely.
+- Count the EXACT number of FINGERS on each hand. Match it precisely on EVERY page.
+- Count ANY other distinctive features (horns, teeth, spots, tails). Match the count EVERY time.
+- These counts must be IDENTICAL on EVERY page of the storybook. A character with 3 legs on page 1 MUST have 3 legs on page 2, 3, 4, and 5.
+- Getting a feature count wrong RUINS the storybook for the child who drew this character. It matters.
+
 '''
         
         # Add source-type specific guidance
