@@ -2039,7 +2039,14 @@ STORY PLAN:
 - OBSTACLE: {obstacle}
 - TWIST: {twist}
 
-⚠️ ONE PROBLEM RULE: This story has ONE central problem, not two. The OBSTACLE is the problem. The TWIST is the solution to THAT SAME problem. Episodes 2-3 must show the OBSTACLE getting worse. Episodes 4-5 must show the TWIST solving THAT SAME OBSTACLE. Do not introduce a new unrelated problem partway through. Every episode must be about the same struggle. If the obstacle is about the coat knocking things down, the resolution must be about the coat NOT knocking things down or the knocking becoming useful — not about solving a completely different issue.
+⚠️ ONE PROBLEM RULE: This story has ONE central problem, not two. The OBSTACLE is the problem. The TWIST is the solution to THAT SAME problem. Episodes 2-3 must show the OBSTACLE getting worse. Episodes 4-5 must show the TWIST solving THAT SAME OBSTACLE. Do not introduce a new unrelated problem partway through. Every episode must be about the same struggle.
+
+⚠️ THE TWIST IS MANDATORY — DO NOT INVENT YOUR OWN RESOLUTION:
+The TWIST written above is the EXACT resolution for this story. You MUST use it. Do NOT replace it with your own idea.
+- If the twist says "uses antennae to press the last 2 buttons" → the character MUST use their antennae, not their teeth, not their nose, not something else you made up
+- If the twist says "the coat becomes a parachute" → the coat MUST become a parachute
+- The twist was carefully designed to use a SPECIFIC character feature in a SURPRISING way. Your job is to write it brilliantly, not to replace it with something generic.
+- Episode 4-5 must execute the EXACT twist described above. Read it again before writing episodes 4 and 5.
 """
         else:
             theme_block = f"""
