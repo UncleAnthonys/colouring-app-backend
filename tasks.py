@@ -76,10 +76,36 @@ def generate_full_story_task(self, job_id: str, params: dict):
         life_lesson = params.get("life_lesson")
         custom_theme = params.get("custom_theme")
         reveal_image_b64 = params.get("reveal_image_b64")
+        reveal_image_url = params.get("reveal_image_url")
         source_type = params.get("source_type", "drawing")
+        
+        # Download reveal from URL if b64 not provided (keeps Redis payload small)
+        if reveal_image_url and not reveal_image_b64:
+            try:
+                import httpx
+                resp = httpx.get(reveal_image_url, timeout=30)
+                if resp.status_code == 200:
+                    import base64 as b64mod
+                    reveal_image_b64 = b64mod.b64encode(resp.content).decode('utf-8')
+                    print(f"[WORKER] Downloaded reveal from URL, b64 length: {len(reveal_image_b64)}")
+            except Exception as e:
+                print(f"[WORKER] Failed to download reveal URL: {e}")
         second_character_name = params.get("second_character_name")
         second_character_description = params.get("second_character_description")
         second_character_image_b64 = params.get("second_character_image_b64")
+        second_character_image_url = params.get("second_character_image_url")
+        
+        # Download second character from URL if b64 not provided
+        if second_character_image_url and not second_character_image_b64:
+            try:
+                import httpx
+                resp = httpx.get(second_character_image_url, timeout=30)
+                if resp.status_code == 200:
+                    import base64 as b64mod
+                    second_character_image_b64 = b64mod.b64encode(resp.content).decode('utf-8')
+                    print(f"[WORKER] Downloaded second character from URL")
+            except Exception as e:
+                print(f"[WORKER] Failed to download second character URL: {e}")
         
         # Get age rules
         age_rules = get_age_rules(age_level)
