@@ -779,8 +779,9 @@ The child's task is to connect the dots to reveal the {subject}."""
 - NO shading, NO gradients, NO filled areas
 - Every area must be PURE WHITE inside black outlines
 
-SCENE: {subject} is the ONLY thing to find in this image. Create a setting where {subject} naturally belongs:
-- Food/drink items: kitchen, dining table, restaurant, picnic
+SCENE: Think about where {subject} ACTUALLY lives or is used in real life. Draw THAT specific location. Do NOT default to a generic outdoor park scene.
+- Food/drink items: MUST be a kitchen, dining table, or restaurant - NOT outdoors
+- Musical instruments: MUST be a music room, stage, or concert hall - NOT outdoors
 - Animals: their natural habitat
 - Outdoor sports/vehicles: the place you'd use them
 - Indoor items/toys: the room you'd find them in
