@@ -1717,7 +1717,7 @@ async def send_pdf_email(request: EmailPDFRequest):
                             max_dim = 1000
                             if w > max_dim or h > max_dim:
                                 ratio = min(max_dim/w, max_dim/h)
-                                pil_img = pil_img.resize((int(w*ratio), int(h*ratio)), PILImage.LANCZOS)
+                                pil_img = pil_img.resize((int(w*ratio), int(h*ratio)), Image.LANCZOS)
                             # Save compressed
                             img_buf = _io.BytesIO()
                             pil_img.save(img_buf, format="JPEG", quality=60, optimize=True)
