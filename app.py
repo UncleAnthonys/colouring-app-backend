@@ -1689,18 +1689,58 @@ async def send_pdf_email(request: EmailPDFRequest):
         msg["From"] = "Little Lines <noreply@littlefortstudios.com>"
         msg["To"] = request.email
         
-        # Check size - attach if under 9MB, download link if over
-        if len(pdf_bytes) < 9_000_000:
-            # Small PDF (colouring pages) - attach directly
+        # Compress PDF if over 9MB
+        if len(pdf_bytes) > 9_000_000:
+            try:
+                from pypdf import PdfReader, PdfWriter
+                import io as _io
+                
+                reader = PdfReader(_io.BytesIO(pdf_bytes))
+                writer = PdfWriter()
+                for page in reader.pages:
+                    writer.add_page(page)
+                for page in writer.pages:
+                    for img in page.images:
+                        try:
+                            pil_img = img.image
+                            w, h = pil_img.size
+                            if w > 1200 or h > 1200:
+                                ratio = min(1200/w, 1200/h)
+                                pil_img = pil_img.resize((int(w*ratio), int(h*ratio)), PILImage.LANCZOS)
+                            buf = _io.BytesIO()
+                            pil_img.save(buf, format="JPEG", quality=75, optimize=True)
+                            img.replace(buf.getvalue())
+                        except Exception:
+                            pass
+                compressed_buf = _io.BytesIO()
+                writer.write(compressed_buf)
+                pdf_bytes = compressed_buf.getvalue()
+                print(f"Compressed PDF to {len(pdf_bytes)} bytes")
+            except Exception as e:
+                print(f"PDF compression failed, using original: {e}")
+        
+        # Determine email content
+        is_storybook = len(pdf_bytes) > 5_000_000
+        if is_storybook:
             body = MIMEText(
                 f"Hi there!\n\n"
-                f"Here's your Little Lines colouring page: {request.theme_name}\n\n"
+                f"Your Little Lines storybook is attached: {request.theme_name}\n\n"
+                f"Print it out and enjoy reading together!\n\n"
+                f"From the Little Lines team",
+                "plain"
+            )
+        else:
+            body = MIMEText(
+                f"Hi there!\n\n"
+                f"Here\'s your Little Lines colouring page: {request.theme_name}\n\n"
                 f"Print it out and enjoy colouring!\n\n"
                 f"From the Little Lines team",
                 "plain"
             )
-            msg.attach(body)
-            
+        msg.attach(body)
+        
+        # Attach PDF or send download link
+        if len(pdf_bytes) < 9_000_000:
             pdf_attachment = MIMEBase("application", "pdf")
             pdf_attachment.set_payload(pdf_bytes)
             encoders.encode_base64(pdf_attachment)
@@ -1708,13 +1748,16 @@ async def send_pdf_email(request: EmailPDFRequest):
             pdf_attachment.add_header("Content-Disposition", f"attachment; filename={filename}")
             msg.attach(pdf_attachment)
         else:
-            # Large PDF (storybooks) - send branded download link
+            msg = MIMEMultipart()
+            msg["Subject"] = f"Your Little Lines Storybook - {request.theme_name}"
+            msg["From"] = "Little Lines <noreply@littlefortstudios.com>"
+            msg["To"] = request.email
             html_body = f"""<html>
 <body style="font-family: Arial, sans-serif; background-color: #f0f8ff; padding: 30px;">
   <div style="max-width: 500px; margin: 0 auto; background: white; border-radius: 16px; padding: 40px; text-align: center;">
     <h1 style="color: #4a3f8a; font-size: 24px; margin-bottom: 8px;">Your Storybook is Ready!</h1>
     <p style="color: #666; font-size: 16px; margin-bottom: 24px;">{request.theme_name}</p>
-    <a href="{request.pdf_url}" style="display: inline-block; background: linear-gradient(135deg, #ff6b9d, #ff8a80); color: white; text-decoration: none; padding: 16px 40px; border-radius: 30px; font-size: 18px; font-weight: bold;">Download Your Storybook</a>
+    <a href="{request.pdf_url}&response-content-disposition=attachment" style="display: inline-block; background: linear-gradient(135deg, #ff6b9d, #ff8a80); color: white; text-decoration: none; padding: 16px 40px; border-radius: 30px; font-size: 18px; font-weight: bold;">Download Your Storybook</a>
     <p style="color: #999; font-size: 13px; margin-top: 24px;">This link downloads your PDF directly from the Little Lines app. It was created just for you.</p>
     <p style="color: #999; font-size: 13px; margin-top: 16px;">From the Little Lines team</p>
   </div>
