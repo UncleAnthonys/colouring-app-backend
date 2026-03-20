@@ -6,8 +6,7 @@ import os
 import json
 import uuid
 from datetime import datetime
-from fastapi import APIRouter, HTTPException, Request
-from typing import Optional
+from fastapi import APIRouter, HTTPException
 import redis as redis_lib
 
 job_router = APIRouter(prefix="/job", tags=["jobs"])
@@ -21,25 +20,15 @@ def get_redis():
 
 
 @job_router.post("/submit")
-async def submit_job(request: Request):
+async def submit_job(request_body: dict):
     """
     Submit a job to the queue. Returns job_id instantly.
-    Accepts the EXACT same body format as the original endpoints.
-    Just add "job_type" field to tell us which task to run.
+    Accepts the EXACT same format as generateFullStory — flat dict, same as FlutterFlow sends.
     """
     from celery_app import celery_app
     
-    body = await request.body()
-    body_str = body.decode('utf-8', errors='replace')
-    print(f"[JOB-SUBMIT] Raw body first 500 chars: {body_str[:500]}")
-    try:
-        params = json.loads(body)
-    except json.JSONDecodeError as e:
-        print(f"[JOB-SUBMIT] JSON parse error: {e}")
-        print(f"[JOB-SUBMIT] Full body: {body_str[:2000]}")
-        raise HTTPException(status_code=400, detail=f"Invalid JSON: {str(e)}")
-    
-    job_type = params.pop("job_type", "full_story")
+    job_type = request_body.pop("job_type", "full_story")
+    params = request_body  # Everything else is params
     
     # Debug logging
     print(f"[JOB-SUBMIT] job_type: {job_type}")
@@ -74,8 +63,11 @@ async def submit_job(request: Request):
     if not task_name:
         raise HTTPException(status_code=400, detail=f"Unknown job type: {job_type}")
     
-    # Send task to Celery queue — params is the SAME body the original endpoint gets
-    celery_app.send_task(task_name, args=[job_id, params])
+    # Convert params to JSON-safe format for Celery
+    # Some values from FlutterFlow might be objects that need serializing
+    safe_params = json.loads(json.dumps(params, default=str))
+    
+    celery_app.send_task(task_name, args=[job_id, safe_params])
     
     return {"job_id": job_id, "status": "queued"}
 
