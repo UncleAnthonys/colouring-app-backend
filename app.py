@@ -1704,7 +1704,7 @@ async def send_pdf_email(request: EmailPDFRequest):
                     
                     # Use pdftoppm to convert pages to JPEG images
                     subprocess.run([
-                        "pdftoppm", "-jpeg", "-r", "150", "-jpegopt", "quality=60",
+                        "pdftoppm", "-jpeg", "-r", "200", "-jpegopt", "quality=80",
                         orig_path, f"{tmp_dir}/page"
                     ], check=True, timeout=60)
                     
