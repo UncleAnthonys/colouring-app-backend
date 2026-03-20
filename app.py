@@ -1654,3 +1654,79 @@ async def generate_from_text_endpoint(request: TextGenerateRequest):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
+
+# ============================================
+# EMAIL PDF ENDPOINT
+# ============================================
+
+class EmailPDFRequest(BaseModel):
+    pdf_url: str
+    email: str
+    theme_name: str = "your colouring page"
+
+@app.post("/send-pdf-email")
+async def send_pdf_email(request: EmailPDFRequest):
+    """Send a colouring page PDF to the user's email"""
+    import boto3
+    from botocore.exceptions import ClientError
+    from email.mime.multipart import MIMEMultipart
+    from email.mime.base import MIMEBase
+    from email.mime.text import MIMEText
+    from email import encoders
+    
+    try:
+        # Download the PDF from Firebase URL
+        async with httpx.AsyncClient(timeout=30.0) as client:
+            resp = await client.get(request.pdf_url)
+            if resp.status_code != 200:
+                raise HTTPException(status_code=400, detail="Could not download PDF")
+            pdf_bytes = resp.content
+        
+        # Build the email
+        msg = MIMEMultipart()
+        msg["Subject"] = f"Your Little Lines Colouring Page - {request.theme_name}"
+        msg["From"] = "Little Lines <noreply@littlefortstudios.com>"
+        msg["To"] = request.email
+        
+        # Email body
+        body = MIMEText(
+            f"Hi there!\n\n"
+            f"Here's your Little Lines colouring page: {request.theme_name}\n\n"
+            f"Print it out and enjoy colouring!\n\n"
+            f"From the Little Lines team",
+            "plain"
+        )
+        msg.attach(body)
+        
+        # Attach PDF
+        pdf_attachment = MIMEBase("application", "pdf")
+        pdf_attachment.set_payload(pdf_bytes)
+        encoders.encode_base64(pdf_attachment)
+        filename = f"Little_Lines_{request.theme_name.replace(' ', '_')}.pdf"
+        pdf_attachment.add_header("Content-Disposition", f"attachment; filename={filename}")
+        msg.attach(pdf_attachment)
+        
+        # Send via SES
+        ses_client = boto3.client(
+            "ses",
+            region_name=os.getenv("AWS_REGION", "eu-north-1"),
+            aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
+            aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
+        )
+        
+        ses_client.send_raw_email(
+            Source="Little Lines <noreply@littlefortstudios.com>",
+            Destinations=[request.email],
+            RawMessage={"Data": msg.as_string()},
+        )
+        
+        return {"success": True, "message": "Email sent"}
+    
+    except ClientError as e:
+        error_msg = e.response["Error"]["Message"]
+        print(f"SES error: {error_msg}")
+        raise HTTPException(status_code=500, detail=f"Email failed: {error_msg}")
+    except Exception as e:
+        print(f"Email error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
