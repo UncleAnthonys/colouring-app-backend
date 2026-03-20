@@ -1689,53 +1689,54 @@ async def send_pdf_email(request: EmailPDFRequest):
         msg["From"] = "Little Lines <noreply@littlefortstudios.com>"
         msg["To"] = request.email
         
-        # Compress PDF if over 9MB using page re-rendering
+        # Compress PDF if over 9MB - rebuild from rendered pages
         if len(pdf_bytes) > 9_000_000:
             try:
                 import subprocess
                 import tempfile
-                import os as _os
-                from pypdf import PdfReader, PdfWriter
                 import io as _io
                 
-                # Convert each page to image, compress, rebuild PDF
-                reader = PdfReader(_io.BytesIO(pdf_bytes))
-                from reportlab.lib.pagesizes import A4
-                from reportlab.pdfgen import canvas as rl_canvas
-                
-                output_buf = _io.BytesIO()
-                c = rl_canvas.Canvas(output_buf, pagesize=A4)
-                a4_w, a4_h = A4
-                
-                for page_num, page in enumerate(reader.pages):
-                    # Extract all images from this page
-                    for img in page.images:
-                        try:
-                            pil_img = img.image.convert("RGB")
-                            w, h = pil_img.size
-                            # Resize to max 1000px on longest side
-                            max_dim = 1000
-                            if w > max_dim or h > max_dim:
-                                ratio = min(max_dim/w, max_dim/h)
-                                pil_img = pil_img.resize((int(w*ratio), int(h*ratio)), Image.LANCZOS)
-                            # Save compressed
-                            img_buf = _io.BytesIO()
-                            pil_img.save(img_buf, format="JPEG", quality=60, optimize=True)
-                            img.replace(img_buf.getvalue())
-                        except Exception as img_err:
-                            print(f"Could not compress image on page {page_num}: {img_err}")
-                
-                writer = PdfWriter()
-                for page in reader.pages:
-                    writer.add_page(page)
-                
-                compressed_buf = _io.BytesIO()
-                writer.write(compressed_buf)
-                new_bytes = compressed_buf.getvalue()
-                
-                if len(new_bytes) < len(pdf_bytes):
-                    pdf_bytes = new_bytes
-                print(f"Compressed PDF to {len(pdf_bytes)} bytes")
+                with tempfile.TemporaryDirectory() as tmp_dir:
+                    # Write original PDF to temp file
+                    orig_path = f"{tmp_dir}/original.pdf"
+                    with open(orig_path, "wb") as f:
+                        f.write(pdf_bytes)
+                    
+                    # Use pdftoppm to convert pages to JPEG images
+                    subprocess.run([
+                        "pdftoppm", "-jpeg", "-r", "150", "-jpegopt", "quality=60",
+                        orig_path, f"{tmp_dir}/page"
+                    ], check=True, timeout=60)
+                    
+                    # Collect page images in order
+                    import glob
+                    page_files = sorted(glob.glob(f"{tmp_dir}/page-*.jpg"))
+                    
+                    if page_files:
+                        # Rebuild PDF from compressed images using reportlab
+                        from reportlab.lib.units import mm
+                        from reportlab.pdfgen import canvas as rl_canvas
+                        
+                        output_buf = _io.BytesIO()
+                        first_img = Image.open(page_files[0])
+                        img_w, img_h = first_img.size
+                        # Use image dimensions as page size (in points, 1px at 150dpi)
+                        page_w = img_w * 72.0 / 150.0
+                        page_h = img_h * 72.0 / 150.0
+                        
+                        c = rl_canvas.Canvas(output_buf)
+                        for pf in page_files:
+                            c.setPageSize((page_w, page_h))
+                            c.drawImage(pf, 0, 0, width=page_w, height=page_h)
+                            c.showPage()
+                        c.save()
+                        
+                        new_bytes = output_buf.getvalue()
+                        if len(new_bytes) < len(pdf_bytes):
+                            pdf_bytes = new_bytes
+                        print(f"Compressed PDF to {len(pdf_bytes)} bytes")
+                    else:
+                        print("No page images generated, using original")
             except Exception as e:
                 print(f"PDF compression failed, using original: {e}")
         
