@@ -83,6 +83,14 @@ def generate_full_story_task(self, job_id: str, params: dict):
         writing_style = params.get("writing_style")
         life_lesson = params.get("life_lesson")
         custom_theme = params.get("custom_theme")
+        
+        # FlutterFlow sends literal "null" strings instead of actual null
+        if writing_style in [None, "null", "", "None"]:
+            writing_style = None
+        if life_lesson in [None, "null", "", "None"]:
+            life_lesson = None
+        if custom_theme in [None, "null", "", "None"]:
+            custom_theme = None
         reveal_image_b64 = params.get("reveal_image_b64")
         reveal_image_url = params.get("reveal_image_url")
         source_type = params.get("source_type", "drawing")
