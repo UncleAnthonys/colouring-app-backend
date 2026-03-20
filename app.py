@@ -1689,32 +1689,52 @@ async def send_pdf_email(request: EmailPDFRequest):
         msg["From"] = "Little Lines <noreply@littlefortstudios.com>"
         msg["To"] = request.email
         
-        # Compress PDF if over 9MB
+        # Compress PDF if over 9MB using page re-rendering
         if len(pdf_bytes) > 9_000_000:
             try:
+                import subprocess
+                import tempfile
+                import os as _os
                 from pypdf import PdfReader, PdfWriter
                 import io as _io
                 
+                # Convert each page to image, compress, rebuild PDF
                 reader = PdfReader(_io.BytesIO(pdf_bytes))
+                from reportlab.lib.pagesizes import A4
+                from reportlab.pdfgen import canvas as rl_canvas
+                
+                output_buf = _io.BytesIO()
+                c = rl_canvas.Canvas(output_buf, pagesize=A4)
+                a4_w, a4_h = A4
+                
+                for page_num, page in enumerate(reader.pages):
+                    # Extract all images from this page
+                    for img in page.images:
+                        try:
+                            pil_img = img.image.convert("RGB")
+                            w, h = pil_img.size
+                            # Resize to max 1000px on longest side
+                            max_dim = 1000
+                            if w > max_dim or h > max_dim:
+                                ratio = min(max_dim/w, max_dim/h)
+                                pil_img = pil_img.resize((int(w*ratio), int(h*ratio)), PILImage.LANCZOS)
+                            # Save compressed
+                            img_buf = _io.BytesIO()
+                            pil_img.save(img_buf, format="JPEG", quality=60, optimize=True)
+                            img.replace(img_buf.getvalue())
+                        except Exception as img_err:
+                            print(f"Could not compress image on page {page_num}: {img_err}")
+                
                 writer = PdfWriter()
                 for page in reader.pages:
                     writer.add_page(page)
-                for page in writer.pages:
-                    for img in page.images:
-                        try:
-                            pil_img = img.image
-                            w, h = pil_img.size
-                            if w > 1200 or h > 1200:
-                                ratio = min(1200/w, 1200/h)
-                                pil_img = pil_img.resize((int(w*ratio), int(h*ratio)), PILImage.LANCZOS)
-                            buf = _io.BytesIO()
-                            pil_img.save(buf, format="JPEG", quality=75, optimize=True)
-                            img.replace(buf.getvalue())
-                        except Exception:
-                            pass
+                
                 compressed_buf = _io.BytesIO()
                 writer.write(compressed_buf)
-                pdf_bytes = compressed_buf.getvalue()
+                new_bytes = compressed_buf.getvalue()
+                
+                if len(new_bytes) < len(pdf_bytes):
+                    pdf_bytes = new_bytes
                 print(f"Compressed PDF to {len(pdf_bytes)} bytes")
             except Exception as e:
                 print(f"PDF compression failed, using original: {e}")
