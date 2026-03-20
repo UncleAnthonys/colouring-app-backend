@@ -6,7 +6,7 @@ import os
 import json
 import uuid
 from datetime import datetime
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Request
 import redis as redis_lib
 
 job_router = APIRouter(prefix="/job", tags=["jobs"])
@@ -19,25 +19,64 @@ def get_redis():
     return redis_lib.Redis.from_url(redis_url)
 
 
+def fix_flutterflow_json(body_str: str) -> dict:
+    """
+    FlutterFlow sends JSON objects as quoted strings inside the body.
+    e.g. "character": "{"name":"Tim"}" instead of "character": {"name":"Tim"}
+    
+    This function tries json.loads first. If it fails, it fixes the quoted objects.
+    """
+    try:
+        return json.loads(body_str)
+    except json.JSONDecodeError:
+        pass
+    
+    # Fix: find patterns like "key": "{...}" and unquote them
+    import re
+    
+    # Replace "key": "{" with "key": { (opening)
+    fixed = re.sub(r'(":\s*)"(\{)', r'\1\2', body_str)
+    # Replace }"  with } at end of quoted objects (before comma or closing brace)
+    fixed = re.sub(r'\}"(\s*[,\}])', r'}\1', fixed)
+    # Fix escaped quotes inside the now-unquoted objects
+    fixed = fixed.replace('\\"', '"')
+    
+    try:
+        return json.loads(fixed)
+    except json.JSONDecodeError:
+        pass
+    
+    # Last resort: try to parse line by line
+    # If nothing works, raise the error
+    raise json.JSONDecodeError("Could not parse FlutterFlow JSON", body_str, 0)
+
+
 @job_router.post("/submit")
-async def submit_job(request_body: dict):
+async def submit_job(request: Request):
     """
     Submit a job to the queue. Returns job_id instantly.
-    Accepts the EXACT same format as generateFullStory — flat dict, same as FlutterFlow sends.
+    Handles FlutterFlow's quirky JSON serialization.
     """
     from celery_app import celery_app
     
-    job_type = request_body.pop("job_type", "full_story")
-    params = request_body  # Everything else is params
+    body = await request.body()
+    body_str = body.decode('utf-8', errors='replace')
     
-    # Debug logging
+    try:
+        params = fix_flutterflow_json(body_str)
+    except Exception as e:
+        print(f"[JOB-SUBMIT] JSON parse failed: {e}")
+        print(f"[JOB-SUBMIT] Raw body: {body_str[:1000]}")
+        raise HTTPException(status_code=400, detail=f"Invalid JSON: {str(e)}")
+    
+    job_type = params.pop("job_type", "full_story")
+    
     print(f"[JOB-SUBMIT] job_type: {job_type}")
     print(f"[JOB-SUBMIT] params keys: {list(params.keys())}")
     
     job_id = str(uuid.uuid4())
     now = datetime.utcnow().isoformat()
     
-    # Store initial job status in Redis
     r = get_redis()
     job_data = {
         "job_id": job_id,
@@ -51,7 +90,6 @@ async def submit_job(request_body: dict):
     }
     r.setex(f"job:{job_id}", 3600, json.dumps(job_data))
     
-    # Map job types to Celery tasks
     task_map = {
         "extract_and_reveal": "tasks.extract_and_reveal_task",
         "full_story": "tasks.generate_full_story_task",
@@ -63,8 +101,7 @@ async def submit_job(request_body: dict):
     if not task_name:
         raise HTTPException(status_code=400, detail=f"Unknown job type: {job_type}")
     
-    # Convert params to JSON-safe format for Celery
-    # Some values from FlutterFlow might be objects that need serializing
+    # Serialize params safely for Celery/Redis
     safe_params = json.loads(json.dumps(params, default=str))
     
     celery_app.send_task(task_name, args=[job_id, safe_params])
@@ -74,24 +111,14 @@ async def submit_job(request_body: dict):
 
 @job_router.get("/{job_id}/status")
 async def get_job_status(job_id: str):
-    """
-    Poll for job status. Returns current status + result when complete.
-    """
     r = get_redis()
     job_raw = r.get(f"job:{job_id}")
-    
     if not job_raw:
         raise HTTPException(status_code=404, detail="Job not found or expired")
-    
-    job_data = json.loads(job_raw)
-    return job_data
+    return json.loads(job_raw)
 
 
 def update_job_status(job_id: str, status: str, progress: str = None, result: dict = None, error: str = None):
-    """
-    Helper for tasks to update job status in Redis.
-    Called from within Celery tasks.
-    """
     redis_url = os.environ.get('REDIS_URL', 'redis://localhost:6379/0')
     if redis_url.startswith('rediss://'):
         r = redis_lib.Redis.from_url(redis_url, ssl_cert_reqs=None)
