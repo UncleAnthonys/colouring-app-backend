@@ -1689,23 +1689,39 @@ async def send_pdf_email(request: EmailPDFRequest):
         msg["From"] = "Little Lines <noreply@littlefortstudios.com>"
         msg["To"] = request.email
         
-        # Email body
-        body = MIMEText(
-            f"Hi there!\n\n"
-            f"Here's your Little Lines colouring page: {request.theme_name}\n\n"
-            f"Print it out and enjoy colouring!\n\n"
-            f"From the Little Lines team",
-            "plain"
-        )
-        msg.attach(body)
-        
-        # Attach PDF
-        pdf_attachment = MIMEBase("application", "pdf")
-        pdf_attachment.set_payload(pdf_bytes)
-        encoders.encode_base64(pdf_attachment)
-        filename = f"Little_Lines_{request.theme_name.replace(' ', '_')}.pdf"
-        pdf_attachment.add_header("Content-Disposition", f"attachment; filename={filename}")
-        msg.attach(pdf_attachment)
+        # Check size - attach if under 9MB, download link if over
+        if len(pdf_bytes) < 9_000_000:
+            # Small PDF (colouring pages) - attach directly
+            body = MIMEText(
+                f"Hi there!\n\n"
+                f"Here's your Little Lines colouring page: {request.theme_name}\n\n"
+                f"Print it out and enjoy colouring!\n\n"
+                f"From the Little Lines team",
+                "plain"
+            )
+            msg.attach(body)
+            
+            pdf_attachment = MIMEBase("application", "pdf")
+            pdf_attachment.set_payload(pdf_bytes)
+            encoders.encode_base64(pdf_attachment)
+            filename = f"Little_Lines_{request.theme_name.replace(' ', '_')}.pdf"
+            pdf_attachment.add_header("Content-Disposition", f"attachment; filename={filename}")
+            msg.attach(pdf_attachment)
+        else:
+            # Large PDF (storybooks) - send branded download link
+            html_body = f"""<html>
+<body style="font-family: Arial, sans-serif; background-color: #f0f8ff; padding: 30px;">
+  <div style="max-width: 500px; margin: 0 auto; background: white; border-radius: 16px; padding: 40px; text-align: center;">
+    <h1 style="color: #4a3f8a; font-size: 24px; margin-bottom: 8px;">Your Storybook is Ready!</h1>
+    <p style="color: #666; font-size: 16px; margin-bottom: 24px;">{request.theme_name}</p>
+    <a href="{request.pdf_url}" style="display: inline-block; background: linear-gradient(135deg, #ff6b9d, #ff8a80); color: white; text-decoration: none; padding: 16px 40px; border-radius: 30px; font-size: 18px; font-weight: bold;">Download Your Storybook</a>
+    <p style="color: #999; font-size: 13px; margin-top: 24px;">This link downloads your PDF directly from the Little Lines app. It was created just for you.</p>
+    <p style="color: #999; font-size: 13px; margin-top: 16px;">From the Little Lines team</p>
+  </div>
+</body>
+</html>"""
+            body = MIMEText(html_body, "html")
+            msg.attach(body)
         
         # Send via SES
         ses_client = boto3.client(
