@@ -164,6 +164,21 @@ IMPORTANT:
 
 
 def build_photo_prompt(age_level: str = "age_5", theme: str = "none", custom_theme: str = None) -> str:
+    """Build prompt for photo-to-colouring mode - wrapper that adds universal photo instruction"""
+    
+    PHOTO_AWARENESS = """
+
+IMPORTANT - DRAW ONLY WHAT IS IN THE PHOTO:
+- If the photo contains ONLY animals (pets, wildlife) with NO people: draw ONLY the animals. Do NOT invent or add any human characters, cartoon people, or faces. Ignore any instructions about human faces, hair, clothing, smiles, noses, or eyes — those only apply when people are present in the photo.
+- If the photo is a landscape or scene with NO people and NO animals: draw ONLY the landscape/scene. Do NOT add any characters, people, or animals.
+- If the photo contains people: follow all face, hair, and clothing instructions as normal.
+- NEVER invent subjects that are not in the original photo."""
+    
+    prompt = _build_photo_prompt_inner(age_level, theme, custom_theme)
+    return PHOTO_AWARENESS + "\n" + prompt
+
+
+def _build_photo_prompt_inner(age_level: str = "age_5", theme: str = "none", custom_theme: str = None) -> str:
     """Build prompt for photo-to-colouring mode"""
     
     # UNDER 3 - blob shapes bypass
