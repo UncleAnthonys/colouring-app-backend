@@ -28,6 +28,7 @@ def init_firebase():
             cred = credentials.ApplicationDefault()
         
         firebase_admin.initialize_app(cred, {
+            'projectId': creds_dict.get('project_id', 'uncle-anthonys'),
             'storageBucket': os.environ.get('FIREBASE_STORAGE_BUCKET', 'uncle-anthonys.firebasestorage.app')
         })
     

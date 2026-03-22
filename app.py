@@ -278,7 +278,7 @@ STYLE:
 - Hair as simple outline shape only - NOT filled in, NOT solid black
 - NO solid black fill anywhere - sunglasses, hair, accessories must all be HOLLOW outlines only
 - Clothing as simple outer shapes only (e.g. t-shirt neckline, shorts outline) - NO internal detail, NO pockets, NO buttons, NO patterns, NO stitching
-- Rounded feet on every character (chunky shoes if wearing them, rounded blob feet if barefoot or animal)
+- Rounded feet on every character (chunky shoes if wearing thcat push_notifications.pyem, rounded blob feet if barefoot or animal)
 - Bodies as simple rounded shapes
 - Maximum 10-12 colourable areas TOTAL
 
