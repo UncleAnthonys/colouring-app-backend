@@ -198,7 +198,7 @@ def _build_photo_prompt_inner(age_level: str = "age_5", theme: str = "none", cus
 
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
-CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and count the pets/animals. Draw EXACTLY that many of each - NO MORE, NO LESS. If there are 9 children, draw exactly 9. NEVER add or remove anyone.
+CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count EVERY person and animal visible. Draw EXACTLY that many - NO MORE, NO LESS. NEVER add or remove anyone.
 
 DRAW:
 - The subjects from the photo (people and/or animals) as VERY simple blob characters
@@ -297,7 +297,7 @@ OUTPUT: Simple blob figures in {theme_name} costumes with themed elements on whi
 
 CRITICAL: Only draw what is ACTUALLY in the photo. DO NOT add anything not in the original image.
 
-CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and count the pets/animals. Draw EXACTLY that many of each - NO MORE, NO LESS. If there are 9 children, draw exactly 9. NEVER add or remove anyone.
+CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count EVERY person and animal visible. Draw EXACTLY that many - NO MORE, NO LESS. NEVER add or remove anyone.
 
 DRAW:
 - The subjects from the photo (people and/or animals) as very basic shapes - blob-like but recognisable
