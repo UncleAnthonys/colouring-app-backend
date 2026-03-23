@@ -705,6 +705,8 @@ FACE ACCURACY (HIGHEST PRIORITY):
 - Copy the EXACT hairstyle for each person - length, parting, texture
 - A parent MUST instantly recognise their specific children
 - Keep real clothing details - specific shoes, patterns, stripes, accessories
+- Eyes: simple clean outlines only - NO dark shading, NO heavy fill, NO thick lashes, NO anime style. Just a clean eye shape with a simple pupil dot
+- NO pink cheeks, NO blush circles, NO rosy marks anywhere on any face
 
 BACKGROUND (SIMPLIFY):
 - Keep the real setting from the photo
