@@ -1709,7 +1709,7 @@ If your theme matches ANY of these patterns, DELETE IT and write something origi
 
 *** THE 3 THEMES MUST BE IN 3 DIFFERENT WORLDS ***
 Theme 1 must be set in an EVERYDAY location (school, park, shops, home, neighbourhood)
-Theme 2 must be set in an UNUSUAL or FANTASTICAL location (underwater, space, tiny world, jungle, castle, inside a machine, upside-down town, cloud kingdom)
+Theme 2 must be set in an UNUSUAL or FANTASTICAL location — examples include underwater city, inside a volcano, shrunk to ant-size, dinosaur era, frozen planet, inside a painting, a world made of music, a floating market. NEVER default to clouds or sky kingdoms — pick something surprising and original each time
 Theme 3 must involve a SPECIFIC JOB, EVENT, or MISSION (detective mystery, cooking contest, sports day, rescue mission, science fair, treasure hunt, talent show audition)
 No two themes can share the same type of setting, premise, or story structure.
 
