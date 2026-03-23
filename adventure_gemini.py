@@ -1599,9 +1599,9 @@ CRITICAL: Follow the age guidelines above exactly for sentence length, vocabular
 *** FORMAT ***
 
 For each theme provide:
-1. Theme name (fun, age-appropriate)
+1. Theme name (fun, age-appropriate, MAX 6 words, MAX 35 characters)
 2. Theme description (1 sentence)
-3. Theme blurb (ONE short punchy sentence, MAX 25 words. This is the most important line — it must make a parent gasp and think "this was written ONLY for my child." Rules:
+3. Theme blurb (ONE short punchy sentence, MAX 15 words. This is the most important line — it must make a parent gasp and think "this was written ONLY for my child." Rules:
 - MUST include {character_name}'s name
 - MUST name the feature DIRECTLY — glasses, curls, jumper, tail, hat, whatever it is. Naming it IS what makes it feel personal.
 - Make the feature sound MAGICAL or EXCITING — not clinical or boring
