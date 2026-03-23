@@ -525,7 +525,7 @@ STYLE:
 - THICK black outlines - easy for small hands
 - Draw the REAL outline shapes of people and objects but with NO internal detail
 - NO tyre treads, NO window details, NO ground texture, NO clothing patterns
-- Faces: properly drawn eyes with simple detail, nose, smile - recognisable features matching the photo
+- Faces: clean simple eyes (just outline, NO shading, NO dark fill, NO thick lashes), simple nose, simple smile - NO pink cheeks, NO blush, NO rosy circles, NO colour on faces whatsoever
 - Objects: just the outer silhouette shape, no internal lines
 - Maximum 15-20 colourable areas
 
@@ -534,7 +534,7 @@ BACKGROUND:
 
 DO NOT ADD: Any pets, animals, or objects not in the original photo.
 
-OUTPUT: Thick simplified outlines of REAL shapes on white. Halfway between cartoon blobs and detailed drawing."""
+OUTPUT: Thick simplified outlines of REAL shapes on white. Halfway between cartoon blobs and detailed drawing. ZERO colour anywhere - no pink cheeks, no blush, no rosy circles, no grey shading. Pure black lines on pure white only."""
 
         theme_name = custom_theme if custom_theme else theme
         if theme_name == "none":
@@ -677,9 +677,10 @@ DRAW:
 - THAT IS ALL - NOTHING ELSE
 
 STYLE:
-- BLACK OUTLINES ON WHITE ONLY
+- BLACK OUTLINES ON WHITE ONLY - NO colour, NO pink cheeks, NO blush, NO rosy circles, NO shading on faces
 - Medium-thick black outlines
 - Simple but recognisable figures
+- Faces: clean simple eyes (outline only, NO dark fill, NO shading), simple nose, simple smile
 - Maximum 25-30 colourable areas
 
 BACKGROUND:
