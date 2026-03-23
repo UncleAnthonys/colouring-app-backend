@@ -316,7 +316,7 @@ STYLE:
 BACKGROUND:
 - PURE WHITE - absolutely nothing else
 
-OUTPUT: Simple black outline figures on pure white. ONLY the subjects from the photo."""
+OUTPUT: Simple black outline figures on pure white. ONLY the subjects from the photo. ZERO colour anywhere - no pink, no grey, no shading, no cheek circles, no blush marks. Pure black lines on pure white only."""
 
         theme_name = custom_theme if custom_theme else theme
 
