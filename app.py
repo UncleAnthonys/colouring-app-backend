@@ -494,7 +494,7 @@ STYLE:
 - THICK black outlines
 - Simple rounded figures
 - Faces: dots for eyes, small curved line nose on EVERY face, single curved line smile - NOT an open mouth, basic hair shape
-- Hair as simple outline shape only - NOT filled in, NOT solid black
+- Hair as simple outline shape only - NOT filled in, NOT solid black, NO shading inside hair
 - NO solid black fill anywhere - sunglasses, hair, accessories must all be HOLLOW outlines only
 - Simple clothing - NO frills, NO layered skirts, NO patterns
 - Bodies still chunky and simple
