@@ -384,6 +384,7 @@ def generate_colouring_page_task(self, job_id: str, params: dict):
         if mode == "photo":
             # === PHOTO MODE ===
             image_b64 = params.get("image_b64") or params.get("imageB64", "")
+            print(f"[WORKER] image_b64 length: {len(image_b64) if image_b64 else 0}")
             theme = normalize_theme(params.get("theme", "none"))
             custom_theme = params.get("custom_theme") or params.get("customTheme")
             if custom_theme in [None, "null", "", "None"]:
