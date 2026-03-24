@@ -365,8 +365,13 @@ def generate_colouring_page_task(self, job_id: str, params: dict):
             build_photo_prompt, build_text_to_image_prompt,
             normalize_age_level, normalize_theme,
             is_valid_coloring_page, log_generation_attempt,
-            OPENAI_API_KEY, BASE_URL
+            OPENAI_API_KEY, BASE_URL, load_prompts, CONFIG
         )
+        
+        # Ensure CONFIG is loaded (Celery worker doesn't trigger FastAPI startup)
+        import app as _app_module
+        if _app_module.CONFIG is None:
+            _app_module.CONFIG = load_prompts()
         from pdf_utils import create_a4_pdf
         from firebase_utils import upload_to_firebase
         from PIL import Image, ImageOps
