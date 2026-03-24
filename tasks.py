@@ -378,14 +378,14 @@ def generate_colouring_page_task(self, job_id: str, params: dict):
         import io
         
         mode = params.get("mode", "text")  # "photo" or "text"
-        age_level = normalize_age_level(params.get("age_level", "age_5"))
+        age_level = normalize_age_level(params.get("age_level") or params.get("ageLevel", "age_5"))
         quality = params.get("quality", "low")
         
         if mode == "photo":
             # === PHOTO MODE ===
-            image_b64 = params.get("image_b64", "")
+            image_b64 = params.get("image_b64") or params.get("imageB64", "")
             theme = normalize_theme(params.get("theme", "none"))
-            custom_theme = params.get("custom_theme")
+            custom_theme = params.get("custom_theme") or params.get("customTheme")
             if custom_theme in [None, "null", "", "None"]:
                 custom_theme = None
             
