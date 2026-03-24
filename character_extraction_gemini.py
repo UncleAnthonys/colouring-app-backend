@@ -34,11 +34,20 @@ def detect_image_type(image_data: bytes) -> str:
         response = model.generate_content([
             """Look at this image carefully. Classify it as ONE of these:
 
-DRAWING - A child's artwork made with crayons, markers, colored pencils, paint, etc. on paper. 
-          Includes: hand-drawn pictures, sketches, paintings, doodles by children.
+DRAWING - A child's artwork or drawing is the MAIN SUBJECT. This includes:
+          - Photos/scans OF drawings (you can see paper, table, etc but the SUBJECT is a drawing)
+          - Hand-drawn pictures, sketches, paintings, doodles by children
+          - Digital drawings or artwork
+          - If the main subject was DRAWN BY HAND with crayons, markers, pencils, paint = DRAWING
 
-PHOTO - A real photograph taken with a camera/phone.
-        Includes: photos of toys, stuffed animals, pets, children, people, objects.
+PHOTO - A real-world subject photographed with a camera/phone. The subject itself is real:
+        - Real children, real people, real pets, real animals
+        - Real toys, stuffed animals, figurines
+        - Real objects in the real world
+
+KEY TEST: Is the SUBJECT of the image something drawn/painted by a child, or is it a real-world thing?
+A photo OF a drawing = DRAWING (because the subject is artwork)
+A photo OF a real dog = PHOTO (because the subject is a real animal)
 
 Reply with EXACTLY one word: DRAWING or PHOTO""",
             {"mime_type": "image/jpeg", "data": image_b64}
@@ -61,11 +70,20 @@ Reply with EXACTLY one word: DRAWING or PHOTO""",
                 response = model.generate_content([
                     """Look at this image carefully. Classify it as ONE of these:
 
-DRAWING - A child's artwork made with crayons, markers, colored pencils, paint, etc. on paper. 
-          Includes: hand-drawn pictures, sketches, paintings, doodles by children.
+DRAWING - A child's artwork or drawing is the MAIN SUBJECT. This includes:
+          - Photos/scans OF drawings (you can see paper, table, etc but the SUBJECT is a drawing)
+          - Hand-drawn pictures, sketches, paintings, doodles by children
+          - Digital drawings or artwork
+          - If the main subject was DRAWN BY HAND with crayons, markers, pencils, paint = DRAWING
 
-PHOTO - A real photograph taken with a camera/phone.
-        Includes: photos of toys, stuffed animals, pets, children, people, objects.
+PHOTO - A real-world subject photographed with a camera/phone. The subject itself is real:
+        - Real children, real people, real pets, real animals
+        - Real toys, stuffed animals, figurines
+        - Real objects in the real world
+
+KEY TEST: Is the SUBJECT of the image something drawn/painted by a child, or is it a real-world thing?
+A photo OF a drawing = DRAWING (because the subject is artwork)
+A photo OF a real dog = PHOTO (because the subject is a real animal)
 
 Reply with EXACTLY one word: DRAWING or PHOTO""",
                     {"mime_type": "image/jpeg", "data": image_b64}

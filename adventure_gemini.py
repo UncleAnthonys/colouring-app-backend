@@ -446,7 +446,7 @@ Transform the childs drawing into a character that looks like it belongs in:
 - Eyes: Big expressive eyes with GLOSSY IRISES, multiple SPECULAR CATCHLIGHTS, visible light reflections, and depth — even on angry or scary characters
 - Skin: Warm SUBSURFACE SCATTERING (light glowing through skin like real Pixar characters)
 - Lighting: Cinematic THREE-POINT LIGHTING with warm key light and cool rim light to make the character POP
-- Surfaces: Smooth appealing 3D with proper material definition — NOT a toy, NOT a figurine, a LIVING character
+- Surfaces: Smooth appealing 3D with proper material definition — NOT a toy, NOT a figurine, NOT felt, NOT knitted, NOT woollen, NOT craft, NOT stop-motion, NOT claymation — a LIVING animated movie character
 - This is a movie character with LIFE and SOUL, not a 3D render of a doll
 
 ===== REQUIREMENTS =====
