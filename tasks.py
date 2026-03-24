@@ -349,15 +349,163 @@ def extract_and_reveal_task(self, job_id: str, params: dict):
 
 @celery_app.task(name='tasks.generate_colouring_page_task', bind=True)
 def generate_colouring_page_task(self, job_id: str, params: dict):
-    """Generate a single colouring page."""
+    """Generate a single colouring page (photo or text mode)."""
     try:
         update_job_status(job_id, "processing", progress="Creating your colouring page...")
         
-        # This will be filled in when we migrate the colouring page endpoint
-        # For now it's a placeholder
-        update_job_status(job_id, "failed", error="Colouring page task not yet implemented")
+        # Force path fix inside task
+        import sys, os
+        task_dir = os.path.dirname(os.path.abspath(__file__))
+        if task_dir not in sys.path:
+            sys.path.insert(0, task_dir)
+        
+        import base64
+        import httpx
+        from app import (
+            build_photo_prompt, build_text_to_image_prompt,
+            normalize_age_level, normalize_theme,
+            is_valid_coloring_page, log_generation_attempt,
+            OPENAI_API_KEY, BASE_URL
+        )
+        from pdf_utils import create_a4_pdf
+        from firebase_utils import upload_to_firebase
+        from PIL import Image, ImageOps
+        import io
+        
+        mode = params.get("mode", "text")  # "photo" or "text"
+        age_level = normalize_age_level(params.get("age_level", "age_5"))
+        quality = params.get("quality", "low")
+        
+        if mode == "photo":
+            # === PHOTO MODE ===
+            image_b64 = params.get("image_b64", "")
+            theme = normalize_theme(params.get("theme", "none"))
+            custom_theme = params.get("custom_theme")
+            if custom_theme in [None, "null", "", "None"]:
+                custom_theme = None
+            
+            prompt = build_photo_prompt(age_level=age_level, theme=theme, custom_theme=custom_theme)
+            
+            update_job_status(job_id, "processing", progress="Generating your colouring page...")
+            
+            # Detect orientation
+            image_bytes = base64.b64decode(image_b64)
+            img = Image.open(io.BytesIO(image_bytes))
+            img = ImageOps.exif_transpose(img)
+            width, height = img.size
+            size = "1536x1024" if width > height else "1024x1536"
+            
+            headers = {"Authorization": f"Bearer {OPENAI_API_KEY}"}
+            files = [("image[]", ("source.jpg", image_bytes, "image/jpeg"))]
+            data = {
+                "model": "gpt-image-1.5",
+                "prompt": prompt,
+                "n": "1",
+                "size": size,
+                "quality": quality,
+            }
+            
+            with httpx.Client(timeout=180.0) as client:
+                response = client.post(f"{BASE_URL}/images/edits", headers=headers, files=files, data=data)
+                if response.status_code != 200:
+                    raise Exception(f"OpenAI API error: {response.status_code} - {response.text[:200]}")
+                result = response.json()
+            
+            image_data = result["data"][0]
+            if "b64_json" in image_data:
+                output_b64 = image_data["b64_json"]
+            else:
+                with httpx.Client() as client:
+                    resp = client.get(image_data["url"])
+                    output_b64 = base64.b64encode(resp.content).decode('utf-8')
+            
+            theme_used = custom_theme or theme
+            
+        else:
+            # === TEXT MODE ===
+            description = params.get("description", "")
+            prompt = build_text_to_image_prompt(description, age_level)
+            
+            update_job_status(job_id, "processing", progress="Generating your colouring page...")
+            
+            headers = {
+                "Authorization": f"Bearer {OPENAI_API_KEY}",
+                "Content-Type": "application/json"
+            }
+            gen_data = {
+                "model": "gpt-image-1.5",
+                "prompt": prompt,
+                "n": 1,
+                "size": "1024x1536",
+                "quality": quality,
+                "background": "opaque",
+            }
+            
+            # Try up to 3 times for dark image retry
+            output_b64 = None
+            for attempt in range(1, 4):
+                with httpx.Client(timeout=180.0) as client:
+                    response = client.post(f"{BASE_URL}/images/generations", headers=headers, json=gen_data)
+                    if response.status_code != 200:
+                        raise Exception(f"OpenAI API error: {response.status_code} - {response.text[:200]}")
+                    result = response.json()
+                
+                image_data = result["data"][0]
+                if "b64_json" in image_data:
+                    output_b64 = image_data["b64_json"]
+                else:
+                    with httpx.Client() as client:
+                        resp = client.get(image_data["url"])
+                        output_b64 = base64.b64encode(resp.content).decode('utf-8')
+                
+                is_valid, brightness = is_valid_coloring_page(output_b64)
+                log_generation_attempt(prompt[:100], attempt, is_valid, brightness, attempt > 1)
+                
+                if is_valid:
+                    if attempt > 1:
+                        print(f"[WORKER] Colouring page: attempt {attempt} success (brightness={brightness:.0f})")
+                    break
+                print(f"[WORKER] Colouring page: attempt {attempt} dark (brightness={brightness:.0f}), retrying...")
+            
+            theme_used = description
+        
+        # Upload image to Firebase
+        update_job_status(job_id, "processing", progress="Saving your creation...")
+        image_url = upload_to_firebase(output_b64, folder="generations")
+        
+        # Generate PDF
+        pdf_url = None
+        try:
+            pdf_b64 = create_a4_pdf(output_b64)
+            pdf_url = upload_to_firebase(pdf_b64, folder="pdfs")
+        except Exception as e:
+            print(f"[WORKER] PDF generation failed (non-fatal): {e}")
+        
+        # Detect orientation
+        output_img = Image.open(io.BytesIO(base64.b64decode(output_b64)))
+        is_landscape = output_img.width > output_img.height
+        
+        update_job_status(job_id, "complete", result={
+            "image_url": image_url,
+            "pdf_url": pdf_url,
+            "is_landscape": is_landscape,
+            "theme_used": theme_used,
+            "age_level": age_level,
+        })
+        
+        # Send push notification
+        try:
+            from push_notifications import send_push
+            user_id = params.get("user_id", "")
+            send_push(user_id, "Colouring Page Ready! 🎨", "Your creation is waiting for you!", {"type": "colouring", "job_id": job_id})
+        except Exception as e:
+            print(f"[WORKER] Push notification failed (non-fatal): {e}")
+        
+        print(f"[WORKER] ✅ Colouring page complete: {theme_used}")
         
     except Exception as e:
+        print(f"[WORKER] ❌ Colouring page failed: {str(e)}")
+        traceback.print_exc()
         update_job_status(job_id, "failed", error=str(e)[:500])
 
 
