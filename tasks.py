@@ -426,6 +426,56 @@ def generate_colouring_page_task(self, job_id: str, params: dict):
             
             theme_used = custom_theme or theme
             
+        elif mode == "pattern":
+            # === PATTERN MODE ===
+            from pattern_config import generate_pattern_prompt
+            shape = params.get("description", "")
+            prompt = generate_pattern_prompt(shape, age_level)
+            
+            update_job_status(job_id, "processing", progress="Generating your pattern...")
+            
+            headers = {
+                "Authorization": f"Bearer {OPENAI_API_KEY}",
+                "Content-Type": "application/json"
+            }
+            gen_data = {
+                "model": "gpt-image-1.5",
+                "prompt": prompt,
+                "n": 1,
+                "size": "1024x1536",
+                "quality": quality,
+                "background": "opaque",
+            }
+            
+            output_b64 = None
+            for attempt in range(1, 4):
+                with httpx.Client(timeout=180.0) as client:
+                    response = client.post(f"{BASE_URL}/images/generations", headers=headers, json=gen_data)
+                    if response.status_code != 200:
+                        raise Exception(f"OpenAI API error: {response.status_code} - {response.text[:200]}")
+                    result = response.json()
+                
+                image_data = result["data"][0]
+                if "b64_json" in image_data:
+                    output_b64 = image_data["b64_json"]
+                else:
+                    with httpx.Client() as client:
+                        resp = client.get(image_data["url"])
+                        output_b64 = base64.b64encode(resp.content).decode("utf-8")
+                
+                is_valid, brightness = is_valid_coloring_page(output_b64)
+                log_generation_attempt(prompt[:100], attempt, is_valid, brightness, attempt > 1)
+                
+                if is_valid:
+                    break
+                elif attempt < 3:
+                    update_job_status(job_id, "processing", progress=f"Retrying (attempt {attempt + 1})...")
+            
+            if not output_b64 or not is_valid:
+                raise Exception("Failed to generate valid pattern after 3 attempts")
+            
+            theme_used = shape
+            
         else:
             # === TEXT MODE ===
             description = params.get("description", "")
