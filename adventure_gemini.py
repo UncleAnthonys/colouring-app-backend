@@ -1153,8 +1153,8 @@ Key: Comedy from things going wrong in UNEXPECTED ways.
 - Supporting characters with clear distinctive looks
 - Mix close-ups and wider shots across the 5 episodes
 
-*** TEXT LENGTH — STRICTLY ENFORCED ***
-- 2-3 sentences per episode (25-40 words). MAXIMUM 50 words — hard ceiling.
+*** TEXT LENGTH ***
+- 2-3 sentences per episode (40-60 words). Every sentence must EARN its place — physical comedy, funny dialogue, or specific chaos.
 - Dialogue in at least 3 episodes
 - Sound effects in at least 2 episodes
 - Final episode: 2 short punchy sentences
@@ -1804,7 +1804,7 @@ async def generate_story_for_theme(
     age_guidelines = {
         "age_2": """AGE UNDER 3: MAXIMUM 20 words per episode — hard ceiling, DO NOT EXCEED. A parent reads this to a toddler. Every word must count. Use 1-2 very short sentences. Sound effects and rhythm are essential. Example quality: 'SPLAT! Oh no — Sam fell in the mud! Silly Sam!'""",
         "age_3": """AGE 3: MAXIMUM 30 words per episode — hard ceiling, DO NOT EXCEED. A parent reads this aloud — short and punchy. Use repetitive phrases, sound effects, and rhythm. 2-3 very short sentences max. Example quality: 'TOOT went the trumpet! The dog ran away — ZOOM! "Come back!" said Dom. But the dog was GONE.'""",
-        "age_4": """AGE 4: MAXIMUM 50 words per episode — hard ceiling, DO NOT EXCEED. Parent reads aloud. Sound effects, dialogue, fun vocabulary, and clear emotions. 2-3 sentences. Familiar settings with one magical or silly element. Short enough for a 4-year-old's attention span but rich enough to feel like a real story page.""",
+        "age_4": """AGE 4: Aim for 40-60 words per episode. Parent reads aloud. Sound effects, dialogue, fun vocabulary, and clear emotions. 2-3 sentences that feel like a REAL story — not captions. Every sentence should have personality, physical comedy, or a funny detail. Familiar settings with one magical or silly element. The text should reward re-reading — parents should enjoy reading it too.""",
         "age_5": """AGE 5: Aim for 60-80 words per episode. Natural storytelling voice. Fun words: "super-duper", "ginormous", "absolutely bonkers". Sound effects. Dialogue in at least 3 of 5 episodes. At least one genuinely funny moment. Mix of narration and character voices. Parent reads aloud but child follows along.""",
         "age_6": """AGE 6: Aim for 80-110 words per episode. Richer vocabulary. Subplots with supporting characters. Emotional complexity. Humor through situation and character. Dialogue-driven storytelling. Child starting to read along.""",
         "age_7": """AGE 7: Aim for 100-130 words per episode. More sophisticated plots. Character development. Themes of friendship, perseverance. Multiple supporting characters with distinct personalities. Child reads with some help.""",
