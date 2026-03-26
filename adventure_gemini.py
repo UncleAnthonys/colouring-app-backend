@@ -1084,7 +1084,7 @@ Example: Ep1: Can't get past the puddle (SPLASH!). Ep2: Can't get past the hill 
 
 *** TEXT LENGTH — STRICTLY ENFORCED ***
 - 1-2 very short sentences per episode
-- ABSOLUTE MAXIMUM 20 WORDS per episode. Count them. If it's over 20, cut it down. 15 words is even better.
+- Aim for 15-20 words per episode. Short and punchy but every sentence must have personality.
 - At least one sound effect or exclamation per episode
 - Final episode: shortest of all (under 12 words)
 - If you find yourself writing more than 2 sentences, you are writing TOO MUCH for a toddler
@@ -1802,8 +1802,8 @@ async def generate_story_for_theme(
     
     # Get age-specific guidelines
     age_guidelines = {
-        "age_2": """AGE UNDER 3: MAXIMUM 20 words per episode — hard ceiling, DO NOT EXCEED. A parent reads this to a toddler. Every word must count. Use 1-2 very short sentences. Sound effects and rhythm are essential. Example quality: 'SPLAT! Oh no — Sam fell in the mud! Silly Sam!'""",
-        "age_3": """AGE 3: MAXIMUM 30 words per episode — hard ceiling, DO NOT EXCEED. A parent reads this aloud — short and punchy. Use repetitive phrases, sound effects, and rhythm. 2-3 very short sentences max. Example quality: 'TOOT went the trumpet! The dog ran away — ZOOM! "Come back!" said Dom. But the dog was GONE.'""",
+        "age_2": """AGE UNDER 3: Aim for 15-20 words per episode — keep it very short. A parent reads this to a toddler. 1-2 very short sentences. Sound effects and rhythm are essential. Every word must be simple enough for a toddler to understand. Example quality: 'SPLAT! Oh no — Sam fell in the mud! Silly Sam!'""",
+        "age_3": """AGE 3: Aim for 20-35 words per episode. A parent reads this aloud — short and punchy but with PERSONALITY. Use repetitive phrases, sound effects, dialogue, and rhythm. 2-3 short sentences. The story must make sense to a 3-year-old — simple cause and effect, no abstract concepts. Example quality: 'TOOT went the trumpet! The dog ran away — ZOOM! "Come back!" said Dom. But the dog was GONE.'""",
         "age_4": """AGE 4: Aim for 40-60 words per episode. Parent reads aloud. Sound effects, dialogue, fun vocabulary, and clear emotions. 2-3 sentences that feel like a REAL story — not captions. Every sentence should have personality, physical comedy, or a funny detail. Familiar settings with one magical or silly element. The text should reward re-reading — parents should enjoy reading it too.""",
         "age_5": """AGE 5: Aim for 60-80 words per episode. Natural storytelling voice. Fun words: "super-duper", "ginormous", "absolutely bonkers". Sound effects. Dialogue in at least 3 of 5 episodes. At least one genuinely funny moment. Mix of narration and character voices. Parent reads aloud but child follows along.""",
         "age_6": """AGE 6: Aim for 80-110 words per episode. Richer vocabulary. Subplots with supporting characters. Emotional complexity. Humor through situation and character. Dialogue-driven storytelling. Child starting to read along.""",
@@ -2216,7 +2216,7 @@ NARRATIVE FLOW: Each scene must feel like a CONTINUATION of the previous page. I
 
 *** NON-NEGOTIABLE RULES ***
 1. Episode 5 resolves the specific problem/situation from episode 1
-2. For ages under_3 to age_4: treat word counts as HARD CEILINGS — never exceed them. For age_5+: aim for the target range
+2. Keep to the word count guidance for each age — shorter for young ages, more substantial for older ages
 3. Use the character's NAME not pronouns
 4. Scene descriptions must specify camera angle, physical action, and position in frame
 5. Every story_text must match the chosen WRITING STYLE
@@ -2230,7 +2230,7 @@ Before you write, verify your plan:
 5. Does the writing style match what was requested?
 If any answer is NO, fix your plan before writing.
 
-⚠️ WORD COUNT GUIDANCE: For ages under_3, age_3, and age_4 — the word counts are HARD CEILINGS. DO NOT exceed them. These young ages need very short text. For age_5 and above — aim for the target range in the age guide. The text appears below an illustration on a single page. For younger ages, less is more — a parent reads 1-3 short sentences aloud. For older ages, the text should feel like a real storybook page. A few words over the target is fine for age_5+, but NEVER for the youngest ages.
+⚠️ WORD COUNT GUIDANCE: Each story_text should follow the word count guidance in the age guide above. Younger ages (under_3, age_3, age_4) need shorter text — a parent reads a few punchy sentences aloud. Older ages (age_5+) should feel like a real storybook page. Quality matters MORE than hitting an exact count — a brilliant 45-word page beats a boring 30-word page every time. But don't let young-age pages bloat past their range.
 
 Return ONLY valid JSON in this exact format:
 
