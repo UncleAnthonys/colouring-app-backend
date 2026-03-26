@@ -1018,7 +1018,7 @@ AGE GROUP: 2-3 YEARS OLD (TODDLER)
 - Sound effects for IMPACT MOMENTS ONLY — one per page is plenty, two maximum. Real toddler books use them sparingly. "SPLAT!" lands harder when it's the only loud word on the page. Do NOT fill every sentence with sound effects — it becomes noise, not fun.
 - Very short sentences (5-8 words max)
 - Repetition with variation is the #1 tool - same phrase structure, different word each time
-- Fun made-up words: "splishy-sploshy", "rumbly-tumbly", "snore-a-saurus"
+- Invent fun made-up words UNIQUE to this character and story — never reuse the same ones across different stories
 - Basic emotions only: happy, sad, scared, excited, surprised
 - Direct address to the reader: "Uh oh!", "Oh no!", "Can YOU see it?"
 
@@ -1074,7 +1074,7 @@ PATTERN C: "JOURNEY WITH OBSTACLES" (like We're Going on a Bear Hunt)
 - Each obstacle is different and fun to act out
 - Final obstacle leads to a big surprise
 - Then rush back home!
-Example: Ep1: Can't get past the puddle (SPLASH!). Ep2: Can't get past the hill (WHEEE!). Ep3: Can't get past the sleeping dragon (SHHHHH tip-toe!). Ep4: Made it! But wait - surprise twist! Ep5: Rush home, funny ending.
+Example: Character goes somewhere, each episode has a different obstacle with a different fun action to get past it. Final obstacle leads to a surprise, then rush home.
 
 *** WHAT MAKES TODDLER STORIES WORK ***
 - A parent reading aloud should naturally do funny voices and actions
@@ -1112,7 +1112,7 @@ AGE GROUP: 4 YEARS OLD
 
 *** WRITING STYLE ***
 - DO NOT rhyme unless the user specifically chose "Rhyming" style
-- Sound effects at KEY MOMENTS — 1-2 per page maximum. They should punctuate the action, not replace it. A well-placed "KERPLUNK!" is funnier than three sound effects in one sentence.
+- Sound effects at KEY MOMENTS — 1-2 per page maximum. They should punctuate the action, not replace it. A single well-placed sound effect is funnier than three in one sentence.
 - Simple sentences (8-12 words) with occasional longer ones for drama
 - A catchphrase or repeated question works great as a story thread
 - Funny comparisons: "as tall as a house!", "louder than a thunderstorm!"
@@ -1181,7 +1181,7 @@ AGE GROUP: 5 YEARS OLD
 
 *** WRITING STYLE ***
 - Natural storytelling voice with personality
-- Fun words: "super-duper", "teeny-tiny", "ginormous", "splashy-splashy", "rumbly-tumbly"
+- Use vivid, unexpected vocabulary that fits the character and scenario — invent original fun words, never reuse generic ones
 - Sound effects for impact: "CRASH!", "SPLORT!", "WHOMP!"
 - Sentences 8-15 words, with occasional longer ones for dramatic moments
 - Dialogue is essential - characters TALK to each other with personality
@@ -1876,7 +1876,7 @@ async def generate_story_for_theme(
         "age_2": """AGE UNDER 3: Aim for 15-20 words per episode — keep it very short. A parent reads this to a toddler. 1-2 very short sentences. Sound effects and rhythm are essential. Every word must be simple enough for a toddler to understand. Example quality: 'SPLAT! Oh no — Sam fell in the mud! Silly Sam!'""",
         "age_3": """AGE 3: Aim for 20-35 words per episode. A parent reads this aloud — short and punchy but with PERSONALITY. Use repetitive phrases, sound effects, dialogue, and rhythm. 2-3 short sentences. The story must make sense to a 3-year-old — simple cause and effect, no abstract concepts. Example quality: 'TOOT went the trumpet! The dog ran away — ZOOM! "Come back!" said Dom. But the dog was GONE.'""",
         "age_4": """AGE 4: Aim for 40-60 words per episode. Parent reads aloud. Sound effects, dialogue, fun vocabulary, and clear emotions. 2-3 sentences that feel like a REAL story — not captions. Every sentence should have personality, physical comedy, or a funny detail. Familiar settings with one magical or silly element. The text should reward re-reading — parents should enjoy reading it too.""",
-        "age_5": """AGE 5: Aim for 60-80 words per episode. Natural storytelling voice. Fun words: "super-duper", "ginormous", "absolutely bonkers". Sound effects. Dialogue in at least 3 of 5 episodes. At least one genuinely funny moment. Mix of narration and character voices. Parent reads aloud but child follows along.""",
+        "age_5": """AGE 5: Aim for 60-80 words per episode. Natural storytelling voice. Use vivid, original vocabulary that fits the character — avoid generic fun words. Sound effects only at impact moments. Dialogue in at least 3 of 5 episodes. At least one genuinely funny moment. Mix of narration and character voices. Parent reads aloud but child follows along.""",
         "age_6": """AGE 6: Aim for 80-110 words per episode. Richer vocabulary. Subplots with supporting characters. Emotional complexity. Humor through situation and character. Dialogue-driven storytelling. Child starting to read along.""",
         "age_7": """AGE 7: Aim for 100-130 words per episode. More sophisticated plots. Character development. Themes of friendship, perseverance. Multiple supporting characters with distinct personalities. Child reads with some help.""",
         "age_8": """AGE 8: Aim for 120-150 words per episode. Complex narrative structure. Red herrings, plot twists. Deeper emotional arcs. Witty dialogue. Child reads independently.""",
@@ -2017,28 +2017,27 @@ DO NOT rhyme unless the style is "Rhyming". DO NOT use any other style — ONLY 
     else:
         # Default style varies by age
         default_styles = {
-            "age_2": """Write in a rhythmic, rhyming style perfect for toddlers being read to.
-Use LOTS of sound effects: "SPLASH!", "SPLORT!", "KABOOM!", "WHOOOOSH!"
-Repetition is key — repeat phrases with slight variation each time.
-Fun made-up words: "splishy-sploshy", "rumbly-tumbly", "snore-a-saurus"
-Direct address: "Uh oh!", "Oh no!", "Can YOU see it?"
+            "age_2": """Write for a toddler being read to by a parent. DO NOT rhyme unless the user chose Rhyming style.
+Use one or two sound effects per page for impact — invent ORIGINAL ones that fit the story, never reuse the same sound effect across stories.
+Repetition with variation is the key tool — same phrase structure, different word each time.
+Invent fun made-up words that are UNIQUE to this character and story.
+Direct address to the child works well occasionally.
 Keep it bouncy and musical — a parent should naturally do funny voices reading this.""",
-            "age_3": """Write in a rhythmic, rhyming style perfect for young children being read to.
-Use LOTS of sound effects: "SPLASH!", "SPLORT!", "KABOOM!", "WHOOOOSH!"
-Repetition is key — repeat phrases with slight variation each time.
-Fun made-up words: "splishy-sploshy", "rumbly-tumbly", "snore-a-saurus"
-Direct address: "Uh oh!", "Oh no!", "Can YOU see it?"
+            "age_3": """Write for a 3-year-old being read to by a parent. DO NOT rhyme unless the user chose Rhyming style.
+Use one or two sound effects per page at key moments — invent ORIGINAL ones that match the action, different every story.
+Repetition with variation is the key tool — a repeated phrase that builds across episodes.
+Invent character-specific made-up words and catchphrases unique to THIS story.
 A catchphrase or repeated question works great as a story thread.
 Keep it bouncy and musical — a parent should naturally do funny voices reading this.""",
-            "age_4": """Write in a fun, energetic style with some rhyming and lots of sound effects.
-Sound effects on every page: "KERPLUNK!", "tip-toe-tip-toe", "KABOOM!"
-Funny comparisons: "as tall as a house!", "louder than a thunderstorm!"
-Questions to the reader: "What do YOU think happened next?"
+            "age_4": """Write in a fun, energetic style. DO NOT rhyme unless the user chose Rhyming style.
+Use sound effects sparingly at key moments — 1-2 per page maximum. Invent ones that fit THIS story.
+Vivid, funny comparisons that surprise — never use generic ones.
+Questions to the reader work well occasionally.
 A catchphrase or repeated question works great as a story thread.
 Simple but vivid — a parent reads this aloud and both parent and child enjoy it.""",
-            "age_5": """Write in a natural, engaging storytelling voice. Light rhyming is fine but not required.
-Fun vocabulary: "super-duper", "ginormous", "absolutely bonkers"
-Sound effects still welcome: "CRASH!", "SPLORT!"
+            "age_5": """Write in a natural, engaging storytelling voice. DO NOT rhyme unless the user chose Rhyming style.
+Use vivid, unexpected vocabulary that fits the character and scenario — avoid generic fun words.
+Sound effects only at genuine impact moments.
 Mix of dialogue and narration. At least one genuinely funny moment per episode.
 Characters should have distinct voices when they speak.""",
         }
