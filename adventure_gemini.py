@@ -395,15 +395,21 @@ What to CHANGE from the photo:
 - Expression becomes more animated and joyful
 - Overall look is polished and stylized like a movie character
 
+===== BACKGROUND (CRITICAL!) =====
+- COMPLETELY REMOVE the original photo background — no trace of any real-world environment (no kitchens, no gardens, no bedrooms, no walls, no furniture)
+- REPLACE with a vibrant ILLUSTRATED celebration scene: bright colorful confetti, streamers, sparkles, and magical particles
+- The background must be ILLUSTRATED/ANIMATED style — NOT a photograph, NOT a real room with confetti added on top
+- Think: the character reveal moment from a Pixar movie trailer — pure animated magic
+
 ===== REQUIREMENTS =====
-- Celebration background with confetti and sparkles
 - Portrait orientation - show FULL figure
 - Character should be STANDING/POSED in a confident, joyful pose
-- Character looks ALIVE and full of personality — MATCH the expression from the drawing (if angry, be angry. if happy, be happy. if scared, be scared) — like the hero of their own movie
+- Character looks ALIVE and full of personality — like the hero of their own movie
+- The character must look like a FRAME FROM A PIXAR MOVIE — not a photo with a filter, not a 3D render of a doll, not a craft project
 - ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image
 - NO TEXT anywhere on image
 
-IMPORTANT: The output should make a child say "WOW that's me as a CARTOON!" — not "that's just my photo with a weird filter." Go BIG on the cartoon stylization!'''
+IMPORTANT: The output should make a child say "WOW that's me as a CARTOON!" — not "that's just my photo with a weird filter." Go BIG on the cartoon stylization. The character must be COMPLETELY RE-RENDERED as an animated character — not the original photo modified.'''
         else:
             prompt = f'''I am showing you a CHILDS DRAWING. Transform this EXACT character into a Disney/Pixar 3D movie character.
 
@@ -449,10 +455,20 @@ Transform the childs drawing into a character that looks like it belongs in:
 - Surfaces: Smooth appealing 3D with proper material definition — NOT a toy, NOT a figurine, NOT felt, NOT knitted, NOT woollen, NOT craft, NOT stop-motion, NOT claymation — a LIVING animated movie character
 - This is a movie character with LIFE and SOUL, not a 3D render of a doll
 
+===== BACKGROUND (CRITICAL!) =====
+- COMPLETELY REMOVE any trace of the original drawing's background — no paper, no table, no real-world environment
+- REPLACE with a vibrant ILLUSTRATED celebration scene: bright colorful confetti, streamers, sparkles, and magical particles
+- The background must be fully ANIMATED style matching the Pixar character — NOT a photograph
+
+===== RENDERING QUALITY (CRITICAL!) =====
+- The character must look like it belongs in an ACTUAL PIXAR FILM — Monsters Inc, Inside Out, Toy Story quality
+- Smooth appealing 3D surfaces with proper material definition
+- NOT felt, NOT woolly, NOT fuzzy texture, NOT craft-like, NOT stop-motion, NOT claymation
+- Even if the original drawing looks like a soft toy, render it as a SMOOTH 3D ANIMATED character with proper skin/surface materials
+- Pixar characters have SMOOTH CLEAN SURFACES with subsurface scattering — not fabric textures
+
 ===== REQUIREMENTS =====
-- Celebration background with confetti and sparkles
 - Portrait orientation - show FULL figure
-- ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image
 - ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image
 - This is original art - do not copy or include any watermarks from any source
 - NO TEXT anywhere on image
