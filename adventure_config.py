@@ -78,13 +78,18 @@ CHARACTER RULES:
         "rules": """
 AGE GROUP: 4 YEARS OLD
 
-COMPLEXITY: 12-18 colourable areas | Character fills 50% of page | Bold outlines (3-4px)
+COMPLEXITY: 12-18 colourable areas MAXIMUM | Character fills 50% of page | Bold outlines (3-4px)
+
+🚨 THIS IS FOR A 4-YEAR-OLD. Only one step up from a toddler page.
+The character should dominate. Backgrounds should be simple and chunky, not detailed or intricate.
 
 SCENE RULES:
-- 3-4 background elements with moderate detail — clear shapes but can have some simple internal lines
-- 1 supporting character if mentioned in the story
-- Background objects should still be bold and clearly defined, not intricate
-- Some WHITE SPACE remaining — don't overcrowd the page
+- 3-4 background elements using BIG SIMPLE SHAPES — no fine detail, no tiny objects
+- 1 supporting character if mentioned in the story — drawn simply, not with lots of accessories
+- NO intricate environments (no tiny houses with windows and doors, no detailed landscapes with multiple layers)
+- NO more than 12-18 distinct areas to colour — count them. If there are more, simplify.
+- Background objects should be bold and chunky like the character
+- Plenty of WHITE SPACE — a 4-year-old should not feel overwhelmed looking at this page
 
 CHARACTER RULES:
 - Character EXACTLY as shown in reference - no added clothing/patterns

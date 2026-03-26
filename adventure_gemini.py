@@ -1766,11 +1766,14 @@ FOR THIS AGE, OVERRIDE THE "3 DIFFERENT WORLDS" RULE ABOVE:
 - Theme 3: A simple event or activity (bath time, dinner time, bedtime, a walk, a picnic, a trip to the shops, playing in the garden, going to the playground)
 
 FOR AGE_4:
-Concepts can be slightly more complex but must still pass the "one sentence" test.
-Fantasy locations are OK but must be VISUALLY simple and immediately understandable:
-- GOOD: "Shrunk to ant-size in the garden" (kid can picture this instantly)
-- GOOD: "Everything in the kitchen comes alive at night" (simple, visual)
-- BAD: "A kingdom where everything is made of bubbles and there's a recipe bubble that holds the realm together" (too many abstract concepts stacked)
+Age 4 stories should be only a SMALL step up from age 3 — not a giant leap. Think Gruffalo, not Roald Dahl.
+- ONE simple concept per story. If it takes more than one sentence to explain, it's too complex.
+- Maximum 2-3 named characters total (main character + 1-2 others)
+- ONE problem, ONE solution. No multi-step engineering or abstract logic.
+- The resolution must be ONE physical action a 4-year-old can understand and copy.
+- Fantasy is OK but keep it to ONE magical element — not a whole civilisation with its own rules, deadlines, and systems.
+- Each page should have ONE clear thing happening — not multiple plot points.
+- The story should feel like it's one step above a toddler book, NOT a mini novel.
 The WANT must be something a 4-year-old experiences: wanting a toy, wanting to win, wanting to help a friend, wanting to fix something they broke, wanting to not get in trouble.
 
 *** VISUAL VARIETY — THIS IS A COLOURING BOOK ***
