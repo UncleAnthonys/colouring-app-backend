@@ -1757,6 +1757,15 @@ Fantasy locations are OK but must be VISUALLY simple and immediately understanda
 - BAD: "A kingdom where everything is made of bubbles and there's a recipe bubble that holds the realm together" (too many abstract concepts stacked)
 The WANT must be something a 4-year-old experiences: wanting a toy, wanting to win, wanting to help a friend, wanting to fix something they broke, wanting to not get in trouble.
 
+*** VISUAL VARIETY — THIS IS A COLOURING BOOK ***
+
+We are a COLOURING PAGE business. A child colours each page. If multiple pages show the same location from the same angle with the same objects, the child is colouring the same picture repeatedly. That is a bad experience.
+
+RULE: No more than 2 out of 5 episodes should share the same location. The story should move through at least 2-3 visually distinct settings.
+- Design the WANT/OBSTACLE/TWIST so the plot naturally takes characters to different places
+- If a story must stay in one broad area, make sure each episode shows a distinctly different PART of that area with different objects and surroundings
+- Every page a child colours should feel like a NEW picture, not a repeat of the last one
+
 *** NUMBERS AND COUNTS — GET THEM RIGHT ***
 When mentioning a character's features in theme names, blurbs, or descriptions:
 - READ the character description carefully for EXACT counts (how many legs, arms, eyes, fingers, etc.)
