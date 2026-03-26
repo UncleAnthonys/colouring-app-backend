@@ -26,9 +26,19 @@ AGE_RULES = {
         "rules": """
 AGE GROUP: UNDER 3 (TODDLER)
 
-COMPLEXITY: 5-8 colourable areas | Character fills 60% of page | Super thick outlines (5px+)
+COMPLEXITY: 5-8 colourable areas MAXIMUM | Character fills 60% of page | Super thick outlines (5px+)
 
-SCENE: Draw what the STORY SCENE describes - 1-2 large simple background elements only.
+🚨 THIS IS FOR A TODDLER. The page must be EXTREMELY SIMPLE.
+Think: a chunky character taking up most of the page, with 1-2 big simple shapes behind them.
+NOT: detailed landscapes, multiple characters, intricate backgrounds.
+
+SCENE RULES:
+- 1-2 large simple background objects ONLY (one tree, one house, one hill — not all three)
+- Each background object should be a BIG simple shape, not detailed
+- NO intricate textures on backgrounds (no individual leaves, no brick patterns, no grass blades)
+- NO more than 1 supporting character visible at a time
+- Lots of WHITE SPACE — the page should feel open and uncluttered
+- A toddler should be able to colour this page in 5 minutes with chunky crayons
 
 CHARACTER RULES:
 - Character EXACTLY as shown in reference - no added clothing/patterns
@@ -45,7 +55,15 @@ AGE GROUP: 3 YEARS OLD
 
 COMPLEXITY: 8-12 colourable areas | Character fills 55% of page | Bold thick outlines (4px+)
 
-SCENE: Draw what the STORY SCENE describes - 2-3 simple background elements.
+🚨 THIS IS FOR A 3-YEAR-OLD. Keep it simple and chunky.
+The character dominates the page. Background is minimal and uses big simple shapes.
+
+SCENE RULES:
+- 2-3 simple background objects — each one a clear, bold shape
+- NO fine detail on backgrounds (no leaf textures, no brick patterns, no wood grain)
+- Supporting characters should be simple and chunky, not detailed
+- Plenty of WHITE SPACE — don't fill every corner
+- A 3-year-old should be able to colour this without getting frustrated by tiny areas
 
 CHARACTER RULES:
 - Character EXACTLY as shown in reference - no added clothing/patterns
@@ -62,7 +80,11 @@ AGE GROUP: 4 YEARS OLD
 
 COMPLEXITY: 12-18 colourable areas | Character fills 50% of page | Bold outlines (3-4px)
 
-SCENE: Draw what the STORY SCENE describes - 3-4 background elements, 1 supporting character if in story.
+SCENE RULES:
+- 3-4 background elements with moderate detail — clear shapes but can have some simple internal lines
+- 1 supporting character if mentioned in the story
+- Background objects should still be bold and clearly defined, not intricate
+- Some WHITE SPACE remaining — don't overcrowd the page
 
 CHARACTER RULES:
 - Character EXACTLY as shown in reference - no added clothing/patterns
@@ -133,7 +155,7 @@ AGE GROUP: 8 YEARS OLD
 
 COMPLEXITY: 40-50 colourable areas | Character fills 25% of page | Medium-fine outlines (2px)
 
-SCENE: Draw what the STORY SCENE describes - 8-10 background elements, 3-4 supporting characters, multiple depth layers, small hidden details.
+SCENE: Draw what the STORY SCENE describes - 8-10 background elements, 3-4 supporting characters, multiple depth layers, small hidden details to discover. Fill the scene richly — older children enjoy detailed pages that take time to complete.
 
 CHARACTER RULES:
 - Character EXACTLY as shown in reference - no added clothing/patterns
@@ -151,7 +173,7 @@ AGE GROUP: 9 YEARS OLD
 
 COMPLEXITY: 50-65 colourable areas | Character fills 22% of page | Fine outlines (1.5-2px)
 
-SCENE: Draw what the STORY SCENE describes - 10-12 background elements, 4-5 supporting characters, complex layered depth, many small details.
+SCENE: Draw what the STORY SCENE describes - 10-12 background elements, 4-5 supporting characters, complex layered depth, many small details. Intricate backgrounds with patterns, textures, and hidden elements that reward careful colouring.
 
 CHARACTER RULES:
 - Character EXACTLY as shown in reference - no added clothing/patterns
@@ -169,7 +191,7 @@ AGE GROUP: 10+ YEARS OLD (ADVANCED)
 
 COMPLEXITY: 65-100 colourable areas | Character fills 20% of page | Fine outlines (1-1.5px)
 
-SCENE: Draw what the STORY SCENE describes - 12+ background elements, 5+ supporting characters, complex multi-layered composition, decorative borders optional, many hidden details.
+SCENE: Draw what the STORY SCENE describes - 12+ background elements, 5+ supporting characters, complex multi-layered composition, decorative borders optional, many hidden details. Maximum detail and intricacy — this should challenge and engage an older child who enjoys spending time on a single page.
 
 CHARACTER RULES:
 - Character EXACTLY as shown in reference - no added clothing/patterns
