@@ -1015,7 +1015,7 @@ AGE GROUP: 2-3 YEARS OLD (TODDLER)
 
 *** WRITING STYLE ***
 - Rhythmic text works well but DO NOT rhyme unless the user specifically chose "Rhyming" style
-- Sound effects on every page: "SPLISH!", "BANG!", "WHOOOOSH!", "POP POP POP!"
+- Sound effects for IMPACT MOMENTS ONLY — one per page is plenty, two maximum. Real toddler books use them sparingly. "SPLAT!" lands harder when it's the only loud word on the page. Do NOT fill every sentence with sound effects — it becomes noise, not fun.
 - Very short sentences (5-8 words max)
 - Repetition with variation is the #1 tool - same phrase structure, different word each time
 - Fun made-up words: "splishy-sploshy", "rumbly-tumbly", "snore-a-saurus"
@@ -1112,7 +1112,7 @@ AGE GROUP: 4 YEARS OLD
 
 *** WRITING STYLE ***
 - DO NOT rhyme unless the user specifically chose "Rhyming" style
-- Lots of sound effects: "KERPLUNK!", "tip-toe-tip-toe", "KABOOM!"
+- Sound effects at KEY MOMENTS — 1-2 per page maximum. They should punctuate the action, not replace it. A well-placed "KERPLUNK!" is funnier than three sound effects in one sentence.
 - Simple sentences (8-12 words) with occasional longer ones for drama
 - A catchphrase or repeated question works great as a story thread
 - Funny comparisons: "as tall as a house!", "louder than a thunderstorm!"
@@ -1781,6 +1781,8 @@ RULE: No more than 2 out of 5 episodes should share the same location. The story
 - Design the WANT/OBSTACLE/TWIST so the plot naturally takes characters to different places
 - If a story must stay in one broad area, make sure each episode shows a distinctly different PART of that area with different objects and surroundings
 - Every page a child colours should feel like a NEW picture, not a repeat of the last one
+
+FOR AGES UNDER_3 AND AGE_3: Each episode SHOULD be in a completely different location. At this age the REPEATING PATTERN (the phrase, the sound, the character's action) holds the story together — not the setting. Real toddler books jump between locations freely because kids follow the pattern, not the geography. This gives the child 5 totally different pictures to colour.
 
 *** NUMBERS AND COUNTS — GET THEM RIGHT ***
 When mentioning a character's features in theme names, blurbs, or descriptions:
