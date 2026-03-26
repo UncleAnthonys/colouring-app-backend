@@ -368,9 +368,15 @@ def generate_reveal_from_photo_analysis(character_name: str, detailed_analysis: 
 - Fabric → Realistic fabric with folds and texture
 - Skin → Smooth Pixar skin with warmth
 
-## Scene Requirements:
-- Celebration background (colorful balloons, confetti, magical sparkles)
+## Background (CRITICAL — DO NOT KEEP ORIGINAL PHOTO BACKGROUND!):
+- COMPLETELY REMOVE the original photo background — no trace of the real-world environment (no living rooms, gardens, bedrooms, parks, or any real location)
+- REPLACE with a vibrant ILLUSTRATED celebration scene: colorful confetti, streamers, sparkles, and magical particles
+- The background must be ILLUSTRATED/ANIMATED style matching the Pixar character — NOT a photograph
+- Think: the confetti-filled reveal moment from a Pixar movie trailer
+- Bright, saturated colors — this is a celebration moment!
 - Warm lighting that makes character glow
+
+## Composition:
 - Character centered, full body visible
 - Portrait orientation (taller than wide)
 - Character looks joyful and alive
@@ -804,9 +810,15 @@ def generate_reveal_from_analysis(character_name: str, detailed_analysis: str) -
 - NO knitted texture, NO wool texture, NO visible fabric weave
 - Think: plastic toy clothing appearance, clean and smooth
 
-## Scene Requirements:
-- Celebration background (colorful balloons, confetti, magical sparkles)
+## Background (CRITICAL — DO NOT KEEP ORIGINAL DRAWING BACKGROUND!):
+- COMPLETELY REMOVE the original drawing's background — no trace of paper, table, or any real-world environment
+- REPLACE with a vibrant ILLUSTRATED celebration scene: colorful confetti, streamers, sparkles, and magical particles
+- The background must be ILLUSTRATED/ANIMATED style matching the Pixar character — NOT a photograph
+- Think: the confetti-filled reveal moment from a Pixar movie trailer
+- Bright, saturated colors — this is a celebration moment!
 - Warm lighting that makes character glow
+
+## Composition:
 - Character centered, full body visible
 - Portrait orientation (taller than wide)
 - Character looks joyful and alive
