@@ -2156,7 +2156,18 @@ KEY RULES:
 
 The supporting characters should be the things/animals/objects the character encounters in each episode — NOT complex characters with backstories. Just "a dog", "a cat", "an elephant" etc. Include species/size in brackets for the scene_description.
 
-Think: Dear Zoo, Brown Bear Brown Bear, We're Going on a Bear Hunt, Each Peach Pear Plum."""
+Think: Dear Zoo, Brown Bear Brown Bear, We're Going on a Bear Hunt, Each Peach Pear Plum.
+
+⚠️ RESOLUTION MUST MAKE PHYSICAL SENSE FOR YOUNG AGES (under_3, age_3, age_4):
+A toddler or young child cannot infer WHY something works — they need to SEE it.
+- The resolution must be a PHYSICAL ACTION that obviously solves the problem
+- If a child looking at the PICTURE can't understand why the problem is fixed, the resolution is too abstract
+- BAD: "put a flower on the dog's nose so it can only do small sniffs" (WHY would a flower reduce sniffing? Not obvious)
+- BAD: "listened to the quiet antenna" (a 3-year-old doesn't understand signal filtering)
+- GOOD: "covered his nose with both paws" (physically blocking = obviously can't smell)
+- GOOD: "closed his eyes and counted to ten really slowly" (simple action any child understands)
+- GOOD: "sat on the noisy thing to make it stop" (physical cause and effect)
+The test: describe the resolution to a 3-year-old WITHOUT explaining it. Would they understand from the picture alone? If you need to explain WHY it works, it's too complex."""
     elif age_level in transitional_age:
         story_structure = f"""*** STORY STRUCTURE — SIMPLE PATTERN WITH ARC (for age 4) ***
 This age is transitional. Use a REPEATING PATTERN but with a simple problem→solution thread running through it.
@@ -2176,7 +2187,13 @@ KEY RULES:
 - ONE supporting character is enough — don't overcomplicate
 - Each episode should have clear cause and effect
 
-Think: The Gruffalo, Three Billy Goats Gruff, Goldilocks, The Tiger Who Came to Tea."""
+Think: The Gruffalo, Three Billy Goats Gruff, Goldilocks, The Tiger Who Came to Tea.
+
+⚠️ RESOLUTION MUST MAKE OBVIOUS SENSE FOR AGE 4:
+The twist/resolution must be something a 4-year-old understands without explanation.
+- The character must DO something physically obvious that fixes the problem
+- A child looking at the picture should immediately understand what happened and why it worked
+- If a parent would need to explain the logic, the resolution is too abstract"""
     else:
         story_structure = f"""*** STORY STRUCTURE ***
 - Episode 1: Set up the problem AND establish WHY the character wants what they want. The reader must understand what happened BEFORE the story starts. If the character is apologising — show or explain what they did wrong. If they're searching — show what they lost. If they're helping — show why it matters to them. Introduce 2 named supporting characters with funny personalities (in scene_description, include species/size/accessories in brackets after each name — but NEVER in story_text). The companion character (if present) should react to the problem in their own way.
