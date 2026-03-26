@@ -1713,6 +1713,50 @@ Theme 2 must be set in an UNUSUAL or FANTASTICAL location — examples include u
 Theme 3 must involve a SPECIFIC JOB, EVENT, or MISSION (detective mystery, cooking contest, sports day, rescue mission, science fair, treasure hunt, talent show audition)
 No two themes can share the same type of setting, premise, or story structure.
 
+*** CONCEPT SIMPLICITY BY AGE — THIS OVERRIDES EVERYTHING ABOVE FOR YOUNG AGES ***
+
+FOR AGES UNDER_3 AND AGE_3 (toddlers):
+🚨 SIMPLE CONCEPTS ONLY. A toddler cannot understand abstract worlds, magic systems, or multi-step logic.
+
+WHAT A TODDLER CAN UNDERSTAND:
+- Big thing in small space (or small thing in big space)
+- Something keeps falling down / running away / getting lost
+- Trying to reach something that's too high / too far
+- Making a mess and trying to clean it up
+- An animal that makes a funny noise
+- Something that won't stop bouncing / rolling / growing
+- Hiding and finding (peek-a-boo logic)
+- Trying to give someone something but it keeps going wrong
+
+WHAT A TODDLER CANNOT UNDERSTAND:
+- Magic kingdoms, enchanted worlds, alternate dimensions
+- "Hair as a danger warning system" or any feature-as-signal concept
+- Characters with abstract motivations ("save the kingdom", "restore the balance")
+- Multi-step cause-and-effect chains (A causes B which triggers C)
+- Named royal characters (queens, kings) in fantasy settings
+- Any concept that requires EXPLAINING to a toddler before they can follow the story
+- Recipes, potions, spells, prophecies, missions
+
+TEST: Describe the story concept in ONE sentence using only words a 3-year-old knows. If you can't, the concept is too complex.
+- GOOD: "Dog tries to catch a ball but it keeps bouncing away" ✅
+- GOOD: "Monster is too loud and scares all the birds away" ✅
+- GOOD: "Cat tries to fit in a box but the box is too small" ✅
+- BAD: "Dog enters a bubble kingdom where ears create ripples that pop the recipe bubble" ❌
+- BAD: "Character's hair bounces as a warning signal in a glowing mushroom cave" ❌
+
+FOR THIS AGE, OVERRIDE THE "3 DIFFERENT WORLDS" RULE ABOVE:
+- Theme 1: EVERYDAY location (home, park, garden, shops, bath time, bed time, meal time)
+- Theme 2: SLIGHTLY magical version of an everyday location (the park at night, a puddle that's deeper than expected, a cupboard that's bigger inside, a sandpit with something buried in it) — NOT a fantasy kingdom
+- Theme 3: A simple event or activity (bath time, dinner time, bedtime, a walk, a picnic, a trip to the shops, playing in the garden, going to the playground)
+
+FOR AGE_4:
+Concepts can be slightly more complex but must still pass the "one sentence" test.
+Fantasy locations are OK but must be VISUALLY simple and immediately understandable:
+- GOOD: "Shrunk to ant-size in the garden" (kid can picture this instantly)
+- GOOD: "Everything in the kitchen comes alive at night" (simple, visual)
+- BAD: "A kingdom where everything is made of bubbles and there's a recipe bubble that holds the realm together" (too many abstract concepts stacked)
+The WANT must be something a 4-year-old experiences: wanting a toy, wanting to win, wanting to help a friend, wanting to fix something they broke, wanting to not get in trouble.
+
 *** NUMBERS AND COUNTS — GET THEM RIGHT ***
 When mentioning a character's features in theme names, blurbs, or descriptions:
 - READ the character description carefully for EXACT counts (how many legs, arms, eyes, fingers, etc.)
