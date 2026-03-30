@@ -6,7 +6,7 @@ import os
 import json
 import uuid
 from datetime import datetime
-from fastapi import APIRouter, HTTPException, Request
+from fastapi import APIRouter, HTTPException, Request, File, Form, UploadFile
 import redis as redis_lib
 
 job_router = APIRouter(prefix="/job", tags=["jobs"])
@@ -106,6 +106,77 @@ async def submit_job(request: Request):
     safe_params = json.loads(json.dumps(params, default=str))
     
     celery_app.send_task(task_name, args=[job_id, safe_params])
+    
+    return {"job_id": job_id, "status": "queued"}
+
+
+@job_router.post("/submit-reveal")
+async def submit_reveal_job(
+    image: UploadFile = File(...),
+    character_name: str = Form(...),
+    age_level: str = Form("age_5"),
+    has_second_character: str = Form("false"),
+    second_character_name: str = Form(""),
+    second_image: UploadFile = File(None),
+    writing_style: str = Form(""),
+    life_lesson: str = Form(""),
+    custom_theme: str = Form(""),
+    user_id: str = Form(""),
+):
+    """
+    Submit a character reveal flow job via multipart form (for FlutterFlow).
+    Accepts image as file upload, converts to base64, submits to Celery queue.
+    Returns job_id instantly.
+    """
+    from celery_app import celery_app
+    import base64
+    
+    # Read and encode the main image
+    image_data = await image.read()
+    image_b64 = base64.b64encode(image_data).decode('utf-8')
+    
+    # Read and encode second image if provided
+    second_image_b64 = ""
+    if second_image:
+        second_data = await second_image.read()
+        if second_data:
+            second_image_b64 = base64.b64encode(second_data).decode('utf-8')
+    
+    # Clean FlutterFlow's "null" strings
+    has_second = has_second_character.lower() in ("true", "1", "yes")
+    writing_style_clean = writing_style if writing_style not in ["", "null", "None"] else None
+    life_lesson_clean = life_lesson if life_lesson not in ["", "null", "None"] else None
+    custom_theme_clean = custom_theme if custom_theme not in ["", "null", "None"] else None
+    second_name_clean = second_character_name if second_character_name not in ["", "null", "None"] else None
+    
+    job_id = str(uuid.uuid4())
+    now = datetime.utcnow().isoformat()
+    
+    r = get_redis()
+    job_data = {
+        "job_id": job_id,
+        "status": "queued",
+        "job_type": "character_reveal_flow",
+        "progress": None,
+        "result": None,
+        "error": None,
+        "created_at": now,
+        "updated_at": now,
+    }
+    r.setex(f"job:{job_id}", 7200, json.dumps(job_data))  # 2 hour TTL for longer reveal jobs
+    
+    celery_app.send_task("tasks.character_reveal_flow_task", args=[job_id, {
+        "image_b64": image_b64,
+        "character_name": character_name,
+        "age_level": age_level,
+        "has_second_character": has_second,
+        "second_image_b64": second_image_b64,
+        "second_character_name": second_name_clean,
+        "writing_style": writing_style_clean,
+        "life_lesson": life_lesson_clean,
+        "custom_theme": custom_theme_clean,
+        "user_id": user_id,
+    }])
     
     return {"job_id": job_id, "status": "queued"}
 
