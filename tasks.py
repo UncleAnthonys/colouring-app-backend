@@ -448,13 +448,20 @@ def character_reveal_flow_task(self, job_id: str, params: dict):
         # ========== DONE ==========
         update_job_status(job_id, "complete", result={
             "character": extraction_result["character"],
+            "character_name": character_name,
             "reveal_description": extraction_result["reveal_description"],
             "reveal_image_url": reveal_url,
             "reveal_image_b64": reveal_image_b64,
             "source_type": extraction_result.get("source_type", "drawing"),
+            "age_level": age_level,
+            "writing_style": writing_style,
+            "life_lesson": life_lesson,
+            "custom_theme": custom_theme,
             "second_character": second_result,
+            "second_character_name": second_character_name,
             "second_reveal_image_url": second_reveal_url,
             "second_reveal_image_b64": second_reveal_b64,
+            "second_image_b64": second_image_b64,
             "stories": stories_result,
         })
 
