@@ -347,6 +347,133 @@ def extract_and_reveal_task(self, job_id: str, params: dict):
         update_job_status(job_id, "failed", error=str(e)[:500])
 
 
+@celery_app.task(name='tasks.character_reveal_flow_task', bind=True)
+def character_reveal_flow_task(self, job_id: str, params: dict):
+    """
+    Full character reveal orchestrator:
+    1. Extract + reveal first character
+    2. (Optional) Extract + reveal second character  
+    3. Generate 3 story pitches
+    Returns everything needed for the CharacterReveal page.
+    """
+    try:
+        import sys, os
+        task_dir = os.path.dirname(os.path.abspath(__file__))
+        if task_dir not in sys.path:
+            sys.path.insert(0, task_dir)
+
+        from character_extraction_gemini import extract_character_with_extreme_accuracy
+        from adventure_gemini import generate_adventure_reveal_gemini, generate_personalized_stories
+        from firebase_utils import upload_to_firebase
+        from app import normalize_age_level
+        import base64
+
+        character_name = params.get("character_name", "Character")
+        image_b64 = params.get("image_b64")
+        age_level = normalize_age_level(params.get("age_level", "age_5"))
+        writing_style = params.get("writing_style")
+        life_lesson = params.get("life_lesson")
+        custom_theme = params.get("custom_theme")
+        
+        # Second character params (optional)
+        has_second = params.get("has_second_character", False)
+        second_character_name = params.get("second_character_name")
+        second_image_b64 = params.get("second_image_b64")
+
+        # ========== STEP 1: First character extract + reveal ==========
+        update_job_status(job_id, "processing", progress="Analysing your drawing...")
+        
+        image_bytes = base64.b64decode(image_b64)
+        extraction_result = run_async(extract_character_with_extreme_accuracy(image_bytes, character_name))
+        
+        update_job_status(job_id, "processing", progress="Bringing your character to life...")
+        
+        reveal_image_b64 = run_async(generate_adventure_reveal_gemini(
+            character_data={
+                'name': character_name,
+                'description': extraction_result['reveal_description'],
+                'key_feature': extraction_result['character']['key_feature'],
+                'source_type': extraction_result.get('source_type', 'drawing')
+            },
+            original_drawing_b64=image_b64
+        ))
+        
+        reveal_url = upload_to_firebase(reveal_image_b64, folder="adventure/reveals")
+        
+        # ========== STEP 2: Second character (if provided) ==========
+        second_result = None
+        second_reveal_url = None
+        second_reveal_b64 = None
+        
+        if has_second and second_image_b64 and second_character_name:
+            update_job_status(job_id, "processing", progress=f"Analysing {second_character_name}...")
+            
+            second_bytes = base64.b64decode(second_image_b64)
+            second_extraction = run_async(extract_character_with_extreme_accuracy(second_bytes, second_character_name))
+            
+            update_job_status(job_id, "processing", progress=f"Bringing {second_character_name} to life...")
+            
+            second_reveal_b64 = run_async(generate_adventure_reveal_gemini(
+                character_data={
+                    'name': second_character_name,
+                    'description': second_extraction['reveal_description'],
+                    'key_feature': second_extraction['character']['key_feature'],
+                    'source_type': second_extraction.get('source_type', 'drawing')
+                },
+                original_drawing_b64=second_image_b64
+            ))
+            
+            second_reveal_url = upload_to_firebase(second_reveal_b64, folder="adventure/reveals")
+            second_result = {
+                "character": second_extraction["character"],
+                "reveal_description": second_extraction["reveal_description"],
+                "reveal_image_url": second_reveal_url,
+                "source_type": second_extraction.get("source_type", "drawing"),
+            }
+
+        # ========== STEP 3: Generate story pitches ==========
+        update_job_status(job_id, "processing", progress="Writing your stories...")
+        
+        stories_result = run_async(generate_personalized_stories(
+            character_name=character_name,
+            character_description=extraction_result['reveal_description'],
+            age_level=age_level,
+            writing_style=writing_style,
+            life_lesson=life_lesson,
+            custom_theme=custom_theme,
+            second_character_name=second_character_name if has_second else None,
+            second_character_description=second_result["reveal_description"] if second_result else None
+        ))
+
+        # ========== DONE ==========
+        update_job_status(job_id, "complete", result={
+            "character": extraction_result["character"],
+            "reveal_description": extraction_result["reveal_description"],
+            "reveal_image_url": reveal_url,
+            "reveal_image_b64": reveal_image_b64,
+            "source_type": extraction_result.get("source_type", "drawing"),
+            "second_character": second_result,
+            "second_reveal_image_url": second_reveal_url,
+            "second_reveal_image_b64": second_reveal_b64,
+            "stories": stories_result,
+        })
+
+        # Send push notification
+        try:
+            from push_notifications import send_push
+            user_id = params.get("user_id", "")
+            send_push(user_id, "Character Ready! ✨", f"Meet {character_name} and pick a story!", {"type": "reveal_flow", "job_id": job_id})
+        except Exception as e:
+            print(f"[WORKER] Push notification failed (non-fatal): {e}")
+
+        print(f"[WORKER] ✅ Full reveal flow complete: {character_name}")
+
+    except Exception as e:
+        print(f"[WORKER] ❌ Reveal flow failed: {str(e)}")
+        traceback.print_exc()
+        update_job_status(job_id, "failed", error=str(e)[:500])
+
+
 @celery_app.task(name='tasks.generate_colouring_page_task', bind=True)
 def generate_colouring_page_task(self, job_id: str, params: dict):
     """Generate a single colouring page (photo or text mode)."""
