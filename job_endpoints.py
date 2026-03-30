@@ -131,12 +131,18 @@ async def submit_reveal_job(
     from celery_app import celery_app
     import base64
     
-    # Read and encode the main image
+    # Upload main image to Firebase first (avoids sending large b64 through Redis)
     image_data = await image.read()
     image_b64 = base64.b64encode(image_data).decode('utf-8')
     
-    # Second image comes as base64 string from FlutterFlow
+    from firebase_utils import upload_to_firebase
+    temp_image_url = upload_to_firebase(image_b64, folder="adventure/temp-uploads")
+    
+    # Second image - upload to Firebase if provided
     second_image_b64_clean = second_image_b64 if second_image_b64 not in ["", "null", "None"] else ""
+    temp_second_url = ""
+    if second_image_b64_clean:
+        temp_second_url = upload_to_firebase(second_image_b64_clean, folder="adventure/temp-uploads")
     
     # Clean FlutterFlow's "null" strings
     has_second = has_second_character.lower() in ("true", "1", "yes")
@@ -162,11 +168,11 @@ async def submit_reveal_job(
     r.setex(f"job:{job_id}", 7200, json.dumps(job_data))  # 2 hour TTL for longer reveal jobs
     
     celery_app.send_task("tasks.character_reveal_flow_task", args=[job_id, {
-        "image_b64": image_b64,
+        "image_url": temp_image_url,
         "character_name": character_name,
         "age_level": age_level,
         "has_second_character": has_second,
-        "second_image_b64": second_image_b64_clean,
+        "second_image_url": temp_second_url,
         "second_character_name": second_name_clean,
         "writing_style": writing_style_clean,
         "life_lesson": life_lesson_clean,

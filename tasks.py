@@ -369,7 +369,7 @@ def character_reveal_flow_task(self, job_id: str, params: dict):
         import base64
 
         character_name = params.get("character_name", "Character")
-        image_b64 = params.get("image_b64")
+        image_url = params.get("image_url")
         age_level = normalize_age_level(params.get("age_level", "age_5"))
         writing_style = params.get("writing_style")
         life_lesson = params.get("life_lesson")
@@ -378,12 +378,16 @@ def character_reveal_flow_task(self, job_id: str, params: dict):
         # Second character params (optional)
         has_second = params.get("has_second_character", False)
         second_character_name = params.get("second_character_name")
-        second_image_b64 = params.get("second_image_b64")
+        second_image_url = params.get("second_image_url")
 
         # ========== STEP 1: First character extract + reveal ==========
         update_job_status(job_id, "processing", progress="Analysing your drawing...")
         
-        image_bytes = base64.b64decode(image_b64)
+        # Download image from Firebase URL
+        import httpx
+        resp = httpx.get(image_url, timeout=30)
+        image_bytes = resp.content
+        image_b64 = base64.b64encode(image_bytes).decode('utf-8')
         extraction_result = run_async(extract_character_with_extreme_accuracy(image_bytes, character_name))
         
         update_job_status(job_id, "processing", progress="Bringing your character to life...")
@@ -405,10 +409,13 @@ def character_reveal_flow_task(self, job_id: str, params: dict):
         second_reveal_url = None
         second_reveal_b64 = None
         
-        if has_second and second_image_b64 and second_character_name:
+        if has_second and second_image_url and second_character_name:
             update_job_status(job_id, "processing", progress=f"Analysing {second_character_name}...")
             
-            second_bytes = base64.b64decode(second_image_b64)
+            # Download second image from Firebase URL
+            resp2 = httpx.get(second_image_url, timeout=30)
+            second_bytes = resp2.content
+            second_image_b64 = base64.b64encode(second_bytes).decode('utf-8')
             second_extraction = run_async(extract_character_with_extreme_accuracy(second_bytes, second_character_name))
             
             update_job_status(job_id, "processing", progress=f"Bringing {second_character_name} to life...")
