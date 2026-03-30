@@ -117,7 +117,7 @@ async def submit_reveal_job(
     age_level: str = Form("age_5"),
     has_second_character: str = Form("false"),
     second_character_name: str = Form(""),
-    second_image: UploadFile = File(None),
+    second_image_b64: str = Form(""),
     writing_style: str = Form(""),
     life_lesson: str = Form(""),
     custom_theme: str = Form(""),
@@ -135,12 +135,8 @@ async def submit_reveal_job(
     image_data = await image.read()
     image_b64 = base64.b64encode(image_data).decode('utf-8')
     
-    # Read and encode second image if provided
-    second_image_b64 = ""
-    if second_image:
-        second_data = await second_image.read()
-        if second_data:
-            second_image_b64 = base64.b64encode(second_data).decode('utf-8')
+    # Second image comes as base64 string from FlutterFlow
+    second_image_b64_clean = second_image_b64 if second_image_b64 not in ["", "null", "None"] else 
     
     # Clean FlutterFlow's "null" strings
     has_second = has_second_character.lower() in ("true", "1", "yes")
@@ -170,7 +166,7 @@ async def submit_reveal_job(
         "character_name": character_name,
         "age_level": age_level,
         "has_second_character": has_second,
-        "second_image_b64": second_image_b64,
+        "second_image_b64": second_image_b64_clean,
         "second_character_name": second_name_clean,
         "writing_style": writing_style_clean,
         "life_lesson": life_lesson_clean,
