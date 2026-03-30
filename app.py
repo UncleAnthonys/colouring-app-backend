@@ -24,6 +24,10 @@ from adventure_endpoints import router as adventure_router
 from job_endpoints import job_router
 from firebase_utils import init_firebase, upload_to_firebase
 
+# Increase multipart form field size limit (default 1MB too small for base64 images)
+from starlette.formparsers import MultiPartParser
+MultiPartParser.max_file_size = 1024 * 1024 * 20  # 20MB
+
 app = FastAPI(title="Kids Colouring App API", version="1.0.0")
 
 # CORS for FlutterFlow
