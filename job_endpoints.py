@@ -149,7 +149,7 @@ async def submit_reveal_job(
     writing_style_clean = writing_style if writing_style not in ["", "null", "None"] else None
     life_lesson_clean = life_lesson if life_lesson not in ["", "null", "None"] else None
     custom_theme_clean = custom_theme if custom_theme not in ["", "null", "None"] else None
-    second_name_clean = second_character_name if second_character_name not in ["", "null", "None"] else None
+    second_name_clean = second_character_name if second_character_name not in ["", "null", "None"] else ""
     
     job_id = str(uuid.uuid4())
     now = datetime.utcnow().isoformat()
