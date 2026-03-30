@@ -468,7 +468,7 @@ def character_reveal_flow_task(self, job_id: str, params: dict):
             "second_character_name": second_character_name,
             "second_reveal_image_url": second_reveal_url,
             "second_reveal_image_b64": second_reveal_b64,
-            "second_image_b64": second_image_b64,
+            "second_image_b64": second_image_b64 if has_second else "",
             "stories": stories_result,
         })
 
