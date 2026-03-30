@@ -136,7 +136,7 @@ async def submit_reveal_job(
     image_b64 = base64.b64encode(image_data).decode('utf-8')
     
     # Second image comes as base64 string from FlutterFlow
-    second_image_b64_clean = second_image_b64 if second_image_b64 not in ["", "null", "None"] else 
+    second_image_b64_clean = second_image_b64 if second_image_b64 not in ["", "null", "None"] else ""
     
     # Clean FlutterFlow's "null" strings
     has_second = has_second_character.lower() in ("true", "1", "yes")
