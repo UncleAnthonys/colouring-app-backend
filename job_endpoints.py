@@ -117,7 +117,7 @@ async def submit_reveal_job(
     age_level: str = Form("age_5"),
     has_second_character: str = Form("false"),
     second_character_name: str = Form(""),
-    second_image_b64: str = Form(""),
+    second_image: UploadFile = File(None),
     writing_style: str = Form(""),
     life_lesson: str = Form(""),
     custom_theme: str = Form(""),
@@ -138,11 +138,13 @@ async def submit_reveal_job(
     from firebase_utils import upload_to_firebase
     temp_image_url = upload_to_firebase(image_b64, folder="adventure/temp-uploads")
     
-    # Second image - upload to Firebase if provided
-    second_image_b64_clean = second_image_b64 if second_image_b64 not in ["", "null", "None"] else ""
+    # Second image - read file and upload to Firebase if provided
     temp_second_url = ""
-    if second_image_b64_clean:
-        temp_second_url = upload_to_firebase(second_image_b64_clean, folder="adventure/temp-uploads")
+    if second_image:
+        second_data = await second_image.read()
+        if second_data and len(second_data) > 100:
+            second_b64 = base64.b64encode(second_data).decode('utf-8')
+            temp_second_url = upload_to_firebase(second_b64, folder="adventure/temp-uploads")
     
     # Clean FlutterFlow's "null" strings
     has_second = has_second_character.lower() in ("true", "1", "yes")
