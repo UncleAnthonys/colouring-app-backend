@@ -139,9 +139,21 @@ def generate_region_map(
     
     # Lines/background (label 0) stay fully transparent
     mask = labels > 0
-    region_map[mask, 0] = (labels[mask] % 256).astype(np.uint8)
+    # OpenCV imencode writes BGR, Flutter reads RGBA from PNG.
+    # So we put region_id in channels that end up as R,G after the swap:
+    # OpenCV channel 2 (R in BGR) → becomes B in PNG → Flutter reads as R ✗
+    # OpenCV channel 0 (B in BGR) → becomes R in PNG → Flutter reads as R ✗
+    # Actually: cv2.imencode PNG writes in BGRA order internally.
+    # Flutter rawRgba reads R=0,G=1,B=2,A=3.
+    # PNG stores channels as R,G,B,A regardless of OpenCV's internal BGR.
+    # But cv2.imencode treats input as BGRA, so:
+    #   input[0] = B → written to PNG Blue channel → Flutter index 2
+    #   input[1] = G → written to PNG Green channel → Flutter index 1
+    #   input[2] = R → written to PNG Red channel → Flutter index 0
+    # So to get region_id into Flutter's R (index 0), put it in OpenCV's index 2.
+    region_map[mask, 2] = (labels[mask] % 256).astype(np.uint8)
     region_map[mask, 1] = ((labels[mask] // 256) % 256).astype(np.uint8)
-    region_map[mask, 2] = 255  # Marker
+    region_map[mask, 0] = 255  # Marker (ends up in Flutter's B channel)
     region_map[mask, 3] = 255  # Opaque
     
     # Encode to PNG
