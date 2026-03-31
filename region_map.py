@@ -184,9 +184,9 @@ def generate_boundary_mask(image_bytes: bytes, line_threshold: int = 220) -> byt
     # Build RGBA: white+opaque where colourable, transparent where lines
     mask = np.zeros((h, w, 4), dtype=np.uint8)
     colourable = binary == 255
-    mask[colourable, 0] = 255
-    mask[colourable, 1] = 255
-    mask[colourable, 2] = 255
+    mask[colourable, 0] = 0
+    mask[colourable, 1] = 0
+    mask[colourable, 2] = 0
     mask[colourable, 3] = 255
     # Lines stay (0, 0, 0, 0) = transparent
     
