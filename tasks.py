@@ -693,17 +693,17 @@ def generate_colouring_page_task(self, job_id: str, params: dict):
         output_img = Image.open(io.BytesIO(base64.b64decode(output_b64)))
         is_landscape = output_img.width > output_img.height
         
-        # Generate boundary mask for colour-on-screen feature
+        # Generate region map for colour-on-screen feature
         mask_url = None
         try:
-            from region_map import generate_boundary_mask
+            from region_map import generate_region_map
             image_bytes_for_mask = base64.b64decode(output_b64)
-            mask_bytes = generate_boundary_mask(image_bytes_for_mask)
-            mask_b64 = base64.b64encode(mask_bytes).decode("utf-8")
+            region_map_bytes, num_regions = generate_region_map(image_bytes_for_mask)
+            mask_b64 = base64.b64encode(region_map_bytes).decode("utf-8")
             mask_url = upload_to_firebase(mask_b64, folder="masks")
-            print(f"[WORKER] ✅ Mask uploaded: {mask_url}")
+            print(f"[WORKER] ✅ Region map uploaded ({num_regions} regions): {mask_url}")
         except Exception as e:
-            print(f"[WORKER] ⚠️ Mask generation failed (non-fatal): {e}")
+            print(f"[WORKER] ⚠️ Region map generation failed (non-fatal): {e}")
         
         update_job_status(job_id, "complete", result={
             "image_url": image_url,
