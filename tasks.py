@@ -301,10 +301,19 @@ def extract_and_reveal_task(self, job_id: str, params: dict):
         import base64
         
         image_b64 = params.get("image_b64")
+        image_url = params.get("image_url")
         character_name = params.get("character_name", "Character")
         age_level = params.get("age_level", "age_5")
         
-        image_bytes = base64.b64decode(image_b64)
+        # Download image from Firebase URL if b64 not provided
+        if image_url and not image_b64:
+            import httpx
+            resp = httpx.get(image_url, timeout=30)
+            image_bytes = resp.content
+            image_b64 = base64.b64encode(image_bytes).decode('utf-8')
+            print(f"[WORKER] Downloaded image from URL, b64 length: {len(image_b64)}")
+        else:
+            image_bytes = base64.b64decode(image_b64)
         
         # Extract character
         update_job_status(job_id, "processing", progress="Understanding your character...")
@@ -329,7 +338,6 @@ def extract_and_reveal_task(self, job_id: str, params: dict):
             "character": extraction_result["character"],
             "reveal_description": extraction_result["reveal_description"],
             "reveal_image_url": reveal_url,
-            "reveal_image_b64": reveal_image_b64,
             "source_type": extraction_result.get("source_type", "drawing"),
         })
         

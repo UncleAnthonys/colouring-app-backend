@@ -113,9 +113,13 @@ async def submit_job(request: Request):
 @job_router.post("/submit-reveal")
 async def submit_reveal_job(request: Request):
     """
-    Submit a character reveal flow job via multipart form (for FlutterFlow).
-    Manually parses form to handle FlutterFlow sending "null" for optional file fields.
-    Returns job_id instantly.
+    Submit a SINGLE character extract+reveal job.
+    Accepts multipart form with image file upload.
+    Uploads image to Firebase first, passes URL to worker (avoids Redis size limits).
+    Returns job_id instantly — poll /job/{id}/status for result.
+    
+    Result contains: character, reveal_description, reveal_image_url, source_type
+    (Same data as the old /extract-and-reveal endpoint, just queued)
     """
     from celery_app import celery_app
     import base64
@@ -125,37 +129,15 @@ async def submit_reveal_job(request: Request):
     
     image = form.get("image")
     character_name = form.get("character_name", "Character")
-    age_level = form.get("age_level", "age_5")
-    has_second_character = form.get("has_second_character", "false")
-    second_character_name = form.get("second_character_name", "")
-    second_image = form.get("second_image")
-    writing_style = form.get("writing_style", "")
-    life_lesson = form.get("life_lesson", "")
-    custom_theme = form.get("custom_theme", "")
     user_id = form.get("user_id", "")
     
-    # Read and upload main image to Firebase
+    if not image or not hasattr(image, 'read'):
+        raise HTTPException(status_code=400, detail="No image file provided")
+    
+    # Upload image to Firebase (avoids sending large b64 through Redis)
     image_data = await image.read()
     image_b64 = base64.b64encode(image_data).decode('utf-8')
     temp_image_url = upload_to_firebase(image_b64, folder="adventure/temp-uploads")
-    
-    # Second image - only process if it's an actual file upload (not "null" string)
-    temp_second_url = ""
-    if second_image and hasattr(second_image, 'read'):
-        try:
-            second_data = await second_image.read()
-            if second_data and len(second_data) > 100:
-                second_b64 = base64.b64encode(second_data).decode('utf-8')
-                temp_second_url = upload_to_firebase(second_b64, folder="adventure/temp-uploads")
-        except Exception as e:
-            print(f"[SUBMIT-REVEAL] Second image read failed (non-fatal): {e}")
-    
-    # Clean FlutterFlow's "null" strings
-    has_second = has_second_character.lower() in ("true", "1", "yes")
-    writing_style_clean = writing_style if writing_style not in ["", "null", "None"] else None
-    life_lesson_clean = life_lesson if life_lesson not in ["", "null", "None"] else None
-    custom_theme_clean = custom_theme if custom_theme not in ["", "null", "None"] else None
-    second_name_clean = second_character_name if second_character_name not in ["", "null", "None"] else ""
     
     job_id = str(uuid.uuid4())
     now = datetime.utcnow().isoformat()
@@ -164,25 +146,68 @@ async def submit_reveal_job(request: Request):
     job_data = {
         "job_id": job_id,
         "status": "queued",
-        "job_type": "character_reveal_flow",
+        "job_type": "extract_and_reveal",
         "progress": None,
         "result": None,
         "error": None,
         "created_at": now,
         "updated_at": now,
     }
-    r.setex(f"job:{job_id}", 7200, json.dumps(job_data))  # 2 hour TTL for longer reveal jobs
+    r.setex(f"job:{job_id}", 3600, json.dumps(job_data))
     
-    celery_app.send_task("tasks.character_reveal_flow_task", args=[job_id, {
+    celery_app.send_task("tasks.extract_and_reveal_task", args=[job_id, {
         "image_url": temp_image_url,
         "character_name": character_name,
-        "age_level": age_level,
-        "has_second_character": has_second,
-        "second_image_url": temp_second_url,
-        "second_character_name": second_name_clean,
-        "writing_style": writing_style_clean,
-        "life_lesson": life_lesson_clean,
-        "custom_theme": custom_theme_clean,
+        "user_id": user_id,
+    }])
+    
+    return {"job_id": job_id, "status": "queued"}
+
+
+@job_router.post("/submit-reveal-second")
+async def submit_reveal_second_job(request: Request):
+    """
+    Submit a SECOND character extract+reveal job.
+    Same as /submit-reveal but for the companion character.
+    Accepts multipart form with image file upload.
+    """
+    from celery_app import celery_app
+    import base64
+    from firebase_utils import upload_to_firebase
+    
+    form = await request.form()
+    
+    image = form.get("image")
+    character_name = form.get("character_name", "Character")
+    user_id = form.get("user_id", "")
+    
+    if not image or not hasattr(image, 'read'):
+        raise HTTPException(status_code=400, detail="No image file provided")
+    
+    # Upload image to Firebase
+    image_data = await image.read()
+    image_b64 = base64.b64encode(image_data).decode('utf-8')
+    temp_image_url = upload_to_firebase(image_b64, folder="adventure/temp-uploads")
+    
+    job_id = str(uuid.uuid4())
+    now = datetime.utcnow().isoformat()
+    
+    r = get_redis()
+    job_data = {
+        "job_id": job_id,
+        "status": "queued",
+        "job_type": "extract_and_reveal",
+        "progress": None,
+        "result": None,
+        "error": None,
+        "created_at": now,
+        "updated_at": now,
+    }
+    r.setex(f"job:{job_id}", 3600, json.dumps(job_data))
+    
+    celery_app.send_task("tasks.extract_and_reveal_task", args=[job_id, {
+        "image_url": temp_image_url,
+        "character_name": character_name,
         "user_id": user_id,
     }])
     
