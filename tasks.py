@@ -96,6 +96,8 @@ def generate_full_story_task(self, job_id: str, params: dict):
         source_type = params.get("source_type", "drawing")
         
         # Download reveal from URL if b64 not provided (keeps Redis payload small)
+        print(f"[WORKER] reveal_image_b64 length: {len(reveal_image_b64) if reveal_image_b64 else 0}")
+        print(f"[WORKER] reveal_image_url: {reveal_image_url}")
         if reveal_image_url and not reveal_image_b64:
             try:
                 import httpx
