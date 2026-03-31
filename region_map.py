@@ -152,7 +152,7 @@ def generate_region_map(
     return png_bytes.tobytes(), num_regions
 
 
-def generate_boundary_mask(image_bytes: bytes, line_threshold: int = 180) -> bytes:
+def generate_boundary_mask(image_bytes: bytes, line_threshold: int = 220) -> bytes:
     """
     Generate a simple boundary mask (white where colourable, transparent where lines).
     This is the simpler version used by the Flutter widget for "stay in the lines".
@@ -176,9 +176,9 @@ def generate_boundary_mask(image_bytes: bytes, line_threshold: int = 180) -> byt
     _, binary = cv2.threshold(img, line_threshold, 255, cv2.THRESH_BINARY)
     
     # Slight erosion to make lines a bit thicker (better masking)
-    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
+    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
     inverted = cv2.bitwise_not(binary)
-    dilated = cv2.dilate(inverted, kernel, iterations=1)
+    dilated = cv2.dilate(inverted, kernel, iterations=2)
     binary = cv2.bitwise_not(dilated)
     
     # Build RGBA: white+opaque where colourable, transparent where lines
