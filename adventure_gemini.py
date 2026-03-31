@@ -237,9 +237,14 @@ def create_front_cover(image_b64: str, full_title: str, character_name: str) -> 
     import io
     import textwrap
     
-    # Decode Gemini's cover image
+    # Decode Gemini's cover image and resize to match A4 episode pages
     img_data = base64.b64decode(image_b64)
     cover_img = Image.open(io.BytesIO(img_data)).convert('RGB')
+    
+    # Resize to A4 at 150 DPI (1240x1754) to match episode pages
+    A4_WIDTH = 1240
+    A4_HEIGHT = 1754
+    cover_img = cover_img.resize((A4_WIDTH, A4_HEIGHT), Image.LANCZOS)
     
     # Remove any border line Gemini may have added — paint outer 20px white
     img_w, img_h = cover_img.size
@@ -315,7 +320,7 @@ def create_front_cover(image_b64: str, full_title: str, character_name: str) -> 
         title_y += line_height + int(img_height * 0.008)
     
     # === BRANDING at bottom — smaller bubble text ===
-    bottom_text = "A Little Lines Story Book"
+    bottom_text = "A Little Lines Storybook"
     bottom_bbox = draw.textbbox((0, 0), bottom_text, font=subtitle_font)
     bottom_width = bottom_bbox[2] - bottom_bbox[0]
     bottom_height = bottom_bbox[3] - bottom_bbox[1]
