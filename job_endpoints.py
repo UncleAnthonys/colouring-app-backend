@@ -111,40 +111,44 @@ async def submit_job(request: Request):
 
 
 @job_router.post("/submit-reveal")
-async def submit_reveal_job(
-    image: UploadFile = File(...),
-    character_name: str = Form(...),
-    age_level: str = Form("age_5"),
-    has_second_character: str = Form("false"),
-    second_character_name: str = Form(""),
-    second_image: UploadFile = File(None),
-    writing_style: str = Form(""),
-    life_lesson: str = Form(""),
-    custom_theme: str = Form(""),
-    user_id: str = Form(""),
-):
+async def submit_reveal_job(request: Request):
     """
     Submit a character reveal flow job via multipart form (for FlutterFlow).
-    Accepts image as file upload, converts to base64, submits to Celery queue.
+    Manually parses form to handle FlutterFlow sending "null" for optional file fields.
     Returns job_id instantly.
     """
     from celery_app import celery_app
     import base64
+    from firebase_utils import upload_to_firebase
     
-    # Upload main image to Firebase first (avoids sending large b64 through Redis)
+    form = await request.form()
+    
+    image = form.get("image")
+    character_name = form.get("character_name", "Character")
+    age_level = form.get("age_level", "age_5")
+    has_second_character = form.get("has_second_character", "false")
+    second_character_name = form.get("second_character_name", "")
+    second_image = form.get("second_image")
+    writing_style = form.get("writing_style", "")
+    life_lesson = form.get("life_lesson", "")
+    custom_theme = form.get("custom_theme", "")
+    user_id = form.get("user_id", "")
+    
+    # Read and upload main image to Firebase
     image_data = await image.read()
     image_b64 = base64.b64encode(image_data).decode('utf-8')
-    
-    from firebase_utils import upload_to_firebase
     temp_image_url = upload_to_firebase(image_b64, folder="adventure/temp-uploads")
     
-    # Second image - read file and upload to Firebase if provided
+    # Second image - only process if it's an actual file upload (not "null" string)
     temp_second_url = ""
-    if second_image:
-        second_data = await second_image.read()
-        if second_data and len(second_data) > 100:
-            second_b64 = base64.b64encode(second_data).decode('utf-8')
-            temp_second_url = upload_to_firebase(second_b64, folder="adventure/temp-uploads")
+    if second_image and hasattr(second_image, 'read'):
+        try:
+            second_data = await second_image.read()
+            if second_data and len(second_data) > 100:
+                second_b64 = base64.b64encode(second_data).decode('utf-8')
+                temp_second_url = upload_to_firebase(second_b64, folder="adventure/temp-uploads")
+        except Exception as e:
+            print(f"[SUBMIT-REVEAL] Second image read failed (non-fatal): {e}")
     
     # Clean FlutterFlow's "null" strings
     has_second = has_second_character.lower() in ("true", "1", "yes")
