@@ -23,6 +23,22 @@ import uuid
 from adventure_endpoints import router as adventure_router
 from job_endpoints import job_router
 from firebase_utils import init_firebase, upload_to_firebase
+from region_map import generate_boundary_mask
+
+
+def generate_and_upload_mask(image_b64: str) -> str:
+    """Generate boundary mask from colouring page and upload to Firebase"""
+    try:
+        import base64 as b64mod
+        image_bytes = b64mod.b64decode(image_b64)
+        mask_bytes = generate_boundary_mask(image_bytes)
+        mask_b64 = b64mod.b64encode(mask_bytes).decode("utf-8")
+        mask_url = upload_to_firebase(mask_b64, folder="masks")
+        print(f"✅ Mask uploaded: {mask_url}")
+        return mask_url
+    except Exception as e:
+        print(f"⚠️ Mask generation failed: {e}")
+        return None
 
 # Increase multipart form field size limit (default 1MB too small for base64 images)
 from starlette.formparsers import MultiPartParser
@@ -1598,10 +1614,14 @@ async def generate_from_photo_endpoint(request: PhotoGenerateRequest):
     output_img = Image.open(io.BytesIO(base64.b64decode(output_b64)))
     is_landscape = output_img.width > output_img.height
 
+    # Generate boundary mask for colour-on-screen feature
+    mask_url = generate_and_upload_mask(output_b64)
+
     return {
         "success": True,
         "image_url": image_url,
         "pdf_url": pdf_url,
+        "mask_url": mask_url,
         "is_landscape": is_landscape,
         "generation_time": elapsed,
         "theme_used": request.custom_theme or request.theme,
@@ -1672,10 +1692,14 @@ async def generate_from_text_endpoint(request: TextGenerateRequest):
     except Exception as e:
         print(f"PDF generation/upload failed: {e}")
     
+    # Generate boundary mask for colour-on-screen feature
+    mask_url = generate_and_upload_mask(output_b64)
+
     return {
         "success": True,
         "image_url": image_url,
         "pdf_url": pdf_url,
+        "mask_url": mask_url,
         "generation_time": elapsed,
         "description": request.description,
         "age_level": request.age_level
