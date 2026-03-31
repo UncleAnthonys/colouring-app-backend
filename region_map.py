@@ -28,7 +28,7 @@ def generate_region_map(
     image_bytes: bytes,
     line_threshold: int = 180,
     min_region_size: int = 100,
-    line_thickness_dilate: int = 2,
+    line_thickness_dilate: int = 1,
 ) -> tuple[bytes, int]:
     """
     Generate a region map from a colouring page image.
