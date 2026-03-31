@@ -338,6 +338,7 @@ def extract_and_reveal_task(self, job_id: str, params: dict):
             "character": extraction_result["character"],
             "reveal_description": extraction_result["reveal_description"],
             "reveal_image_url": reveal_url,
+            "reveal_image_b64": reveal_image_b64,
             "source_type": extraction_result.get("source_type", "drawing"),
         })
         
