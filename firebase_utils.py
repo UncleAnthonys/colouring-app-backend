@@ -35,16 +35,17 @@ def init_firebase():
     _firebase_initialized = True
 
 
-def upload_to_firebase(image_b64: str, folder: str = "generations") -> str:
+def upload_to_firebase(image_b64: str, folder: str = "generations", content_type: str = "image/png") -> str:
     """Upload base64 image to Firebase Storage and return public URL"""
     init_firebase()
     
     image_bytes = base64.b64decode(image_b64)
-    filename = f"{folder}/{uuid.uuid4()}.png"
+    ext = "pdf" if content_type == "application/pdf" else "png"
+    filename = f"{folder}/{uuid.uuid4()}.{ext}"
     
     bucket = storage.bucket()
     blob = bucket.blob(filename)
-    blob.upload_from_string(image_bytes, content_type='image/png')
+    blob.upload_from_string(image_bytes, content_type=content_type)
     blob.make_public()
     
     return blob.public_url

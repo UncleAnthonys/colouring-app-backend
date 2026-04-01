@@ -935,7 +935,7 @@ def generate_pack_task(self, job_id: str, params: dict):
 
         # --- Upload combined PDF to Firebase Storage ---
         pdf_b64 = base64.b64encode(combined_pdf_bytes.read()).decode('utf-8')
-        pdf_url = upload_to_firebase(pdf_b64, folder="packs")
+        pdf_url = upload_to_firebase(pdf_b64, folder="packs", content_type="application/pdf")
 
         print(f"[WORKER-PACK] ✅ Pack PDF uploaded: {pdf_url}")
 
