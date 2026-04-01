@@ -281,5 +281,6 @@ async def get_pack_catalog():
             "subjects": pack_def["subjects"],
             "category": pack_def.get("category", "general"),
             "cover_emoji": pack_def.get("cover_emoji", "🎨"),
+            "subjects_display": ", ".join([s.split("a ", 1)[-1].split("an ", 1)[-1].capitalize() for s in pack_def["subjects"]]),
         })
     return {"packs": catalog}
