@@ -151,6 +151,23 @@ PACK_CATALOG = {
         ],
     },
 
+
+    "pet_animals": {
+        "name": "Pet Animals",
+        "description": "Your favourite furry and scaly friends",
+        "category": "animals",
+        "cover_emoji": "🐱",
+        "subjects": [
+            "animal_cat", "animal_dog", "animal_parrot", "animal_budgie",
+            "animal_tarantula", "animal_mouse", "animal_rat", "animal_guinea_pig",
+            "animal_hamster", "animal_tortoise", "animal_gecko",
+        ],
+        "display_names": [
+            "Cat", "Dog", "Parrot", "Budgie", "Tarantula",
+            "Mouse", "Rat", "Guinea Pig", "Hamster", "Tortoise", "Gecko",
+        ],
+    },
+
     "alphabet": {
         "name": "Alphabet",
         "description": "Learn your letters A to Z",
