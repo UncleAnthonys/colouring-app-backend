@@ -797,6 +797,7 @@ def generate_pack_task(self, job_id: str, params: dict):
         user_id = params.get("user_id", "")
 
         generated_images = []  # list of (subject, PIL.Image) tuples
+        generated_pages = []   # list of dicts with individual page URLs
         failed_subjects = []
 
         for i, subject in enumerate(subjects):
@@ -870,10 +871,44 @@ def generate_pack_task(self, job_id: str, params: dict):
                 if output_b64 is None:
                     raise Exception("All attempts produced dark images")
 
+                # Upload individual image
+                image_url = upload_to_firebase(output_b64, folder="generations")
+
+                # Generate individual PDF
+                individual_pdf_url = None
+                try:
+                    from pdf_utils import create_a4_pdf
+                    ind_pdf_b64 = create_a4_pdf(output_b64)
+                    individual_pdf_url = upload_to_firebase(ind_pdf_b64, folder="pdfs")
+                except Exception as pdf_err:
+                    print(f"[WORKER-PACK] ⚠️ Individual PDF failed (non-fatal): {pdf_err}")
+
+                # Generate region mask for colour-on-screen
+                mask_url = None
+                try:
+                    from region_map import generate_region_map
+                    image_bytes_for_mask = base64.b64decode(output_b64)
+                    region_map_bytes, num_regions = generate_region_map(image_bytes_for_mask)
+                    mask_b64 = base64.b64encode(region_map_bytes).decode("utf-8")
+                    mask_url = upload_to_firebase(mask_b64, folder="masks")
+                except Exception as mask_err:
+                    print(f"[WORKER-PACK] ⚠️ Region map failed (non-fatal): {mask_err}")
+
+                # Detect orientation
                 img = Image.open(io.BytesIO(base64.b64decode(output_b64)))
                 if img.mode != "RGB":
                     img = img.convert("RGB")
+                is_landscape = img.width > img.height
+
                 generated_images.append((subject, img))
+                generated_pages.append({
+                    "image_url": image_url,
+                    "pdf_url": individual_pdf_url,
+                    "mask_url": mask_url,
+                    "is_landscape": is_landscape,
+                    "theme_used": subject,
+                    "age_level": age_level,
+                })
 
                 print(f"[WORKER-PACK] ✅ Page {page_num}/{total} done: {subject[:50]}")
 
@@ -945,6 +980,7 @@ def generate_pack_task(self, job_id: str, params: dict):
             "pack_name": pack_name,
             "pack_id": pack_id,
             "age_level": age_level,
+            "pages": generated_pages,
             "pages_generated": len(generated_images),
             "pages_failed": len(failed_subjects),
             "total_requested": total,
