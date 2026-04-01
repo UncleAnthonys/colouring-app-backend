@@ -1,27 +1,81 @@
 # pack_config.py
-# Pack definitions — each pack is a curated list of subjects for a theme.
-# Add/remove packs here. The subjects list is what gets passed to your
-# existing colouring page generation function one at a time.
+# Pack definitions using the actual theme keys from themes.json.
+# These keys get passed to build_text_to_image_prompt() which looks them
+# up in themes.json to build the proper age-adjusted prompt.
+#
+# "subjects" = list of theme keys (what the backend generates)
+# "display_names" = list of human-readable names (what ConfirmPack shows)
 
 PACK_CATALOG = {
 
-    # --- Animals ---
     "farm_animals": {
         "name": "Farm Animals",
         "description": "All your favourite farmyard friends",
         "category": "animals",
         "cover_emoji": "🐄",
         "subjects": [
-            "a friendly cow standing in a meadow",
-            "a cute pig rolling in mud",
-            "a fluffy sheep on a grassy hill",
-            "a proud rooster crowing on a fence",
-            "a baby chick hatching from an egg",
-            "a horse galloping in a field",
-            "a playful goat jumping on rocks",
-            "a duck swimming in a pond",
-            "a donkey carrying baskets",
-            "a fluffy rabbit eating a carrot",
+            "animal_cow", "animal_pig", "animal_horse", "animal_sheep",
+            "animal_chicken", "animal_rooster", "animal_duck", "animal_goat",
+            "animal_donkey", "animal_rabbit",
+        ],
+        "display_names": [
+            "Cow", "Pig", "Horse", "Sheep", "Chicken",
+            "Rooster", "Duck", "Goat", "Donkey", "Rabbit",
+        ],
+    },
+
+    "zoo_animals": {
+        "name": "Zoo Animals",
+        "description": "Explore the zoo from page to page",
+        "category": "animals",
+        "cover_emoji": "🦁",
+        "subjects": [
+            "animal_lion", "animal_tiger", "animal_elephant", "animal_giraffe",
+            "animal_zebra", "animal_monkey", "animal_gorilla", "animal_hippo",
+            "animal_rhino", "animal_panda", "animal_koala", "animal_kangaroo",
+            "animal_penguin", "animal_polar_bear", "animal_snake", "animal_crocodile",
+            "animal_bear", "animal_wolf", "animal_fox", "animal_deer",
+        ],
+        "display_names": [
+            "Lion", "Tiger", "Elephant", "Giraffe", "Zebra",
+            "Monkey", "Gorilla", "Hippo", "Rhino", "Panda",
+            "Koala", "Kangaroo", "Penguin", "Polar Bear", "Snake",
+            "Crocodile", "Bear", "Wolf", "Fox", "Deer",
+        ],
+    },
+
+    "sea_animals": {
+        "name": "Sea Animals",
+        "description": "Dive into the deep blue sea",
+        "category": "animals",
+        "cover_emoji": "🐙",
+        "subjects": [
+            "animal_dolphin", "animal_whale", "animal_shark", "animal_octopus",
+            "animal_jellyfish", "animal_seahorse", "animal_turtle", "animal_crab",
+            "animal_starfish", "animal_clownfish", "animal_lobster", "animal_seal",
+            "animal_walrus", "animal_orca", "animal_stingray",
+        ],
+        "display_names": [
+            "Dolphin", "Whale", "Shark", "Octopus", "Jellyfish",
+            "Seahorse", "Turtle", "Crab", "Starfish", "Clownfish",
+            "Lobster", "Seal", "Walrus", "Orca", "Stingray",
+        ],
+    },
+
+    "insects": {
+        "name": "Insects",
+        "description": "Tiny creatures, big fun",
+        "category": "animals",
+        "cover_emoji": "🐛",
+        "subjects": [
+            "animal_butterfly", "animal_bee", "animal_ladybug", "animal_caterpillar",
+            "animal_dragonfly", "animal_grasshopper", "animal_snail", "animal_spider",
+            "animal_ant", "animal_firefly", "animal_beetle", "animal_worm",
+        ],
+        "display_names": [
+            "Butterfly", "Bee", "Ladybug", "Caterpillar", "Dragonfly",
+            "Grasshopper", "Snail", "Spider", "Ant", "Firefly",
+            "Beetle", "Worm",
         ],
     },
 
@@ -31,131 +85,108 @@ PACK_CATALOG = {
         "category": "animals",
         "cover_emoji": "🦕",
         "subjects": [
-            "a friendly T-Rex with a big smile",
-            "a long-necked Brachiosaurus eating leaves from a tree",
-            "a Triceratops with three big horns",
-            "a Stegosaurus with plates on its back",
-            "a baby dinosaur hatching from a big egg",
-            "a Pterodactyl flying through the sky",
-            "an Ankylosaurus with a club tail",
-            "a Velociraptor running fast",
-            "a Diplodocus with a very long tail",
-            "a Parasaurolophus with a crest on its head",
+            "animal_trex", "animal_triceratops", "animal_brachiosaurus",
+            "animal_stegosaurus", "animal_pterodactyl", "animal_velociraptor",
+            "animal_diplodocus", "animal_ankylosaurus", "animal_spinosaurus",
+            "animal_parasaurolophus", "animal_apatosaurus", "animal_pachycephalosaurus",
+        ],
+        "display_names": [
+            "T-Rex", "Triceratops", "Brachiosaurus", "Stegosaurus",
+            "Pterodactyl", "Velociraptor", "Diplodocus", "Ankylosaurus",
+            "Spinosaurus", "Parasaurolophus", "Apatosaurus", "Pachycephalosaurus",
         ],
     },
 
-    "ocean_creatures": {
-        "name": "Ocean Creatures",
-        "description": "Dive into the deep blue sea",
-        "category": "animals",
-        "cover_emoji": "🐙",
+    "fruits": {
+        "name": "Fruits",
+        "description": "A juicy collection to colour",
+        "category": "nature",
+        "cover_emoji": "🍎",
         "subjects": [
-            "a smiling dolphin jumping out of the water",
-            "a friendly octopus waving its tentacles",
-            "a big whale spouting water",
-            "a colourful clownfish hiding in coral",
-            "a sea turtle swimming through the ocean",
-            "a starfish on a sandy seabed",
-            "a seahorse floating in seaweed",
-            "a happy crab on the beach",
-            "a jellyfish glowing underwater",
-            "a playful seal balancing a ball",
+            "fruit_apple", "fruit_banana", "fruit_strawberry", "fruit_watermelon",
+            "fruit_pineapple", "fruit_orange", "fruit_grapes", "fruit_cherry",
+            "fruit_mango", "fruit_peach", "fruit_lemon", "fruit_kiwi",
+            "fruit_coconut", "fruit_pear", "fruit_blueberry",
+        ],
+        "display_names": [
+            "Apple", "Banana", "Strawberry", "Watermelon", "Pineapple",
+            "Orange", "Grapes", "Cherry", "Mango", "Peach",
+            "Lemon", "Kiwi", "Coconut", "Pear", "Blueberry",
         ],
     },
 
-    "safari_animals": {
-        "name": "Safari Animals",
-        "description": "An African adventure on every page",
-        "category": "animals",
-        "cover_emoji": "🦁",
+    "vegetables": {
+        "name": "Vegetables",
+        "description": "Learn your veggies while you colour",
+        "category": "nature",
+        "cover_emoji": "🥕",
         "subjects": [
-            "a lion with a big fluffy mane",
-            "a tall giraffe eating from a tree",
-            "a large elephant spraying water with its trunk",
-            "a zebra with bold black and white stripes",
-            "a hippo wallowing in a river",
-            "a cheeky monkey swinging from a vine",
-            "a rhinoceros with a big horn",
-            "a flamingo standing on one leg",
-            "a cheetah running very fast",
-            "a friendly gorilla sitting in the jungle",
+            "veg_carrot", "veg_broccoli", "veg_tomato", "veg_corn",
+            "veg_pumpkin", "veg_potato", "veg_onion", "veg_peas",
+            "veg_pepper", "veg_mushroom", "veg_cucumber", "veg_lettuce",
+            "veg_eggplant", "veg_celery", "veg_radish",
+        ],
+        "display_names": [
+            "Carrot", "Broccoli", "Tomato", "Corn", "Pumpkin",
+            "Potato", "Onion", "Peas", "Pepper", "Mushroom",
+            "Cucumber", "Lettuce", "Aubergine", "Celery", "Radish",
         ],
     },
 
-    "minibeasts": {
-        "name": "Minibeasts",
-        "description": "Tiny creatures, big fun",
-        "category": "animals",
-        "cover_emoji": "🐛",
+    "flowers": {
+        "name": "Flowers",
+        "description": "A beautiful garden to colour in",
+        "category": "nature",
+        "cover_emoji": "🌸",
         "subjects": [
-            "a ladybird with spots on its back",
-            "a caterpillar crawling on a leaf",
-            "a butterfly with big patterned wings",
-            "a busy bee collecting pollen from a flower",
-            "a snail with a spiral shell",
-            "a spider spinning a web",
-            "a dragonfly hovering over a pond",
-            "an ant carrying a crumb",
+            "flower_rose", "flower_sunflower", "flower_daisy", "flower_tulip",
+            "flower_lily", "flower_orchid", "flower_poppy", "flower_lavender",
+            "flower_daffodil", "flower_bluebell", "flower_pansy", "flower_violet",
+            "flower_marigold", "flower_hibiscus", "flower_lotus",
+        ],
+        "display_names": [
+            "Rose", "Sunflower", "Daisy", "Tulip", "Lily",
+            "Orchid", "Poppy", "Lavender", "Daffodil", "Bluebell",
+            "Pansy", "Violet", "Marigold", "Hibiscus", "Lotus",
         ],
     },
 
-    # --- Vehicles ---
-    "vehicles": {
-        "name": "Things That Go",
-        "description": "Cars, trucks, planes and more",
-        "category": "vehicles",
-        "cover_emoji": "🚗",
+    "alphabet": {
+        "name": "Alphabet",
+        "description": "Learn your letters A to Z",
+        "category": "educational",
+        "cover_emoji": "🔤",
         "subjects": [
-            "a big red fire engine with a ladder",
-            "a yellow digger on a building site",
-            "a police car with flashing lights",
-            "an ambulance racing to help",
-            "a double decker bus on a city street",
-            "a steam train on railway tracks",
-            "a big aeroplane flying in the sky",
-            "a rocket blasting off into space",
-            "a sailing boat on the ocean",
-            "a tractor ploughing a farm field",
+            "alphabet_a", "alphabet_b", "alphabet_c", "alphabet_d",
+            "alphabet_e", "alphabet_f", "alphabet_g", "alphabet_h",
+            "alphabet_i", "alphabet_j", "alphabet_k", "alphabet_l",
+            "alphabet_m", "alphabet_n", "alphabet_o", "alphabet_p",
+            "alphabet_q", "alphabet_r", "alphabet_s", "alphabet_t",
+            "alphabet_u", "alphabet_v", "alphabet_w", "alphabet_x",
+            "alphabet_y", "alphabet_z",
+        ],
+        "display_names": [
+            "A", "B", "C", "D", "E", "F", "G", "H", "I",
+            "J", "K", "L", "M", "N", "O", "P", "Q", "R",
+            "S", "T", "U", "V", "W", "X", "Y", "Z",
         ],
     },
 
-    # --- Space ---
-    "space": {
-        "name": "Outer Space",
-        "description": "Blast off to the stars",
-        "category": "space",
-        "cover_emoji": "🚀",
+    "world_cities": {
+        "name": "World Cities",
+        "description": "Travel the world one page at a time",
+        "category": "educational",
+        "cover_emoji": "🌍",
         "subjects": [
-            "an astronaut floating in space",
-            "a rocket ship blasting off",
-            "the planet Saturn with its rings",
-            "a friendly alien waving hello",
-            "the moon with craters on its surface",
-            "a space station orbiting Earth",
-            "a shooting star streaking across the sky",
-            "the sun with rays shining outward",
-            "a UFO flying saucer in the sky",
-            "a robot exploring the surface of Mars",
+            "city_london", "city_paris", "city_new_york", "city_rome",
+            "city_tokyo", "city_sydney", "city_dubai", "city_barcelona",
+            "city_amsterdam", "city_cairo", "city_rio", "city_los_angeles",
+            "city_san_francisco", "city_venice", "city_athens",
         ],
-    },
-
-    # --- Fairy Tales ---
-    "fairy_tales": {
-        "name": "Fairy Tales",
-        "description": "Once upon a time...",
-        "category": "fantasy",
-        "cover_emoji": "🏰",
-        "subjects": [
-            "a princess in a beautiful castle",
-            "a knight riding a horse with a shield",
-            "a friendly dragon breathing a small flame",
-            "a magical unicorn in an enchanted forest",
-            "a fairy with sparkly wings",
-            "a wizard with a long beard and a pointy hat",
-            "a mermaid sitting on a rock in the sea",
-            "a pirate ship sailing on the ocean",
-            "a treasure chest full of gold coins and jewels",
-            "an enchanted tree house in a magical forest",
+        "display_names": [
+            "London", "Paris", "New York", "Rome", "Tokyo",
+            "Sydney", "Dubai", "Barcelona", "Amsterdam", "Cairo",
+            "Rio de Janeiro", "Los Angeles", "San Francisco", "Venice", "Athens",
         ],
     },
 }
