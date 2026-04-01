@@ -742,3 +742,239 @@ def generate_storybook_pdf_task(self, job_id: str, params: dict):
         
     except Exception as e:
         update_job_status(job_id, "failed", error=str(e)[:500])
+
+
+@celery_app.task(name='tasks.generate_pack_task', bind=True, time_limit=900, soft_time_limit=840)
+def generate_pack_task(self, job_id: str, params: dict):
+    """
+    Generate an entire colouring page pack (8-12 pages) sequentially,
+    stitch into a single PDF, upload to Firebase Storage.
+    
+    Uses the same OpenAI API call pattern as generate_colouring_page_task text mode.
+    Extended time limits: 900s hard / 840s soft (vs 600/540 for single pages).
+    
+    params = {
+        "pack_id": str,          # e.g. "farm_animals"
+        "pack_name": str,        # e.g. "Farm Animals"
+        "age_level": str,        # e.g. "age_4"
+        "subjects": [str],       # e.g. ["a friendly cow standing in a meadow", ...]
+        "user_id": str,
+        "quality": str,          # "low" or "high", default "low"
+    }
+    """
+    try:
+        update_job_status(job_id, "processing", progress="Starting pack generation...")
+
+        # Force path fix inside task (same pattern as all other tasks)
+        import sys, os
+        task_dir = os.path.dirname(os.path.abspath(__file__))
+        if task_dir not in sys.path:
+            sys.path.insert(0, task_dir)
+
+        import base64
+        import io
+        import httpx
+        from PIL import Image
+        from pypdf import PdfWriter, PdfReader
+        from app import (
+            build_text_to_image_prompt, normalize_age_level,
+            is_valid_coloring_page, log_generation_attempt,
+            OPENAI_API_KEY, BASE_URL, load_prompts, CONFIG
+        )
+        from firebase_utils import upload_to_firebase
+
+        # Ensure CONFIG is loaded (Celery worker doesn't trigger FastAPI startup)
+        import app as _app_module
+        if _app_module.CONFIG is None:
+            _app_module.CONFIG = load_prompts()
+
+        subjects = params.get("subjects", [])
+        total = len(subjects)
+        pack_id = params.get("pack_id", "unknown")
+        pack_name = params.get("pack_name", "Colouring Pack")
+        age_level = normalize_age_level(params.get("age_level", "age_5"))
+        quality = params.get("quality", "low")
+        user_id = params.get("user_id", "")
+
+        generated_images = []  # list of (subject, PIL.Image) tuples
+        failed_subjects = []
+
+        for i, subject in enumerate(subjects):
+            page_num = i + 1
+            update_job_status(
+                job_id, "processing",
+                progress=f"Drawing page {page_num} of {total}...",
+                result={
+                    "pack_progress": {
+                        "completed": i,
+                        "total": total,
+                        "current_subject": subject,
+                        "pack_name": pack_name,
+                    }
+                }
+            )
+
+            try:
+                # Build prompt — same function as single colouring page text mode
+                prompt = build_text_to_image_prompt(subject, age_level)
+
+                headers = {
+                    "Authorization": f"Bearer {OPENAI_API_KEY}",
+                    "Content-Type": "application/json"
+                }
+                gen_data = {
+                    "model": "gpt-image-1.5",
+                    "prompt": prompt,
+                    "n": 1,
+                    "size": "1024x1536",
+                    "quality": quality,
+                    "background": "opaque",
+                }
+
+                # Try up to 3 times for dark image retry (same as single page)
+                output_b64 = None
+                for attempt in range(1, 4):
+                    with httpx.Client(timeout=180.0) as client:
+                        response = client.post(
+                            f"{BASE_URL}/images/generations",
+                            headers=headers, json=gen_data
+                        )
+                        if response.status_code != 200:
+                            raise Exception(
+                                f"OpenAI API error: {response.status_code} - {response.text[:200]}"
+                            )
+                        result = response.json()
+
+                    image_data = result["data"][0]
+                    if "b64_json" in image_data:
+                        output_b64 = image_data["b64_json"]
+                    else:
+                        with httpx.Client() as dl_client:
+                            resp = dl_client.get(image_data["url"])
+                            output_b64 = base64.b64encode(resp.content).decode('utf-8')
+
+                    is_valid, brightness = is_valid_coloring_page(output_b64)
+                    log_generation_attempt(
+                        f"[PACK:{pack_id}] {prompt[:80]}",
+                        attempt, is_valid, brightness, attempt > 1
+                    )
+
+                    if is_valid:
+                        if attempt > 1:
+                            print(f"[WORKER-PACK] Page {page_num}/{total} '{subject[:40]}': "
+                                  f"attempt {attempt} success (brightness={brightness:.0f})")
+                        break
+                    print(f"[WORKER-PACK] Page {page_num}/{total} '{subject[:40]}': "
+                          f"attempt {attempt} dark (brightness={brightness:.0f}), retrying...")
+
+                if output_b64 is None:
+                    raise Exception("All attempts produced dark images")
+
+                img = Image.open(io.BytesIO(base64.b64decode(output_b64)))
+                if img.mode != "RGB":
+                    img = img.convert("RGB")
+                generated_images.append((subject, img))
+
+                print(f"[WORKER-PACK] ✅ Page {page_num}/{total} done: {subject[:50]}")
+
+            except Exception as page_err:
+                print(f"[WORKER-PACK] ⚠️ Page {page_num}/{total} failed: {subject[:50]} — {page_err}")
+                failed_subjects.append(subject)
+                continue
+
+        if not generated_images:
+            update_job_status(job_id, "failed", error="No pages were generated successfully")
+            return
+
+        # --- Stitch all pages into a single PDF ---
+        update_job_status(
+            job_id, "processing",
+            progress=f"Stitching {len(generated_images)} pages into PDF...",
+            result={
+                "pack_progress": {
+                    "completed": len(generated_images),
+                    "total": total,
+                    "current_subject": None,
+                    "pack_name": pack_name,
+                }
+            }
+        )
+
+        # A4 at 150 DPI = 1240 x 1754 px
+        TARGET_W, TARGET_H = 1240, 1754
+        pdf_writer = PdfWriter()
+
+        for subject, img in generated_images:
+            img_ratio = img.width / img.height
+            target_ratio = TARGET_W / TARGET_H
+
+            if img_ratio > target_ratio:
+                new_w = TARGET_W
+                new_h = int(TARGET_W / img_ratio)
+            else:
+                new_h = TARGET_H
+                new_w = int(TARGET_H * img_ratio)
+
+            img_resized = img.resize((new_w, new_h), Image.LANCZOS)
+
+            canvas = Image.new("RGB", (TARGET_W, TARGET_H), "white")
+            x_offset = (TARGET_W - new_w) // 2
+            y_offset = (TARGET_H - new_h) // 2
+            canvas.paste(img_resized, (x_offset, y_offset))
+
+            page_pdf_bytes = io.BytesIO()
+            canvas.save(page_pdf_bytes, format="PDF", resolution=150)
+            page_pdf_bytes.seek(0)
+
+            page_reader = PdfReader(page_pdf_bytes)
+            pdf_writer.add_page(page_reader.pages[0])
+
+        combined_pdf_bytes = io.BytesIO()
+        pdf_writer.write(combined_pdf_bytes)
+        combined_pdf_bytes.seek(0)
+
+        # --- Upload combined PDF to Firebase Storage ---
+        pdf_b64 = base64.b64encode(combined_pdf_bytes.read()).decode('utf-8')
+        pdf_url = upload_to_firebase(pdf_b64, folder="packs")
+
+        print(f"[WORKER-PACK] ✅ Pack PDF uploaded: {pdf_url}")
+
+        # --- Complete ---
+        result_data = {
+            "pdf_url": pdf_url,
+            "pack_name": pack_name,
+            "pack_id": pack_id,
+            "age_level": age_level,
+            "pages_generated": len(generated_images),
+            "pages_failed": len(failed_subjects),
+            "total_requested": total,
+            "failed_subjects": failed_subjects,
+            "pack_progress": {
+                "completed": len(generated_images),
+                "total": total,
+                "current_subject": None,
+                "pack_name": pack_name,
+            }
+        }
+
+        update_job_status(job_id, "complete", result=result_data)
+
+        # Send push notification
+        try:
+            from push_notifications import send_push
+            send_push(
+                user_id,
+                f"{pack_name} Pack Ready! 🎨",
+                f"Your {len(generated_images)}-page colouring pack is ready to download!",
+                {"type": "pack", "job_id": job_id}
+            )
+        except Exception as e:
+            print(f"[WORKER-PACK] Push notification failed (non-fatal): {e}")
+
+        print(f"[WORKER-PACK] ✅ Pack complete: {pack_name} — "
+              f"{len(generated_images)}/{total} pages, {len(failed_subjects)} failed")
+
+    except Exception as e:
+        print(f"[WORKER-PACK] ❌ Pack failed: {str(e)}")
+        traceback.print_exc()
+        update_job_status(job_id, "failed", error=str(e)[:500])

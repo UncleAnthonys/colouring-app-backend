@@ -96,6 +96,7 @@ async def submit_job(request: Request):
         "full_story": "tasks.generate_full_story_task",
         "colouring_page": "tasks.generate_colouring_page_task",
         "storybook_pdf": "tasks.generate_storybook_pdf_task",
+        "pack": "tasks.generate_pack_task",
     }
     
     task_name = task_map.get(job_type)
@@ -104,6 +105,16 @@ async def submit_job(request: Request):
     
     # Serialize params safely for Celery/Redis
     safe_params = json.loads(json.dumps(params, default=str))
+    
+    # For pack jobs, look up subjects server-side so frontend only sends pack_id
+    if job_type == "pack":
+        from pack_config import PACK_CATALOG
+        pack_id = safe_params.get("pack_id")
+        pack_def = PACK_CATALOG.get(pack_id)
+        if not pack_def:
+            raise HTTPException(status_code=400, detail=f"Unknown pack_id: {pack_id}")
+        safe_params["pack_name"] = pack_def["name"]
+        safe_params["subjects"] = pack_def["subjects"]
     
     celery_app.send_task(task_name, args=[job_id, safe_params])
     
@@ -247,3 +258,28 @@ def update_job_status(job_id: str, status: str, progress: str = None, result: di
         job_data["error"] = error
     
     r.setex(f"job:{job_id}", 3600, json.dumps(job_data))
+
+
+# --- Pack Catalog ---
+
+@job_router.get("/packs/catalog")
+async def get_pack_catalog():
+    """
+    Return all available colouring page packs with metadata.
+    Frontend calls this to populate the pack browsing UI.
+    Endpoint: GET /job/packs/catalog
+    """
+    from pack_config import PACK_CATALOG
+
+    catalog = []
+    for pack_id, pack_def in PACK_CATALOG.items():
+        catalog.append({
+            "pack_id": pack_id,
+            "name": pack_def["name"],
+            "description": pack_def["description"],
+            "page_count": len(pack_def["subjects"]),
+            "subjects": pack_def["subjects"],
+            "category": pack_def.get("category", "general"),
+            "cover_emoji": pack_def.get("cover_emoji", "🎨"),
+        })
+    return {"packs": catalog}
