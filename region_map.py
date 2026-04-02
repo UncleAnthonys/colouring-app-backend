@@ -27,7 +27,7 @@ from io import BytesIO
 def generate_region_map(
     image_bytes: bytes,
     line_threshold: int = 180,
-    min_region_size: int = 500,
+    min_region_size: int = 100,
     line_thickness_dilate: int = 1,
 ) -> tuple[bytes, int]:
     """
