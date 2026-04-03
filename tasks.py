@@ -774,6 +774,7 @@ def generate_pack_task(self, job_id: str, params: dict):
         import base64
         import io
         import httpx
+        from datetime import datetime
         from PIL import Image
         from pypdf import PdfWriter, PdfReader
         from app import (
@@ -967,6 +968,34 @@ def generate_pack_task(self, job_id: str, params: dict):
         combined_pdf_bytes = io.BytesIO()
         pdf_writer.write(combined_pdf_bytes)
         combined_pdf_bytes.seek(0)
+
+        # --- Save individual pages to Firestore ---
+        try:
+            from google.cloud import firestore as gc_firestore
+            db = gc_firestore.Client()
+        except Exception:
+            import firebase_admin
+            from firebase_admin import firestore as fb_firestore
+            db = fb_firestore.client()
+
+        for page_data in generated_pages:
+            try:
+                db.collection("colouring_pages").add({
+                    "user_id": user_id,
+                    "image_url": page_data["image_url"],
+                    "pdf_url": page_data.get("pdf_url"),
+                    "mask_url": page_data.get("mask_url"),
+                    "theme": page_data["theme_used"],
+                    "age_level": page_data["age_level"],
+                    "is_landscape": page_data.get("is_landscape", False),
+                    "created_at": datetime.utcnow(),
+                    "pack_id": pack_id,
+                    "pack_name": pack_name,
+                })
+            except Exception as fs_err:
+                print(f"[WORKER-PACK] ⚠️ Firestore save failed for {page_data['theme_used']}: {fs_err}")
+
+        print(f"[WORKER-PACK] ✅ Saved {len(generated_pages)} pages to Firestore")
 
         # --- Upload combined PDF to Firebase Storage ---
         pdf_b64 = base64.b64encode(combined_pdf_bytes.read()).decode('utf-8')
