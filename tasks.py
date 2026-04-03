@@ -33,7 +33,7 @@ def run_async(coro):
         loop.close()
 
 
-@celery_app.task(name='tasks.generate_full_story_task', bind=True)
+@celery_app.task(name='tasks.generate_full_story_task', bind=True, acks_late=True, reject_on_worker_lost=True)
 def generate_full_story_task(self, job_id: str, params: dict):
     """
     Generate a complete storybook: story text + cover + 5 episode images + PDF.
@@ -283,7 +283,7 @@ Make it look like a real children's coloring book cover you'd see in a shop!
         update_job_status(job_id, "failed", error=str(e)[:500])
 
 
-@celery_app.task(name='tasks.extract_and_reveal_task', bind=True)
+@celery_app.task(name='tasks.extract_and_reveal_task', bind=True, acks_late=True, reject_on_worker_lost=True)
 def extract_and_reveal_task(self, job_id: str, params: dict):
     """Extract character from drawing/photo and generate Pixar reveal."""
     try:
@@ -358,7 +358,7 @@ def extract_and_reveal_task(self, job_id: str, params: dict):
         update_job_status(job_id, "failed", error=str(e)[:500])
 
 
-@celery_app.task(name='tasks.character_reveal_flow_task', bind=True)
+@celery_app.task(name='tasks.character_reveal_flow_task', bind=True, acks_late=True, reject_on_worker_lost=True)
 def character_reveal_flow_task(self, job_id: str, params: dict):
     """
     Full character reveal orchestrator:
@@ -499,7 +499,7 @@ def character_reveal_flow_task(self, job_id: str, params: dict):
         update_job_status(job_id, "failed", error=str(e)[:500])
 
 
-@celery_app.task(name='tasks.generate_colouring_page_task', bind=True)
+@celery_app.task(name='tasks.generate_colouring_page_task', bind=True, acks_late=True, reject_on_worker_lost=True)
 def generate_colouring_page_task(self, job_id: str, params: dict):
     """Generate a single colouring page (photo or text mode)."""
     try:
@@ -730,7 +730,7 @@ def generate_colouring_page_task(self, job_id: str, params: dict):
         update_job_status(job_id, "failed", error=str(e)[:500])
 
 
-@celery_app.task(name='tasks.generate_storybook_pdf_task', bind=True)
+@celery_app.task(name='tasks.generate_storybook_pdf_task', bind=True, acks_late=True, reject_on_worker_lost=True)
 def generate_storybook_pdf_task(self, job_id: str, params: dict):
     """Generate storybook PDF from completed pages."""
     try:
@@ -744,7 +744,7 @@ def generate_storybook_pdf_task(self, job_id: str, params: dict):
         update_job_status(job_id, "failed", error=str(e)[:500])
 
 
-@celery_app.task(name='tasks.generate_pack_task', bind=True, time_limit=900, soft_time_limit=840)
+@celery_app.task(name='tasks.generate_pack_task', bind=True, time_limit=900, soft_time_limit=840, acks_late=True, reject_on_worker_lost=True)
 def generate_pack_task(self, job_id: str, params: dict):
     """
     Generate an entire colouring page pack (8-12 pages) sequentially,
