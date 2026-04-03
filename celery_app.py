@@ -41,6 +41,15 @@ celery_app.conf.update(
     task_time_limit=600,       # 10 min hard limit per task
     task_soft_time_limit=540,  # 9 min soft limit
     worker_prefetch_multiplier=1,  # One task at a time per worker
-    worker_concurrency=1,          # One concurrent task per worker
     result_expires=3600,           # Results expire after 1 hour
+    # Two-queue system: fast (colouring pages, reveals) and slow (stories, packs)
+    task_default_queue='fast',
+    task_routes={
+        'tasks.generate_colouring_page_task': {'queue': 'fast'},
+        'tasks.extract_and_reveal_task': {'queue': 'fast'},
+        'tasks.character_reveal_flow_task': {'queue': 'fast'},
+        'tasks.generate_full_story_task': {'queue': 'slow'},
+        'tasks.generate_storybook_pdf_task': {'queue': 'slow'},
+        'tasks.generate_pack_task': {'queue': 'slow'},
+    },
 )
