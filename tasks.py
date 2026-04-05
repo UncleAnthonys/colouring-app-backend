@@ -59,6 +59,7 @@ def generate_full_story_task(self, job_id: str, params: dict):
         from adventure_config import get_age_rules
         from firebase_utils import upload_to_firebase
         from adventure_config import ADVENTURE_THEMES
+        from app import normalize_age_level
         
         # Extract params — snake_case names matching generateFullStory endpoint exactly
         character_json = params.get("character", {})
@@ -79,7 +80,8 @@ def generate_full_story_task(self, job_id: str, params: dict):
         want = params.get("want", "")
         obstacle = params.get("obstacle", "")
         twist = params.get("twist", "")
-        age_level = params.get("age_level", "age_5")
+        age_level = normalize_age_level(params.get("age_level", "age_5"))
+        print(f"[STORY-TASK] raw: {params.get('age_level')}, normalized: {age_level}")
         writing_style = params.get("writing_style")
         life_lesson = params.get("life_lesson")
         custom_theme = params.get("custom_theme")
@@ -303,7 +305,9 @@ def extract_and_reveal_task(self, job_id: str, params: dict):
         image_b64 = params.get("image_b64")
         image_url = params.get("image_url")
         character_name = params.get("character_name", "Character")
-        age_level = params.get("age_level", "age_5")
+        from app import normalize_age_level
+        age_level = normalize_age_level(params.get("age_level", "age_5"))
+        print(f"[REVEAL-TASK] raw: {params.get('age_level')}, normalized: {age_level}")
         
         # Download image from Firebase URL if b64 not provided
         if image_url and not image_b64:
