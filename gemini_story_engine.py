@@ -73,16 +73,16 @@ If no WANT/OBSTACLE/TWIST are provided but a CUSTOM_THEME is given, the parent h
 - Episode 7: The Twist.
 - Episode 8: The Celebration & Victory Lap.
 
-**AGE-LEVEL OVERLAYS (STRICT ADHERENCE)**
-- **under_3**: 10-15 words per episode. Max 6 words/sentence. Nouns/verbs only. No conflict. Focus: Sounds/discovery. Use Mini-Mission (3 episodes).
-- **age_3**: 20-35 words per episode. Max 8 words/sentence. Simple "and" compounds. Focus: Separation/Sharing. Use Mini-Mission (3 episodes).
-- **age_4**: 40-60 words per episode. Max 10 words/sentence. Descriptive adjectives. Focus: Silly visual humor. Use Mini-Mission (3 episodes).
-- **age_5**: 60-80 words per episode. Max 12 words/sentence. Compound-complex. Focus: Kindness & social play. Use Standard (5 episodes).
-- **age_6**: 80-110 words per episode. Max 15 words/sentence. Variety in types. Focus: Small failures & bravery. Use Standard (5 episodes).
-- **age_7**: 100-130 words per episode. Max 18 words/sentence. Thematic terms. Focus: Fair play/empathy. Use Standard (5 episodes).
-- **age_8**: 120-150 words per episode. Max 20 words/sentence. Metaphorical language. Focus: Inner conflict/grit. Use Grand Adventure (8 episodes).
-- **age_9**: 130-200 words per episode. Max 25 words/sentence. Nuanced/Technical terms. Focus: Social irony. Use Grand Adventure (8 episodes).
-- **age_10**: 140-250 words per episode. No sentence limit. High variety. Focus: Identity/Social pressure. Use Grand Adventure (8 episodes).
+**AGE-LEVEL OVERLAYS**
+- **under_3**: Nouns/verbs only. No conflict. Focus: Sounds/discovery. Keep it very simple and short.
+- **age_3**: Simple "and" compounds. Focus: Separation/Sharing.
+- **age_4**: Descriptive adjectives. Focus: Silly visual humor.
+- **age_5**: Compound-complex sentences OK. Focus: Kindness & social play.
+- **age_6**: Sentence variety. Focus: Small failures & bravery.
+- **age_7**: Thematic terms. Focus: Fair play/empathy.
+- **age_8**: Metaphorical language. Focus: Inner conflict/grit.
+- **age_9**: Nuanced/Technical terms. Focus: Social irony.
+- **age_10**: High variety, literary quality. Focus: Identity/Social pressure.
 
 **WRITING STYLE OVERLAYS**
 Apply the selected style to ALL story_text. Adapt the complexity of the style to match the AGE_LEVEL constraints above.
