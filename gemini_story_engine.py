@@ -270,16 +270,8 @@ def generate_story_gemini(
             parts.append(f"THEME_DESCRIPTION: {theme_description}")
         if theme_blurb:
             parts.append(f"THEME_BLURB: {theme_blurb}")
-        if feature_used:
-            parts.append(f"FEATURE_USED: {feature_used}")
-        if want:
-            parts.append(f"WANT: {want}")
-        if obstacle:
-            parts.append(f"OBSTACLE: {obstacle}")
-        if twist:
-            parts.append(f"TWIST: {twist}")
-            parts.append(f"\nThe TWIST above is MANDATORY. You MUST use this exact resolution. Do NOT replace it with your own idea.")
-
+        # Want/obstacle/twist NOT passed to Gemini — writes better without them.
+        # Theme name + description provide direction. Params still accepted so FF doesnt break.
     # Age, style, lesson
     parts.append(f"\nAGE_LEVEL: {age_level}")
     parts.append(f"STORY_TIER: {tier} ({episode_count} episodes)")
