@@ -50,12 +50,12 @@ def generate_full_story_task(self, job_id: str, params: dict):
         
         # Import here to avoid circular imports and ensure env vars are loaded
         from adventure_gemini import (
-            generate_story_for_theme,
             generate_adventure_episode_gemini,
             create_a4_page_with_text,
             create_front_cover,
             validate_episode_image
         )
+        from gemini_story_engine import generate_story_gemini
         from adventure_config import get_age_rules
         from firebase_utils import upload_to_firebase
         from adventure_config import ADVENTURE_THEMES
@@ -130,10 +130,10 @@ def generate_full_story_task(self, job_id: str, params: dict):
         # Get age rules
         age_rules = get_age_rules(age_level)
         
-        # === STEP 1: Generate story text with Sonnet ===
+        # === STEP 1: Generate story text with Gemini ===
         update_job_status(job_id, "processing", progress="Writing your story...")
         
-        story_data = run_async(generate_story_for_theme(
+        story_data = generate_story_gemini(
             character_name=character_name,
             character_description=character_description,
             theme_name=theme_name,
@@ -149,7 +149,7 @@ def generate_full_story_task(self, job_id: str, params: dict):
             custom_theme=custom_theme,
             second_character_name=second_character_name,
             second_character_description=second_character_description,
-        ))
+        )
         
         episodes = story_data.get("episodes", [])
         story_title = story_data.get("story_title", f"{character_name}'s Adventure")
@@ -378,7 +378,8 @@ def character_reveal_flow_task(self, job_id: str, params: dict):
             sys.path.insert(0, task_dir)
 
         from character_extraction_gemini import extract_character_with_extreme_accuracy
-        from adventure_gemini import generate_adventure_reveal_gemini, generate_personalized_stories
+        from adventure_gemini import generate_adventure_reveal_gemini
+        from gemini_story_engine import generate_story_pitches_gemini
         from firebase_utils import upload_to_firebase
         from app import normalize_age_level
         import base64
@@ -456,7 +457,7 @@ def character_reveal_flow_task(self, job_id: str, params: dict):
         # ========== STEP 3: Generate story pitches ==========
         update_job_status(job_id, "processing", progress="Writing your stories...")
         
-        stories_result = run_async(generate_personalized_stories(
+        stories_result = generate_story_pitches_gemini(
             character_name=character_name,
             character_description=extraction_result['reveal_description'],
             age_level=age_level,
@@ -465,7 +466,7 @@ def character_reveal_flow_task(self, job_id: str, params: dict):
             custom_theme=custom_theme,
             second_character_name=second_character_name if has_second else None,
             second_character_description=second_result["reveal_description"] if second_result else None
-        ))
+        )
 
         # ========== DONE ==========
         update_job_status(job_id, "complete", result={
