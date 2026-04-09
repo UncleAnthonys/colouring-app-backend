@@ -176,15 +176,15 @@ Return ONLY valid JSON. No markdown, no backticks, no preamble.
 # ──────────────────────────────────────────────
 
 TIER_MAP = {
-    "under_3": ("Mini-Mission", 3),
-    "age_3": ("Mini-Mission", 3),
-    "age_4": ("Mini-Mission", 3),
+    "under_3": ("Standard", 5),
+    "age_3": ("Standard", 5),
+    "age_4": ("Standard", 5),
     "age_5": ("Standard", 5),
     "age_6": ("Standard", 5),
     "age_7": ("Standard", 5),
-    "age_8": ("Grand Adventure", 8),
-    "age_9": ("Grand Adventure", 8),
-    "age_10": ("Grand Adventure", 8),
+    "age_8": ("Standard", 5),
+    "age_9": ("Standard", 5),
+    "age_10": ("Standard", 5),
 }
 
 VALID_EMOTIONS = ["nervous", "excited", "scared", "determined", "happy", "curious", "sad", "proud", "worried", "surprised", "embarrassed", "panicked"]
