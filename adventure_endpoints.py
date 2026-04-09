@@ -13,6 +13,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
 from adventure_gemini import generate_adventure_reveal_gemini, generate_adventure_episode_gemini, generate_personalized_stories, generate_story_for_theme, create_a4_page_with_text, create_front_cover, validate_episode_image
+from gemini_story_engine import generate_story_pitches_gemini, generate_story_gemini
 from character_extraction_gemini import extract_character_with_extreme_accuracy
 from firebase_utils import upload_to_firebase
 import google.generativeai as genai
@@ -1001,9 +1002,9 @@ async def generate_full_story_endpoint(request_body: dict):
             if not request.second_character_description:
                 request.second_character_description = sc_desc
         
-        print(f"[FULL-STORY] ABOUT TO CALL SONNET - custom_theme={repr(request.custom_theme)}, theme_name={repr(request.theme_name)}, feature_used={repr(request.feature_used)}")
+        print(f"[FULL-STORY] ABOUT TO CALL GEMINI - custom_theme={repr(request.custom_theme)}, theme_name={repr(request.theme_name)}, feature_used={repr(request.feature_used)}")
         
-        story_data = await generate_story_for_theme(
+        story_data = generate_story_gemini(
             character_name=char.name,
             character_description=char_desc,
             theme_name=request.theme_name,
@@ -1021,11 +1022,11 @@ async def generate_full_story_endpoint(request_body: dict):
             second_character_description=request.second_character_description
         )
         episodes = story_data.get("episodes", [])
-        # Extract story title from Sonnet's response (for custom themes especially)
-        print(f"[FULL-STORY] Sonnet response keys: {list(story_data.keys())}")
+        # Extract story title from Gemini's response (for custom themes especially)
+        print(f"[FULL-STORY] Gemini response keys: {list(story_data.keys())}")
         generated_title = story_data.get("story_title", "")
         print(f"[FULL-STORY] Generated {len(episodes)} episodes from {'custom theme' if request.custom_theme else 'pitch'}")
-        print(f"[FULL-STORY] Sonnet generated title: '{generated_title}'")
+        print(f"[FULL-STORY] Gemini generated title: '{generated_title}'")
         for ep in episodes:
             print(f"[SCENE-DEBUG] Episode {ep.get('episode_num')}: {ep.get('scene_description', '')[:300]}")
     
@@ -1222,7 +1223,7 @@ async def generate_stories_endpoint(request: GenerateStoriesRequest):
     to create each coloring page.
     """
     try:
-        result = await generate_personalized_stories(
+        result = generate_story_pitches_gemini(
             character_name=request.character_name,
             character_description=request.character_description,
             age_level=request.age_level,
@@ -1253,7 +1254,7 @@ async def generate_story_for_theme_endpoint(request: GenerateStoryForThemeReques
     Returns 5 episodes with scene_description, story_text, and emotion.
     """
     try:
-        result = await generate_story_for_theme(
+        result = generate_story_gemini(
             character_name=request.character_name,
             character_description=request.character_description,
             theme_name=request.theme_name,
@@ -1300,7 +1301,7 @@ async def generate_stories_from_reveal(
     - age_10: Sophisticated narratives with depth
     """
     try:
-        result = await generate_personalized_stories(
+        result = generate_story_pitches_gemini(
             character_name=character_name,
             character_description=reveal_description,
             age_level=age_level
