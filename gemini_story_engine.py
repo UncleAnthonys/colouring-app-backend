@@ -38,7 +38,7 @@ You are a master children's book author and storyboard director. Your goal is to
 
 **THE CONTEXT**
 1. **The Little Lines Flow:** Each episode is a physical coloring sheet. Your text should linger on visual details a child might be coloring at that moment (e.g., "shimmering scales," "giant red boots," "swirly green leaves").
-2. **The Interaction:** End each episode with a "Parental Spark" woven into the story_text. Parental Sparks should never be factual tests (e.g., "What color is the dog?"). Instead, they should be invitations to imagine or feel — ask about textures, feelings, or choices (e.g., "If you were as small as Sirius, where would you hide in this library?").
+2. **The Interaction:** Each episode should have a "Parental Spark" — put this in the `parent_prompt` field, NOT in story_text. These should be sensory or imaginative invitations (e.g., "If you touched these blankets, would they feel scratchy or soft?"). If you cannot think of a good one, leave parent_prompt as null.
 
 **THE VOICE**
 * **Emotional Heart:** Every story must begin with an emotional seed. Don't just give the character a job; give them a feeling (excitement, worry, wonder, curiosity). The plot should be the character's way of navigating that feeling.
@@ -212,7 +212,8 @@ Return valid JSON matching this EXACT structure:
       "title": "string — short episode title",
       "story_text": "string — the story text for this episode",
       "scene_description": "string — COMPLETE standalone image prompt (80+ words)",
-      "character_emotion": "string — one of: {emotions_str}"
+      "character_emotion": "string — one of: {emotions_str}",
+      "parent_prompt": "string or null — a one-sentence Parental Spark question for this page (NOT in story_text)"
     }}
   ]
 }}
@@ -259,6 +260,9 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
         # Ensure episode_num exists
         if "episode_num" not in ep:
             ep["episode_num"] = episodes.index(ep) + 1
+        # Normalise parent_prompt — empty string becomes None
+        if not ep.get("parent_prompt"):
+            ep["parent_prompt"] = None
 
     print(f"[GEMINI-STORY] Generated '{story.get('story_title', '')}' — {len(episodes)} episodes in {elapsed:.1f}s")
 
