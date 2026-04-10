@@ -239,6 +239,10 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
         decoder = json.JSONDecoder()
         story, _ = decoder.raw_decode(text)
 
+    # Handle Gemini returning a list instead of a dict
+    if isinstance(story, list):
+        story = {"story_title": "", "episodes": story}
+
     # Validate and clean episodes
     episodes = story.get("episodes", [])
     for ep in episodes:
