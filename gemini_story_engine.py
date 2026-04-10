@@ -25,7 +25,7 @@ from google.genai import types
 # ──────────────────────────────────────────────
 
 MODEL = "gemini-3-flash-preview"
-TEMPERATURE = 1.0
+TEMPERATURE = 0.7
 THINKING_LEVEL = "MEDIUM"
 
 # ──────────────────────────────────────────────
