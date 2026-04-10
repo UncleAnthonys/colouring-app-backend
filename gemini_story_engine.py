@@ -25,8 +25,8 @@ from google.genai import types
 # ──────────────────────────────────────────────
 
 MODEL = "gemini-3-flash-preview"
-TEMPERATURE = 0.7
-THINKING_LEVEL = "LOW"
+TEMPERATURE = 1.0
+THINKING_LEVEL = "MEDIUM"
 
 # ──────────────────────────────────────────────
 # MASTER SYSTEM PROMPT
@@ -246,6 +246,30 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
     elapsed = time.time() - start
 
     # ── Parse response ──
+    if response.text is None:
+        try:
+            finish_reason = response.candidates[0].finish_reason if response.candidates else 'NO_CANDIDATES'
+            safety = response.candidates[0].safety_ratings if response.candidates else 'N/A'
+            print(f'[GEMINI-STORY] WARNING: Empty response. finish_reason={finish_reason}, safety={safety}')
+        except Exception as e:
+            print(f'[GEMINI-STORY] WARNING: Empty response. Could not read finish_reason: {e}')
+        print(f'[GEMINI-STORY] Retrying...')
+        response = client.models.generate_content(
+            model=MODEL,
+            contents=user_prompt,
+            config=types.GenerateContentConfig(
+                system_instruction=SYSTEM_PROMPT,
+                response_mime_type="application/json",
+                temperature=TEMPERATURE,
+                thinking_config=types.ThinkingConfig(
+                    thinking_level="MEDIUM"
+                ),
+            ),
+        )
+        elapsed = time.time() - start
+        if response.text is None:
+            raise ValueError("Gemini returned empty response on retry")
+
     try:
         story = json.loads(response.text)
     except json.JSONDecodeError:
@@ -254,7 +278,13 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
             text = text.split("\n", 1)[1] if "\n" in text else text[3:]
         if text.endswith("```"):
             text = text[:-3]
-        story = json.loads(text.strip())
+        text = text.strip()
+        decoder = json.JSONDecoder()
+        story, _ = decoder.raw_decode(text)
+
+    # Handle Gemini returning a list instead of a dict
+    if isinstance(story, list):
+        story = {"story_title": "", "episodes": story}
 
     # Validate and clean episodes
     episodes = story.get("episodes", [])
