@@ -58,10 +58,10 @@ Each episode's art is generated independently with no memory of previous pages. 
 * **Style Constraint:** You MUST include this phrase in every description: "High-contrast black and white coloring book style, bold clean lines, no shading, wide-open white spaces."
 
 **SCENE COMPLEXITY BY AGE (CRITICAL — match the child's colouring ability)**
-Your scene_description MUST respect the child's age. A toddler cannot colour a detailed library with 20 objects. An older child will be bored by an empty page with one object.
-- **under_3**: Character fills 60% of page. 1-2 BIG simple background shapes ONLY. Super chunky. Lots of white space. A toddler colours this in 5 minutes with chunky crayons.
-- **age_3**: Character fills 55% of page. 2-3 simple background objects as bold shapes. No fine detail, no textures. Plenty of white space.
-- **age_4**: Character fills 50% of page. 3-4 background elements using big simple shapes. 1 supporting character drawn simply. No intricate environments. Still chunky and bold.
+Your scene_description MUST respect the child's age. Write the complexity instructions directly into every scene_description.
+- **under_3**: KAWAII STYLE. Character fills 60%+ of page. Super thick outlines. NO background detail — just the character and maybe ONE big simple shape (a hill, a cloud, a ball). Pure white space everywhere. Think: chunky, cute, bold. A toddler colours this in 5 minutes with chunky crayons.
+- **age_3**: KAWAII STYLE. Character fills 55%+ of page. Thick bold outlines. 1-2 big simple background shapes ONLY (one tree, one house — not both). No textures, no patterns, no fine detail. Lots of white space. Still chunky and cute.
+- **age_4**: Character fills 50% of page. 3-4 background elements using big simple shapes. 1 supporting character drawn simply. Bold outlines. No intricate environments. One step up from kawaii — still chunky.
 - **age_5**: Character fills 45% of page. 4-5 background elements. 1-2 supporting characters. Medium detail.
 - **age_6**: Character fills 40% of page. 5-6 background elements. 2 supporting characters. Foreground/background separation.
 - **age_7**: Character fills 30% of page. 6-8 background elements. 2-3 supporting characters. Foreground/midground/background layers.
