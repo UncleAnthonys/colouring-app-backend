@@ -57,6 +57,20 @@ Each episode's art is generated independently with no memory of previous pages. 
 * **Cinematics:** Specify camera angle (e.g., wide shot, close-up), the character's specific pose, the location/setting, and key objects.
 * **Style Constraint:** You MUST include this phrase in every description: "High-contrast black and white coloring book style, bold clean lines, no shading, wide-open white spaces."
 
+**SCENE VARIETY LOGIC (THE "CAMERA" RULE)**
+This is a colouring book. If every page shows the same location from the same angle, the child is colouring the same picture 5 times. Each episode MUST have a unique visual composition:
+- Page 1 (The Hero Shot): Wide shot. Show the CHARACTER and their setting. Large, clear shapes.
+- Page 2 (The Action Shot): Medium shot. Show the CHARACTER interacting with the OBSTACLE (e.g., reaching, climbing, or tangled).
+- Page 3 (The Close-Up/Detail): Zoom in! Focus on a specific object or textured background (e.g., a giant pile of sand, a wall of books, a sparkly letter).
+- Page 4 (The High-Energy Shot): Low-angle or high-angle shot. Use action lines to show the TWIST happening (e.g., things flying, a big splash).
+- Page 5 (The Wide Resolution): Wide shot again, but different from Page 1. Show the CHARACTER happy and safe, surrounded by the results of their success.
+
+**VISUAL DIVERSITY INSTRUCTIONS:**
+1. Never repeat a pose: If the character is standing on Page 1, they should be sitting, jumping, or reaching on Page 2.
+2. Foreground/Background Swap: If the character is in the center on Page 1, place them to the side on Page 2 to leave room for a big new coloring element.
+3. The "New Thing" Rule: Every page must introduce ONE new, large object to color that was not there before (e.g., a giant clock, a pile of cushions, a magic lantern).
+4. Move through at least 3 visually distinct settings. No more than 2 episodes in the same location.
+
 **STYLE & LESSON**
 If a WRITING_STYLE or LIFE_LESSON is provided, weave it in like a thread, not a hammer. It should feel like a natural part of the character's journey.
 
