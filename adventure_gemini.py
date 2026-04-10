@@ -20,7 +20,7 @@ ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 from fastapi import HTTPException
 
 
-def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None) -> str:
+def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None, parent_prompt: str = None) -> str:
     """
     Take a square coloring image and create an A4 page with story text below.
     
@@ -78,6 +78,111 @@ def create_a4_page_with_text(image_b64: str, story_text: str, title: str = None)
         outline='black',
         width=2
     )
+    
+    # === PARENTAL SPARK OVERLAY ===
+    # Composited onto the colouring image area (bottom-left), not in the text area
+    if parent_prompt:
+        try:
+            # Overlay config
+            overlay_margin = 16  # px from edges of image
+            overlay_max_width = int(new_width * 0.55)  # Max 55% of image width
+            overlay_padding_x = 14
+            overlay_padding_y = 10
+            overlay_radius = 12
+            overlay_icon_size = 22
+            overlay_font_size = 16
+            
+            # Load font for overlay
+            try:
+                overlay_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Oblique.ttf", overlay_font_size)
+            except:
+                try:
+                    overlay_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", overlay_font_size)
+                except:
+                    overlay_font = ImageFont.load_default()
+            
+            # Wrap the parent_prompt text to fit overlay width
+            text_area_width = overlay_max_width - (overlay_padding_x * 2) - overlay_icon_size - 10
+            prompt_lines = []
+            words = parent_prompt.split()
+            current_line = []
+            for word in words:
+                test = ' '.join(current_line + [word])
+                tw = overlay_font.getbbox(test)[2] - overlay_font.getbbox(test)[0]
+                if tw > text_area_width and current_line:
+                    prompt_lines.append(' '.join(current_line))
+                    current_line = [word]
+                else:
+                    current_line.append(word)
+            if current_line:
+                prompt_lines.append(' '.join(current_line))
+            
+            # Calculate overlay dimensions
+            line_height = overlay_font_size + 6
+            text_block_height = len(prompt_lines) * line_height
+            overlay_height = text_block_height + (overlay_padding_y * 2)
+            
+            # Find actual text width for a tighter box
+            max_line_width = 0
+            for line in prompt_lines:
+                lw = overlay_font.getbbox(line)[2] - overlay_font.getbbox(line)[0]
+                if lw > max_line_width:
+                    max_line_width = lw
+            overlay_width = max_line_width + (overlay_padding_x * 2) + overlay_icon_size + 10
+            overlay_width = min(overlay_width, overlay_max_width)
+            
+            # Position: bottom-left of the colouring image
+            ol_x = x_offset + overlay_margin
+            ol_y = y_offset + new_height - overlay_height - overlay_margin
+            
+            # Draw rounded rectangle with semi-transparent white fill
+            # Create an overlay image with alpha channel
+            overlay_img = Image.new('RGBA', (overlay_width, overlay_height), (0, 0, 0, 0))
+            overlay_draw = ImageDraw.Draw(overlay_img)
+            
+            # White background with slight transparency
+            overlay_draw.rounded_rectangle(
+                [0, 0, overlay_width - 1, overlay_height - 1],
+                radius=overlay_radius,
+                fill=(255, 255, 255, 235),
+                outline=(200, 200, 200, 180),
+                width=1
+            )
+            
+            # Draw crayon icon (simple filled shape)
+            icon_x = overlay_padding_x
+            icon_y = overlay_padding_y + 2
+            # Crayon body
+            overlay_draw.rounded_rectangle(
+                [icon_x, icon_y + 4, icon_x + 14, icon_y + overlay_icon_size - 2],
+                radius=3,
+                fill=(100, 100, 100, 200)
+            )
+            # Crayon tip
+            overlay_draw.polygon(
+                [(icon_x + 3, icon_y + 4), (icon_x + 11, icon_y + 4), (icon_x + 7, icon_y - 2)],
+                fill=(100, 100, 100, 200)
+            )
+            
+            # Draw text lines
+            text_x = overlay_padding_x + overlay_icon_size + 10
+            text_y = overlay_padding_y
+            for line in prompt_lines:
+                overlay_draw.text((text_x, text_y), line, fill=(80, 80, 80, 255), font=overlay_font)
+                text_y += line_height
+            
+            # Composite overlay onto the A4 page
+            # Convert a4_page to RGBA, paste overlay, convert back
+            a4_rgba = a4_page.convert('RGBA')
+            a4_rgba.paste(overlay_img, (ol_x, ol_y), overlay_img)
+            a4_page = a4_rgba.convert('RGB')
+            
+            # Recreate draw object after conversion
+            draw = ImageDraw.Draw(a4_page)
+            
+        except Exception as e:
+            print(f"[PARENT-PROMPT] Failed to render overlay: {e}")
+            # Silently skip — page still works without it
     
     # Text area starts below the image - compact layout
     text_area_top = y_offset + new_height + 20

@@ -217,6 +217,7 @@ Make it look like a real children's coloring book cover you'd see in a shop!
             story_text = episode.get("story_text", "").replace("{name}", character_name)
             episode_title = episode.get("title", f"Episode {i+1}")
             character_emotion = episode.get("character_emotion", "happy")
+            parent_prompt = episode.get("parent_prompt")
             
             image_b64 = run_async(generate_adventure_episode_gemini(
                 character_data={"name": character_name, "description": character_description, "key_feature": character_key_feature},
@@ -252,7 +253,7 @@ Make it look like a real children's coloring book cover you'd see in a shop!
             
             previous_page_b64 = image_b64
             
-            a4_page_b64 = create_a4_page_with_text(image_b64, story_text, episode_title)
+            a4_page_b64 = create_a4_page_with_text(image_b64, story_text, episode_title, parent_prompt=parent_prompt)
             page_url = upload_to_firebase(a4_page_b64, folder="adventure/storybooks")
             pages.append({
                 "page_num": i + 1,
