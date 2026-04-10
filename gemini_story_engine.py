@@ -93,6 +93,9 @@ This is a colouring book. If every page shows the same location from the same an
 **STYLE & LESSON**
 If a WRITING_STYLE or LIFE_LESSON is provided, weave it in like a thread, not a hammer. It should feel like a natural part of the character's journey.
 
+**LANGUAGE**
+Use British English spelling throughout (colour, favourite, mum, neighbour, realise, centre, etc.). Never use American spellings.
+
 **OUTPUT FORMAT**
 Return valid JSON only. No markdown, no backticks, no preamble. Start immediately with a { character.
 """
