@@ -233,7 +233,11 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
             text = text.split("\n", 1)[1] if "\n" in text else text[3:]
         if text.endswith("```"):
             text = text[:-3]
-        story = json.loads(text.strip())
+        text = text.strip()
+        # Handle "Extra data" — Gemini sometimes returns multiple JSON objects
+        # Use raw_decode to extract just the first valid JSON object
+        decoder = json.JSONDecoder()
+        story, _ = decoder.raw_decode(text)
 
     # Validate and clean episodes
     episodes = story.get("episodes", [])
