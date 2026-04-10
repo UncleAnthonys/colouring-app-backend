@@ -25,8 +25,8 @@ from google.genai import types
 # ──────────────────────────────────────────────
 
 MODEL = "gemini-3-flash-preview"
-TEMPERATURE = 1.0
-THINKING_LEVEL = "MEDIUM"
+TEMPERATURE = 0.7
+THINKING_LEVEL = "LOW"
 
 # ──────────────────────────────────────────────
 # MASTER SYSTEM PROMPT
@@ -34,31 +34,31 @@ THINKING_LEVEL = "MEDIUM"
 
 SYSTEM_PROMPT = """
 **ROLE**
-You are a master children's book author and storyboard director. Your goal is to write a 5-episode "Color-Along" adventure. Your writing must be "sticky"—capturing a child's imagination while providing a warm, rhythmic experience for the parent to narrate.
+You are a master children's book author and storyboard director. Your goal is to write a 5-episode "Color-Along" adventure. Your writing must be "sticky" — capturing a child's imagination while providing a warm, rhythmic experience for the parent to narrate.
 
 **THE CONTEXT**
-1. **The Little Lines Flow:** Each episode is a physical coloring sheet. Your text should linger on visual details a child might be coloring (the "shimmering scales," the "giant red boots").
-2. **The Interaction:** End each episode with a "Parental Spark"—a one-sentence question to keep the child engaged with the page (e.g., "What color should we make the dragon's favorite socks?").
+1. **The Little Lines Flow:** Each episode is a physical coloring sheet. Your text should linger on visual details a child might be coloring at that moment (e.g., "shimmering scales," "giant red boots," "swirly green leaves").
+2. **The Interaction:** End each episode with a "Parental Spark" — a one-sentence question woven into the story_text to keep the child engaged with the coloring page (e.g., "What color should we make the dragon's favorite socks?").
 
 **THE VOICE**
-* **Show, Don't Tell:** Instead of saying a character is brave, describe their shaky breath as they step into the tall grass.
+* **Show, Don't Tell:** Instead of saying a character is brave, describe their shaky breath as they step into the tall grass. Use kinetic verbs (bounded, zig-zagged, plopped, scurried, wobbled) to keep the energy high.
 * **Sensory Loops:** Ground the story in sounds, smells, and textures. Make the story "crunch," "pop," and "glow."
-* **The "Page-Turn" Energy:** Every episode ends with a tiny hook. Episode 5 always returns the character to a "Cozy Landing" of safety and warmth.
-* **Age Calibration:** Naturally adjust your prose based on AGE_LEVEL. For ages under 5, keep the prose brief and rhythmic, like a pulse.
+* **The "Page-Turn" Energy:** Every episode should end with a tiny hook or a moment of anticipation. Episode 5 must always return the character to a "Cozy Landing" of safety, warmth, or a "big hug" feeling.
+* **Age Calibration:** Naturally adjust your prose based on AGE_LEVEL. For under-5s, use rhythmic, brief sentences with a distinct "pulse." For ages 8+, use witty dialogue and nuanced vocabulary.
+* **The 90/10 Rule:** Use familiar words for 90% of the story; use 10% "Sparkle Words" (vibrant, slightly challenging vocabulary like *resplendent* or *mischievous*) provided with immediate context clues.
+* **Varied Rhythm:** Avoid starting consecutive sentences with the same word. Mix short punchy sentences with longer flowing ones. The parent reading aloud should feel a natural musical rhythm, not a staccato list.
 
 **THE STORYBOARD (Scene Descriptions)**
-Because each episode's art is generated independently, your scene_description must be a standalone cinematic prompt (80+ words). Do not reference "the same outfit as before."
+Each episode's art is generated independently with no memory of previous pages. You must provide a standalone cinematic prompt (80+ words) for each.
 * **Character Consistency:** Explicitly describe the character's full visual profile in every episode (hair color/style, specific clothing, shoes, accessories).
-* **Cinematics:** Include the camera angle (e.g., wide shot, close-up), the character's specific pose, the location, and key objects.
-* **Style:** Always specify: "High-contrast black and white coloring book style, bold clean lines, no shading, wide-open white spaces."
+* **Cinematics:** Specify camera angle (e.g., wide shot, close-up), the character's specific pose, the location/setting, and key objects.
+* **Style Constraint:** You MUST include this phrase in every description: "High-contrast black and white coloring book style, bold clean lines, no shading, wide-open white spaces."
 
 **STYLE & LESSON**
 If a WRITING_STYLE or LIFE_LESSON is provided, weave it in like a thread, not a hammer. It should feel like a natural part of the character's journey.
 
 **OUTPUT FORMAT**
-Return valid JSON only. No markdown, no backticks, no preamble.
-
-CRITICAL: After your internal reasoning is complete, output the final response as valid JSON starting immediately with a { character. Do not provide any preamble or commentary before the JSON block.
+Return valid JSON only. No markdown, no backticks, no preamble. Start immediately with a { character.
 """
 
 # ──────────────────────────────────────────────
@@ -209,31 +209,6 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
     elapsed = time.time() - start
 
     # ── Parse response ──
-    if response.text is None:
-        # Log finish reason for diagnosis
-        try:
-            finish_reason = response.candidates[0].finish_reason if response.candidates else 'NO_CANDIDATES'
-            safety = response.candidates[0].safety_ratings if response.candidates else 'N/A'
-            print(f'[GEMINI-STORY] WARNING: Empty response. finish_reason={finish_reason}, safety={safety}')
-        except Exception as e:
-            print(f'[GEMINI-STORY] WARNING: Empty response. Could not read finish_reason: {e}')
-        print(f'[GEMINI-STORY] Retrying...')
-        response = client.models.generate_content(
-            model=MODEL,
-            contents=user_prompt,
-            config=types.GenerateContentConfig(
-                system_instruction=SYSTEM_PROMPT,
-                response_mime_type="application/json",
-                temperature=TEMPERATURE,
-                thinking_config=types.ThinkingConfig(
-                    thinking_level="MEDIUM"
-                ),
-            ),
-        )
-        elapsed = time.time() - start
-        if response.text is None:
-            raise ValueError("Gemini returned empty response on retry")
-
     try:
         story = json.loads(response.text)
     except json.JSONDecodeError:
@@ -242,15 +217,7 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
             text = text.split("\n", 1)[1] if "\n" in text else text[3:]
         if text.endswith("```"):
             text = text[:-3]
-        text = text.strip()
-        # Handle "Extra data" — Gemini sometimes returns multiple JSON objects
-        # Use raw_decode to extract just the first valid JSON object
-        decoder = json.JSONDecoder()
-        story, _ = decoder.raw_decode(text)
-
-    # Handle Gemini returning a list instead of a dict
-    if isinstance(story, list):
-        story = {"story_title": "", "episodes": story}
+        story = json.loads(text.strip())
 
     # Validate and clean episodes
     episodes = story.get("episodes", [])
