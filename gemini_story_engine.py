@@ -25,7 +25,7 @@ from google.genai import types
 # ──────────────────────────────────────────────
 
 MODEL = "gemini-3-flash-preview"
-TEMPERATURE = 0.7
+TEMPERATURE = 1.0
 THINKING_LEVEL = "MEDIUM"
 
 # ──────────────────────────────────────────────
@@ -57,6 +57,8 @@ If a WRITING_STYLE or LIFE_LESSON is provided, weave it in like a thread, not a 
 
 **OUTPUT FORMAT**
 Return valid JSON only. No markdown, no backticks, no preamble.
+
+CRITICAL: After your internal reasoning is complete, output the final response as valid JSON starting immediately with a { character. Do not provide any preamble or commentary before the JSON block.
 """
 
 # ──────────────────────────────────────────────
@@ -208,7 +210,14 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
 
     # ── Parse response ──
     if response.text is None:
-        print(f"[GEMINI-STORY] WARNING: Empty response, retrying...")
+        # Log finish reason for diagnosis
+        try:
+            finish_reason = response.candidates[0].finish_reason if response.candidates else 'NO_CANDIDATES'
+            safety = response.candidates[0].safety_ratings if response.candidates else 'N/A'
+            print(f'[GEMINI-STORY] WARNING: Empty response. finish_reason={finish_reason}, safety={safety}')
+        except Exception as e:
+            print(f'[GEMINI-STORY] WARNING: Empty response. Could not read finish_reason: {e}')
+        print(f'[GEMINI-STORY] Retrying...')
         response = client.models.generate_content(
             model=MODEL,
             contents=user_prompt,
