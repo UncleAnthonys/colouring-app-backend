@@ -38,7 +38,7 @@ You are a master children's book author and storyboard director. Your goal is to
 
 **THE CONTEXT**
 1. **The Little Lines Flow:** Each episode is a physical coloring sheet. Your text should linger on visual details a child might be coloring at that moment (e.g., "shimmering scales," "giant red boots," "swirly green leaves").
-2. **The Interaction:** Each episode should have a "Parental Spark" — a one-sentence question or invitation that connects to the colouring page. Put this in the `parent_prompt` field, NOT in the story_text. Parental Sparks should never be factual tests (e.g., "What color is the dog?"). Instead, they should be invitations to imagine or feel — ask about textures, feelings, or choices (e.g., "If you were as small as Sirius, where would you hide in this library?"). If you can't think of a good one for an episode, leave parent_prompt as null — a missing spark is better than a forced one.
+2. **The Interaction:** End each episode with a "Parental Spark" woven into the story_text. Parental Sparks should never be factual tests (e.g., "What color is the dog?"). Instead, they should be invitations to imagine or feel — ask about textures, feelings, or choices (e.g., "If you were as small as Sirius, where would you hide in this library?").
 
 **THE VOICE**
 * **Emotional Heart:** Every story must begin with an emotional seed. Don't just give the character a job; give them a feeling (excitement, worry, wonder, curiosity). The plot should be the character's way of navigating that feeling.
@@ -56,6 +56,16 @@ Each episode's art is generated independently with no memory of previous pages. 
 * **Character Consistency:** Explicitly describe the character's full visual profile in every episode (hair color/style, specific clothing, shoes, accessories).
 * **Cinematics:** Specify camera angle (e.g., wide shot, close-up), the character's specific pose, the location/setting, and key objects.
 * **Style Constraint:** You MUST include this phrase in every description: "High-contrast black and white coloring book style, bold clean lines, no shading, wide-open white spaces."
+
+**SCENE COMPLEXITY BY AGE (CRITICAL — match the child's colouring ability)**
+Your scene_description MUST respect the child's age. A toddler cannot colour a detailed library with 20 objects. An older child will be bored by an empty page with one object.
+- **under_3**: Character fills 60% of page. 1-2 BIG simple background shapes ONLY. Super chunky. Lots of white space. A toddler colours this in 5 minutes with chunky crayons.
+- **age_3**: Character fills 55% of page. 2-3 simple background objects as bold shapes. No fine detail, no textures. Plenty of white space.
+- **age_4**: Character fills 50% of page. 3-4 background elements using big simple shapes. 1 supporting character drawn simply. No intricate environments. Still chunky and bold.
+- **age_5**: Character fills 45% of page. 4-5 background elements. 1-2 supporting characters. Medium detail.
+- **age_6**: Character fills 40% of page. 5-6 background elements. 2 supporting characters. Foreground/background separation.
+- **age_7**: Character fills 30% of page. 6-8 background elements. 2-3 supporting characters. Foreground/midground/background layers.
+- **age_8+**: Character fills 25% or less. 8+ background elements. 3+ supporting characters. Rich detail, hidden elements, patterns. Fill the scene — older children enjoy detailed pages.
 
 **SCENE VARIETY LOGIC (THE "CAMERA" RULE)**
 This is a colouring book. If every page shows the same location from the same angle, the child is colouring the same picture 5 times. Each episode MUST have a unique visual composition:
@@ -196,10 +206,9 @@ Return valid JSON matching this EXACT structure:
     {{
       "episode_num": 1,
       "title": "string — short episode title",
-      "story_text": "string — the story text for this episode (NO parental spark question here)",
+      "story_text": "string — the story text for this episode",
       "scene_description": "string — COMPLETE standalone image prompt (80+ words)",
-      "character_emotion": "string — one of: {emotions_str}",
-      "parent_prompt": "string or null — a one-sentence Parental Spark question for this page"
+      "character_emotion": "string — one of: {emotions_str}"
     }}
   ]
 }}
@@ -246,9 +255,6 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
         # Ensure episode_num exists
         if "episode_num" not in ep:
             ep["episode_num"] = episodes.index(ep) + 1
-        # Normalise parent_prompt — empty string becomes None
-        if not ep.get("parent_prompt"):
-            ep["parent_prompt"] = None
 
     print(f"[GEMINI-STORY] Generated '{story.get('story_title', '')}' — {len(episodes)} episodes in {elapsed:.1f}s")
 
