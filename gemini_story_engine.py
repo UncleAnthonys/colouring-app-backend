@@ -26,7 +26,7 @@ from google.genai import types
 
 MODEL = "gemini-3-flash-preview"
 TEMPERATURE = 0.7
-THINKING_LEVEL = "LOW"
+THINKING_LEVEL = "MEDIUM"
 
 # ──────────────────────────────────────────────
 # MASTER SYSTEM PROMPT
@@ -207,6 +207,24 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
     elapsed = time.time() - start
 
     # ── Parse response ──
+    if response.text is None:
+        print(f"[GEMINI-STORY] WARNING: Empty response, retrying...")
+        response = client.models.generate_content(
+            model=MODEL,
+            contents=user_prompt,
+            config=types.GenerateContentConfig(
+                system_instruction=SYSTEM_PROMPT,
+                response_mime_type="application/json",
+                temperature=TEMPERATURE,
+                thinking_config=types.ThinkingConfig(
+                    thinking_level="MEDIUM"
+                ),
+            ),
+        )
+        elapsed = time.time() - start
+        if response.text is None:
+            raise ValueError("Gemini returned empty response on retry")
+
     try:
         story = json.loads(response.text)
     except json.JSONDecodeError:
