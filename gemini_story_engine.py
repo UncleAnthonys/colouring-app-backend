@@ -813,6 +813,9 @@ For each theme provide:
 - CRAYON TEST: Every blurb must mention at least ONE thing a child can clearly picture colouring (e.g. a giant red sofa, green slime, purple bubbles, a wobbly bridge)
 - NO ABSTRACT NOUNS: NEVER use words like "wonder", "harmony", "discovery", "beauty", "perspective", "balance", "chaos" or "the unexpected" — these are uncolourable and meaningless to a child
 - ACTION-OBJECT RULE: The blurb must contain a clear silly problem a child can picture. BAD: "Milo learns about friendship." GOOD: "Milo gets stuck in a giant jar of sticky honey!"
+- BANNED WORDS: NEVER use these words in a blurb: "wonder", "discovery", "journey", "magic", "everyday", "heart", "harmony", "balance", "perspective", "unseen", "hidden", "small things", "big feelings"
+- PHYSICAL COMEDY TEST: The blurb must describe a physical mishap — getting stuck, swapping colours, floating away, breaking physics. If nothing is physically happening, rewrite it.
+- HALLMARK TEST: If the blurb sounds like a greetings card, it is wrong. If it sounds like a 4-year-old explaining a dream they had, it is correct.
 
 *** PITCH QUALITY RULES ***
 
