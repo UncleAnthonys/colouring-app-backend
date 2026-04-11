@@ -810,12 +810,16 @@ For each theme provide:
 - E.g. if feature is "ukulele": "One song from Our Gav's ukulele could save the whole town — if only the strings would stop tangling"
 - E.g. if feature is "Illinois jumper": "The answer was written on Our Gav's jumper all along — nobody thought to look until now"
 - The blurb should make a parent think: "my child is going to LOVE seeing their [feature] do that")
+- CRAYON TEST: Every blurb must mention at least ONE thing a child can clearly picture colouring (e.g. a giant red sofa, green slime, purple bubbles, a wobbly bridge)
+- NO ABSTRACT NOUNS: NEVER use words like "wonder", "harmony", "discovery", "beauty", "perspective", "balance", "chaos" or "the unexpected" — these are uncolourable and meaningless to a child
+- ACTION-OBJECT RULE: The blurb must contain a clear silly problem a child can picture. BAD: "Milo learns about friendship." GOOD: "Milo gets stuck in a giant jar of sticky honey!"
 
 *** PITCH QUALITY RULES ***
 
 1. ORIGINALITY: NEVER copy a scenario word-for-word. Adapt it, remix it, make it feel fresh and unique to this character.
 2. NUANCED RESOLUTION: The character's feature should NOT directly fix the problem alone. Instead, a SUPPORTING CHARACTER should suggest a new way to use the feature, OR the character should learn to use it differently after the setback. The solution should feel like a team effort or a moment of growth, not just "feature solves everything".
 3. SETBACK: The want/obstacle/twist must include a real setback — not just "oops." The character tries and FAILS before the twist saves the day.
+4. DEVIANCE RULE: Reject any story idea that can be summarised as "Character learns a lesson" or "Character finds a lost toy." Only accept ideas that involve a physical transformation, a law of physics breaking, or a hilarious misunderstanding. The parent should look at the title and think "I have to see how they draw THAT" — not "oh, another helpful character story."
 
 Return ONLY valid JSON. Generate 3 theme PITCHES (no full episodes yet). Here is the exact format:
 
