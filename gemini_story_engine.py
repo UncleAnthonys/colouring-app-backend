@@ -260,23 +260,31 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
             print(f'[GEMINI-STORY] WARNING: Empty response. finish_reason={finish_reason}, safety={safety}')
         except Exception as e:
             print(f'[GEMINI-STORY] WARNING: Empty response. Could not read finish_reason: {e}')
-        print(f'[GEMINI-STORY] Retrying after 3s delay...')
-        __import__('time').sleep(3)
-        response = client.models.generate_content(
-            model=MODEL,
-            contents=user_prompt,
-            config=types.GenerateContentConfig(
-                system_instruction=SYSTEM_PROMPT,
-                response_mime_type="application/json",
-                temperature=TEMPERATURE,
-                thinking_config=types.ThinkingConfig(
-                    thinking_level="MEDIUM"
+        for retry_num, delay in enumerate([3, 6], start=1):
+            print(f'[GEMINI-STORY] Retry {retry_num}/2 after {delay}s delay...')
+            __import__('time').sleep(delay)
+            response = client.models.generate_content(
+                model=MODEL,
+                contents=user_prompt,
+                config=types.GenerateContentConfig(
+                    system_instruction=SYSTEM_PROMPT,
+                    response_mime_type="application/json",
+                    temperature=TEMPERATURE,
+                    thinking_config=types.ThinkingConfig(
+                        thinking_level="MEDIUM"
+                    ),
                 ),
-            ),
-        )
-        elapsed = time.time() - start
+            )
+            elapsed = time.time() - start
+            if response.text is not None:
+                break
+            try:
+                fr = response.candidates[0].finish_reason if response.candidates else 'NO_CANDIDATES'
+                print(f'[GEMINI-STORY] Retry {retry_num} also empty. finish_reason={fr}')
+            except:
+                print(f'[GEMINI-STORY] Retry {retry_num} also empty.')
         if response.text is None:
-            raise ValueError("Gemini returned empty response on retry")
+            raise ValueError("Gemini returned empty response after 2 retries")
 
     try:
         story = json.loads(response.text)
