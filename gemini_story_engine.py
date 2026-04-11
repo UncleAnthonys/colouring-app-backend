@@ -261,8 +261,7 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
         except Exception as e:
             print(f'[GEMINI-STORY] WARNING: Empty response. Could not read finish_reason: {e}')
         print(f'[GEMINI-STORY] Retrying after 3s delay...')
-        import time
-        time.sleep(3)
+        __import__('time').sleep(3)
         response = client.models.generate_content(
             model=MODEL,
             contents=user_prompt,
