@@ -233,6 +233,10 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
     # ── Call Gemini ──
     start = time.time()
 
+    print(f"[GEMINI-STORY] User prompt length: {len(user_prompt)} chars")
+    print(f"[GEMINI-STORY] System prompt length: {len(SYSTEM_PROMPT)} chars")
+    print(f"[GEMINI-STORY] Params: character={character_name}, theme={theme_name}, age={age_level}, second_char={second_character_name}")
+
     response = client.models.generate_content(
         model=MODEL,
         contents=user_prompt,
