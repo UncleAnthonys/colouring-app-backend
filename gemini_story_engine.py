@@ -199,10 +199,18 @@ def generate_story_gemini(
             parts.append(f"THEME_DESCRIPTION: {theme_description}")
         if theme_blurb:
             parts.append(f"THEME_BLURB: {theme_blurb}")
-        # Want/obstacle/twist NOT passed to Gemini — writes better without them.
-        # Theme name + description provide direction. Params still accepted so FF doesnt break.
-        if feature_used:
-            parts.append(f"KEY_FEATURE: {feature_used} — this is the ONE object/feature the entire story must revolve around. Every episode must reference or involve this feature. Do NOT introduce unrelated props or objects.")
+        # Build narrative anchor from want/obstacle/twist — single causal sentence
+        # works better than separate fields for Gemini (avoids mechanical checklist writing)
+        if want or obstacle or twist:
+            anchor_parts = []
+            if want:
+                anchor_parts.append(want)
+            if obstacle:
+                anchor_parts.append(f"which means {obstacle}")
+            if twist:
+                anchor_parts.append(f"so they must {twist}")
+            narrative_anchor = ", ".join(anchor_parts)
+            parts.append(f"NARRATIVE_ANCHOR: {narrative_anchor} — use this as your story logic. Distribute the tension naturally across all episodes so it peaks around episode 4. Do NOT follow this as a checklist — let it inform the arc and cause-and-effect, not dictate what happens in each episode.")
         if feature_used:
             parts.append(f"KEY_FEATURE: {feature_used} — this is the ONE object/feature the entire story must revolve around. Every episode must reference or involve this feature. Do NOT introduce unrelated props or objects.")
     # Age, style, lesson
