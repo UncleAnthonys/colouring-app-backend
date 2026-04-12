@@ -455,6 +455,9 @@ Key: Comedy from things going wrong in UNEXPECTED ways.
 - Use ACTIVE verbs not passive ones: "stomped" not "walked", "peered" not "looked", "snatched" not "took"
 - Every page must have at least ONE sound word in ALL CAPS (CRASH, SQUISH, BOING, SPLAT)
 - Vary sentence length: short sentences for tension ("Oh no."), longer ones for build-up
+- ALLITERATION RULE: Every page must include at least one alliterative phrase (three words starting with the same letter, e.g. "cold, crinkly crack" or "stomped and squelched and slipped"). This makes it fun to read aloud.
+- VOCABULARY RULE: Strictly forbid Latinate or academic words (investigate, interlocked, determined, magnificent). Use Playground English — words a 4-year-old uses when playing make-believe.
+- THE 3-STRIKE STRUCTURE: STRIKE 1 (Setup) — establish the character's feature immediately with a sound or physical action. STRIKE 2 (Escalation) — the obstacle must be physical and messy (greasy, sticky, crumbly, wobbly). STRIKE 3 (Payoff) — the resolution must be a physical triumph (a big TUG, a big POP, a big SPLAT). Every age_4 story must hit all 3 strikes.
 
 *** BLURB TONE FOR THIS AGE ***
 Blurbs must hook with a silly consequence. Focus on funny mistakes and physical mess.
