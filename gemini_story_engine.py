@@ -981,6 +981,7 @@ The WANT must be something a 4-year-old experiences: wanting a toy, wanting to w
 We are a COLOURING PAGE business. A child colours each page. If multiple pages show the same location from the same angle with the same objects, the child is colouring the same picture repeatedly. That is a bad experience.
 
 RULE: No more than 2 out of 5 episodes should share the same location. The story should move through at least 2-3 visually distinct settings.
+CRITICAL LOCATION LOGIC: Every time the character moves to a new location, there must be a clear reason stated in the story text. The character cannot simply "appear" somewhere new. If episode 1 is in the garden, episode 2 must explain WHY they moved inside. Location changes must follow cause and effect — never jump locations without a narrative bridge.
 - Design the WANT/OBSTACLE/TWIST so the plot naturally takes characters to different places
 - If a story must stay in one broad area, make sure each episode shows a distinctly different PART of that area with different objects and surroundings
 - Every page a child colours should feel like a NEW picture, not a repeat of the last one
