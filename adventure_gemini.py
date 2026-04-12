@@ -1057,17 +1057,31 @@ ABSOLUTELY NO WATERMARKS, NO SIGNATURES, NO TEXT, NO LOGOS anywhere in the image
         # Generate with portrait aspect ratio - STANDARD pricing tier
         # 3:4 at standard resolution = ~864x1152 = 995,328 pixels (under 1MP)
         # This avoids 2K/4K pricing tiers
-        response = client.models.generate_content(
-            model='gemini-2.5-flash-image',
-            contents=contents,
-            config=types.GenerateContentConfig(
-                response_modalities=['IMAGE', 'TEXT'],
-                temperature=0.7,  # Higher temp for compositional variety across pages
-                image_config=types.ImageConfig(
-                    aspect_ratio='3:4'  # Portrait for A4-style, standard resolution
+        # Retry up to 3 times on 503 UNAVAILABLE
+        response = None
+        for _attempt in range(3):
+            try:
+                response = client.models.generate_content(
+                    model='gemini-2.5-flash-image',
+                    contents=contents,
+                    config=types.GenerateContentConfig(
+                        response_modalities=['IMAGE', 'TEXT'],
+                        temperature=0.7,
+                        image_config=types.ImageConfig(
+                            aspect_ratio='3:4'
+                        )
+                    )
                 )
-            )
-        )
+                break
+            except Exception as _e:
+                if '503' in str(_e) or 'UNAVAILABLE' in str(_e):
+                    import time as _time
+                    print(f"[EPISODE] 503 on attempt {_attempt+1}/3, retrying in 5s...")
+                    _time.sleep(5)
+                    if _attempt == 2:
+                        raise
+                else:
+                    raise
         
         # Extract image from response (with retry)
         for attempt in range(3):
