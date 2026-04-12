@@ -201,6 +201,10 @@ def generate_story_gemini(
             parts.append(f"THEME_BLURB: {theme_blurb}")
         # Want/obstacle/twist NOT passed to Gemini — writes better without them.
         # Theme name + description provide direction. Params still accepted so FF doesnt break.
+        if feature_used:
+            parts.append(f"KEY_FEATURE: {feature_used} — this is the ONE object/feature the entire story must revolve around. Every episode must reference or involve this feature. Do NOT introduce unrelated props or objects.")
+        if feature_used:
+            parts.append(f"KEY_FEATURE: {feature_used} — this is the ONE object/feature the entire story must revolve around. Every episode must reference or involve this feature. Do NOT introduce unrelated props or objects.")
     # Age, style, lesson
     parts.append(f"\nAGE_LEVEL: {age_level}")
     parts.append(f"STORY_TIER: {tier} ({episode_count} episodes)")
