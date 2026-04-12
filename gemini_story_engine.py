@@ -391,6 +391,13 @@ PATTERN C: "JOURNEY WITH OBSTACLES" (like We're Going on a Bear Hunt)
 - Character just observing or noticing things
 - Abstract or conceptual themes
 - Stories with no funny moment or surprise
+
+*** BLURB TONE FOR THIS AGE ***
+Blurbs must sound like a mess happening RIGHT NOW. Use nouns and noises only.
+GOOD: "Kiki is stuck to the big blue slide and her pink bandage is covered in goo!"
+BAD: "Kiki learns about sharing with her friends at the park."
+Every blurb must mention ONE messy/physical thing (jelly, goo, mud, bubbles, sticky tape).
+NO questions. NO "time to...". State the chaos, not a question about it.
 """,
 
     "age_4": """
@@ -432,6 +439,12 @@ Key: Comedy from things going wrong in UNEXPECTED ways.
 - Supporting characters with ONE clear personality trait (the grumpy one, the scared one, the bossy one)
 - The main character solving the problem THEMSELVES (no adult swooping in)
 - The solution must LOGICALLY follow from the problem — not a random new action
+
+*** BLURB TONE FOR THIS AGE ***
+Blurbs must hook with a silly consequence. Focus on funny mistakes and physical mess.
+GOOD: "Ted's giant feet keep squashing the cupcakes — now the whole kitchen is covered in frosting!"
+BAD: "Ted learns that being careful is important when baking."
+End with the character in a silly impossible position, not a question.
 """,
 
     "age_5": """
@@ -468,6 +481,12 @@ Key: Message through ACTION not moralising.
 - Supporting characters who actively HELP or HINDER - not just stand around watching
 - The character's feature used in a way that surprises even the character
 - The solution must come FROM the problem — the "disaster" secretly created the answer
+
+*** BLURB TONE FOR THIS AGE ***
+Blurbs must present a surreal what-if with clear stakes.
+GOOD: "Oli's magic photos have swapped all the colours — the sky is green and the grass is blue and it's spreading fast!"
+BAD: "Oli discovers that his photos have a special power that could change everything."
+One surprising image, one clear problem, no questions.
 """,
 
     "age_6": """
@@ -495,6 +514,12 @@ Age 6 can handle real plot twists and emotional stakes:
 - Supporting characters have their own mini-motivations (not just cheerleaders)
 - Dramatic irony where possible (reader knows something the character doesn't)
 - The ending is EARNED - character MAKES things work out
+
+*** BLURB TONE FOR THIS AGE ***
+Blurbs can have irony and wit. Hook the child AND the parent.
+GOOD: "Tapey accidentally glued the school roof to the playground — and the head teacher is stuck to both."
+BAD: "Tapey goes on a journey that will test everything they know about friendship."
+High concept, specific objects, adult wink of irony. No questions.
 """,
 
     "age_7": """
@@ -816,6 +841,10 @@ For each theme provide:
 - BANNED WORDS: NEVER use these words in a blurb: "wonder", "discovery", "journey", "magic", "everyday", "heart", "harmony", "balance", "perspective", "unseen", "hidden", "small things", "big feelings"
 - PHYSICAL COMEDY TEST: The blurb must describe a physical mishap — getting stuck, swapping colours, floating away, breaking physics. If nothing is physically happening, rewrite it.
 - HALLMARK TEST: If the blurb sounds like a greetings card, it is wrong. If it sounds like a 4-year-old explaining a dream they had, it is correct.
+- NO QUESTIONS: NEVER end a blurb with "Can they...?", "Will they...?", "Can [character] help...?" or any question. Questions are weak. State what is happening instead.
+- FILLER PHRASE BAN: NEVER use "time to share", "watch out for", "find their way", "learn to", "discover that". These are boring templates.
+- CLIFFHANGER ENDING: End with the character in a silly impossible position. BAD: "Can Kiki share the tuft?" GOOD: "Kiki's hair has become a giant nest and three birds have already moved in!"
+- SENSORY TEXTURE: Mention a specific mess or texture — jelly, slime, bubbles, sticky tape, squelchy mud. "Juice" is boring. "Sparkly grape jelly dripping off giant ears" is not.
 
 *** PITCH QUALITY RULES ***
 
