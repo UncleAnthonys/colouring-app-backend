@@ -849,6 +849,7 @@ For each theme provide:
 - FILLER PHRASE BAN: NEVER use "time to share", "watch out for", "find their way", "learn to", "discover that". These are boring templates.
 - CLIFFHANGER ENDING: End with the character in a silly impossible position. BAD: "Can Kiki share the tuft?" GOOD: "Kiki's hair has become a giant nest and three birds have already moved in!"
 - SENSORY TEXTURE: Mention a specific mess or texture — jelly, slime, bubbles, sticky tape, squelchy mud. "Juice" is boring. "Sparkly grape jelly dripping off giant ears" is not.
+- NO COLOURS IN BLURBS: NEVER mention specific colours (purple, pink, yellow, green, blue etc). This is a colouring book — the child decides the colours. Colours in blurbs also confuse the image generator into producing coloured images instead of black and white line art.
 
 *** PITCH QUALITY RULES ***
 
