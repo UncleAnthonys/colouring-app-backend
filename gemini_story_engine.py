@@ -451,6 +451,10 @@ Key: Comedy from things going wrong in UNEXPECTED ways.
 - Supporting characters with ONE clear personality trait (the grumpy one, the scared one, the bossy one)
 - The main character solving the problem THEMSELVES (no adult swooping in)
 - The solution must LOGICALLY follow from the problem — not a random new action
+- Write for a parent to PERFORM aloud, not just read. Every page should give the parent a chance to make a funny voice, a loud noise, or a silly face.
+- Use ACTIVE verbs not passive ones: "stomped" not "walked", "peered" not "looked", "snatched" not "took"
+- Every page must have at least ONE sound word in ALL CAPS (CRASH, SQUISH, BOING, SPLAT)
+- Vary sentence length: short sentences for tension ("Oh no."), longer ones for build-up
 
 *** BLURB TONE FOR THIS AGE ***
 Blurbs must hook with a silly consequence. Focus on funny mistakes and physical mess.
@@ -493,6 +497,10 @@ Key: Message through ACTION not moralising.
 - Supporting characters who actively HELP or HINDER - not just stand around watching
 - The character's feature used in a way that surprises even the character
 - The solution must come FROM the problem — the "disaster" secretly created the answer
+- Write for a parent to PERFORM aloud. Dialogue should beg to be done in funny voices. At least 2 episodes must have direct speech.
+- Use ACTIVE verbs: "scrambled" not "went", "bellowed" not "said", "squelched" not "walked"
+- Every page must have at least ONE sound word in ALL CAPS
+- Mix short punchy sentences with longer descriptive ones for rhythm
 
 *** BLURB TONE FOR THIS AGE ***
 Blurbs must present a surreal what-if with clear stakes.
