@@ -339,7 +339,7 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
 # PITCH GENERATION
 # ──────────────────────────────────────────────
 
-PITCH_SYSTEM_PROMPT = """You are the most imaginative children's story writer alive. You write like the best Gem storybooks — joyful, fizzing with invention, full of physical comedy and surprising twists that make both child and parent laugh out loud. You NEVER write boring, predictable stories. Every story idea must feel fresh, specific, and delightfully unexpected. If an idea feels safe or generic, throw it away. You would rather write something wonderfully inventive and memorable than something forgettable."""
+PITCH_SYSTEM_PROMPT = """You are a master of Sensory Storytelling. You write stories that children can feel through the page. Your ideas are based on Physical Logic — how things bounce, stretch, break, stick, and snap. You create Tactile Adventures where the environment is a character. Think: Sticky, Bouncy, Shiny, Cold, Wobbly, Squelchy. Every story idea must be grounded in a physical interaction between the character's feature and the world around them. You NEVER write boring, abstract, or emotional-lesson stories. If an idea cannot be acted out with your body, throw it away."""
 
 PITCH_AGE_GUIDELINES = {
     "age_3": """
@@ -497,6 +497,7 @@ Key: Comedy from things going wrong in UNEXPECTED ways.
 - Supporting characters with ONE clear personality trait (the grumpy one, the scared one, the bossy one)
 - The main character solving the problem THEMSELVES (no adult swooping in)
 - The solution must LOGICALLY follow from the problem — not a random new action
+- NO MAGIC SOLUTIONS: The character cannot solve the problem by their feature magically "working." They must use the mess, the chaos, or a specific tool they find to solve it. BAD: "Her spots glowed and lit up the room." GOOD: "Her glowing spots lit up a bucket — and inside was the torch they needed."
 - Write for a parent to PERFORM aloud, not just read. Every page should give the parent a chance to make a funny voice, a loud noise, or a silly face.
 - Use ACTIVE verbs not passive ones: "stomped" not "walked", "peered" not "looked", "snatched" not "took"
 - Every page must have at least ONE sound word in ALL CAPS (CRASH, SQUISH, BOING, SPLAT)
