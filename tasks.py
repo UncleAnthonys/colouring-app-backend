@@ -272,10 +272,37 @@ Make it look like a real children's coloring book cover you'd see in a shop!
             "total_pages": len(pages),
         })
         
+        # Save storybook to Firestore with pages data for colour-on-device
+        user_id = params.get("user_id", "")
+        try:
+            try:
+                from google.cloud import firestore as gc_firestore
+                db = gc_firestore.Client()
+            except Exception:
+                from firebase_admin import firestore as fb_firestore
+                db = fb_firestore.client()
+            from datetime import datetime
+            storybook_doc = {
+                "user_id": user_id,
+                "title": full_title,
+                "character_name": character_name,
+                "age_level": age_level,
+                "cover_url": cover_url,
+                "reveal_url": reveal_image_url or "",
+                "second_reveal_url": params.get("second_reveal_url", ""),
+                "total_pages": len(pages),
+                "created_at": datetime.utcnow(),
+                "pdf_url": "",
+                "pages": pages,
+            }
+            db.collection("storybooks").add(storybook_doc)
+            print(f"[WORKER] Storybook saved to Firestore: {full_title}")
+        except Exception as e:
+            print(f"[WORKER] Firestore save failed (non-fatal): {e}")
+
         # Send push notification
         try:
             from push_notifications import send_push
-            user_id = params.get("user_id", "")
             send_push(user_id, "Story Complete! 📖", f"{full_title} is ready to read!", {"type": "story", "job_id": job_id})
         except Exception as e:
             print(f"[WORKER] Push notification failed (non-fatal): {e}")
