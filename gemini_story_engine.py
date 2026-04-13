@@ -413,6 +413,22 @@ Every page must feature one physical substance (jelly, mud, bubbles, ice, dough,
 *** SENTENCE RULE ***
 Maximum 5 words per sentence for under_3. Maximum 8 words per sentence for age_3. Short. Punchy. Loud. Write like someone shouting at a parade, not narrating a documentary.
 
+*** PRE-REQUISITE RULE (CRITICAL FOR UNDER_3) ***
+No new object may cause an action unless it was introduced and visible in the PREVIOUS episode.
+Object A appears → Object B appears → A meets B → chaos → resolution.
+This is non-negotiable. A toddler's brain tracks one thing at a time. Objects cannot appear from nowhere to drive the plot.
+BAD: Page 3 — "The ring went BOING!" (ring never appeared before)
+GOOD: Page 2 — Hannah finds a sparkly ring. Page 3 — She puts it in the jelly. BOING!
+
+*** CUMULATIVE BUILD RULE ***
+Each episode must build directly on the previous one. The story is a chain, not a collection of scenes.
+Use this 5-beat structure for under_3:
+- Episode 1: Introduce Object A (the main thing)
+- Episode 2: Introduce Object B (the new thing)
+- Episode 3: Object A meets Object B — something goes wrong
+- Episode 4: The mess gets bigger — physical chaos peak
+- Episode 5: One big action fixes it — warm ending (hug, laugh, yum)
+
 *** BLURB TONE FOR THIS AGE ***
 Blurbs must sound like a mess happening RIGHT NOW. Use nouns and noises only.
 GOOD: "Kiki is stuck to the big blue slide and her pink bandage is covered in goo!"
@@ -467,6 +483,15 @@ Key: Comedy from things going wrong in UNEXPECTED ways.
 - ALLITERATION RULE: Every page must include at least one alliterative phrase (three words starting with the same letter, e.g. "cold, crinkly crack" or "stomped and squelched and slipped"). This makes it fun to read aloud.
 - VOCABULARY RULE: Strictly forbid Latinate or academic words (investigate, interlocked, determined, magnificent). Use Playground English — words a 4-year-old uses when playing make-believe.
 - THE 3-STRIKE STRUCTURE: STRIKE 1 (Setup) — establish the character's feature immediately with a sound or physical action. STRIKE 2 (Escalation) — the obstacle must be physical and messy (greasy, sticky, crumbly, wobbly). STRIKE 3 (Payoff) — the resolution must be a physical triumph (a big TUG, a big POP, a big SPLAT). Every age_4 story must hit all 3 strikes.
+
+*** WORD COUNT RULE ***
+Maximum 40 words per episode. ABSOLUTE MAXIMUM. Count them. If you go over, cut adjectives first, then cut connective sentences ("Because of this...", "Then she..."). Never cut the sound word.
+
+*** SOUND-FIRST RULE ***
+Write the sound word FIRST, then describe what caused it. This forces active writing.
+BAD: "Lily had a clever idea. She scooped up the jelly and plopped it in the ring. Squelch!"
+GOOD: "SQUELCH! PLOP! Lily scooped big green globs and dropped them in — one, two, three!"
+The sound word is the heartbeat of every page. Build the sentence around it, not after it.
 
 *** BLURB TONE FOR THIS AGE ***
 Blurbs must hook with a silly consequence. Focus on funny mistakes and physical mess.
