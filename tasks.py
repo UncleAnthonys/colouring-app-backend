@@ -205,7 +205,7 @@ Make it look like a real children's coloring book cover you'd see in a shop!
         cover_with_text_b64 = create_front_cover(cover_image_b64, full_title, character_name)
         cover_url = upload_to_firebase(cover_with_text_b64, folder="adventure/storybooks")
         
-        pages = [{"page_num": 0, "page_type": "cover", "title": full_title, "page_url": cover_url, "story_text": ""}]
+        pages = [{"page_num": 0, "page_type": "cover", "title": full_title, "page_url": cover_url, "raw_image_url": cover_url, "story_text": ""}]
         
         # === STEP 3: Generate episode pages ===
         previous_page_b64 = None
@@ -255,11 +255,13 @@ Make it look like a real children's coloring book cover you'd see in a shop!
             
             a4_page_b64 = create_a4_page_with_text(image_b64, story_text, episode_title, parent_prompt=parent_prompt)
             page_url = upload_to_firebase(a4_page_b64, folder="adventure/storybooks")
+            raw_image_url = upload_to_firebase(image_b64, folder="adventure/storybooks/raw")
             pages.append({
                 "page_num": i + 1,
                 "page_type": "episode",
                 "title": episode_title,
                 "page_url": page_url,
+                "raw_image_url": raw_image_url,
                 "story_text": story_text
             })
         
