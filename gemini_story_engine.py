@@ -231,6 +231,43 @@ def generate_story_gemini(
     parts.append(f"\nAGE_LEVEL: {age_level}")
     parts.append(f"STORY_TIER: {tier} ({episode_count} episodes)")
     parts.append(f"WRITING_STYLE: {writing_style or 'Standard'}")
+
+    # Writing style detailed rules
+    if writing_style == "Repetition":
+        parts.append("""REPETITION STYLE RULES — READ CAREFULLY:
+This is NOT about repeating individual words. This is STRUCTURAL REFRAIN repetition — like real board books.
+THE PATTERN: Every page has TWO parts:
+  1. A new observation or action specific to that page (changes every page)
+  2. AN IDENTICAL REFRAIN LINE that is exactly the same every single page
+
+EXAMPLE STRUCTURE:
+  Page 1: Introduction — set up the character and situation
+  Page 2: [New detail about what the character sees/does]... [REFRAIN]
+  Page 3: [New detail about what the character sees/does]... [REFRAIN]
+  Page 4: [New detail about what the character sees/does]... [REFRAIN]
+  Page 5: Big finale that calls back to the refrain with a twist or celebration
+
+EXAMPLE IN PRACTICE (character: a dog, refrain: "Is that the most amazing dog ever?"):
+  Page 2: "I can see a big fluffy tail going wag, wag, wag... Is that the most amazing dog ever?"
+  Page 3: "I can see two floppy ears going flap, flap, flap... Is that the most amazing dog ever?"
+  Page 4: "I can see four muddy paws going stomp, stomp, stomp... Is that the most amazing dog ever?"
+  Page 5: "I can see the most amazing dog ever — and it's YOU!"
+
+RULES:
+- Choose ONE refrain line and keep it IDENTICAL every page — not similar, IDENTICAL
+- The refrain should be warm, celebratory, or funny — something a child loves to shout along with
+- The observation line must describe something VISIBLE on the coloring page
+- NEVER repeat words within a sentence ("big, big hill") — that is NOT this style
+- The child should be able to predict and shout the refrain after hearing it twice""")
+    elif writing_style == "Rhyming":
+        parts.append("""RHYMING STYLE RULES: Every page must contain at least one rhyming couplet. Simple, natural rhymes only. The rhythm must feel like a nursery rhyme — bouncy and predictable. Never sacrifice story clarity for a rhyme.""")
+    elif writing_style == "Silly":
+        parts.append("""SILLY STYLE RULES: Over-the-top absurd situations. Made-up words encouraged. Physical slapstick. Things going hilariously wrong in unexpected ways. The parent should be giggling while reading it.""")
+    elif writing_style == "Gentle":
+        parts.append("""GENTLE STYLE RULES: Soft, warm, cozy language. Quiet moments. Slow pacing. Describe textures and feelings gently. Perfect for bedtime. The ending should feel like a warm hug.""")
+    elif writing_style == "Suspenseful":
+        parts.append("""SUSPENSEFUL STYLE RULES: Every page except the last must end on a mini cliffhanger. Use dramatic pauses. Build tension. "But what nobody knew was..." and "And then... silence." The child must be desperate to turn the page.""")
+
     if life_lesson:
         parts.append(f"LIFE_LESSON: {life_lesson}")
 
