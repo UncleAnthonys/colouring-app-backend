@@ -383,10 +383,27 @@ def extract_and_reveal_task(self, job_id: str, params: dict):
             "source_type": extraction_result.get("source_type", "drawing"),
         })
         
+        # Save reveal URL to user doc so story task can access it
+        try:
+            try:
+                from google.cloud import firestore as gc_firestore
+                db_reveal = gc_firestore.Client()
+            except Exception:
+                from firebase_admin import firestore as fb_firestore
+                db_reveal = fb_firestore.client()
+            user_id = params.get("user_id", "")
+            if user_id:
+                db_reveal.collection("users").document(user_id).update({
+                    "latest_reveal_url": reveal_url or "",
+                    "latest_second_reveal_url": "",
+                })
+                print(f"[WORKER] Saved reveal URL to user doc: {user_id}")
+        except Exception as e:
+            print(f"[WORKER] Failed to save reveal URL to user doc (non-fatal): {e}")
+
         # Send push notification
         try:
             from push_notifications import send_push
-            user_id = params.get("user_id", "")
             send_push(user_id, "Character Revealed! ✨", f"Meet {character_name}!", {"type": "reveal", "job_id": job_id})
         except Exception as e:
             print(f"[WORKER] Push notification failed (non-fatal): {e}")
