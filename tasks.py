@@ -290,6 +290,8 @@ Make it look like a real children's coloring book cover you'd see in a shop!
                 "cover_url": cover_url,
                 "reveal_url": reveal_image_url or "",
                 "second_reveal_url": params.get("second_reveal_url", ""),
+                "reveal_url_string": reveal_image_url or "",
+                "second_reveal_url_string": params.get("second_reveal_url", ""),
                 "total_pages": len(pages),
                 "created_at": datetime.utcnow(),
                 "pdf_url": "",
