@@ -282,16 +282,21 @@ Make it look like a real children's coloring book cover you'd see in a shop!
                 from firebase_admin import firestore as fb_firestore
                 db = fb_firestore.client()
             from datetime import datetime
+            # Read reveal URLs from user doc (saved by reveal flow task)
+            user_doc = db.collection("users").document(user_id).get()
+            user_data = user_doc.to_dict() if user_doc.exists else {}
+            saved_reveal_url = user_data.get("latest_reveal_url", "")
+            saved_second_reveal_url = user_data.get("latest_second_reveal_url", "")
             storybook_doc = {
                 "user_id": user_id,
                 "title": full_title,
                 "character_name": character_name,
                 "age_level": age_level,
                 "cover_url": cover_url,
-                "reveal_url": reveal_image_url or "",
-                "second_reveal_url": params.get("second_reveal_url", ""),
-                "reveal_url_string": reveal_image_url or "",
-                "second_reveal_url_string": params.get("second_reveal_url", ""),
+                "reveal_url": saved_reveal_url,
+                "second_reveal_url": saved_second_reveal_url,
+                "reveal_url_string": saved_reveal_url,
+                "second_reveal_url_string": saved_second_reveal_url,
                 "total_pages": len(pages),
                 "created_at": datetime.utcnow(),
                 "pdf_url": "",
@@ -520,10 +525,27 @@ def character_reveal_flow_task(self, job_id: str, params: dict):
             "stories": stories_result,
         })
 
+        # Save reveal URLs to user doc so story task can access them
+        try:
+            try:
+                from google.cloud import firestore as gc_firestore
+                db_reveal = gc_firestore.Client()
+            except Exception:
+                from firebase_admin import firestore as fb_firestore
+                db_reveal = fb_firestore.client()
+            user_id = params.get("user_id", "")
+            if user_id:
+                db_reveal.collection("users").document(user_id).update({
+                    "latest_reveal_url": reveal_url or "",
+                    "latest_second_reveal_url": second_reveal_url or "",
+                })
+                print(f"[WORKER] Saved reveal URLs to user doc: {user_id}")
+        except Exception as e:
+            print(f"[WORKER] Failed to save reveal URLs to user doc (non-fatal): {e}")
+
         # Send push notification
         try:
             from push_notifications import send_push
-            user_id = params.get("user_id", "")
             send_push(user_id, "Character Ready! ✨", f"Meet {character_name} and pick a story!", {"type": "reveal_flow", "job_id": job_id})
         except Exception as e:
             print(f"[WORKER] Push notification failed (non-fatal): {e}")
