@@ -349,7 +349,7 @@ AGE GROUP: 2-3 YEARS OLD (TODDLER)
 Every great toddler story has ONE clear answer to: "What does the character WANT?"
 The want must be PHYSICAL and IMMEDIATE — something a 2-3 year old can see and touch:
 - Wanting to reach a ball that rolled under something
-- Wanting to pop the biggest bubble before it floats away
+- Wanting to catch a bouncing thing that won't stop moving
 - Wanting to catch a bouncing thing that won't stop moving
 - Wanting to climb to the top of something very tall
 - Wanting to find something that is hiding
@@ -446,9 +446,9 @@ The character's physical feature and the story's main substance MUST have a natu
 Before writing, ask: "What happens when [feature] touches [substance]?"
 If the answer is boring or forced, pick a different substance.
 BAD: floppy ears + bouncy ball (no natural interaction — they just exist near each other)
-GOOD: big floppy ears + bubbles (ears scoop bubbles, bubbles lift ears, character floats)
+GOOD: big floppy ears + strong wind (ears act like sails, character gets blown sideways)
 GOOD: springy tail + sand (tail bounces in sand, sand flies everywhere, tail gets heavier)
-GOOD: giant hat + bubbles (bubbles float under hat, hat lifts up, character floats away)
+GOOD: giant hat + falling leaves (leaves pile up in hat, hat gets heavier, character tips over)
 The feature and substance must create ONE clear funny interaction that drives the whole story.
 
 *** BLURB TONE FOR THIS AGE ***
