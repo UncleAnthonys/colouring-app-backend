@@ -198,8 +198,12 @@ def generate_story_gemini(
     # Theme — either pre-written or custom
     if custom_theme:
         parts.append(f"\nCUSTOM_THEME: {custom_theme}")
-        parts.append("This is a PERSONAL story request from the parent. Build the entire story around this custom theme.")
-        parts.append("You must derive your own WANT, OBSTACLE, and TWIST from the custom theme.")
+        parts.append("""THE CUSTOM THEME IS THE ENGINE — not a backdrop, not a mention. CRITICAL RULES:
+1. EVERY episode must take place IN or DIRECTLY REGARDING this theme/setting/event. If the theme is "dentist", all 5 pages are at the dentist. If the theme is "birthday", every page is part of the birthday.
+2. The character's unique feature must collide with this specific setting to create the problem AND the solution. (Feature + Theme Setting = Unique Story)
+3. Use the physical objects of this setting as story props. A dentist has a chair, a mirror, a drill, a sticker. A birthday has a cake, balloons, candles, wrapping paper. These objects must appear in the story and the art.
+4. NEVER use the custom theme as a vague "flavour." It must be structurally essential — remove the theme and the story should not work.
+5. The parent chose this theme because it is REAL and PERSONAL to their child. Make it feel like this story could only exist for THIS child in THIS moment.""")
         if theme_name:
             parts.append(f"THEME_NAME: {theme_name}")
     else:
