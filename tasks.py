@@ -393,11 +393,17 @@ def extract_and_reveal_task(self, job_id: str, params: dict):
                 db_reveal = fb_firestore.client()
             user_id = params.get("user_id", "")
             if user_id:
-                db_reveal.collection("users").document(user_id).update({
-                    "latest_reveal_url": reveal_url or "",
-                    "latest_second_reveal_url": "",
-                })
-                print(f"[WORKER] Saved reveal URL to user doc: {user_id}")
+                is_second = params.get("is_second_character", False)
+                if is_second:
+                    db_reveal.collection("users").document(user_id).update({
+                        "latest_second_reveal_url": reveal_url or "",
+                    })
+                else:
+                    db_reveal.collection("users").document(user_id).update({
+                        "latest_reveal_url": reveal_url or "",
+                        "latest_second_reveal_url": "",
+                    })
+                print(f"[WORKER] Saved reveal URL to user doc: {user_id} (second={is_second})")
         except Exception as e:
             print(f"[WORKER] Failed to save reveal URL to user doc (non-fatal): {e}")
 

@@ -220,6 +220,7 @@ async def submit_reveal_second_job(request: Request):
         "image_url": temp_image_url,
         "character_name": character_name,
         "user_id": user_id,
+        "is_second_character": True,
     }])
     
     return {"job_id": job_id, "status": "queued"}
