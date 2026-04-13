@@ -186,7 +186,14 @@ def generate_story_gemini(
     if second_character_name and second_character_description:
         parts.append(f"\nSECOND_CHARACTER_NAME: {second_character_name}")
         parts.append(f"SECOND_CHARACTER_DESCRIPTION: {second_character_description}")
-        parts.append(f"{second_character_name} is {character_name}'s companion and CO-STAR. They appear in EVERY episode.")
+        parts.append(f"""{second_character_name} is {character_name}'s companion and absolute CO-STAR. CRITICAL RULES for {second_character_name}:
+- They MUST appear in EVERY single episode — not just mentioned, but physically present and DOING something
+- They must have their OWN reactions, emotions, and personality — not just follow {character_name} silently
+- Their features must cause AT LEAST ONE problem OR solve AT LEAST ONE problem across the story
+- At least 2 episodes must have {second_character_name} and {character_name} working together OR disagreeing
+- {second_character_name} should feel like a real character, not a sidekick prop
+- NEVER have {second_character_name} just "watch" or "cheer" — they must DO things
+- The story is incomplete if {second_character_name} could be removed without changing the plot""")
 
     # Theme — either pre-written or custom
     if custom_theme:
