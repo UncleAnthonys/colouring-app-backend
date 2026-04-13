@@ -1239,6 +1239,7 @@ AGE GROUP: 4 YEARS OLD
 - Sound effects at KEY MOMENTS — 1-2 per page maximum. They should punctuate the action, not replace it. A single well-placed sound effect is funnier than three in one sentence.
 - Simple sentences (8-12 words) with occasional longer ones for drama
 - A catchphrase or repeated question works great as a story thread
+- CATCHPHRASE POV RULE: Repeated catchphrases must match the narration POV. Third-person narration = third-person catchphrase. First-person catchphrases ONLY as spoken dialogue inside quote marks.
 - Funny comparisons: "as tall as a house!", "louder than a thunderstorm!"
 - Questions to the reader: "What do YOU think happened next?"
 - Named emotions: scared, brave, proud, grumpy, excited, worried, silly
@@ -2161,6 +2162,7 @@ Use sound effects sparingly at key moments — 1-2 per page maximum. Invent ones
 Vivid, funny comparisons that surprise — never use generic ones.
 Questions to the reader work well occasionally.
 A catchphrase or repeated question works great as a story thread.
+CATCHPHRASE RULE: Repeated catchphrases must match the narration POV. Third-person narration = third-person catchphrase. First-person catchphrases ONLY as spoken dialogue inside quote marks.
 Simple but vivid — a parent reads this aloud and both parent and child enjoy it.""",
             "age_5": """Write in a natural, engaging storytelling voice. DO NOT rhyme unless the user chose Rhyming style.
 Use vivid, unexpected vocabulary that fits the character and scenario — avoid generic fun words.
