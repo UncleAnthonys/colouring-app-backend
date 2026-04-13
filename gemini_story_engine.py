@@ -407,9 +407,6 @@ PATTERN C: "JOURNEY WITH OBSTACLES" (like We're Going on a Bear Hunt)
 - Words longer than 2 syllables — use "big" not "enormous", "silly" not "determined"
 - Any moral or lesson — the goal is a silly mess, not a life lesson
 
-*** SUBSTANCE RULE ***
-Every page must feature one physical substance (jelly, mud, bubbles, ice, dough, sticky jam) and describe the interaction using a Verb + Sound combo (e.g. "Squish, squish, SPLAT!" or "Poke, poke, POP!"). This grounds the story in sensory experience a toddler can feel and act out.
-
 *** SENTENCE RULE ***
 Maximum 5 words per sentence for under_3. Maximum 8 words per sentence for age_3. Short. Punchy. Loud. Write like someone shouting at a parade, not narrating a documentary.
 
