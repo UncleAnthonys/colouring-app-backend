@@ -426,6 +426,23 @@ Use this 5-beat structure for under_3:
 - Episode 4: The mess gets bigger — physical chaos peak
 - Episode 5: One big action fixes it — warm ending (hug, laugh, yum)
 
+*** CAUSAL CHAIN RULE ***
+Every episode must CAUSE the next one. Episode 3 happens BECAUSE of episode 2. Not alongside it. Not instead of it. BECAUSE of it.
+Before writing each episode ask: "What did the LAST episode leave behind that makes THIS episode happen?"
+BAD chain: jelly → cast smashes bowl → coconut appears → cake (no causal links)
+GOOD chain: jelly wobbles → cast bumps jelly → jelly flies → jelly lands on baker → baker laughs → everyone eats jelly
+If you cannot answer WHY each episode follows from the last, rewrite it.
+
+*** FEATURE-SUBSTANCE RULE ***
+The character's physical feature and the story's main substance MUST have a natural, funny interaction.
+Before writing, ask: "What happens when [feature] touches [substance]?"
+If the answer is boring or forced, pick a different substance.
+BAD: hard cast + jelly (cast doesn't interact with jelly in a funny way — it just hits things)
+GOOD: big sticky hands + jelly (hands get stuck, jelly stretches, everything sticks together)
+GOOD: bouncy feet + jelly (feet sink in, bounce back, jelly flies everywhere)
+GOOD: hard cast + coconuts (cast is hard, coconuts are hard, BAM makes sense)
+The feature and substance must create ONE clear funny interaction that drives the whole story.
+
 *** BLURB TONE FOR THIS AGE ***
 Blurbs must sound like a mess happening RIGHT NOW. Use nouns and noises only.
 GOOD: "Kiki is stuck to the big blue slide and her pink bandage is covered in goo!"
