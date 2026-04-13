@@ -415,7 +415,7 @@ No new object may cause an action unless it was introduced and visible in the PR
 Object A appears → Object B appears → A meets B → chaos → resolution.
 This is non-negotiable. A toddler's brain tracks one thing at a time. Objects cannot appear from nowhere to drive the plot.
 BAD: Page 3 — "The ring went BOING!" (ring never appeared before)
-GOOD: Page 2 — Hannah finds a sparkly ring. Page 3 — She puts it in the jelly. BOING!
+GOOD: Page 2 — Hannah finds a sparkly ring. Page 3 — She rolls it down the hill. BOING!
 
 *** CUMULATIVE BUILD RULE ***
 Each episode must build directly on the previous one. The story is a chain, not a collection of scenes.
@@ -429,25 +429,24 @@ Use this 5-beat structure for under_3:
 *** CAUSAL CHAIN RULE ***
 Every episode must CAUSE the next one. Episode 3 happens BECAUSE of episode 2. Not alongside it. Not instead of it. BECAUSE of it.
 Before writing each episode ask: "What did the LAST episode leave behind that makes THIS episode happen?"
-BAD chain: jelly → cast smashes bowl → coconut appears → cake (no causal links)
-GOOD chain: jelly wobbles → cast bumps jelly → jelly flies → jelly lands on baker → baker laughs → everyone eats jelly
+BAD chain: ball → random bowl breaks → coconut appears → cake (no causal links)
+GOOD chain: ball rolls → knocks over tower → tower falls on bucket → bucket tips → everything tumbles → big laugh
 If you cannot answer WHY each episode follows from the last, rewrite it.
 
 *** FEATURE-SUBSTANCE RULE ***
 The character's physical feature and the story's main substance MUST have a natural, funny interaction.
 Before writing, ask: "What happens when [feature] touches [substance]?"
 If the answer is boring or forced, pick a different substance.
-BAD: hard cast + jelly (cast doesn't interact with jelly in a funny way — it just hits things)
-GOOD: big sticky hands + jelly (hands get stuck, jelly stretches, everything sticks together)
-GOOD: bouncy feet + jelly (feet sink in, bounce back, jelly flies everywhere)
-GOOD: hard cast + coconuts (cast is hard, coconuts are hard, BAM makes sense)
+BAD: floppy ears + bouncy ball (no natural interaction — they just exist near each other)
+GOOD: big floppy ears + bubbles (ears scoop bubbles, bubbles lift ears, character floats)
+GOOD: springy tail + sand (tail bounces in sand, sand flies everywhere, tail gets heavier)
+GOOD: giant hat + bubbles (bubbles float under hat, hat lifts up, character floats away)
 The feature and substance must create ONE clear funny interaction that drives the whole story.
 
 *** BLURB TONE FOR THIS AGE ***
 Blurbs must sound like a mess happening RIGHT NOW. Use nouns and noises only.
-GOOD: "Kiki is stuck to the big blue slide and her pink bandage is covered in goo!"
 BAD: "Kiki learns about sharing with her friends at the park."
-Every blurb must mention ONE messy/physical thing (jelly, goo, mud, bubbles, sticky tape).
+The blurb must describe something PHYSICAL happening to the character — something a toddler can picture and laugh at. Be inventive and specific to THIS character and THEIR feature. Never use the same type of scenario twice.
 NO questions. NO "time to...". State the chaos, not a question about it.
 """,
 
@@ -503,13 +502,13 @@ Maximum 40 words per episode. ABSOLUTE MAXIMUM. Count them. If you go over, cut 
 
 *** SOUND-FIRST RULE ***
 Write the sound word FIRST, then describe what caused it. This forces active writing.
-BAD: "Lily had a clever idea. She scooped up the jelly and plopped it in the ring. Squelch!"
-GOOD: "SQUELCH! PLOP! Lily scooped big green globs and dropped them in — one, two, three!"
+BAD: "Lily had a clever idea. She picked it up carefully and put it down. Done."
+GOOD: "CRASH! WOBBLE! Lily grabbed the tower with both hands — and the whole thing came tumbling down!"
 The sound word is the heartbeat of every page. Build the sentence around it, not after it.
 
 *** BLURB TONE FOR THIS AGE ***
 Blurbs must hook with a silly consequence. Focus on funny mistakes and physical mess.
-GOOD: "Ted's giant feet keep squashing the cupcakes — now the whole kitchen is covered in frosting!"
+GOOD: "Ted's giant feet have got tangled in the cake stand and now the whole table is tipping over!"
 BAD: "Ted learns that being careful is important when baking."
 End with the character in a silly impossible position, not a question.
 """,
@@ -906,16 +905,16 @@ For each theme provide:
 - E.g. if feature is "ukulele": "One song from Our Gav's ukulele could save the whole town — if only the strings would stop tangling"
 - E.g. if feature is "Illinois jumper": "The answer was written on Our Gav's jumper all along — nobody thought to look until now"
 - The blurb should make a parent think: "my child is going to LOVE seeing their [feature] do that")
-- CRAYON TEST: Every blurb must mention at least ONE thing a child can clearly picture colouring (e.g. a giant red sofa, green slime, purple bubbles, a wobbly bridge)
+- CRAYON TEST: Every blurb must mention at least ONE thing a child can clearly picture colouring (e.g. a giant wobbly tower, a bouncy trampoline, a huge splashing puddle, a wobbly bridge)
 - NO ABSTRACT NOUNS: NEVER use words like "wonder", "harmony", "discovery", "beauty", "perspective", "balance", "chaos" or "the unexpected" — these are uncolourable and meaningless to a child
-- ACTION-OBJECT RULE: The blurb must contain a clear silly problem a child can picture. BAD: "Milo learns about friendship." GOOD: "Milo gets stuck in a giant jar of sticky honey!"
+- ACTION-OBJECT RULE: The blurb must contain a clear silly problem a child can picture. BAD: "Milo learns about friendship." GOOD: "Milo is stuck inside a giant bouncy ball and cannot get out!"
 - BANNED WORDS: NEVER use these words in a blurb: "wonder", "discovery", "journey", "magic", "everyday", "heart", "harmony", "balance", "perspective", "unseen", "hidden", "small things", "big feelings"
 - PHYSICAL COMEDY TEST: The blurb must describe a physical mishap — getting stuck, swapping colours, floating away, breaking physics. If nothing is physically happening, rewrite it.
 - HALLMARK TEST: If the blurb sounds like a greetings card, it is wrong. If it sounds like a 4-year-old explaining a dream they had, it is correct.
 - NO QUESTIONS: NEVER end a blurb with "Can they...?", "Will they...?", "Can [character] help...?" or any question. Questions are weak. State what is happening instead.
 - FILLER PHRASE BAN: NEVER use "time to share", "watch out for", "find their way", "learn to", "discover that". These are boring templates.
 - CLIFFHANGER ENDING: End with the character in a silly impossible position. BAD: "Can Kiki share the tuft?" GOOD: "Kiki's hair has become a giant nest and three birds have already moved in!"
-- SENSORY TEXTURE: Mention a specific mess or texture — something sticky, squelchy, bubbly, slippery, or gooey. Be creative and vary the substance every time — do NOT default to jelly, slime or mud repeatedly. Invent fresh combinations specific to the character and their feature.
+- SENSORY TEXTURE: Mention something physical and tactile that a child can imagine touching or experiencing. Be inventive and specific to THIS character — never repeat the same type of substance or scenario across blurbs.
 - NO COLOURS IN BLURBS: NEVER mention specific colours (purple, pink, yellow, green, blue etc). This is a colouring book — the child decides the colours. Colours in blurbs also confuse the image generator into producing coloured images instead of black and white line art.
 
 *** PITCH QUALITY RULES ***
