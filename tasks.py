@@ -205,7 +205,19 @@ Make it look like a real children's coloring book cover you'd see in a shop!
         cover_with_text_b64 = create_front_cover(cover_image_b64, full_title, character_name)
         cover_url = upload_to_firebase(cover_with_text_b64, folder="adventure/storybooks")
         
-        pages = [{"page_num": 0, "page_type": "cover", "title": full_title, "page_url": cover_url, "raw_image_url": cover_url, "story_text": ""}]
+        # Generate region map for cover page
+        cover_mask_url = ""
+        try:
+            from region_map import generate_region_map
+            cover_bytes_for_mask = base64.b64decode(cover_with_text_b64)
+            cover_region_bytes, cover_num_regions = generate_region_map(cover_bytes_for_mask)
+            cover_mask_b64 = base64.b64encode(cover_region_bytes).decode("utf-8")
+            cover_mask_url = upload_to_firebase(cover_mask_b64, folder="masks/storybooks")
+            print(f"[WORKER] ✅ Cover region map ({cover_num_regions} regions)")
+        except Exception as e:
+            print(f"[WORKER] ⚠️ Cover region map failed (non-fatal): {e}")
+        
+        pages = [{"page_num": 0, "page_type": "cover", "title": full_title, "page_url": cover_url, "raw_image_url": cover_url, "mask_url": cover_mask_url, "story_text": ""}]
         
         # === STEP 3: Generate episode pages ===
         previous_page_b64 = None
@@ -256,12 +268,26 @@ Make it look like a real children's coloring book cover you'd see in a shop!
             a4_page_b64 = create_a4_page_with_text(image_b64, story_text, episode_title, parent_prompt=parent_prompt)
             page_url = upload_to_firebase(a4_page_b64, folder="adventure/storybooks")
             raw_image_url = upload_to_firebase(image_b64, folder="adventure/storybooks/raw")
+            
+            # Generate region map for stay-in-the-lines colouring
+            mask_url = ""
+            try:
+                from region_map import generate_region_map
+                image_bytes_for_mask = base64.b64decode(image_b64)
+                region_map_bytes, num_regions = generate_region_map(image_bytes_for_mask)
+                mask_b64 = base64.b64encode(region_map_bytes).decode("utf-8")
+                mask_url = upload_to_firebase(mask_b64, folder="masks/storybooks")
+                print(f"[WORKER] ✅ Story page {i+1} region map ({num_regions} regions)")
+            except Exception as e:
+                print(f"[WORKER] ⚠️ Story page {i+1} region map failed (non-fatal): {e}")
+            
             pages.append({
                 "page_num": i + 1,
                 "page_type": "episode",
                 "title": episode_title,
                 "page_url": page_url,
                 "raw_image_url": raw_image_url,
+                "mask_url": mask_url,
                 "story_text": story_text
             })
         
@@ -314,6 +340,7 @@ Make it look like a real children's coloring book cover you'd see in a shop!
                     "title": page.get("title", ""),
                     "page_url": page.get("page_url", ""),
                     "raw_image_url": page.get("raw_image_url", ""),
+                    "mask_url": page.get("mask_url", ""),
                     "story_text": page.get("story_text", ""),
                 })
             print(f"[WORKER] Saved {len(pages)} pages to sub-collection")
