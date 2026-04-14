@@ -302,8 +302,21 @@ Make it look like a real children's coloring book cover you'd see in a shop!
                 "pdf_url": "",
                 "pages": pages,
             }
-            db.collection("storybooks").add(storybook_doc)
-            print(f"[WORKER] Storybook saved to Firestore: {full_title}")
+            _, storybook_ref = db.collection("storybooks").add(storybook_doc)
+            print(f"[WORKER] Storybook saved to Firestore: {full_title} (id={storybook_ref.id})")
+            
+            # Save each page as a sub-collection document for FlutterFlow
+            for page in pages:
+                page_doc_id = f"page_{page['page_num']}"
+                db.collection("storybooks").document(storybook_ref.id).collection("pages").document(page_doc_id).set({
+                    "page_num": page["page_num"],
+                    "page_type": page.get("page_type", "episode"),
+                    "title": page.get("title", ""),
+                    "page_url": page.get("page_url", ""),
+                    "raw_image_url": page.get("raw_image_url", ""),
+                    "story_text": page.get("story_text", ""),
+                })
+            print(f"[WORKER] Saved {len(pages)} pages to sub-collection")
         except Exception as e:
             print(f"[WORKER] Firestore save failed (non-fatal): {e}")
 
