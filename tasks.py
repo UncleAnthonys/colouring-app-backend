@@ -293,14 +293,8 @@ Make it look like a real children's coloring book cover you'd see in a shop!
                 "story_text": story_text
             })
         
-        # === STEP 4: Complete ===
-        update_job_status(job_id, "complete", result={
-            "pages": pages,
-            "title": full_title,
-            "total_pages": len(pages),
-        })
-        
-        # Save storybook to Firestore with pages data for colour-on-device
+        # === STEP 4: Save to Firestore, then complete ===
+        storybook_ref_id = ""
         user_id = params.get("user_id", "")
         try:
             try:
@@ -331,12 +325,13 @@ Make it look like a real children's coloring book cover you'd see in a shop!
                 "pages": pages,
             }
             _, storybook_ref = db.collection("storybooks").add(storybook_doc)
-            print(f"[WORKER] Storybook saved to Firestore: {full_title} (id={storybook_ref.id})")
+            storybook_ref_id = storybook_ref.id
+            print(f"[WORKER] Storybook saved to Firestore: {full_title} (id={storybook_ref_id})")
             
             # Save each page as a sub-collection document for FlutterFlow
             for page in pages:
                 page_doc_id = f"page_{page['page_num']}"
-                db.collection("storybooks").document(storybook_ref.id).collection("pages").document(page_doc_id).set({
+                db.collection("storybooks").document(storybook_ref_id).collection("pages").document(page_doc_id).set({
                     "page_num": page["page_num"],
                     "page_type": page.get("page_type", "episode"),
                     "title": page.get("title", ""),
@@ -348,6 +343,13 @@ Make it look like a real children's coloring book cover you'd see in a shop!
             print(f"[WORKER] Saved {len(pages)} pages to sub-collection")
         except Exception as e:
             print(f"[WORKER] Firestore save failed (non-fatal): {e}")
+
+        update_job_status(job_id, "complete", result={
+            "pages": pages,
+            "title": full_title,
+            "total_pages": len(pages),
+            "storybook_id": storybook_ref_id,
+        })
 
         # Send push notification
         try:
