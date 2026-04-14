@@ -208,6 +208,7 @@ Make it look like a real children's coloring book cover you'd see in a shop!
         # Generate region map for cover page
         cover_mask_url = ""
         try:
+            import base64
             from region_map import generate_region_map
             cover_bytes_for_mask = base64.b64decode(cover_with_text_b64)
             cover_region_bytes, cover_num_regions = generate_region_map(cover_bytes_for_mask)
@@ -272,6 +273,7 @@ Make it look like a real children's coloring book cover you'd see in a shop!
             # Generate region map for stay-in-the-lines colouring
             mask_url = ""
             try:
+                import base64
                 from region_map import generate_region_map
                 image_bytes_for_mask = base64.b64decode(image_b64)
                 region_map_bytes, num_regions = generate_region_map(image_bytes_for_mask)
