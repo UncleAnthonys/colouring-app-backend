@@ -325,9 +325,9 @@ DRAW:
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - absolutely NO colour, NO pink cheeks, NO blush, NO shading anywhere
-- EXTREMELY THICK black outlines - almost as thick as under-3 pages, thicker than a normal colouring book
+- EXTREMELY THICK black outlines (6-8px line weight) - same thickness as a board book illustration
 - Simple blob-like shapes but slightly more recognisable than pure kawaii blobs
-- Faces: dot eyes, small curved line nose on EVERY face, single curved line smile - NOT an open mouth
+- Faces: TINY pinpoint dots for eyes (like a period, not big circles), small curved line nose on EVERY face, single curved line smile - NOT an open mouth
 - Hair as simple outline shape only - NOT filled in, NOT solid black
 - NO solid black fill anywhere - sunglasses, hair, accessories must all be HOLLOW outlines only
 - Match the crop of the photo EXACTLY - if photo is waist up, ONLY draw waist up, do NOT invent legs or feet below the crop line. If full body visible, draw rounded feet (chunky shoes if wearing them, rounded blob feet if barefoot or animal)
@@ -394,9 +394,9 @@ DRAW ONLY:
 
 ABSOLUTE REQUIREMENTS:
 - PURE WHITE BACKGROUND - no sky, no clouds, no ground, no grass, nothing
-- EXTREMELY THICK black outlines - almost as thick as under-3 pages, thicker than a normal colouring book
+- EXTREMELY THICK black outlines (6-8px line weight) - same thickness as a board book illustration
 - Simple blob-like shapes but slightly more recognisable than pure kawaii blobs
-- Faces: dot eyes, small curved line nose on EVERY face, single curved line smile - NOT an open mouth
+- Faces: TINY pinpoint dots for eyes (like a period, not big circles), small curved line nose on EVERY face, single curved line smile - NOT an open mouth
 - Hair as simple outline shape only - NOT filled in, NOT solid black
 - NO solid black fill anywhere - sunglasses, hair, accessories must all be HOLLOW outlines only
 - MAXIMUM 10-12 large colourable areas in the ENTIRE image
