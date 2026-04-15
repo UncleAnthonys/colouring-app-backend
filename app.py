@@ -672,9 +672,11 @@ STYLE:
 - Maximum 20-25 colourable areas
 
 BACKGROUND:
-- Simple {theme_name} background — 2-3 scene elements only (e.g. one building outline, one tree, simple ground line)
-- Keep 40-50% of the background WHITE space
-- NOT a fully immersive scene — keep it simple enough for a 5 year old to colour without feeling overwhelmed
+- Transform the background INTO the {theme_name} world — replace real-world scenery with themed equivalents
+- E.g. if superhero theme: houses become simple skyscrapers, trees become city buildings, countryside becomes cityscape
+- E.g. if pirate theme: background becomes simple ocean and island shapes, not the original photo setting
+- Keep it SIMPLE — 3-4 themed background shapes, not a densely packed scene
+- Keep 30-40% WHITE space — more background than age 4 but not wall-to-wall detail like age 6+
 
 OUTPUT: Recognisable figures in {theme_name} costumes with theme items and simplified photo background."""
 
