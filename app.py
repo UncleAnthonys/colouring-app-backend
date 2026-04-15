@@ -226,11 +226,11 @@ DRAW:
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - absolutely NO colour, NO pink cheeks, NO blush, NO shading
-- EXTREMELY THICK black outlines (6-8px line weight) - like a board book illustration, the THICKEST possible lines
+- The THICKEST possible black outlines — every line must be as thick as a child's chunky crayon stroke. If you drew it with a fat marker pen, that is how thick every line must be. Lines should be 5-6mm wide when printed on A4.
 - Blob/kawaii style - super rounded and chunky like a baby board book illustration
-- Every body part is a ROUND BLOB — head is a circle, body is a rounded rectangle, arms are short thick tubes, legs are short thick tubes
-- NO THIN LINES ANYWHERE — if a line looks thin, make it thicker. Every single line must be fat and chunky
-- Faces: TINY pinpoint dots for eyes (like a period, not circles), single curved line smile - NOT an open mouth
+- Every body part is a ROUND BLOB — head is a circle, body is an oval, arms are short fat sausage tubes, legs are short fat sausage tubes
+- ZERO thin lines anywhere in the entire image — not one single thin line. Every outline is FAT FAT FAT.
+- Faces: TINY pinpoint dots for eyes (like a full stop, not circles), single curved line smile - NOT an open mouth
 - Hair as ONE simple outline shape only - NOT filled in, NOT solid black, NO individual strands
 - NO solid black fill anywhere - sunglasses, hair, accessories must all be HOLLOW outlines only
 - Clothing as ONE outer shape only — NO collar lines, NO sleeve edges, NO shirt seams, NO double lines, NO laces, NO stitching. A t-shirt is just the body shape with a neckline curve. That is ALL.
@@ -294,16 +294,16 @@ DRAW:
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
-- EXTREMELY THICK black outlines - thicker than a normal colouring book
-- Blob/kawaii style - super rounded and chunky
-- Faces: TINY pinpoint dots for eyes (like a period, not big circles), single curved line smile - NOT an open mouth, just one simple upward curve
-- NO detailed features
-- Small slits on ends of hands and feet to suggest fingers/toes - NOT full fingers, just small indentations
-- Hair as simple outline shape only - NOT filled in, NOT solid black
+- The THICKEST possible black outlines — every line must be as thick as a child's chunky crayon stroke. If you drew it with a fat marker pen, that is how thick every line must be. Lines should be 5-6mm wide when printed on A4.
+- Blob/kawaii style - super rounded and chunky like a baby board book illustration
+- Every body part is a ROUND BLOB — head is a circle, body is an oval, arms are short fat sausage tubes, legs are short fat sausage tubes
+- ZERO thin lines anywhere in the entire image — not one single thin line. Every outline is FAT FAT FAT.
+- Faces: TINY pinpoint dots for eyes (like a full stop, not circles), single curved line smile - NOT an open mouth
+- NO detailed features — NO fingers, just rounded hand blobs
+- Hair as ONE simple outline shape only - NOT filled in, NOT solid black, NO individual strands
 - NO solid black fill anywhere - sunglasses, hair, accessories must all be HOLLOW outlines only
-- Clothing as simple outer shapes only (e.g. t-shirt neckline, shorts outline) - NO internal detail, NO pockets, NO buttons, NO patterns, NO stitching
-- Rounded feet on every character (chunky shoes if wearing thcat push_notifications.pyem, rounded blob feet if barefoot or animal)
-- Bodies as simple rounded shapes
+- Clothing as ONE outer shape only — NO collar lines, NO sleeve edges, NO shirt seams, NO double lines, NO laces. A cape is just one big shape. A hat is one blob.
+- Rounded blob feet on every character — NO shoe detail, NO laces, NO soles
 - Maximum 10-12 colourable areas TOTAL
 
 BACKGROUND:
