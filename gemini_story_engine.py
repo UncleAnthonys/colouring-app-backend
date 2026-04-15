@@ -260,7 +260,9 @@ RULES:
 - The refrain should be warm, celebratory, or funny — something a child loves to shout along with
 - The observation line must describe something VISIBLE on the coloring page
 - NEVER repeat words within a sentence ("big, big hill") — that is NOT this style
-- The child should be able to predict and shout the refrain after hearing it twice""")
+- The child should be able to predict and shout the refrain after hearing it twice
+- CRITICAL: The refrain must be tied to the CHARACTER'S GOAL, IDENTITY, or EMOTIONAL DRIVE — not a description of what an object is doing. It must make sense on every single page regardless of what is happening. GOOD: "Is that the most amazing dog ever?" (identity — always true). GOOD: "We have to find that treasure!" (goal — always relevant). BAD: "The map is slipping!" (situational — only true on one page).
+- NOTE FOR AGE_3: If the age is age_3, this Repetition style refrain replaces the standard age_3 join-in refrain. Do not use both. The Repetition style refrain appears on pages 2, 3, and 4. Page 5 gets the twist callback instead.""")
     elif writing_style == "Rhyming":
         parts.append("""RHYMING STYLE RULES: Every page must contain at least one rhyming couplet. Simple, natural rhymes only. The rhythm must feel like a nursery rhyme — bouncy and predictable. Never sacrifice story clarity for a rhyme.""")
     elif writing_style == "Silly":
