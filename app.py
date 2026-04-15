@@ -325,8 +325,8 @@ DRAW:
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - absolutely NO colour, NO pink cheeks, NO blush, NO shading anywhere
-- VERY THICK black outlines
-- Simple blob-like shapes
+- EXTREMELY THICK black outlines - almost as thick as under-3 pages, thicker than a normal colouring book
+- Simple blob-like shapes but slightly more recognisable than pure kawaii blobs
 - Faces: dot eyes, small curved line nose on EVERY face, single curved line smile - NOT an open mouth
 - Hair as simple outline shape only - NOT filled in, NOT solid black
 - NO solid black fill anywhere - sunglasses, hair, accessories must all be HOLLOW outlines only
@@ -394,8 +394,8 @@ DRAW ONLY:
 
 ABSOLUTE REQUIREMENTS:
 - PURE WHITE BACKGROUND - no sky, no clouds, no ground, no grass, nothing
-- VERY THICK black outlines only
-- Simple blob-like shapes
+- EXTREMELY THICK black outlines - almost as thick as under-3 pages, thicker than a normal colouring book
+- Simple blob-like shapes but slightly more recognisable than pure kawaii blobs
 - Faces: dot eyes, small curved line nose on EVERY face, single curved line smile - NOT an open mouth
 - Hair as simple outline shape only - NOT filled in, NOT solid black
 - NO solid black fill anywhere - sunglasses, hair, accessories must all be HOLLOW outlines only
@@ -672,8 +672,9 @@ STYLE:
 - Maximum 20-25 colourable areas
 
 BACKGROUND:
-- Fully immersive {theme_name} scene with themed scenery
-- Themed landscape, ground, sky elements
+- Simple {theme_name} background — 2-3 scene elements only (e.g. one building outline, one tree, simple ground line)
+- Keep 40-50% of the background WHITE space
+- NOT a fully immersive scene — keep it simple enough for a 5 year old to colour without feeling overwhelmed
 
 OUTPUT: Recognisable figures in {theme_name} costumes with theme items and simplified photo background."""
 
