@@ -655,12 +655,12 @@ Keep the EXACT age of every person - a baby MUST look like a baby, a toddler lik
 
 DRAW:
 - The subjects from the photo (people and/or animals) wearing simple {theme_name} costumes (basic outfits, not elaborate)
-- 3-4 {theme_name} themed elements around the scene (NOT extra people - e.g. safari animals, pirate ships, superhero city elements)
-- 2-3 {theme_name} scene elements to build a fuller themed scene (e.g. trees, vehicles, landscape features)
+- 3-4 {theme_name} themed props around the scene (NOT extra people - e.g. shield, treasure chest, magic wand, rocket, pirate flag)
+- 2-3 simple {theme_name} background elements (e.g. a tree, a simple building outline, a fence, a hill)
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - NO grey, NO shading, NO texture
-- Medium-thick black outlines
+- THICK black outlines - slightly thinner than age 3/4 but still chunky and easy for small hands
 - Simple but recognisable figures
 - Faces: keep REAL facial features from the photo - recognisable nose, eyes, mouth shape
 - Keep the EXACT age of every person - a baby MUST look like a baby, not a child
