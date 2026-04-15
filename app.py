@@ -226,7 +226,7 @@ DRAW:
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - absolutely NO colour, NO pink cheeks, NO blush, NO shading
-- The THICKEST possible black outlines — every line must be as thick as a child's chunky crayon stroke. If you drew it with a fat marker pen, that is how thick every line must be. Lines should be 5-6mm wide when printed on A4.
+- LINE THICKNESS IS THE MOST IMPORTANT RULE: Draw with the line thickness of a Fisher-Price "My First Colouring Book" for babies. Every outline must be at LEAST 4x thicker than a normal colouring book. Think toddler board book — the absolute chunkiest, fattest black outlines possible.
 - Blob/kawaii style - super rounded and chunky like a baby board book illustration
 - Every body part is a ROUND BLOB — head is a circle, body is an oval, arms are short fat sausage tubes, legs are short fat sausage tubes
 - ZERO thin lines anywhere in the entire image — not one single thin line. Every outline is FAT FAT FAT.
@@ -294,7 +294,7 @@ DRAW:
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - no colour, no grey, no shading
-- The THICKEST possible black outlines — every line must be as thick as a child's chunky crayon stroke. If you drew it with a fat marker pen, that is how thick every line must be. Lines should be 5-6mm wide when printed on A4.
+- LINE THICKNESS IS THE MOST IMPORTANT RULE: Draw with the line thickness of a Fisher-Price "My First Colouring Book" for babies. Every outline must be at LEAST 4x thicker than a normal colouring book. Think toddler board book — the absolute chunkiest, fattest black outlines possible.
 - Blob/kawaii style - super rounded and chunky like a baby board book illustration
 - Every body part is a ROUND BLOB — head is a circle, body is an oval, arms are short fat sausage tubes, legs are short fat sausage tubes
 - ZERO thin lines anywhere in the entire image — not one single thin line. Every outline is FAT FAT FAT.
