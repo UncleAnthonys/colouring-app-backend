@@ -387,18 +387,19 @@ CRITICAL - COUNT THE SUBJECTS: Look at the photo carefully. Count the humans and
 Keep the EXACT age of every person - a baby MUST look like a baby, a toddler like a toddler. Do NOT age up or age down anyone.
 
 DRAW ONLY:
-- The subjects from the photo (people and/or animals) as very basic shapes
-- Give them simple {theme_name} costume elements (e.g. a hat or simple outfit shape)
-- 2 simple {theme_name} themed elements next to them
+- The subjects from the photo (people and/or animals) as very basic blob shapes — SAME style as no-theme age 3
+- Add the SIMPLEST possible {theme_name} costume hint — ONE thick outline shape only (e.g. a cape is just one big shape behind them, a hat is one blob on their head). NO costume detail — no seams, no belts, no double lines, no sleeve edges
+- 2 simple {theme_name} themed elements next to them (e.g. a shield shape, a lightning bolt, a star)
 - THAT IS ALL - NOTHING ELSE
 
 ABSOLUTE REQUIREMENTS:
 - PURE WHITE BACKGROUND - no sky, no clouds, no ground, no grass, nothing
 - EXTREMELY THICK black outlines (6-8px line weight) - same thickness as a board book illustration
-- Simple blob-like shapes but slightly more recognisable than pure kawaii blobs
+- Bodies are BLOBS — same chunky kawaii style as no-theme. Adding a costume does NOT add detail — it just changes the outer shape slightly
 - Faces: TINY pinpoint dots for eyes (like a period, not big circles), small curved line nose on EVERY face, single curved line smile - NOT an open mouth
 - Hair as simple outline shape only - NOT filled in, NOT solid black
 - NO solid black fill anywhere - sunglasses, hair, accessories must all be HOLLOW outlines only
+- Clothing drawn as ONE outer outline only — NO internal lines for sleeves, collars, belts, seams, or edges. A t-shirt is just the body shape. A cape is just one flowing shape.
 - MAXIMUM 10-12 large colourable areas in the ENTIRE image
 - NO patterns, NO details, NO small elements
 
