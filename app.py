@@ -672,11 +672,11 @@ STYLE:
 - Maximum 20-25 colourable areas
 
 BACKGROUND:
-- Transform the background INTO the {theme_name} world — replace real-world scenery with themed equivalents
-- E.g. if superhero theme: houses become simple skyscrapers, trees become city buildings, countryside becomes cityscape
-- E.g. if pirate theme: background becomes simple ocean and island shapes, not the original photo setting
-- Keep it SIMPLE — 3-4 themed background shapes, not a densely packed scene
-- Keep 30-40% WHITE space — more background than age 4 but not wall-to-wall detail like age 6+
+- IGNORE the real background from the photo completely — do NOT draw the real setting
+- Instead, create a simple {theme_name} themed background FROM SCRATCH
+- Superheroes = simple city skyline silhouette. Pirates = ocean waves and palm tree. Dinosaurs = volcanic landscape. Fantasy = castle outline and clouds.
+- Keep it SIMPLE — 3-4 themed background shapes only, not densely packed
+- Keep 30-40% WHITE space
 
 OUTPUT: Recognisable figures in {theme_name} costumes with theme items and simplified photo background."""
 
