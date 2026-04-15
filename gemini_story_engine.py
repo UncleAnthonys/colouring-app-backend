@@ -367,8 +367,40 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
     if isinstance(story, list):
         story = {"story_title": "", "episodes": story}
 
-    # Validate and clean episodes
+    # Validate episode count — retry once if Gemini returned too few
     episodes = story.get("episodes", [])
+    if len(episodes) < episode_count:
+        print(f"[GEMINI-STORY] WARNING: Got {len(episodes)} episodes, expected {episode_count}. Retrying...")
+        import time as _time
+        _time.sleep(3)
+        response = client.models.generate_content(
+            model=MODEL,
+            contents=user_prompt,
+            config=types.GenerateContentConfig(
+                system_instruction=SYSTEM_PROMPT,
+                response_mime_type="application/json",
+                temperature=TEMPERATURE,
+                thinking_config=types.ThinkingConfig(
+                    thinking_level=THINKING_LEVEL
+                ),
+            ),
+        )
+        if response.text:
+            try:
+                retry_story = json.loads(response.text)
+                if isinstance(retry_story, list):
+                    retry_story = {"story_title": "", "episodes": retry_story}
+                retry_episodes = retry_story.get("episodes", [])
+                if len(retry_episodes) > len(episodes):
+                    story = retry_story
+                    episodes = retry_episodes
+                    print(f"[GEMINI-STORY] Retry succeeded: {len(episodes)} episodes")
+                else:
+                    print(f"[GEMINI-STORY] Retry also returned {len(retry_episodes)} episodes, using original")
+            except json.JSONDecodeError:
+                print(f"[GEMINI-STORY] Retry JSON parse failed, using original")
+
+    # Validate and clean episodes
     for ep in episodes:
         # Ensure emotion is valid
         if ep.get("character_emotion") not in VALID_EMOTIONS:
