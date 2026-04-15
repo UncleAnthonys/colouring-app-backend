@@ -226,15 +226,17 @@ DRAW:
 
 STYLE:
 - BLACK OUTLINES ON WHITE ONLY - absolutely NO colour, NO pink cheeks, NO blush, NO shading
-- EXTREMELY THICK black outlines - thicker than a normal colouring book
-- Blob/kawaii style - super rounded and chunky
-- Faces: just dots for eyes, single curved line smile - NOT an open mouth, just one simple upward curve
-- Hair as simple outline shape only - NOT filled in, NOT solid black
+- EXTREMELY THICK black outlines (6-8px line weight) - like a board book illustration, the THICKEST possible lines
+- Blob/kawaii style - super rounded and chunky like a baby board book illustration
+- Every body part is a ROUND BLOB — head is a circle, body is a rounded rectangle, arms are short thick tubes, legs are short thick tubes
+- NO THIN LINES ANYWHERE — if a line looks thin, make it thicker. Every single line must be fat and chunky
+- Faces: TINY pinpoint dots for eyes (like a period, not circles), single curved line smile - NOT an open mouth
+- Hair as ONE simple outline shape only - NOT filled in, NOT solid black, NO individual strands
 - NO solid black fill anywhere - sunglasses, hair, accessories must all be HOLLOW outlines only
-- Clothing as simple outer shapes only (e.g. t-shirt neckline, shorts outline) - NO internal detail, NO pockets, NO buttons, NO patterns, NO stitching
-- If full body visible, arms and legs as short thick rounded stubs - same chunky thickness as the body, NOT thin sticks
-- If wearing clothes, assume shoes - draw simple chunky shoe shapes, NOT bare feet
-- Small slits on ends of hands and feet to suggest fingers/toes - NOT full fingers, just small indentations
+- Clothing as ONE outer shape only — NO collar lines, NO sleeve edges, NO shirt seams, NO double lines, NO laces, NO stitching. A t-shirt is just the body shape with a neckline curve. That is ALL.
+- Arms and legs as short thick rounded stubs - same chunky thickness as the body, NOT thin sticks
+- Shoes as simple rounded blob shapes — NO laces, NO soles, NO detail
+- NO fingers — just rounded hand blobs
 - Maximum 8-10 colourable areas TOTAL
 
 BACKGROUND:
