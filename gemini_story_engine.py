@@ -228,7 +228,7 @@ def generate_story_gemini(
             narrative_anchor = ", ".join(anchor_parts)
             parts.append(f"NARRATIVE_ANCHOR: {narrative_anchor} — use this as your story logic. Distribute the tension naturally across all episodes so it peaks around episode 4. Do NOT follow this as a checklist — let it inform the arc and cause-and-effect, not dictate what happens in each episode.")
         if feature_used:
-            parts.append(f"KEY_FEATURE: {feature_used} — this is the ONE object/feature the entire story must revolve around. Every episode must reference or involve this feature. Do NOT introduce unrelated props or objects.")
+            parts.append(f"KEY_FEATURE: {feature_used} — this is the character's defining feature that drives WHY things go wrong. It is the ENGINE of the obstacle, not the subject of every sentence. Use it to cause problems and eventually solve them — but do NOT mention it in every line. The story should feel like an adventure that happens to involve this feature, not a story ABOUT the feature. A reader should finish thinking 'what a great adventure' not 'wow that character really has [feature]'.")
     # Age, style, lesson
     parts.append(f"\nAGE_LEVEL: {age_level}")
     parts.append(f"STORY_TIER: {tier} ({episode_count} episodes)")
@@ -803,6 +803,12 @@ The user has chosen the writing style: "{writing_style}"
 Keep this in mind when crafting theme descriptions and blurbs — they should hint at the tone of the story.
 For example, "Silly" themes should have absurd premises, "Gentle" themes should have soft/cozy settings, "Suspenseful" themes should have mystery/tension in the blurb.
 Do NOT write actual story text — just let the style influence the CONCEPT and TONE of each pitch.
+
+CRITICAL — IF WRITING_STYLE IS "Repetition":
+Do NOT use doubled words in theme names or blurbs (NOT "The Snap-Snap Parade" or "bump-bump-bump").
+Repetition style means STRUCTURAL REFRAIN — a phrase that repeats at the same moment every 2 pages, like "Is that the most amazing dog ever?" or "Watch out for those big floppy ears!".
+The pitch concept should lend itself to a repeating situation — something that keeps going wrong in the same way, or a question the child can shout along with.
+Theme names should be normal title-case names, not gimmicky doubled words.
 """
     if life_lesson:
         style_theme_block += f"""
