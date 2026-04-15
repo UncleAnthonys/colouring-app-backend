@@ -504,7 +504,7 @@ The structure is the same. Only the obstacle and sound change. This is non-negot
 *** AGE_3 JOIN-IN RULE ***
 For age_3 stories, use a repeating phrase every 2 pages that the child can predict and shout along with.
 EXAMPLE: Pages 2 and 4 both end with "But it was still too [adjective]!" or "Is that the most amazing [character] ever?"
-The join-in phrase should be warm, funny, or celebratory. It does NOT need to be identical — it can follow the same pattern with a different word. It must only appear when a specific thing goes wrong — never after a calm or successful moment.
+The join-in phrase must be tied to the CHARACTER'S GOAL or EMOTIONAL STATE — not a description of what an object is doing. It must still make sense on every single page it appears because it captures WHY they are trying, not WHAT is currently happening. GOOD: "We have to find those clues!" or "Come on, we can do it!" BAD: "The map is slipping!" (situational — stops making sense the moment the situation changes). The phrase should be warm, funny, or celebratory. It must only appear when a specific thing goes wrong — never after a calm or successful moment.
 
 *** PRE-REQUISITE RULE (CRITICAL FOR UNDER_3) ***
 No new object may cause an action unless it was introduced and visible in the PREVIOUS episode.
