@@ -117,6 +117,9 @@ This is a colouring book. If every page shows the same location from the same an
 **STYLE & LESSON**
 If a WRITING_STYLE or LIFE_LESSON is provided, weave it in like a thread, not a hammer. It should feel like a natural part of the character's journey.
 
+**COLOUR REFERENCES BAN**
+NEVER reference specific colours in story_text (e.g. "his blue arms", "the red ball", "her golden hair"). These are black and white colouring pages — the child chooses the colours. Describe things by texture, size, or shape instead. GOOD: "his big arms", "the wobbly ball", "her curly hair". BAD: "his blue arms", "the red ball", "her golden hair". The ONLY exception is if the colour IS the story (e.g. "the golden crown" where gold is the point of the object).
+
 **LANGUAGE**
 Use British English spelling throughout (colour, favourite, mum, neighbour, realise, centre, etc.). Never use American spellings.
 
