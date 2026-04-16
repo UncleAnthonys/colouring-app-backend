@@ -1169,3 +1169,115 @@ def generate_pack_task(self, job_id: str, params: dict):
         print(f"[WORKER-PACK] ❌ Pack failed: {str(e)}")
         traceback.print_exc()
         update_job_status(job_id, "failed", error=str(e)[:500])
+
+
+@celery_app.task(name='tasks.generate_sketch_task', bind=True, acks_late=True, reject_on_worker_lost=True)
+def generate_sketch_task(self, job_id: str, params: dict):
+    """
+    Generate a pencil sketch trace from a photo using gpt-image-1.5.
+    Output is a clean black-on-white line drawing for kids to trace on paper.
+    Mirrors generate_colouring_page_task photo-mode pattern.
+    """
+    try:
+        update_job_status(job_id, "processing", progress="Creating your sketch...")
+        
+        # Force path fix inside task
+        import sys, os
+        task_dir = os.path.dirname(os.path.abspath(__file__))
+        if task_dir not in sys.path:
+            sys.path.insert(0, task_dir)
+        
+        import base64
+        import httpx
+        from app import OPENAI_API_KEY, BASE_URL
+        from firebase_utils import upload_to_firebase
+        from PIL import Image, ImageOps
+        import io
+        
+        image_b64 = params.get("image_b64") or params.get("imageB64", "")
+        user_id = params.get("user_id", "unknown")
+        
+        if not image_b64:
+            raise Exception("No image_b64 provided in params")
+        
+        print(f"[WORKER] Sketch generation for user {user_id}, image_b64 length: {len(image_b64)}")
+        
+        # Sketch prompt — confirmed working with gpt-image-1.5
+        prompt = (
+            "Convert this photo into a clean pencil sketch line drawing. "
+            "Keep the subject completely faithful and accurate to the original - exact proportions, exact likeness. "
+            "Remove the background completely - pure white background only. "
+            "Black lines on white only. No shading, no fill, no colour, no grey tones. "
+            "Clean simple outlines that a child could trace over."
+        )
+        
+        update_job_status(job_id, "processing", progress="Sketching your photo...")
+        
+        # EXIF rotation fix + orientation detection
+        image_bytes = base64.b64decode(image_b64)
+        img = Image.open(io.BytesIO(image_bytes))
+        img = ImageOps.exif_transpose(img)
+        
+        # Re-save as JPEG after EXIF transpose so orientation is baked in
+        buf = io.BytesIO()
+        img.convert("RGB").save(buf, format="JPEG", quality=90)
+        image_bytes = buf.getvalue()
+        
+        width, height = img.size
+        size = "1536x1024" if width > height else "1024x1536"
+        
+        headers = {"Authorization": f"Bearer {OPENAI_API_KEY}"}
+        files = [("image[]", ("photo.jpg", image_bytes, "image/jpeg"))]
+        data = {
+            "model": "gpt-image-1.5",
+            "prompt": prompt,
+            "n": "1",
+            "size": size,
+            "quality": "low",
+        }
+        
+        with httpx.Client(timeout=180.0) as client:
+            response = client.post(f"{BASE_URL}/images/edits", headers=headers, files=files, data=data)
+            if response.status_code != 200:
+                raise Exception(f"OpenAI API error: {response.status_code} - {response.text[:200]}")
+            result = response.json()
+        
+        image_data = result["data"][0]
+        if "b64_json" in image_data:
+            output_b64 = image_data["b64_json"]
+        else:
+            with httpx.Client() as client:
+                resp = client.get(image_data["url"])
+                output_b64 = base64.b64encode(resp.content).decode('utf-8')
+        
+        # Upload to user-scoped Firebase Storage folder
+        update_job_status(job_id, "processing", progress="Saving your sketch...")
+        image_url = upload_to_firebase(output_b64, folder=f"sketches/{user_id}")
+        
+        # Detect orientation for frontend layout
+        output_img = Image.open(io.BytesIO(base64.b64decode(output_b64)))
+        is_landscape = output_img.width > output_img.height
+        
+        update_job_status(job_id, "complete", result={
+            "image_url": image_url,
+            "is_landscape": is_landscape,
+        })
+        
+        # Push notification
+        try:
+            from push_notifications import send_push
+            send_push(
+                user_id,
+                "Your Sketch is Ready! ✏️",
+                "Tap to start tracing!",
+                {"type": "sketch", "job_id": job_id}
+            )
+        except Exception as e:
+            print(f"[WORKER] Push notification failed (non-fatal): {e}")
+        
+        print(f"[WORKER] ✅ Sketch complete for user {user_id}: {image_url}")
+        
+    except Exception as e:
+        print(f"[WORKER] ❌ Sketch failed: {str(e)}")
+        traceback.print_exc()
+        update_job_status(job_id, "failed", error=str(e)[:500])

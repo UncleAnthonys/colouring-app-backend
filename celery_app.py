@@ -48,6 +48,7 @@ celery_app.conf.update(
         'tasks.generate_colouring_page_task': {'queue': 'fast'},
         'tasks.extract_and_reveal_task': {'queue': 'fast'},
         'tasks.character_reveal_flow_task': {'queue': 'fast'},
+        'tasks.generate_sketch_task': {'queue': 'fast'},
         'tasks.generate_full_story_task': {'queue': 'slow'},
         'tasks.generate_storybook_pdf_task': {'queue': 'slow'},
         'tasks.generate_pack_task': {'queue': 'slow'},

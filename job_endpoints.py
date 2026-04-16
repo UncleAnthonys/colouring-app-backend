@@ -95,6 +95,7 @@ async def submit_job(request: Request):
         "character_reveal_flow": "tasks.character_reveal_flow_task",
         "full_story": "tasks.generate_full_story_task",
         "colouring_page": "tasks.generate_colouring_page_task",
+        "sketch": "tasks.generate_sketch_task",
         "storybook_pdf": "tasks.generate_storybook_pdf_task",
         "pack": "tasks.generate_pack_task",
     }
