@@ -1224,7 +1224,7 @@ def generate_sketch_task(self, job_id: str, params: dict):
         image_bytes = buf.getvalue()
         
         width, height = img.size
-        size = "1536x1024" if width > height else "1024x1536"
+        size = "1024x1024"
         
         headers = {"Authorization": f"Bearer {OPENAI_API_KEY}"}
         files = [("image[]", ("photo.jpg", image_bytes, "image/jpeg"))]
