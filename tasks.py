@@ -1195,10 +1195,20 @@ def generate_sketch_task(self, job_id: str, params: dict):
         import io
         
         image_b64 = params.get("image_b64") or params.get("imageB64", "")
+        image_url = params.get("image_url", "")
         user_id = params.get("user_id", "unknown")
         
+        # If URL provided instead of base64, download it
+        if not image_b64 and image_url:
+            print(f"[WORKER] Downloading sketch source from URL: {image_url[:80]}...")
+            with httpx.Client(timeout=60.0) as client:
+                dl_resp = client.get(image_url)
+                if dl_resp.status_code != 200:
+                    raise Exception(f"Failed to download image: {dl_resp.status_code}")
+                image_b64 = base64.b64encode(dl_resp.content).decode('utf-8')
+        
         if not image_b64:
-            raise Exception("No image_b64 provided in params")
+            raise Exception("No image_b64 or image_url provided in params")
         
         print(f"[WORKER] Sketch generation for user {user_id}, image_b64 length: {len(image_b64)}")
         
