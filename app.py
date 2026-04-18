@@ -1875,3 +1875,24 @@ async def send_pdf_email(request: EmailPDFRequest):
     except Exception as e:
         print(f"Email error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/upload/image")
+async def upload_image(request: Request):
+    """Upload a base64 image to Firebase Storage and return public URL."""
+    from firebase_utils import upload_to_firebase
+    import json
+    
+    body = await request.body()
+    params = json.loads(body.decode('utf-8'))
+    
+    image_b64 = params.get("image_b64", "")
+    user_id = params.get("user_id", "unknown")
+    
+    if not image_b64:
+        raise HTTPException(status_code=400, detail="No image_b64 provided")
+    
+    image_url = upload_to_firebase(image_b64, folder=f"sketch-uploads/{user_id}")
+    
+    return {"image_url": image_url}
+
