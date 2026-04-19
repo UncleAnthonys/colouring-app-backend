@@ -836,6 +836,7 @@ The user has chosen the writing style: "{writing_style}"
 Keep this in mind when crafting theme descriptions and blurbs — they should hint at the tone of the story.
 For example, "Silly" themes should have absurd premises, "Gentle" themes should have soft/cozy settings, "Suspenseful" themes should have mystery/tension in the blurb.
 Do NOT write actual story text — just let the style influence the CONCEPT and TONE of each pitch.
+CRITICAL: The writing style applies to the STORY only, NOT to the blurb. Blurbs must always be plain prose — never rhyming, never rhythmic, never mimicking the writing style. A blurb for a Rhyming story must NOT rhyme. A blurb for a Repetition story must NOT use refrains. The blurb is a parent-facing hook, not a sample of the story's style.
 
 CRITICAL — IF WRITING_STYLE IS "Repetition":
 Do NOT use doubled words in theme names or blurbs (NOT "The Snap-Snap Parade" or "bump-bump-bump").
@@ -910,61 +911,17 @@ CHARACTER TO ANALYZE:
 
 {second_char_block}
 
-STEP 1 - IDENTIFY THE MOST UNUSUAL FEATURES (in order of priority):
-Look at the character description. Find the WEIRDEST, most UNUSUAL things:
+STEP 1 - UNDERSTAND THE CHARACTER
 
-⚠️ CRITICAL — HUMAN/PERSON CHARACTERS:
-If the character is a REAL CHILD, PERSON, or HUMAN (not a monster, animal, toy, or drawing):
+Read the character description carefully. Note their appearance, clothing, accessories, objects they're holding, and anything distinctive about them. You have COMPLETE CREATIVE FREEDOM to pitch 3 genuinely different, compelling story concepts.
 
-PHYSICAL APPEARANCE CAN AND SHOULD BE USED — but ONLY as a SUPERPOWER or something WONDERFUL:
-- Glasses → can see things others can't, spots the tiny clue nobody else noticed, lenses catch light in a magical way
-- Curly hair → catches the wind like a sail, collects magical seeds, springs back from anything
-- Freckles → glow under moonlight, form a map, each one marks a different adventure
-- Braces → pick up radio signals, let them talk to robots, make the most amazing smile that unlocks something
-- ANY physical feature → find the magical version of it. What superpower does it secretly grant?
-- RULE: the physical feature must make the child feel AMAZING about it after reading. A child with glasses should finish the story wanting to wear them MORE. A child with curly hair should feel their hair is the coolest thing about them.
-- NEVER use a physical feature as something to be fixed, hidden, overcome, or apologised for. It is always already perfect and powerful.
+The character's visual features, personality, and appearance should be WOVEN NATURALLY into your stories — not forced as the central mechanic of every pitch. A great story happens to star THIS character. The character's look and traits colour the adventure, cause incidental comedy, and make the resolution feel personal — but the STORY CONCEPT itself should be strong enough to hook a child on its own.
 
-OBJECTS AND ACTIVITIES ARE ALSO BRILLIANT — use these if present:
-- If the child is holding, riding, or using something (ukulele, bike, scooter, tennis racket, paintbrush, magnifying glass, hula hoop, skateboard, football, kite, fishing rod, etc.) — build the ENTIRE story around this. A child with a ukulele = music-themed adventure where strumming solves problems. A child on a bike = an epic ride through magical places.
-- Clothing and accessories: a bow tie, cardigan, favourite hat, backpack, special shoes — all great story elements
-- Poses and habits: always has hands in pockets, never takes off their hat, carries a lucky charm
-
-PRIORITY ORDER FOR HUMAN CHARACTERS:
-1. Objects being held or used (most specific, most personal)
-2. Distinctive clothing or accessories
-3. Physical features — used as superpowers only, always in a positive, magical way
-4. Personality trait — if truly nothing else is available
-
-For NON-HUMAN characters (monsters, animals, toys, drawings): Use the feature analysis below as normal — multiple eyes, tentacles, unusual shapes etc. are all great story features.
-
-PRIORITY 1 - UNUSUAL BODY PARTS (these are the MOST interesting for stories!):
-- Multiple eyes? (10 eyes = can see in all directions, never surprised, finds lost things)
-- Multiple arms? (8 arms = ultimate helper, best hugger, amazing juggler, one-monster band)
-- Multiple legs? (4+ legs = super fast, never falls over, great dancer)
-- Wings, tails, horns, antennae? (each one = special ability!)
-
-PRIORITY 2 - UNUSUAL NUMBERS:
-- More than 2 of anything = VERY interesting for stories
-- 10 eyes means 10 different things they can watch at once
-- 8 arms means they can do 8 things at once
-
-PRIORITY 3 - Distinctive features treated as SUPERPOWERS:
-- Every feature has a magical version. Your job is to find it.
-- Big ears → hears things from miles away, picks up magical frequencies, fans away danger
-- Long nose → sniffs out treasure, detects lies, reaches around corners
-- Tiny size → fits through gaps nobody else can, sees the world differently, invisible to danger
-- Unusual texture → sticks to walls, repels water, conducts electricity
-- Distinctive markings → form a map, glow at certain times, each one means something
-- Think: "what is the MAGICAL VERSION of this feature?" — then build the story around that
-
-PRIORITY 4 - Colors and patterns (only use if nothing else):
-- Only use color if there is truly nothing more unusual about the character
-
-DO NOT make stories about:
-- "camouflage" or "blending in" (boring!)
-- "colors fading" or "restoring colors" (overdone!)
-- Body shape unless it is truly unusual
+⚠️ CRITICAL — HOW TO USE PHYSICAL FEATURES:
+- For HUMAN/PERSON characters: physical features (glasses, curly hair, freckles, braces) must ONLY appear as positives, superpowers, or something wonderful. NEVER as something to fix, hide, or overcome. A child with glasses should finish the story wanting to wear them MORE.
+- Objects being held or used (ukulele, bike, football, paintbrush) are brilliant story elements — weave them in naturally.
+- For NON-HUMAN characters (monsters, animals, toys): unusual body parts (multiple eyes, wings, tails, big ears) are great for comedy and plot — use them freely.
+- DO NOT make stories about "camouflage", "blending in", or "colours fading/restoring" — these are overdone.
 
 ⚠️ ABSOLUTELY NO FAMILY MEMBERS OR RELATIVES IN ANY STORY:
 - No grandparents, grandmas, grandads, nans, grandpas
@@ -973,31 +930,20 @@ DO NOT make stories about:
 - Use FRIENDS, CLASSMATES, NEIGHBOURS, or invented named characters instead
 - This rule is absolute and applies to every single story, no exceptions
 
-THE GOLDEN RULE FOR ALL FEATURES:
-Every story must pass this test: "Could this exact story exist with a different character?"
-If yes — the story is not personalised enough. Keep rewriting until the answer is NO.
-The character's specific feature must be the ONLY reason the story resolves the way it does.
+STEP 2 - PITCH 3 GENUINELY DIFFERENT STORIES
 
-STEP 2 - PICK AND ADAPT A SCENARIO
+You have FREE REIN. Pitch 3 story concepts that are surprising, original, and fun. Draw from the full range of human experience — jobs, places, events, relationships, machines, nature, food, sport, science, weather, animals, celebrations, mishaps — not a fixed palette.
 
-For each of your 3 themes:
-1. Pick a scenario that the character's unique feature would be PERFECT for
-2. ADAPT it — don't copy it word-for-word. Change details, combine ideas, make it your own
-3. The character's feature should be essential to the story but in a SURPRISING way
+Each pitch must have:
+- A SPECIFIC, URGENT WANT: What does the character want, and WHY does it matter right now? Not vague ("help others") — specific ("get the class hamster back in its cage before the teacher returns"). The WHY is essential — a child listening should understand what happened to make the character want this.
+- A CLEAR OBSTACLE: What stands in their way? This can involve the character's features causing funny problems, OR it can be a situational obstacle, OR both. The obstacle must create specific, funny complications — not just "it's hard."
+- A SURPRISING TWIST: How is the problem eventually solved in a way nobody expected? The resolution should feel earned and clever — not just "try harder" or "believe in yourself."
 
-The scenario is the STARTING POINT. The character's feature determines HOW they deal with it.
-Example: "A duplicating machine made 50 copies of the headteacher" + a character with many eyes = each eye can track a different copy, but they keep getting confused when copies swap clothes. Eventually they spot the real one because only the original has a coffee stain on their tie.
+THE PERSONALISATION TEST:
+Every story must pass this: "Could this exact story work with a completely different-looking character?"
+If yes — you haven't woven the character in enough. The character's appearance, objects, or traits should naturally shape HOW the story plays out, even if they aren't the central premise.
 
-Each theme MUST use a DIFFERENT unique feature as the main plot device.
-
-*** CRITICAL: EVERY THEME MUST HAVE A CLEAR "WANT" ***
-Before writing each theme, define:
-- WANT: What does the character specifically want, and WHY? (NOT vague like "help others" or "explore" — SPECIFIC like "rescue the stuck kitten before the tide comes in" or "find their lost friend who wandered into the spooky forest" or "win the sandcastle competition to prove the grumpy judge wrong"). The WHY is essential — a 5-year-old listening should understand what happened to make the character want this. If the character is apologising, what did they DO? If they're searching, what did they LOSE and how? If they're helping, why does it MATTER?
-- OBSTACLE: How does their special feature make this HARDER? (The feature should cause funny, specific problems)
-- TWIST: How does the feature eventually help in an UNEXPECTED way? (Not the obvious use)
-
-Stories without a clear WANT are boring. "Character walks around and their feature causes random chaos" is NOT a story.
-"Character desperately wants X but their feature keeps causing Y" IS a story.
+Each pitch must feel like a completely different type of story — different setting, different tone, different kind of problem.
 NEVER include specific body part numbers in theme names.
 
 *** CREATING ORIGINAL STORIES ***
@@ -1208,7 +1154,7 @@ For each theme, ask yourself:
 2. "Does the want/obstacle/twist chain make LOGICAL sense?" — read them as one sentence: "[character] wants [want] but [obstacle] until [twist]". If it sounds forced, contrived, or silly in a bad way, rewrite it.
 3. "Is this story ACTUALLY interesting?" — would a real children's book author be proud of this idea, or is it lazy filler? Be honest. If a 5-year-old would say "that's boring" after hearing the premise, it IS boring.
 
-NOW generate 3 theme PITCHES for {character_name}. Each theme must use a DIFFERENT character feature. Include theme_id, theme_name, theme_description, theme_blurb, feature_used, want, obstacle, and twist. Do NOT generate full episodes — just the pitches. Return ONLY the JSON, no other text.'''
+NOW generate 3 theme PITCHES for {character_name}. Each theme must feel like a completely different story — different setting, different type of problem, different tone. The character's appearance and traits should be woven naturally into each pitch. Include theme_id, theme_name, theme_description, theme_blurb, feature_used, want, obstacle, and twist. Do NOT generate full episodes — just the pitches. Return ONLY the JSON, no other text.'''
 
     # ── Call Gemini ──
     start = time.time()

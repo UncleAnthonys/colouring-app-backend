@@ -559,7 +559,7 @@ def character_reveal_flow_task(self, job_id: str, params: dict):
             }
 
         # ========== STEP 3: Generate story pitches ==========
-        update_job_status(job_id, "processing", progress="Writing your stories...")
+        update_job_status(job_id, "processing", progress="Your character is ready! Now dreaming up stories...")
         
         stories_result = generate_story_pitches_gemini(
             character_name=character_name,
