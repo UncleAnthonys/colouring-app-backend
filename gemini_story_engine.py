@@ -949,7 +949,7 @@ NEVER include specific body part numbers in theme names.
 *** CREATING ORIGINAL STORIES ***
 
 DO NOT reuse common children's story tropes like runaway cakes, shrinking people, or broken machines unless they genuinely fit.
-Think CREATIVELY and SPECIFICALLY about THIS character. What situations would be uniquely funny, challenging, or meaningful for a character with THESE specific features?
+Think CREATIVELY about THIS character. What situations would be uniquely funny, challenging, or meaningful?
 
 Consider scenarios from many different worlds:
 - Everyday situations gone wrong (school, home, park, shops, holidays)
@@ -960,10 +960,10 @@ Consider scenarios from many different worlds:
 - Celebrations and milestones (birthday, first day, moving house, new sibling)
 
 For EACH of the 3 themes:
-1. Pick a DIFFERENT character feature
-2. Invent a SPECIFIC, ORIGINAL scenario where that feature causes hilarious problems
-3. Make sure the want, obstacle, and twist are tightly connected to the character's actual features
-4. Each theme should feel completely different from the others — different setting, different tone, different type of story
+1. Start with a GREAT STORY CONCEPT — the kind of premise that would make a child gasp. The concept comes first, the character fits into it naturally.
+2. Weave the character's appearance, traits, or objects into the story so it feels personal — but don't force a single feature to be the entire plot engine.
+3. Make sure the want, obstacle, and twist form a tight cause-and-effect chain.
+4. Each theme should feel completely different from the others — different setting, different tone, different type of story.
 
 {age_guide}
 
@@ -976,17 +976,14 @@ For each theme provide:
 2. Theme description (1 sentence)
 3. Theme blurb (ONE short punchy sentence, MAX 15 words. This is the most important line — it must make a parent gasp and think "this was written ONLY for my child." Rules:
 - MUST include {character_name}'s name
-- MUST name the feature DIRECTLY — glasses, curls, jumper, tail, hat, whatever it is. Naming it IS what makes it feel personal.
-- Make the feature sound MAGICAL or EXCITING — not clinical or boring
 - The sentence should make the reader immediately curious about the story
 - NEVER be vague — vague blurbs feel generic and could be about anyone
 - NEVER use the formula "good thing [character] knows how to..." or "but will it be enough?" — these are weak and lazy
 - NEVER end with a generic personality trait like "never gives up" or "always finds a way"
-- E.g. if feature is "glasses": "Our Gav's glasses can see through walls — but what's hiding on the other side?"
-- E.g. if feature is "curly hair": "Our Gav's curls caught something in the wind that nobody else could feel — and now everything depends on it"
-- E.g. if feature is "ukulele": "One song from Our Gav's ukulele could save the whole town — if only the strings would stop tangling"
-- E.g. if feature is "Illinois jumper": "The answer was written on Our Gav's jumper all along — nobody thought to look until now"
-- The blurb should make a parent think: "my child is going to LOVE seeing their [feature] do that")
+- The blurb should describe the SITUATION, not the character's body parts. What is happening? What has gone wrong?
+- E.g. "Kiki accidentally knocked over every cake at the village bake-off and now the whole tent is collapsing!"
+- E.g. "Our Gav found a door in the swimming pool floor and it just opened!"
+- E.g. "Kiki promised to deliver the world's wobbliest jelly tower across town — on a skateboard!"
 - CRAYON TEST: Every blurb must mention at least ONE thing a child can clearly picture colouring (e.g. a giant wobbly tower, a bouncy trampoline, a huge splashing puddle, a wobbly bridge)
 - NO ABSTRACT NOUNS: NEVER use words like "wonder", "harmony", "discovery", "beauty", "perspective", "balance", "chaos" or "the unexpected" — these are uncolourable and meaningless to a child
 - ACTION-OBJECT RULE: The blurb must contain a clear silly problem a child can picture. BAD: "Milo learns about friendship." GOOD: "Milo is stuck inside a giant bouncy ball and cannot get out!"
@@ -1002,7 +999,7 @@ For each theme provide:
 *** PITCH QUALITY RULES ***
 
 1. ORIGINALITY: NEVER copy a scenario word-for-word. Adapt it, remix it, make it feel fresh and unique to this character.
-2. NUANCED RESOLUTION: The character's feature should NOT directly fix the problem alone. Instead, a SUPPORTING CHARACTER should suggest a new way to use the feature, OR the character should learn to use it differently after the setback. The solution should feel like a team effort or a moment of growth, not just "feature solves everything".
+2. NUANCED RESOLUTION: The problem should NOT be solved in the obvious way. Instead, a SUPPORTING CHARACTER should suggest a new approach, OR the character should discover something unexpected about the situation. The solution should feel like a team effort or a moment of growth, not just "one big action fixes everything".
 3. SETBACK: The want/obstacle/twist must include a real setback — not just "oops." The character tries and FAILS before the twist saves the day.
 4. DEVIANCE RULE: Reject any story idea that can be summarised as "Character learns a lesson" or "Character finds a lost toy." Only accept ideas that involve a physical transformation, a law of physics breaking, or a hilarious misunderstanding. The parent should look at the title and think "I have to see how they draw THAT" — not "oh, another helpful character story."
 
@@ -1016,17 +1013,17 @@ Return ONLY valid JSON. Generate 3 theme PITCHES (no full episodes yet). Here is
       "theme_id": "the_great_gravity_mix_up",
       "theme_name": "The Great Gravity Mix-Up",
       "theme_description": "When the gym's gravity experiment goes wrong, everything starts floating and Example Monster must catch everyone before they drift out the windows.",
-      "theme_blurb": "Example Monster needs to spot every floating student before they escape — good thing nothing escapes that gaze!",
+      "theme_blurb": "Example Monster accidentally switched off gravity and now the whole school is floating towards the ceiling!",
       "feature_used": "big eye",
       "want": "catch all the floating students before they drift out the windows — the gravity experiment was Example Monster's idea so it's their responsibility to fix it",
-      "obstacle": "the eye keeps getting distracted tracking too many floating objects at once",
-      "twist": "uses the eye as a magnifying glass to focus sunlight and melt the anti-gravity device"
+      "obstacle": "there are too many floating things to track at once and Example Monster keeps grabbing the wrong ones",
+      "twist": "realises that if they stand on the roof and look DOWN through the skylight, they can spot the anti-gravity device and switch it off from above"
     }},
     {{
       "theme_id": "the_missing_socks_mystery",
       "theme_name": "The Missing Socks Mystery",
       "theme_description": "Every sock in town has vanished overnight and Example Monster must follow the trail of woolly clues to find the thief.",
-      "theme_blurb": "Example Monster must find the stolen socks — but can anyone reach into the thief's tiny hiding spot?",
+      "theme_blurb": "Every single sock in town has vanished and Example Monster just found a woolly trail leading underground!",
       "feature_used": "long arms",
       "want": "find who stole all the socks before the big football match — Example Monster promised the team they'd solve it",
       "obstacle": "long arms keep accidentally knocking over clues and evidence",
@@ -1036,18 +1033,17 @@ Return ONLY valid JSON. Generate 3 theme PITCHES (no full episodes yet). Here is
       "theme_id": "the_worlds_worst_haircut",
       "theme_name": "The World's Worst Haircut",
       "theme_description": "The new barber is a robot who has gone haywire, giving everyone ridiculous haircuts, and Example Monster must stop it.",
-      "theme_blurb": "The robot barber is out of control — but Example Monster might be the one thing its scissors can't handle!",
+      "theme_blurb": "The robot barber has gone haywire and given the head teacher a mohawk — now it's heading for Example Monster!",
       "feature_used": "spiky head",
       "want": "stop the robot barber before it reaches the school photo — Example Monster accidentally turned it on by pressing the wrong button",
-      "obstacle": "the robot keeps trying to cut the character's spikes thinking they're messy hair",
+      "obstacle": "the robot keeps chasing Example Monster thinking the spikes are messy hair that needs cutting",
       "twist": "the spikes jam the robot's scissors, causing it to short-circuit and reset"
     }}
   ]
 }}
 
 ⚠️ CRITICAL: OBSTACLE and TWIST must form ONE coherent cause-and-effect chain.
-The feature creates ONE specific problem (the obstacle). The twist must solve THAT EXACT problem — not a different one.
-- If the obstacle is "the coat knocks walls down," the twist must be about how the coat STOPS knocking walls down or how the knocking becomes useful
+The obstacle creates a specific problem. The twist must solve THAT EXACT problem — not a different one.
 - NEVER introduce a second unrelated problem in the twist
 - Test: read the obstacle, then read the twist. Does the twist DIRECTLY fix the obstacle? If not, rewrite.
 - BAD: obstacle="coat is too bulky to move fast" → twist="coat blocks the dog" (these are two different problems)
