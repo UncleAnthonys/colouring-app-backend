@@ -943,15 +943,25 @@ STEP 3 — CAST THE CHARACTER INTO YOUR WORLDS
 
 Now take your 3 high-concept worlds from Step 1 and drop {character_name} into them. The character's appearance, clothing, and traits should naturally affect HOW they experience each world — causing incidental comedy, shaping the obstacle, or making the resolution personal. But the WORLD is the star, not the character's body parts.
 
-For each pitch:
-- A SPECIFIC, URGENT WANT: What does {character_name} need to achieve in this world, and WHY does it matter right now?
-- A CLEAR OBSTACLE: What stands in their way? This should come from the WORLD and the SITUATION — not just from a body part malfunctioning.
-- A SURPRISING TWIST: How is the problem solved in a way nobody expected?
+For each pitch, the WANT must answer THREE questions:
+
+1. WHAT does {character_name} need to do? (A specific physical action — build, escape, deliver, rescue, stop, find)
+2. WHY? What happens if they FAIL? (The consequence must be dramatic and visual — something floods, explodes, escapes, takes over, melts, collapses, grows out of control. NOT "they'll be late" or "they'll be sad.")
+3. WHAT'S THE CLOCK? Why can't they take their time? (Something is shrinking, melting, rising, hatching, inflating, counting down, spreading, getting closer. There must be a ticking bomb.)
+
+ALL THREE must be present. If ANY is missing, the pitch is boring. Test:
+- BAD WANT: "Tim wants to build a marshmallow tower higher than the fence." (WHY? No consequence. No clock. Who cares?)
+- GOOD WANT: "Tim must build a marshmallow tower tall enough to climb over the wall before the rising gloop covers the whole park — but the sun is melting the marshmallows as fast as he stacks them."
+- BAD WANT: "Oli wants to lead the toys home before the lights go out." (Consequence is boring. Clock is weak.)
+- GOOD WANT: "Oli must get the marching robots back in the toy box before they reach the kitchen — because the robots think the oven is a spaceship and they're about to launch it."
+
+The OBSTACLE must come from the WORLD and the SITUATION — not just from a body part malfunctioning.
+The TWIST must solve the problem in a way nobody expected — not just "try harder."
 
 *** THE STAKES MUST BE DRAMATIC (NON-NEGOTIABLE) ***
 A child must hear the pitch and feel URGENCY. The consequence of failure must be exciting, visual, and slightly scary (in a fun way). Think: countdown to something BIG happening.
 - BAD STAKES: "before the lights go out" / "before bedtime" / "before it gets dark" / "before the clock stops" — BORING. Nobody cares.
-- BAD STAKES: "lead the toys home" / "tidy up the mess" / "find the lost thing" — DOMESTIC. Not exciting.
+- BAD STAKES: "lead the toys home" / "tidy up the mess" / "find the lost thing" / "stack something tall" — DOMESTIC. Not exciting.
 - GOOD STAKES: "before the volcano fills the whole town with marshmallow lava"
 - GOOD STAKES: "before the robots take over the entire school"
 - GOOD STAKES: "before the giant wakes up and finds them in his kitchen"
