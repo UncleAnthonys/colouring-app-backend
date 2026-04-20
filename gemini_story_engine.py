@@ -108,6 +108,9 @@ This is a colouring book. If every page shows the same location from the same an
 - Page 4 (The High-Energy Shot): Low-angle or high-angle shot. Use action lines to show the TWIST happening (e.g., things flying, a big splash).
 - Page 5 (The Wide Resolution): Wide shot again, but different from Page 1. Show the CHARACTER happy and safe, surrounded by the results of their success.
 
+**LOCATION MOVEMENT RULE (NON-NEGOTIABLE):**
+The story MUST move through at least 3 visually distinct locations. No more than 2 episodes in the same place. A child is colouring 5 separate pages — each page must feel like a NEW picture with different surroundings, different objects, and different things to colour. If your story stays in one room, one shop, or one field for more than 2 pages, REWRITE IT so the character moves somewhere new. The story's plot should naturally take the character to different places.
+
 **VISUAL DIVERSITY INSTRUCTIONS:**
 1. Never repeat a pose: If the character is standing on Page 1, they should be sitting, jumping, or reaching on Page 2.
 2. Foreground/Background Swap: If the character is in the center on Page 1, place them to the side on Page 2 to leave room for a big new coloring element.
@@ -888,9 +891,35 @@ This is {character_name}'s companion who appears in EVERY scene. {second_charact
     # ── Build the full user prompt (matches Sonnet structure exactly) ──
     prompt = f'''You are creating personalized story adventures for a childrens coloring book app.
 {style_theme_block}
-Based on this character named "{character_name}"{f" and their companion {second_character_name}" if second_character_name else ""}, generate 3 UNIQUE story themes. The character's appearance and personality should be woven naturally into each story.
+Generate 3 UNIQUE, HIGH-CONCEPT story themes for a character called "{character_name}"{f" and their companion {second_character_name}" if second_character_name else ""}. You will design the story WORLDS first, then read the character description and cast them into those worlds.
 
-CHARACTER TO ANALYZE:
+STEP 1 — DESIGN 3 EXCITING WORLDS (before thinking about the character)
+
+⚠️ DO THIS FIRST — before you look at the character description below.
+
+Invent 3 HIGH-CONCEPT story worlds that a child would BEG to colour. These must be visually spectacular settings that produce 5 completely different colouring pages. Each world must be so exciting that ANY character dropped into it would have an amazing adventure.
+
+Think big:
+- A factory where robots are building something that's gone hilariously wrong
+- Shrunk to ant-size inside a giant garden with enormous flowers and insects
+- A floating market in the sky where everything is made of food
+- Inside a giant music box where the mechanical dancers have come alive
+- An underwater city where the buildings are made of coral and the streets are full of seahorses
+- A fairground where all the rides have started moving on their own
+- A frozen kingdom where everything is made of ice cream instead of ice
+- Inside a giant clock tower where all the cogs and springs have come loose
+- A dinosaur school where the dinosaurs are learning to do human things badly
+- A toy factory the night before Christmas where everything is going wrong
+
+THESE ARE JUST EXAMPLES — invent your own. The world must be:
+1. VISUALLY RICH — each of the 5 episodes must look completely different when drawn as a colouring page. If you can't imagine 5 distinct, exciting illustrations, the world isn't good enough.
+2. HIGH CONCEPT — a parent reads the title and thinks "I HAVE to see this." Not "Sheepy goes shopping" but "Sheepy and the Upside-Down Zoo."
+3. VARIED ACROSS THE 3 PITCHES — one everyday-gone-wrong, one fantastical/impossible, one involving a specific job/event/mission. No two can share the same type of setting.
+
+STEP 2 — NOW READ THE CHARACTER
+
+CHARACTER NAME: "{character_name}"
+DESCRIPTION:
 {character_description}
 
 ⚠️ GENDER: Do NOT assume the character's gender from their name. Use the character's NAME instead of pronouns wherever possible. If you must use pronouns, use "they/them" unless the character description explicitly states gender.
@@ -904,59 +933,28 @@ CHARACTER TO ANALYZE:
 
 {second_char_block}
 
-STEP 1 - UNDERSTAND THE CHARACTER
-
-Read the character description carefully. Note their appearance, clothing, accessories, objects they're holding, and anything distinctive about them. You have COMPLETE CREATIVE FREEDOM to pitch 3 genuinely different, compelling story concepts.
-
-The character's visual features, personality, and appearance should be WOVEN NATURALLY into your stories — not forced as the central mechanic of every pitch. A great story happens to star THIS character. The character's look and traits colour the adventure, cause incidental comedy, and make the resolution feel personal — but the STORY CONCEPT itself should be strong enough to hook a child on its own.
-
 ⚠️ CRITICAL — HOW TO USE PHYSICAL FEATURES:
-- For HUMAN/PERSON characters: physical features (glasses, curly hair, freckles, braces) must ONLY appear as positives, superpowers, or something wonderful. NEVER as something to fix, hide, or overcome. A child with glasses should finish the story wanting to wear them MORE.
+- For HUMAN/PERSON characters: physical features (glasses, curly hair, freckles, braces) must ONLY appear as positives, superpowers, or something wonderful. NEVER as something to fix, hide, or overcome.
 - Objects being held or used (ukulele, bike, football, paintbrush) are brilliant story elements — weave them in naturally.
-- For NON-HUMAN characters (monsters, animals, toys): unusual body parts (multiple eyes, wings, tails, big ears) are great for comedy and plot — use them freely.
+- For NON-HUMAN characters (monsters, animals, toys): unusual body parts are great for comedy — use them freely but don't make them the entire plot.
 - DO NOT make stories about "camouflage", "blending in", or "colours fading/restoring" — these are overdone.
 
-⚠️ ABSOLUTELY NO FAMILY MEMBERS OR RELATIVES IN ANY STORY:
-- No grandparents, grandmas, grandads, nans, grandpas
-- No cousins, aunts, uncles, siblings, brothers, sisters, mums, dads, parents
-- Family members may be deceased or estranged in real life — including them can cause genuine distress
-- Use FRIENDS, CLASSMATES, NEIGHBOURS, or invented named characters instead
-- This rule is absolute and applies to every single story, no exceptions
+STEP 3 — CAST THE CHARACTER INTO YOUR WORLDS
 
-STEP 2 - PITCH 3 GENUINELY DIFFERENT STORIES
+Now take your 3 high-concept worlds from Step 1 and drop {character_name} into them. The character's appearance, clothing, and traits should naturally affect HOW they experience each world — causing incidental comedy, shaping the obstacle, or making the resolution personal. But the WORLD is the star, not the character's body parts.
 
-You have FREE REIN. Pitch 3 story concepts that are surprising, original, and fun. Draw from the full range of human experience — jobs, places, events, relationships, machines, nature, food, sport, science, weather, animals, celebrations, mishaps — not a fixed palette.
+For each pitch:
+- A SPECIFIC, URGENT WANT: What does {character_name} need to achieve in this world, and WHY does it matter right now?
+- A CLEAR OBSTACLE: What stands in their way? This should come from the WORLD and the SITUATION — not just from a body part malfunctioning.
+- A SURPRISING TWIST: How is the problem solved in a way nobody expected?
 
-Each pitch must have:
-- A SPECIFIC, URGENT WANT: What does the character want, and WHY does it matter right now? Not vague ("help others") — specific ("get the class hamster back in its cage before the teacher returns"). The WHY is essential — a child listening should understand what happened to make the character want this.
-- A CLEAR OBSTACLE: What stands in their way? This can involve the character's features causing funny problems, OR it can be a situational obstacle, OR both. The obstacle must create specific, funny complications — not just "it's hard."
-- A SURPRISING TWIST: How is the problem eventually solved in a way nobody expected? The resolution should feel earned and clever — not just "try harder" or "believe in yourself."
+THE 5-PAGE COLOURING TEST (CRITICAL):
+Before finalising each pitch, imagine the 5 colouring pages a child will receive. Are they 5 genuinely different illustrations — different locations, different objects, different compositions? If more than 2 pages would look similar, the world isn't rich enough. REJECT IT and pick a more visually varied setting.
 
-THE PERSONALISATION TEST:
-Every story must pass this: "Could this exact story work with a completely different-looking character?"
-If yes — you haven't woven the character in enough. The character's appearance, objects, or traits should naturally shape HOW the story plays out, even if they aren't the central premise.
-
-Each pitch must feel like a completely different type of story — different setting, different tone, different kind of problem.
-NEVER include specific body part numbers in theme names.
-
-*** CREATING ORIGINAL STORIES ***
-
-DO NOT reuse common children's story tropes like runaway cakes, shrinking people, or broken machines unless they genuinely fit.
-Think CREATIVELY about THIS character. What situations would be uniquely funny, challenging, or meaningful?
-
-Consider scenarios from many different worlds:
-- Everyday situations gone wrong (school, home, park, shops, holidays)
-- Jobs and workplaces the character stumbles into (restaurant, hospital, space station, farm, theatre)
-- Competitions and events (talent show, sports day, cooking contest, science fair)
-- Adventures in unexpected places (underground, underwater, tiny world, upside-down town)
-- Helping someone with a specific problem (lost pet, broken thing, missing person, scared friend)
-- Celebrations and milestones (birthday, first day, moving house, new sibling)
-
-For EACH of the 3 themes:
-1. Start with a GREAT STORY CONCEPT — the kind of premise that would make a child gasp. The concept comes first, the character fits into it naturally.
-2. Weave the character's appearance, traits, or objects into the story so it feels personal — but don't force a single feature to be the entire plot engine.
-3. Make sure the want, obstacle, and twist form a tight cause-and-effect chain.
-4. Each theme should feel completely different from the others — different setting, different tone, different type of story.
+BAD (fails the test): "Sheepy and the Wobbly Trolley" — 5 pages of supermarket aisles
+BAD (fails the test): "Al and the Bouncy Hair Day" — 5 pages of a character's hair doing things
+GOOD (passes the test): "Sheepy and the Upside-Down Zoo" — page 1: entrance gate flipping, page 2: penguins on the ceiling, page 3: elephant dangling from a tree, page 4: Sheepy climbing the gift shop wall, page 5: everything flips back with a giant splash
+GOOD (passes the test): "Al and the Runaway Robot Chef" — page 1: kitchen chaos, page 2: robot loose in the dining room, page 3: food fight in the garden, page 4: chase through the park, page 5: robot makes the perfect cake by accident
 
 {age_guide}
 
