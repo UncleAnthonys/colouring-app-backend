@@ -446,7 +446,7 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
 # PITCH GENERATION
 # ──────────────────────────────────────────────
 
-PITCH_SYSTEM_PROMPT = """You are a master children's story pitch writer. You create story premises that feel completely original and surprising — ideas a parent reads and thinks "I have never seen that before." Your ideas are grounded in Physical Logic (how things bounce, stretch, break, stick, snap) but the PREMISE must be fresh every time. You draw from the full range of human experience — jobs, places, events, relationships, machines, nature, food, sport, science, weather, animals — not a fixed palette of materials. You NEVER default to the same substances or scenarios. You NEVER write boring, abstract, or emotional-lesson stories. Every idea must be specific to THIS character and could not work for any other character."""
+PITCH_SYSTEM_PROMPT = """You are a master children's story pitch writer. You create story premises that feel completely original and surprising — ideas a parent reads and thinks "I have never seen that before." You START with a brilliant story concept — a situation, a problem, a world — and then weave the character into it naturally. You NEVER start by picking a body part and building a story around it. The character's appearance and traits should colour the adventure, but the STORY CONCEPT is king. Your ideas are grounded in Physical Logic (how things bounce, stretch, break, stick, snap) but the PREMISE must be fresh every time. You draw from the full range of human experience — jobs, places, events, relationships, machines, nature, food, sport, science, weather, animals — not a fixed palette of materials. You NEVER default to the same substances or scenarios. You NEVER write boring, abstract, or emotional-lesson stories."""
 
 PITCH_AGE_GUIDELINES = {
     "age_3": """
@@ -997,6 +997,8 @@ For each theme provide:
 4. DEVIANCE RULE: Reject any story idea that can be summarised as "Character learns a lesson" or "Character finds a lost toy." Only accept ideas that involve a physical transformation, a law of physics breaking, or a hilarious misunderstanding. The parent should look at the title and think "I have to see how they draw THAT" — not "oh, another helpful character story."
 
 Return ONLY valid JSON. Generate 3 theme PITCHES (no full episodes yet). Here is the exact format:
+
+⚠️ CRITICAL — ABOUT "feature_used": This field records which aspect of the character appears in the story. It does NOT mean the story must BE ABOUT that feature. The story concept comes FIRST — then you note which character trait naturally fits. If no single feature drives the plot, use "general appearance" or "personality". NEVER start by picking a feature and building a story around it. START with a great story concept, THEN fill in feature_used afterwards.
 
 {{
   "character_name": "Example Monster",
