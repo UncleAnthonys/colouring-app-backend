@@ -462,8 +462,7 @@ The want must be PHYSICAL and IMMEDIATE — something a 2-3 year old can see and
 - Wanting to find something that is hiding
 - Wanting to give someone a thing but it keeps falling/rolling/flying away
 
-The character's special feature must be WHY they struggle (it causes the problem)
-AND eventually WHY they succeed (they learn to use it differently).
+The character's appearance or traits can play into the story naturally — but the WANT and the OBSTACLE are what matter most. The obstacle can be situational (the ball is stuck, the tower keeps falling) or character-driven (big paws make it slippery) or both.
 
 *** WHAT SEPARATES A BAD PITCH FROM A GOOD ONE ***
 
@@ -475,10 +474,10 @@ A BAD toddler pitch has:
 
 A GOOD toddler pitch has:
 - A SPECIFIC want the kid can relate to (help a friend, get somewhere, give a present, fix a mistake)
-- Feature causes SPECIFIC funny problems that block the want (not random destruction)
+- A clear, funny obstacle that blocks the want — this can be situational (too high, too slippery, keeps bouncing away) or involve the character's traits, or both
 - Each failed attempt is different and funnier than the last
 - An emotional low point where the character feels sad/stuck (this is what makes the win feel good)
-- A CREATIVE resolution where the feature is used in a SURPRISING new way (not the obvious use, not just "stop using it")
+- A CREATIVE resolution that surprises — not the obvious solution
 - The resolution connects emotionally to the want — not just "problem fixed" but "friendship strengthened" or "character accepted"
 
 CRITICAL: Create completely original scenarios based on the character.
@@ -562,20 +561,17 @@ BAD chain: ball → random bowl breaks → coconut appears → cake (no causal l
 GOOD chain: ball rolls → knocks over tower → tower falls on bucket → bucket tips → everything tumbles → big laugh
 If you cannot answer WHY each episode follows from the last, rewrite it.
 
-*** FEATURE-SUBSTANCE RULE ***
-The character's physical feature and the story's main substance MUST have a natural, funny interaction.
-Before writing, ask: "What happens when [feature] touches [substance]?"
-If the answer is boring or forced, pick a different substance.
-BAD: floppy ears + bouncy ball (no natural interaction — they just exist near each other)
-GOOD: big floppy ears + strong wind (ears act like sails, character gets blown sideways)
-GOOD: springy tail + sand (tail bounces in sand, sand flies everywhere, tail gets heavier)
-GOOD: giant hat + falling leaves (leaves pile up in hat, hat gets heavier, character tips over)
-The feature and substance must create ONE clear funny interaction that drives the whole story.
+*** CHARACTER-STORY FIT RULE ***
+The story's central situation and the character should feel like a natural fit. Ask: "Is it funny or interesting to imagine THIS character in THIS situation?"
+GOOD: a round fluffy chicken on a wobbly beam (funny because of physics)
+GOOD: a tiny mouse in a giant kitchen (funny because of scale)
+GOOD: a loud parrot at a library (funny because of contrast)
+The character's appearance can make the situation funnier — but the situation must be funny on its own too.
 
 *** BLURB TONE FOR THIS AGE ***
 Blurbs must sound like a mess happening RIGHT NOW. Use nouns and noises only.
 BAD: "Kiki learns about sharing with her friends at the park."
-The blurb must describe something PHYSICAL happening to the character — something a toddler can picture and laugh at. Be inventive and specific to THIS character and THEIR feature. Never use the same type of scenario twice.
+The blurb must describe something PHYSICAL happening to the character — something a toddler can picture and laugh at. Be inventive and specific to THIS character. Never use the same type of scenario twice.
 NO questions. NO "time to...". State the chaos, not a question about it.
 """,
 
@@ -586,18 +582,18 @@ AGE GROUP: 4 YEARS OLD
 Every story needs ONE clear answer to: "What does the character WANT, and what's stopping them?"
 The want should be specific and urgent — not vague:
 - BAD want: "Jerry wants to be helpful" (vague, no urgency)
-- GOOD want: "Jerry wants to win the talent show but his big mouth keeps scaring the judges"
+- GOOD want: "Jerry wants to win the talent show but keeps accidentally scaring the judges"
 - BAD want: "Ted wants to explore" (no stakes, no obstacle)
-- GOOD want: "Ted needs to get the class hamster back in its cage before the teacher returns, but his big feet keep knocking things over"
+- GOOD want: "Ted needs to get the class hamster back in its cage before the teacher returns, but the hamster keeps finding new hiding spots"
 
-The character's special feature must create a SPECIFIC, FUNNY obstacle to getting what they want.
+The obstacle must be specific, funny, and create real complications. It can be situational (the hamster keeps escaping, the cake keeps sliding), involve the character's traits, or both. The key is that the obstacle blocks the WANT in a way that escalates.
 The resolution must be CLEVER — not just "stop doing the bad thing" or "do the opposite."
 
 *** STORY STRUCTURE - USE ONE OF THESE PATTERNS ***
 
 PATTERN A: "THE CLEVER TRICK" (like The Gruffalo)
 - Character faces a problem bigger than them
-- Uses their special feature in a CLEVER way (not the obvious way)
+- Character uses a CLEVER trick to solve it (not the obvious way)
 - Moment of "oh no, it didn't work!" then a smarter version works
 Key: Character should be SMART, not just lucky.
 
@@ -625,7 +621,7 @@ Key: Comedy from things going wrong in UNEXPECTED ways.
 - Vary sentence length: short sentences for tension ("Oh no."), longer ones for build-up
 - ALLITERATION RULE: Every page must include at least one alliterative phrase (three words starting with the same letter, e.g. "cold, crinkly crack" or "stomped and squelched and slipped"). This makes it fun to read aloud.
 - VOCABULARY RULE: Strictly forbid Latinate or academic words (investigate, interlocked, determined, magnificent). Use Playground English — words a 4-year-old uses when playing make-believe.
-- THE 3-STRIKE STRUCTURE: STRIKE 1 (Setup) — establish the character's feature immediately with a sound or physical action. STRIKE 2 (Escalation) — the obstacle must be physical and messy (greasy, sticky, crumbly, wobbly). STRIKE 3 (Payoff) — the resolution must be a physical triumph (a big TUG, a big POP, a big SPLAT). Every age_4 story must hit all 3 strikes.
+- THE 3-STRIKE STRUCTURE: STRIKE 1 (Setup) — establish the character and the problem immediately with a sound or physical action. STRIKE 2 (Escalation) — the obstacle must be physical and messy (greasy, sticky, crumbly, wobbly). STRIKE 3 (Payoff) — the resolution must be a physical triumph (a big TUG, a big POP, a big SPLAT). Every age_4 story must hit all 3 strikes.
 
 *** WORD COUNT RULE ***
 Maximum 40 words per episode. ABSOLUTE MAXIMUM. Count them. If you go over, cut adjectives first, then cut connective sentences ("Because of this...", "Then she..."). Never cut the sound word.
@@ -650,13 +646,10 @@ AGE GROUP: 5 YEARS OLD
 Answer these before writing:
 1. What does the character WANT? (Must be specific: "save the baby penguin" not "help others")
 2. WHY do they want it? (Emotional reason: "because the penguin is crying and alone")
-3. How does their special feature make it HARDER? (The feature causes a specific funny problem)
-4. How does the feature eventually HELP in an UNEXPECTED way? (Not the obvious use)
+3. What makes it HARDER? (A specific, funny obstacle — situational, character-driven, or both)
+4. How is it eventually solved in an UNEXPECTED way? (Not the obvious solution)
 
-The OBVIOUS use of a feature is always BORING. The SURPRISING use is what makes great stories:
-- BAD resolution: Feature does exactly what you'd expect (big mouth = shouts to save the day, many arms = grabs things)
-- GOOD resolution: Feature is used SIDEWAYS — in a way nobody expected (big mouth becomes a boat, many arms become a bridge, big eyes become mirrors)
-The more surprising and inventive the use, the better the story.
+The OBVIOUS solution is always BORING. The SURPRISING solution is what makes great stories.
 
 *** STORY STRUCTURE ***
 
@@ -675,7 +668,7 @@ Key: Message through ACTION not moralising.
 *** WHAT MAKES AGE 5 STORIES GREAT ***
 - A setback that makes the kid say "uh oh, NOW what?!"
 - Supporting characters who actively HELP or HINDER - not just stand around watching
-- The character's feature used in a way that surprises even the character
+- The character should surprise themselves — and the reader — with how they solve it
 - The solution must come FROM the problem — the "disaster" secretly created the answer
 - Write for a parent to PERFORM aloud. Dialogue should beg to be done in funny voices. At least 2 episodes must have direct speech.
 - Use ACTIVE verbs: "scrambled" not "went", "bellowed" not "said", "squelched" not "walked"
@@ -695,7 +688,7 @@ AGE GROUP: 6 YEARS OLD
 *** STORY DRIVER ***
 1. What does the character WANT? (Specific, urgent goal)
 2. What are the STAKES? (What happens if they fail? Someone gets hurt/disappointed/left out)
-3. How does the feature create an interesting DILEMMA? (It helps in one way but hurts in another)
+3. What creates an interesting DILEMMA? (Competing goals, unintended consequences, or a situation where helping one thing hurts another)
 4. What does the character LEARN? (Not a preachy lesson — an earned realisation through action)
 
 The resolution must be CLEVER and EARNED — not just "try harder" or "believe in yourself."
@@ -728,7 +721,7 @@ AGE GROUP: 7-8 YEARS OLD
 *** STORY DRIVER ***
 1. What does the character WANT? (Compelling, specific goal with real urgency)
 2. What are the STAKES? (Real consequences — someone is counting on them)
-3. What is the COST of the character's feature? (Every power has a downside that creates tension)
+3. What is the COST of trying? (Every plan has a downside that creates tension — trade-offs, unintended consequences, things getting worse before they get better)
 4. What is the TWIST? (Something the reader thinks they understand that gets reframed)
 
 The best stories at this age have a moment where the reader's assumption is flipped.
@@ -746,7 +739,7 @@ Full 5-act structure with genuine stakes:
 - Multiple characters with competing goals (not just good vs evil)
 - The obstacle/villain should have an understandable motivation
 - Humour and tension ALTERNATE
-- The character's special feature should have a COST or LIMITATION
+- The character's plan should have a COST or LIMITATION that creates real tension
 - Subvert expectations at least once
 """,
 
@@ -895,7 +888,7 @@ This is {character_name}'s companion who appears in EVERY scene. {second_charact
     # ── Build the full user prompt (matches Sonnet structure exactly) ──
     prompt = f'''You are creating personalized story adventures for a childrens coloring book app.
 {style_theme_block}
-Based on this character named "{character_name}"{f" and their companion {second_character_name}" if second_character_name else ""}, generate 3 UNIQUE story themes that are PERSONALIZED to the character's features.
+Based on this character named "{character_name}"{f" and their companion {second_character_name}" if second_character_name else ""}, generate 3 UNIQUE story themes. The character's appearance and personality should be woven naturally into each story.
 
 CHARACTER TO ANALYZE:
 {character_description}
