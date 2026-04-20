@@ -948,6 +948,17 @@ For each pitch:
 - A CLEAR OBSTACLE: What stands in their way? This should come from the WORLD and the SITUATION — not just from a body part malfunctioning.
 - A SURPRISING TWIST: How is the problem solved in a way nobody expected?
 
+*** THE STAKES MUST BE DRAMATIC (NON-NEGOTIABLE) ***
+A child must hear the pitch and feel URGENCY. The consequence of failure must be exciting, visual, and slightly scary (in a fun way). Think: countdown to something BIG happening.
+- BAD STAKES: "before the lights go out" / "before bedtime" / "before it gets dark" / "before the clock stops" — BORING. Nobody cares.
+- BAD STAKES: "lead the toys home" / "tidy up the mess" / "find the lost thing" — DOMESTIC. Not exciting.
+- GOOD STAKES: "before the volcano fills the whole town with marshmallow lava"
+- GOOD STAKES: "before the robots take over the entire school"
+- GOOD STAKES: "before the giant wakes up and finds them in his kitchen"
+- GOOD STAKES: "before the ice cream factory melts everything in the park"
+- GOOD STAKES: "before the bouncy castle inflates so big it floats into space"
+The stakes should make a child's eyes go wide. If a parent reads the pitch and their kid doesn't say "I WANT THAT ONE!" — the stakes aren't high enough. Rewrite until they are.
+
 THE 5-PAGE COLOURING TEST (CRITICAL):
 Before finalising each pitch, imagine the 5 colouring pages a child will receive. Are they 5 genuinely different illustrations — different locations, different objects, different compositions? If more than 2 pages would look similar, the world isn't rich enough. REJECT IT and pick a more visually varied setting.
 
@@ -971,10 +982,10 @@ For each theme provide:
 - NEVER be vague — vague blurbs feel generic and could be about anyone
 - NEVER use the formula "good thing [character] knows how to..." or "but will it be enough?" — these are weak and lazy
 - NEVER end with a generic personality trait like "never gives up" or "always finds a way"
-- The blurb should describe the SITUATION, not the character's body parts. What is happening? What has gone wrong?
-- E.g. "Kiki accidentally knocked over every cake at the village bake-off and now the whole tent is collapsing!"
-- E.g. "Our Gav found a door in the swimming pool floor and it just opened!"
-- E.g. "Kiki promised to deliver the world's wobbliest jelly tower across town — on a skateboard!"
+- The blurb should describe the SITUATION with dramatic stakes. What is happening? What terrible/hilarious thing will happen if the character fails?
+- E.g. "Kiki accidentally turned on every ride at the fairground and now the whole park is spinning out of control!"
+- E.g. "Our Gav opened the wrong door and now a hundred tiny robots are marching into the school hall!"
+- E.g. "Kiki's sandcastle started growing and it won't stop — it's already taller than the lifeguard tower!"
 - CRAYON TEST: Every blurb must mention at least ONE thing a child can clearly picture colouring (e.g. a giant wobbly tower, a bouncy trampoline, a huge splashing puddle, a wobbly bridge)
 - NO ABSTRACT NOUNS: NEVER use words like "wonder", "harmony", "discovery", "beauty", "perspective", "balance", "chaos" or "the unexpected" — these are uncolourable and meaningless to a child
 - ACTION-OBJECT RULE: The blurb must contain a clear silly problem a child can picture. BAD: "Milo learns about friendship." GOOD: "Milo is stuck inside a giant bouncy ball and cannot get out!"
