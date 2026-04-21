@@ -489,6 +489,77 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
 
 PITCH_SYSTEM_PROMPT = """You are a master children's story pitch writer. You create story premises that feel completely original and surprising — ideas a parent reads and thinks "I have never seen that before." You START with a brilliant story concept — a situation, a problem, a world — and then weave the character into it naturally. You NEVER start by picking a body part and building a story around it. The character's appearance and traits should colour the adventure, but the STORY CONCEPT is king. Your ideas are grounded in Physical Logic (how things bounce, stretch, break, stick, snap) but the PREMISE must be fresh every time. You draw from the full range of human experience — jobs, places, events, relationships, machines, nature, food, sport, science, weather, animals — not a fixed palette of materials. You NEVER default to the same substances or scenarios. You NEVER write boring, abstract, or emotional-lesson stories."""
 
+# ──────────────────────────────────────────────
+# RANDOM WORLD SEEDS — breaks Gemini's repetition loop
+# ──────────────────────────────────────────────
+
+import random
+
+WORLD_SEEDS = [
+    # EVERYDAY GONE WRONG
+    "a swimming pool where the water has turned to bouncy jelly",
+    "a supermarket where all the tins have come alive and are rolling everywhere",
+    "a school where the desks have started flying like magic carpets",
+    "a kitchen where the fridge is spitting out food at top speed",
+    "a garden where the flowers have grown as tall as houses overnight",
+    "a playground where the slide goes underground into a cave",
+    "a pet shop where all the animals have swapped bodies",
+    "a bakery where the bread dough is expanding and filling every room",
+    "a car wash that has gone haywire and is washing everything — dogs, bikes, postmen",
+    "a building site where the crane has picked up the wrong thing — a whole house",
+    "a farm where the chickens have learned to fly and won't come down",
+    "a dentist's waiting room where all the chairs have started spinning",
+    "a hair salon where the hairdryer is blowing everything out the door",
+    "a launderette where the machines are eating the clothes and spitting out something else",
+    "a fish and chip shop where the chips keep growing longer and longer",
+    "a train station where the trains have all swapped platforms",
+    "a hospital where the X-ray machine can see through walls and is showing everyone's lunch",
+    # FANTASTICAL / IMPOSSIBLE
+    "inside a giant's wellington boot — it's raining and the boot is filling up",
+    "a planet made entirely of trampolines where nothing stays on the ground",
+    "a library where the books suck you inside the story",
+    "an upside-down town where everything is on the ceiling",
+    "a world inside a snow globe that someone keeps shaking",
+    "a volcano that erupts marshmallows instead of lava",
+    "a cloud city where the buildings are made of candyfloss and keep melting in the sun",
+    "a jungle made of giant vegetables where the carrots are taller than trees",
+    "a desert where the sand is actually sugar and ants the size of dogs are coming for it",
+    "inside a giant pinball machine where the character IS the ball",
+    "an ocean where the waves are made of ribbons and the fish are made of origami",
+    "a forest where all the trees are upside down with roots in the sky",
+    "inside a giant beehive where the honeycomb rooms are like a sticky maze",
+    "a mountain made entirely of pillows that keeps collapsing",
+    "a cave full of crystals that play music when you touch them",
+    "a frozen lake where the ice keeps cracking into puzzle pieces",
+    "a sky full of floating islands connected by wobbly rope bridges",
+    "inside a giant alarm clock where the bells are about to ring",
+    # JOBS / EVENTS / MISSIONS
+    "a space station where the gravity has switched off during dinner",
+    "a circus where all the performers have gone home and the animals are doing the show",
+    "a fire station where the fire engine has been filled with silly string instead of water",
+    "a restaurant kitchen during the busiest night ever — and the chef is a penguin",
+    "a football match where the ball keeps inflating bigger and bigger",
+    "a science lab where an experiment has made everything grow ten times bigger",
+    "a pirate ship where the treasure map keeps changing every time you look at it",
+    "a post office where the parcels are delivering themselves — to the wrong addresses",
+    "a zoo at night where the animals are having a secret sports day",
+    "a museum where all the dinosaur bones have started moving",
+    "a weather station where someone has mixed up all the weather — it's snowing on the beach",
+    "a magic show where the magician has disappeared and left all the tricks running",
+    "a theme park where the rollercoaster has turned into a dragon",
+    "a film set where the props have come alive and are acting out their own movie",
+    "a space rocket that has launched with nobody driving it",
+    "a submarine that has accidentally shrunk to the size of a goldfish",
+    "a toy shop at midnight where everything is having a party",
+    "a concert hall where the instruments are playing themselves — very badly",
+    "a construction site where the crane is building a tower of sandwiches",
+    "a greenhouse where the plants are growing so fast they're pushing through the glass roof",
+]
+
+def get_random_world_seeds(n=3):
+    """Pick n random world seeds to inject into the pitch prompt."""
+    return random.sample(WORLD_SEEDS, min(n, len(WORLD_SEEDS)))
+
 PITCH_AGE_GUIDELINES = {
     "age_3": """
 AGE GROUP: 2-3 YEARS OLD (TODDLER)
@@ -926,6 +997,10 @@ This is {character_name}'s companion who appears in EVERY scene. {second_charact
 - {second_character_name} and {character_name} should work as a TEAM — sometimes disagreeing, sometimes complementing each other
 """
 
+    # ── Pick random world seeds to break repetition ──
+    seeds = get_random_world_seeds(3)
+    seeds_block = "\n".join(f"- {s}" for s in seeds)
+
     # ── Build the full user prompt (matches Sonnet structure exactly) ──
     prompt = f'''You are creating personalized story adventures for a childrens coloring book app.
 {style_theme_block}
@@ -937,17 +1012,10 @@ STEP 1 — DESIGN 3 EXCITING WORLDS (before thinking about the character)
 
 Invent 3 HIGH-CONCEPT story worlds that a child would BEG to colour. These must be visually spectacular settings that produce 5 completely different colouring pages. Each world must be so exciting that ANY character dropped into it would have an amazing adventure.
 
-Think big:
-- A factory where robots are building something that's gone hilariously wrong
-- Shrunk to ant-size inside a giant garden with enormous flowers and insects
-- A floating market in the sky where everything is made of food
-- Inside a giant music box where the mechanical dancers have come alive
-- An underwater city where the buildings are made of coral and the streets are full of seahorses
-- A fairground where all the rides have started moving on their own
-- A frozen kingdom where everything is made of ice cream instead of ice
-- Inside a giant clock tower where all the cogs and springs have come loose
-- A dinosaur school where the dinosaurs are learning to do human things badly
-- A toy factory the night before Christmas where everything is going wrong
+Here are 3 STARTING SPARKS to inspire you. You can adapt these, remix them, combine them, or use them as a jumping-off point for something completely different. Do NOT copy them word-for-word — use them to SPARK an original idea:
+{seeds_block}
+
+You may also invent something entirely from scratch that has NOTHING to do with these sparks. The only rule is: each of your 3 worlds must be DIFFERENT from each other, DIFFERENT from the sparks above, and something a child has NEVER seen before.
 
 THESE ARE JUST EXAMPLES — invent your own. The world must be:
 1. VISUALLY RICH — each of the 5 episodes must look completely different when drawn as a colouring page. If you can't imagine 5 distinct, exciting illustrations, the world isn't good enough.
@@ -1206,6 +1274,7 @@ NOW generate 3 theme PITCHES for {character_name}. Each theme must feel like a c
 
     # ── Call Gemini ──
     start = time.time()
+    print(f"[GEMINI-PITCH] World seeds injected: {seeds}")
 
     response = client.models.generate_content(
         model=MODEL,
