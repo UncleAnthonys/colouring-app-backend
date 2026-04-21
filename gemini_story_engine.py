@@ -277,6 +277,25 @@ def generate_story_gemini(
     # Age, style, lesson
     parts.append(f"\nAGE_LEVEL: {age_level}")
     parts.append(f"STORY_TIER: {tier} ({episode_count} episodes)")
+
+    # Age-specific vocabulary reinforcement — this fires LAST so Gemini remembers it
+    if age_level in ("under_3",):
+        parts.append("⚠️ VOCABULARY REMINDER (under_3): Max 12 words per page. First-100-words only. Pure board book.")
+    elif age_level == "age_3":
+        parts.append("⚠️ VOCABULARY REMINDER (age_3): Max 25 words per page. 2-3 short sentences. Simple words only — if a 3-year-old wouldn't say it, don't write it.")
+    elif age_level == "age_4":
+        parts.append("""⚠️ VOCABULARY REMINDER (age_4 — READ THIS CAREFULLY):
+Max 8 words per sentence. Max 40 words per page. Count them.
+BANNED WORDS: cobblestone, gravity, delicate, fragile, enormous, investigate, magnificent, structure, ancient, cascade, illuminated, vibrating, determined, carefully, suddenly, shimmering, sparkly, glistening, narrow, machinery, mechanism, bristles, hovering.
+USE INSTEAD: bumpy, heavy, wobbly, huge, big, sticky, squishy, crunchy, slippery, bouncy, slimy, tickly, wiggly, noisy, smelly, yucky, splashy, fizzy, squelchy, lumpy, scratchy, fluffy.
+THE PLAYGROUND TEST: Read every sentence aloud. Would a 4-year-old say this to their friend? If not, rewrite it simpler. Every sentence must be short enough for a parent to read in one breath with a funny voice.""")
+    elif age_level == "age_5":
+        parts.append("""⚠️ VOCABULARY REMINDER (age_5):
+Max 10 words per sentence. Max 50 words per page.
+Use playground words — fun to say, easy to understand. No Latinate or academic vocabulary.
+BANNED: investigate, magnificent, structure, ancient, cascade, illuminated, mechanism, delicate, precisely, extraordinary.
+Every page must have at least one sound word in ALL CAPS and be written for a parent to PERFORM aloud.""")
+
     parts.append(f"WRITING_STYLE: {writing_style or 'Standard'}")
 
     # Writing style detailed rules
