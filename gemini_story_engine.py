@@ -795,59 +795,31 @@ NO questions. NO "time to...". State the chaos, not a question about it.
     "age_4": """
 AGE GROUP: 4 YEARS OLD
 
-*** STORY DRIVER ***
-Every story needs ONE clear answer to: "What does the character WANT, and what's stopping them?"
-The want should be specific and urgent — not vague:
-- BAD want: "Jerry wants to be helpful" (vague, no urgency)
-- GOOD want: "Jerry wants to win the talent show but keeps accidentally scaring the judges"
-- BAD want: "Ted wants to explore" (no stakes, no obstacle)
-- GOOD want: "Ted needs to get the class hamster back in its cage before the teacher returns, but the hamster keeps finding new hiding spots"
+*** WHAT MAKES A GREAT AGE 4 STORY CONCEPT ***
+Think of the best age 4 books: The Gruffalo (a wood), Tiger Who Came to Tea (a kitchen), Oi Frog (a pond), Supertato (a supermarket). They all share three things:
+1. A SIMPLE SETTING the child knows (a place they can say in 1-3 words)
+2. ONE BONKERS THING happening in that setting
+3. A SUPPORTING CHARACTER with personality who either causes or blocks the problem
 
-The obstacle must be specific, funny, and create real complications. It can be situational (the hamster keeps escaping, the cake keeps sliding), involve the character's traits, or both. The key is that the obstacle blocks the WANT in a way that escalates.
-The resolution must be CLEVER — not just "stop doing the bad thing" or "do the opposite."
+Your pitch must have ALL THREE. If the setting needs explaining, it's too complicated. If there's no supporting character, the story will feel empty.
 
-*** STORY STRUCTURE - USE ONE OF THESE PATTERNS ***
+*** THE CONCEPT TEST ***
+Read your pitch aloud to an imaginary 4-year-old. Would they:
+- Immediately picture where the story happens? (If no → simpler setting)
+- Understand what the character needs to do? (If no → clearer mission)
+- Know what goes wrong if they fail? (If no → bigger consequence)
+- Want to know what happens next? (If no → more exciting concept)
 
-PATTERN A: "THE CLEVER TRICK" (like The Gruffalo)
-- Character faces a problem bigger than them
-- Character uses a CLEVER trick to solve it (not the obvious way)
-- Moment of "oh no, it didn't work!" then a smarter version works
-Key: Character should be SMART, not just lucky.
+*** SUPPORTING CHARACTER ***
+Every pitch MUST include a supporting character who is ESSENTIAL to the story. They must either BE the obstacle, CAUSE the problem, or HOLD the key to solving it. They need ONE personality trait the parent can voice (grumpy, scared, bossy, silly, sneaky).
+GOLD STANDARD: A grumpy chalk monster blocking the bridge who won't move until he gets a snack.
 
-PATTERN B: "THE GROWING TEAM" (like Room on the Broom)
-- Character sets off on a mission alone, meets helpers with funny personalities
-- Individual efforts fail - they must work TOGETHER
-Key: Each helper adds something funny AND useful.
-
-PATTERN C: "THE BIG MISTAKE" (like Elmer, Oi Frog)
-- Character does something causing an unexpected chain reaction
-- Things get progressively sillier and more out of control
-- The "mistake" turns out to be something good or useful
-Key: Comedy from things going wrong in UNEXPECTED ways.
-
-*** WHAT MAKES AGE 4 STORIES GREAT ***
-- A moment where the kid gasps or says "oh no!"
-- A genuinely funny bit that makes the parent laugh too
-- Supporting characters with ONE clear personality trait (the grumpy one, the scared one, the bossy one)
-- The main character solving the problem THEMSELVES (no adult swooping in)
-- The solution must LOGICALLY follow from the problem — not a random new action
-- NO MAGIC SOLUTIONS: The character cannot solve the problem by their feature magically "working." They must use the mess, the chaos, or a specific tool they find to solve it. BAD: "Her spots glowed and lit up the room." GOOD: "Her glowing spots lit up a bucket — and inside was the torch they needed."
-- Write for a parent to PERFORM aloud, not just read. Every page should give the parent a chance to make a funny voice, a loud noise, or a silly face.
-- Use ACTIVE verbs not passive ones: "stomped" not "walked", "peered" not "looked", "snatched" not "took"
-- Every page must have at least ONE sound word in ALL CAPS (CRASH, SQUISH, BOING, SPLAT)
-- Vary sentence length: short sentences for tension ("Oh no."), longer ones for build-up
-- ALLITERATION RULE: Every page must include at least one alliterative phrase (three words starting with the same letter, e.g. "cold, crinkly crack" or "stomped and squelched and slipped"). This makes it fun to read aloud.
-- VOCABULARY RULE: THE TODDLER MOUTH TEST — every word must be one a 4-year-old would say unprompted at preschool. 3+ syllable words are almost always wrong. Write how they talk, not how books sound.
-- THE 3-STRIKE STRUCTURE: STRIKE 1 (Setup) — establish the character and the problem immediately with a sound or physical action. STRIKE 2 (Escalation) — the obstacle must be physical and messy (greasy, sticky, crumbly, wobbly). STRIKE 3 (Payoff) — the resolution must be a physical triumph (a big TUG, a big POP, a big SPLAT). Every age_4 story must hit all 3 strikes.
-
-*** WORD COUNT RULE ***
-Maximum 40 words per episode. ABSOLUTE MAXIMUM. Count them. If you go over, cut adjectives first, then cut connective sentences ("Because of this...", "Then she..."). Never cut the sound word.
-
-*** SOUND-FIRST RULE ***
-Write the sound word FIRST, then describe what caused it. This forces active writing.
-BAD: "Lily had a clever idea. She picked it up carefully and put it down. Done."
-GOOD: "CRASH! WOBBLE! Lily grabbed the tower with both hands — and the whole thing came tumbling down!"
-The sound word is the heartbeat of every page. Build the sentence around it, not after it.
+*** WHAT TO AVOID ***
+- Fantasy worlds a child has never been to (clockwork forests, candy planets, cracker moons)
+- Stories that only work if you explain the rules of the world first
+- Concepts where the supporting character is decorative furniture (a random robot watching)
+- Problems that don't match their solutions (playing music to fix cracks)
+- Abstract obstacles (noise, darkness, feelings) — use physical, visible obstacles
 
 *** BLURB TONE FOR THIS AGE ***
 Blurbs must hook with a silly consequence. Focus on funny mistakes and physical mess.
@@ -1111,21 +1083,19 @@ This is {character_name}'s companion who appears in EVERY scene. {second_charact
 {style_theme_block}
 Generate 3 UNIQUE, HIGH-CONCEPT story themes for a character called "{character_name}"{f" and their companion {second_character_name}" if second_character_name else ""}. You will design the story WORLDS first, then read the character description and cast them into those worlds.
 
-STEP 1 — DESIGN 3 EXCITING WORLDS (before thinking about the character)
+STEP 1 — DESIGN 3 STORY CONCEPTS (before thinking about the character)
 
 ⚠️ DO THIS FIRST — before you look at the character description below.
 
-Invent 3 HIGH-CONCEPT story worlds that a child would BEG to colour. These must be visually spectacular settings that produce 5 completely different colouring pages. Each world must be so exciting that ANY character dropped into it would have an amazing adventure.
+Invent 3 story concepts that follow the GROUNDED SETTING RULE from your system instructions. Each concept needs: a SIMPLE SETTING (a place a child can say in 1-3 words), ONE BONKERS THING happening there, and a SUPPORTING CHARACTER with personality.
 
-Here are 3 STARTING SPARKS to inspire you. You can adapt these, remix them, combine them, or use them as a jumping-off point for something completely different. Do NOT copy them word-for-word — use them to SPARK an original idea:
+Here are 3 STARTING SPARKS to inspire you. Adapt, remix, or ignore them — but your concepts must follow the same pattern of "a real place + one thing goes wonderfully wrong":
 {seeds_block}
 
-You may also invent something entirely from scratch that has NOTHING to do with these sparks. The only rule is: each of your 3 worlds must be DIFFERENT from each other, DIFFERENT from the sparks above, and something a child has NEVER seen before.
-
-THESE ARE JUST EXAMPLES — invent your own. The world must be:
-1. VISUALLY RICH — each of the 5 episodes must look completely different when drawn as a colouring page. If you can't imagine 5 distinct, exciting illustrations, the world isn't good enough.
-2. HIGH CONCEPT — a parent reads the title and thinks "I HAVE to see this." Not "Sheepy goes shopping" but "Sheepy and the Upside-Down Zoo."
-3. VARIED ACROSS THE 3 PITCHES — one everyday-gone-wrong, one fantastical/impossible, one involving a specific job/event/mission. No two can share the same type of setting.
+THESE ARE JUST EXAMPLES — invent your own. Each concept must be:
+1. VISUALLY RICH — each of the 5 episodes must look completely different when drawn as a colouring page. If you can't imagine 5 distinct illustrations, the concept isn't good enough.
+2. GRIPPING — a parent reads the title and the child says "I WANT THAT ONE!"
+3. VARIED ACROSS THE 3 PITCHES — no two can share the same setting or the same type of problem.
 
 STEP 2 — NOW READ THE CHARACTER
 
