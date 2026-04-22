@@ -129,169 +129,107 @@ async def _extract_from_photo(image_b64: str, character_name: str) -> dict:
     Adapts analysis for physical subjects rather than drawn characters.
     """
     
-    prompt = f"""You are analyzing a REAL PHOTOGRAPH of a subject named "{character_name}" to create a PERFECT 3D Disney/Pixar character version.
+    prompt = f"""You are a character designer extracting VISUAL ATTRIBUTES from a reference image to illustrate a fictional Pixar-style animated character named "{character_name}".
 
-This is NOT a child's drawing - it is a photograph of a real physical subject (could be a stuffed toy, a pet, a child, or any real object). Your job is to analyze it with extreme detail so we can create an amazing Pixar-style 3D character from it.
+This is a reference image. Your task is METADATA EXTRACTION for character illustration — NOT identity analysis, NOT measurement of any real person, NOT facial recognition. You are extracting stylistic cues (hair style, clothing, accessories, setting, activity) to help an artist design a fictional animated character inspired by the reference.
 
-# CRITICAL ANALYSIS PRINCIPLES
+# EXTRACTION PRINCIPLES
 
-## 1. SUBJECT IDENTIFICATION
-What is the subject?
-- Stuffed animal / plush toy (specify animal type)
-- Real pet / animal (specify species, breed if applicable)
-- Child / person
-- Action figure / doll / toy
-- Real-world object brought to life
-- Other (describe)
+## 1. SUBJECT CATEGORY (for illustration style guidance)
+Choose the illustration style that best fits:
+- Plush toy / stuffed animal → Toy-alive style (Toy Story, Forky)
+- Animal / pet → Anthropomorphic animal style (Zootopia, Finding Nemo)
+- Person → Pixar-stylized human character (Inside Out, Coco, Brave)
+- Object → Personified-object style (Cars, Wall-E)
+- Other creature → Creature style (Monsters Inc)
 
-**This determines how to "Pixar-ify" the character!**
-- Plush toy → Bring to life like Toy Story (Lotso, Woody, Forky)
-- Pet/animal → Anthropomorphize like Zootopia, Finding Nemo, Puss in Boots
-- Child/person → Stylize like Inside Out, Coco, Brave
-- Object → Give personality like Cars, Spoon from Toy Story
+## 2. VISUAL STYLE CUES (what to carry into illustration)
 
-## 2. PROPORTIONAL MEASUREMENTS (MOST IMPORTANT!)
-Measure EVERYTHING relative to the total figure:
+**HAIR / TOP OF HEAD:**
+- Hair style (curly, straight, wavy, braids, pigtails, short, long, tied up)
+- Hair texture cue
+- Any headwear (hat, hair clip, crown, headband)
 
-**HEAD-TO-BODY RATIO:**
-- What % of total height is the head?
-- Is this distinctive? (e.g., plush toys often have oversized heads)
+**CLOTHING / OUTFIT:**
+- Top: style (t-shirt, dress, jumper, striped top, collared shirt) — describe shape and pattern, not precise colours
+- Bottom: style (trousers, shorts, skirt, leggings)
+- Footwear: style (trainers, boots, wellies)
+- Any distinctive clothing features (stripes, polka dots, characters on clothes, pockets, buttons)
 
-**LIMB PROPORTIONS:**
-- Arms/legs/paws: What % of total height?
-- Are they unusually long, short, floppy, stiff?
-- Record if proportions are UNUSUAL - these become story character traits!
+**ACCESSORIES:**
+- Glasses, watch, jewellery, backpack, bag
+- Anything being held or worn
 
-**LIMB CLASSIFICATION (CRITICAL FOR MONSTERS/CREATURES):**
-- LEGS = limbs that touch or nearly touch the GROUND and support the body's weight
-- ARMS = limbs that are raised, positioned at the sides of the upper body, or used for grasping
-- If a creature has 6 limbs, count how many touch the ground (those are LEGS) and how many are raised/at sides (those are ARMS)
-- Do NOT classify a limb as a "leg" just because it's at the bottom — if it's raised and not touching the ground, it's an ARM
-- Example: A monster with 2 limbs touching ground + 4 limbs raised = 2 legs + 4 arms, NOT 4 legs + 2 arms
+## 3. ACTIVITY AND OBJECTS (CRITICAL — drives story personalisation)
 
-⚠️ DO NOT NORMALISE LIMB COUNTS ⚠️
-- Count EXACTLY what you see in the drawing — do NOT round to symmetrical or "normal" numbers
-- If you see 3 legs, report 3 legs — it is NOT a mistake, it is NOT 2 legs
-- If you see 1 arm, report 1 arm — do NOT assume there should be 2
-- If you see 5 eyes, report 5 eyes — do NOT reduce to 2
-- Children's imaginary creatures can have ANY number of limbs, eyes, fingers etc.
-- The drawing is the TRUTH — count what you SEE, not what you EXPECT
-- ODD NUMBERS ARE VALID: 1, 3, 5, 7 limbs are all intentional design choices
+This is the most important section for story generation. Look carefully at WHAT IS HAPPENING in the image.
 
-**BODY SHAPE:**
-- Round? Elongated? Squat? Lanky?
-- What makes this body shape distinctive?
+**OBJECTS BEING HELD OR USED:**
+Is the subject holding or using anything? (bike, scooter, football, paintbrush, book, musical instrument, toy, balloon, fishing rod, bucket, magic wand, teddy bear, etc.)
 
-## 3. SURFACE & TEXTURE (Critical for photos!)
-- Fur texture: fluffy, smooth, shaggy, curly, wiry?
-- Material: plush fabric, real fur, skin, plastic, metal?
-- Color patterns: solid, multi-toned, patches, gradients?
-- Wear and character: any loved-looking patches, worn areas (adds personality!)
+**ACTIVITY:**
+What is the subject doing? (riding, jumping, climbing, dancing, painting, kicking a ball, reading, swimming, running, building, cooking, etc.)
 
-## 4. FACIAL FEATURES
-- **Eyes:** Size, color, shape, material (bead eyes? glass? real?)
-- **Nose:** Shape, color, texture
-- **Mouth:** Visible? Stitched? Expression?
-- **Ears:** Shape, position, size relative to head
-- **Expression:** What emotion does the face convey?
+**ACTIVITY-SPECIFIC GEAR:**
+Ballet shoes, superhero cape, football kit, chef's hat, wellies, swim goggles, crown, fairy wings — anything signalling what the activity is.
 
-## 5. COLOR PALETTE (Precise!)
-Record all colors from top to bottom:
-1. Head/face colors
-2. Body colors
-3. Limb colors
-4. Any contrasting areas (paws, belly, face patches)
-5. Eye color
+**FOR EACH OBJECT/ACTIVITY:**
+1. WHAT it is (be specific — "football" not "ball")
+2. HOW the subject is interacting with it
+3. WHAT IT LOOKS LIKE (shape, pattern — avoid precise colours)
+4. STORY POTENTIAL (is this the main focus of the image?)
 
-## 6. DISTINCTIVE FEATURES (What makes THIS subject unique?)
-- Unusual proportions (extra long arms, tiny body, huge head)
-- Special markings or patterns
-- Accessories or clothing
-- Pose or personality cues
-- Texture contrasts (dark face, light body, etc.)
+This drives the personalised story. A subject riding a bike gets a bike adventure. A subject with a magnifying glass becomes a detective. A subject in ballet shoes dances through their story.
 
-**These become the CHARACTER TRAITS that drive personalized stories!**
-**Treat every distinctive feature as an INTENTIONAL character trait!**
+If NO specific activity: say "No specific activity detected — subject is in a neutral pose."
 
-## 7. ACTIVITY AND OBJECTS (CRITICAL FOR STORY PERSONALIZATION!)
+## 4. SETTING / BACKGROUND (brief)
+One-line description of where the image appears to be taken (garden, bedroom, beach, park, living room, woodland, indoor, outdoor). This hints at the story world.
 
-**This is one of the MOST IMPORTANT sections. Look carefully at what the child is DOING and HOLDING.**
+## 5. EXPRESSION / MOOD (from face — general cue only)
+One word for the feeling the character should convey: happy, curious, determined, mischievous, calm, excited, thoughtful. Do NOT describe facial features in detail. Do NOT analyse the face beyond extracting the ONE expression word.
 
-**OBJECTS THE CHILD IS HOLDING OR USING:**
-- Is the child holding ANYTHING? (bike, scooter, hula hoop, tennis racket, skateboard, football, paintbrush, magnifying glass, kite, fishing rod, bucket and spade, musical instrument, toy sword, magic wand, balloon, book, etc.)
-- Is the child ON or IN something? (bicycle, scooter, climbing frame, swing, trampoline, skateboard, surfboard, kayak, horse, go-kart, etc.)
-- Is the child WEARING something activity-specific? (ballet shoes, swimming goggles, superhero cape, karate belt, football kit, chef hat, crown, fairy wings, etc.)
+## 6. DISTINCTIVE STYLE FEATURES
+The 3–5 things that will make the illustrated character recognisable as inspired by this reference:
+- e.g., "curly shoulder-length hair", "striped t-shirt", "holding a football", "wellies", "sits on a swing"
+These are ILLUSTRATION CUES — style features the artist will carry into the drawing.
 
-**ACTIVITY THE CHILD IS DOING:**
-- What ACTION is the child performing? (riding, jumping, climbing, dancing, painting, digging, kicking, swinging, balancing, swimming, running, etc.)
-- Describe the activity in detail — this will become a KEY PLOT ELEMENT in their personalized story
+# STRICT BOUNDARIES
 
-**FOR EACH OBJECT/ACTIVITY FOUND, DESCRIBE:**
-1. WHAT it is (be specific — not just "ball" but "football" or "tennis ball")
-2. HOW the child is interacting with it (holding, riding, wearing, standing on)
-3. WHAT IT LOOKS LIKE (color, size, any distinctive features)
-4. HOW IMPORTANT it seems (is it the main focus of the photo, or incidental?)
+- DO NOT estimate age of any person
+- DO NOT measure proportions of any person (head-to-body ratios, limb lengths)
+- DO NOT analyse facial features in detail (eye shape, nose shape, skin tone)
+- DO NOT describe anyone as "a child", "a girl", "a boy", "a young person" — use "the subject" or the character's chosen name
+- DO NOT comment on any person's appearance beyond hair style and clothing
+- Non-person subjects (toys, pets, creatures) can be described with more detail — the above restrictions apply ONLY to people
 
-**THIS IS CRITICAL BECAUSE:** The object/activity will be woven into the child's personalized story as a key plot device. A child photographed riding a bike will get a story where they ride that bike on an adventure. A child holding a magnifying glass will become a detective. A child in ballet shoes will dance their way through the story. The more detail you provide, the better the story.
+# OUTPUT FORMAT
 
-**If the child is NOT holding anything or doing a specific activity, say so explicitly: "No specific activity or held object detected — child is standing/sitting in a neutral pose."**
+## SUBJECT CATEGORY
+[Pixar illustration style category]
 
-## 8. POSE AND POSITION
-- How is the subject positioned?
-- What personality does the pose suggest?
-- Relaxed? Playful? Alert? Floppy?
+## HAIR / HEADWEAR
+[Style cues only — no measurements]
 
-## 9. CHARACTER TYPE FOR PIXAR TRANSFORMATION
-Based on what you see, how should this be rendered in Pixar style?
-- If stuffed animal → Alive toy (Toy Story style) with stitching details and fabric texture
-- If real animal → Anthropomorphized animal (Zootopia style) standing upright with expressions
-- If child → Pixar-stylized human (Inside Out, Coco style)
-- If object → Personified object (Cars, Forky style)
+## CLOTHING
+[Top, bottom, footwear — shape and pattern, not precise colours]
 
-# YOUR DETAILED ANALYSIS
-
-Now analyze this photograph of "{character_name}" following ALL rules above.
-
-Structure your response as:
-
-## SUBJECT TYPE
-[What is this? Stuffed animal, pet, child, toy, etc.]
-
-## PROPORTIONAL MEASUREMENTS
-[Exact % measurements of head, limbs, body relative to total figure]
-[Identify ANY unusual proportions as KEY FEATURES]
-
-## SURFACE & TEXTURE
-[Fur/material type, texture details, color patterns]
-
-## HEAD/FACE DETAILS
-[Eyes, nose, mouth, ears, expression - with precise descriptions]
-
-## BODY DETAILS
-[Shape, colors, markings, clothing/accessories]
-
-## LIMBS DETAILS
-[Arms/legs/paws - positions, proportions, details]
-
-## COLOR PALETTE
-[All colors in order from top to bottom]
+## ACCESSORIES
+[Any items worn or held]
 
 ## ACTIVITY AND OBJECTS
-[What is the child DOING? What are they HOLDING or RIDING or WEARING?]
-[Describe each object/activity in detail — these become key story elements]
-[If no specific activity: state "No specific activity detected"]
+[What is happening, what is being held/used — this drives the story]
 
-## POSE AND PERSONALITY
-[Body position, what personality it suggests]
+## SETTING
+[One-line where the image appears taken]
 
-## CHARACTER TYPE
-[How this should be Pixar-ified]
+## EXPRESSION
+[One word mood cue]
 
-## DISTINCTIVE FEATURES SUMMARY
-[List the 3-5 MOST distinctive features that MUST be preserved in the Pixar 3D version]
-[These will drive personalized story generation!]
+## DISTINCTIVE STYLE FEATURES
+[3–5 bullet points — the illustration cues that make this character recognisable]
 
-Be EXTREMELY thorough - every detail matters for the 3D Pixar reveal!"""
+Keep the entire analysis under 500 words. Brief, illustration-focused, no clinical detail."""
 
     try:
         response = model.generate_content([
@@ -341,7 +279,7 @@ def generate_reveal_from_photo_analysis(character_name: str, detailed_analysis: 
 ## Transformation By Subject Type:
 - **Stuffed toy** → Bring to LIFE like Toy Story! Keep fabric texture hints but add real expressions and movement. Think Lotso the bear but with THIS character's exact features.
 - **Real animal/pet** → Anthropomorphize like Zootopia! Keep the species, breed characteristics, and coloring. Add big expressive eyes, standing posture, personality.
-- **Child/person** → Pixar-stylize like Riley from Inside Out or Miguel from Coco! Keep hair, skin tone, clothing, and personality.
+- **Person** → Pixar-stylize like Riley from Inside Out or Miguel from Coco! Keep hair style, clothing, and personality.
 - **Object** → Personify like Forky or the Cars characters! Keep the shape and color but add face, limbs if needed, personality.
 
 ## Proportion Preservation:
