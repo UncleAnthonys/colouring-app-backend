@@ -669,127 +669,36 @@ PITCH_AGE_GUIDELINES = {
     "age_3": """
 AGE GROUP: 2-3 YEARS OLD (TODDLER)
 
-*** STORY DRIVER ***
-Every great toddler story has ONE clear answer to: "What does the character WANT?"
-The want must be PHYSICAL and IMMEDIATE — something a 2-3 year old can see and touch:
-- Wanting to reach a ball that rolled under something
-- Wanting to catch a bouncing thing that won't stop moving
-- Wanting to catch a bouncing thing that won't stop moving
-- Wanting to climb to the top of something very tall
-- Wanting to find something that is hiding
-- Wanting to give someone a thing but it keeps falling/rolling/flying away
+*** WHAT MAKES A GREAT TODDLER STORY CONCEPT ***
+Think of the best toddler books: Dear Zoo, That's Not My Teddy, We're Going on a Bear Hunt, Each Peach Pear Plum. They share:
+1. ONE simple mission the child understands instantly (catch it, find it, stop it, reach it)
+2. A REAL place or situation (a garden, a house, a park, a farm)
+3. Something going wrong that gets WORSE each page
 
-The character's appearance or traits can play into the story naturally — but the WANT and the OBSTACLE are what matter most. The obstacle can be situational (the ball is stuck, the tower keeps falling) or character-driven (big paws make it slippery) or both.
+*** THE TODDLER TEST ***
+Can you say the whole story in one sentence a 2-year-old would understand?
+GOOD: "The ball keeps rolling away and she has to catch it!" — a toddler gets this instantly.
+GOOD: "The tower is falling and he has to catch the star!" — clear, physical, urgent.
+BAD: "The sunflowers are growing and she needs to find the gnome before the petals fall." — too many unconnected ideas.
 
-*** WHAT SEPARATES A BAD PITCH FROM A GOOD ONE ***
+*** CONCEPT RULES ***
+- The WANT must be physical and immediate: catch, reach, stop, find, push, pull
+- The OBSTACLE must be visible: it's stuck, it's too high, it's rolling away, it's hiding
+- The SETTING must be a place a toddler knows: a house, a garden, a park, a bath, a shop, a farm
+- A supporting character or animal should appear — even simple (a duck, a cat, a snail)
+- Every page must look DIFFERENT as a colouring page — the character moves to new spots
 
-A BAD toddler pitch has:
-- No clear WANT (character just wanders around)
-- Feature causes RANDOM chaos with no purpose (loud = stuff breaks, strong = stuff smashes)
-- Resolution is just "do the opposite" (loud -> quiet, fast -> slow)
-- No emotional moment — nothing to make the kid feel anything
+*** WHAT TO AVOID ***
+- Abstract problems (feelings, lessons, sharing, being brave)
+- Fantasy worlds a toddler has never seen
+- Stories that need explaining — if the concept isn't obvious from the title, it's too complicated
+- Multiple unconnected elements (gnomes + sunflowers + falling petals = confusing)
 
-A GOOD toddler pitch has:
-- A SPECIFIC want the kid can relate to (help a friend, get somewhere, give a present, fix a mistake)
-- A clear, funny obstacle that blocks the want — this can be situational (too high, too slippery, keeps bouncing away) or involve the character's traits, or both
-- Each failed attempt is different and funnier than the last
-- An emotional low point where the character feels sad/stuck (this is what makes the win feel good)
-- A CREATIVE resolution that surprises — not the obvious solution
-- The resolution connects emotionally to the want — not just "problem fixed" but "friendship strengthened" or "character accepted"
-
-CRITICAL: Create completely original scenarios based on the character.
-
-*** STORY STRUCTURE - USE ONE OF THESE 3 PROVEN PATTERNS ***
-
-PATTERN A: "REPETITION WITH SURPRISE" (like Dear Zoo, Brown Bear Brown Bear)
-- Episodes 1-3: Same pattern repeats with a different funny thing each time
-- Episode 4: The pattern changes or breaks in a surprising way
-- Episode 5: Satisfying conclusion that calls back to episode 1
-
-PATTERN B: "ACCUMULATING CHAOS" (like The Very Hungry Caterpillar)
-- Each episode adds ONE more silly thing to a growing pile of chaos
-- By episode 3-4, everything is hilariously out of control
-- Episode 5: one big action fixes everything (or makes it even funnier)
-
-PATTERN C: "JOURNEY WITH OBSTACLES" (like We're Going on a Bear Hunt)
-- Character goes somewhere, hits an obstacle, gets past it with a fun sound/action
-- Each obstacle is different and fun to act out
-- Final obstacle leads to a big surprise
-- Then rush back home!
-
-*** WHAT MAKES TODDLER STORIES WORK ***
-- At least ONE moment where the kid will LAUGH (physical comedy, something going splat, a funny noise)
-- The character DOES things - never just looks or observes
-- Predictable pattern that kids can "join in" with after one hearing
-- A satisfying physical payoff — the mess resolves in one big funny action (a giant POP, a big SPLAT, a huge WHOOSH)
-- The ending must MAKE SENSE: the "mistake" should secretly BE the answer
-
-*** BANNED FOR AGE 3 ***
-- Passive searching (look here, look there, found it, done)
-- Character just observing or noticing things
-- Abstract or conceptual themes
-- Stories with no funny moment or surprise
-- Connective tissue sentences: "Then he...", "Because of that...", "He felt..." — each page is a standalone exclamation
-- Words longer than 2 syllables — use "big" not "enormous", "silly" not "determined"
-- Any moral or lesson — the goal is a silly mess, not a life lesson
-
-*** SENTENCE RULE ***
-- under_3: Maximum 5 words per sentence. Maximum 10 words total per page. Pure board book — labels and sounds only.
-- age_3: Maximum 12 words per sentence. 15-25 words total per page. Simple causal sequences — setup, action, result.
-
-*** UNDER_3 REFRAIN RULE ***
-For under_3 stories, pages 2, 3, and 4 MUST follow a repeating pattern with a REFRAIN that fires every page. The refrain is a single word or short phrase that captures the consequence of what just happened — it must make sense every time it fires.
-There are two valid patterns:
-
-PATTERN A (Consequence Refrain): New action each page, same consequence refrain fires at the end.
-EXAMPLE: Page 2: "CRASH! Al walks into the books. SHHH!" Page 3: "WHOOSH! Al slips on the rug. SHHH!" Page 4: "SQUEAK! Al's shoes wake the cat. SHHH!" — the SHHH fires because the same rule applies every time (must stay quiet). The child will shout it before the parent finishes the sentence.
-
-PATTERN B (Structure Refrain): Identical sentence structure, only the key object or action changes.
-EXAMPLE: Page 2: "SPLASH! Tim hits the puddle. WET!" Page 3: "BOING! Tim hits the trampoline. HIGH!" Page 4: "CRASH! Tim hits the cushions. SOFT!"
-
-Choose the pattern that fits the story — Pattern A works best when there is a rule being broken (must stay quiet, must not wake the baby, must not spill). Pattern B works best for exploration stories (trying different things). The refrain must be chosen BEFORE writing — it comes from the episode 1 goal. This is non-negotiable for under_3.
-CRITICAL SOUND MATCHING RULE: The opening sound word on every page must physically match the action that follows it. GOOD: "SPLASH! Tim hits the puddle." (splashing matches puddle). GOOD: "SQUEAK! Al walks on the shiny floor." (squeaking matches shiny shoes on floor). BAD: "HONK! Al reaches for the corner." (honking does not match reaching). If the sound word could not realistically come from the action described, replace it with one that could.
-
-*** AGE_3 JOIN-IN RULE ***
-For age_3 stories, use a repeating phrase every 2 pages that the child can predict and shout along with.
-EXAMPLE: Pages 2 and 4 both end with "But it was still too [adjective]!" or "Is that the most amazing [character] ever?"
-The join-in phrase must be the MISSION STATEMENT of the story — a rallying cry that captures exactly what the character is trying to achieve. It must make sense on every single page it appears because it is always true until the very moment the goal is achieved. Think of it as the one sentence that sums up the whole story's drive. GOOD: "We must find that lucky coin!" (names the goal explicitly). GOOD: "Come on, we can reach the top!" (captures the emotional drive). BAD: "Oh no, the dusty eyebrows!" (describes a side effect, not the goal). BAD: "The map is slipping!" (situational — stops making sense the moment the situation changes). Choose the refrain BEFORE writing the episodes — it should come naturally from the episode 1 goal. The phrase should be warm, urgent, or funny. It must only appear when a specific thing goes wrong — never after a calm or successful moment, and NEVER on the resolution page. CRITICAL: The refrain must be completely self-contained — a child must understand it with zero context. Never use ambiguous pronouns. WRONG: "Oh no, wipe them dry!" WRONG: "Oh no, it slipped!" RIGHT: "We must find that lucky coin!" RIGHT: "Oh no, the rabbit is gone!"
-
-*** PRE-REQUISITE RULE (CRITICAL FOR UNDER_3) ***
-No new object may cause an action unless it was introduced and visible in the PREVIOUS episode.
-Object A appears → Object B appears → A meets B → chaos → resolution.
-This is non-negotiable. A toddler's brain tracks one thing at a time. Objects cannot appear from nowhere to drive the plot.
-BAD: Page 3 — "The ring went BOING!" (ring never appeared before)
-GOOD: Page 2 — Hannah finds a sparkly ring. Page 3 — She rolls it down the hill. BOING!
-
-*** CUMULATIVE BUILD RULE ***
-Each episode must build directly on the previous one. The story is a chain, not a collection of scenes.
-Use this 5-beat structure for under_3:
-- Episode 1: Introduce Object A (the main thing)
-- Episode 2: Introduce Object B (the new thing)
-- Episode 3: Object A meets Object B — something goes wrong
-- Episode 4: The mess gets bigger — physical chaos peak
-- Episode 5: One big action fixes it — warm ending (hug, laugh, yum)
-
-*** CAUSAL CHAIN RULE ***
-Every episode must CAUSE the next one. Episode 3 happens BECAUSE of episode 2. Not alongside it. Not instead of it. BECAUSE of it.
-Before writing each episode ask: "What did the LAST episode leave behind that makes THIS episode happen?"
-BAD chain: ball → random bowl breaks → coconut appears → cake (no causal links)
-GOOD chain: ball rolls → knocks over tower → tower falls on bucket → bucket tips → everything tumbles → big laugh
-If you cannot answer WHY each episode follows from the last, rewrite it.
-
-*** CHARACTER-STORY FIT RULE ***
-The story's central situation and the character should feel like a natural fit. Ask: "Is it funny or interesting to imagine THIS character in THIS situation?"
-GOOD: a round fluffy chicken on a wobbly beam (funny because of physics)
-GOOD: a tiny mouse in a giant kitchen (funny because of scale)
-GOOD: a loud parrot at a library (funny because of contrast)
-The character's appearance can make the situation funnier — but the situation must be funny on its own too.
-
-*** BLURB TONE FOR THIS AGE ***
-Blurbs must sound like a mess happening RIGHT NOW. Use nouns and noises only.
+*** BLURB TONE ***
+Blurbs must sound like a mess happening RIGHT NOW. Nouns and noises only.
 BAD: "Kiki learns about sharing with her friends at the park."
-The blurb must describe something PHYSICAL happening to the character — something a toddler can picture and laugh at. Be inventive and specific to THIS character. Never use the same type of scenario twice.
-NO questions. NO "time to...". State the chaos, not a question about it.
+GOOD: "The ball won't stop bouncing and it's heading straight for the pond!"
+NO questions. State the chaos.
 """,
 
     "age_4": """
@@ -831,42 +740,27 @@ End with the character in a silly impossible position, not a question.
     "age_5": """
 AGE GROUP: 5 YEARS OLD
 
-*** STORY DRIVER ***
-Answer these before writing:
-1. What does the character WANT? (Must be specific: "save the baby penguin" not "help others")
-2. WHY do they want it? (Emotional reason: "because the penguin is crying and alone")
-3. What makes it HARDER? (A specific, funny obstacle — situational, character-driven, or both)
-4. How is it eventually solved in an UNEXPECTED way? (Not the obvious solution)
+*** WHAT MAKES A GREAT AGE 5 STORY CONCEPT ***
+Think of: Zog, Supertato, Superworm, Dogger, Giraffes Can't Dance. They share:
+1. A setting kids know from play or stories (a school, a castle, a shop, a jungle, a stage)
+2. A clear PROBLEM with real stakes — someone needs rescuing, something is going wrong, a plan is failing
+3. A SETBACK where it looks like it won't work out — then a surprising solution
+4. A supporting character who HELPS or HINDERS — not just watches
 
-The OBVIOUS solution is always BORING. The SURPRISING solution is what makes great stories.
+Age 5 can handle slightly more complex settings than age 4 — a pirate ship, a magic school, a dragon's cave — as long as kids can picture it from play or TV. But the CONCEPT still needs to be explainable in one sentence.
 
-*** STORY STRUCTURE ***
+*** SUPPORTING CHARACTER ***
+Must be essential to the plot — they either cause the problem, block the solution, or provide the key. They need personality the parent can voice.
 
-STRUCTURE A: "RESCUE/DELIVERY UNDER PRESSURE" (like Zog, Supertato)
-- Clear urgent problem → first attempt → SETBACK (fails or makes it worse) → creative sideways solution → victory connecting back to episode 1
-Key: The setback must feel real. The kid should worry it won't work out.
-
-STRUCTURE B: "MYSTERY/DETECTIVE"
-- Something weird is happening → follow clues → red herring (funny misunderstanding) → real answer discovered → everything explained with a sweet/funny reason
-Key: The mystery answer should be funny or heartwarming, not scary.
-
-STRUCTURE C: "ACCIDENTAL HERO" (like Dogger, Giraffes Can't Dance)
-- Character feels they can't do something → forced to try → attempt goes hilariously wrong → the "wrong" thing accidentally solves a bigger problem → character celebrated for being exactly who they are
-Key: Message through ACTION not moralising.
-
-*** WHAT MAKES AGE 5 STORIES GREAT ***
-- A setback that makes the kid say "uh oh, NOW what?!"
-- Supporting characters who actively HELP or HINDER - not just stand around watching
-- The character should surprise themselves — and the reader — with how they solve it
-- The solution must come FROM the problem — the "disaster" secretly created the answer
-- Write for a parent to PERFORM aloud. Dialogue should beg to be done in funny voices. At least 2 episodes must have direct speech.
-- Use ACTIVE verbs: "scrambled" not "went", "bellowed" not "said", "squelched" not "walked"
-- Every page must have at least ONE sound word in ALL CAPS
-- Mix short punchy sentences with longer descriptive ones for rhythm
+*** WHAT TO AVOID ***
+- Concepts that need a paragraph to explain
+- Settings with made-up rules the child can't intuit
+- Problems solved by "trying harder" or "believing in yourself"
+- Supporting characters who just cheer from the sidelines
 
 *** BLURB TONE FOR THIS AGE ***
 Blurbs must present a surreal what-if with clear stakes.
-GOOD: "Oli's magic photos have swapped all the colours — the sky is green and the grass is blue and it's spreading fast!"
+GOOD: "Oli's photos have swapped all the colours — the sky is now the ground and it's spreading fast!"
 BAD: "Oli discovers that his photos have a special power that could change everything."
 One surprising image, one clear problem, no questions.
 """,
@@ -1081,7 +975,7 @@ This is {character_name}'s companion who appears in EVERY scene. {second_charact
     # ── Build the full user prompt (matches Sonnet structure exactly) ──
     prompt = f'''You are creating personalized story adventures for a childrens coloring book app.
 {style_theme_block}
-Generate 3 UNIQUE, HIGH-CONCEPT story themes for a character called "{character_name}"{f" and their companion {second_character_name}" if second_character_name else ""}. You will design the story WORLDS first, then read the character description and cast them into those worlds.
+Generate 3 UNIQUE story themes for a character called "{character_name}"{f" and their companion {second_character_name}" if second_character_name else ""}. You will design the story CONCEPTS first, then read the character description and cast them into those concepts.
 
 STEP 1 — DESIGN 3 STORY CONCEPTS (before thinking about the character)
 
@@ -1194,7 +1088,7 @@ For each theme provide:
 1. ORIGINALITY: NEVER copy a scenario word-for-word. Adapt it, remix it, make it feel fresh and unique to this character.
 2. NUANCED RESOLUTION: The problem should NOT be solved in the obvious way. Instead, a SUPPORTING CHARACTER should suggest a new approach, OR the character should discover something unexpected about the situation. The solution should feel like a team effort or a moment of growth, not just "one big action fixes everything".
 3. SETBACK: The want/obstacle/twist must include a real setback — not just "oops." The character tries and FAILS before the twist saves the day.
-4. DEVIANCE RULE: Reject any story idea that can be summarised as "Character learns a lesson" or "Character finds a lost toy." Only accept ideas that involve a physical transformation, a law of physics breaking, or a hilarious misunderstanding. The parent should look at the title and think "I have to see how they draw THAT" — not "oh, another helpful character story."
+4. FRESHNESS RULE: Reject any story idea that can be summarised as "Character learns a lesson" or "Character finds a lost toy." Only accept ideas where something physical goes hilariously wrong in a place a child knows — the oven won't stop, the bath overflows, the slide goes wobbly, the dog won't come back. The parent should look at the title and think "that sounds fun!" — not "oh, another lesson story."
 
 Return ONLY valid JSON. Generate 3 theme PITCHES (no full episodes yet). Here is the exact format:
 
