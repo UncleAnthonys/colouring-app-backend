@@ -77,6 +77,7 @@ RULES:
 - Never use "was," "felt," "saw," or "noticed" as main verbs. Use kinetic verbs: "the wind bit his nose" not "he was cold."
 - At least one ALL CAPS sound word per page. Build the sentence around it.
 - Sound words must match physics: wood = CLACK/THUD, water = SPLASH/DRIP, sticky = SQUELCH.
+- ZERO COLOUR WORDS IN STORY TEXT. No "blonde", "red", "blue", "golden", "dark", "white", "green", "pink" — NONE. These are black and white colouring pages. The child picks the colours. Describe by texture, size, shape instead: "her long curly hair" not "her blonde hair", "the big pointy hat" not "the red hat", "the heavy petals" not "the dark petals". This is NON-NEGOTIABLE.
 - Use British English (colour, favourite, mum).
 - NEVER reference specific colours in story_text — these are black and white colouring pages.
 
@@ -95,9 +96,21 @@ RULES:
     Page 4: "Limey slides down the hill. WHOOSH! The star is at the edge! Oh no, the star!"
     Page 5: "Limey grabs it! SNAP! The star is safe. Limey did it! YAY!"
 
-- **TODDLER NARRATIVE (age_3 ONLY):** Bridge between board book and preschool. 15-25 words per page. 2-3 short sentences. Use expressive verbs ("hunts" not "looks", "tumbles" not "falls"). One sound word per page matching the action. Join-in phrase every 2 pages that captures the mission. Goal on page 1 must have jeopardy. Attempts must escalate.
+- **TODDLER NARRATIVE (age_3 ONLY):** Bridge between board book and preschool. 15-25 words per page. 2-3 short sentences. Use expressive verbs ("hunts" not "looks", "tumbles" not "falls"). One sound word per page matching the action. Join-in phrase every 2 pages that captures the mission. Attempts must escalate.
+    PAGE 1 MUST ANSWER THREE QUESTIONS A 3-YEAR-OLD CAN UNDERSTAND:
+    1. What is wrong? (something physical and visible — not abstract)
+    2. What must the character do to fix it? (a simple physical action)
+    3. Why does THAT fix THIS? (the connection must be obvious)
+    A 3-year-old must hear page 1 and understand the WHOLE plan. If the child would ask "but why?" then the logic is broken.
+    GOOD PAGE 1: "The tap won't stop! Water is going everywhere! Lily must turn the big handle to stop it. SPLASH!" (What's wrong = water everywhere. What to do = turn the handle. Why = because the handle stops the tap. A 3-year-old gets this.)
+    GOOD PAGE 1: "The puppy has run away! He is heading for the gate! Catch him before he gets out! WOOF!" (What's wrong = puppy escaping. What to do = catch him. Why = because catching him stops him escaping. Obvious.)
+    BAD PAGE 1: "The sunflowers are growing! Find the gnome before the petals fall!" (What's wrong = flowers growing... bad? What to do = find gnome. Why = ??? What does a gnome have to do with flowers growing? A 3-year-old would be lost.)
+    Every page after page 1 must show the character WORKING TOWARD the plan from page 1. Each attempt must clearly be trying to do the thing page 1 said to do. The child follows along because they KNOW what the character is trying to do and they're cheering them on.
 
 - **PRESCHOOL PERFORMANCE (age_4, age_5):** 3-5 sentences per page. This is a one-person show for the parent.
+    PAGE 1 STORY LOGIC (age_4): The same three questions apply but with more detail. The child must understand: what's the problem, what's the plan, and WHY the plan will work. Every page after must visibly work toward that plan.
+    GOOD: "The oven won't stop! Bread is growing and growing and pushing out the door! Kiki must pull the plug out before the bread fills the whole kitchen. But the plug is behind the oven — and the bread is in the way!"
+    BAD: "The meatballs are flying! If they hit the big button the rocket will zoom away!" (What button? What rocket? Why is there a rocket in a kitchen? The child is confused before the story even starts.)
     VOCABULARY (age_4 — THE TODDLER MOUTH TEST): Every word must be one a 4-year-old would SAY unprompted at preschool. 3+ syllable words are almost always wrong. "Suddenly" → "then". "Enormous" → "huge". "Ceiling" → "the top". Write how they talk, not how books sound.
     Every page needs: a sound word to shout, something physical to describe (sticky, wobbly, crunchy), dialogue in a funny voice, and a hook that makes the child gasp.
 
