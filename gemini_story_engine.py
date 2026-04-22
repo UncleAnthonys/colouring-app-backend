@@ -49,17 +49,52 @@ Page 1 must establish FIVE things clearly:
 4. WHY WILL THE MISSION FIX IT? (The reader must understand the full chain: do X → causes Y → stops Z. Never reveal why the mission works on the final page.)
 5. DOES THE FIX MATCH THE PROBLEM? (Physical problem = physical fix. Never solve breaking with music or flooding with feelings. Test: could a child explain WHY it works?)
 
-LOGIC CHAIN TEST: Say the story logic as a chain: "A because B because C." If any link needs explaining to a child, simplify it. GOOD: "The tap is flooding the kitchen → turn the handle to stop it → but the handle is stuck." Every link is obvious. BAD: "The moon is crumbling → play the music box → moon stops." Why does music fix crumbling? A child would ask "but why?"
+PREMISE PHYSICS TEST (RUN THIS FIRST — BEFORE THE LOGIC CHAIN TEST): Before you write the chain, test the PREMISE itself. Cute-sounding setups slip past the logic test because the chain is internally consistent — but the PREMISE is broken. Three checks:
+1. DOES THE CAUSE MATCH THE EFFECT? Tickling makes things giggle, not crack. Bouncing makes things wobble, not explode. Wishing doesn't make things grow. The thing causing the problem must physically be capable of causing that problem in the real world. Cute language is fine. Cute physics is not.
+2. DOES THE FIX ADDRESS THE CURRENT STATE? If the glass is already cracked at the end of page 1, snipping the weeds doesn't UN-crack the glass. The fix must address the ACTUAL state of the problem — not just remove the original cause. If something is already broken, the fix must repair OR contain it. If something is escaping, the fix must catch it. If something is growing, the fix must stop the growing AND deal with what already grew.
+3. IS THE TOOL THE OBVIOUS TOOL? Why scissors? Why a key? Why a bucket? The tool must be the one a child would point to and say "use that!" If the answer is "the writer picked it," reject. The tool's real-world purpose must obviously match the job.
+
+REJECTED EXAMPLE (real story that shipped broken):
+"The weeds are tickling the glass dome and it's cracking. Snip the weeds with shell-scissors to stop it."
+WHY REJECTED:
+- Tickling doesn't crack glass. Wrong physics. (Check 1 fails.)
+- The glass is already cracked. Snipping weeds doesn't fix existing cracks. (Check 2 fails.)
+- Why scissors? Could be hands pulling them, could be a fish biting them. Tool isn't obviously THE tool. (Check 3 fails.)
+Three failures. Rewrite the premise from scratch.
+
+ACCEPTED REWRITE (same character, same setting, working physics):
+"The dome's door is jammed shut — slimy weeds have wrapped tight around the handle and they're growing thicker every second! Snip them off before they cover the whole door and Jess is stuck inside!"
+WHY IT WORKS:
+- Weeds wrapping a handle physically jam a door. Real physics. (Check 1 passes.)
+- Snip the weeds → handle is free → door opens. The fix addresses the current state. (Check 2 passes.)
+- Scissors cut weeds. That's what scissors do. Obvious tool. (Check 3 passes.)
+- Bonus: weeds growing thicker every second = visible escalation across pages 2-4. The clock is built into the physics.
+
+LOGIC CHAIN TEST (RUN SECOND, AFTER PREMISE PASSES): Say the story logic as a chain: "A because B because C." If any link needs explaining to a child, simplify it. GOOD: "The tap is flooding the kitchen → turn the handle to stop it → but the handle is stuck." Every link is obvious. BAD: "The moon is crumbling → play the music box → moon stops." Why does music fix crumbling? A child would ask "but why?"
 
 PAGE 1 DISTANCE RULE (CRITICAL FOR SCENE DESCRIPTIONS): The thing the character needs to reach, find, or fix must NOT be visible or reachable on page 1. If the story is "pull the lever to stop the machine" — the lever must be FAR AWAY, HIDDEN, or BLOCKED on page 1. The story_text must explain WHY they can't just do it right now (it's across the room, behind a locked door, at the top of a hill, buried under a pile). The scene_description for page 1 must NOT show the solution object near the character. If a child looks at page 1 and thinks "why don't they just do it?" — the story is broken before it starts.
 GOOD page 1: "The big switch is on the other side of the park — but the path is covered in sticky mud!" (switch is far away)
 BAD page 1: "The lever is right there! Pull it before the water rises!" (child asks: just pull it then?)
 NOTE: under_3 does NOT use this contract. Under_3 uses the BOARD BOOK RULE below instead.
 
+**MISSION ECHO RULE (age_3, age_4, age_5 — NON-NEGOTIABLE)**
+The mission stated on page 1 must echo through the story as a recurring rallying cry. Pick ONE short mission phrase from page 1 — a command the parent shouts and the child can chant along with. It must be a CALL TO ACTION (a command, an exclamation), not a description.
+GOOD MISSION ECHOES: "Quick Jess, snip the weeds!" / "Hurry, Lily, turn the handle!" / "Catch that puppy, Tom!" / "Save the bread, Kiki!"
+BAD MISSION ECHOES: "Oh no, the weeds are growing!" (passive — observing, not commanding) / "What a mess!" (no mission)
+
+PLACEMENT:
+- Page 1: end with the mission echo as a rallying cry.
+- Pages 2, 3, 4: at least TWO of these three pages must end with (or feature prominently) the same mission echo — slightly varied is fine ("Snip those weeds!" / "Hurry, Jess — snip the weeds!"). The child should be chanting it by page 3.
+- Page 5: the mission echo is REPLACED by the success — "SNIP-SNAP! The weeds fall away!" The chant transforms into the payoff.
+
+WHY THIS MATTERS: This stops the story drifting off-mission. If every page ends with "Quick Jess, snip the weeds!" the writer cannot suddenly invent a new solution on page 5 — the chant has been promising the snip for four pages. The child KNOWS what's coming. The page 5 payoff must deliver the chant.
+
+This rule is SEPARATE from the under_3 BOARD BOOK refrain (which IS the entire structure). For ages 3-5 the mission echo is a recurring anchor inside a fuller story — not the whole story.
+
 **THE 5-PAGE STRUCTURE**
 - Page 1: The hook. Stakes, ticking clock, mission — all clear. The SOLUTION must be far away or blocked. The child must understand WHY it takes 5 pages to get there.
 - Pages 2-4: ESCALATION. Each page WORSE than the last. New obstacle, new location, new attempt that fails. The problem must spiral out of control. Each page gets the character CLOSER to the solution but something new blocks them.
-- Page 5: ONE clever physical action fixes everything. The fix must use something from the story, not a random new thing. End on action, not feelings. Never summarise ("Everyone was happy"). The action IS the ending.
+- Page 5: ONE clever physical action fixes everything. THE PAGE 5 PROMISE RULE (NON-NEGOTIABLE): Page 5 MUST resolve the EXACT mission stated on page 1. If page 1 says "snip the weeds with shell-scissors" then page 5 MUST show the character snipping the weeds with shell-scissors. Do NOT invent a new solution at the end. Do NOT have the character solve the problem with a clever-but-unrelated trick (e.g. "showing the crab her shirt makes him sleepy"). The cleverness on page 5 is HOW they finally get to do the page 1 mission — not a substitute for it. If a supporting character is blocking the mission, the cleverness is how the character GETS PAST the blocker — but the mission itself (the thing page 1 promised) must still be the resolution. The fix must use something from the story, not a random new thing. End on action, not feelings. Never summarise ("Everyone was happy"). The action IS the ending.
 
 **SUPPORTING CHARACTER RULE (ALL AGES — NON-NEGOTIABLE)**
 Every story MUST include at least one supporting character who is ESSENTIAL TO THE PLOT. If you can remove them and the story still works, they don't belong — they're furniture, not a character.
