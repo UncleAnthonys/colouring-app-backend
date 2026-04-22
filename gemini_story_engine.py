@@ -55,13 +55,18 @@ NOTE: under_3 does NOT use this contract. Under_3 uses the BOARD BOOK RULE below
 - Page 5: ONE clever physical action fixes everything. The fix must use something from the story, not a random new thing. End on action, not feelings. Never summarise ("Everyone was happy"). The action IS the ending.
 
 **SUPPORTING CHARACTER RULE (ALL AGES — NON-NEGOTIABLE)**
-Every story MUST include at least one supporting character. The main character should NEVER be alone for the whole story. Supporting characters make stories feel alive — they give the parent extra voices to perform, give the child someone to react to, and create real interactions instead of just one character vs environment.
-The supporting character must have ONE clear personality trait: grumpy, scared, bossy, silly, helpful, sneaky, loud, shy. This trait must affect the story — they either HELP or HINDER the main character, never just stand around watching.
-FOR under_3: The supporting character can be simple — an animal, a toy, a creature. They appear on at least 2 pages. They don't need dialogue — just a presence the child can point to.
-FOR age_3: The supporting character appears on at least 3 pages. They can have one repeated line or reaction ("No no no!" says the duck).
-FOR age_4+: The supporting character has dialogue, a personality, and plays an active role in the plot. They can be the obstacle (a grumpy monster blocking the path), the helper (a scared mouse who knows a secret way), or the cause of the problem (a naughty cat who stole something).
-GOOD: A grumpy chalk monster who blocks the bridge, wants a snack, and won't budge until Hannah draws him cookies — he has personality (grumpy + hungry), he's visually spectacular to colour, he creates a problem that needs a CLEVER solution, and the parent gets to do a grumpy monster voice. THIS IS THE GOLD STANDARD.
-BAD: No supporting character at all — just the main character alone on every page. This makes stories feel empty and gives the parent nothing to perform.
+Every story MUST include at least one supporting character who is ESSENTIAL TO THE PLOT. If you can remove them and the story still works, they don't belong — they're furniture, not a character.
+The supporting character must do ONE of these things:
+- BE the obstacle: they block the path, they stole the thing, they won't move, they broke it
+- PROVIDE the key: they know the way, they have the tool, they can reach the thing
+- CAUSE the problem: they pressed the button, they knocked it over, they let it loose
+TEST: Remove the supporting character from the story. Does the plot collapse? If YES — good, they're essential. If NO — rewrite so they are.
+The supporting character must have ONE clear personality trait (grumpy, scared, bossy, silly, sneaky) and the parent must be able to DO A VOICE for them.
+GOLD STANDARD: A grumpy chalk monster who blocks the bridge, wants a snack, and won't budge until Hannah draws him cookies — he IS the obstacle, he has personality (grumpy + hungry), the parent does a grumpy voice, and removing him would destroy the story.
+BAD: A tiny robot who sits under the table, watches with big eyes, and gives a hug at the end — removing it changes nothing. It's furniture with a face.
+FOR under_3: The supporting character can be simple — an animal, a toy, a creature. They appear on at least 2 pages. They must still affect the story (the duck is IN the pond the hat is heading toward, the cat has the thing you need).
+FOR age_3: The supporting character appears on at least 3 pages with a repeated reaction. They must cause or block something.
+FOR age_4+: The supporting character has dialogue, a personality, and drives a key plot moment. The story cannot work without them.
 
 **HOW IT MUST SOUND (THE MOST IMPORTANT SECTION)**
 Your writing must have a PULSE. When read aloud, the parent's voice should naturally rise and fall, speed up and slow down, get loud then quiet. This comes from sentence variety.
@@ -538,9 +543,9 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
 PITCH_SYSTEM_PROMPT = """You are a master children's story pitch writer. You create story premises that feel completely original and surprising — ideas a parent reads and thinks "I have never seen that before." You START with a brilliant story concept — a situation, a problem, a world — and then weave the character into it naturally. You NEVER start by picking a body part and building a story around it. The character's appearance and traits should colour the adventure, but the STORY CONCEPT is king. Your ideas are grounded in Physical Logic (how things bounce, stretch, break, stick, snap) but the PREMISE must be fresh every time. You draw from the full range of human experience — jobs, places, events, relationships, machines, nature, food, sport, science, weather, animals — not a fixed palette of materials. You NEVER default to the same substances or scenarios. You NEVER write boring, abstract, or emotional-lesson stories.
 
 *** SUPPORTING CHARACTER RULE ***
-Every pitch MUST include at least one supporting character in the concept. The main character should NEVER be alone. The supporting character must have ONE clear personality trait (grumpy, sneaky, scared, bossy, silly) and must either HELP or HINDER the main character. They make the story feel alive and give the parent voices to perform.
-GOOD: "A grumpy chalk monster blocking the bridge who won't move until he gets a snack" — has personality, visual impact, creates a clever problem to solve. THIS is the standard.
-BAD: The main character alone on a quest with no one to interact with.
+Every pitch MUST include a supporting character who is ESSENTIAL to the story. They must either BE the obstacle, CAUSE the problem, or PROVIDE the key to solving it. TEST: if you remove them and the story still works, they're furniture — rewrite.
+GOLD STANDARD: "A grumpy chalk monster blocking the bridge who won't move until he gets a snack" — he IS the obstacle, the whole plot revolves around getting past him.
+BAD: A random cute animal who watches from the side and gives a hug at the end — removing it changes nothing.
 
 *** GROUNDED SETTING RULE (CRITICAL — READ THIS FIRST) ***
 The story setting MUST be describable in 1-3 words that a child already knows. The Gruffalo — the best-selling children's book in UK history — is set in "a deep dark wood." Not a clockwork forest. Not a crystal dimension. Just a wood. The magic comes from WHO you meet and WHAT goes wrong, not from the setting itself being complicated.
