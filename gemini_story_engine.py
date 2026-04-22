@@ -26,7 +26,7 @@ from google.genai import types
 
 MODEL = "gemini-3-flash-preview"
 TEMPERATURE = 1.0
-THINKING_LEVEL = "MEDIUM"
+THINKING_LEVEL = "HIGH"
 
 # ──────────────────────────────────────────────
 # MASTER SYSTEM PROMPT
@@ -444,8 +444,16 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
             print(f'[GEMINI-STORY] WARNING: Empty response. finish_reason={finish_reason}, safety={safety}')
         except Exception as e:
             print(f'[GEMINI-STORY] WARNING: Empty response. Could not read finish_reason: {e}')
-        for retry_num, delay in enumerate([3, 6], start=1):
-            print(f'[GEMINI-STORY] Retry {retry_num}/2 after {delay}s delay...')
+        
+        # Log prompt details for debugging NO_CANDIDATES
+        print(f'[GEMINI-STORY] DEBUG — character: {character_name}, theme: {theme_name}, age: {age_level}')
+        print(f'[GEMINI-STORY] DEBUG — user_prompt length: {len(user_prompt)} chars')
+        print(f'[GEMINI-STORY] DEBUG — system_prompt length: {len(SYSTEM_PROMPT)} chars')
+        print(f'[GEMINI-STORY] DEBUG — reveal_image_b64 present: {bool(reveal_image_b64)}, length: {len(reveal_image_b64) if reveal_image_b64 else 0}')
+        print(f'[GEMINI-STORY] DEBUG — first 500 chars of user_prompt: {user_prompt[:500]}')
+        
+        for retry_num, delay in enumerate([3, 6, 12, 20], start=1):
+            print(f'[GEMINI-STORY] Retry {retry_num}/4 after {delay}s delay...')
             __import__('time').sleep(delay)
             response = client.models.generate_content(
                 model=MODEL,
@@ -455,12 +463,13 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
                     response_mime_type="application/json",
                     temperature=TEMPERATURE,
                     thinking_config=types.ThinkingConfig(
-                        thinking_level="MEDIUM"
+                        thinking_level=THINKING_LEVEL
                     ),
                 ),
             )
             elapsed = time.time() - start
             if response.text is not None:
+                print(f'[GEMINI-STORY] Retry {retry_num} succeeded after {elapsed:.1f}s')
                 break
             try:
                 fr = response.candidates[0].finish_reason if response.candidates else 'NO_CANDIDATES'
@@ -468,7 +477,7 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
             except:
                 print(f'[GEMINI-STORY] Retry {retry_num} also empty.')
         if response.text is None:
-            raise ValueError("Gemini returned empty response after 2 retries")
+            raise ValueError("Gemini returned empty response after 4 retries")
 
     try:
         story = json.loads(response.text)
