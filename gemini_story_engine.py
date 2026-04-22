@@ -451,7 +451,6 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
         print(f'[GEMINI-STORY] DEBUG — character: {character_name}, theme: {theme_name}, age: {age_level}')
         print(f'[GEMINI-STORY] DEBUG — user_prompt length: {len(user_prompt)} chars')
         print(f'[GEMINI-STORY] DEBUG — system_prompt length: {len(SYSTEM_PROMPT)} chars')
-        print(f'[GEMINI-STORY] DEBUG — reveal_image_b64 present: {bool(reveal_image_b64)}, length: {len(reveal_image_b64) if reveal_image_b64 else 0}')
         print(f'[GEMINI-STORY] DEBUG — first 500 chars of user_prompt: {user_prompt[:500]}')
         
         for retry_num, delay in enumerate([3, 6, 12, 20], start=1):
