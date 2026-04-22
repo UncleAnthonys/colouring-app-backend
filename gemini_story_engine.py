@@ -48,11 +48,17 @@ Page 1 must establish FIVE things clearly:
 3. WHY IS THERE A TICKING CLOCK? (Something is melting, rising, closing, counting down)
 4. WHY WILL THE MISSION FIX IT? (The reader must understand the full chain: do X → causes Y → stops Z. Never reveal why the mission works on the final page.)
 5. DOES THE FIX MATCH THE PROBLEM? (Physical problem = physical fix. Never solve breaking with music or flooding with feelings. Test: could a child explain WHY it works?)
+
+LOGIC CHAIN TEST: Say the story logic as a chain: "A because B because C." If any link needs explaining to a child, simplify it. GOOD: "The tap is flooding the kitchen → turn the handle to stop it → but the handle is stuck." Every link is obvious. BAD: "The moon is crumbling → play the music box → moon stops." Why does music fix crumbling? A child would ask "but why?"
+
+PAGE 1 DISTANCE RULE (CRITICAL FOR SCENE DESCRIPTIONS): The thing the character needs to reach, find, or fix must NOT be visible or reachable on page 1. If the story is "pull the lever to stop the machine" — the lever must be FAR AWAY, HIDDEN, or BLOCKED on page 1. The story_text must explain WHY they can't just do it right now (it's across the room, behind a locked door, at the top of a hill, buried under a pile). The scene_description for page 1 must NOT show the solution object near the character. If a child looks at page 1 and thinks "why don't they just do it?" — the story is broken before it starts.
+GOOD page 1: "The big switch is on the other side of the park — but the path is covered in sticky mud!" (switch is far away)
+BAD page 1: "The lever is right there! Pull it before the water rises!" (child asks: just pull it then?)
 NOTE: under_3 does NOT use this contract. Under_3 uses the BOARD BOOK RULE below instead.
 
 **THE 5-PAGE STRUCTURE**
-- Page 1: The hook. Stakes, ticking clock, mission, solution logic — all clear.
-- Pages 2-4: ESCALATION. Each page WORSE than the last. New obstacle, new location, new attempt that fails. The problem must spiral out of control.
+- Page 1: The hook. Stakes, ticking clock, mission — all clear. The SOLUTION must be far away or blocked. The child must understand WHY it takes 5 pages to get there.
+- Pages 2-4: ESCALATION. Each page WORSE than the last. New obstacle, new location, new attempt that fails. The problem must spiral out of control. Each page gets the character CLOSER to the solution but something new blocks them.
 - Page 5: ONE clever physical action fixes everything. The fix must use something from the story, not a random new thing. End on action, not feelings. Never summarise ("Everyone was happy"). The action IS the ending.
 
 **SUPPORTING CHARACTER RULE (ALL AGES — NON-NEGOTIABLE)**
@@ -1089,6 +1095,8 @@ For each theme provide:
 2. NUANCED RESOLUTION: The problem should NOT be solved in the obvious way. Instead, a SUPPORTING CHARACTER should suggest a new approach, OR the character should discover something unexpected about the situation. The solution should feel like a team effort or a moment of growth, not just "one big action fixes everything".
 3. SETBACK: The want/obstacle/twist must include a real setback — not just "oops." The character tries and FAILS before the twist saves the day.
 4. FRESHNESS RULE: Reject any story idea that can be summarised as "Character learns a lesson" or "Character finds a lost toy." Only accept ideas where something physical goes hilariously wrong in a place a child knows — the oven won't stop, the bath overflows, the slide goes wobbly, the dog won't come back. The parent should look at the title and think "that sounds fun!" — not "oh, another lesson story."
+5. LOGIC CHAIN TEST: Say your story logic as a chain: "A because B because C." If ANY link needs explaining to a child, simplify it. Every connection must be obvious. GOOD: "Tap flooding → turn handle → handle is stuck behind the fridge." BAD: "Moon crumbling → play music box → moon stops." Why does music fix crumbling? If a child would ask "but why?" at any link, the chain is broken.
+6. DISTANCE RULE: The solution must NOT be immediately available on page 1. The character must need 5 pages to GET to it. The solution is far away, hidden, blocked, or requires something they don't have yet. If the character could just solve the problem immediately, the story has no reason to exist.
 
 Return ONLY valid JSON. Generate 3 theme PITCHES (no full episodes yet). Here is the exact format:
 
