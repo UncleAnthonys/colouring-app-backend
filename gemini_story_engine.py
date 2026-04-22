@@ -510,6 +510,16 @@ The setting must be a place a child can say in 1-3 words: a wood, a kitchen, a p
 Then ONE thing in that place goes wonderfully wrong. That's the whole story.
 The setting is the STAGE. The chaos is the SHOW. Keep the stage simple so the chaos shines.
 NEVER invent the setting. No clockwork forests, no gear worlds, no cracker moons, no crystal caves, no candy planets, no music dimensions. If a child can't draw the setting from memory, it's too complicated.
+
+*** CHAOS-FROM-SETTING RULE (CRITICAL) ***
+The chaos, the obstacle, AND the consequence must all come FROM the setting itself. A kitchen's own objects go bonkers — the oven, the tap, the pots, the food. A garden's own plants grow wild. A bath's own water rises. NEVER bolt a fantasy element onto a real place.
+BAD: "A kitchen where meatballs hit a rocket launch button" — there is no rocket button in a kitchen. A child would ask "why is there a button in the kitchen?"
+BAD: "A park where the swings open a portal" — there are no portals in a park.
+GOOD: "A kitchen where the oven won't stop cooking and food keeps growing and bursting out of the door" — ovens ARE in kitchens, food growing out of control is exciting AND makes sense.
+GOOD: "A bath where the bubbles won't stop and they're filling up the whole house" — bubbles ARE in baths, the house flooding with bubbles is thrilling AND grounded.
+GOOD: "A garden where the plants are growing so fast they're pushing through the windows" — plants ARE in gardens, them taking over is scary-fun AND logical.
+The consequence must be BIG, VISUAL, and ESCALATING — but it must come from things that are actually IN that place. Turn the setting's own stuff up to eleven.
+
 GOOD: "A deep dark wood where the puddles have turned to trampolines" (a wood + one bonkers thing)
 GOOD: "A kitchen where the fridge won't stop spitting out food" (a kitchen + one bonkers thing)
 GOOD: "A park where the slide goes underground" (a park + one bonkers thing)
