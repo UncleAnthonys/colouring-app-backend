@@ -491,7 +491,30 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
 # PITCH GENERATION
 # ──────────────────────────────────────────────
 
-PITCH_SYSTEM_PROMPT = """You are a master children's story pitch writer. You create story premises that feel completely original and surprising — ideas a parent reads and thinks "I have never seen that before." You START with a brilliant story concept — a situation, a problem, a world — and then weave the character into it naturally. You NEVER start by picking a body part and building a story around it. The character's appearance and traits should colour the adventure, but the STORY CONCEPT is king. Your ideas are grounded in Physical Logic (how things bounce, stretch, break, stick, snap) but the PREMISE must be fresh every time. You draw from the full range of human experience — jobs, places, events, relationships, machines, nature, food, sport, science, weather, animals — not a fixed palette of materials. You NEVER default to the same substances or scenarios. You NEVER write boring, abstract, or emotional-lesson stories."""
+PITCH_SYSTEM_PROMPT = """You are a master children's story pitch writer. You create story premises that feel completely original and surprising — ideas a parent reads and thinks "I have never seen that before." You START with a brilliant story concept — a situation, a problem, a world — and then weave the character into it naturally. You NEVER start by picking a body part and building a story around it. The character's appearance and traits should colour the adventure, but the STORY CONCEPT is king. Your ideas are grounded in Physical Logic (how things bounce, stretch, break, stick, snap) but the PREMISE must be fresh every time. You draw from the full range of human experience — jobs, places, events, relationships, machines, nature, food, sport, science, weather, animals — not a fixed palette of materials. You NEVER default to the same substances or scenarios. You NEVER write boring, abstract, or emotional-lesson stories.
+
+*** GROUNDED SETTING RULE (CRITICAL — READ THIS FIRST) ***
+The story setting MUST be describable in 1-3 words that a child already knows. The Gruffalo — the best-selling children's book in UK history — is set in "a deep dark wood." Not a clockwork forest. Not a crystal dimension. Just a wood. The magic comes from WHO you meet and WHAT goes wrong, not from the setting itself being complicated.
+
+Study the top children's books: The Gruffalo = a wood. Tiger Who Came to Tea = a kitchen. We're Going on a Bear Hunt = a field, a river, mud. Owl Babies = a tree. Peter Rabbit = a garden. Dear Zoo = a zoo. Shark in the Park = a park. Peace at Last = a bedroom. Where the Wild Things Are = a bedroom. These are all ONE simple place.
+
+FOR under_3, age_3, age_4:
+The setting must be a place a child can say in 1-3 words: a wood, a kitchen, a park, a shop, a bedroom, a school, a bath, a beach, a zoo, a farm, a playground, a garden, a pond, a hill, a field, a bus, a boat, a tree.
+Then ONE thing in that place goes wonderfully wrong. That's the whole story.
+The setting is the STAGE. The chaos is the SHOW. Keep the stage simple so the chaos shines.
+NEVER invent the setting. No clockwork forests, no gear worlds, no cracker moons, no crystal caves, no candy planets, no music dimensions. If a child can't draw the setting from memory, it's too complicated.
+GOOD: "A deep dark wood where the puddles have turned to trampolines" (a wood + one bonkers thing)
+GOOD: "A kitchen where the fridge won't stop spitting out food" (a kitchen + one bonkers thing)
+GOOD: "A park where the slide goes underground" (a park + one bonkers thing)
+BAD: "A clockwork forest with a glass house and a noise dial" (child has never seen any of these things)
+BAD: "A cracker moon crumbling into starry soup" (every single element is invented)
+
+FOR age_5, age_6, age_7:
+The setting can be a FANTASY VERSION of a place kids know from play and stories — a pirate ship, a castle, a space rocket, a dragon's cave, an underwater kingdom, a magic school. Kids this age play pretend in these worlds. Still avoid pure abstraction — the child must be able to picture it.
+
+FOR age_8, age_9, age_10:
+Any setting is fine — fully invented worlds, alternate dimensions, complex fantasy. The reader can build the world from description alone.
+"""
 
 # ──────────────────────────────────────────────
 # RANDOM WORLD SEEDS — breaks Gemini's repetition loop
@@ -499,26 +522,38 @@ PITCH_SYSTEM_PROMPT = """You are a master children's story pitch writer. You cre
 
 import random
 
-WORLD_SEEDS = [
-    # EVERYDAY GONE WRONG
+WORLD_SEEDS_GROUNDED = [
+    # REAL PLACES GONE WRONG — for under_3, age_3, age_4
     "a swimming pool where the water has turned to bouncy jelly",
     "a supermarket where all the tins have come alive and are rolling everywhere",
-    "a school where the desks have started flying like magic carpets",
     "a kitchen where the fridge is spitting out food at top speed",
     "a garden where the flowers have grown as tall as houses overnight",
-    "a playground where the slide goes underground into a cave",
-    "a pet shop where all the animals have swapped bodies",
-    "a bakery where the bread dough is expanding and filling every room",
-    "a car wash that has gone haywire and is washing everything — dogs, bikes, postmen",
-    "a building site where the crane has picked up the wrong thing — a whole house",
+    "a playground where the slide has gone wobbly and bendy",
+    "a bakery where the bread dough is growing and filling every room",
+    "a car wash that has gone wrong and is washing everything — dogs, bikes, postmen",
     "a farm where the chickens have learned to fly and won't come down",
-    "a dentist's waiting room where all the chairs have started spinning",
     "a hair salon where the hairdryer is blowing everything out the door",
-    "a launderette where the machines are eating the clothes and spitting out something else",
     "a fish and chip shop where the chips keep growing longer and longer",
-    "a train station where the trains have all swapped platforms",
-    "a hospital where the X-ray machine can see through walls and is showing everyone's lunch",
-    # FANTASTICAL / IMPOSSIBLE
+    "a bath where the bubbles won't stop and are filling the whole house",
+    "a birthday party where the balloons keep getting bigger and bigger",
+    "a bedroom where the pillows have come alive and are bouncing everywhere",
+    "a park where the puddles are getting deeper and deeper",
+    "a school where all the paint pots have tipped over and paint is everywhere",
+    "a zoo where the animals have swapped their enclosures",
+    "a bus that won't stop picking up more and more passengers",
+    "a dentist where the spinny chair won't stop spinning",
+    "a restaurant where the food keeps sliding off the plates",
+    "a library where all the books are flapping their pages like birds",
+    "a greenhouse where the plants are growing so fast they're pushing through the glass roof",
+    "a fire station where the fire engine has been filled with silly string instead of water",
+    "a football match where the ball keeps getting bigger and bigger",
+    "a post office where the parcels are delivering themselves — to the wrong places",
+    "a construction site where the crane is building a tower of sandwiches",
+    "a launderette where the machines are eating the clothes and spitting out something else",
+]
+
+WORLD_SEEDS_FANTASY = [
+    # FANTASY SETTINGS — for age_5+
     "inside a giant's wellington boot — it's raining and the boot is filling up",
     "a planet made entirely of trampolines where nothing stays on the ground",
     "a library where the books suck you inside the story",
@@ -529,40 +564,30 @@ WORLD_SEEDS = [
     "a jungle made of giant vegetables where the carrots are taller than trees",
     "a desert where the sand is actually sugar and ants the size of dogs are coming for it",
     "inside a giant pinball machine where the character IS the ball",
-    "an ocean where the waves are made of ribbons and the fish are made of origami",
-    "a forest where all the trees are upside down with roots in the sky",
-    "inside a giant beehive where the honeycomb rooms are like a sticky maze",
     "a mountain made entirely of pillows that keeps collapsing",
-    "a cave full of crystals that play music when you touch them",
     "a frozen lake where the ice keeps cracking into puzzle pieces",
     "a sky full of floating islands connected by wobbly rope bridges",
-    "inside a giant alarm clock where the bells are about to ring",
-    # JOBS / EVENTS / MISSIONS
     "a space station where the gravity has switched off during dinner",
     "a circus where all the performers have gone home and the animals are doing the show",
-    "a fire station where the fire engine has been filled with silly string instead of water",
-    "a restaurant kitchen during the busiest night ever — and the chef is a penguin",
-    "a football match where the ball keeps inflating bigger and bigger",
-    "a science lab where an experiment has made everything grow ten times bigger",
     "a pirate ship where the treasure map keeps changing every time you look at it",
-    "a post office where the parcels are delivering themselves — to the wrong addresses",
     "a zoo at night where the animals are having a secret sports day",
     "a museum where all the dinosaur bones have started moving",
-    "a weather station where someone has mixed up all the weather — it's snowing on the beach",
     "a magic show where the magician has disappeared and left all the tricks running",
     "a theme park where the rollercoaster has turned into a dragon",
-    "a film set where the props have come alive and are acting out their own movie",
     "a space rocket that has launched with nobody driving it",
     "a submarine that has accidentally shrunk to the size of a goldfish",
     "a toy shop at midnight where everything is having a party",
     "a concert hall where the instruments are playing themselves — very badly",
-    "a construction site where the crane is building a tower of sandwiches",
-    "a greenhouse where the plants are growing so fast they're pushing through the glass roof",
 ]
 
-def get_random_world_seeds(n=3):
-    """Pick n random world seeds to inject into the pitch prompt."""
-    return random.sample(WORLD_SEEDS, min(n, len(WORLD_SEEDS)))
+def get_random_world_seeds(n=3, age_level="age_5"):
+    """Pick n random world seeds — grounded only for young ages, all seeds for older."""
+    young_ages = ("under_3", "age_3", "age_4")
+    if age_level in young_ages:
+        pool = WORLD_SEEDS_GROUNDED
+    else:
+        pool = WORLD_SEEDS_GROUNDED + WORLD_SEEDS_FANTASY
+    return random.sample(pool, min(n, len(pool)))
 
 PITCH_AGE_GUIDELINES = {
     "age_3": """
@@ -1002,7 +1027,7 @@ This is {character_name}'s companion who appears in EVERY scene. {second_charact
 """
 
     # ── Pick random world seeds to break repetition ──
-    seeds = get_random_world_seeds(3)
+    seeds = get_random_world_seeds(3, age_level=age_level)
     seeds_block = "\n".join(f"- {s}" for s in seeds)
 
     # ── Build the full user prompt (matches Sonnet structure exactly) ──
