@@ -25,8 +25,9 @@ from google.genai import types
 # ──────────────────────────────────────────────
 
 MODEL = "gemini-3-flash-preview"
-TEMPERATURE = 1.0
-THINKING_LEVEL = "HIGH"
+TEMPERATURE = 0.85
+TOP_P = 0.95
+THINKING_LEVEL = "MEDIUM"
 
 # ──────────────────────────────────────────────
 # MASTER SYSTEM PROMPT
@@ -69,7 +70,7 @@ FOR age_3: The supporting character appears on at least 3 pages with a repeated 
 FOR age_4+: The supporting character has dialogue, a personality, and drives a key plot moment. The story cannot work without them.
 
 **HOW IT MUST SOUND (THE MOST IMPORTANT SECTION)**
-Your writing must have a PULSE. When read aloud, the parent's voice should naturally rise and fall, speed up and slow down, get loud then quiet. This comes from sentence variety.
+You do not narrate; you SING. You are not reporting what happens — you are performing it. Your writing must have a PULSE. When read aloud, the parent's voice should naturally rise and fall, speed up and slow down, get loud then quiet. Prioritise "mouthfeel" — use alliteration, internal rhyme, and varying sentence lengths to create a rhythmic performance. Each page should feel like a single breath — start with a long, flowing sentence of description and end with a short, punchy action word.
 
 TECHNIQUES:
 - Build with a long rolling sentence, then PUNCH with a short one: "She ran past the carrots and over the stones and through the long wet grass and — SPLAT! Mud everywhere."
@@ -428,6 +429,7 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
             system_instruction=SYSTEM_PROMPT,
             response_mime_type="application/json",
             temperature=TEMPERATURE,
+            top_p=TOP_P,
             thinking_config=types.ThinkingConfig(
                 thinking_level=THINKING_LEVEL
             ),
@@ -462,6 +464,7 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
                     system_instruction=SYSTEM_PROMPT,
                     response_mime_type="application/json",
                     temperature=TEMPERATURE,
+                    top_p=TOP_P,
                     thinking_config=types.ThinkingConfig(
                         thinking_level=THINKING_LEVEL
                     ),
@@ -508,6 +511,7 @@ Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
                 system_instruction=SYSTEM_PROMPT,
                 response_mime_type="application/json",
                 temperature=TEMPERATURE,
+                top_p=TOP_P,
                 thinking_config=types.ThinkingConfig(
                     thinking_level=THINKING_LEVEL
                 ),
