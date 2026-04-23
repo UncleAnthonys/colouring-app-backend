@@ -1046,6 +1046,12 @@ Invent 3 story concepts that follow the GROUNDED SETTING RULE from your system i
 Here are 3 STARTING SPARKS to inspire you. Adapt, remix, or ignore them — but your concepts must follow the same pattern of "a real place + one thing goes wonderfully wrong":
 {seeds_block}
 
+⚠️ OVER-USED PREMISES — SKIP THESE: Recent stories have massively over-used these three shapes. Do NOT pitch any of the following unless the seeds above explicitly suggest them:
+1. A GIANT MAGNET pulling metal things (spoons, buses, cars, shelves) — this has been used far too much. Reach for a different cause.
+2. MARCHING/PARADING TOYS escaping a toy shop — over-used. Find another shop or different chaos.
+3. THINGS HAVE TURNED INTO OTHER THINGS ("the floor turned to ice", "the hall turned to magnet") — over-used transformation shape.
+If you find yourself reaching for any of these, STOP and pick a different premise. Variety is the whole point.
+
 THESE ARE JUST EXAMPLES — invent your own. Each concept must be:
 1. VISUALLY RICH — each of the 5 episodes must look completely different when drawn as a colouring page. If you can't imagine 5 distinct illustrations, the concept isn't good enough.
 2. GRIPPING — a parent reads the title and the child says "I WANT THAT ONE!"
