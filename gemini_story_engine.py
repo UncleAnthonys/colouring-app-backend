@@ -145,20 +145,58 @@ RULES:
     Page 1: "The robot climbs high! Stop it before the tower falls!" (too many words, too much explaining)
     Page 2: "Lil jumps up. She cannot reach. Oh no, the robot!" (refrain is passive, not a command)
 
-    WRITE LIKE: *Dear Zoo* by Rod Campbell, *That's Not My Puppy* by Fiona Watt, *Where's Spot?* by Eric Hill. Bone-simple grammar. One action per page. A question or exclamation hooks the page. The refrain carries the whole story's shape.
+    WRITE LIKE — STUDY THESE THREE MECHANICS, DO NOT JUST NAME-CHECK THE BOOKS:
+
+    MECHANIC 1 — *Dear Zoo* by Rod Campbell: Predictable two-beat structure that the toddler shouts along with. Setup beat → reveal beat. The page TURN is the joke.
+    ❌ NOT: "I asked the zoo for a pet. They sent me an elephant. He was too big."
+    ✅ YES: "So they sent me an... elephant! He was too BIG. I sent him back."
+
+    MECHANIC 2 — *That's Not My Puppy* by Fiona Watt: Same sentence frame every page, ONE word changes. The repetition IS the pleasure.
+    ❌ NOT: "The puppy has soft ears. The puppy has a wet nose. The puppy has a fluffy tail."
+    ✅ YES: "That's not my puppy. His ears are too SOFT. That's not my puppy. His nose is too WET."
+
+    MECHANIC 3 — *Where's Spot?* by Eric Hill: A QUESTION on every page, then a sound or surprise as the answer. The parent's voice goes UP on the question.
+    ❌ NOT: "Spot is hiding. He is not in the box. He is not in the clock."
+    ✅ YES: "Is he in the box? NO! Is he in the clock? NO! Is he behind the door?"
+
+    THE COMMON THREAD: Bone-simple grammar. ONE thing per page. The REFRAIN is the spine — it shows up identically on every page after page 1. Without the refrain you have a caption, not a story.
 
 - **TODDLER NARRATIVE (age_3 ONLY):** Bridge between board book and preschool. 15-25 words per page. 2-3 short sentences. Use expressive verbs ("hunts" not "looks", "tumbles" not "falls"). Sound words OPTIONAL and only when earned — see the sound word rule above. Most age_3 pages should have ZERO sound words. Join-in phrase every 2 pages that captures the mission. Attempts must escalate.
+    DEFAULT REFRAIN RULE (age_3 AND age_4 — applies to ALL writing styles unless overridden by a more specific style rule):
+    Every story MUST have a refrain — a short repeated line that appears on at least 3 of the 5 pages, identically. Not a "Quick, X, quick!" tagged onto the end of a caption — that is NOT a refrain, that is a panic word. A refrain is a line the CHILD shouts along with, that names the goal or the obstacle.
+    The refrain must:
+      (a) Appear on pages 2, 3, and 4 in IDENTICAL form (not similar — identical).
+      (b) Resolve or transform on page 5 ("Hold on, ladybird, hold on!" → "I've got you, ladybird, I've got you!").
+      (c) Be self-contained — a 3-year-old must understand it without the surrounding sentences.
+      (d) Be the GOAL or the SHARED EXPERIENCE, never just an exclamation. "Stop that balloon!" YES. "Oh no!" NO. "Quick, Pete, quick!" NO (it doesn't name what to do).
+    EXAMPLE GOOD REFRAINS (age_3): "Catch that puppy!" / "Hold on, ladybird, hold on!" / "Round and round we go!" / "Don't drop the egg!"
+    EXAMPLE BAD REFRAINS: "Quick, Pete, quick!" (vague — quick to do what?) / "Oh no!" (no information) / "What a day!" (not a goal) / a refrain that only makes sense on one page.
+    SELF-CHECK BEFORE FINISHING: Read pages 2, 3, 4 aloud. Is the SAME line in all three? If no, rewrite. If your refrain is "Quick, [name], quick!" — that fails. Replace it with the actual goal.
     PAGE 1 MUST ANSWER THREE QUESTIONS A 3-YEAR-OLD CAN UNDERSTAND:
     1. What is wrong? (something physical and visible — not abstract)
     2. What must the character do to fix it? (a simple physical action)
     3. Why does THAT fix THIS? (the connection must be obvious)
     A 3-year-old must hear page 1 and understand the WHOLE plan. If the child would ask "but why?" then the logic is broken.
-    GOOD PAGE 1: "The tap won't stop! Water is pouring everywhere! Lily must turn the big handle to stop it — but the handle is stuck." (What's wrong = water everywhere. What to do = turn the handle. Why = because the handle stops the tap. A 3-year-old gets this.)
-    GOOD PAGE 1: "The puppy has run away! He is heading for the open gate! Catch him before he gets out on the busy road!" (What's wrong = puppy escaping. What to do = catch him. Why = because catching him stops him escaping. Obvious.)
+    GOOD PAGE 1: "Drip, drip, DRIP! Oh no — the kitchen tap won't stop! Water is climbing up Lily's toes, up to her knees, all the way to the cupboards! Lily grabs the big silver handle and pulls. Pulls and pulls and pulls. But it won't budge! 'Turn, handle, turn!'" (What's wrong = water rising. What to do = turn the handle. Why = handle stops the tap. Logic test passed — and it READS like a storybook, not a caption.)
+    GOOD PAGE 1: "Whoosh — there goes the puppy! Tail wagging, ears flapping, paws skittering across the grass — straight for the open gate! Mia stretches out her hands. 'Stop, puppy, stop!' But he is fast. So fast. The big road is just past the gate. 'Catch that puppy!'" (What's wrong = puppy escaping. What to do = catch him. Why = stops him reaching the road. Logic test passed — and the parent's voice has somewhere to go.)
     BAD PAGE 1: "The sunflowers are growing! Find the gnome before the petals fall!" (What's wrong = flowers growing... bad? What to do = find gnome. Why = ??? What does a gnome have to do with flowers growing? A 3-year-old would be lost.)
     Every page after page 1 must show the character WORKING TOWARD the plan from page 1. Each attempt must clearly be trying to do the thing page 1 said to do. The child follows along because they KNOW what the character is trying to do and they're cheering them on.
 
-    WRITE LIKE: *We're Going on a Bear Hunt* by Michael Rosen, *Peace at Last* by Jill Murphy, *Owl Babies* by Martin Waddell. RHYTHM: short repeated phrases that the parent's voice goes UP and DOWN on. "Swishy swashy! Splash splosh! Squelch squerch!" Repetition within a page is your friend. Three-beat phrases land hardest. Worry is real but gentle. A grown-up reading out loud should almost sing it.
+    WRITE LIKE — STUDY THESE THREE MECHANICS, DO NOT JUST NAME-CHECK THE BOOKS:
+
+    MECHANIC 1 — *We're Going on a Bear Hunt* by Michael Rosen: Cumulative obstacle pattern with onomatopoeia for the texture of moving through it. "We can't go over it, we can't go under it, oh no, we've got to go through it!" repeats EVERY page. Then a sound for the texture (swishy swashy, splash splosh, squelch squerch).
+    ❌ NOT: "Pete sails his big leaf boat. But a grumpy frog blocks the way. He will not move! Quick, Pete, quick!"
+    ✅ YES: "Uh-oh — a great big grumpy frog! We can't go over him. We can't go under him. We've got to go ROUND him! Splish, splosh, splish, splosh — round we go!"
+
+    MECHANIC 2 — *Peace at Last* by Jill Murphy: A repeating chorus of frustration with new sound-makers each page. "Mr Bear could not get to sleep" returns every spread, with a different noise stopping him. The pattern is COMFORT through repetition; the comedy is in the variation.
+    ❌ NOT: "The water starts to spin. Gurgle, gurgle! The ladybird is scared. Can Pete reach her?"
+    ✅ YES: "Round and round, gurgle, gurgle — the puddle is spinning! The ladybird wobbles. The leaf wobbles. Pete wobbles too. 'Hold on, ladybird, hold on!'"
+
+    MECHANIC 3 — *Owl Babies* by Martin Waddell: A short repeated worry-line from one character that lands harder each time. "I want my mummy!" Three short beats. Real feeling, gentle scale.
+    ❌ NOT: "The leaf boat is too slow. The drain is pulling them down. Pete cannot reach. Quick, Pete, quick!"
+    ✅ YES: "The drain pulls — slurp, slurp, slurp. Pete reaches. He can't quite. He can't quite. 'Hold on, ladybird! Hold on, hold on!'"
+
+    THE COMMON THREAD: A 3-year-old story is NOT three short declarative sentences in a row. It is a PERFORMANCE — repetition WITHIN the page (round and round, hold on hold on), a refrain that returns every page, sound words that come from the action, and a parent's voice that has SOMEWHERE TO GO. If your page reads like an event report ("X happens. Then Y happens. Then Z happens.") you have written a caption, NOT a story. Rewrite it.
 
 - **PRESCHOOL PERFORMANCE (age_4):** 3-5 sentences per page. This is a one-person show for the parent.
     PAGE 1 STORY LOGIC (age_4): The same three questions apply but with more detail. The child must understand: what's the problem, what's the plan, and WHY the plan will work. Every page after must visibly work toward that plan.
@@ -167,7 +205,21 @@ RULES:
     VOCABULARY (age_4 — THE TODDLER MOUTH TEST): Every word must be one a 4-year-old would SAY unprompted at preschool. 3+ syllable words are almost always wrong. "Suddenly" → "then". "Enormous" → "huge". "Ceiling" → "the top". Write how they talk, not how books sound.
     Every page needs: something physical to describe (sticky, wobbly, crunchy), dialogue in a funny voice, and a hook that makes the child gasp. Sound words only when earned — see the sound word rule above.
 
-    WRITE LIKE: *The Gruffalo* and *Room on the Broom* by Julia Donaldson, *The Tiger Who Came to Tea* by Judith Kerr. Long-short-LONG sentence shapes. A short punch sentence drops the audience. "He had terrible tusks, and terrible claws, and terrible teeth in his terrible jaws." Rule of three EVERYWHERE. Build up, build up, snap.
+    WRITE LIKE — STUDY THESE THREE MECHANICS, DO NOT JUST NAME-CHECK THE BOOKS:
+
+    MECHANIC 1 — *The Gruffalo* by Julia Donaldson: Triplet of attributes with the same adjective stacked, then a punch line. "He has terrible tusks, and terrible claws, and terrible teeth in his terrible jaws." Build, build, build, SNAP.
+    ❌ NOT: "Up, up, up goes the balloon! It picks up Dolly and her bed too. Mr. Pip the balloon man shouts, 'Stop that balloon!'"
+    ✅ YES: "Up went the rope, and up went the pole, and UP went Dolly's whole wavy bed! 'Oh fiddlesticks!' shouted Mr Pip the balloon man, hopping on one foot. 'Stop that whale!'"
+
+    MECHANIC 2 — *Room on the Broom* by Julia Donaldson: Internal rhyme and a chorus. "The witch had a cat and a hat that was black, and long ginger hair in a braid down her back." Every page has a beat you could clap to.
+    ❌ NOT: "The wind is very loud. It shakes the big balloon round and round. Dolly looks with her big, wide eyes."
+    ✅ YES: "The wind it BLEW and the balloon it SHOOK, round and round with a wibble and a wook. Dolly's eyes went wide as a plate. 'Oh no,' she gasped. 'It's getting late!'"
+
+    MECHANIC 3 — *The Tiger Who Came to Tea* by Judith Kerr: A funny voice the parent gets to do, dropped right into the action. Dialogue is the engine, not the description.
+    ❌ NOT: "Dolly rubs the inside of her bed on the pole. The metal gets very slick. The rope slips off."
+    ✅ YES: "Dolly had a BIG idea. She rubbed her bed on the pole — rub-a-dub-DUB! Rub-a-dub-DUB! 'Slippy enough yet?' she huffed. 'Slippier!' wheezed Mr Pip. Rub-a-dub-DUB! And — SLIDE! Off slipped the rope!"
+
+    THE COMMON THREAD: At age_4 the parent is putting on a SHOW. Every page needs ONE moment of dialogue with attitude, ONE beat with rhythm or rhyme, and ONE punch line. If your page is just describing what happens in third person, you have written a film script, NOT a story. Rewrite it with a voice in it.
 
 - **PICTURE BOOK NARRATIVE (age_5):** 4-6 sentences per page. More plot complexity than age_4 but same performability.
     PAGE 1 STORY LOGIC (age_5): The problem can have a bit more nuance, but the plan must still be clear. The child needs to understand what's going wrong, what the hero must do, and why that specific action will work. Stakes can be a touch more abstract (losing something treasured, letting someone down) but the physical action is still concrete.
@@ -379,8 +431,7 @@ SELF-CHECK: After writing each page, reread every word. For EACH word ask: would
         parts.append("""⚠️ VOCABULARY REMINDER (age_5):
 Max 10 words per sentence. Max 50 words per page.
 Use playground words — fun to say, easy to understand. No Latinate or academic vocabulary.
-BANNED: investigate, magnificent, structure, ancient, cascade, illuminated, mechanism, delicate, precisely, extraordinary.
-Every page must have at least one sound word in ALL CAPS and be written for a parent to PERFORM aloud.""")
+BANNED: investigate, magnificent, structure, ancient, cascade, illuminated, mechanism, delicate, precisely, extraordinary.""")
 
     parts.append(f"WRITING_STYLE: {writing_style or 'Standard'}")
 
