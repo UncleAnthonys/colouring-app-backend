@@ -145,6 +145,8 @@ RULES:
     Page 1: "The robot climbs high! Stop it before the tower falls!" (too many words, too much explaining)
     Page 2: "Lil jumps up. She cannot reach. Oh no, the robot!" (refrain is passive, not a command)
 
+    WRITE LIKE: *Dear Zoo* by Rod Campbell, *That's Not My Puppy* by Fiona Watt, *Where's Spot?* by Eric Hill. Bone-simple grammar. One action per page. A question or exclamation hooks the page. The refrain carries the whole story's shape.
+
 - **TODDLER NARRATIVE (age_3 ONLY):** Bridge between board book and preschool. 15-25 words per page. 2-3 short sentences. Use expressive verbs ("hunts" not "looks", "tumbles" not "falls"). Sound words OPTIONAL and only when earned — see the sound word rule above. Most age_3 pages should have ZERO sound words. Join-in phrase every 2 pages that captures the mission. Attempts must escalate.
     PAGE 1 MUST ANSWER THREE QUESTIONS A 3-YEAR-OLD CAN UNDERSTAND:
     1. What is wrong? (something physical and visible — not abstract)
@@ -156,16 +158,28 @@ RULES:
     BAD PAGE 1: "The sunflowers are growing! Find the gnome before the petals fall!" (What's wrong = flowers growing... bad? What to do = find gnome. Why = ??? What does a gnome have to do with flowers growing? A 3-year-old would be lost.)
     Every page after page 1 must show the character WORKING TOWARD the plan from page 1. Each attempt must clearly be trying to do the thing page 1 said to do. The child follows along because they KNOW what the character is trying to do and they're cheering them on.
 
-- **PRESCHOOL PERFORMANCE (age_4, age_5):** 3-5 sentences per page. This is a one-person show for the parent.
+    WRITE LIKE: *We're Going on a Bear Hunt* by Michael Rosen, *Peace at Last* by Jill Murphy, *Owl Babies* by Martin Waddell. RHYTHM: short repeated phrases that the parent's voice goes UP and DOWN on. "Swishy swashy! Splash splosh! Squelch squerch!" Repetition within a page is your friend. Three-beat phrases land hardest. Worry is real but gentle. A grown-up reading out loud should almost sing it.
+
+- **PRESCHOOL PERFORMANCE (age_4):** 3-5 sentences per page. This is a one-person show for the parent.
     PAGE 1 STORY LOGIC (age_4): The same three questions apply but with more detail. The child must understand: what's the problem, what's the plan, and WHY the plan will work. Every page after must visibly work toward that plan.
     GOOD: "The oven won't stop! Bread is growing and growing and pushing out the door! Kiki must pull the plug out before the bread fills the whole kitchen. But the plug is behind the oven — and the bread is in the way!"
     BAD: "The meatballs are flying! If they hit the big button the rocket will zoom away!" (What button? What rocket? Why is there a rocket in a kitchen? The child is confused before the story even starts.)
     VOCABULARY (age_4 — THE TODDLER MOUTH TEST): Every word must be one a 4-year-old would SAY unprompted at preschool. 3+ syllable words are almost always wrong. "Suddenly" → "then". "Enormous" → "huge". "Ceiling" → "the top". Write how they talk, not how books sound.
     Every page needs: something physical to describe (sticky, wobbly, crunchy), dialogue in a funny voice, and a hook that makes the child gasp. Sound words only when earned — see the sound word rule above.
 
-- **STORYTIME (age_6, age_7):** 80-120 words per page. Character tries, fails, grows. Dialogue and internal thoughts. Fun "mouthful words" (bamboozled, gobbledygook, squelch) used boldly without explanation.
+    WRITE LIKE: *The Gruffalo* and *Room on the Broom* by Julia Donaldson, *The Tiger Who Came to Tea* by Judith Kerr. Long-short-LONG sentence shapes. A short punch sentence drops the audience. "He had terrible tusks, and terrible claws, and terrible teeth in his terrible jaws." Rule of three EVERYWHERE. Build up, build up, snap.
+
+- **PICTURE BOOK NARRATIVE (age_5):** 4-6 sentences per page. More plot complexity than age_4 but same performability.
+    PAGE 1 STORY LOGIC (age_5): The problem can have a bit more nuance, but the plan must still be clear. The child needs to understand what's going wrong, what the hero must do, and why that specific action will work. Stakes can be a touch more abstract (losing something treasured, letting someone down) but the physical action is still concrete.
+    VOCABULARY (age_5): Slightly richer than age_4 — a few "mouth-feel" words are welcome (wobbly, grumbling, splinters, whispered) but anything a 5-year-old wouldn't recognise is cut.
+
+    WRITE LIKE: *Stick Man* by Julia Donaldson, *The Day the Crayons Quit* by Drew Daywalt, *Zog* by Julia Donaldson. Characters have distinct voices the parent can do. Internal thoughts allowed briefly. Callbacks: an earlier detail returns in the resolution. Emotional beat on page 4 before the win on page 5.
+
+- **STORYTIME (age_6, age_7):** 80-120 words per page. Character tries, fails, grows. Dialogue and internal thoughts.
+    WRITE LIKE: *The Enormous Crocodile* by Roald Dahl, *Flat Stanley* by Jeff Brown, *Horrid Henry* by Francesca Simon. Dialogue drives scenes. Characters have clear voices and attitudes. Sly humour, mild peril. Rich vocabulary ("bamboozled", "flabbergasted", "squelching") used without apologising. The reader is now in the story alongside the hero.
 
 - **CHAPTER BOOK (age_8, age_9, age_10):** 150-250 words per page. Complex twists, metaphor, dry humour. Rich world-building matching detailed colouring pages.
+    WRITE LIKE: *Charlie and the Chocolate Factory* by Roald Dahl, *The Worst Witch* by Jill Murphy, *The Boy in the Dress* by David Walliams. Layered sentences with texture. Metaphor lands without explanation. Dry wit. Inner life + outer action. Chapter-book feel — the reader is a reader now.
 
 * **Cozy Landing:** For under_3/age_3 — warm, safe ending ("SNUGGLE! Toastie rests on his warm plate."). For age_4+ — satisfying physical payoff, can be funny/messy. ALL AGES: end on action, never a summary sentence. The last line must belong to THIS story — if it could fit any story, rewrite it.
 
