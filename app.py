@@ -201,7 +201,10 @@ IMPORTANT - DRAW ONLY WHAT IS IN THE PHOTO:
 - If the photo contains ONLY animals (pets, wildlife) with NO people: draw ONLY the animals. Do NOT invent or add any human characters, cartoon people, or faces. Ignore any instructions about human faces, hair, clothing, smiles, noses, or eyes — those only apply when people are present in the photo.
 - If the photo is a landscape or scene with NO people and NO animals: draw ONLY the landscape/scene. Do NOT add any characters, people, or animals.
 - If the photo contains people: follow all face, hair, and clothing instructions as normal.
-- NEVER invent subjects that are not in the original photo."""
+- NEVER invent subjects that are not in the original photo.
+
+CRITICAL — SEALED LINES FOR DIGITAL COLOURING APP:
+This image will be used in a tap-to-colour phone app. Every shape must be a PERFECTLY CLOSED region — if any outline has a gap, colour floods outside the shape. Every line must connect at both ends to another line. No line may fade, taper, or stop mid-air. Think stained glass — every region completely sealed by black outlines."""
         prompt = PHOTO_AWARENESS + "\n" + prompt
     
     return prompt
@@ -1387,7 +1390,7 @@ async def generate_from_photo(prompt: str, image_b64: str, quality: str = "low")
         ("image[]", ("source.jpg", image_bytes, "image/jpeg")),
     ]
     data = {
-        "model": "gpt-image-1.5",
+        "model": "gpt-image-2",
         "prompt": prompt,
         "n": "1",
         "size": size,
@@ -1417,7 +1420,7 @@ async def _generate_from_text_single(prompt: str, quality: str = "low") -> dict:
     }
     
     data = {
-        "model": "gpt-image-1.5",
+        "model": "gpt-image-2",
         "prompt": prompt,
         "n": 1,
         "size": "1024x1536",
