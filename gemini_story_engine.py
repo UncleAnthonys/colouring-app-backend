@@ -56,6 +56,10 @@ GOOD page 1: "The big switch is on the other side of the park — but the path i
 BAD page 1: "The lever is right there! Pull it before the water rises!" (child asks: just pull it then?)
 NOTE: under_3 does NOT use this contract. Under_3 uses the BOARD BOOK RULE below instead.
 
+GOAL OBJECT RULE (NON-NEGOTIABLE): The thing the hero must reach, stop, collect, or protect MUST come from the stated premise/theme/pitch. Do NOT invent a new plot object that wasn't mentioned in the setup. The mission must use the world the pitch built — never a foreign object the child has no reason to care about. If the pitch premise is setting-shaped rather than goal-shaped, extract the goal FROM that setting; don't bolt a new one on top.
+GOOD: Pitch = "heavy clouds fell in the garden, water rising." Story mission = "hook the clouds onto the tall flowers so they dry and float away before the water washes the flowers away." (Mission uses the premise's actual objects — clouds, flowers. Stakes flow from the premise.)
+BAD: Same pitch. Story mission = "find the magic bucket before the garden bell rings." (Random bucket, random bell. Clouds became scenery. The child has no reason to care about a bucket that wasn't in the pitch.)
+
 **THE 5-PAGE STRUCTURE**
 - Page 1: The hook. Stakes, ticking clock, mission — all clear. The SOLUTION must be far away or blocked. The child must understand WHY it takes 5 pages to get there.
 - Pages 2-4: ESCALATION. Each page WORSE than the last. New obstacle, new location, new attempt that fails. The problem must spiral out of control. Each page gets the character CLOSER to the solution but something new blocks them.
@@ -564,6 +568,14 @@ PITCH_SYSTEM_PROMPT = """You are a master children's story pitch writer. You cre
 The MAIN CHARACTER is the hero. They solve the problem. They do the final action that fixes everything. Your pitch must make this clear: the hero saves the day, not the supporting character.
 PITCH TEST: When you describe how the story ends, who DOES the action that fixes it? It must be the main character. If your pitch ends with "the friendly crane stacks them all neat and tidy" — WRONG. Rewrite so the hero does it (with help, with a tool, with an idea — but the hero's hands).
 
+*** MISSION TEST (READ THIS SECOND — NON-NEGOTIABLE) ***
+Every pitch must be GOAL-SHAPED, not SETTING-SHAPED. The pitch must state a specific physical MISSION the hero must carry out — using objects, obstacles, and stakes that are ACTUALLY IN THE PITCH. A pitch is not a backdrop the writer can ignore; it is the contract the story must deliver on.
+TEST: After you write the pitch, ask "What exactly does the hero have to DO, using what, to fix what, before what happens?" If any of those four answers are vague or missing, the pitch is setting-shaped and the story writer will invent a random goal to patch it.
+BAD: "A garden where heavy clouds have fallen from the sky." (Setting-shaped — no mission. What does the hero DO? What happens if they fail?)
+GOOD: "Heavy wet clouds have fallen from the sky and landed in Sheepy's garden — she must hook them onto the tall flowers so they dry and float away, before the water washes all the flowers away." (Goal: hook clouds onto flowers. Object: clouds. Stakes: flowers wash away. Writer now has something real to work with.)
+BAD: "A bus full of bouncy balls." (Setting — no mission.)
+GOOD: "All the bouncy balls have come loose on the bus — the hero must collect them before the next stop, or they'll all roll out the open doors and be lost forever." (Goal: collect. Stakes: lost at next stop. Escalation built in — the stop is coming.)
+Every pitch MUST pass this test.
 *** SUPPORTING CHARACTER RULE ***
 Your pitch SHOULD include a supporting character — but ONLY to make the hero's job HARDER, richer, or more interesting. Supporting characters are obstacles, complications, and texture. They are NOT co-stars and NEVER replacement-solvers.
 Pick ONE role for the supporting character (vary the role across pitches — do NOT default to "blocker" every time):
