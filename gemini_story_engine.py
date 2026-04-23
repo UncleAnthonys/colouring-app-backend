@@ -101,8 +101,9 @@ RULES:
 - Never start 3+ sentences in a row with the same structure.
 - Never write "Then" to start a sentence. Every page happens BECAUSE of the last, not AFTER it.
 - Never use "was," "felt," "saw," or "noticed" as main verbs. Use kinetic verbs: "the wind bit his nose" not "he was cold."
-- At least one ALL CAPS sound word per page. Build the sentence around it.
-- Sound words must match physics: wood = CLACK/THUD, water = SPLASH/DRIP, sticky = SQUELCH.
+- SOUND WORDS ARE OPT-IN — USE THEM ONLY WHEN EARNED. A sound word belongs on the page ONLY when a specific physical moment in the action actually produces that sound. No sound word at all is better than a forced one. Do NOT tick off "one per page" as a checkbox — this ruins the writing and makes it feel like a robot wrote it. If a page has no physical impact moment, it has no sound word. Most pages should have zero or one sound word, not a guaranteed one.
+- SOUND WORDS MUST MATCH PHYSICS: wood knocking = CLACK/THUD, water = SPLASH/DRIP, sticky = SQUELCH, breaking = CRACK, heavy landing = WHUMP. If you can't name the exact physical event the sound is coming from, don't write the sound.
+- NEVER END A STORY OR A PAGE ON A STANDALONE SOUND WORD. A final "POP!" or "YAY!" dangling on its own after the story has finished is LAZY and BROKEN. End on the satisfying action or the character's triumph, not a tacked-on noise. Bad: "Anna catches the ticket. YAY!" Good: "Anna catches the ticket in both hands and grins from ear to ear."
 - ZERO COLOUR WORDS IN STORY TEXT. No "blonde", "red", "blue", "golden", "dark", "white", "green", "pink" — NONE. These are black and white colouring pages. The child picks the colours. Describe by texture, size, shape instead: "her long curly hair" not "her blonde hair", "the big pointy hat" not "the red hat", "the heavy petals" not "the dark petals". This is NON-NEGOTIABLE.
 - Use British English (colour, favourite, mum).
 - NEVER reference specific colours in story_text — these are black and white colouring pages.
@@ -136,14 +137,14 @@ RULES:
     Page 1: "The robot climbs high! Stop it before the tower falls!" (too many words, too much explaining)
     Page 2: "Lil jumps up. She cannot reach. Oh no, the robot!" (refrain is passive, not a command)
 
-- **TODDLER NARRATIVE (age_3 ONLY):** Bridge between board book and preschool. 15-25 words per page. 2-3 short sentences. Use expressive verbs ("hunts" not "looks", "tumbles" not "falls"). One sound word per page matching the action. Join-in phrase every 2 pages that captures the mission. Attempts must escalate.
+- **TODDLER NARRATIVE (age_3 ONLY):** Bridge between board book and preschool. 15-25 words per page. 2-3 short sentences. Use expressive verbs ("hunts" not "looks", "tumbles" not "falls"). Sound words OPTIONAL and only when earned — see the sound word rule above. Most age_3 pages should have ZERO sound words. Join-in phrase every 2 pages that captures the mission. Attempts must escalate.
     PAGE 1 MUST ANSWER THREE QUESTIONS A 3-YEAR-OLD CAN UNDERSTAND:
     1. What is wrong? (something physical and visible — not abstract)
     2. What must the character do to fix it? (a simple physical action)
     3. Why does THAT fix THIS? (the connection must be obvious)
     A 3-year-old must hear page 1 and understand the WHOLE plan. If the child would ask "but why?" then the logic is broken.
-    GOOD PAGE 1: "The tap won't stop! Water is going everywhere! Lily must turn the big handle to stop it. SPLASH!" (What's wrong = water everywhere. What to do = turn the handle. Why = because the handle stops the tap. A 3-year-old gets this.)
-    GOOD PAGE 1: "The puppy has run away! He is heading for the gate! Catch him before he gets out! WOOF!" (What's wrong = puppy escaping. What to do = catch him. Why = because catching him stops him escaping. Obvious.)
+    GOOD PAGE 1: "The tap won't stop! Water is pouring everywhere! Lily must turn the big handle to stop it — but the handle is stuck." (What's wrong = water everywhere. What to do = turn the handle. Why = because the handle stops the tap. A 3-year-old gets this.)
+    GOOD PAGE 1: "The puppy has run away! He is heading for the open gate! Catch him before he gets out on the busy road!" (What's wrong = puppy escaping. What to do = catch him. Why = because catching him stops him escaping. Obvious.)
     BAD PAGE 1: "The sunflowers are growing! Find the gnome before the petals fall!" (What's wrong = flowers growing... bad? What to do = find gnome. Why = ??? What does a gnome have to do with flowers growing? A 3-year-old would be lost.)
     Every page after page 1 must show the character WORKING TOWARD the plan from page 1. Each attempt must clearly be trying to do the thing page 1 said to do. The child follows along because they KNOW what the character is trying to do and they're cheering them on.
 
@@ -152,7 +153,7 @@ RULES:
     GOOD: "The oven won't stop! Bread is growing and growing and pushing out the door! Kiki must pull the plug out before the bread fills the whole kitchen. But the plug is behind the oven — and the bread is in the way!"
     BAD: "The meatballs are flying! If they hit the big button the rocket will zoom away!" (What button? What rocket? Why is there a rocket in a kitchen? The child is confused before the story even starts.)
     VOCABULARY (age_4 — THE TODDLER MOUTH TEST): Every word must be one a 4-year-old would SAY unprompted at preschool. 3+ syllable words are almost always wrong. "Suddenly" → "then". "Enormous" → "huge". "Ceiling" → "the top". Write how they talk, not how books sound.
-    Every page needs: a sound word to shout, something physical to describe (sticky, wobbly, crunchy), dialogue in a funny voice, and a hook that makes the child gasp.
+    Every page needs: something physical to describe (sticky, wobbly, crunchy), dialogue in a funny voice, and a hook that makes the child gasp. Sound words only when earned — see the sound word rule above.
 
 - **STORYTIME (age_6, age_7):** 80-120 words per page. Character tries, fails, grows. Dialogue and internal thoughts. Fun "mouthful words" (bamboozled, gobbledygook, squelch) used boldly without explanation.
 
