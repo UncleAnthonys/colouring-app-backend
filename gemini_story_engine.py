@@ -652,6 +652,34 @@ GOOD: "Heavy wet clouds have fallen from the sky and landed in Sheepy's garden �
 BAD: "A bus full of bouncy balls." (Setting — no mission.)
 GOOD: "All the bouncy balls have come loose on the bus — the hero must collect them before the next stop, or they'll all roll out the open doors and be lost forever." (Goal: collect. Stakes: lost at next stop. Escalation built in — the stop is coming.)
 Every pitch MUST pass this test.
+
+*** TODDLER COMPREHENSION TEST (under_3 pitches ONLY — SKIP FOR ALL OTHER AGES) ***
+For under_3 pitches, the Mission Test is not enough. A pitch can be goal-shaped but still make no sense to a 2-year-old. Apply these three extra tests. Any fail = rewrite.
+
+(a) PROBLEM WORD TEST: Can you describe what's wrong using words a 2-year-old already says?
+   A 2-year-old's vocabulary includes: big, small, stuck, lost, wet, dirty, broken, too many, falling, running away, out, in, up, down, open, closed, hot, cold.
+   It does NOT include: absorbing, flooding, draining, blocking, leaking, overflowing, evaporating.
+   BAD: "Giant sponges have soaked up all the bathwater." (Toddler vocab fail — they don't know soaked up, don't picture water disappearing into a sponge, don't get why that's a problem.)
+   BAD: "The drain is blocked and water is flooding the floor." (Blocked, flooding — adult words.)
+   GOOD: "The rubber duck has fallen down the plughole — got to get her out!" (Fallen, out — toddler words. Duck, plughole — things they can see.)
+   GOOD: "Bubbles are getting everywhere — out of the bath, up the walls, over the cat!" (Everywhere, up, over — toddler words. Bubbles — the thing they can point at.)
+
+(b) ONE GOAL OBJECT TEST: Is there exactly ONE specific thing the child can point to on every page?
+   Not "the sponges" (plural, vague, multiple shapes in the image). Not "the mess" (abstract). Not "the water" (invisible when gone).
+   ONE thing with a name a toddler knows. The duck. The ball. The hat. The cat. The bubble.
+   The same object must be on every page. A toddler can point at it and say its name.
+   BAD: "Al must get the giant sponges out of the bath." (Sponges = plural, which one on each page? Toddler gets lost.)
+   GOOD: "Dolly must get her yellow duck back from the drain." (One duck. Same duck every page. Toddler points and says "duck!")
+
+(c) REFRAIN VERB TEST: What verb will the child shout on every page? Does it match what the hero actually DOES on pages 2, 3, 4?
+   The refrain verb must be a single toddler-physical action: catch, stop, get, pull, push, find, reach, grab.
+   Then CHECK: across pages 2, 3, 4, is the hero performing that verb? If the refrain is "Catch that duck!" every attempt must be a catch. If the refrain is "Get down, cat!" every attempt must be about getting the cat down.
+   BAD: Refrain "Poke that sponge!" while the hero pushes, pulls, wobbles, and reaches. Mismatch — the refrain is a command to do a thing the hero never tries.
+   GOOD: Refrain "Catch that duck!" and on each page the hero tries a different CATCH — with hands, with a net, with a scoop.
+   BEFORE finalising your pitch, pick the refrain verb and confirm each attempt uses it.
+
+If any of the three tests fail, rewrite the pitch. A toddler story with a clever premise but a blurry problem is WORSE than a simple premise that a 2-year-old instantly follows.
+
 *** SUPPORTING CHARACTER RULE ***
 Your pitch SHOULD include a supporting character — but ONLY to make the hero's job HARDER, richer, or more interesting. Supporting characters are obstacles, complications, and texture. They are NOT co-stars and NEVER replacement-solvers.
 Pick ONE role for the supporting character (vary the role across pitches — do NOT default to "blocker" every time):
