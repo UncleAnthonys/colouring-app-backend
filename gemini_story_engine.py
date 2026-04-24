@@ -359,6 +359,34 @@ If story_text says PLURAL ("tables", "balloons", "statues"), scene_description m
 (3) THE MID-ACTION RULE — show the doing, not the done.
 Actions in story_text must be shown MID-PROGRESS in scene_description, never as aftermath. If the text says "Pete snips the kelp and ties it to a rock", describe Pete with sword CUTTING a kelp strand mid-slice, kelp-end falling, rope end in his other hand reaching toward the rock — NOT "Pete standing near a rock with kelp already tied." If the text says "Bubbles blows his biggest balloon yet", show the octopus with cheeks puffed mid-blow, balloon expanding, not a finished balloon just sitting there. The IMAGE shows the MOMENT of the action, not the result.
 
+(4) THE SPATIAL DIRECTION RULE — say where each character is, explicitly.
+When the story_text describes movement, pursuit, holding, or any action involving two or more characters, the scene_description MUST specify the directional relationship between them using explicit words: AHEAD / BEHIND / LEFT OF / RIGHT OF / ABOVE / BELOW / INSIDE / OUTSIDE / IN FRONT OF / FACING / BACK TO.
+Vague positioning ("the goat and the hero are in the field") leaves the image model free to compose the scene any way it likes — and it often gets direction BACKWARDS. If the story is "Firee chases the goat who has the blanket", the scene_description must say: "The goat runs AHEAD with the picnic blanket trailing from its mouth. Firee chases BEHIND the goat, arms reaching forward, body angled in pursuit." If you don't specify direction, the model may draw the goat behind Firee — which makes no sense.
+RULE: in any scene with two or more moving entities, name the spatial relationship explicitly. Use the directional vocabulary above. Read your scene_description back and ask: "Could the image model draw this with the characters' positions reversed and still match my words?" If yes, the scene_description is too vague. Rewrite with explicit direction.
+BAD: "Firee and the goat are running across the field with the blanket between them." (Who is ahead? Who is chasing whom? The model has to guess.)
+GOOD: "The goat runs AHEAD across the grass with the picnic blanket clamped in its teeth, the trailing edge of the blanket flapping behind. Firee follows BEHIND the goat at full sprint, body leaned forward, both hands reaching out toward the trailing blanket edge."
+
+(5) THE SINGULAR PLOT OBJECT RULE — exactly ONE of the plot object per page.
+The plot object exists in EXACTLY ONE PLACE per page. If your scene_description mentions the plot object more than once (e.g. "the blanket is on the ground" and "Firee tugs at the blanket"), the image model can interpret that as TWO blankets and draw both. This breaks the page completely — a child looking at two identical blankets gets confused about what is happening.
+RULE: when describing the plot object's role on a page, write ONE clear positional statement. If multiple characters are interacting with it, describe THAT ONE OBJECT with all relevant interactions in a single sentence. Use phrases like "the SAME picnic blanket" or "this single picnic blanket" if you must reference it twice.
+BAD: "The picnic blanket is spread on the grass with the squirrel and acorns sitting on top. Firee is tugging the picnic blanket while the goat bites the other end."
+   (Image model reads: blanket #1 on the ground with stuff on top, blanket #2 being tugged. Result: TWO blankets in the image.)
+GOOD: "ONE single picnic blanket lies stretched across the grass — the goat clamps the LEFT corner in its teeth pulling backward, Firee grips the RIGHT corner with both hands pulling forward, and a small squirrel sits on TOP OF THE SAME BLANKET in the middle, weighing it down with a heavy acorn."
+   (One blanket. One image. Three characters in clear spatial relationship to it.)
+TEST: count the words "the [plot object]" in your scene_description. If it appears more than twice, restructure. If it MUST appear twice, the second mention should explicitly say "this same" or "the same" to reinforce singularity.
+
+(6) THE CHARACTER INTRODUCTION RULE — no new characters drop in mid-story.
+Any character appearing in scene_description for page N MUST have been introduced either:
+  (a) in the pitch's supporting_character field (committing them to the story upfront), OR
+  (b) in the scene_description for an earlier page (so the child has already seen them).
+A character cannot appear out of thin air on page 3, drive the obstacle for pages 3-5, then vanish on page 6. To the child, this character has no history and no future — they are confusing noise.
+RULE: before adding a character to a middle-page scene_description, check: "Has this character appeared in any previous page's scene_description, or in the pitch?" If no, EITHER (a) add them to page 1 or 2 so they have an introduction, OR (b) cut them and let the obstacle come from physical objects/setting alone.
+BAD: pitch says "supporting character: cheeky goat". Page 2 scene shows goat with blanket. Page 3 scene SUDDENLY introduces "a busy squirrel hiding acorns under the blanket". Page 6 scene has no squirrel.
+   (The squirrel is unintroduced, drives the failure, then disappears. Confusing for the child.)
+GOOD: pitch says "supporting characters: cheeky goat AND busy squirrel". Page 2 shows goat with blanket AND squirrel watching from a tree. Page 3 squirrel actively meddles. Pages 4-6 squirrel continues to feature in the scene.
+   (Squirrel is committed in the pitch, introduced on page 1 or 2, present throughout.)
+ALTERNATE GOOD: cut the squirrel entirely. Let the goat be the SOLE obstacle. Pages 3-5 have the hero failing to wrestle the blanket from the goat directly — no acorns, no second character.
+
 SELF-CHECK — run this before finalising any scene_description:
   Step 1: Read the story_text for this page aloud.
   Step 2: List every physical noun (table, balloon, cave, octopus, cake, kelp, rock).
@@ -366,7 +394,10 @@ SELF-CHECK — run this before finalising any scene_description:
   Step 4: For each noun — is it in your scene_description with a physical description? If no, add it.
   Step 5: For each plural — did you commit to a specific count? If no, add a number.
   Step 6: For each action verb — is your character's pose MID-ACTION on that exact verb? If not, rewrite the pose.
-  Step 7: If even one noun, number, or mid-action is missing from the scene_description, REWRITE IT. Do not ship the page.
+  Step 7: If two or more characters are in the scene, did you specify spatial direction (AHEAD/BEHIND/LEFT/RIGHT/etc) between them? If no, add it.
+  Step 8: Does your plot object appear exactly once in the image (no duplicates)? Re-read your scene_description — if the plot object is mentioned multiple times, explicitly state "the SAME [object]" or restructure to one clear position.
+  Step 9: Has every character in your scene_description been introduced earlier (page 1, page 2, or in the pitch)? If a character is appearing fresh in a middle page, EITHER add them to an earlier page OR remove them.
+  Step 10: If even one noun, number, mid-action, direction, plot-object-count, or character-introduction is missing/violated, REWRITE IT. Do not ship the page.
 
 EXAMPLE (BAD) — story says: "The party tables float up, up, up on big balloons! Bubbles the Octopus giggles and blows another one."
 scene_description: "Pete stands on the coral reef looking worried, with a balloon floating above him. A small octopus nearby."
