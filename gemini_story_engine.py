@@ -119,34 +119,51 @@ RULES:
 **AGE CALIBRATION**
 - **TODDLER PULSE (under_3 ONLY):** Pure board book. MAXIMUM 15 WORDS PER PAGE.
     
-    THE BOARD BOOK RULE: Under_3 stories work like "We're Going on a Bear Hunt", "Dear Zoo", "That's Not My Teddy." The TITLE tells you the whole story. Page 1 shows the chaos. Every page after is action + refrain. No explaining WHY. The pictures do the explaining. The child SEES what's happening.
+    THE BOARD BOOK RULE: Under_3 stories work like "We're Going on a Bear Hunt", "Dear Zoo", "That's Not My Puppy." The TITLE tells you the whole story. Page 1 shows the chaos. Every page after is a skeleton-locked action. No explaining WHY. The pictures do the explaining. The child SEES what's happening.
     
-    THE REFRAIN IS THE MISSION: The refrain must BE the story's goal as a command or exclamation. It is what the child shouts on every page. It tells the character what to do.
-    GOOD REFRAINS: "Stop that robot!" / "Catch that ball!" / "Come back, duck!" / "Get down, cat!"
-    BAD REFRAINS: "Oh no, the robot!" (passive — observing, not commanding) / "Oh no, the star!" (what about the star? Do what?)
-    The refrain must be something a toddler would SHOUT at the page. An instruction, a command, a rallying cry.
+    THE SKELETON-LOCKED REFRAIN (CRITICAL — this is what makes it a REAL board book, not an AI-generated caption set):
+    Real board books do NOT tack a one-liner refrain onto the end of a caption. They use a SKELETON that wraps the whole page. The child's pleasure is predicting the skeleton and shouting along with the parent. You MUST lock a skeleton and use it on every middle page.
+    
+    TWO things MUST be locked across pages 2, 3, 4:
+      (1) THE REFRAIN LINE — 3-6 words, identical word-for-word on every middle page. "Get that key!" / "Catch that duck!" / "Come back, hat!" The refrain names the GOAL as a command a toddler would shout.
+      (2) THE SLOT ORDER — the same sentence shape in the same order on every middle page. E.g. "[HERO ACTION]. [WHY IT FAILED]. [REFRAIN]." — three slots, same three slots every page.
+    ONE thing MAY vary across pages:
+      (3) THE WORDS INSIDE THE SLOTS — new action, new failure-reason, new sound each page. The slots have different contents; the shape is the same.
+    
+    REFERENCE SKELETONS FROM REAL BOOKS:
+      Bear Hunt skeleton: "Uh-uh! [OBSTACLE]! [ADJECTIVE] [OBSTACLE]. We can't go over it. We can't go under it. We've got to go through it! [SOUND]! [SOUND]! [SOUND]!"
+      — every obstacle page uses this exact frame. Grass/river/mud/forest swap in as OBSTACLE.
+      That's Not My Puppy skeleton: "That's not my puppy. Its [BODY PART] is too [TEXTURE]."
+      — every page, same nine words around two variable slots.
+      Dear Zoo skeleton: "So they sent me a... [ANIMAL]! He was too [ADJECTIVE]. I sent him back."
+      — every page, same frame around ANIMAL and ADJECTIVE.
     
     STRUCTURE:
-    Page 1: Show the chaos in one breath. End with the refrain. "The robot is climbing the shelf! Stop that robot!"
-    Pages 2-4: ONE new attempt that fails + the SAME refrain (identical every time). Each attempt is DIFFERENT — new method, new place.
-    Page 5 TOOL REMINDER (under_3): The thing the hero uses to solve the problem on page 5 MUST be something you already showed or named on pages 1–4. The pitch has already named the tool — use THAT tool, not a new one. If the pitch said "she uses her net", page 5 uses the net. Do NOT invent a crayon, a tie, an idea, or a helper that was never mentioned. A 2-year-old reading page 5 should recognise the tool from earlier in the book. See the Tool Setup Rule above — it applies especially hard for under_3 because toddler patience for "wait, what?" is zero.
-    Page 5: The pattern RESOLVES — success through a TRANSFORMED refrain. The refrain must CHANGE to show the goal is DONE. "Stop that robot!" → "Stopped that robot!" / "Catch that ball!" → "Caught that ball!" / "Come back, duck!" → "Back again, duck!" DO NOT replace the refrain with a bare "Yay!" or "Hooray!" — those are empty. Transform the refrain itself. The whole point is the child has been shouting the refrain on every page and on page 5 they finally get to shout the RESOLVED version. That is the payoff.
-    The final page ends on the transformed refrain, not on a sound word. NEVER end the story with "Yay, [name]!" or a standalone sound — that is explicitly banned (see the sound-word rule above).
+    Page 1: Show the chaos in one breath. End with the refrain to establish it for the child. This page is NOT skeleton-locked — it sets up the story. (e.g. "The shop door is locked! The key is high, HIGH, HIGH! Oh no, Pete! Get that key!")
+    Pages 2, 3, 4: Each page follows the LOCKED SKELETON you chose. Same slot order, same refrain line. Only the slot contents change. Each page is a DIFFERENT attempt or a DIFFERENT location (see FIVE LOCATIONS TEST in the pitch rules — under_3 stories journey through 5 distinct places).
+    Page 5 TOOL REMINDER (under_3): The thing the hero uses to solve the problem on page 5 MUST be something you already showed or named on pages 1–4. The pitch has already named the tool — use THAT tool, not a new one. If the pitch said "she uses her net", page 5 uses the net. A 2-year-old reading page 5 should recognise the tool from earlier in the book.
+    Page 5: The pattern RESOLVES — success through a TRANSFORMED refrain. The refrain changes ONE word to show the goal is DONE. "Get that key!" → "Got that key!" / "Catch that duck!" → "Caught that duck!" / "Come back, hat!" → "Back again, hat!" DO NOT replace the refrain with "Yay!" or "Hooray!" — those are empty. Transform the refrain itself. Page 5 is NOT skeleton-locked — it delivers the payoff the child has been building to.
     
-    Sound words OPTIONAL — only when something physically makes a noise. Never force one.
+    SOUND WORD STYLE — ONE story-level choice, committed:
+    Before writing, decide whether this story is Bear-Hunt-style (each middle page ends with a triple-repeat sound word: "Swishy swashy! Swishy swashy! Swishy swashy!") OR Peace-at-Last-style (sounds used sparingly, 0-1 per page, never forced). Pick ONE and commit. Do not mix styles within a single story. If the pitch is a journey through distinct textures/surfaces, pick triple-repeat. If the pitch is a single-goal repeated attempt, pick sparing.
+    
+    NO ESCALATION AT UNDER_3: Under_3 uses VARIATION, not escalation. Each page is a DIFFERENT attempt at the SAME goal — not a BIGGER obstacle than the page before. (Escalation is age_3+. See test (f) in the pitch rules for full detail.)
+    
     Vocabulary: first-100-words only. Physical, concrete. No abstract feelings. No explanations.
     
-    EXAMPLE (GOOD) — notice the performance tools: single-word sentences, mini-repetition within the page, ellipsis for page-turn comedy, and a TRANSFORMED refrain on page 5:
-    Page 1: "Up, up, UP the shelf! The robot's climbing! Stop that robot!" (12 words — mini-repetition "up up up" makes it sing)
-    Page 2: "Lil grabs. She pulls. He wriggles free! Stop that robot!" (10 words — triplet "grabs / pulls / wriggles" builds a beat)
-    Page 3: "Up on a box. Wobble, wobble... SPLAT! Stop that robot!" (10 words — ellipsis creates suspense, sound is earned)
-    Page 4: "There's the key! Can Lil... reach? Stop that robot!" (9 words — question makes the parent's voice go up)
-    Page 5: "CLICK goes the key. Still. Quiet. Stopped that robot!" (9 words — single-word sentences for impact, refrain TRANSFORMS from "Stop" to "Stopped")
+    EXAMPLE (GOOD) — notice the LOCKED SKELETON across middle pages. Slot shape: "Pete tries [THING]. Too [REASON]. Get that key!" + sound triplet.
+    Page 1: "The shop door is locked! The key is high, HIGH, HIGH! Oh no, Pete! Get that key!" (chaos page — not skeleton-locked, establishes the refrain)
+    Page 2: "Pete tries his hands. Too short. Get that key! Jump! Jump! Jump!" (skeleton: hands/short/jump)
+    Page 3: "Pete tries the crate. Too wobbly. Get that key! Wobble! Wobble! Wobble!" (same skeleton: crate/wobbly/wobble)
+    Page 4: "Pete tries his sword. Still too short. Get that key! Swoosh! Swoosh! Swoosh!" (same skeleton: sword/short/swoosh)
+    Page 5: "Pete tries his belt. Whip it! Loop it! CLICK! Got that key!" (transformed refrain, resolution — skeleton is BROKEN here on purpose because the pattern RESOLVES)
+    Notice how pages 2, 3, 4 all have IDENTICAL shape. Only the tool, the failure-reason, and the sound change. The refrain appears in the SAME POSITION on every page. A toddler hears page 2, predicts the shape on page 3, shouts "Get that key!" along with the parent by page 4.
 
-    EXAMPLE (BAD):
-    Page 1: "The robot climbs high! Stop it before the tower falls!" (too explainy — "before the tower falls" is adult logic, not toddler)
-    Page 2: "Lil jumps up. She cannot reach. Oh no, the robot!" (refrain is passive — observing, not commanding the goal)
-    Page 5: "CLACK! Lil turns the key. The robot stops. Yay, Lil!" (ends on empty "Yay" — the refrain is abandoned, not transformed, and the page ends on a celebratory exclamation instead of the RESOLVED refrain the child has been shouting all along)
+    EXAMPLE (BAD — AI-written captions with tacked-on refrain):
+    Page 2: "Pete jumps. He hops. He cannot reach! Get that key!" (no skeleton — just a caption with refrain bolted on the end)
+    Page 3: "Up, up, UP goes the sword. Too short! Get that key!" (different shape — not the same skeleton as page 2)
+    Page 4: "Off comes the belt. Swing it, Pete! Get that key!" (different shape again — every middle page has a different sentence structure)
+    Problem: pages 2, 3, 4 each have a different sentence shape. The refrain appears at the end every time but the skeleton wrapping it is inconsistent, so the child cannot predict the rhythm. The pages read as three unrelated captions joined by a shared tagline. This is NOT a board book — it is AI-generated filler. REWRITE with a locked skeleton.
     
     WRITE LIKE — STUDY THESE THREE MECHANICS, DO NOT JUST NAME-CHECK THE BOOKS:
 
@@ -165,16 +182,30 @@ RULES:
     THE COMMON THREAD: Bone-simple grammar. ONE thing per page. The REFRAIN is the spine — it shows up identically on every page after page 1. Without the refrain you have a caption, not a story.
 
 - **TODDLER NARRATIVE (age_3 ONLY):** Bridge between board book and preschool. 15-25 words per page. 2-3 short sentences. Use expressive verbs ("hunts" not "looks", "tumbles" not "falls"). Sound words OPTIONAL and only when earned — see the sound word rule above. Most age_3 pages should have ZERO sound words. Join-in phrase every 2 pages that captures the mission. Attempts must escalate.
-    DEFAULT REFRAIN RULE (age_3 AND age_4 — applies to ALL writing styles unless overridden by a more specific style rule):
-    Every story MUST have a refrain — a short repeated line that appears on at least 3 of the 5 pages, identically. Not a "Quick, X, quick!" tagged onto the end of a caption — that is NOT a refrain, that is a panic word. A refrain is a line the CHILD shouts along with, that names the goal or the obstacle.
-    The refrain must:
-      (a) Appear on pages 2, 3, and 4 in IDENTICAL form (not similar — identical).
-      (b) Resolve or transform on page 5 ("Hold on, ladybird, hold on!" → "I've got you, ladybird, I've got you!").
-      (c) Be self-contained — a 3-year-old must understand it without the surrounding sentences.
-      (d) Be the GOAL or the SHARED EXPERIENCE, never just an exclamation. "Stop that balloon!" YES. "Oh no!" NO. "Quick, Pete, quick!" NO (it doesn't name what to do).
-    EXAMPLE GOOD REFRAINS (age_3): "Catch that puppy!" / "Hold on, ladybird, hold on!" / "Round and round we go!" / "Don't drop the egg!"
+    SKELETON-LOCKED REFRAIN RULE (age_3 ONLY — applies to ALL default stories. If the user has selected Repetition writing style, that style's rules replace this.):
+    Age_3 stories work like Bear Hunt, Peace at Last, Owl Babies — they are PERFORMANCES with a locked skeleton, not captions with a tacked-on tagline. The child's pleasure is predicting the shape and shouting along.
+    
+    TWO things MUST be locked across pages 2, 3, 4:
+      (1) THE REFRAIN LINE — 3-8 words, identical word-for-word on pages 2, 3, and 4. "Catch that puppy!" / "Hold on, ladybird, hold on!" / "We've got to go through it!" / "Don't drop the egg!"
+      (2) THE SENTENCE-SHAPE WRAPPING THE REFRAIN — pick one shape and hold it. Age_3 has 15-25 words per page, so the skeleton is a 3-4 slot frame: e.g. "[OBSTACLE-SETUP]. [HERO ATTEMPT]. [WHY IT FAILED]. [REFRAIN]." — same four slots every middle page.
+    ONE thing MAY vary across pages:
+      (3) THE WORDS INSIDE THE SLOTS — new obstacle, new attempt, new sound each page.
+    
+    Bear Hunt is the purest age_3 skeleton model: "Uh-uh! [OBSTACLE]! [ADJECTIVE] [OBSTACLE]. We can't go over it. We can't go under it. We've got to go through it! [SOUND]! [SOUND]! [SOUND]!" — same frame every page, different obstacle. Study it.
+    
+    Page 1 is NOT skeleton-locked — it sets up the chaos and introduces the refrain.
+    Page 5 is NOT skeleton-locked — it delivers the payoff with a TRANSFORMED refrain ("Catch that puppy!" → "Caught that puppy!").
+    Pages 2, 3, 4 MUST use the locked skeleton. Same shape. Same refrain. Different slot contents.
+    
+    EXAMPLE GOOD REFRAINS (age_3): "Catch that puppy!" / "Hold on, ladybird, hold on!" / "Round and round we go!" / "Don't drop the egg!" / "We've got to go through it!"
     EXAMPLE BAD REFRAINS: "Quick, Pete, quick!" (vague — quick to do what?) / "Oh no!" (no information) / "What a day!" (not a goal) / a refrain that only makes sense on one page.
-    SELF-CHECK BEFORE FINISHING: Read pages 2, 3, 4 aloud. Is the SAME line in all three? If no, rewrite. If your refrain is "Quick, [name], quick!" — that fails. Replace it with the actual goal.
+    
+    SELF-CHECK BEFORE FINISHING:
+      1. Read pages 2, 3, 4 aloud. Is the SAME REFRAIN LINE in all three, word-for-word? If no, rewrite.
+      2. Read pages 2, 3, 4 aloud. Do they have the SAME SENTENCE SHAPE, with only the slot contents varying? If no, you have written three unrelated captions and you must rewrite to match a single skeleton.
+      3. Does page 5 TRANSFORM the refrain (e.g. "Catch" → "Caught")? If not, rewrite page 5.
+    
+    NO ESCALATION IS REQUIRED, BUT PERMITTED: Unlike under_3, age_3 MAY escalate across the middle pages (Bear Hunt obstacles get progressively scarier — grass, then river, then mud, then forest, then a snowstorm). If the pitch supports escalation, use it. If it doesn't, pure variation is fine. Either way, the SKELETON stays locked.
     PAGE 1 MUST ANSWER THREE QUESTIONS A 3-YEAR-OLD CAN UNDERSTAND:
     1. What is wrong? (something physical and visible — not abstract)
     2. What must the character do to fix it? (a simple physical action)
@@ -202,6 +233,14 @@ RULES:
     THE COMMON THREAD: A 3-year-old story is NOT three short declarative sentences in a row. It is a PERFORMANCE — repetition WITHIN the page (round and round, hold on hold on), a refrain that returns every page, sound words that come from the action, and a parent's voice that has SOMEWHERE TO GO. If your page reads like an event report ("X happens. Then Y happens. Then Z happens.") you have written a caption, NOT a story. Rewrite it.
 
 - **PRESCHOOL PERFORMANCE (age_4):** 3-5 sentences per page. This is a one-person show for the parent.
+    NO FORCED REFRAIN AT AGE_4: Age_4 stories are NOT board books. A Bear-Hunt-style cross-page refrain ("Catch that puppy!" on every page) makes age_4 writing sound babyish. Age_4 earns its rhythm differently — through rhyme, through triplet-stacking, through dialogue, and through repetition WITHIN a single page. If the user has specifically selected the Repetition writing style, that opt-in style adds a refrain — but by default, age_4 has NO cross-page refrain. Do NOT tack "Catch that X!" onto the end of every page.
+    WHAT AGE_4 RHYTHM ACTUALLY LOOKS LIKE:
+      - Internal rhyme (Room on the Broom): "The wind it BLEW and the balloon it SHOOK, round and round with a wibble and a wook."
+      - Triplet-stacking with a shared adjective (Gruffalo): "He has terrible tusks, and terrible claws, and terrible teeth in his terrible jaws."
+      - Within-page repetition: "Rub-a-dub-DUB! Rub-a-dub-DUB! 'Slippy enough yet?' Rub-a-dub-DUB!" (repetition belongs INSIDE one page, not across pages)
+      - Dialogue with attitude (Tiger Who Came to Tea): a funny voice the parent performs, dropped mid-action.
+      - Sentence-shape rhythm: short-short-LONG, or three beats before a punchline.
+    Each of those is a tool. Use at least two per page. Do NOT substitute them with a tacked-on refrain — that is a lazier, younger device.
     PAGE 1 STORY LOGIC (age_4): The same three questions apply but with more detail. The child must understand: what's the problem, what's the plan, and WHY the plan will work. Every page after must visibly work toward that plan.
     GOOD: "The oven won't stop! Bread is growing and growing and pushing out the door! Kiki must pull the plug out before the bread fills the whole kitchen. But the plug is behind the oven — and the bread is in the way!"
     BAD: "The meatballs are flying! If they hit the big button the rocket will zoom away!" (What button? What rocket? Why is there a rocket in a kitchen? The child is confused before the story even starts.)
@@ -772,7 +811,20 @@ Plus ONE more test — the one toddlers forgive the least:
      - "Dolly's big wavy bed has been with her on every page. On page 5 she rubs it against the pole and makes the pole slippy." (Character feature, visible throughout, named before it matters.)
    WRITE THE TOOL INTO THE PITCH. If the pitch doesn't say how page 5 resolves, the story engine will invent something from nowhere. The pitch is where the tool decision is made.
 
-If ANY of tests (a) through (g) fail, rewrite the pitch. Under_3 toddlers forgive a lot — boring premises, simple words, tiny plots — but they do NOT forgive "wait, where did that come from?" on the final page.
+Plus ONE more test — the one that prevents visually repetitive or teleporting stories:
+
+(h) FIVE LOCATIONS TEST (under_3 and age_3 ONLY): Your pitch MUST name 5 distinct places the hero journeys through, one per page.
+   Board books at these ages are a JOURNEY, not a siege. Bear Hunt goes grass → river → mud → forest → snowstorm → cave. Peace at Last goes bedroom → kitchen → living room → garden → car → bedroom. Each page is a NEW place with its own texture, its own sound, its own visual for the child to colour.
+   A pitch that names only one location ("at the shop door") produces two bad outcomes: either the 5 pages all look identical visually, or the story writer teleports the hero somewhere unexplained to create scene variety. Both kill the story. NAME THE JOURNEY IN THE PITCH.
+   FORMAT: Your pitch must list the 5 locations explicitly and in order.
+   VALID: "Pete chases his runaway pirate hat from (1) the shop doorway, to (2) the busy market street, to (3) the dock at the harbour, to (4) the sandy beach, to (5) the palm trees at the island's edge — where he finally catches it!"
+   VALID: "Dolly's duck has been washed down the drain — follow her journey to get it back through (1) the pipes under the bath, to (2) the garden pond, to (3) the stream, to (4) the river, to (5) the sea where the duck is about to float away."
+   INVALID: "Pete chases his runaway pirate hat at the market — he has to catch it before it's gone." (One location. The writer will either produce 5 near-identical market pages or invent unexplained new settings mid-story.)
+   INVALID: "Dolly has to get her duck back from the drain." (No journey named. Story will either stay static at the drain or teleport.)
+   Each of the 5 locations must be a place a toddler can draw from a single word — pond, dock, beach, kitchen, garden, shop, tree. Keep them SIMPLE (see the Grounded Setting Rule) but DISTINCT from each other.
+   NOTE: This test applies to under_3 and age_3 pitches only. Age_4+ stories can be more location-flexible (one complex setting is fine); under_3 and age_3 need the journey structure because prose is sparse and the child relies on the visual variety.
+
+If ANY of tests (a) through (h) fail, rewrite the pitch. Under_3 toddlers forgive a lot — boring premises, simple words, tiny plots — but they do NOT forgive "wait, where did that come from?" on the final page.
 
 *** SUPPORTING CHARACTER RULE ***
 Your pitch SHOULD include a supporting character — but ONLY to make the hero's job HARDER, richer, or more interesting. Supporting characters are obstacles, complications, and texture. They are NOT co-stars and NEVER replacement-solvers.
