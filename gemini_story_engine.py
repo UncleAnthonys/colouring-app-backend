@@ -124,6 +124,15 @@ RULES:
     THE SKELETON-LOCKED REFRAIN (CRITICAL — this is what makes it a REAL board book, not an AI-generated caption set):
     Real board books do NOT tack a one-liner refrain onto the end of a caption. They use a SKELETON that wraps the whole page. The child's pleasure is predicting the skeleton and shouting along with the parent. You MUST lock a skeleton and use it on every middle page.
     
+    REFRAIN COHERENCE SELF-CHECK (run this BEFORE locking your refrain into the skeleton):
+    Read your draft refrain out loud. Now read the pitch's `theme_blurb` or `want` out loud. Do they match?
+    - The refrain's VERB must describe what the hero is actually DOING to the plot object across the story.
+    - The refrain's OBJECT must be the plot object (the thing the story is about).
+    If the story is "Anna races a prize carrot to the judging table before a hungry goat eats it" and your draft refrain is "Pull that carrot!" — MISMATCH. The story is about saving/racing/escaping with the carrot, not pulling the carrot out of something. The child will be confused reading "Pull that carrot!" while watching Anna run from a goat.
+    REWRITE the refrain to match what is actually happening in the story. Good rewrites for the Anna case: "Save that carrot!", "Run, Anna, run!", "Keep it safe!", "Don't let the goat!"
+    If you cannot write a refrain verb that honestly describes what the hero does on every middle page, the STORY is wrong, not the refrain — rewrite the story premise so the verb matches. Do NOT force a wrong refrain through the skeleton; the skeleton will amplify the wrongness and the whole book becomes nonsense.
+    
+
     TWO things MUST be locked across pages 2, 3, 4:
       (1) THE REFRAIN LINE — 3-6 words, identical word-for-word on every middle page. "Get that key!" / "Catch that duck!" / "Come back, hat!" The refrain names the GOAL as a command a toddler would shout.
       (2) THE SLOT ORDER — the same sentence shape in the same order on every middle page. E.g. "[HERO ACTION]. [WHY IT FAILED]. [REFRAIN]." — three slots, same three slots every page.
@@ -185,6 +194,15 @@ RULES:
     SKELETON-LOCKED REFRAIN RULE (age_3 ONLY — applies to ALL default stories. If the user has selected Repetition writing style, that style's rules replace this.):
     Age_3 stories work like Bear Hunt, Peace at Last, Owl Babies — they are PERFORMANCES with a locked skeleton, not captions with a tacked-on tagline. The child's pleasure is predicting the shape and shouting along.
     
+    REFRAIN COHERENCE SELF-CHECK (run this BEFORE locking your refrain into the skeleton):
+    Read your draft refrain out loud. Now read the pitch's `theme_blurb` or `want` out loud. Do they match?
+    - The refrain's VERB must describe what the hero is actually DOING to the plot object across the story.
+    - The refrain's OBJECT must be the plot object (the thing the story is about).
+    If the story is "Anna races a prize carrot to the judging table before a hungry goat eats it" and your draft refrain is "Pull that carrot!" — MISMATCH. The story is about saving/racing/escaping with the carrot, not pulling the carrot out of something. The child will be confused reading "Pull that carrot!" while watching Anna run from a goat.
+    REWRITE the refrain to match what is actually happening in the story. Good rewrites for the Anna case: "Save that carrot!", "Run, Anna, run!", "Keep it safe!", "Don't let the goat!"
+    If you cannot write a refrain verb that honestly describes what the hero does on every middle page, the STORY is wrong, not the refrain — rewrite the story premise so the verb matches. Do NOT force a wrong refrain through the skeleton; the skeleton will amplify the wrongness and the whole book becomes nonsense.
+    
+
     TWO things MUST be locked across pages 2, 3, 4:
       (1) THE REFRAIN LINE — 3-8 words, identical word-for-word on pages 2, 3, and 4. "Catch that puppy!" / "Hold on, ladybird, hold on!" / "We've got to go through it!" / "Don't drop the egg!"
       (2) THE SENTENCE-SHAPE WRAPPING THE REFRAIN — pick one shape and hold it. Age_3 has 15-25 words per page, so the skeleton is a 3-4 slot frame: e.g. "[OBSTACLE-SETUP]. [HERO ATTEMPT]. [WHY IT FAILED]. [REFRAIN]." — same four slots every middle page.
@@ -775,12 +793,16 @@ For under_3 pitches, the Mission Test is not enough. A pitch can be goal-shaped 
    BAD: "Al must get the giant sponges out of the bath." (Sponges = plural, which one on each page? Toddler gets lost.)
    GOOD: "Dolly must get her yellow duck back from the drain." (One duck. Same duck every page. Toddler points and says "duck!")
 
-(c) REFRAIN VERB TEST: What verb will the child shout on every page? Does it match what the hero actually DOES on pages 2, 3, 4?
-   The refrain verb must be a single toddler-physical action: catch, stop, get, pull, push, find, reach, grab.
-   Then CHECK: across pages 2, 3, 4, is the hero performing that verb? If the refrain is "Catch that duck!" every attempt must be a catch. If the refrain is "Get down, cat!" every attempt must be about getting the cat down.
-   BAD: Refrain "Poke that sponge!" while the hero pushes, pulls, wobbles, and reaches. Mismatch — the refrain is a command to do a thing the hero never tries.
-   GOOD: Refrain "Catch that duck!" and on each page the hero tries a different CATCH — with hands, with a net, with a scoop.
-   BEFORE finalising your pitch, pick the refrain verb and confirm each attempt uses it.
+(c) REFRAIN VERB TEST: What verb will the child shout on every page? Does it match what the hero actually DOES to the plot object on pages 2, 3, 4?
+   The refrain verb must be a single toddler-physical action: catch, stop, get, pull, push, find, reach, grab, save, hide, fix.
+   Then CHECK — and this is the critical test: across pages 2, 3, 4, is the hero performing that verb ON THE PLOT OBJECT? The verb must act on the OBJECT named in the refrain, not on the hero's own body or her own movement through the scene.
+   If the refrain is "Catch that duck!" the hero must be catching the duck (or trying to) on every attempt — not chasing, not running after, not searching. CATCHING.
+   If the refrain is "Get down, cat!" every attempt must be about getting the cat down — coaxing, reaching, pulling, knocking. Not just the hero climbing up toward the cat.
+   BAD: Refrain "Poke that sponge!" while the hero pushes, pulls, wobbles, and reaches. Mismatch — the verb "poke" describes an action the hero never takes on the sponge.
+   BAD: Refrain "Pull that carrot!" while the hero carries the carrot and pulls HERSELF through corn, heaves HERSELF over a gate, tugs HERSELF under a tractor. The verb describes the hero's own movement, not any action on the carrot. The pitch chose a verb that doesn't match the actual story — the story is "escape the goat WITH the carrot" (running, dodging, hiding) not "pull the carrot out of something" (tugging a stuck vegetable). REWRITE: either change the refrain to match the actual story ("Save that carrot!", "Run, [name], run!", "Don't let the goat!") or change the story to actually be about pulling the carrot.
+   GOOD: Refrain "Catch that duck!" and on each page the hero tries a different CATCH on the duck — with hands, with a net, with a scoop.
+   GOOD: Refrain "Save that carrot!" and on each page the hero does something to SAVE the carrot — hiding it, lifting it, blocking the goat, running with it.
+   BEFORE finalising your pitch, pick the refrain verb and confirm: (1) it is a single physical action, (2) the plot object is the TARGET of that action, and (3) every middle-page attempt has the hero doing that action ON the plot object.
 
 Plus TWO more tests for under_3 pitches:
 
