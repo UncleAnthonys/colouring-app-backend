@@ -153,7 +153,7 @@ RULES:
     
     STRUCTURE:
     Page 1: Show the chaos in one breath. End with the refrain to establish it for the child. This page is NOT skeleton-locked — it sets up the story. (e.g. "The shop door is locked! The key is high, HIGH, HIGH! Oh no, Pete! Get that key!")
-    Pages 2, 3, 4: Each page follows the LOCKED SKELETON you chose. Same slot order, same refrain line. Only the slot contents change. Each page is a DIFFERENT attempt or a DIFFERENT location (see FIVE LOCATIONS TEST in the pitch rules — under_3 stories journey through 5 distinct places).
+    Pages 2, 3, 4: Each page follows the LOCKED SKELETON you chose. Same slot order, same refrain line. Only the slot contents change. Each page is a DIFFERENT attempt OR a DIFFERENT sub-spot within the setting (see FIVE ENGAGED SUB-SPOTS TEST in the pitch rules — Pattern A journeys through 5 distinct places, Pattern B uses 5 sub-spots within one grounded setting).
     Page 5 TOOL REMINDER (under_3): The thing the hero uses to solve the problem on page 5 MUST be something you already showed or named on pages 1–4. The pitch has already named the tool — use THAT tool, not a new one. If the pitch said "she uses her net", page 5 uses the net. A 2-year-old reading page 5 should recognise the tool from earlier in the book.
     Page 5: The pattern RESOLVES — success through a TRANSFORMED refrain. The refrain changes ONE word to show the goal is DONE. "Get that key!" → "Got that key!" / "Catch that duck!" → "Caught that duck!" / "Come back, hat!" → "Back again, hat!" DO NOT replace the refrain with "Yay!" or "Hooray!" — those are empty. Transform the refrain itself. Page 5 is NOT skeleton-locked — it delivers the payoff the child has been building to.
     
@@ -387,6 +387,13 @@ GOOD: pitch says "supporting characters: cheeky goat AND busy squirrel". Page 2 
    (Squirrel is committed in the pitch, introduced on page 1 or 2, present throughout.)
 ALTERNATE GOOD: cut the squirrel entirely. Let the goat be the SOLE obstacle. Pages 3-5 have the hero failing to wrestle the blanket from the goat directly — no acorns, no second character.
 
+(HIDDEN-OBJECT RULE — added to match story-text fidelity):
+If story_text says the plot object is HIDDEN, STUCK, BURIED, INVISIBLE, DEEP INSIDE, or OUT OF SIGHT, the scene_description MUST explicitly state the plot object is NOT visible. Image models default to drawing objects CLEARLY VISIBLE — so you must override that default with explicit "NOT visible" language.
+RULE: if the story says hidden, the image must show the hidden-ness, not the object. Use language like: "The ball is NOT visible — only the outside of the boot is shown, with Molly's hand reaching in." Or "The key has disappeared down the drain — the drain is black and empty, the key cannot be seen."
+BAD: story says "the ball slides deeper into the toe". scene_description: "Molly reaches into the boot, the ball visible near the top." — image shows the ball clearly; story is broken.
+GOOD: story says "the ball slides deeper into the toe". scene_description: "Molly has one arm plunged INTO the boot up to her elbow, fingers stretched wide, face determined. The boot's opening shows only darkness inside — the ball is NOT visible because it has slid too far down the toe."
+TEST: read the story_text. Does it claim the plot object is hidden/stuck/buried? If yes, check your scene_description — have you explicitly said the object is NOT visible? If no, REWRITE.
+
 SELF-CHECK — run this before finalising any scene_description:
   Step 1: Read the story_text for this page aloud.
   Step 2: List every physical noun (table, balloon, cave, octopus, cake, kelp, rock).
@@ -428,14 +435,24 @@ This is a colouring book. If every page shows the same location from the same an
 - Page 4 (The High-Energy Shot): Low-angle or high-angle shot. Use action lines to show the TWIST happening (e.g., things flying, a big splash).
 - Page 5 (The Wide Resolution): Wide shot again, but different from Page 1. Show the CHARACTER happy and safe, surrounded by the results of their success.
 
-**LOCATION MOVEMENT RULE (NON-NEGOTIABLE):**
-The story MUST move through at least 3 visually distinct locations. No more than 2 episodes in the same place. A child is colouring 5 separate pages — each page must feel like a NEW picture with different surroundings, different objects, and different things to colour. If your story stays in one room, one shop, or one field for more than 2 pages, REWRITE IT so the character moves somewhere new. The story's plot should naturally take the character to different places.
+**VISUAL VARIETY RULE (NON-NEGOTIABLE):**
+A child is colouring 5 separate pages — each page must feel like a NEW picture with different things to colour. HOWEVER, visual variety can come from TWO valid patterns (both are fine, do not mix them within one story):
+
+PATTERN A — JOURNEY: story moves through 3-5 visually distinct locations (bear-hunt style: grass -> river -> mud -> forest -> cave). Each location is a fresh setting.
+
+PATTERN B — SUB-SPOTS IN ONE SETTING: story takes place in ONE grounded setting (a kitchen, a beach, a shop, a garden) and visual variety comes from DIFFERENT SUB-SPOTS within that setting — different corners, objects, angles, textures. A single garden can contain: the vegetable patch, the swing, the compost heap, the greenhouse, the pond. Each sub-spot gives a completely different picture to colour, but the story stays grounded in ONE recognisable place.
+
+CRITICAL FOR PATTERN B: the setting MUST stay consistent across ALL pages. If the story starts in a garden, every page is in a garden — not in the garden for pages 1-3 then a surprise indoor room for page 5. Setting teleportation between pages confuses the child and breaks continuity.
+
+CHOOSE ONE PATTERN per story and commit. If your pitch names a single location (a bathroom, a shop, a classroom), use Pattern B with sub-spots. If your pitch describes a journey (the character travelling somewhere), use Pattern A with distinct biomes.
+
+FORBIDDEN: starting in one setting and teleporting to an unrelated setting mid-story. If the character is in a garden on pages 1-4, they must NOT be in a bedroom on page 5 with no explanation. The setting must flow logically across all pages.
 
 **VISUAL DIVERSITY INSTRUCTIONS:**
 1. Never repeat a pose: If the character is standing on Page 1, they should be sitting, jumping, or reaching on Page 2.
 2. Foreground/Background Swap: If the character is in the center on Page 1, place them to the side on Page 2 to leave room for a big new coloring element.
 3. The "New Thing" Rule: Every page must introduce ONE new, large object to color that was not there before (e.g., a giant clock, a pile of cushions, a magic lantern).
-4. Move through at least 3 visually distinct settings. No more than 2 episodes in the same location.
+4. Visual variety comes from EITHER distinct locations (Pattern A) OR distinct sub-spots within one grounded setting (Pattern B) — see the VISUAL VARIETY RULE above. One grounded setting with 5 distinct sub-spots is AS valid as journeying through 5 locations.
 
 **STYLE & LESSON**
 If a WRITING_STYLE or LIFE_LESSON is provided, weave it in like a thread, not a hammer. It should feel like a natural part of the character's journey.
@@ -975,6 +992,15 @@ If ANY of tests (a) through (h) fail, rewrite the pitch. Under_3 toddlers forgiv
      - "The wedding flower-girl's basket of petals has tipped down the chapel steps and the bride is about to walk down them." (Specific named event + vivid physical chaos + time pressure.)
    THE TEST: would a parent reading this pitch in the app smile and tap it because they think "that's CLEVER" — or would they scroll past because it sounds like every other story? If they'd scroll past, REJECT and rewrite. The premise is the most important thing. Stakes, structure, refrains — none of those matter if the premise is dead.
    COMMIT to either a SETTING with weird/imaginative chaos baked in, OR a SITUATION the child has never read before. No mundane premises. No "thing in a place." Always ask: WHAT MAKES THIS DIFFERENT FROM EVERY OTHER STORY THE APP COULD MAKE?
+
+FORBIDDEN PREMISE STRUCTURES — image models cannot draw these convincingly:
+- "Thing STUCK INSIDE container" (ball in boot, key in drawer, toy in bag, coin in piggybank) — image models default to drawing things visible. "Hidden inside" cannot be rendered well. A child sees the ball clearly and wonders why the character doesn't just pick it up.
+- "Thing HIDDEN behind/under X" — same reason. Image models draw things clearly.
+- "Thing AT THE BOTTOM of a deep X" (bottom of well, bottom of drain, bottom of pond) — depth cannot be rendered convincingly in 2D line art.
+- "Thing INVISIBLE because of Y" (too dark to see, buried in sand, covered in mud) — image models cannot draw absence.
+RULE: if your plot object needs to be HIDDEN or INVISIBLE for the premise to work, REJECT the premise. Pick a premise where the plot object is VISIBLY IN TROUBLE — floating, falling, flying, escaping, being chased, being carried off by something, being grown around, being squeezed, being covered by something but still partly visible. The image must be able to SHOW the problem clearly, or the story is broken from page 1.
+BAD: "Molly's puppy's squeaky ball is stuck inside a big boot." — the ball being inside CANNOT be drawn. Every page will show the ball visibly, contradicting the text. REJECT.
+GOOD: "Molly's puppy's squeaky ball has rolled into a river and is floating away fast." — the ball is VISIBLY in danger. Every page can show the ball clearly, floating down the river, with obstacles around. The image and story always match.
 
 *** SUPPORTING CHARACTER RULE ***
 Your pitch SHOULD include a supporting character — but ONLY to make the hero's job HARDER, richer, or more interesting. Supporting characters are obstacles, complications, and texture. They are NOT co-stars and NEVER replacement-solvers.
@@ -1701,7 +1727,7 @@ The WANT must be something a 4-year-old experiences: wanting a toy, wanting to w
 
 We are a COLOURING PAGE business. A child colours each page. If multiple pages show the same location from the same angle with the same objects, the child is colouring the same picture repeatedly. That is a bad experience.
 
-RULE: No more than 2 out of 5 episodes should share the same location. The story should move through at least 2-3 visually distinct settings.
+RULE: Visual variety is essential — but it can be delivered as Pattern A (journey through 3+ distinct locations) OR Pattern B (one grounded setting with 5 distinct sub-spots). See the VISUAL VARIETY RULE in the scene_description section. Do NOT teleport between unrelated settings — commit to one pattern per story.
 CRITICAL LOCATION LOGIC: Every time the character moves to a new location, there must be a clear reason stated in the story text. The character cannot simply "appear" somewhere new. If episode 1 is in the garden, episode 2 must explain WHY they moved inside. Location changes must follow cause and effect — never jump locations without a narrative bridge.
 - Design the WANT/OBSTACLE/TWIST so the plot naturally takes characters to different places
 - If a story must stay in one broad area, make sure each episode shows a distinctly different PART of that area with different objects and surroundings
