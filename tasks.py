@@ -157,70 +157,8 @@ def generate_full_story_task(self, job_id: str, params: dict):
         
         print(f"[WORKER] Story generated: {full_title}, {len(episodes)} episodes")
         
-        # === STEP 2: Generate front cover ===
-        update_job_status(job_id, "processing", progress="Creating your front cover...")
-        
-        cover_description = theme_description or theme_blurb or custom_theme or theme_name or ""
-        
-        cover_scene = f"""Create a CHILDREN'S COLORING BOOK FRONT COVER.
-
-This is a FULL PAGE book cover that must include:
-
-DO NOT include ANY text, words, letters, or writing in the image. NO TITLE. NO TEXT AT ALL. Text will be added separately by code.
-
-IMAGE:
-- {character_name} large and central, looking excited and confident
-- Background hints at the adventure: {cover_description}
-- Dynamic, eye-catching composition
-- BLACK AND WHITE LINE ART suitable for coloring in
-- Portrait orientation, fills the entire page
-
-⚠️ NO BORDER - CRITICAL:
-- There must be NO border, NO frame, NO outline, NO decorative edge around the image
-- NO thin black line around the edge
-- NO thick black line around the edge
-- The artwork fades into white at the edges - no hard line boundary
-
-⚠️ COMPOSITION:
-- Character's HEAD must be in the MIDDLE of the image, NOT near the top
-- TOP 30% must be completely empty — just plain white or simple sky. NOTHING ELSE
-- All characters and objects in the LOWER 65% of the image
-
-Make it look like a real children's coloring book cover you'd see in a shop!
-"""
-        
-        cover_image_b64 = run_async(generate_adventure_episode_gemini(
-            character_data={"name": character_name, "description": character_description, "key_feature": character_key_feature},
-            scene_prompt=cover_scene,
-            age_rules=age_rules["rules"],
-            reveal_image_b64=reveal_image_b64,
-            story_text=cover_description,
-            character_emotion="excited",
-            source_type=source_type,
-            second_character_image_b64=second_character_image_b64,
-            second_character_name=second_character_name,
-            second_character_description=second_character_description,
-        ))
-        
-        cover_with_text_b64 = create_front_cover(cover_image_b64, full_title, character_name)
-        cover_url = upload_to_firebase(cover_with_text_b64, folder="adventure/storybooks")
-        
-        # Generate region map for cover page
-        cover_mask_url = ""
-        try:
-            import base64
-            from region_map import generate_region_map
-            cover_bytes_for_mask = base64.b64decode(cover_with_text_b64)
-            cover_region_bytes, cover_num_regions = generate_region_map(cover_bytes_for_mask)
-            cover_mask_b64 = base64.b64encode(cover_region_bytes).decode("utf-8")
-            cover_mask_url = upload_to_firebase(cover_mask_b64, folder="masks/storybooks")
-            print(f"[WORKER] ✅ Cover region map ({cover_num_regions} regions)")
-        except Exception as e:
-            print(f"[WORKER] ⚠️ Cover region map failed (non-fatal): {e}")
-        
-        pages = [{"page_num": 0, "page_type": "cover", "title": full_title, "page_url": cover_url, "raw_image_url": cover_url, "mask_url": cover_mask_url, "story_text": ""}]
-        
-        # === STEP 3: Generate episode pages ===
+        # === STEP 2: Generate episode pages ===
+        pages = []
         previous_page_b64 = None
         
         for i, episode in enumerate(episodes):
@@ -292,6 +230,70 @@ Make it look like a real children's coloring book cover you'd see in a shop!
                 "mask_url": mask_url,
                 "story_text": story_text
             })
+        
+        # === STEP 3: Generate front cover (last, so it references the final episode page for visual consistency) ===
+        update_job_status(job_id, "processing", progress="Creating your front cover...")
+        
+        cover_description = theme_description or theme_blurb or custom_theme or theme_name or ""
+        
+        cover_scene = f"""Create a CHILDREN'S COLORING BOOK FRONT COVER.
+
+This is a FULL PAGE book cover that must include:
+
+DO NOT include ANY text, words, letters, or writing in the image. NO TITLE. NO TEXT AT ALL. Text will be added separately by code.
+
+IMAGE:
+- {character_name} large and central, looking excited and confident
+- Background hints at the adventure: {cover_description}
+- Dynamic, eye-catching composition
+- BLACK AND WHITE LINE ART suitable for coloring in
+- Portrait orientation, fills the entire page
+
+⚠️ NO BORDER - CRITICAL:
+- There must be NO border, NO frame, NO outline, NO decorative edge around the image
+- NO thin black line around the edge
+- NO thick black line around the edge
+- The artwork fades into white at the edges - no hard line boundary
+
+⚠️ COMPOSITION:
+- Character's HEAD must be in the MIDDLE of the image, NOT near the top
+- TOP 30% must be completely empty — just plain white or simple sky. NOTHING ELSE
+- All characters and objects in the LOWER 65% of the image
+
+Make it look like a real children's coloring book cover you'd see in a shop!
+"""
+        
+        cover_image_b64 = run_async(generate_adventure_episode_gemini(
+            character_data={"name": character_name, "description": character_description, "key_feature": character_key_feature},
+            scene_prompt=cover_scene,
+            age_rules=age_rules["rules"],
+            reveal_image_b64=reveal_image_b64,
+            story_text=cover_description,
+            character_emotion="excited",
+            source_type=source_type,
+            previous_page_b64=previous_page_b64,
+            second_character_image_b64=second_character_image_b64,
+            second_character_name=second_character_name,
+            second_character_description=second_character_description,
+        ))
+        
+        cover_with_text_b64 = create_front_cover(cover_image_b64, full_title, character_name)
+        cover_url = upload_to_firebase(cover_with_text_b64, folder="adventure/storybooks")
+        
+        # Generate region map for cover page
+        cover_mask_url = ""
+        try:
+            import base64
+            from region_map import generate_region_map
+            cover_bytes_for_mask = base64.b64decode(cover_with_text_b64)
+            cover_region_bytes, cover_num_regions = generate_region_map(cover_bytes_for_mask)
+            cover_mask_b64 = base64.b64encode(cover_region_bytes).decode("utf-8")
+            cover_mask_url = upload_to_firebase(cover_mask_b64, folder="masks/storybooks")
+            print(f"[WORKER] ✅ Cover region map ({cover_num_regions} regions)")
+        except Exception as e:
+            print(f"[WORKER] ⚠️ Cover region map failed (non-fatal): {e}")
+        
+        pages.insert(0, {"page_num": 0, "page_type": "cover", "title": full_title, "page_url": cover_url, "raw_image_url": cover_url, "mask_url": cover_mask_url, "story_text": ""})
         
         # === STEP 4: Save to Firestore, then complete ===
         storybook_ref_id = ""
