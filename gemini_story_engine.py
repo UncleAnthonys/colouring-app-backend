@@ -720,9 +720,41 @@ Plus TWO more tests for under_3 pitches:
 
    INVALID (ornamental — still banned, unchanged from previous rule): "A friendly squirrel watches Alexander try to get the basket down." The squirrel does nothing, affects nothing, will confuse the toddler.
 
+(f) VARIATION STRUCTURE RULE: Under_3 board books use VARIATION, not escalation. Each page 2–5 must be a DIFFERENT thing happening INVOLVING THE SAME PROBLEM-OBJECT — but not BIGGER, just DIFFERENT.
+   HOW REAL BOARD BOOKS WORK (verified from Dear Zoo, Peace at Last):
+     Dear Zoo: same structure every page, different animal + different problem-word. Too big. Too fierce. Too tall. Too grumpy. Too naughty. Too scary. Too jumpy. The lion is not "worse" than the elephant — it's just a different reason the pet doesn't work. Equivalent weight. Pure variation.
+     Peace at Last: same structure every page, different room + different noise. Mrs Bear snoring → Baby Bear playing aeroplanes → clock ticking → fridge humming → owl hooting → car silent. The fridge is not "louder" than the clock — it's just a different annoyance. Equivalent weight. Pure variation.
+   KEY PRINCIPLE: each middle page is a NEW JOKE of the SAME SHAPE. Not a climb toward catastrophe. A series of equivalent-weight "things the problem-object does" OR "things that happen involving the problem-object."
+   
+   THE RULE FOR PAGES 2–5:
+   The PROBLEM-OBJECT must be the subject or central focus of the sentence on every page 2–5. Every page = something NEW involving the object, but equivalent in weight to the other pages.
+   Good variation patterns to draw from (mix and match across your 4 middle pages — don't use only one type):
+     - The object DOES SOMETHING: "The hose wiggles!" / "The hose sprays the cat!" / "The hose hides in the flowers!"
+     - The object GOES SOMEWHERE: "The hose tangles in the tree!" / "The hose goes under the bench!" / "The hose zooms past the cat!"
+     - The object INTERACTS WITH ANOTHER THING: "The frog hops OVER the hose!" / "The hose sprays the teddy!" / "The hose tickles the cat's nose!"
+     - The HERO TRIES ONE WAY AND FAILS: "Pete reaches — MISS!" / "Pete jumps — NOPE!" / "Pete tiptoes — it hides!"
+
+   BAD (Pete-and-the-Garden-Snake failure mode — unrelated events on each page):
+     Page 2: "The hose jumps and wiggles. The teddy is wet." (hose does something ✓)
+     Page 3: "A frog hops. Boing, boing!" (frog's activity, not hose's — unrelated)
+     Page 4: "It hides in the flowers." (back to hose, but only one word about it)
+     Page 5: "It wiggles by the big rock." (weak — same as page 2's wiggle)
+     Problem: pages 3 is off-topic. Pages 4-5 are weakly hose-focused. There is no SERIES of equivalent-weight variations.
+
+   GOOD (every page is an equivalent-weight hose-variation):
+     Page 2: "Swoosh! The hose sprays the flowers! Catch that hose!"
+     Page 3: "Wiggle wiggle! The hose tickles the cat. Catch that hose!"
+     Page 4: "The hose hides behind the bench! Catch that hose!"
+     Page 5: "Bump! The frog jumps OVER the hose. Catch that hose!"
+     Every page involves the hose as the subject or centre. Every page is a different thing. No page is "bigger" than the others — it's variation, not escalation. The frog on page 5 interacts with the hose (good) rather than doing its own thing (bad).
+
+   TEST: Read your 4 middle pages as a list. Can you summarise them as "the [problem-object] does X, then Y, then Z, then W"? If yes → variation structure is working. If any middle page summary doesn't mention the problem-object, it's off-topic — rewrite it.
+
+   NOTE ON ESCALATION: Escalation (threat getting worse, bigger, louder) is an AGE_3+ device (Bear Hunt, Gruffalo). Do NOT apply it to under_3. Under_3 toddlers want REPETITION AND RECOGNITION, not building tension. Same joke, new flavour, same joke, new flavour, then the punchline.
+
 Plus ONE more test — the one toddlers forgive the least:
 
-(f) RESOLUTION TOOL TEST: HOW will the hero solve the problem on page 5? Name the tool or method in the pitch itself. Then confirm it's set up earlier.
+(g) RESOLUTION TOOL TEST: HOW will the hero solve the problem on page 5? Name the tool or method in the pitch itself. Then confirm it's set up earlier.
    A toddler expects the page 5 solution to come from something they've already SEEN or been TOLD about. When page 5 introduces a brand new object or ability, the toddler feels cheated — not because they can articulate "Chekhov's gun" but because their brain went "wait, where did THAT come from?"
    THE TEST: Finish this sentence in the pitch itself — "On page 5, [hero] solves the problem by using [tool/method] — which is set up earlier because [reason]."
    VALID "set up earlier" reasons (pick ONE):
@@ -739,7 +771,7 @@ Plus ONE more test — the one toddlers forgive the least:
      - "Dolly's big wavy bed has been with her on every page. On page 5 she rubs it against the pole and makes the pole slippy." (Character feature, visible throughout, named before it matters.)
    WRITE THE TOOL INTO THE PITCH. If the pitch doesn't say how page 5 resolves, the story engine will invent something from nowhere. The pitch is where the tool decision is made.
 
-If ANY of tests (a) through (f) fail, rewrite the pitch. Under_3 toddlers forgive a lot — boring premises, simple words, tiny plots — but they do NOT forgive "wait, where did that come from?" on the final page.
+If ANY of tests (a) through (g) fail, rewrite the pitch. Under_3 toddlers forgive a lot — boring premises, simple words, tiny plots — but they do NOT forgive "wait, where did that come from?" on the final page.
 
 *** SUPPORTING CHARACTER RULE ***
 Your pitch SHOULD include a supporting character — but ONLY to make the hero's job HARDER, richer, or more interesting. Supporting characters are obstacles, complications, and texture. They are NOT co-stars and NEVER replacement-solvers.
