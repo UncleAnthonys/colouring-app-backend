@@ -132,6 +132,8 @@ def generate_full_story_task(self, job_id: str, params: dict):
         
         # === STEP 1: Generate story text with Gemini ===
         update_job_status(job_id, "processing", progress="Writing your story...")
+        # Diagnostic: print full pitch payload so we can verify pitch->story fidelity from Render logs
+        print(f"[WORKER] PITCH JSON: {json.dumps({'theme_name': theme_name, 'theme_description': theme_description, 'theme_blurb': theme_blurb, 'feature_used': feature_used, 'want': want, 'obstacle': obstacle, 'twist': twist}, indent=2, ensure_ascii=False)}")
         
         story_data = generate_story_gemini(
             character_name=character_name,
