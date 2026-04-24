@@ -129,6 +129,7 @@ RULES:
     STRUCTURE:
     Page 1: Show the chaos in one breath. End with the refrain. "The robot is climbing the shelf! Stop that robot!"
     Pages 2-4: ONE new attempt that fails + the SAME refrain (identical every time). Each attempt is DIFFERENT — new method, new place.
+    Page 5 TOOL REMINDER (under_3): The thing the hero uses to solve the problem on page 5 MUST be something you already showed or named on pages 1–4. The pitch has already named the tool — use THAT tool, not a new one. If the pitch said "she uses her net", page 5 uses the net. Do NOT invent a crayon, a tie, an idea, or a helper that was never mentioned. A 2-year-old reading page 5 should recognise the tool from earlier in the book. See the Tool Setup Rule above — it applies especially hard for under_3 because toddler patience for "wait, what?" is zero.
     Page 5: The pattern RESOLVES — success through a TRANSFORMED refrain. The refrain must CHANGE to show the goal is DONE. "Stop that robot!" → "Stopped that robot!" / "Catch that ball!" → "Caught that ball!" / "Come back, duck!" → "Back again, duck!" DO NOT replace the refrain with a bare "Yay!" or "Hooray!" — those are empty. Transform the refrain itself. The whole point is the child has been shouting the refrain on every page and on page 5 they finally get to shout the RESOLVED version. That is the payoff.
     The final page ends on the transformed refrain, not on a sound word. NEVER end the story with "Yay, [name]!" or a standalone sound — that is explicitly banned (see the sound-word rule above).
     
@@ -702,7 +703,26 @@ Plus TWO more tests for under_3 pitches:
    INVALID: Supporting character appears on page 2, vanishes on page 3, reappears on page 6 — this is the Alexander-and-the-Picnic-Basket failure mode. The squirrel was present but did not DO anything to the story. A toddler reading page 2 expects the squirrel to matter; by page 3 the squirrel is gone and the toddler is confused.
    RULE: If your pitch has a supporting character, say in one sentence: "The [character] is the CAUSE of the problem because ___" OR "The [character] is who needs saving because ___." If you cannot finish either sentence, remove the character. A toddler story with NO supporting character is better than one with a purposeless supporting character.
 
-If ANY of tests (a) through (e) fail, rewrite the pitch. A toddler story with a clever premise but a blurry problem, invisible stakes, or a purposeless side character is WORSE than a simple premise that a 2-year-old instantly follows.
+Plus ONE more test — the one toddlers forgive the least:
+
+(f) RESOLUTION TOOL TEST: HOW will the hero solve the problem on page 5? Name the tool or method in the pitch itself. Then confirm it's set up earlier.
+   A toddler expects the page 5 solution to come from something they've already SEEN or been TOLD about. When page 5 introduces a brand new object or ability, the toddler feels cheated — not because they can articulate "Chekhov's gun" but because their brain went "wait, where did THAT come from?"
+   THE TEST: Finish this sentence in the pitch itself — "On page 5, [hero] solves the problem by using [tool/method] — which is set up earlier because [reason]."
+   VALID "set up earlier" reasons (pick ONE):
+     - It is a named feature of the hero's own body/appearance. "Her long ponytail" / "His big strong arms" / "Her pirate hat" / "His long tail."
+     - It is an object that will be VISIBLE AND MENTIONED in the text on pages 1, 2, 3, or 4 — not just drawn in the illustration, but named in the story.
+   INVALID — these are the Meg-and-the-Sock and Alexander-and-the-Picnic failure modes:
+     - "She draws a spot and sniffs it." (Where did the crayon come from? Never mentioned. Toddler: WHAT?)
+     - "He loops his tie round the basket." (Tie visible in the illustrations but never used or referenced earlier. Toddler: WHERE DID THAT COME FROM?)
+     - "She has a sudden idea." (An idea is not a tool. What is the THING she uses?)
+     - "The squirrel helps." (A new helper appearing to solve it = cheating.)
+   GOOD TOOL-SETUP EXAMPLES:
+     - "Pete wears a big pirate hat on every page — on page 5 he takes it off and uses it to scoop up the ladybird." (The hat has been on his head since page 1. The toddler has been pointing at it the whole book.)
+     - "On page 2 Meg notices her net on the sofa. On page 3 she drops it behind the chair. On page 5 she grabs it and scoops the sock out from under the dog." (The net is MENTIONED on page 2. The tool isn't a surprise.)
+     - "Dolly's big wavy bed has been with her on every page. On page 5 she rubs it against the pole and makes the pole slippy." (Character feature, visible throughout, named before it matters.)
+   WRITE THE TOOL INTO THE PITCH. If the pitch doesn't say how page 5 resolves, the story engine will invent something from nowhere. The pitch is where the tool decision is made.
+
+If ANY of tests (a) through (f) fail, rewrite the pitch. Under_3 toddlers forgive a lot — boring premises, simple words, tiny plots — but they do NOT forgive "wait, where did that come from?" on the final page.
 
 *** SUPPORTING CHARACTER RULE ***
 Your pitch SHOULD include a supporting character — but ONLY to make the hero's job HARDER, richer, or more interesting. Supporting characters are obstacles, complications, and texture. They are NOT co-stars and NEVER replacement-solvers.
