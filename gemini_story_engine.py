@@ -814,22 +814,22 @@ For under_3 pitches, the Mission Test is not enough. A pitch can be goal-shaped 
 
 Plus TWO more tests for under_3 pitches:
 
-(d) STAKES TEST: If the hero does NOT fix the problem, who or what gets hurt, upset, or left out? Name it in one short sentence a 2-year-old understands.
-   A toddler story needs a CONSEQUENCE connected to SOMEONE, not just a task. "The basket is high up and Alexander wants it" is not a story — it's an errand. Stories have pressure because someone cares about the outcome.
-   TIGHTENED RULE (read carefully): weak stakes are about OBJECTS just being in the wrong place. Real stakes involve a PERSON (friend, classmate, neighbour, invented named character, the hero's supporting character) or an EVENT (a show, a match, a party, visitors arriving) or an ANIMAL that a child would worry about. The stake must be something the CHILD CAN EMPATHISE WITH, not just a physical outcome.
-   BAD STAKES — these pass "something bad happens" but are HOLLOW because nobody is affected:
-     - "The balloon might pop if it hits the cactus." (So? It's just a balloon. Who cares?)
-     - "The hat will float away forever." (It's a random hat. Nobody will miss it.)
-     - "The water will turn the garden into a puddle." (A puddly garden isn't bad — kids love puddles.)
-     - "The shelves will fall over." (Bad for the shop owner maybe, but the child has no connection.)
-   GOOD STAKES — something bad happens TO SOMEONE THE CHILD CAN CARE ABOUT:
-     - "The puppy is running for the open gate — if he gets out, he'll be lost on the busy road." (Animal in danger.)
-     - "The ice cream is melting fast — if Dolly doesn't get it to her friend before the party ends, her friend will cry." (Friend will be upset.)
-     - "The classroom hamster has got out and the teacher is back in two minutes — if he's not found, the whole class will be in trouble." (Group the child is part of.)
-     - "The neighbour's birthday balloons have drifted away — if the hero doesn't catch them, the neighbour will walk into a plain hallway on her birthday." (Neighbour's happiness.)
-     - "The class hamster's cage door is open and assembly starts in five minutes — if he escapes, he'll be lost in the school forever." (Animal + time pressure + shared consequence.)
-   RULE: Your pitch must state the stakes explicitly AND must name WHO is affected (a person by role, an animal, or an event that involves other people). If you cannot finish the sentence "If the hero fails, then [NAMED PERSON/ANIMAL/EVENT] ___" with something a 2-year-old would feel sorry about, the pitch has hollow stakes. Rewrite.
-   A hat floating away with no owner who cares is NOT stakes. A hat flying off a neighbour's head as she walks into her wedding IS stakes.
+(d) STAKES TEST: If the hero does NOT fix the problem, what bad thing happens — to THEM or to someone/something they care about?
+   A toddler story needs a CONSEQUENCE that gives the goal weight, not just a task. "The basket is high up and Alexander wants it" is not a story — it's an errand. Stories have pressure because the hero (or someone) actually CARES whether this gets fixed.
+   TWO VALID STAKE TYPES — both work, do not bolt extras on:
+   (1) SELF-STAKES — the hero wants something they themselves CARE about, with urgency. Bear Hunt: the family wants to find a bear. Where the Wild Things Are: Max wants to escape his room. Tiger Who Came to Tea: Sophie wants tea time. The hero's own want is the stake. The child IS the personalised hero, so the child feels the want directly.
+     - GOOD: "Peter wants a bath, but the duck has yanked the plug and the water is draining fast — if Peter doesn't catch the plug, his bath is gone." (Hero's own want, time pressure, no third party needed.)
+     - GOOD: "Kiki wants to reach the high shelf for her favourite biscuit — if the cat keeps batting it further back, the biscuit will fall behind the fridge forever." (Hero's own want, character-driven obstacle.)
+   (2) OTHER-STAKES — someone or something the hero cares about is in trouble.
+     - GOOD: "The puppy is running for the open gate — if he gets out, he'll be lost on the busy road."
+     - GOOD: "The classroom hamster has got out and the teacher is back in two minutes — if he's not found, the whole class will be in trouble."
+   DO NOT bolt on a fake bystander to satisfy this rule. Inventing "Tiny Turtle who needs a bath" because the rule said "name someone" is worse than no third party at all. If the hero's own want is real and time-pressured, that IS the stakes.
+   BAD STAKES — these are NOT stakes, they are STATES (object in wrong place, no urgency, no want):
+     - "The basket is on top of the slide." (So what? Baskets exist. Why must it come down?)
+     - "Al has too many sponges." (Why is that a problem? What happens if the sponges stay?)
+     - "The ball is in the tree." (A ball in a tree is fine. What's at stake?)
+     - "The hat is on a hook." (Yes, that is where hats go. There is no story here.)
+   RULE: Your pitch must state EITHER a self-stake (hero wants X, urgency means it'll be lost/ruined) OR an other-stake (named character/animal/event will be hurt). If you cannot finish the sentence "If the hero fails, then ___" with something the hero or someone-they-care-about will lose, the pitch has no stakes. Rewrite.
 
 (e) SUPPORTING CHARACTER RULE (under_3 specific — DIFFERENT FROM ALL OTHER AGES):
    At under_3, pages have 15 words max. That is NOT enough room for a supporting character to do their own thing across the middle pages. A character introduced on page 2 then absent on pages 3, 4, 5 then re-appearing on page 6 will CONFUSE a 2-year-old — they meet the character, the character vanishes, then suddenly the ending refers to them again. This is the single most common under_3 failure mode.
@@ -924,6 +924,26 @@ Plus ONE more test — the one that prevents visually repetitive or teleporting 
    NOTE: This test applies to under_3 and age_3 pitches only. Age_4+ stories can be more location-flexible; under_3 and age_3 need engaged sub-spots because the child reads the picture first and needs to see the hero PHYSICALLY DOING something with each backdrop.
 
 If ANY of tests (a) through (h) fail, rewrite the pitch. Under_3 toddlers forgive a lot — boring premises, simple words, tiny plots — but they do NOT forgive "wait, where did that come from?" on the final page.
+
+(i) PREMISE EXCITEMENT TEST (CRITICAL — fires AFTER all other tests pass):
+   This test runs LAST. By now the pitch may technically pass tests (a)-(h) — coherent goal, named obstacle, sound logic, valid stakes. But a pitch can pass every structural test and STILL be a dead premise. "Pete and the Windy Hat" passes everything and is still mundane.
+   Read the THEME_NAME and THEME_BLURB out loud. Honestly answer THREE questions:
+   (1) EXCITING: Would a 4-year-old hear this title and stop what they're doing? Or shrug?
+   (2) NOVEL: Has this premise shape appeared in any of the last several stories the app has made? Or is it the same shape as ones we keep generating (catch-the-floater, save-from-water, things-grow-too-big)?
+   (3) DISTINCTIVE: Could a child describe this story to another child in one sentence and have it sound DIFFERENT from every other kids' story? Or does it blur into "another character chases another thing"?
+   IF THE ANSWER TO ANY OF THE THREE IS WEAK — REJECT THE PITCH. Do NOT try to rescue a mundane premise by adding stakes. Stakes cannot save a boring idea. A "windy hat" is a windy hat no matter who's affected by it.
+   BAD PREMISES (technically pass tests a-h but fundamentally dead):
+     - "Pete's hat is flying away — he must catch it before it lands on a hook." (A hat. On a hook. There is no story here.)
+     - "Kiki's biscuit fell behind the sofa — she must reach it before tea time." (A snack. Behind a sofa. The child has lived this. It is not a story.)
+     - "Peter's watering can tipped over and the garden is a puddle." (A puddle. In a garden. We have done this twenty times.)
+   GOOD PREMISES (a child hears these and says I WANT THAT):
+     - "An underwater birthday party where the cake tables are floating away on giant balloons." (Novel setting + visual chaos + clear stakes built in.)
+     - "Stone statues at the museum have come alive overnight and stolen all the costumes — the doors open in 10 minutes." (Magical-but-grounded + time pressure + immediately visual.)
+     - "The bubble machine at the underwater pool started spitting out heavy stones and the turtle's house is being buried." (Funny inversion + clear obstacle + character to care about.)
+     - "The school hamster has escaped into the dinner-lady's pasta tureen on serving day." (Specific + funny + animal + ticking clock.)
+     - "The wedding flower-girl's basket of petals has tipped down the chapel steps and the bride is about to walk down them." (Specific named event + vivid physical chaos + time pressure.)
+   THE TEST: would a parent reading this pitch in the app smile and tap it because they think "that's CLEVER" — or would they scroll past because it sounds like every other story? If they'd scroll past, REJECT and rewrite. The premise is the most important thing. Stakes, structure, refrains — none of those matter if the premise is dead.
+   COMMIT to either a SETTING with weird/imaginative chaos baked in, OR a SITUATION the child has never read before. No mundane premises. No "thing in a place." Always ask: WHAT MAKES THIS DIFFERENT FROM EVERY OTHER STORY THE APP COULD MAKE?
 
 *** SUPPORTING CHARACTER RULE ***
 Your pitch SHOULD include a supporting character — but ONLY to make the hero's job HARDER, richer, or more interesting. Supporting characters are obstacles, complications, and texture. They are NOT co-stars and NEVER replacement-solvers.

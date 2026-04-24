@@ -762,8 +762,10 @@ Create a professional kids' COLORING BOOK PAGE — pure BLACK LINES on WHITE PAP
 SCENE TO ILLUSTRATE:
 {scene_prompt}
 
-STORY TEXT FOR THIS PAGE:
+WHAT'S HAPPENING ON THIS PAGE (FOR YOUR REFERENCE ONLY — NEVER WRITE THESE WORDS IN THE IMAGE):
 {story_text if story_text else "No story text provided."}
+
+⚠️ The text above is provided so you understand the action to draw. The story text is added separately to the page in post-processing. NEVER render any of these words as drawn letters, captions, signs, banners, or text overlays in the image itself.
 
 🚨 DRAW THE ACTION, NOT A PORTRAIT 🚨
 - Read the scene description and story text above. Identify the KEY ACTION happening.
@@ -796,6 +798,8 @@ DO NOT default to the same medium-distance, straight-on, standing-in-the-middle 
 - The ONLY things in this image are ILLUSTRATIONS — black lines on white paper, nothing else
 - If you add ANY text to the image, the page is RUINED and must be regenerated
 - Text on signs/shopfronts in the background is OK ONLY if it is illegible scribble lines, NOT real words
+
+🚨 SPECIFIC FAILURE TO AVOID: Sometimes the model takes the "WHAT'S HAPPENING ON THIS PAGE" reference text above and renders the WORDS THEMSELVES on the image — typically as drawn letters across the top of the image, on a wall, or floating in the sky. THIS IS A PAGE-RUINING BUG. The reference text is for understanding what to draw, not what to write. If you are about to render any sentence/phrase from the reference text as visible drawn letters, STOP and replace it with pure illustration. Resolution pages (final page) are most prone to this — the action is abstract, the model gets uncertain, and falls back to "draw the words." Do not fall back. Render the action visually with body posture, expression, and physical objects only.
 
 [REFERENCE USE]: Use the attached reference image(s) ONLY for the character's shape and silhouette. Completely ignore all color, value, and shading data. DO NOT use the colors or lighting from the reference. DO NOT copy the POSE or COMPOSITION from the reference — only copy the character's APPEARANCE (body shape, features, clothing style).
 
