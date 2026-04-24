@@ -678,7 +678,31 @@ For under_3 pitches, the Mission Test is not enough. A pitch can be goal-shaped 
    GOOD: Refrain "Catch that duck!" and on each page the hero tries a different CATCH — with hands, with a net, with a scoop.
    BEFORE finalising your pitch, pick the refrain verb and confirm each attempt uses it.
 
-If any of the three tests fail, rewrite the pitch. A toddler story with a clever premise but a blurry problem is WORSE than a simple premise that a 2-year-old instantly follows.
+Plus TWO more tests for under_3 pitches:
+
+(d) STAKES TEST: If the hero does NOT fix the problem, what BAD thing happens? Name it in one short sentence a 2-year-old understands.
+   A toddler story needs a CONSEQUENCE, not just a task. "The basket is high up and Alexander wants it" is not a story — it's an errand. Stories have pressure.
+   BAD STAKES (these are not stakes — they are just states):
+     - "The basket is on top of the slide." (So what? Baskets exist. Why must it come down?)
+     - "Al has too many sponges." (Why is that a problem? What happens if the sponges stay?)
+     - "The ball is in the tree." (A ball in a tree is fine. What's at stake?)
+   GOOD STAKES (something BAD happens if the hero fails — and the child can picture it):
+     - "The puppy is running for the open gate — if he gets out, he'll be lost on the busy road."
+     - "The ice cream is melting fast — if Dolly doesn't get it to the freezer soon, it'll be a puddle."
+     - "The duck has fallen down the drain — if nobody gets her, she'll be washed away."
+     - "Granny's cat is stuck up the tree — if she stays up there, she'll be there all night."
+   RULE: Your pitch must state the stakes explicitly. If you cannot finish the sentence "If the hero fails, then ___" with something a 2-year-old would agree is BAD, the pitch has no stakes. Rewrite.
+
+(e) SUPPORTING CHARACTER PURPOSE TEST: The supporting character (if any) must be EITHER the CAUSE of the problem OR the BENEFICIARY who needs saving. Not both. Not neither. Not "a friendly squirrel who watches."
+   A toddler cannot track a character who is present but purposeless. If you introduce a squirrel on page 2, a toddler expects the squirrel to MATTER. If the squirrel is just decoration, the toddler gets confused — "where did the squirrel go?" on page 3 breaks the story.
+   TWO VALID ROLES for under_3 supporting characters:
+     - CAUSE: "A cheeky squirrel pinched Alexander's picnic basket and stashed it at the top of the slide — now Alexander has to get it back before lunchtime is ruined." (The squirrel is the reason there's a problem. The toddler understands why the squirrel matters.)
+     - BENEFICIARY: "The baby bird has fallen out of the nest — Alexander must get her back up to her mummy before the cat sees her." (The baby bird is who is being saved. The toddler understands who matters.)
+   INVALID: "A friendly squirrel watches Alexander try to get the basket down." (The squirrel does nothing, affects nothing, and will confuse the toddler.)
+   INVALID: Supporting character appears on page 2, vanishes on page 3, reappears on page 6 — this is the Alexander-and-the-Picnic-Basket failure mode. The squirrel was present but did not DO anything to the story. A toddler reading page 2 expects the squirrel to matter; by page 3 the squirrel is gone and the toddler is confused.
+   RULE: If your pitch has a supporting character, say in one sentence: "The [character] is the CAUSE of the problem because ___" OR "The [character] is who needs saving because ___." If you cannot finish either sentence, remove the character. A toddler story with NO supporting character is better than one with a purposeless supporting character.
+
+If ANY of tests (a) through (e) fail, rewrite the pitch. A toddler story with a clever premise but a blurry problem, invisible stakes, or a purposeless side character is WORSE than a simple premise that a 2-year-old instantly follows.
 
 *** SUPPORTING CHARACTER RULE ***
 Your pitch SHOULD include a supporting character — but ONLY to make the hero's job HARDER, richer, or more interesting. Supporting characters are obstacles, complications, and texture. They are NOT co-stars and NEVER replacement-solvers.
