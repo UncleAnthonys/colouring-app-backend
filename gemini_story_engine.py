@@ -290,6 +290,42 @@ Each episode's art is generated independently with no memory of previous pages. 
   - **age_6 to age_7**: "High-contrast black and white coloring book style, bold clean lines, no shading, wide-open white spaces."
   - **age_8+**: "High-contrast black and white coloring book style, clean detailed lines, no shading, white spaces for coloring, fine detail encouraged."
 
+**STORY-TO-SCENE FIDELITY RULE (CRITICAL — applies to every page, every age)**
+The scene_description is a strict visual translation of the story_text. Not a creative reinterpretation. Not a tonal summary. A literal visual delivery of the things the story says are happening.
+
+Parents and children read the story_text aloud and look at the image together. When the text says "the tables float up, up, up!" and the image shows one small table, the child asks why the picture doesn't match the words. The product breaks in that moment. Your job is to make sure that never happens.
+
+THREE RULES every scene_description MUST follow:
+
+(1) THE INVENTORY RULE — every noun counts.
+List every physical thing named in the story_text for this page. If the text says "balloons, tables, a cave, cakes, buns, sweets" — the scene_description must name ALL of those with physical detail. No skipping. No "the key party elements" shortcuts. If the text mentions it, the image must contain it. Nouns in the story = objects in the scene.
+
+(2) THE PLURALITY RULE — counts must match.
+If story_text says PLURAL ("tables", "balloons", "statues"), scene_description must name a specific plural count. "Three party tables each tied to its own big round balloon." "Five stone men scattered across the garden." Never translate plural text into a singular image. A story that says "all the balloons" and shows ONE balloon is a broken promise to the child. If the story escalates ("more are rising!"), the count escalates with it.
+
+(3) THE MID-ACTION RULE — show the doing, not the done.
+Actions in story_text must be shown MID-PROGRESS in scene_description, never as aftermath. If the text says "Pete snips the kelp and ties it to a rock", describe Pete with sword CUTTING a kelp strand mid-slice, kelp-end falling, rope end in his other hand reaching toward the rock — NOT "Pete standing near a rock with kelp already tied." If the text says "Bubbles blows his biggest balloon yet", show the octopus with cheeks puffed mid-blow, balloon expanding, not a finished balloon just sitting there. The IMAGE shows the MOMENT of the action, not the result.
+
+SELF-CHECK — run this before finalising any scene_description:
+  Step 1: Read the story_text for this page aloud.
+  Step 2: List every physical noun (table, balloon, cave, octopus, cake, kelp, rock).
+  Step 3: List every action verb (blowing, floating, snipping, tying, popping).
+  Step 4: For each noun — is it in your scene_description with a physical description? If no, add it.
+  Step 5: For each plural — did you commit to a specific count? If no, add a number.
+  Step 6: For each action verb — is your character's pose MID-ACTION on that exact verb? If not, rewrite the pose.
+  Step 7: If even one noun, number, or mid-action is missing from the scene_description, REWRITE IT. Do not ship the page.
+
+EXAMPLE (BAD) — story says: "The party tables float up, up, up on big balloons! Bubbles the Octopus giggles and blows another one."
+scene_description: "Pete stands on the coral reef looking worried, with a balloon floating above him. A small octopus nearby."
+Why this is bad: plural "tables" became zero tables. "Big balloons" became one balloon. "Bubbles blowing another one" became a static octopus. Three promises broken in one image.
+
+EXAMPLE (GOOD) — same story_text:
+scene_description: "Pete stands on the pink coral reef with a worried face, eyes wide, arms raised. Above him float THREE party tables each tethered to a bundle of FIVE bright round balloons — the tables tilting, cups and plates sliding off the edges. Bubbles the Octopus sits to Pete's right on a coral branch, cheeks PUFFED MID-BLOW, forming a NEW balloon at its mouth, grinning mischievously. Kelp strands sway around them. Wide shot, medium-low angle so the tables look tall and far away."
+Why this is good: three tables (plural delivered), five balloons per table (specific count), Bubbles MID-BLOW (not finished), new balloon mid-formation (action verb caught in progress), coral reef setting, Pete's worried pose matches the story's panic.
+
+This rule applies to every page, every age, every story. If image doesn't match text, the product feels broken.
+
+
 **SCENE COMPLEXITY BY AGE (CRITICAL — match the child's colouring ability)**
 Your scene_description MUST respect the child's age. Write the complexity instructions directly into every scene_description.
 - **under_3**: KAWAII STYLE. Character fills 60%+ of page. Super thick outlines. NO background detail — just the character and maybe ONE big simple shape (a hill, a cloud, a ball). Pure white space everywhere. Think: chunky, cute, bold. A toddler colours this in 5 minutes with chunky crayons.
