@@ -694,14 +694,31 @@ Plus TWO more tests for under_3 pitches:
      - "Granny's cat is stuck up the tree — if she stays up there, she'll be there all night."
    RULE: Your pitch must state the stakes explicitly. If you cannot finish the sentence "If the hero fails, then ___" with something a 2-year-old would agree is BAD, the pitch has no stakes. Rewrite.
 
-(e) SUPPORTING CHARACTER PURPOSE TEST: The supporting character (if any) must be EITHER the CAUSE of the problem OR the BENEFICIARY who needs saving. Not both. Not neither. Not "a friendly squirrel who watches."
-   A toddler cannot track a character who is present but purposeless. If you introduce a squirrel on page 2, a toddler expects the squirrel to MATTER. If the squirrel is just decoration, the toddler gets confused — "where did the squirrel go?" on page 3 breaks the story.
-   TWO VALID ROLES for under_3 supporting characters:
-     - CAUSE: "A cheeky squirrel pinched Alexander's picnic basket and stashed it at the top of the slide — now Alexander has to get it back before lunchtime is ruined." (The squirrel is the reason there's a problem. The toddler understands why the squirrel matters.)
-     - BENEFICIARY: "The baby bird has fallen out of the nest — Alexander must get her back up to her mummy before the cat sees her." (The baby bird is who is being saved. The toddler understands who matters.)
-   INVALID: "A friendly squirrel watches Alexander try to get the basket down." (The squirrel does nothing, affects nothing, and will confuse the toddler.)
-   INVALID: Supporting character appears on page 2, vanishes on page 3, reappears on page 6 — this is the Alexander-and-the-Picnic-Basket failure mode. The squirrel was present but did not DO anything to the story. A toddler reading page 2 expects the squirrel to matter; by page 3 the squirrel is gone and the toddler is confused.
-   RULE: If your pitch has a supporting character, say in one sentence: "The [character] is the CAUSE of the problem because ___" OR "The [character] is who needs saving because ___." If you cannot finish either sentence, remove the character. A toddler story with NO supporting character is better than one with a purposeless supporting character.
+(e) SUPPORTING CHARACTER RULE (under_3 specific — DIFFERENT FROM ALL OTHER AGES):
+   At under_3, pages have 15 words max. That is NOT enough room for a supporting character to do their own thing across the middle pages. A character introduced on page 2 then absent on pages 3, 4, 5 then re-appearing on page 6 will CONFUSE a 2-year-old — they meet the character, the character vanishes, then suddenly the ending refers to them again. This is the single most common under_3 failure mode.
+
+   PREFERRED DEFAULT: NO SUPPORTING CHARACTER AT ALL.
+   An under_3 story works beautifully with just TWO entities: the HERO and the PROBLEM-OBJECT. The puppy running away. The sock the dog won't drop. The duck fallen down the drain. The balloon caught on the pole. You don't need a third character. The problem-object IS the antagonist and the focus.
+   EXAMPLES OF TWO-ENTITY UNDER_3 STORIES THAT DON'T NEED A SUPPORTING CHARACTER:
+     - "Meg's toy dog has grabbed Dad's sock and is running around the house — got to catch the sock before Dad finds out." (Hero: Meg. Problem-object: the sock. No third party needed.)
+     - "Dolly's yellow duck has fallen down the plughole — got to get her back before bathtime is over." (Hero: Dolly. Problem-object: the duck. No third party needed.)
+     - "Al's balloon is caught on the washing line and the wind is getting strong — got to unhook it before it flies away forever." (Hero: Al. Problem-object: the balloon. No third party needed.)
+
+   ONLY VALID EXCEPTION — CAUSE-character, and ONLY IF they're physically ON the page in every attempt:
+   A cause-character works ONLY when they ARE the action — i.e. they're visible and doing something on every single page 2–5. The toy dog running with the sock works because the dog is RUNNING WITH THE SOCK on every page. The dog doesn't need its own separate story beats — it IS the chase.
+   VALID: "A cheeky squirrel has grabbed Alex's biscuit and won't let go — Alex has to get his biscuit back before the squirrel scoffs the lot." (The squirrel is holding the biscuit on every page. The squirrel doesn't need its own narrative — the squirrel IS the obstacle.)
+   VALID: "Meg's toy dog has pinched Dad's sock and is zooming around the room — got to catch the sock." (The dog is on every page with the sock.)
+
+   BANNED AT UNDER_3 — the BENEFICIARY pattern:
+   Do NOT pitch an under_3 story with a separate character who NEEDS SAVING. It does not fit in 15-word pages. The beneficiary gets named on page 2, disappears from the middle of the story because there's no word-room to track them, then reappears in the ending — and a 2-year-old cannot follow it.
+   BANNED: "A snail is trapped in a puddle and Pete has to rescue him before the puddle floods." (This is Pete-and-the-Puddle-Boat — the snail was named on page 2 and page 6 but absent from pages 3, 4, 5. Toddler: "what snail?")
+   BANNED: "A baby bird has fallen from her nest and Alex has to get her back to her mummy." (The bird needs to be shown at the top of the page, in distress, in each attempt. There's no room for that in 15 words while also showing the hero's attempt.)
+   BANNED: Any pitch with a supporting character who is NOT physically present and active on every page 2–5.
+   If your pitch feels like it needs a beneficiary — promote the beneficiary to the PROBLEM-OBJECT. Don't save the snail. Save "the snail's home" (a leaf, a shell, a stick). The problem-object is something physical the hero interacts with on every page. Snails-as-beneficiaries are an age_3+ device.
+
+   THE TEST: Read your pitch aloud and check — is there a third party (not hero, not problem-object) mentioned? If yes, can that third party be physically shown DOING SOMETHING on every single page 2–5? If not, REMOVE them from the pitch. The story will be stronger with just hero + problem-object.
+
+   INVALID (ornamental — still banned, unchanged from previous rule): "A friendly squirrel watches Alexander try to get the basket down." The squirrel does nothing, affects nothing, will confuse the toddler.
 
 Plus ONE more test — the one toddlers forgive the least:
 
