@@ -721,9 +721,9 @@ Plus TWO more tests for under_3 pitches:
    INVALID (ornamental — still banned, unchanged from previous rule): "A friendly squirrel watches Alexander try to get the basket down." The squirrel does nothing, affects nothing, will confuse the toddler.
 
 (f) VARIATION STRUCTURE RULE: Under_3 board books use VARIATION, not escalation. Each page 2–5 must be a DIFFERENT thing happening INVOLVING THE SAME PROBLEM-OBJECT — but not BIGGER, just DIFFERENT.
-   HOW REAL BOARD BOOKS WORK (verified from Dear Zoo, Peace at Last):
+   HOW REAL UNDER_3 BOARD BOOKS WORK (verified from Dear Zoo by Rod Campbell and That's Not My Puppy by Fiona Watt — both pure under_3 board books, interest age 0-3):
      Dear Zoo: same structure every page, different animal + different problem-word. Too big. Too fierce. Too tall. Too grumpy. Too naughty. Too scary. Too jumpy. The lion is not "worse" than the elephant — it's just a different reason the pet doesn't work. Equivalent weight. Pure variation.
-     Peace at Last: same structure every page, different room + different noise. Mrs Bear snoring → Baby Bear playing aeroplanes → clock ticking → fridge humming → owl hooting → car silent. The fridge is not "louder" than the clock — it's just a different annoyance. Equivalent weight. Pure variation.
+     That's Not My Puppy: same sentence frame every page, ONE word changes. "That's not my puppy. His ears are too SOFT." / "That's not my puppy. His nose is too WET." / "That's not my puppy. His paws are too BUMPY." The wet nose is not "worse" than the soft ears — each is just a different reason the puppy doesn't match. Equivalent weight. Pure variation. The repetition IS the pleasure.
    KEY PRINCIPLE: each middle page is a NEW JOKE of the SAME SHAPE. Not a climb toward catastrophe. A series of equivalent-weight "things the problem-object does" OR "things that happen involving the problem-object."
    
    THE RULE FOR PAGES 2–5:
