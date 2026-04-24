@@ -814,18 +814,22 @@ For under_3 pitches, the Mission Test is not enough. A pitch can be goal-shaped 
 
 Plus TWO more tests for under_3 pitches:
 
-(d) STAKES TEST: If the hero does NOT fix the problem, what BAD thing happens? Name it in one short sentence a 2-year-old understands.
-   A toddler story needs a CONSEQUENCE, not just a task. "The basket is high up and Alexander wants it" is not a story — it's an errand. Stories have pressure.
-   BAD STAKES (these are not stakes — they are just states):
-     - "The basket is on top of the slide." (So what? Baskets exist. Why must it come down?)
-     - "Al has too many sponges." (Why is that a problem? What happens if the sponges stay?)
-     - "The ball is in the tree." (A ball in a tree is fine. What's at stake?)
-   GOOD STAKES (something BAD happens if the hero fails — and the child can picture it):
-     - "The puppy is running for the open gate — if he gets out, he'll be lost on the busy road."
-     - "The ice cream is melting fast — if Dolly doesn't get it to the freezer soon, it'll be a puddle."
-     - "The duck has fallen down the drain — if nobody gets her, she'll be washed away."
-     - "Granny's cat is stuck up the tree — if she stays up there, she'll be there all night."
-   RULE: Your pitch must state the stakes explicitly. If you cannot finish the sentence "If the hero fails, then ___" with something a 2-year-old would agree is BAD, the pitch has no stakes. Rewrite.
+(d) STAKES TEST: If the hero does NOT fix the problem, who or what gets hurt, upset, or left out? Name it in one short sentence a 2-year-old understands.
+   A toddler story needs a CONSEQUENCE connected to SOMEONE, not just a task. "The basket is high up and Alexander wants it" is not a story — it's an errand. Stories have pressure because someone cares about the outcome.
+   TIGHTENED RULE (read carefully): weak stakes are about OBJECTS just being in the wrong place. Real stakes involve a PERSON (friend, classmate, neighbour, invented named character, the hero's supporting character) or an EVENT (a show, a match, a party, visitors arriving) or an ANIMAL that a child would worry about. The stake must be something the CHILD CAN EMPATHISE WITH, not just a physical outcome.
+   BAD STAKES — these pass "something bad happens" but are HOLLOW because nobody is affected:
+     - "The balloon might pop if it hits the cactus." (So? It's just a balloon. Who cares?)
+     - "The hat will float away forever." (It's a random hat. Nobody will miss it.)
+     - "The water will turn the garden into a puddle." (A puddly garden isn't bad — kids love puddles.)
+     - "The shelves will fall over." (Bad for the shop owner maybe, but the child has no connection.)
+   GOOD STAKES — something bad happens TO SOMEONE THE CHILD CAN CARE ABOUT:
+     - "The puppy is running for the open gate — if he gets out, he'll be lost on the busy road." (Animal in danger.)
+     - "The ice cream is melting fast — if Dolly doesn't get it to her friend before the party ends, her friend will cry." (Friend will be upset.)
+     - "The classroom hamster has got out and the teacher is back in two minutes — if he's not found, the whole class will be in trouble." (Group the child is part of.)
+     - "The neighbour's birthday balloons have drifted away — if the hero doesn't catch them, the neighbour will walk into a plain hallway on her birthday." (Neighbour's happiness.)
+     - "The class hamster's cage door is open and assembly starts in five minutes — if he escapes, he'll be lost in the school forever." (Animal + time pressure + shared consequence.)
+   RULE: Your pitch must state the stakes explicitly AND must name WHO is affected (a person by role, an animal, or an event that involves other people). If you cannot finish the sentence "If the hero fails, then [NAMED PERSON/ANIMAL/EVENT] ___" with something a 2-year-old would feel sorry about, the pitch has hollow stakes. Rewrite.
+   A hat floating away with no owner who cares is NOT stakes. A hat flying off a neighbour's head as she walks into her wedding IS stakes.
 
 (e) SUPPORTING CHARACTER RULE (under_3 specific — DIFFERENT FROM ALL OTHER AGES):
    At under_3, pages have 15 words max. That is NOT enough room for a supporting character to do their own thing across the middle pages. A character introduced on page 2 then absent on pages 3, 4, 5 then re-appearing on page 6 will CONFUSE a 2-year-old — they meet the character, the character vanishes, then suddenly the ending refers to them again. This is the single most common under_3 failure mode.
@@ -980,48 +984,69 @@ Any setting is fine — fully invented worlds, alternate dimensions, complex fan
 import random
 
 WORLD_SEEDS_GROUNDED = [
-    # SHEEPY-PATTERN SEEDS — real places, real phenomena, scale gone wrong, real stakes
-    # For under_3, age_3, age_4
-    "a kitchen where someone left the tap on overnight and the puddle is creeping toward the cat's bed",
-    "a garden where the wind has blown all the washing off the line and tangled it round the apple tree",
-    "a bath where the bubbles won't stop pouring out and they're starting to come out under the door",
-    "a bedroom where a soft toy has fallen behind the radiator and the smell is getting smelly",
-    "a park where it has rained so hard the picnic blanket is floating away on a brand new puddle",
-    "a kitchen where someone left a bag of flour open and the cat has knocked it everywhere",
-    "a school cloakroom where every coat has fallen off its peg and the bell is about to ring",
-    "a garden where ivy has grown over the back gate in the night — and the dog is on the wrong side",
-    "a kitchen where a pot of jam tipped over on the table and it's dripping toward the new books",
-    "a beach where the tide is coming in fast and a sandcastle with a crab inside is about to wash away",
-    "a bedroom where someone left the window open and now the curtains are wrapped round the lamp",
-    "a kitchen where the freezer door popped open in the night and the floor is a slippery ice cream river",
-    "a garden where a hose was left running and the vegetable patch is turning into a small pond",
-    "a hallway where the post has piled up against the door and you can't push it open",
-    "a kitchen where the cat has knocked the fruit bowl off the shelf and apples are rolling everywhere",
-    "a back garden where the leaves have piled up so high they've covered the rabbit hutch",
+    # BALANCED SEED LIST — wide setting variety (home, school, park, shops, vet, fire station,
+    # museum, library, transport, farm, zoo, beach, pool, celebration, cafe, cinema, camping)
+    # AND wide template variety (spill/grow, detective, rescue, time-running-out, missing-thing,
+    # misbehaving-animal-in-unexpected-place, event-about-to-start).
+    # For under_3, age_3, age_4 — all places a small child can picture.
     "a kitchen where bread dough was left to rise and it's pushed the bowl off the counter",
-    "a bedroom where a crayon got left under a cushion and now the cushion has a long colourful stripe across it",
     "a bath where the plug won't come out and the water keeps rising — toys floating higher and higher",
-    "a kitchen where the porridge boiled over and is creeping across the hob toward the toaster",
-    "a garden where a windy day has scattered the seed packets and the birds are arriving fast",
-    "a hallway where snow has blown in through the letterbox and is melting into a slippery patch",
-    "a kitchen where someone forgot to put the lid on the blender and there's smoothie up the wall",
-    "a garden where a paddling pool has tipped over and the water is rolling toward the bottom of the hill — and granny's deckchair",
-    "a back garden where weeds have grown right through the trampoline net overnight",
-    "a kitchen where a bag of pasta split in the cupboard and shells are pouring out every time someone opens the door",
-    "a park bench where someone left their packed lunch and the squirrels have found it",
-    "a bath where the soap has slid down the plug hole and got stuck — the water won't drain and the next person needs a bath",
-    "a kitchen where the kettle was left whistling so long the steam has filled the whole room",
+    "a bedroom where someone left the window open and now the curtains are wrapped round the lamp",
+    "a hallway where the post has piled up against the door and you can't push it open",
     "a back garden where bees have built a small nest on the swing — and a birthday party is starting in an hour",
-    "a hallway where the cat has dragged a long piece of string from upstairs all the way to the front door",
-    "a kitchen where someone forgot the eggs were boiling and the saucepan is jumping like mad",
-    "a garden where the gate has blown open and the rabbit has hopped out — only the wet grass shows where",
-    "a bedroom where a glass of water tipped over in the night and the carpet is slowly turning dark",
     "a kitchen where a cake in the oven has risen so high it's pushing the oven door open from the inside",
-    "a back garden where the football has rolled into the long grass and the grass is taller than the hero",
-    "a kitchen where the dog has pulled the tea towel off the hook and is dragging it through every room",
-    "a hallway where rain has come in through an open skylight and is dripping right onto the cat's cushion",
-    "a garden where the wind keeps lifting the tablecloth off the picnic table and the sandwiches keep flying",
-    "a bedroom where the duvet has slid off the bed and underneath it is the missing teddy — but also a sleeping cat",
+    "a school classroom where the class hamster has got out of its cage — and the teacher is back in two minutes",
+    "a school hall where every chair for assembly has been stacked wrong and the head teacher is coming",
+    "a school cloakroom where every coat has fallen off its peg and the bell is about to ring",
+    "a school library where all the book labels have peeled off overnight and nobody knows which book goes where",
+    "a school playground where a football has kicked a hole in the netting — and the big match starts in five minutes",
+    "a park where the swings have been tied together with somebody's shoelaces and the queue of kids is growing",
+    "a park pond where a paper boat with a birthday card inside is drifting toward the ducks",
+    "a playground where the slide is covered in sticky spilled ice cream and a toddler is climbing up the ladder",
+    "a supermarket where every tin has rolled off the shelf into the aisle — and a busy checkout is just round the corner",
+    "a bakery where the icing bag has burst and pink icing is crawling across the cake counter",
+    "a toy shop where the shelves have tipped forward and all the boxes are leaning — about to fall in a big line",
+    "a pet shop where the budgies' cage is open and little feathers are blowing past the guinea pigs",
+    "a vet's waiting room where an escaped rabbit is hopping between everyone's feet",
+    "a small animal rescue where the chicken coop door has swung open and the chickens are heading for the road",
+    "a fire station where the big boots are missing and the alarm is ringing out loud",
+    "a hospital corridor where someone's get-well balloons have tangled round the lunch trolley",
+    "a library where the returns bin has tipped over and books are sliding across the quiet carpet",
+    "a museum where a feather from the dinosaur display is drifting toward the Do-Not-Touch sign",
+    "a museum cafe where a toddler's finger-painting has fallen face-down onto the white floor",
+    "a busy train platform where somebody's lunchbox has fallen between the carriage and the platform edge",
+    "an aeroplane where a toy dinosaur has bounced out of the bag and is rolling down the aisle",
+    "a bus stop where a gust of wind has sent every queue ticket spinning across the pavement",
+    "a farm yard where the gate latch has broken and a muddy piglet is wandering toward the vegetable patch",
+    "a zoo penguin pen where a visitor's bucket hat has blown in — and the penguins are trying it on",
+    "a petting zoo where the goats have nibbled somebody's birthday banner down from the fence",
+    "a beach where the tide is coming in fast and a sandcastle with a crab inside is about to wash away",
+    "a rock pool where a little starfish is stuck on the wrong side of a wall of pebbles",
+    "a swimming pool where somebody's armbands have floated to the deep end and the lesson starts in a minute",
+    "a boatyard where a rope has come loose and a rowing boat is drifting out toward the buoys",
+    "a birthday party where the pin-the-tail game has blown off the wall and the birthday girl is about to come in",
+    "a wedding garden where the flower girl has dropped her basket of petals down the stone steps",
+    "a village hall show where the curtain rope has tangled and the first song starts in two minutes",
+    "a sports day finish line where the winner's ribbon has been carried off by a magpie",
+    "a cafe where somebody's strawberry milkshake has tipped over and is heading for the birthday book a child left on the chair",
+    "a pizza restaurant where the pepperoni has rolled off four pizzas in a row — and the birthday table is waiting",
+    "a cinema where a tub of popcorn has tipped down the aisle and the film is starting in under a minute",
+    "a funfair where the winning coconut has rolled off the shy and into the long grass behind it",
+    "a theatre backstage where somebody's costume hat has fallen through a trap door before the show",
+    "a campsite where someone's tent pegs have pinged out and the tent is starting to walk away in the wind",
+    "a woodland path where a birthday balloon has snagged on the top of a branch nobody can reach",
+    "a garden where somebody has eaten all the strawberries overnight and little paw prints lead behind the shed",
+    "a bedroom where a favourite toy has gone missing and a trail of glitter leads down the hall",
+    "a kitchen where every biscuit in the tin has gone — and there are crumbs on the cat's whiskers",
+    "a classroom where somebody's lunchbox drawings have appeared on the walls overnight and nobody knows who drew them",
+    "a neighbour's front step where a kitten is stuck inside a tipped-over welly boot and mewing",
+    "a park bench where an old lady has dropped her shopping bag and oranges are rolling down the hill",
+    "a corner shop queue where a small boy has lost his pocket money coin down a grate and the ice cream van is going",
+    "a kitchen where a pan of jelly needs to set in twenty minutes and the fridge door won't close",
+    "a bathroom where the bubbly shampoo has spilled and the class photo is in half an hour",
+    "a village post office where a very determined pigeon has wandered in and is eyeing the parcels",
+    "a bakery queue where a dog has slipped its lead and is nosing toward the bottom tray of doughnuts",
+    "a school corridor where somebody's sports medal has skittered all the way to the head teacher's door",
 ]
 
 WORLD_SEEDS_FANTASY = [
@@ -1382,11 +1407,15 @@ Invent 3 story concepts that follow the GROUNDED SETTING RULE from your system i
 Here are 3 STARTING SPARKS to inspire you. Adapt, remix, or ignore them — but your concepts must follow the same pattern of "a real place + one thing goes wonderfully wrong":
 {seeds_block}
 
-⚠️ OVER-USED PREMISES — SKIP THESE: Recent stories have massively over-used these three shapes. Do NOT pitch any of the following unless the seeds above explicitly suggest them:
-1. A GIANT MAGNET pulling metal things (spoons, buses, cars, shelves) — this has been used far too much. Reach for a different cause.
+⚠️ OVER-USED PREMISES — SKIP THESE: Recent stories have massively over-used the following shapes. Do NOT pitch any of the following unless the seeds above explicitly suggest them:
+1. A GIANT MAGNET pulling metal things (spoons, buses, cars, shelves) — over-used cause.
 2. MARCHING/PARADING TOYS escaping a toy shop — over-used. Find another shop or different chaos.
 3. THINGS HAVE TURNED INTO OTHER THINGS ("the floor turned to ice", "the hall turned to magnet") — over-used transformation shape.
-If you find yourself reaching for any of these, STOP and pick a different premise. Variety is the whole point.
+4. CATCH-THE-FLOATER (balloon / hat / blanket / kite is flying away, hero must catch it before it pops/snags/disappears) — MASSIVELY over-used recently. If your instinct is "an X is floating away and must be caught", STOP and pick a different problem shape.
+5. SOMETHING-GETS-TOO-BIG (dough, bubbles, puddle, stones, foam grows and blocks a door/path) — over-used. Try problem shapes that are NOT about scale-of-a-thing growing.
+6. GARDEN-WATER-RISING (watering can tipped / hose left running / pond overflowing / paddling pool flooding) — over-used. If the setting is a garden, make the chaos about something OTHER than rising water.
+7. SOMETHING-IS-STUCK-IN-HIGH-PLACE (cat in tree, ball in roof, kite in tree, balloon caught on branch) — over-used. Try problem shapes where the plot object isn't simply elevated.
+If you find yourself reaching for any of these seven, STOP and pick a different premise. Variety is the whole point. Reach instead for: a RESCUE, a DETECTIVE HUNT for something missing, a TIME-RUNNING-OUT EVENT, a MYSTERIOUS ARRIVAL, a MISBEHAVING CREATURE in an unexpected place, an INTERDEPENDENCY where the hero can't move until they help someone else, or a LOST-AND-RETURN story where something meaningful belongs to a named person the child can care about.
 
 THESE ARE JUST EXAMPLES — invent your own. Each concept must be:
 1. VISUALLY RICH — each of the 5 episodes must look completely different when drawn as a colouring page. If you can't imagine 5 distinct illustrations, the concept isn't good enough.
