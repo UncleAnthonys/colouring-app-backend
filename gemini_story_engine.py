@@ -117,7 +117,7 @@ RULES:
 - NEVER reference specific colours in story_text — these are black and white colouring pages.
 
 **AGE CALIBRATION**
-- **TODDLER PULSE (under_3 ONLY):** Pure board book. MAXIMUM 12 WORDS PER PAGE.
+- **TODDLER PULSE (under_3 ONLY):** Pure board book. MAXIMUM 15 WORDS PER PAGE.
     
     THE BOARD BOOK RULE: Under_3 stories work like "We're Going on a Bear Hunt", "Dear Zoo", "That's Not My Teddy." The TITLE tells you the whole story. Page 1 shows the chaos. Every page after is action + refrain. No explaining WHY. The pictures do the explaining. The child SEES what's happening.
     
@@ -129,22 +129,24 @@ RULES:
     STRUCTURE:
     Page 1: Show the chaos in one breath. End with the refrain. "The robot is climbing the shelf! Stop that robot!"
     Pages 2-4: ONE new attempt that fails + the SAME refrain (identical every time). Each attempt is DIFFERENT — new method, new place.
-    Page 5: The pattern BREAKS — success + celebration. The refrain is replaced with "Yay!" or similar.
+    Page 5: The pattern RESOLVES — success through a TRANSFORMED refrain. The refrain must CHANGE to show the goal is DONE. "Stop that robot!" → "Stopped that robot!" / "Catch that ball!" → "Caught that ball!" / "Come back, duck!" → "Back again, duck!" DO NOT replace the refrain with a bare "Yay!" or "Hooray!" — those are empty. Transform the refrain itself. The whole point is the child has been shouting the refrain on every page and on page 5 they finally get to shout the RESOLVED version. That is the payoff.
+    The final page ends on the transformed refrain, not on a sound word. NEVER end the story with "Yay, [name]!" or a standalone sound — that is explicitly banned (see the sound-word rule above).
     
     Sound words OPTIONAL — only when something physically makes a noise. Never force one.
     Vocabulary: first-100-words only. Physical, concrete. No abstract feelings. No explanations.
     
-    EXAMPLE (GOOD):
-    Page 1: "The robot is climbing! Stop that robot!"
-    Page 2: "Lil grabs his arm. He shakes her off! Stop that robot!"
-    Page 3: "Lil jumps on a box. It wobbles! Stop that robot!"
-    Page 4: "Lil finds the key. Can she reach? Stop that robot!"
-    Page 5: "CLACK! Lil turns the key. The robot stops. Yay, Lil!"
-    
-    EXAMPLE (BAD):
-    Page 1: "The robot climbs high! Stop it before the tower falls!" (too many words, too much explaining)
-    Page 2: "Lil jumps up. She cannot reach. Oh no, the robot!" (refrain is passive, not a command)
+    EXAMPLE (GOOD) — notice the performance tools: single-word sentences, mini-repetition within the page, ellipsis for page-turn comedy, and a TRANSFORMED refrain on page 5:
+    Page 1: "Up, up, UP the shelf! The robot's climbing! Stop that robot!" (12 words — mini-repetition "up up up" makes it sing)
+    Page 2: "Lil grabs. She pulls. He wriggles free! Stop that robot!" (10 words — triplet "grabs / pulls / wriggles" builds a beat)
+    Page 3: "Up on a box. Wobble, wobble... SPLAT! Stop that robot!" (10 words — ellipsis creates suspense, sound is earned)
+    Page 4: "There's the key! Can Lil... reach? Stop that robot!" (9 words — question makes the parent's voice go up)
+    Page 5: "CLICK goes the key. Still. Quiet. Stopped that robot!" (9 words — single-word sentences for impact, refrain TRANSFORMS from "Stop" to "Stopped")
 
+    EXAMPLE (BAD):
+    Page 1: "The robot climbs high! Stop it before the tower falls!" (too explainy — "before the tower falls" is adult logic, not toddler)
+    Page 2: "Lil jumps up. She cannot reach. Oh no, the robot!" (refrain is passive — observing, not commanding the goal)
+    Page 5: "CLACK! Lil turns the key. The robot stops. Yay, Lil!" (ends on empty "Yay" — the refrain is abandoned, not transformed, and the page ends on a celebratory exclamation instead of the RESOLVED refrain the child has been shouting all along)
+    
     WRITE LIKE — STUDY THESE THREE MECHANICS, DO NOT JUST NAME-CHECK THE BOOKS:
 
     MECHANIC 1 — *Dear Zoo* by Rod Campbell: Predictable two-beat structure that the toddler shouts along with. Setup beat → reveal beat. The page TURN is the joke.
@@ -418,7 +420,7 @@ def generate_story_gemini(
 
     # Age-specific vocabulary reinforcement — this fires LAST so Gemini remembers it
     if age_level in ("under_3",):
-        parts.append("⚠️ VOCABULARY REMINDER (under_3): Max 12 words per page. First-100-words only. Pure board book.")
+        parts.append("⚠️ VOCABULARY REMINDER (under_3): Max 15 words per page. First-100-words only. Pure board book. Use performance tools within the cap: single-word sentences, within-page mini-repetition (up, up, UP), ellipsis for suspense.")
     elif age_level == "age_3":
         parts.append("⚠️ VOCABULARY REMINDER (age_3): Max 25 words per page. 2-3 short sentences. Simple words only — if a 3-year-old wouldn't say it, don't write it.")
     elif age_level == "age_4":
