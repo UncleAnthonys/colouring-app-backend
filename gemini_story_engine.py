@@ -275,7 +275,19 @@ RULES:
 - **CHAPTER BOOK (age_8, age_9, age_10):** 150-250 words per page. Complex twists, metaphor, dry humour. Rich world-building matching detailed colouring pages.
     WRITE LIKE: *Charlie and the Chocolate Factory* by Roald Dahl, *The Worst Witch* by Jill Murphy, *The Boy in the Dress* by David Walliams. Layered sentences with texture. Metaphor lands without explanation. Dry wit. Inner life + outer action. Chapter-book feel — the reader is a reader now.
 
-* **Cozy Landing:** For under_3/age_3 — warm, safe ending ("SNUGGLE! Toastie rests on his warm plate."). For age_4+ — satisfying physical payoff, can be funny/messy. ALL AGES: end on action, never a summary sentence. The last line must belong to THIS story — if it could fit any story, rewrite it.
+* **Cozy Landing:** For under_3/age_3 — warm, safe ending ("SNUGGLE! Toastie rests on his warm plate."). For age_4+ — satisfying physical payoff, can be funny/messy. ALL AGES: end on specific action, character dialogue, or a line that names something belonging to THIS story's resolution. The last line is the READER'S final image — it must be specific.
+
+    TWO CATEGORIES OF BANNED ENDINGS:
+
+    (1) GENERIC NARRATOR WRAP-UPS. These could end any adventure story and so belong to none. NEVER end with: "[Name] is a hero!", "What an adventure!", "No more [X] today!", "They all went home.", "The [character] was safe and happy.", "Everyone cheered.", "[Character] smiled." — if you can swap the character's name and the sentence still works for any other story, it is generic. Rewrite.
+
+    (2) REFLEX SOUND WORDS. An unmotivated standalone sound word slammed onto the end because the story feels like it "needs a bang" — "YAY!", "CRASH!", "POP!", "BANG!", "WHOOSH!" — is broken when nothing in the actual scene produces that sound. A sound word only belongs at the end if the final physical action in the story literally makes it. "CLICK! The door opens." = good (the door clicking makes the click sound). "Pete hugs his mum. YAY!" = bad (hugging is silent, the YAY is reflex). "The shell hits the button. TWANG!" = good (the stretchy strap firing the shell makes the twang). "Everyone smiled. CRASH!" = bad (smiling doesn't crash).
+
+    COPY-PASTE TEST before finalising — read your last line and ask yourself: could this be the final line of a completely different story with a different hero and a different problem? If yes, rewrite. Test in practice: "Pete is a hero!" → fits any story → REWRITE. "CRASH!" as a final dangling sound → fits any story with impact → REWRITE (unless something in THIS scene actually crashes). "We're never going on a bear hunt again!" → fits only Bear Hunt → KEEP.
+
+    GOOD ENDINGS that pass the test: "We're never going on a bear hunt again!" (story-specific dialogue — only fits a bear hunt). "Stomped it flat!" (transformed refrain naming THIS story's goal). "'Stay there!' Pete laughs as the party lands on the sand." (dialogue + specific setting detail from this story). "SNUGGLE! Toastie rests on his warm plate." (sound is earned by the action AND the image is specific to this story). "The mouse sat on a stump and ate the nut." (specific character action, nothing generic).
+
+    The final beat belongs to the story world, not to the narrator signing off.
 
 **THE STORYBOARD (Scene Descriptions)**
 Each episode's art is generated independently with no memory of previous pages. You must provide a standalone cinematic prompt (80+ words) for each.
