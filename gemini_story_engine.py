@@ -1492,12 +1492,47 @@ Here are 3 STARTING SPARKS to inspire you. Adapt, remix, or ignore them — but 
 5. SOMETHING-GETS-TOO-BIG (dough, bubbles, puddle, stones, foam grows and blocks a door/path) — over-used. Try problem shapes that are NOT about scale-of-a-thing growing.
 6. GARDEN-WATER-RISING (watering can tipped / hose left running / pond overflowing / paddling pool flooding) — over-used. If the setting is a garden, make the chaos about something OTHER than rising water.
 7. SOMETHING-IS-STUCK-IN-HIGH-PLACE (cat in tree, ball in roof, kite in tree, balloon caught on branch) — over-used. Try problem shapes where the plot object isn't simply elevated.
-If you find yourself reaching for any of these seven, STOP and pick a different premise. Variety is the whole point. Reach instead for: a RESCUE, a DETECTIVE HUNT for something missing, a TIME-RUNNING-OUT EVENT, a MYSTERIOUS ARRIVAL, a MISBEHAVING CREATURE in an unexpected place, an INTERDEPENDENCY where the hero can't move until they help someone else, or a LOST-AND-RETURN story where something meaningful belongs to a named person the child can care about.
+8. CARRY-AWAY-BY-CREATURE (a squirrel/ladybird/robot/dog/bird carries the plot object away toward an obstacle) — this is just CATCH-THE-FLOATER wearing a costume. Replacing "the balloon floats away" with "the squirrel carries it away" is the SAME problem shape with a creature swapped in for wind. ALSO over-used. Do not pitch this. If your instinct is "an X is being carried/walked/scampered away by a Y, the hero must catch them before Z", STOP — same shape as catch-the-floater. Pick a different problem shape entirely.
+If you find yourself reaching for any of these EIGHT, STOP and pick a different premise. Variety is the whole point. Reach instead for: a RESCUE, a DETECTIVE HUNT for something missing, a TIME-RUNNING-OUT EVENT, a MYSTERIOUS ARRIVAL, a MISBEHAVING CREATURE in an unexpected place, an INTERDEPENDENCY where the hero can't move until they help someone else, or a LOST-AND-RETURN story where something meaningful belongs to a named person the child can care about.
 
 THESE ARE JUST EXAMPLES — invent your own. Each concept must be:
 1. VISUALLY RICH — each of the 5 episodes must look completely different when drawn as a colouring page. If you can't imagine 5 distinct illustrations, the concept isn't good enough.
 2. GRIPPING — a parent reads the title and the child says "I WANT THAT ONE!"
-3. VARIED ACROSS THE 3 PITCHES — no two can share the same setting or the same type of problem.
+3. VARIED ACROSS THE 3 PITCHES (CRITICAL — most-violated rule):
+The 3 pitches MUST come from 3 GENUINELY DIFFERENT problem-shape categories. Not 3 variations of the same shape. The user is meant to see 3 wildly different story options and pick their favourite — NOT 3 colours of the same story.
+
+WHAT COUNTS AS "SAME TYPE OF PROBLEM" (these are duplicates even if surface details differ):
+- Same plot object across all 3 pitches with different antagonists. ("a squirrel takes the pictures" + "a ladybird takes the pictures" + "a robot takes the pictures" = ONE problem shape with cosmetic swaps. REJECT.)
+- Same problem-shape category. (3 chase pitches, 3 rescue pitches, 3 time-pressure pitches all about the same kind of urgency.)
+- Same goal verb (3 "catch X" pitches, even if X varies. 3 "save Y" pitches, even if Y varies.)
+- Same emotional register and visual chaos type.
+
+WHAT COUNTS AS "GENUINELY DIFFERENT PROBLEM TYPE":
+The 3 pitches should draw from 3 different categories from this list:
+- RESCUE (creature/person in danger needs saving)
+- DETECTIVE HUNT (something is missing — find it; or someone is acting strange — find out why)
+- TIME-RUNNING-OUT EVENT (party / show / visitor / bus arriving — chaos must be fixed before they arrive)
+- MYSTERIOUS ARRIVAL (something unexpected has appeared — what is it, where did it come from, what does it want)
+- MISBEHAVING CREATURE in an unexpected place (a goose at the post office, a dog at the bakery counter, a pigeon in the school hall)
+- INTERDEPENDENCY (the hero can't do X until they help Y — can't get to school until they fix the gate, can't get the cake until they walk the lost dog home)
+- LOST-AND-RETURN (something meaningful to a named person has gone missing and the hero must return it)
+- BIG-EVENT-DISASTER (something has gone wrong AT a big event — the wedding flowers, the school photo day, the football match kickoff)
+- PHYSICAL CHAOS (a setting's normal objects are doing something unusual — kitchen oven won't stop cooking, library books won't stay shelved, fountain won't stop spraying)
+- CHASE/CATCH (someone or something escaping must be caught) — but if you pick this for one pitch, do NOT pick chase/catch for either of the other two pitches.
+
+EXPLICIT BAD EXAMPLE (do NOT generate pitches like these):
+Pitch 1: "Oli's baby pictures are being carried away by a squirrel across the slide."
+Pitch 2: "A ladybird is walking away with Oli's pictures toward a hedge."
+Pitch 3: "The toy robot is carrying Oli's pictures toward a high shelf."
+Why these are BAD: same plot object (Oli's pictures), same problem shape (creature/object carries plot object away), same goal verb (catch the carrier before they reach the obstacle). The user just sees the same story painted three different colours. REJECT all three and rewrite from three different categories.
+
+GOOD EXAMPLE (3 wildly different problem types for the same character):
+Pitch 1 (RESCUE): "A baby duckling has fallen into the storm drain at the corner of Oli's street and Oli must lower his baby photo album down on a string to scoop it out before the rain comes."
+Pitch 2 (TIME-PRESSURE EVENT): "Oli's school photo is in 20 minutes and his hair has stuck up in a HUGE quiff overnight — every comb breaks on it."
+Pitch 3 (MISBEHAVING CREATURE IN UNEXPECTED PLACE): "A neighbourhood seagull has flown into Oli's kitchen and is trying on every hat in the house — the kitchen looks like a costume shop."
+Why these are GOOD: completely different settings, completely different problem types, completely different goal verbs (rescue vs prepare-for-event vs herd-out-an-intruder), completely different visual atmospheres.
+
+RULE: before submitting your 3 pitches, check — would a CHILD picking from these three feel like they're choosing between three completely different adventures? Or like they're choosing between three slight remixes of the same one? If the latter, REWRITE at least two of them. The user MUST see meaningful variety, not surface variety.
 
 STEP 2 — NOW READ THE CHARACTER
 
