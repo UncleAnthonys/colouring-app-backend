@@ -172,6 +172,14 @@ def generate_full_story_task(self, job_id: str, params: dict):
             character_emotion = episode.get("character_emotion", "happy")
             parent_prompt = episode.get("parent_prompt")
             
+            # --- DIAGNOSTIC: log what's being sent to the image model ---
+            print(f"[WORKER] ===== PAGE {i+1} =====")
+            print(f"[WORKER] Page {i+1} title: {episode_title}")
+            print(f"[WORKER] Page {i+1} story_text: {story_text}")
+            print(f"[WORKER] Page {i+1} scene_description ({len(scene_prompt)} chars): {scene_prompt}")
+            print(f"[WORKER] Page {i+1} character_emotion: {character_emotion}")
+            print(f"[WORKER] ========================")
+            
             image_b64 = run_async(generate_adventure_episode_gemini(
                 character_data={"name": character_name, "description": character_description, "key_feature": character_key_feature},
                 scene_prompt=scene_prompt,
@@ -230,7 +238,8 @@ def generate_full_story_task(self, job_id: str, params: dict):
                 "page_url": page_url,
                 "raw_image_url": raw_image_url,
                 "mask_url": mask_url,
-                "story_text": story_text
+                "story_text": story_text,
+                "scene_description": scene_prompt
             })
         
         # === STEP 3: Generate front cover (last, so it references the final episode page for visual consistency) ===
@@ -343,6 +352,7 @@ Make it look like a real children's coloring book cover you'd see in a shop!
                     "raw_image_url": page.get("raw_image_url", ""),
                     "mask_url": page.get("mask_url", ""),
                     "story_text": page.get("story_text", ""),
+                    "scene_description": page.get("scene_description", ""),
                 })
             print(f"[WORKER] Saved {len(pages)} pages to sub-collection")
         except Exception as e:
