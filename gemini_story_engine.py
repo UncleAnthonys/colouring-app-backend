@@ -401,6 +401,25 @@ BAD: story says "the ball slides deeper into the toe". scene_description: "Molly
 GOOD: story says "the ball slides deeper into the toe". scene_description: "Molly has one arm plunged INTO the boot up to her elbow, fingers stretched wide, face determined. The boot's opening shows only darkness inside — the ball is NOT visible because it has slid too far down the toe."
 TEST: read the story_text. Does it claim the plot object is hidden/stuck/buried? If yes, check your scene_description — have you explicitly said the object is NOT visible? If no, REWRITE.
 
+(SINGULAR SUPPORTING CHARACTER RULE — companion to the SINGULAR PLOT OBJECT RULE):
+Every supporting character (cat, goat, squirrel, robot, knife, etc) exists in EXACTLY ONE PLACE per page. If your scene_description mentions the supporting character more than once (e.g. "the cat sleeps on the rug" and "the cat is grumpy in the corner"), the image model can interpret that as TWO cats and draw both. This breaks the page — the child sees two identical characters and gets confused about which one matters.
+RULE: name each supporting character ONCE per scene_description with one clear positional statement. If the character must be referenced again, use "the SAME cat" or "this single cat" to reinforce singularity. NEVER use vague positional language like "in the corner", "in the background", "somewhere nearby", or "to the side" — image models interpret vague positions as licence to draw the character in multiple plausible places. Pin the character to ONE specific spot: "on the rug to the LEFT of the fridge", "ON TOP OF the third shelf", "DIRECTLY BEHIND Bob's right shoulder".
+BAD: "A grumpy cat is sleeping on a rug in the corner." (Vague — which corner? Image model may draw cats in multiple corners.)
+BAD: "The cat is curled up on its rug. The grumpy cat watches from the kitchen." (Mentioned twice without "same" — image model reads two cats.)
+GOOD: "ONE single grumpy cat is curled asleep on a small rug, positioned in the BOTTOM-RIGHT corner of the kitchen, directly to the right of the fridge."
+GOOD: "The grumpy cat is asleep on the rug to the LEFT of the doorway. The SAME cat's tail is the only part moving — twitching slightly." (Same cat referenced twice with explicit "same".)
+TEST: count the number of times each supporting character is named in your scene_description. If a character is named more than once, the second mention MUST include "the same" or "this single" to anchor singularity. Vague positions ("in the corner", "in the background") MUST be replaced with directional anchors (LEFT OF / RIGHT OF / DIRECTLY BEHIND / IN FRONT OF a named landmark).
+
+(CONSCIOUSNESS STATE RULE — for premises that depend on a character being asleep, frozen, hiding, or otherwise NOT acting):
+If the story relies on a character being in a specific state of consciousness (asleep, frozen still, hiding, pretending, holding their breath), the scene_description MUST explicitly name that state on EVERY page where it applies. Image models default to drawing characters as ALERT and ACTIVE — so words like "twitching", "stirring", "moving" will be rendered as fully awake even when the story means a small partial movement.
+RULE: when a character must remain in a specific state (e.g. asleep), use explicit language: "EYES TIGHTLY SHUT, body completely still, head resting on paws, breathing slowly" instead of just "sleeping". When a character is in PARTIAL state (e.g. starting to wake), describe the partial state precisely: "EYES STILL CLOSED but one EAR has lifted slightly" or "ONE EYE has opened just a crack, but the cat has not raised its head from the rug."
+NEVER write "twitching" alone — image models render twitching as awake. NEVER write "stirring" — same problem. ALWAYS pair the partial-movement word with an explicit "still asleep" or "eyes still closed" anchor.
+BAD: story says the cat is still asleep but its tail is twitching. scene_description: "The cat's tail is curled up and twitching." (Image model: twitching = awake = renders alert cat with eyes open.)
+GOOD: same story. scene_description: "The cat is STILL FAST ASLEEP — eyes tightly shut, body curled in a ball on the rug, head down. Only the very TIP of the cat's tail flicks once, but the rest of the cat has not moved."
+BAD: "The cat opens one eye." (Could be drawn as fully alert.)
+GOOD: "The cat's body is STILL CURLED ASLEEP on the rug, head still resting on paws, but ONE EYE has opened just a slit, looking sideways at Bob. The cat has not lifted its head."
+TEST: read the story_text. Does the story rely on any character being in a specific consciousness state (asleep / hiding / frozen / pretending)? If yes, check your scene_description — have you EXPLICITLY named the state with anchor words ("EYES SHUT", "STILL ASLEEP", "BODY FROZEN", "HIDDEN BEHIND")? If you only used soft words like "twitching", "stirring", "moving", REWRITE with explicit state anchors.
+
 SELF-CHECK — run this before finalising any scene_description:
   Step 1: Read the story_text for this page aloud.
   Step 2: List every physical noun (table, balloon, cave, octopus, cake, kelp, rock).
@@ -411,7 +430,9 @@ SELF-CHECK — run this before finalising any scene_description:
   Step 7: If two or more characters are in the scene, did you specify spatial direction (AHEAD/BEHIND/LEFT/RIGHT/etc) between them? If no, add it.
   Step 8: Does your plot object appear exactly once in the image (no duplicates)? Re-read your scene_description — if the plot object is mentioned multiple times, explicitly state "the SAME [object]" or restructure to one clear position.
   Step 9: Has every character in your scene_description been introduced earlier (page 1, page 2, or in the pitch)? If a character is appearing fresh in a middle page, EITHER add them to an earlier page OR remove them.
-  Step 10: If even one noun, number, mid-action, direction, plot-object-count, or character-introduction is missing/violated, REWRITE IT. Do not ship the page.
+  Step 10: Does each supporting character appear in EXACTLY ONE pinned location? Check for vague phrases like "in the corner" or "in the background" — replace with directional anchors. If a supporting character is named more than once, the second mention must say "the same" or "this single".
+  Step 11: Does the story rely on any character being asleep, frozen, hiding, or pretending? If yes, have you EXPLICITLY anchored their state with phrases like "EYES SHUT", "STILL ASLEEP", "BODY FROZEN"? Soft words like "twitching" or "stirring" alone will render as fully awake — REWRITE with explicit anchors.
+  Step 12: If even one noun, number, mid-action, direction, plot-object-count, character-introduction, character-singularity, or consciousness-state is missing/violated, REWRITE IT. Do not ship the page.
 
 EXAMPLE (BAD) — story says: "The party tables float up, up, up on big balloons! Bubbles the Octopus giggles and blows another one."
 scene_description: "Pete stands on the coral reef looking worried, with a balloon floating above him. A small octopus nearby."
