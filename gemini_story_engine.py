@@ -223,7 +223,14 @@ RULES:
     Page 5 is NOT skeleton-locked — it delivers the payoff with a TRANSFORMED refrain ("Catch that puppy!" → "Caught that puppy!").
     Pages 2, 3, 4 MUST use the locked skeleton. Same shape. Same refrain. Different slot contents.
     
-    EXAMPLE GOOD REFRAINS (age_3): "Catch that puppy!" / "Hold on, ladybird, hold on!" / "Round and round we go!" / "Don't drop the egg!" / "We've got to go through it!"
+    EXAMPLE GOOD REFRAINS (age_3) — pick the SHAPE that matches your premise, do not default to "Catch that X!":
+      CATCH-COMMAND: "Catch that puppy!" / "Don't drop the egg!" / "Get that key!"
+      TRAVEL-COMMITMENT: "We've got to go through it!" / "Round and round we go!" / "Up, up, up we climb!"
+      STATEMENT-OF-WANT: "I want my mummy!" / "I want my teddy!" / "Where's my biscuit?"
+      STATEMENT-OF-STATE: "Mr Bear could not get to sleep." / "Still no biscuit." / "The cat will not move."
+      WRONG-AGAIN: "Too big!" / "Too soft!" / "Not that one!"
+      HOLD-ON: "Hold on, ladybird, hold on!" / "Stay there, balloon!"
+    Many of these are NOT chase verbs. The right shape depends on the premise — see the REFRAIN VERB TEST in the pitch rules.
     EXAMPLE BAD REFRAINS: "Quick, Pete, quick!" (vague — quick to do what?) / "Oh no!" (no information) / "What a day!" (not a goal) / a refrain that only makes sense on one page.
     
     SELF-CHECK BEFORE FINISHING:
@@ -831,12 +838,21 @@ BAD: "A bus full of bouncy balls." (Setting — no mission.)
 GOOD: "All the bouncy balls have come loose on the bus — the hero must collect them before the next stop, or they'll all roll out the open doors and be lost forever." (Goal: collect. Stakes: lost at next stop. Escalation built in — the stop is coming.)
 Every pitch MUST pass this test.
 
-*** TODDLER COMPREHENSION TEST (under_3 pitches ONLY — SKIP FOR ALL OTHER AGES) ***
-For under_3 pitches, the Mission Test is not enough. A pitch can be goal-shaped but still make no sense to a 2-year-old. Apply these three extra tests. Any fail = rewrite.
+*** TODDLER COMPREHENSION TEST (under_3 AND age_3 pitches ONLY — SKIP FOR age_4 AND ABOVE) ***
+For under_3 and age_3 pitches, the Mission Test is not enough. A pitch can be goal-shaped but still make no sense to a 2- or 3-year-old. Apply these three extra tests. Any fail = rewrite.
 
-(a) PROBLEM WORD TEST: Can you describe what's wrong using words a 2-year-old already says?
-   A 2-year-old's vocabulary includes: big, small, stuck, lost, wet, dirty, broken, too many, falling, running away, out, in, up, down, open, closed, hot, cold.
-   It does NOT include: absorbing, flooding, draining, blocking, leaking, overflowing, evaporating.
+CRITICAL FRAMING — READ THIS BEFORE THE TESTS BELOW:
+A 3-year-old can hold ONE idea at a time. Real age_3 storybooks (Bear Hunt, Peace at Last, Owl Babies, Dear Zoo, That's Not My Puppy) work because they each have ONE thing wrong: the family is going to find a bear; Mr Bear can't sleep; the baby owls' mum is gone; the wrong pet keeps arriving; this puppy isn't mine. Six words or fewer. ONE noun, ONE problem.
+Compound premises will produce flat, confusing stories no matter how well the structure is executed. If your pitch needs the words "before", "because", "while", or "and then" to explain what's wrong, the premise is too complex for a 3-year-old. REWRITE until the problem fits in one short sentence.
+BAD (compound): "The bus is yawning and the doors keep flapping shut on the teddy and Sheepy must reach the back seat before the bus driver finishes his yawn and drives the bus to the dark garage." (Anthropomorphic vehicle + spatial navigation + future consequence + chase. Four ideas. Toddler is lost on page 1.)
+GOOD (single-idea): "The puppy is running for the open gate." (One thing wrong. Toddler instantly understands.)
+GOOD (single-idea): "Mr Bear cannot get to sleep." (One feeling. Toddler understands tiredness.)
+GOOD (single-idea): "The teddy is on the back seat of the bus and the doors are closing." (One spatial problem. Two visible elements. Toddler tracks it.)
+
+(a) PROBLEM WORD TEST: Can you describe what's wrong using words a 2- or 3-year-old already says?
+   A 2- or 3-year-old's vocabulary includes: big, small, stuck, lost, wet, dirty, broken, too many, falling, running away, out, in, up, down, open, closed, hot, cold, fast, slow, tired, sleepy, behind, under, on top, around, away.
+   It does NOT include: absorbing, flooding, draining, blocking, leaking, overflowing, evaporating, ascending, retreating, accumulating, detaching.
+   Same rule for both ages: words a child uses unprompted at home. If you find yourself reaching for an adult-sentence verb, simplify.
    BAD: "Giant sponges have soaked up all the bathwater." (Toddler vocab fail — they don't know soaked up, don't picture water disappearing into a sponge, don't get why that's a problem.)
    BAD: "The drain is blocked and water is flooding the floor." (Blocked, flooding — adult words.)
    GOOD: "The rubber duck has fallen down the plughole — got to get her out!" (Fallen, out — toddler words. Duck, plughole — things they can see.)
@@ -849,18 +865,31 @@ For under_3 pitches, the Mission Test is not enough. A pitch can be goal-shaped 
    BAD: "Al must get the giant sponges out of the bath." (Sponges = plural, which one on each page? Toddler gets lost.)
    GOOD: "Dolly must get her yellow duck back from the drain." (One duck. Same duck every page. Toddler points and says "duck!")
 
-(c) REFRAIN VERB TEST: What verb will the child shout on every page? Does it match what the hero actually DOES to the plot object on pages 2, 3, 4?
-   The refrain verb must be a single toddler-physical action: catch, stop, get, pull, push, find, reach, grab, save, hide, fix.
-   Then CHECK — and this is the critical test: across pages 2, 3, 4, is the hero performing that verb ON THE PLOT OBJECT? The verb must act on the OBJECT named in the refrain, not on the hero's own body or her own movement through the scene.
-   If the refrain is "Catch that duck!" the hero must be catching the duck (or trying to) on every attempt — not chasing, not running after, not searching. CATCHING.
-   If the refrain is "Get down, cat!" every attempt must be about getting the cat down — coaxing, reaching, pulling, knocking. Not just the hero climbing up toward the cat.
-   BAD: Refrain "Poke that sponge!" while the hero pushes, pulls, wobbles, and reaches. Mismatch — the verb "poke" describes an action the hero never takes on the sponge.
-   BAD: Refrain "Pull that carrot!" while the hero carries the carrot and pulls HERSELF through corn, heaves HERSELF over a gate, tugs HERSELF under a tractor. The verb describes the hero's own movement, not any action on the carrot. The pitch chose a verb that doesn't match the actual story — the story is "escape the goat WITH the carrot" (running, dodging, hiding) not "pull the carrot out of something" (tugging a stuck vegetable). REWRITE: either change the refrain to match the actual story ("Save that carrot!", "Run, [name], run!", "Don't let the goat!") or change the story to actually be about pulling the carrot.
-   GOOD: Refrain "Catch that duck!" and on each page the hero tries a different CATCH on the duck — with hands, with a net, with a scoop.
-   GOOD: Refrain "Save that carrot!" and on each page the hero does something to SAVE the carrot — hiding it, lifting it, blocking the goat, running with it.
-   BEFORE finalising your pitch, pick the refrain verb and confirm: (1) it is a single physical action, (2) the plot object is the TARGET of that action, and (3) every middle-page attempt has the hero doing that action ON the plot object.
+(c) REFRAIN VERB TEST: What will the child shout on every page? Does it match what is actually happening in the story?
+   Refrains come in SIX SHAPES. Pick the one that fits your premise. Do NOT default to "Catch that X!" for every story — that has become an over-used pattern. Many of the best toddler refrains are NOT catch-commands.
+   THE SIX REFRAIN SHAPES (study the book each one comes from — these are the canonical age 2-3 patterns):
+     (i) CATCH-COMMAND — the hero must physically catch/stop/get something. "Catch that puppy!" / "Get that key!" / "Don't let it go!" Use this ONLY when the premise is genuinely a chase.
+     (ii) TRAVEL-COMMITMENT — the hero is going somewhere/through something. "We've got to go through it!" (Bear Hunt) / "Round and round we go!" / "Up, up, up we climb!" Use this when the story is a journey, not a chase.
+     (iii) STATEMENT-OF-WANT — a feeling repeated. "I want my mummy!" (Owl Babies) / "I just want to sleep!" / "Where's my teddy?" Use this when the premise is about a need, not an action.
+     (iv) STATEMENT-OF-STATE — the recurring problem named simply. "Mr Bear could not get to sleep." (Peace at Last) / "Still no biscuit." / "The puppy will not stop." Use this when the same thing keeps going wrong page after page.
+     (v) WRONG-AGAIN — each page reveals the wrong version of the goal. "He was too big!" (Dear Zoo) / "That's not my puppy — his nose is too soft!" (That's Not My Puppy) Use this when the hero keeps trying the wrong solution.
+     (vi) HOLD-ON / DON'T-LOSE — an urgent plea about something fragile. "Hold on, ladybird, hold on!" / "Don't drop the egg!" Use this when something precious is in danger.
+   PICK ONE SHAPE BEFORE WRITING. Different stories need different shapes. A sleepy bus story might want STATEMENT-OF-WANT ("I want my teddy!") not a CATCH-COMMAND. A bathtime story where the duck keeps slipping might want STATEMENT-OF-STATE ("The duck is wet again!") not a CATCH-COMMAND. A wardrobe story where the hero tries on the wrong clothes might want WRONG-AGAIN ("Too big! Too small!") not a CATCH-COMMAND.
+   COHERENCE TEST: read your draft refrain out loud and check it matches the actual story:
+   - For CATCH-COMMAND: the hero must be physically catching/stopping/getting the plot object on every middle page. Not chasing. Not searching. ACTING ON the object.
+   - For TRAVEL-COMMITMENT: the hero must actually be travelling on every middle page (through grass, into the wood, up the hill).
+   - For STATEMENT-OF-WANT: the want must be the same on every page (mummy, teddy, sleep) and the failure must be about not having it.
+   - For STATEMENT-OF-STATE: the state must be the same on every page (the bear can't sleep, the gate is still shut).
+   - For WRONG-AGAIN: each page shows a NEW wrong version of the same goal (a new wrong pet, a new wrong hat, a new wrong puppy).
+   - For HOLD-ON: the precious thing must be visibly in danger on every page.
+   BAD: Refrain "Catch that teddy!" while the hero stumbles through a wobbly bus, doors flap shut, a seat is too high. None of these are catches — they are obstacles in the way of REACHING the teddy. The refrain is a CATCH-COMMAND but the story is a TRAVEL-COMMITMENT. Pick a refrain that matches: "Get to the teddy!" / "Through the bus, to the back!" / "I want my teddy!"
+   BAD: Refrain "Pull that carrot!" while the hero carries the carrot and pulls HERSELF through corn, heaves HERSELF over a gate, tugs HERSELF under a tractor. The verb describes the hero's own movement, not any action on the carrot. The refrain is a CATCH-COMMAND but the story is an escape. REWRITE: "Save that carrot!" (CATCH-COMMAND) or "Run, [name], run!" (TRAVEL-COMMITMENT) — pick the shape that matches.
+   GOOD: Refrain "Catch that duck!" + on each page the hero tries a different CATCH on the duck — with hands, with a net, with a scoop. (CATCH-COMMAND, story matches.)
+   GOOD: Refrain "I want my teddy!" + on each page the hero faces a new obstacle reaching the teddy on the back seat. (STATEMENT-OF-WANT, story is about the want, no need to force a catch verb.)
+   GOOD: Refrain "Through the bath, through the soap, through the bubbles!" + each middle page is a different bath thing the hero wades through to reach the duck. (TRAVEL-COMMITMENT, Bear-Hunt style.)
+   BEFORE finalising your pitch, pick the refrain SHAPE first, then write the words, then confirm: (1) the shape matches the actual premise, (2) the refrain works the same way on every middle page, (3) you have NOT defaulted to CATCH-COMMAND if the story isn't a chase.
 
-Plus TWO more tests for under_3 pitches:
+Plus TWO more tests for under_3 and age_3 pitches:
 
 (d) STAKES TEST: If the hero does NOT fix the problem, what bad thing happens — to THEM or to someone/something they care about?
    A toddler story needs a CONSEQUENCE that gives the goal weight, not just a task. "The basket is high up and Alexander wants it" is not a story — it's an errand. Stories have pressure because the hero (or someone) actually CARES whether this gets fixed.
@@ -971,7 +1000,7 @@ Plus ONE more test — the one that prevents visually repetitive or teleporting 
    Each sub-spot must be simple enough that a toddler can draw it from a single word (pond, dock, beach, ladder, crate) but the action must be a physical verb the hero is literally doing (climbs, slides, ducks, swings, wades, squeezes). If your pitch lists sub-spots as nouns-only without verbs, rewrite it with verbs.
    NOTE: This test applies to under_3 and age_3 pitches only. Age_4+ stories can be more location-flexible; under_3 and age_3 need engaged sub-spots because the child reads the picture first and needs to see the hero PHYSICALLY DOING something with each backdrop.
 
-If ANY of tests (a) through (h) fail, rewrite the pitch. Under_3 toddlers forgive a lot — boring premises, simple words, tiny plots — but they do NOT forgive "wait, where did that come from?" on the final page.
+If ANY of tests (a) through (h) fail, rewrite the pitch. Under_3 and age_3 toddlers forgive a lot — boring premises, simple words, tiny plots — but they do NOT forgive "wait, where did that come from?" on the final page.
 
 (i) PREMISE EXCITEMENT TEST (CRITICAL — fires AFTER all other tests pass):
    This test runs LAST. By now the pitch may technically pass tests (a)-(h) — coherent goal, named obstacle, sound logic, valid stakes. But a pitch can pass every structural test and STILL be a dead premise. "Pete and the Windy Hat" passes everything and is still mundane.
