@@ -975,11 +975,21 @@ If ANY of tests (a) through (h) fail, rewrite the pitch. Under_3 toddlers forgiv
 
 (i) PREMISE EXCITEMENT TEST (CRITICAL — fires AFTER all other tests pass):
    This test runs LAST. By now the pitch may technically pass tests (a)-(h) — coherent goal, named obstacle, sound logic, valid stakes. But a pitch can pass every structural test and STILL be a dead premise. "Pete and the Windy Hat" passes everything and is still mundane.
-   Read the THEME_NAME and THEME_BLURB out loud. Honestly answer THREE questions:
+   Read the THEME_NAME and THEME_BLURB out loud. Honestly answer FOUR questions:
    (1) EXCITING: Would a 4-year-old hear this title and stop what they're doing? Or shrug?
    (2) NOVEL: Has this premise shape appeared in any of the last several stories the app has made? Or is it the same shape as ones we keep generating (catch-the-floater, save-from-water, things-grow-too-big)?
    (3) DISTINCTIVE: Could a child describe this story to another child in one sentence and have it sound DIFFERENT from every other kids' story? Or does it blur into "another character chases another thing"?
-   IF THE ANSWER TO ANY OF THE THREE IS WEAK — REJECT THE PITCH. Do NOT try to rescue a mundane premise by adding stakes. Stakes cannot save a boring idea. A "windy hat" is a windy hat no matter who's affected by it.
+   (4) INVERSION: Does the premise contain a CATEGORY VIOLATION — something that should be soft is hard, something that should be still is moving, something that should help is hurting, something that should be one thing has become another? This is the single highest-status move in toddler/preschool storybooks: the world breaks its own rules in a specific physical way, and the whole story sits on that one inverted idea.
+      BENCHMARK GOOD PITCHES (study these — the strongest stories the app has produced all share an inversion):
+        - "Pete and the Heavy Bubble Trouble" — a bubble machine should blow LIGHT BUBBLES; this one is blowing HEAVY STONES. Bubbles → stones. Soft → hard. Inversion.
+        - "Screwy and the Bread-Rockets" — a toaster should GENTLY POP toast; these toasters are LAUNCHING bread like rockets. Pop → rocket. Slow → fast. Inversion.
+        - "Paul and the Towering Toast Tumble" — a robot should STACK BREAD ON SHELVES; this robot is stacking it INTO A TOWER toward spinning ceiling fans. Helpful → catastrophic. Stationary stacking → vertical disaster. Inversion.
+      BENCHMARK BAD PITCH (passes tests 1-3 but has no inversion, produces a flat story):
+        - "Wallace and the Wobbly Cake" — a giant cake on a hill might SLIDE DOWN and squash an ant village. This is just GRAVITY. Cakes don't have a "should" — they'll roll downhill if put on a slope. There is no rule of the world being broken. The premise is a physics event, not a story. The result is a competent but mundane story.
+      RULE: If you cannot complete the sentence "In this premise, [X] should normally [Y], but instead it is [Z]" — you do not have an inversion, you have a physics event or a chase. REJECT and rewrite until the premise contains a category violation.
+      Inversion is NOT the same as escalation. "The puddle is getting bigger" is escalation, not inversion (puddles do that). "The puddle has turned into jelly" is inversion (puddles don't do that). The verb the world is doing must be the WRONG verb for that object.
+      This test is non-negotiable. Without inversion, the story will be flat no matter how well the structure is executed.
+   IF THE ANSWER TO ANY OF THE FOUR IS WEAK — REJECT THE PITCH. Do NOT try to rescue a mundane premise by adding stakes. Stakes cannot save a boring idea. A "windy hat" is a windy hat no matter who's affected by it.
    BAD PREMISES (technically pass tests a-h but fundamentally dead):
      - "Pete's hat is flying away — he must catch it before it lands on a hook." (A hat. On a hook. There is no story here.)
      - "Kiki's biscuit fell behind the sofa — she must reach it before tea time." (A snack. Behind a sofa. The child has lived this. It is not a story.)
