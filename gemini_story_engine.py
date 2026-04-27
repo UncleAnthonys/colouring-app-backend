@@ -1025,11 +1025,11 @@ If ANY of tests (a) through (h) fail, rewrite the pitch. Under_3 and age_3 toddl
 
 (i) PREMISE EXCITEMENT TEST (CRITICAL — fires AFTER all other tests pass):
    This test runs LAST. By now the pitch may technically pass tests (a)-(h) — coherent goal, named obstacle, sound logic, valid stakes. But a pitch can pass every structural test and STILL be a dead premise. "Pete and the Windy Hat" passes everything and is still mundane.
-   Read the THEME_NAME and THEME_BLURB out loud. Honestly answer FOUR questions:
+   Read the THEME_NAME and THEME_BLURB out loud. Honestly answer the questions below — for age_4 and above, answer ALL FOUR. For under_3 and age_3, SKIP question (4) INVERSION and answer the GROUNDED FANTASY TEST that follows instead.
    (1) EXCITING: Would a 4-year-old hear this title and stop what they're doing? Or shrug?
    (2) NOVEL: Has this premise shape appeared in any of the last several stories the app has made? Or is it the same shape as ones we keep generating (catch-the-floater, save-from-water, things-grow-too-big)?
    (3) DISTINCTIVE: Could a child describe this story to another child in one sentence and have it sound DIFFERENT from every other kids' story? Or does it blur into "another character chases another thing"?
-   (4) INVERSION: Does the premise contain a CATEGORY VIOLATION — something that should be soft is hard, something that should be still is moving, something that should help is hurting, something that should be one thing has become another? This is the single highest-status move in toddler/preschool storybooks: the world breaks its own rules in a specific physical way, and the whole story sits on that one inverted idea.
+   (4) INVERSION (AGE_4 AND ABOVE ONLY — under_3 and age_3 MUST SKIP this question and use the GROUNDED FANTASY TEST below instead): Does the premise contain a CATEGORY VIOLATION — something that should be soft is hard, something that should be still is moving, something that should help is hurting, something that should be one thing has become another? This is the single highest-status move in age_4+ storybooks: the world breaks its own rules in a specific physical way, and the whole story sits on that one inverted idea.
       BENCHMARK GOOD PITCHES (study these — the strongest stories the app has produced all share an inversion):
         - "Pete and the Heavy Bubble Trouble" — a bubble machine should blow LIGHT BUBBLES; this one is blowing HEAVY STONES. Bubbles → stones. Soft → hard. Inversion.
         - "Screwy and the Bread-Rockets" — a toaster should GENTLY POP toast; these toasters are LAUNCHING bread like rockets. Pop → rocket. Slow → fast. Inversion.
@@ -1039,7 +1039,31 @@ If ANY of tests (a) through (h) fail, rewrite the pitch. Under_3 and age_3 toddl
       RULE: If you cannot complete the sentence "In this premise, [X] should normally [Y], but instead it is [Z]" — you do not have an inversion, you have a physics event or a chase. REJECT and rewrite until the premise contains a category violation.
       Inversion is NOT the same as escalation. "The puddle is getting bigger" is escalation, not inversion (puddles do that). "The puddle has turned into jelly" is inversion (puddles don't do that). The verb the world is doing must be the WRONG verb for that object.
       This test is non-negotiable. Without inversion, the story will be flat no matter how well the structure is executed.
-   IF THE ANSWER TO ANY OF THE FOUR IS WEAK — REJECT THE PITCH. Do NOT try to rescue a mundane premise by adding stakes. Stakes cannot save a boring idea. A "windy hat" is a windy hat no matter who's affected by it.
+
+   (4-alt) GROUNDED FANTASY TEST (under_3 AND age_3 ONLY — SKIP for age_4 and above): Does the premise's fantasy stay within toddler-friendly categories?
+      Toddlers (2-3 years old) cannot follow MECHANISM-FANTASY — chains of impossible cause-and-effect like "tag whistles → boots sneeze → boots fly". Their brains are still building real-world causal models. They cannot hold "the world's normal rules are broken in this specific way" AND "track the consequences of that broken rule" simultaneously. Stories that ask them to do this just confuse them — even if every individual sentence is simple.
+      What toddlers CAN handle, drawn from canonical age 2-3 books (Bear Hunt, Owl Babies, Dear Zoo, Where's Spot?, Pete the Cat, Hungry Caterpillar, Llama Llama, Brown Bear):
+        ✅ ANTHROPOMORPHIC CHARACTERS in real situations: a talking llama goes to bed; baby owls miss their mum; a cat needs his shoes. The fantasy is "this animal/object can talk and feel" but the SITUATION is real (bedtime, missing mum, walking down a road). No mechanism-fantasy.
+        ✅ EXISTENCE-CLAIM FANTASY: a creature, place, or thing simply IS, and the toddler accepts it. The Gruffalo just exists. A garden hedge IS a maze. A magic mitten IS warm enough for many animals. The toddler doesn't need to track HOW it works — only WHAT happens next.
+        ✅ CARTOONIFIED REAL PHYSICS: real-world cause-and-effect, slightly stylised. Pete steps in strawberries → his shoes turn red (real: juice stains). Wind blows the picnic blanket away (real: wind moves cloth). Cake on a hill rolls down (real: gravity). The fantasy is just the dramatic intensity, not the mechanism.
+        ✅ FEELINGS AND ROUTINES: bedtime, mealtime, missing someone, getting lost, being scared, being grumpy. The "problem" is internal or social, not mechanism-driven.
+      What toddlers CANNOT handle (and what gets rejected):
+        ❌ MECHANISM-FANTASY: a chain of impossible cause-and-effect that the toddler must track. A whistling tag making boots sneeze and fly. A bouncy puddle that pushes a duck around. A yawning bus whose doors flap shut on a teddy. A sneezing letter box that fires cards.
+        ❌ OBJECTS GAINING BIOLOGICAL FUNCTIONS: things that don't have noses can't sneeze. Things that don't have mouths can't yawn. Things that don't have lungs can't whistle. If your premise has an inanimate object doing something biological, REJECT.
+        ❌ MULTI-STEP IMPOSSIBLE CHAINS: even if step 1 is acceptable, if you need 2+ impossible-physics jumps to get to the problem, REJECT. (The rule of thumb: one "this-just-IS" fantasy is fine. Two is too many to track.)
+      BENCHMARK GOOD pitches (recent stories that worked at under_3/age_3):
+        - "Bob is hungry but the floor is covered in squeaky toys and the cat must not wake." (Anthropomorphic monkey + real situation. Squeaky toys are real. Sleeping cat is real. No mechanism-fantasy.)
+        - "Amy's garden hedge has turned into a maze and her boot is lost." (Existence-claim fantasy: the maze just IS. Lost boot is real.)
+        - "Wind grabs the picnic blanket and the sandwiches go flying." (Cartoonified real physics. Wind moves cloth. Cloth moves food. Real chain.)
+      BENCHMARK BAD pitches (recent stories that broke at under_3/age_3 because of mechanism-fantasy):
+        - "Bus is yawning and the doors keep flapping shut on a teddy." (Bus has biology. Multi-step mechanism. Toddler is lost.)
+        - "Letter box is sneezing and a birthday card is zooming away." (Letter box has biology. Mechanism-fantasy.)
+        - "Tag whistles when Kiki moves and makes the boots sneeze and fly." (Three-step impossible chain. Boots have biology.)
+        - "The puddle is bouncy and a duck is being bounced further away." (Puddle has new physics. Mechanism-fantasy.)
+      THE TEST: ask "is the fantasy here something the toddler accepts and watches, or something they have to reason about?" If they have to reason about HOW the world is broken, the premise will fail. REJECT pitches that require the toddler to track impossible cause-and-effect chains.
+      For under_3 and age_3 the answer to question (4) INVERSION is IRRELEVANT — toddlers do not need or want category violations. Real situations with anthropomorphic characters, existence-claim fantasies, or cartoonified real physics are what works.
+
+   IF ANY ANSWER IS WEAK — REJECT THE PITCH. (For age_4+: any of the FOUR questions failing. For under_3/age_3: any of questions 1-3 failing, OR the GROUNDED FANTASY TEST failing.) Do NOT try to rescue a mundane premise by adding stakes. Stakes cannot save a boring idea. A "windy hat" is a windy hat no matter who's affected by it.
    BAD PREMISES (technically pass tests a-h but fundamentally dead):
      - "Pete's hat is flying away — he must catch it before it lands on a hook." (A hat. On a hook. There is no story here.)
      - "Kiki's biscuit fell behind the sofa — she must reach it before tea time." (A snack. Behind a sofa. The child has lived this. It is not a story.)
