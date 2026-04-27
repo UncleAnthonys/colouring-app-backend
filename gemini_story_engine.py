@@ -1016,8 +1016,10 @@ Plus TWO more tests for under_3 and age_3 pitches:
 
    ONLY VALID EXCEPTION — CAUSE-character, and ONLY IF they're physically ON the page in every attempt:
    A cause-character works ONLY when they ARE the action — i.e. they're visible and doing something on every single page 2–5. The toy dog running with the sock works because the dog is RUNNING WITH THE SOCK on every page. The dog doesn't need its own separate story beats — it IS the chase.
-   VALID: "A cheeky squirrel has grabbed Alex's biscuit and won't let go — Alex has to get his biscuit back before the squirrel scoffs the lot." (The squirrel is holding the biscuit on every page. The squirrel doesn't need its own narrative — the squirrel IS the obstacle.)
+   VALID: "A cheeky magpie has grabbed Alex's biscuit and won't let go — Alex has to get his biscuit back before the magpie pecks the lot." (The magpie is holding the biscuit on every page. The magpie doesn't need its own narrative — the magpie IS the obstacle.)
    VALID: "Meg's toy dog has pinched Dad's sock and is zooming around the room — got to catch the sock." (The dog is on every page with the sock.)
+   VALID: "A bossy goose has waddled off with Frankie's hat and is heading for the pond — got to grab the hat before it hits the water." (The goose is on every page with the hat.)
+   IMPORTANT: the cause-character in YOUR pitch must NOT be a squirrel. Squirrels are over-used in this prompt's worked examples and the model keeps reaching for them by default. Pick a different creature with a distinctive silhouette (see WORKED-EXAMPLE PROP ROTATION RULE below).
 
    BANNED AT UNDER_3 — the BENEFICIARY pattern:
    Do NOT pitch an under_3 story with a separate character who NEEDS SAVING. It does not fit in 15-word pages. The beneficiary gets named on page 2, disappears from the middle of the story because there's no word-room to track them, then reappears in the ending — and a 2-year-old cannot follow it.
@@ -1038,25 +1040,25 @@ Plus TWO more tests for under_3 and age_3 pitches:
    
    THE RULE FOR PAGES 2–5:
    The PROBLEM-OBJECT must be the subject or central focus of the sentence on every page 2–5. Every page = something NEW involving the object, but equivalent in weight to the other pages.
-   Good variation patterns to draw from (mix and match across your 4 middle pages — don't use only one type):
-     - The object DOES SOMETHING: "The hose wiggles!" / "The hose sprays the cat!" / "The hose hides in the flowers!"
-     - The object GOES SOMEWHERE: "The hose tangles in the tree!" / "The hose goes under the bench!" / "The hose zooms past the cat!"
-     - The object INTERACTS WITH ANOTHER THING: "The frog hops OVER the hose!" / "The hose sprays the teddy!" / "The hose tickles the cat's nose!"
-     - The HERO TRIES ONE WAY AND FAILS: "Pete reaches — MISS!" / "Pete jumps — NOPE!" / "Pete tiptoes — it hides!"
+   Good variation patterns to draw from (mix and match across your 4 middle pages — don't use only one type). The illustrative prop here is a runaway KITE — note that this kite is purely an example of STRUCTURE; do NOT use a kite (or a hose, or a ball, or a balloon) as the prop in your own pitch — see WORKED-EXAMPLE PROP ROTATION RULE below for what to reach for instead:
+     - The object DOES SOMETHING: "The kite swoops!" / "The kite tugs hard!" / "The kite ducks behind the chimney!"
+     - The object GOES SOMEWHERE: "The kite catches on the fence!" / "The kite snags on the washing line!" / "The kite zooms over the gate!"
+     - The object INTERACTS WITH ANOTHER THING: "The cat swipes UP at the kite!" / "The kite tickles the laundry!" / "The kite tangles round the bird table!"
+     - The HERO TRIES ONE WAY AND FAILS: "Pete reaches — MISS!" / "Pete jumps — NOPE!" / "Pete tiptoes — it ducks!"
 
-   BAD (Pete-and-the-Garden-Snake failure mode — unrelated events on each page):
-     Page 2: "The hose jumps and wiggles. The teddy is wet." (hose does something ✓)
-     Page 3: "A frog hops. Boing, boing!" (frog's activity, not hose's — unrelated)
-     Page 4: "It hides in the flowers." (back to hose, but only one word about it)
-     Page 5: "It wiggles by the big rock." (weak — same as page 2's wiggle)
-     Problem: pages 3 is off-topic. Pages 4-5 are weakly hose-focused. There is no SERIES of equivalent-weight variations.
+   BAD (failure mode — unrelated events on each page):
+     Page 2: "The kite tugs and swoops. The cat watches." (kite does something ✓)
+     Page 3: "A robin sings. Tweet, tweet!" (robin's activity, not kite's — unrelated)
+     Page 4: "It hides by the chimney." (back to kite, but only one word about it)
+     Page 5: "It swoops by the big tree." (weak — same as page 2's swoop)
+     Problem: page 3 is off-topic. Pages 4-5 are weakly kite-focused. There is no SERIES of equivalent-weight variations.
 
-   GOOD (every page is an equivalent-weight hose-variation):
-     Page 2: "Swoosh! The hose sprays the flowers! Catch that hose!"
-     Page 3: "Wiggle wiggle! The hose tickles the cat. Catch that hose!"
-     Page 4: "The hose hides behind the bench! Catch that hose!"
-     Page 5: "Bump! The frog jumps OVER the hose. Catch that hose!"
-     Every page involves the hose as the subject or centre. Every page is a different thing. No page is "bigger" than the others — it's variation, not escalation. The frog on page 5 interacts with the hose (good) rather than doing its own thing (bad).
+   GOOD (every page is an equivalent-weight kite-variation):
+     Page 2: "Swoop! The kite catches on the fence! Catch that kite!"
+     Page 3: "Tug tug! The kite tugs at the laundry. Catch that kite!"
+     Page 4: "The kite hides behind the chimney! Catch that kite!"
+     Page 5: "Bump! The cat swipes UP at the kite. Catch that kite!"
+     Every page involves the kite as the subject or centre. Every page is a different thing. No page is "bigger" than the others — it's variation, not escalation. The cat on page 5 interacts with the kite (good) rather than doing its own thing (bad).
 
    TEST: Read your 4 middle pages as a list. Can you summarise them as "the [problem-object] does X, then Y, then Z, then W"? If yes → variation structure is working. If any middle page summary doesn't mention the problem-object, it's off-topic — rewrite it.
 
@@ -1345,8 +1347,9 @@ Think of the best toddler books: Dear Zoo, That's Not My Teddy, We're Going on a
 
 *** THE TODDLER TEST ***
 Can you say the whole story in one sentence a 2-year-old would understand?
-GOOD: "The ball keeps rolling away and she has to catch it!" — a toddler gets this instantly.
-GOOD: "The tower is falling and he has to catch the star!" — clear, physical, urgent.
+GOOD: "The puppy has run into the long grass and dinner is ready!" — a toddler gets this instantly.
+GOOD: "The wellington boot is stuck in the mud and the bus is coming!" — clear, physical, urgent.
+(Note: these props — puppy, wellington boot — are illustrations. Do NOT copy these into your pitch. Pick a different prop with a distinctive silhouette — see WORKED-EXAMPLE PROP ROTATION RULE below.)
 BAD: "The sunflowers are growing and she needs to find the gnome before the petals fall." — too many unconnected ideas.
 
 *** CONCEPT RULES ***
@@ -1365,7 +1368,7 @@ BAD: "The sunflowers are growing and she needs to find the gnome before the peta
 *** BLURB TONE ***
 Blurbs must sound like a mess happening RIGHT NOW. Nouns and noises only.
 BAD: "Kiki learns about sharing with her friends at the park."
-GOOD: "The ball won't stop bouncing and it's heading straight for the pond!"
+GOOD: "The wooden spinning top has whizzed under the sofa and tea is in two minutes!"
 NO questions. State the chaos.
 """,
 
@@ -1664,6 +1667,25 @@ Here are 3 STARTING SPARKS to inspire you. Adapt, remix, or ignore them — but 
 7. SOMETHING-IS-STUCK-IN-HIGH-PLACE (cat in tree, ball in roof, kite in tree, balloon caught on branch) — over-used. Try problem shapes where the plot object isn't simply elevated.
 8. CARRY-AWAY-BY-CREATURE (a squirrel/ladybird/robot/dog/bird carries the plot object away toward an obstacle) — this is just CATCH-THE-FLOATER wearing a costume. Replacing "the balloon floats away" with "the squirrel carries it away" is the SAME problem shape with a creature swapped in for wind. ALSO over-used. Do not pitch this. If your instinct is "an X is being carried/walked/scampered away by a Y, the hero must catch them before Z", STOP — same shape as catch-the-floater. Pick a different problem shape entirely.
 If you find yourself reaching for any of these EIGHT, STOP and pick a different premise. Variety is the whole point. Reach instead for: a RESCUE, a DETECTIVE HUNT for something missing, a TIME-RUNNING-OUT EVENT, a MYSTERIOUS ARRIVAL, a MISBEHAVING CREATURE in an unexpected place, an INTERDEPENDENCY where the hero can't move until they help someone else, or a LOST-AND-RETURN story where something meaningful belongs to a named person the child can care about.
+
+WORKED-EXAMPLE PROP ROTATION RULE (CRITICAL — the prompt teaches by example, do NOT copy the example props):
+This prompt contains many worked examples that use a small handful of props and creatures to ILLUSTRATE STRUCTURE — squirrels, garden hoses, balls, balloons, kites, biscuits, cats. These specific props appear repeatedly because they make clear structural illustrations, NOT because they are good prop choices for your pitch. The model has been observed copying these specific props directly into generated pitches, which makes every story feel the same.
+
+YOUR PITCH MUST NOT use any of these over-used props/creatures as its central plot object or antagonist:
+  OVER-USED CREATURES — DO NOT USE: squirrel, ladybird, friendly puppy-as-antagonist, generic cat-as-antagonist
+  OVER-USED PROPS — DO NOT USE: garden hose (especially "wiggling like a snake"), bouncy ball, plain ball, rolling ball toward water, balloon (especially floating away), kite (especially caught in a tree), basket caught up high
+
+Instead, deliberately reach for prop and creature combinations the prompt has NOT pre-chewed for you. Variety here is non-negotiable — a child generating their second or third Little Lines story should not see the same animal stealing the same kind of object across different stories.
+
+UNDER-USED CREATURES TO REACH FOR (any of these is a fresher choice than a squirrel):
+  - a cheeky magpie / a bossy goose / a curious hedgehog / a sleepy tortoise / a clever fox / a bold robin / a stubborn donkey / a fussy parrot / a nosy crow / a wandering chicken / a daft pigeon / a determined snail / a chatty starling / a beach crab / a slow-moving slug / a friendly seagull / a meerkat / a wide-eyed owl / a bouncy frog / a grumpy badger
+
+UNDER-USED PROPS TO REACH FOR (any of these is a fresher choice than a hose or a ball):
+  - a wellington boot / a tea towel / a wooden spinning top / a wind-up toy / a paper aeroplane / a lunchbox / a recorder / a fishing net / a paint pot / a magnifying glass / a torch / a bird feeder / a watering can / a feather duster / a butterfly net / a bucket / a flannel / a slipper / a hairbrush / a colander / a tin of biscuits with the lid stuck / a wooden spoon (only if the antagonist is NOT a squirrel) / a wind chime / a kite tail (not the kite itself) / a pinwheel / a snow globe / a music box
+
+THE TEST: read your three pitches aloud. Is the antagonist a squirrel in any of them? REWRITE. Is the central prop a ball, balloon, kite, or hose in any of them? REWRITE. Is the prop something a child would actually find in the named setting AND something with a distinctive black-and-white silhouette a non-reading 2-year-old can identify? If yes to both → keep it. If no to either → swap.
+
+This rule fires AFTER the OBSTACLE FIELD MECHANICAL TEST and the VISUAL UNAMBIGUITY TEST. A pitch can pass those two tests and still fail this one if it reaches for the over-used props.
 
 THESE ARE JUST EXAMPLES — invent your own. Each concept must be:
 1. VISUALLY RICH — each of the 5 episodes must look completely different when drawn as a colouring page. If you can't imagine 5 distinct illustrations, the concept isn't good enough.
