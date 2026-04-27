@@ -1758,6 +1758,17 @@ Return ONLY valid JSON. Generate 3 theme PITCHES (no full episodes yet). Here is
 
 ⚠️ CRITICAL — ABOUT "feature_used": This field records which aspect of the character appears in the story. It does NOT mean the story must BE ABOUT that feature. The story concept comes FIRST — then you note which character trait naturally fits. If no single feature drives the plot, use "general appearance" or "personality". NEVER start by picking a feature and building a story around it. START with a great story concept, THEN fill in feature_used afterwards.
 
+⚠️ CRITICAL — HUMAN CHARACTERS (READ CAREFULLY):
+A photograph of a real human being — child, parent, grandparent, sibling, friend, pet-owner — rarely contains anatomical features that work as story tools. Hair (short, long, curly, straight, grey), face shape, t-shirt patterns, glasses frames, and shoe types are NOT story-grade features. They are illustration cues for the artist, not narrative hooks. If your `feature_used` ends up being "short hair", "curly hair", "grey hair", "glasses", "stripy t-shirt", "blue trousers", or anything similarly mundane, the resulting story will have a forced, twee resolution where the hair magically catches a butterfly or the stripes confuse a robot. This is the worst kind of story the engine can produce. The same trap applies whether the human is 2 years old, 35 years old, or 75 years old — adults' hair and clothes are no more story-grade than a child's.
+
+When the hero (or any main character) is a human, pick `feature_used` in this priority order:
+  1. ACTIVITY/OBJECT from the character profile — if the photo shows the person riding a bike, holding a fishing rod, in football kit, with a paintbrush, in chef's whites, holding a guitar, on a swing, etc., use THAT. Activities and held objects make excellent story drivers ("rides a bike", "carries a paintbrush", "wears football boots", "plays guitar"). Build the story around the activity.
+  2. SECOND CHARACTER'S FEATURE — if a second character is present and HAS a distinctive feature (a teddy bear with button eyes, a dog with a long tail, a cat with a white paw, a fantasy creature with antlers), use THE SECOND CHARACTER'S feature as `feature_used`. The hero is the human, but the resolution can come from the companion's distinctive feature. A teddy's long ears are a better story tool than a person's curly hair, every time.
+     EXCEPTION: if BOTH characters are human (e.g. child + parent, child + grandparent, two siblings), neither has a feature-grade hook. Skip to priority 3.
+  3. PERSONALITY OR GENERAL APPEARANCE — if no activity and no feature-bearing second character, use "personality" or "general appearance" and write a story that resolves through ARRIVAL, RETURN, TRANSFORMATION, COMPLETION, or HELP-FROM-OTHERS — not through a hero-feature payoff. Stories with multiple human characters (child + parent, child + grandparent, two siblings together) work especially well this way: the story is about doing something together, and the resolution comes from the characters working as a team or one helping the other. The story doesn't need a special body part to drive the resolution — it just needs to be a fun adventure the characters share.
+
+NEVER pick "short hair", "curly hair", "blonde hair", "brown hair", "grey hair", "long hair", "tied-back hair", "stripy top", "polka dot dress", "blue jeans", "trainers", "glasses", "beard", or similar superficial style cues as `feature_used` for any human character. These are not features — they are descriptions. If your only options are these, fall back to priority 2 or 3 above.
+
 {{
   "character_name": "Example Monster",
   "age_level": "age_5",
@@ -1794,6 +1805,68 @@ Return ONLY valid JSON. Generate 3 theme PITCHES (no full episodes yet). Here is
     }}
   ]
 }}
+
+⚠️ HUMAN CHARACTER EXAMPLES — WORKED CASES FOR REAL-PERSON PHOTO UPLOADS:
+The example above (Example Monster) is a fantasy creature with anatomical features (big eye, long arms, spiky head) that drive the resolution. Real human beings rarely have such features. Here are the patterns to use when the hero (or any character) is a real human — child, parent, grandparent, sibling, friend:
+
+PATTERN 1 — ACTIVITY-DRIVEN (use when the photo shows an activity/object):
+{{
+  "theme_id": "the_runaway_kite",
+  "theme_name": "The Runaway Kite at the Park",
+  "theme_description": "A sudden gust pulls Sam's kite high into the trees and Sam must use their bike to chase it across the park.",
+  "theme_blurb": "Sam's kite has flown into the tallest tree and the wind is taking it further!",
+  "feature_used": "rides a bike",
+  "want": "reach the kite before it disappears over the hill — it was a birthday present from Grandma",
+  "obstacle": "the path through the park keeps splitting and the kite keeps changing direction",
+  "twist": "Sam pedals fast down the steepest slope and the bike's speed lets them grab the kite string just as it dips low"
+}}
+The bike (named in the photo's ACTIVITY/OBJECTS section) IS the feature. Story is built around the activity. Works for humans of any age.
+
+PATTERN 2 — SECOND-CHARACTER-DRIVEN (use when a teddy/pet/toy/fantasy companion is the second character):
+{{
+  "theme_id": "the_lost_park_path",
+  "theme_name": "The Lost Path Home",
+  "theme_description": "Mia and her teddy bear got lost in the wood and the teddy's keen-eared hearing leads them home.",
+  "theme_blurb": "Mia and Teddy took a wrong turn and now every path looks the same!",
+  "feature_used": "Teddy's big floppy ears",
+  "want": "find the way home before it gets dark — Mum is waiting with tea",
+  "obstacle": "every path looks the same and Mia keeps walking in circles",
+  "twist": "Teddy's big floppy ears catch the faint sound of Mum calling, so Mia follows where the ears point"
+}}
+The HERO is Mia (human) but the FEATURE comes from the SECOND CHARACTER (Teddy). Use this when a human is uploaded with a non-human companion that has a distinctive feature.
+
+PATTERN 3 — TEAMWORK-DRIVEN (use when both characters are human — child + parent, child + grandparent, siblings, friends):
+{{
+  "theme_id": "the_birthday_cake_rescue",
+  "theme_name": "The Birthday Cake Rescue",
+  "theme_description": "Lily and Grandma are baking Mum's birthday cake and the icing has gone wrong — they must fix it before the party guests arrive.",
+  "theme_blurb": "Lily and Grandma's icing has melted into a puddle and the party starts in 20 minutes!",
+  "feature_used": "general appearance",
+  "want": "get the cake ready before the guests arrive — Mum has no idea about the surprise party",
+  "obstacle": "the icing is too runny, the sprinkles keep falling off, and the kitchen is getting messier",
+  "twist": "Grandma remembers her old trick of putting the cake in the freezer for ten minutes while Lily mixes a thicker icing — together they save the cake just as the doorbell rings"
+}}
+Two human characters working together. NO anatomical feature drives this. The resolution is TEAMWORK + MEMORY (Grandma's trick) + EFFORT. `feature_used` is "general appearance" because no feature is load-bearing. The story is about the experience the characters share, not about what their bodies can do.
+
+PATTERN 4 — SITUATIONAL RESOLUTION (use when no activity AND no second character with features):
+{{
+  "theme_id": "the_missing_shoes_morning",
+  "theme_name": "The Missing Shoes Before School",
+  "theme_description": "Tom's shoes have vanished on a school morning and he must hunt the house to find them before the bus arrives.",
+  "theme_blurb": "Tom's shoes have disappeared and the school bus is nearly here!",
+  "feature_used": "general appearance",
+  "want": "find both shoes before the school bus arrives — Mum is waiting at the door",
+  "obstacle": "the shoes are nowhere obvious — not by the door, not under the bed, not in the hallway",
+  "twist": "Tom remembers he left them by the dog basket last night and finds the dog has dragged them under the sofa"
+}}
+No anatomical feature, no activity, no second character — but the story works because it's a real-life situation a child knows. The resolution comes from MEMORY/HELP, not a feature. `feature_used` honestly says "general appearance" because no feature drives this story.
+
+NEVER produce pitches like:
+- "feature_used": "curly hair" → "twist: Tom's curls catch the runaway hat" (TWEE — hair isn't a tool)
+- "feature_used": "stripy t-shirt" → "twist: the stripes confuse the angry cat" (NONSENSE)
+- "feature_used": "blonde hair" / "grey hair" → anything (NOT A FEATURE)
+- "feature_used": "glasses" → "twist: Grandpa's glasses catch the sunlight to start a fire" (CONTRIVED)
+- "feature_used": "short hair" → "twist: short hair lets him squeeze through a gap" (FAKE — short hair doesn't make you smaller)
 
 ⚠️ CRITICAL: OBSTACLE and TWIST must form ONE coherent cause-and-effect chain.
 The obstacle creates a specific problem. The twist must solve THAT EXACT problem — not a different one.
