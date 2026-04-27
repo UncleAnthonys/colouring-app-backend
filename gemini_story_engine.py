@@ -1765,6 +1765,50 @@ BAD (fails the test): "Al and the Bouncy Hair Day" — 5 pages of a character's 
 GOOD (passes the test): "Sheepy and the Upside-Down Zoo" — page 1: entrance gate flipping, page 2: penguins on the ceiling, page 3: elephant dangling from a tree, page 4: Sheepy climbing the gift shop wall, page 5: everything flips back with a giant splash
 GOOD (passes the test): "Al and the Runaway Robot Chef" — page 1: kitchen chaos, page 2: robot loose in the dining room, page 3: food fight in the garden, page 4: chase through the park, page 5: robot makes the perfect cake by accident
 
+The 5-PAGE COLOURING TEST above is the goal. The OBSTACLE FIELD MECHANICAL TEST and VISUAL UNAMBIGUITY TEST below are the mechanical checks that operationalise it — run them on every pitch before submitting.
+
+OBSTACLE FIELD MECHANICAL TEST (CRITICAL — non-negotiable string check):
+Before submitting any pitch, run this check against your `obstacle` field. The obstacle field MUST explicitly contain at least ONE of:
+
+(a) MULTI-LOCATION SCAFFOLD — two or more named sub-locations the hero traverses, joined by "and" / "then" / "across X then Y" / "first the C then the D". The locations must be distinct visual settings, not synonyms for the same place.
+    PASSING EXAMPLE: "the ball keeps getting stuck in the tall grass AND under the heavy bench" (two distinct sub-locations baked in — grass page and bench page write themselves).
+
+(b) ESCALATION-VERB SCAFFOLD — a verb phrase that grammatically promises the hazard worsens, expands, or transforms across pages. The verb MUST include a COMPARATIVE word (bigger / wider / deeper / louder / higher / closer / hotter / colder / faster / slower / heavier / tighter) OR a TRANSFORMATION MARKER (until X / making Y / so that Z / turning hero into / which means).
+    PASSING EXAMPLE: "the hole in the bag gets BIGGER every time Sarah takes a step" (comparative "bigger" promises page-by-page worsening).
+    PASSING EXAMPLE: "the blankets are heavy and keep wrapping around Kiki, MAKING them look like a wobbly ghost" (transformation marker "making" promises a transformed state).
+
+PURE RECURRENCE FAILS clause (b). "Every time X happens, Y happens" or "again and again" or "keeps [verb]ing" alone describe REPETITION of the same event, not WORSENING across pages. They produce 5 visually identical pages with one fewer egg / one more marble / one more bounce. That is not escalation.
+    FAILING EXAMPLE: "every time Sarah steps, an egg falls through" (recurrence, no comparative — same scene 5 times with one fewer egg).
+    FAILING EXAMPLE: "the rabbit keeps hopping past the carrots" (bare "keeps [verb]ing", no transformation marker).
+    PASSING REWRITE: "every time Sarah steps, the hole gets WIDER and another egg falls" (comparative "wider" added).
+
+If your obstacle field is a single static-state description ("the [place] is covered in [hazard]" / "the [room] is full of [thing]" / "[hazard] makes [hero] [verb]") with NO second location AND NO comparative AND NO transformation marker → REWRITE before submitting.
+    FAILING EXAMPLE: "the toy shop floor is covered in slippery marbles that make Bunny's car slide" (one location, one static hazard, no comparative, no transformation, no second sub-location). 5 pages of the same toy-shop corner. REJECT.
+
+A static obstacle gives the writer nothing to vary on across 5 pages. The result is 5 visually identical colouring pages and a child who only colours page 1.
+
+VISUAL UNAMBIGUITY TEST (CRITICAL — readability of the prop):
+Imagine your obstacle's key prop drawn as a thick-outlined black-and-white shape in a colouring book. Could a non-reading 2-year-old point at it and name what it is?
+
+A circle could be: a marble, a coin, a button, a sweet, a hole, a wheel, a dot, a bubble, a stone. The toddler points and says "ball" — but the story says "marble." The story stops working because the prop is invisible to the reader. The colouring book reader cannot read the story_text. They see only the line art. The obstacle prop must be self-explanatory in line art alone.
+
+If your obstacle's key prop is a generic geometric shape (circle / sphere / square / dot / line / plain ball / plain bead / plain coin / plain stone) → REWRITE with a prop that has a DISTINCTIVE SILHOUETTE the child can name at a glance.
+
+DISTINCTIVE SILHOUETTE EXAMPLES (props with named features the line-art renders unambiguously):
+  - a shoe (laces, sole, toe)
+  - a banana (curved shape, stem)
+  - a teddy bear (ears, limbs, button eyes)
+  - a watering can (handle, spout)
+  - a fish (tail, fins, scales)
+  - a slipper / sock / hat
+  - a fallen book (rectangular, pages, spine)
+  - scattered building blocks (square edges, lettering, stacking)
+  - a bag with a visible jagged hole (the damage IS the silhouette)
+
+FAILING EXAMPLE: "the floor is covered in slippery marbles" — marbles render as identical circles indistinguishable from coins, beads, dots, or bubbles. Child cannot identify them. The story mechanism is invisible.
+PASSING REWRITE: "the floor is covered in scattered toy blocks" — blocks have flat edges, lettering, distinctive square silhouettes a child names instantly.
+PASSING REWRITE: "the floor is covered in slippery banana skins" — bananas have an instantly recognisable curved shape even in black and white outline.
+
 {age_guide}
 
 CRITICAL: Follow the age guidelines above exactly for sentence length, vocabulary, and complexity.
