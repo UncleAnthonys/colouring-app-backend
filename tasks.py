@@ -222,6 +222,8 @@ def generate_full_story_task(self, job_id: str, params: dict):
             a4_page_b64 = create_a4_page_with_text(image_b64, story_text, episode_title, parent_prompt=parent_prompt)
             page_url = upload_to_firebase(a4_page_b64, folder="adventure/storybooks")
             raw_image_url = upload_to_firebase(image_b64, folder="adventure/storybooks/raw")
+            # MEMORY: a4_page_b64 is fully uploaded, free it immediately
+            del a4_page_b64
             
             # Generate region map for stay-in-the-lines colouring
             mask_url = ""
@@ -233,6 +235,8 @@ def generate_full_story_task(self, job_id: str, params: dict):
                 mask_b64 = base64.b64encode(region_map_bytes).decode("utf-8")
                 mask_url = upload_to_firebase(mask_b64, folder="masks/storybooks")
                 print(f"[WORKER] ✅ Story page {i+1} region map ({num_regions} regions)")
+                # MEMORY: mask data fully uploaded, free immediately
+                del image_bytes_for_mask, region_map_bytes, mask_b64
             except Exception as e:
                 print(f"[WORKER] ⚠️ Story page {i+1} region map failed (non-fatal): {e}")
             
@@ -246,6 +250,10 @@ def generate_full_story_task(self, job_id: str, params: dict):
                 "story_text": story_text,
                 "scene_description": scene_prompt
             })
+            
+            # MEMORY: explicit GC at end of each page iteration to release b64 buffers
+            import gc
+            gc.collect()
         
         # === STEP 3: Generate front cover (last, so it references the final episode page for visual consistency) ===
         update_job_status(job_id, "processing", progress="Creating your front cover...")
@@ -295,6 +303,8 @@ Make it look like a real children's coloring book cover you'd see in a shop!
         
         cover_with_text_b64 = create_front_cover(cover_image_b64, full_title, character_name)
         cover_url = upload_to_firebase(cover_with_text_b64, folder="adventure/storybooks")
+        # MEMORY: cover_image_b64 no longer needed after cover is composed
+        del cover_image_b64
         
         # Generate region map for cover page
         cover_mask_url = ""
@@ -306,8 +316,17 @@ Make it look like a real children's coloring book cover you'd see in a shop!
             cover_mask_b64 = base64.b64encode(cover_region_bytes).decode("utf-8")
             cover_mask_url = upload_to_firebase(cover_mask_b64, folder="masks/storybooks")
             print(f"[WORKER] ✅ Cover region map ({cover_num_regions} regions)")
+            # MEMORY: cover mask data fully uploaded, free immediately
+            del cover_bytes_for_mask, cover_region_bytes, cover_mask_b64, cover_with_text_b64
         except Exception as e:
             print(f"[WORKER] ⚠️ Cover region map failed (non-fatal): {e}")
+        
+        # MEMORY: free reveal_image_b64 and second_character_image_b64 now that all pages and cover are generated
+        reveal_image_b64 = None
+        second_character_image_b64 = None
+        previous_page_b64 = None
+        import gc
+        gc.collect()
         
         pages.insert(0, {"page_num": 0, "page_type": "cover", "title": full_title, "page_url": cover_url, "raw_image_url": cover_url, "mask_url": cover_mask_url, "story_text": ""})
         
@@ -434,6 +453,9 @@ def extract_and_reveal_task(self, job_id: str, params: dict):
             },
             original_drawing_b64=image_b64
         ))
+        # MEMORY: source image buffers no longer needed after reveal generation
+        image_b64 = None
+        image_bytes = None
         
         # Upload reveal to Firebase
         reveal_url = upload_to_firebase(reveal_image_b64, folder="adventure/reveals")
@@ -445,6 +467,11 @@ def extract_and_reveal_task(self, job_id: str, params: dict):
             "reveal_image_b64": reveal_image_b64,
             "source_type": extraction_result.get("source_type", "drawing"),
         })
+        # MEMORY: reveal_image_b64 already in Firebase + queued in result dict; release local ref
+        # Forces gc.collect to fight memory fragmentation across many reveal tasks on same worker
+        reveal_image_b64 = None
+        import gc
+        gc.collect()
         
         # Save reveal URL to user doc so story task can access it
         try:
