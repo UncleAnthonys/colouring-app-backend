@@ -1669,23 +1669,34 @@ Here are 3 STARTING SPARKS to inspire you. Adapt, remix, or ignore them — but 
 If you find yourself reaching for any of these EIGHT, STOP and pick a different premise. Variety is the whole point. Reach instead for: a RESCUE, a DETECTIVE HUNT for something missing, a TIME-RUNNING-OUT EVENT, a MYSTERIOUS ARRIVAL, a MISBEHAVING CREATURE in an unexpected place, an INTERDEPENDENCY where the hero can't move until they help someone else, or a LOST-AND-RETURN story where something meaningful belongs to a named person the child can care about.
 
 WORKED-EXAMPLE PROP ROTATION RULE (CRITICAL — the prompt teaches by example, do NOT copy the example props):
-This prompt contains many worked examples that use a small handful of props and creatures to ILLUSTRATE STRUCTURE — squirrels, garden hoses, balls, balloons, kites, biscuits, cats. These specific props appear repeatedly because they make clear structural illustrations, NOT because they are good prop choices for your pitch. The model has been observed copying these specific props directly into generated pitches, which makes every story feel the same.
+This prompt contains many worked examples that use a small handful of props and creatures to ILLUSTRATE STRUCTURE — squirrels, garden hoses, balls, balloons, kites, biscuits, cats. These specific props appear repeatedly because they make clear structural illustrations, NOT because they are good prop choices for your pitch. Do NOT copy them. Do NOT use a squirrel as the antagonist. Do NOT use a garden hose, plain ball, balloon, or kite as the central prop.
 
-YOUR PITCH MUST NOT use any of these over-used props/creatures as its central plot object or antagonist:
-  OVER-USED CREATURES — DO NOT USE: squirrel, ladybird, friendly puppy-as-antagonist, generic cat-as-antagonist
-  OVER-USED PROPS — DO NOT USE: garden hose (especially "wiggling like a snake"), bouncy ball, plain ball, rolling ball toward water, balloon (especially floating away), kite (especially caught in a tree), basket caught up high
+But this is NOT solved by reaching for a list of "alternative" props either. Any list the prompt provides becomes the new default — the model just picks whatever is at the top. The fix is two principles, applied together:
 
-Instead, deliberately reach for prop and creature combinations the prompt has NOT pre-chewed for you. Variety here is non-negotiable — a child generating their second or third Little Lines story should not see the same animal stealing the same kind of object across different stories.
+PRINCIPLE 1 — SETTING-BELONGING TEST (the cause-character and prop must emerge FROM THE SETTING):
+Ask: would a child plausibly find this creature/prop in this exact place? The cause-character should belong to where the story happens, not be imported from a "creative variety" list.
+  - KITCHEN belongs to: a wind-up toy left out, the family cat, the family dog, an escaped pet hamster, a fly buzzing the food, mum's keys that fell. NOT: a robin, a magpie, a goose. (Birds don't belong in kitchens.)
+  - GARDEN belongs to: the family dog, a robin, a frog, a hedgehog, a butterfly, a cat from next door, a snail. NOT: a fish, a parrot, a wind-up mouse.
+  - BATHROOM belongs to: a rubber duck, a toy boat, a flannel, a sponge, the cat sneaking in. NOT: a bird, a wild animal.
+  - BEACH belongs to: a seagull, a crab, a dog on the sand, a fish in a rock pool, the family cat brought along. NOT: a kitchen mouse.
+  - PARK belongs to: a duck at the pond, a dog off-lead, a squirrel (BUT we banned squirrels — pick a duck or pigeon or the family dog instead), a child's lost toy.
+TEST: if a parent asked "why is there a [creature] in this [place]?" — could you answer in one sentence without invoking magic or coincidence? If yes, the creature belongs. If no, swap it for something from that exact setting.
 
-UNDER-USED CREATURES TO REACH FOR (any of these is a fresher choice than a squirrel):
-  - a cheeky magpie / a bossy goose / a curious hedgehog / a sleepy tortoise / a clever fox / a bold robin / a stubborn donkey / a fussy parrot / a nosy crow / a wandering chicken / a daft pigeon / a determined snail / a chatty starling / a beach crab / a slow-moving slug / a friendly seagull / a meerkat / a wide-eyed owl / a bouncy frog / a grumpy badger
+PRINCIPLE 2 — TODDLER RECOGNITION TEST (the central prop must be something a 2-year-old knows from their actual life):
+The reader of an under_3 or age_3 colouring book is a small child whose vocabulary is concrete and limited. They know objects from their daily life. They DO NOT know objects an adult would consider "distinctive" or "interesting."
 
-UNDER-USED PROPS TO REACH FOR (any of these is a fresher choice than a hose or a ball):
-  - a wellington boot / a tea towel / a wooden spinning top / a wind-up toy / a paper aeroplane / a lunchbox / a recorder / a fishing net / a paint pot / a magnifying glass / a torch / a bird feeder / a watering can / a feather duster / a butterfly net / a bucket / a flannel / a slipper / a hairbrush / a colander / a tin of biscuits with the lid stuck / a wooden spoon (only if the antagonist is NOT a squirrel) / a wind chime / a kite tail (not the kite itself) / a pinwheel / a snow globe / a music box
+PROPS A 2-YEAR-OLD KNOWS (use these — but pick from the SETTING, not from this list):
+  Their teddy. A ball. Their cup. A spoon. A bowl. A banana. An apple. A biscuit. A piece of toast. Their hat. Their shoe / boot / welly. A sock. The dog. The cat. A duck. A car. A toy car. A bus. A book. A balloon (only if not used as a "floating-away" plot device). Their dummy. A blanket. A pillow. A hairbrush. A toothbrush. A flannel. A bucket. A spade. A rubber duck. A ribbon. Mum's keys. A flower.
 
-THE TEST: read your three pitches aloud. Is the antagonist a squirrel in any of them? REWRITE. Is the central prop a ball, balloon, kite, or hose in any of them? REWRITE. Is the prop something a child would actually find in the named setting AND something with a distinctive black-and-white silhouette a non-reading 2-year-old can identify? If yes to both → keep it. If no to either → swap.
+PROPS A 2-YEAR-OLD DOES NOT KNOW (avoid these as central plot objects):
+  A spinning top. A recorder. A paint pot. A fishing net. A magnifying glass. A butterfly net. A bird feeder. A wind chime. A pinwheel. A music box. A colander. A feather duster. A torch (borderline — only if the dark is the actual point). Anything a child would need their parent to identify for them.
 
-This rule fires AFTER the OBSTACLE FIELD MECHANICAL TEST and the VISUAL UNAMBIGUITY TEST. A pitch can pass those two tests and still fail this one if it reaches for the over-used props.
+TEST: imagine showing the rendered colouring page to a 2-year-old and saying nothing. Could they point at the central prop and name it correctly? "Ball." "Teddy." "Boot." "Spoon." If yes → keep. If they would say "what is that?" or name it wrong (calling a spinning top "a ball") → REJECT and pick a prop from their actual lived world.
+
+THESE TWO PRINCIPLES TOGETHER:
+A pitch with a cause-character should pick a creature that belongs to the named setting AND a central prop a 2-year-old recognises from daily life. The combination should feel inevitable, not creative — "of course there is a [creature] in this [place], and of course they have grabbed the [prop]." If your pitch feels like you reached for an unusual creature or an unusual prop to be "fresh" — that is the wrong instinct. Freshness comes from the SITUATION (what is happening, what just went wrong, what is about to happen), not from the choice of creature or prop.
+
+This rule fires AFTER the OBSTACLE FIELD MECHANICAL TEST and the VISUAL UNAMBIGUITY TEST. A pitch can pass those two tests and still fail this one if it reaches for unusual creatures or props in pursuit of variety. The chaos shape is what carries variety. The creatures and props are familiar.
 
 THESE ARE JUST EXAMPLES — invent your own. Each concept must be:
 1. VISUALLY RICH — each of the 5 episodes must look completely different when drawn as a colouring page. If you can't imagine 5 distinct illustrations, the concept isn't good enough.
