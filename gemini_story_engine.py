@@ -135,6 +135,14 @@ RULES:
 
     TWO things MUST be locked across pages 2, 3, 4:
       (1) THE REFRAIN LINE — 3-6 words, identical word-for-word on every middle page. "Get that key!" / "Catch that duck!" / "Come back, hat!" The refrain names the GOAL as a command a toddler would shout.
+          REFRAIN-NAMES-THING-NOT-PLACE RULE: when the goal is a THING at a PLACE (e.g. "ice cream van at the gate", "teddy on the back seat", "duck in the puddle", "apple in the tree"), the refrain MUST name the THING, not the PLACE. A 2-3 year old emotionally tracks the thing they want; they do not track landmarks. If the pitch's `want` field still names a place rather than a thing, IGNORE the place and reach for the thing the hero actually wants.
+          BAD: "Get to the gate!" (when the hero is going to the gate to reach the ice cream van — gate is a landmark, not the goal)
+          GOOD: "Find that ice cream van!" (names the thing — toddler always remembers WHY)
+          BAD: "Get to the back seat!" (when the goal is a teddy on the back seat)
+          GOOD: "I want my teddy!" (names the thing — toddler shouts the want, not the geometry)
+          BAD: "Climb up high!" (when the hero is climbing to reach an apple)
+          GOOD: "Get that apple!" (names the thing — climbing is just the path)
+          TEST before locking the refrain: ask "is the noun in this refrain the THING the hero wants, or just the PATH/LANDMARK they're moving toward?" If it's a path, find the thing and put THAT in the refrain instead.
       (2) THE SLOT ORDER — the same sentence shape in the same order on every middle page. E.g. "[HERO ACTION]. [WHY IT FAILED]. [REFRAIN]." — three slots, same three slots every page.
     ONE thing MAY vary across pages:
       (3) THE WORDS INSIDE THE SLOTS — new attempt, new specific failure WITHIN THE PITCH'S STATED OBSTACLE, new sound each page. The ATTEMPTS are plausible tries at the pitch's `want`. The FAILURES are variations of the pitch's `obstacle` — NOT a fresh random obstacle invented for each page. The pitch's obstacle is the SHARED problem across all middle pages; attempts vary in HOW they run into it.
@@ -209,6 +217,12 @@ RULES:
 
     TWO things MUST be locked across pages 2, 3, 4:
       (1) THE REFRAIN LINE — 3-8 words, identical word-for-word on pages 2, 3, and 4. "Catch that puppy!" / "Hold on, ladybird, hold on!" / "We've got to go through it!" / "Don't drop the egg!"
+          REFRAIN-NAMES-THING-NOT-PLACE RULE: when the goal is a THING at a PLACE (e.g. "ice cream van at the gate", "teddy on the back seat", "duck in the puddle", "apple in the tree"), the refrain MUST name the THING, not the PLACE. A 3-year-old emotionally tracks the thing they want; they do not track landmarks. If the pitch's `want` field still names a place rather than a thing, IGNORE the place and reach for the thing the hero actually wants.
+          BAD: "Get to the gate!" (when the hero is going to the gate to reach the ice cream van — gate is a landmark, not the goal)
+          GOOD: "Find that ice cream van!" (names the thing — child always remembers WHY)
+          BAD: "Get to the back seat!" (when the goal is a teddy on the back seat)
+          GOOD: "I want my teddy!" (names the thing — child shouts the want, not the geometry)
+          TEST before locking the refrain: ask "is the noun in this refrain the THING the hero wants, or just the PATH/LANDMARK they're moving toward?" If it's a path, find the thing and put THAT in the refrain instead.
       (2) THE SENTENCE-SHAPE WRAPPING THE REFRAIN — pick one shape and hold it. Age_3 has 15-25 words per page, so the skeleton is a 3-4 slot frame: e.g. "[OBSTACLE-SETUP]. [HERO ATTEMPT]. [WHY IT FAILED]. [REFRAIN]." — same four slots every middle page.
     ONE thing MAY vary across pages:
       (3) THE WORDS INSIDE THE SLOTS — new attempt, new specific failure WITHIN THE PITCH'S STATED OBSTACLE, new sound each page. The ATTEMPTS are plausible tries at the pitch's `want`. The FAILURES are variations of the pitch's `obstacle` — NOT a fresh random obstacle invented for each page. The pitch's obstacle is the SHARED problem across all middle pages; attempts vary in HOW they run into it.
@@ -886,6 +900,16 @@ GOOD (single-idea): "The teddy is on the back seat of the bus and the doors are 
    BAD: "Al must get the giant sponges out of the bath." (Sponges = plural, which one on each page? Toddler gets lost.)
    GOOD: "Dolly must get her yellow duck back from the drain." (One duck. Same duck every page. Toddler points and says "duck!")
 
+   WANT-NAMES-THING-NOT-PATH RULE: when filling the `want` field, name the THING the hero wants, NOT the place/path to it. A toddler emotionally tracks the thing they want, not the geometry of how to get there. If you write "reach the gate" instead of "reach the ice cream van", the story-writer will lock the refrain to "Get to the gate!" and the toddler will forget WHY the hero is moving by page 3.
+   RULE: the `want` field must end with a THING the toddler can imagine wanting (an object, a person, a state, a feeling). It must NOT end with a place/path/landmark whose only purpose is to GET to the real thing.
+   BAD `want` field: "reach the garden gate before the ice cream van drives away." (Gate is a path. Ice cream van is the actual thing. The toddler wants ice cream, not a gate.)
+   GOOD `want` field: "reach the ice cream van before it drives away." (Names the actual thing. The refrain becomes "Find that ice cream van!" — toddler always remembers WHY.)
+   BAD: "get to the back seat of the bus before the doors close." (Back seat is a path. The teddy is the thing.)
+   GOOD: "reach the teddy on the back seat before the doors close." (Names the actual thing.)
+   BAD: "climb to the top of the tree before the apple falls." (Top of the tree is a path. The apple is the thing.)
+   GOOD: "get the apple before it falls from the tree." (Names the actual thing.)
+   TEST: read your `want` field. Strip out the PATH (the gate / the back seat / the top of the tree / the kitchen). What's left? If what's left is a THING the toddler can imagine, you're good. If what's left is just movement-language ("get there", "arrive", "make it"), rewrite — the THING is missing.
+
 (c) REFRAIN VERB TEST: What will the child shout on every page? Does it match what is actually happening in the story?
    Refrains come in SIX SHAPES. Pick the one that fits your premise. Do NOT default to "Catch that X!" for every story — that has become an over-used pattern. Many of the best toddler refrains are NOT catch-commands.
    THE SIX REFRAIN SHAPES (study the book each one comes from — these are the canonical age 2-3 patterns):
@@ -991,7 +1015,18 @@ Plus ONE more test — the one toddlers forgive the least:
 
 (g) RESOLUTION TOOL TEST: HOW will the hero solve the problem on page 5? Name the tool or method in the pitch itself. Then confirm it's set up earlier.
    A toddler expects the page 5 solution to come from something they've already SEEN or been TOLD about. When page 5 introduces a brand new object or ability, the toddler feels cheated — not because they can articulate "Chekhov's gun" but because their brain went "wait, where did THAT come from?"
-   THE TEST: Finish this sentence in the pitch itself — "On page 5, [hero] solves the problem by using [tool/method] — which is set up earlier because [reason]."
+
+   FOR UNDER_3 SPECIFICALLY: the resolution does NOT have to be a tool-deployment. Under_3 stories (Bear Hunt, Owl Babies, Pete the Cat, Hungry Caterpillar, Goodnight Moon) most often resolve through ARRIVAL, RETURN, TRANSFORMATION, or COMPLETION — not through clever tool-use. Under_3 has a 15-words-per-page hard limit; a tool-deployment mechanic ("name the feature, show it being used, show success, name the goal achieved") cannot fit in 15 words and produces compressed gibberish like "Short hair! Squeeze, Oli, squeeze. Pop! At the gate!"
+   VALID UNDER_3 RESOLUTIONS (pick ONE):
+     - ARRIVAL: the hero reaches the goal and the goal-thing is now there. (Bear Hunt: home and safe. Oli: at the van getting ice cream.) Page 5 is just "AT THE [thing]! [reaction]!" — no tool needed.
+     - RETURN: the missing thing comes back, or the hero returns to where they belong. (Owl Babies: mum is back.) Page 5 is "[thing] is back! [reaction]!"
+     - TRANSFORMATION: the problem-state changes naturally. (Hungry Caterpillar: caterpillar is now a butterfly. Pete the Cat: shoes are now a new colour.) Page 5 is "Now [hero] is [new state]! [reaction]!"
+     - COMPLETION: the routine finishes. (Goodnight Moon: said goodnight to everything, now asleep.) Page 5 is "[final action]. [hero] is [end-state]."
+   At under_3, a tool-deployment IS allowed if it fits naturally in 15 words, but it is NOT REQUIRED. If your pitch's `twist` field is a clever tool-mechanic that won't fit in 15 words, REWRITE the resolution to use ARRIVAL or RETURN or TRANSFORMATION or COMPLETION instead. The story will be cleaner.
+
+   FOR AGE_3 AND ABOVE: the tool-deployment mechanic IS required (this rule). Age_3 has 15-25 words per page — enough room to name the tool and show it being used. Age_4+ has even more room. So:
+
+   THE TEST (age_3 and above): Finish this sentence in the pitch itself — "On page 5, [hero] solves the problem by using [tool/method] — which is set up earlier because [reason]."
    VALID "set up earlier" reasons (pick ONE):
      - It is a named feature of the hero's own body/appearance. "Her long ponytail" / "His big strong arms" / "Her pirate hat" / "His long tail."
      - It is an object that will be VISIBLE AND MENTIONED in the text on pages 1, 2, 3, or 4 — not just drawn in the illustration, but named in the story.
