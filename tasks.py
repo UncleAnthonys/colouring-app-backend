@@ -116,7 +116,8 @@ def generate_full_story_task(self, job_id: str, params: dict):
         second_character_image_url = params.get("second_character_image_url")
         
         # Download second character from URL if b64 not provided
-        if second_character_image_url and not second_character_image_b64:
+        # FIX: gate on second_character_name to prevent stale URLs leaking from previous stories
+        if second_character_name and second_character_image_url and not second_character_image_b64:
             try:
                 import httpx
                 resp = httpx.get(second_character_image_url, timeout=30)
@@ -126,6 +127,8 @@ def generate_full_story_task(self, job_id: str, params: dict):
                     print(f"[WORKER] Downloaded second character from URL")
             except Exception as e:
                 print(f"[WORKER] Failed to download second character URL: {e}")
+        elif second_character_image_url and not second_character_name:
+            print(f"[WORKER] Skipped second character download: URL present but no second_character_name (stale data prevented)")
         
         # Get age rules
         age_rules = get_age_rules(age_level)
@@ -189,7 +192,8 @@ def generate_full_story_task(self, job_id: str, params: dict):
                 character_emotion=character_emotion,
                 source_type=source_type,
                 previous_page_b64=previous_page_b64,
-                second_character_image_b64=second_character_image_b64,
+                # FIX: nullify b64 when no second character name is set (prevents stale image leak)
+                second_character_image_b64=(second_character_image_b64 if second_character_name else None),
                 second_character_name=second_character_name,
                 second_character_description=second_character_description,
             ))
@@ -207,7 +211,8 @@ def generate_full_story_task(self, job_id: str, params: dict):
                     character_emotion=character_emotion,
                     source_type=source_type,
                     previous_page_b64=previous_page_b64,
-                    second_character_image_b64=second_character_image_b64,
+                    # FIX: nullify b64 when no second character name is set (prevents stale image leak)
+                    second_character_image_b64=(second_character_image_b64 if second_character_name else None),
                     second_character_name=second_character_name,
                     second_character_description=second_character_description,
                 ))
