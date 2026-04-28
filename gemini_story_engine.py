@@ -1094,6 +1094,35 @@ Plus ONE more test — the one toddlers forgive the least:
      - "Dolly's big wavy bed has been with her on every page. On page 5 she rubs it against the pole and makes the pole slippy." (Character feature, visible throughout, named before it matters.)
    WRITE THE TOOL INTO THE PITCH. If the pitch doesn't say how page 5 resolves, the story engine will invent something from nowhere. The pitch is where the tool decision is made.
 
+(h) RESOLUTION COHERENCE TEST (CRITICAL — the "BUT HOW?" test, fires alongside the RESOLUTION TOOL TEST):
+The previous test checked the tool was SET UP earlier. This test checks the tool's action PHYSICALLY CAUSES the problem to be solved in a way a 2-year-old can SEE on the final page.
+
+A 2-year-old will look at the page 5 image with no reading. They will see the hero in some pose, the problem-object in some new state, and the resolution complete. Their brain runs one check: "How did the hero make that happen?" If the picture answers it — the test passes. If the picture leaves them asking "BUT HOW?" — the resolution is incoherent and the pitch must be rewritten before submitting.
+
+THE TEST: Finish this sentence about your pitch — "On page 5, the hero uses [feature/tool] to [physical verb] the [problem-object], which causes [resolution] because [physical reason a child understands]."
+If the [physical verb] is vague (presses-to-stop / peers-to-find / waves-to-fix), or the [physical reason] requires inventing magic or a coincidence the child cannot see — REJECT and rewrite the resolution.
+
+PASSING EXAMPLES (causality is visible and physical):
+  - "Sarah uses her clasped hands to HOLD the bottom of the bag SHUT, which causes the eggs to stop falling because there is no longer a hole." (Hands physically close a hole. Child sees hands gripping bag. Causality complete.)
+  - "Astro uses his thick tail to HOOK around the ball, which causes the ball to come out of the hedge because the tail can pull where his arms cannot reach." (Tail physically hooks. Child sees tail wrapped round ball. Causality complete.)
+  - "Kiki uses her spiky white head tuft to POKE through the blanket, which causes a hole to open because the tuft is sharp like a needle. She wiggles through the hole to reach the switch." (Tuft physically pierces. Child sees hole made by tuft. Causality complete.)
+  - "Clover uses her long arms to WRAP around the goose in a tight hug, which causes the goose to drop the boot because it cannot hold things while being squeezed." (Arms physically restrain. Child sees hug. Causality complete.)
+
+FAILING EXAMPLES (causality is invisible or requires invented magic):
+  - "Astro presses a chest button which makes a loud beep that makes the mouse stop." (REJECT. A button-press has no physical relationship to a separate wind-up toy. Beeps don't stop wind-up mechanisms. Child sees a button being pressed and a stopped mouse and asks: BUT HOW?)
+  - "Wallace uses his white eyebrow markings to peer into a dark gap and find the spoon." (REJECT. Markings on a face do not cause finding things. Eyes do the seeing. The markings are decoration. Child sees a dog with eyebrow markings near a spoon and asks: BUT HOW did the markings find it?)
+  - "Bunny's striped sweater catches the toy mouse's wheels and stops it." (REJECT — partial. Sweaters do not have a physical mechanism to catch wheels. The hero is not the agent of the resolution. Child sees a sweater and a stopped toy and asks: BUT HOW did the stripes catch it?)
+  - "Pete waves his hat at the bee and the bee flies away." (REJECT. Waving a hat MIGHT scare a bee, but show the physical chain: the hat creates a wind-burst that pushes the bee, OR the bee mistakes the hat-shape for a bigger animal. Without showing this, the child sees waving and a gone bee and the magic is invisible.)
+
+THE PASS-FAIL LINE: a 2-year-old must be able to look at the final page image alone (no story-text, no parent reading) and understand the mechanism in their own head. If the mechanism requires words to explain, the picture has failed and the pitch is wrong.
+
+WHAT THIS RULE DOES NOT DO: this rule does NOT ban any specific feature or prop. Chest buttons CAN be a valid resolution tool — if pressing them does something physically coherent (lights up the dark so the hero can see, makes a noise that wakes a sleeping helper, opens a compartment that holds a real tool). Suit decorations CAN be valid resolution tools — if they have a physical use the child sees happening. The test is about CAUSAL COHERENCE, not feature identity. Any feature passes if the physical chain from action to resolution is visible.
+
+REWRITING A FAILED RESOLUTION: if your pitch fails this test, you have two options:
+  1. Change the FEATURE to one with physical affordance for the actual problem (a tail to hook a ball / hands to grip a bag / arms to hug a goose / a tuft to poke through fabric).
+  2. Change the PROBLEM to one the existing feature can plausibly solve (if the feature is "chest buttons that make noise", change the problem to one a loud noise plausibly solves — e.g. scaring a real bird off a picnic, not stopping a mechanical toy).
+Either way, the pitch's `twist` field must end with a sentence a 2-year-old can see happen.
+
 Plus ONE more test — the one that prevents visually repetitive or teleporting stories:
 
 (h) FIVE ENGAGED SUB-SPOTS TEST (under_3 and age_3 ONLY): Your pitch MUST name 5 distinct sub-spots OR biomes the hero ACTIVELY USES, CLIMBS, SLIDES ON, DUCKS UNDER, or OTHERWISE ENGAGES WITH as part of pursuing the goal. Passing backdrops do NOT count — the hero must interact with each.
