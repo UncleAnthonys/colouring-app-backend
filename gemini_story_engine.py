@@ -1004,6 +1004,28 @@ Plus TWO more tests for under_3 and age_3 pitches:
      - "The hat is on a hook." (Yes, that is where hats go. There is no story here.)
    RULE: Your pitch must state EITHER a self-stake (hero wants X, urgency means it'll be lost/ruined) OR an other-stake (named character/animal/event will be hurt). If you cannot finish the sentence "If the hero fails, then ___" with something the hero or someone-they-care-about will lose, the pitch has no stakes. Rewrite.
 
+   TIME-PRESSURE TEST (additional check on the DEADLINE within your stakes — fires whenever your pitch contains "before X" or any time-limit framing):
+   The CONSEQUENCE (what bad thing happens) is checked above. This sub-test checks the DEADLINE — the "before X" clause that creates urgency. The deadline must be a thing a 2-YEAR-OLD experiences as urgent IN THEIR OWN LIFE, not an adult-administrative scheduling concern.
+   Pete-and-the-Sticky-Snail's failure: "before the garden gate opens for the walk." The consequence is fine (snail squashed) but "before the walk" is an adult's calendar item — toddlers do not experience "the walk" as a deadline that creates pressure. They experience "the dog is coming closer," "the rain is starting," "mum is calling," "I am about to step on it" as urgency. Same problem with "before the meeting / before the visitors arrive / before the show starts / before the bus comes" — these are adult schedules.
+   VALID DEADLINES — toddler-felt urgencies the child can feel in their own body:
+     - IMMINENT PHYSICAL DANGER happening NOW: "before the dog gets there" / "before the puddle floods over the edge" / "before the wave crashes" / "before Pete steps on it" / "before the door slams shut" / "before it falls off the table"
+     - SENSORY CONSEQUENCES a toddler imagines: "before it gets dark" / "before the loud bang" / "before the music stops"
+     - WANT-FRUSTRATION the toddler feels directly: "before bath time is over" (the toddler IS in the bath wanting to play), "before the ice cream melts" (the child wants the ice cream), "before bedtime" (only if the toddler-felt consequence is missing the thing — e.g. "before bedtime takes my last story"), "before tea ends" (only if the consequence is the toddler missing tea, not parents being annoyed about tea schedule)
+     - LOST-FOREVER framing: "before it floats away" / "before it sinks" / "before it's gone forever"
+
+   INVALID DEADLINES — adult-administrative scheduling that toddlers do not feel:
+     - "before the walk" / "before the walk starts" — the walk is parent's plan, not toddler's urgency
+     - "before the meeting" — toddler doesn't have meetings
+     - "before the visitors arrive" / "before the guests come" — adult social schedule
+     - "before the show starts" — only valid IF the toddler is the one wanting to watch the show; if it's a parent thing, INVALID
+     - "before the bus comes" — only valid IF the toddler is excited about the bus and would miss it; if it's commuter-style, INVALID
+     - "before the post arrives" — adult scheduling, no toddler urgency
+     - "before mum gets home" — adult timing, no felt urgency unless the consequence is "mum will be cross" which is also weak
+     - "before the lights go out" / "before everyone wakes up" — only valid IF the toddler-felt urgency is in the room WITH them, not abstract household timing
+
+   THE TEST: read your pitch's DEADLINE clause out loud. Ask: would a 2-year-old, watching the action unfold, FEEL pressure from this deadline? Or is it just a scheduling fact a parent would understand? If a parent would call it a "deadline" and a toddler would call it "and then what?", REWRITE the deadline.
+   REWRITING TIP: replace adult schedules with imminent physical events. "Before the walk" → "before Pete's big foot comes down" (same scenario, but the child sees the foot about to step). "Before the visitors arrive" → "before the doorbell rings and everyone runs in." "Before tea is ready" → "before mum calls everyone to the table." The fix is usually to swap the abstract event for the OBSERVABLE MOMENT that event creates — the foot coming down, the doorbell ringing, mum calling, the waves splashing, the rain falling.
+
 (e) SUPPORTING CHARACTER RULE (under_3 specific — DIFFERENT FROM ALL OTHER AGES):
    At under_3, pages have 15 words max. That is NOT enough room for a supporting character to do their own thing across the middle pages. A character introduced on page 2 then absent on pages 3, 4, 5 then re-appearing on page 6 will CONFUSE a 2-year-old — they meet the character, the character vanishes, then suddenly the ending refers to them again. This is the single most common under_3 failure mode.
 
