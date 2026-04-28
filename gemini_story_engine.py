@@ -1914,7 +1914,16 @@ GOOD (passes the test): "Al and the Runaway Robot Chef" — page 1: kitchen chao
 The 5-PAGE COLOURING TEST above is the goal. The OBSTACLE FIELD MECHANICAL TEST and VISUAL UNAMBIGUITY TEST below are the mechanical checks that operationalise it — run them on every pitch before submitting.
 
 OBSTACLE FIELD MECHANICAL TEST (CRITICAL — non-negotiable string check):
-Before submitting any pitch, run this check against your `obstacle` field. The obstacle field MUST explicitly contain at least ONE of:
+
+SUB-SPOT COUNT BOUND (READ FIRST — this rule frames the test below):
+The obstacle field describes the ATTEMPT sub-spots — the places where the hero tries and fails. The pitch must NOT exceed FOUR attempt sub-spots. The story-writer has a fixed page structure: page 1 sets up the world, pages 2-4 are middle-page attempts (3 slots at age_3, more at older ages), and the FINAL PAGE is reserved for the RESOLUTION. If the obstacle field names FIVE OR MORE attempt sub-spots, the writer is forced to either drop one or — worse — collapse one into the resolution page. Both outcomes break the story.
+WORKED FAILURE: pitch's obstacle field said "(1) crawls under the wooden bench, (2) tiptoes past the heavy flowerpot, (3) reaches behind the prickly bush, (4) peers into the big muddy boot, and (5) stretches to the high tennis net." Five attempt sub-spots. The writer had only 3 middle-page slots and 1 resolution slot. It collapsed sub-spots 4 (boot) and 5 (net) into the resolution page — page 5 read "Jess peers into the boot. She traps the ball at the net." Two unrelated actions mashed together, the resolution mechanic from the twist field got corrupted, and a muddy boot appeared on a tennis court for no reason.
+RULE: the obstacle field names THREE OR FOUR attempt sub-spots — not five, not more. Three is the minimum to give visual variety; four is fine if the locations are genuinely distinct; five or more is REJECTED. The fifth slot is the RESOLUTION location, named in the twist field instead (see RESOLUTION SUB-SPOT REQUIREMENT below).
+TEST: count the attempt sub-spots in your obstacle field. If 3 or 4 — proceed. If 5+ — drop the weakest one (or merge two adjacent ones). If 2 or fewer and you cannot use escalation-verb scaffold — pitch needs more variety, add another distinct sub-spot.
+
+Now, the existing string check applies to those 3-4 attempt sub-spots:
+
+The obstacle field MUST explicitly contain at least ONE of:
 
 (a) MULTI-LOCATION SCAFFOLD — two or more named sub-locations the hero traverses, joined by "and" / "then" / "across X then Y" / "first the C then the D". The locations must be distinct visual settings, not synonyms for the same place.
     PASSING EXAMPLE: "the ball keeps getting stuck in the tall grass AND under the heavy bench" (two distinct sub-locations baked in — grass page and bench page write themselves).
@@ -1932,6 +1941,24 @@ If your obstacle field is a single static-state description ("the [place] is cov
     FAILING EXAMPLE: "the toy shop floor is covered in slippery marbles that make Bunny's car slide" (one location, one static hazard, no comparative, no transformation, no second sub-location). 5 pages of the same toy-shop corner. REJECT.
 
 A static obstacle gives the writer nothing to vary on across 5 pages. The result is 5 visually identical colouring pages and a child who only colours page 1.
+
+RESOLUTION SUB-SPOT REQUIREMENT (CRITICAL — pairs with the SUB-SPOT COUNT BOUND above):
+The story-writer needs a dedicated page slot for the resolution. Page 5 (or whatever the final page is at the given age) is where the twist mechanism plays out — NOT another attempt page. For that resolution page to work as a distinct visual scene the child can read, the resolution must happen at a LOCATION explicitly named in the twist field, and that location must be visually distinct from the obstacle's attempt sub-spots.
+RULE: your `twist` field MUST contain enough information for the writer to know WHERE the resolution happens. State the resolution location explicitly. Do not leave it to the writer to invent. The location should be:
+  (a) a place mentioned in the obstacle field's setting context but DIFFERENT from any of the named attempt sub-spots, OR
+  (b) a NEW sub-spot in the same overall setting that wasn't used for any attempt — the resolution location.
+WORKED EXAMPLES:
+GOOD (Pete and the Heavy Bubble Trouble — age_4 gold standard):
+  Obstacle: "stones pile higher and the turtle's house gets more buried as Pete tries jumping over the piles, then poking with his sword (tink tink, no movement), then running to the garden where stones are everywhere in the grass and flowers, then realising he needs to be clever."
+  (4 attempt sub-spots: pile-jumping, sword-poking, garden-running, thinking-spot.)
+  Twist: "Pete uses his black eyepatch as a slingshot — pulls the stretchy strap back, loads a shell from the ground, and fires the shell at the bubble machine's OFF BUTTON to stop the stones."
+  (Resolution location: AT THE BUBBLE MACHINE — a setting feature established in page 1 but never used as an attempt sub-spot. The resolution page has its own dedicated visual scene: Pete pulling back the strap, machine in the frame, button visible.)
+BAD (Jess and the Bouncing Ball — age_3 failure):
+  Obstacle named 5 attempt sub-spots and used up all the page slots.
+  Twist: "Jess uses the racket strings to trap the ball against the grass so it stops bouncing and stays still."
+  Twist named WHERE only as "against the grass" — vague. Grass was already implied across multiple attempt sub-spots. The writer had no distinct resolution location to anchor page 5 to, and the writer had no spare page slot anyway because the obstacle field used them all. Result: page 5 collapsed boot + net + grass into one nonsensical scene.
+REWRITE for the Jess-Ball case: drop one attempt sub-spot (say, the boot). Obstacle field has 4 sub-spots: bench, flowerpot, bush, tennis net. Twist field names the resolution location explicitly: "Jess presses the racket flat against a clear patch of grass at the edge of the court, trapping the ball under the racket strings so it stops bouncing." Now the writer has 4 attempt page slots (bench, pot, bush, net), one resolution page slot at "the clear patch of grass at the edge of the court" — a NEW visually distinct setting that wasn't used for any attempt. The resolution page can show Jess pressing the racket flat on the grass with the ball pinned underneath. Visible mechanism, distinct setting, clean structure.
+TEST: read your `twist` field. Does it name WHERE the resolution physically happens? If no, REWRITE to add the location. Now compare that location to the attempt sub-spots in your obstacle field. Is the resolution location DIFFERENT from all the attempt sub-spots? If no, REWRITE to choose a distinct location (or rename the resolution to a specific sub-area within the broader setting). The resolution must be its own scene, not a re-use of an attempt scene.
 
 VISUAL UNAMBIGUITY TEST (CRITICAL — readability of the prop):
 Imagine your obstacle's key prop drawn as a thick-outlined black-and-white shape in a colouring book. Could a non-reading 2-year-old point at it and name what it is?
