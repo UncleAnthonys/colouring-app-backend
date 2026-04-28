@@ -1781,22 +1781,7 @@ TEST: if a parent asked "why is there a [creature] in this [place]?" — could y
 
 PRINCIPLE 2 — TODDLER RECOGNITION TEST (the central prop must be something a 2-year-old knows from their actual life):
 
-AGE SCOPING (CRITICAL — read this before applying the rule below): this principle applies ONLY at under_3 and age_3. AT AGE_4 AND ABOVE, the prop vocabulary OPENS UP to anything appropriate to the age-target. A 5-year-old can absolutely follow a story about a fishing net, a magnifying glass, a paint pot, a butterfly net, a recorder, a wind chime, a treasure map, or any prop the story needs. Older readers have larger vocabularies and richer mental models — restricting them to a toddler list would gut the creativity of age_4+ stories. Skip the rest of this principle entirely if your pitch is age_4 or above.
-
-GOLD-STANDARD AGE_4+ REFERENCE — "Pete and the Heavy Bubble Trouble":
-This is the benchmark age_4 story this engine has produced. Study it before pitching age_4+:
-  - SETTING: an underwater coral world (a bubble machine, a turtle house, sea grass, shells)
-  - INVERSION (the heart of the story): a bubble machine that should blow LIGHT bubbles is blowing HEAVY round stones — a category violation in a single sentence. This is the engine of the whole story.
-  - STAKES: the stones are burying the turtle house — a named beneficiary at visible escalating risk. Each middle page shows the threat getting worse.
-  - PAGES 2-5 (different attempts at the SAME problem — reaching the OFF button to stop the machine): jumping over piles (too high), poking with sword (tink tink, no movement), running to the garden (stones everywhere, even in the grass and flowers), realising he needs to be clever.
-  - RESOLUTION MECHANIC: Pete uses his black EYEPATCH as a slingshot. He pulls the stretchy strap back, loads a shell he found on the ground, fires at the OFF button. SNAP! TWANG! POP! Shell hits button. Machine stops. Turtle is safe.
-  - WHY IT IS GOLD STANDARD AT AGE_4:
-    (i) The INVERSION is sharp and physical — bubbles should be light, here they are heavy. The whole story sits on this single inverted idea.
-    (ii) The feature_used (eyepatch) is GENUINELY USED, not decoration. The strap becomes a slingshot. The mechanism is visible in the final image — pulled-back strap, shell as projectile, button being hit. A 4-year-old looks at the page and SEES how it worked.
-    (iii) MULTI-STEP RESOLUTION the writer can build in age_4 text: find a shell, take off the eyepatch, pull the strap back, aim, fire. Text walks through the causal chain.
-    (iv) ESCALATING STAKES visible on every page — turtle house more buried each time.
-    (v) SETTING-BELONGING — every prop emerges from the underwater world coherently. The bubble machine belongs because it's the inverted source. The shell belongs because it's on the ground. The eyepatch belongs because Pete is a pirate. Nothing imported from outside.
-  Pitches at age_4+ should aspire to this shape: a sharp INVERSION + a feature_used that is GENUINELY usable as a tool + a multi-step resolution the text can build + a beneficiary-at-risk + every prop emerging from the setting.
+AGE SCOPING (CRITICAL — read this before applying the rule below): this principle applies ONLY at under_3 and age_3. AT AGE_4 AND ABOVE, the prop vocabulary OPENS UP to anything appropriate to the age-target. A 5-year-old can absolutely follow a story about a fishing net, a magnifying glass, a heavy stone underwater, a paint pot, a butterfly net, a recorder, a wind chime, a treasure map, a pufferfish, or any prop the story needs. Older readers have larger vocabularies and richer mental models — restricting them to a toddler list would gut the creativity of age_4+ stories. The "Pete underwater with the heavy stone" gold-standard age_5+ story is the reference point: settings (underwater) and props (heavy stone) and antagonists (sea creatures) that would FAIL the toddler test PASS at age_4+ because the older reader has the vocabulary and the picture-book-reading experience to follow them. Skip the rest of this principle entirely if your pitch is age_4 or above.
 
 For under_3 and age_3 ONLY:
 The reader of an under_3 or age_3 colouring book is a small child whose vocabulary is concrete and limited. They know objects from their daily life. They DO NOT know objects an adult would consider "distinctive" or "interesting."
