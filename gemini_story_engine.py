@@ -1762,10 +1762,6 @@ Here are 3 STARTING SPARKS to inspire you. Adapt, remix, or ignore them — but 
 If you find yourself reaching for any of these EIGHT, STOP and pick a different premise. Variety is the whole point. Reach instead for: a RESCUE, a DETECTIVE HUNT for something missing, a TIME-RUNNING-OUT EVENT, a MYSTERIOUS ARRIVAL, a MISBEHAVING CREATURE in an unexpected place, an INTERDEPENDENCY where the hero can't move until they help someone else, or a LOST-AND-RETURN story where something meaningful belongs to a named person the child can care about.
 
 WORKED-EXAMPLE PROP ROTATION RULE (CRITICAL — the prompt teaches by example, do NOT copy the example props):
-
-AGE SCOPING (CRITICAL — read this before applying the rule below): this rule applies ONLY at under_3 and age_3. It exists because at those ages the worked-example props (squirrel/hose/ball/balloon/kite) had become defaults via repetition, making every toddler story feel the same. AT AGE_4 AND ABOVE, this rule DOES NOT APPLY — older ages have full creative range. A grumpy squirrel can be a perfect age_5 antagonist. A kite caught in a tree can be a perfect age_6 plot. A balloon floating away can be a perfect age_7 chase. A garden hose can be a perfect age_8 tool. None of these props are banned at age_4+. Skip the rest of this rule and reach for whatever prop best serves the age-appropriate story you are pitching.
-
-For under_3 and age_3 ONLY:
 This prompt contains many worked examples that use a small handful of props and creatures to ILLUSTRATE STRUCTURE — squirrels, garden hoses, balls, balloons, kites, biscuits, cats. These specific props appear repeatedly because they make clear structural illustrations, NOT because they are good prop choices for your pitch. Do NOT copy them. Do NOT use a squirrel as the antagonist. Do NOT use a garden hose, plain ball, balloon, or kite as the central prop.
 
 But this is NOT solved by reaching for a list of "alternative" props either. Any list the prompt provides becomes the new default — the model just picks whatever is at the top. The fix is two principles, applied together:
@@ -1780,10 +1776,6 @@ Ask: would a child plausibly find this creature/prop in this exact place? The ca
 TEST: if a parent asked "why is there a [creature] in this [place]?" — could you answer in one sentence without invoking magic or coincidence? If yes, the creature belongs. If no, swap it for something from that exact setting.
 
 PRINCIPLE 2 — TODDLER RECOGNITION TEST (the central prop must be something a 2-year-old knows from their actual life):
-
-AGE SCOPING (CRITICAL — read this before applying the rule below): this principle applies ONLY at under_3 and age_3. AT AGE_4 AND ABOVE, the prop vocabulary OPENS UP to anything appropriate to the age-target. A 5-year-old can absolutely follow a story about a fishing net, a magnifying glass, a heavy stone underwater, a paint pot, a butterfly net, a recorder, a wind chime, a treasure map, a pufferfish, or any prop the story needs. Older readers have larger vocabularies and richer mental models — restricting them to a toddler list would gut the creativity of age_4+ stories. The "Pete underwater with the heavy stone" gold-standard age_5+ story is the reference point: settings (underwater) and props (heavy stone) and antagonists (sea creatures) that would FAIL the toddler test PASS at age_4+ because the older reader has the vocabulary and the picture-book-reading experience to follow them. Skip the rest of this principle entirely if your pitch is age_4 or above.
-
-For under_3 and age_3 ONLY:
 The reader of an under_3 or age_3 colouring book is a small child whose vocabulary is concrete and limited. They know objects from their daily life. They DO NOT know objects an adult would consider "distinctive" or "interesting."
 
 PROPS A 2-YEAR-OLD KNOWS (use these — but pick from the SETTING, not from this list):
