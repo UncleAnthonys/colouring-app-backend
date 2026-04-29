@@ -1102,11 +1102,11 @@ Plus TWO more tests for under_3 and age_3 pitches:
 
    INVALID (ornamental — still banned, unchanged from previous rule): "A friendly squirrel watches Alexander try to get the basket down." The squirrel does nothing, affects nothing, will confuse the toddler.
 
-(e2) PITCH SHAPE AND SETTING ROTATION RULE (under_3 specific):
-   The pitch generator has two related habits that compound: it defaults to CHASE-AND-CATCH (runaway thing, hero retrieves) AND it defaults to a GARDEN setting. CHASE-AND-CATCH itself is FINE — it's the most reliable under_3 shape and works beautifully when executed well. The problem is NOT shape repetition. The problem is the SAME garden-tour appearing in story after story (gate → bench → watering can → puddle), which makes consecutive stories feel identical. The primary fix is SETTING variety, not shape variety.
+(e2) PITCH SHAPE AND SETTING ROTATION RULE (under_3 AND age_3):
+   The pitch generator has two related habits that compound at both under_3 and age_3: it defaults to CHASE-AND-CATCH (runaway thing, hero retrieves) AND it defaults to a GARDEN setting. CHASE-AND-CATCH itself is FINE — it's the most reliable shape at these ages and works beautifully when executed well. The problem is NOT shape repetition. The problem is the SAME garden-tour appearing in story after story (gate → bench → watering can → puddle), which makes consecutive stories feel identical. The primary fix is SETTING variety, not shape variety.
 
    PRIMARY DEFAULT SHAPE — CHASE-AND-CATCH (use this most of the time):
-     CHASE-AND-CATCH (Wallace and the Bouncy Grass shape): a runaway thing escapes, hero tries jumping/running/reaching, hero finally catches it on page 5. Tool deployed page 5. This is the bulletproof under_3 shape — Bear Hunt-adjacent, easy for a 2-year-old to follow, hard to execute badly. Default to this shape unless the pitch genuinely fits one of the alternatives below better.
+     CHASE-AND-CATCH (Wallace and the Bouncy Grass shape): a runaway thing escapes, hero tries jumping/running/reaching, hero finally catches it on page 5. Tool deployed page 5. This is the bulletproof shape for both under_3 and age_3 — Bear Hunt-adjacent, easy for a 2-3-year-old to follow, hard to execute badly. Default to this shape unless the pitch genuinely fits one of the alternatives below better.
 
    FOUR OTHER VALID SHAPES (each is a real picture-book template — pick whichever shape best fits the brainstorm you start with):
      - REPEATED-ARRIVAL (Dear Zoo by Rod Campbell shape): something keeps arriving, each one wrong in a different way, final one is just right. e.g. "The post box keeps delivering the wrong puppy for Mabel — too big! too small! too wiggly! — until just the right one arrives." NO chase. NO tool. Reach for this shape when the brainstorm involves a series of variations of a single thing — wrong pets, wrong hats, wrong sandwiches, wrong weather.
