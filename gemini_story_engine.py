@@ -1104,21 +1104,40 @@ Plus TWO more tests for under_3 and age_3 pitches:
 
 (e2) PITCH SHAPE AND SETTING ROTATION RULE (under_3 AND age_3):
 
-   ⚠️ TEMPORARY EVALUATION MODE (active for diagnostic testing — will be removed after evaluation):
-   For this generation period, do NOT produce a CHASE-AND-CATCH pitch. The pitch shape MUST be ONE of the four alternatives below: REPEATED-ARRIVAL, WAITING-AND-RETURN, ROUTINE-COMPLETION, or TRANSFORMATION. Across multiple pitch generations, vary which alternative you pick — do not produce four REPEATED-ARRIVAL pitches in a row. We are evaluating the alternative shapes' story quality and they have not appeared in 12+ recent generations under equal-weight framing. The chase-and-catch description below is included for reference only; do not pick it during this evaluation period. After we assess story quality, this mandate will be removed and chase will be restored as one of five equally-weighted options.
-
-   ---
-
-   The pitch generator has two related habits that need fixing at both under_3 and age_3: it defaults to CHASE-AND-CATCH (runaway thing, hero retrieves) AND it defaults to a GARDEN setting. The result is the same garden-tour appearing in story after story (gate → bench → watering can → puddle), which makes consecutive stories feel identical. Both shape variety and setting variety matter — a child reading multiple stories with the same character notices when every one is structurally identical.
-
-   FIVE VALID PITCH SHAPES (all equally weighted — pick the shape that best fits the brainstorm you start with, with no default-to-chase bias):
+   FOUR VALID PITCH SHAPES (all equally weighted — pick the shape that best fits the brainstorm you start with, with no default-to-chase bias):
      - CHASE-AND-CATCH (Wallace and the Bouncy Grass shape): a runaway thing escapes, hero tries jumping/running/reaching, hero finally catches it on page 5. Tool deployed page 5. Bear Hunt-adjacent, easy for a 2-3-year-old to follow. Pick this shape when the brainstorm involves something running, rolling, escaping, or being grabbed — an animal taking a thing, an object being kicked or knocked, anything that moves under its own power away from the hero.
-     - REPEATED-ARRIVAL (Dear Zoo by Rod Campbell shape): something keeps arriving, each one wrong in a different way, final one is just right. e.g. "The post box keeps delivering the wrong puppy for Mabel — too big! too small! too wiggly! — until just the right one arrives." NO chase. NO tool. Pick this shape when the brainstorm involves a series of variations of a single thing — wrong pets, wrong hats, wrong sandwiches, wrong weather, wrong shoes.
-     - WAITING-AND-RETURN (Owl Babies by Martin Waddell shape): hero waits for someone or something to come back. Each page they wonder, watch, or worry. Final page = arrival. e.g. "Mabel is waiting for Mum to come home. Maybe in the kitchen? Maybe in the hall? Maybe at the door? Mum is back!" Pick this shape when the brainstorm involves anticipation — waiting for a parent, a pet, the post, a friend, the sun, the rain to stop.
-     - ROUTINE-COMPLETION (Goodnight Moon by Margaret Wise Brown shape): hero says goodnight to / finishes with / packs up a series of objects. Final page = routine done. e.g. "Mabel says goodnight to the boots. Goodnight to the bath. Goodnight to the toys. Goodnight to the moon. Mabel is asleep." Pick this shape when the brainstorm involves a familiar toddler routine — bedtime, bathtime, mealtime, getting dressed, tidying up, going on a journey.
-     - TRANSFORMATION (Hungry Caterpillar by Eric Carle shape): the problem-state changes naturally over the pages. e.g. "Caterpillar eats one apple. Two pears. Three plums. Now caterpillar is a butterfly!" Pick this shape when the brainstorm involves something becoming something else — food disappearing as it's eaten, ice melting, wet things drying, small things growing.
+     - WAITING-AND-RETURN (Owl Babies by Martin Waddell shape): hero waits for someone or something to come back. Each page they wonder, watch, or listen at a DIFFERENT location — at the window, at the door, at the letterbox, on the floor. Final page = arrival. Pick this shape when the brainstorm involves anticipation — waiting for a pet, the post, a friend, the sun, the rain to stop, a delivery to arrive. Each waiting page should show a DIFFERENT physical location to give visual variety across colouring pages. TWO WORKED TEMPLATES — adapt to the character:
+       Template A (waiting for the postie):
+         theme_blurb: "[HERO] is waiting for the postie to bring a special parcel!"
+         obstacle: "[HERO] listens at the front window but only hears the wind in the trees; then at the back door but only hears birds chirping; then at the letterbox but only hears silence"
+         twist: "[HERO] presses [feature_used] flat to the floor and at last hears tiny footsteps coming up the path — the postie is here with the parcel"
+       Template B (waiting for the cat to come back from the garden):
+         theme_blurb: "[HERO]'s cat has gone out to the garden and it is time for tea — where is the cat?"
+         obstacle: "[HERO] checks the kitchen window but the cat is not there; then peeks under the sofa but the cat is not there; then opens the back door and listens but only hears the wind"
+         twist: "a tiny meow comes from the porch — the cat is home! [HERO] scoops up the cat with [feature_used] and carries it to the cozy basket"
+     The pattern: 4 different locations across pages 2-5, each with a "nothing yet" beat, then page 5 is the arrival. The hero's body feature does the final "sensing" or "celebrating" act.
+     - ROUTINE-COMPLETION (Goodnight Moon by Margaret Wise Brown shape): hero says goodnight to / finishes with / packs up a series of objects, each in a DIFFERENT part of the house or scene. Final page = routine done. Pick this shape when the brainstorm involves a familiar toddler routine — bedtime, bathtime, mealtime, getting dressed, tidying up, going on a journey. The routine items should be in DIFFERENT locations to give visual variety; pull from the character's known favourite things where possible. TWO WORKED TEMPLATES — adapt to the character:
+       Template A (saying goodnight to favourite things):
+         theme_blurb: "It is bedtime and [HERO] must say goodnight to all the favourite things!"
+         obstacle: "[HERO] says goodnight to [favourite item 1] by the door; then to [favourite item 2] on the shelf; then to [favourite item 3] in the warm bath; then to the bright moon at the window"
+         twist: "[HERO] tucks [feature_used] under the chin in the cozy bed and the eyes close softly — sweet dreams, [HERO]"
+       Template B (getting ready in the morning):
+         theme_blurb: "[HERO] is getting ready for the day and must put on every piece of clothing!"
+         obstacle: "[HERO] pulls on the [item 1] in the bedroom; then the [item 2] in the hall; then the [item 3] by the front door; then the [item 4] on the front step"
+         twist: "[HERO] gives a happy spin in the doorway and [feature_used] catches the morning light — ready for the day!"
+     The pattern: 4 different items in 4 different locations across pages 2-5, each as a completed step (NOT a failed attempt — these aren't obstacles, they are routine stops). Page 5 is the routine's final beat. Pull items from the character's known features, clothing, or favourite-things data where possible.
+     - REPEATED-ARRIVAL (Dear Zoo by Rod Campbell shape): hero discovers a series of wrong items, each in a DIFFERENT location across the house or scene, until finally finding the right one. Each "wrong" item should be wrong in a DIFFERENT way (too big, too small, too noisy, too prickly, etc.) so each page has its own joke. Pick this shape when the brainstorm involves a hunt for the right version of something — the right hat, the right shoes, the right snack, the right toy to take. The wrong items MUST be discovered in different rooms or sub-areas to give visual variety across colouring pages — a single-location version (everything pulled from one box or shelf) makes flat pages and should be avoided. TWO WORKED TEMPLATES — adapt to the character:
+       Template A (hunting for a hat that fits):
+         theme_blurb: "[HERO] needs a hat for the party but the only hats around the house are wrong!"
+         obstacle: "[HERO] tries the floppy sun hat in the bedroom but it falls over the eyes; then the pointy birthday hat in the kitchen but it pokes; then the jingly bell hat in the hallway but it is too noisy"
+         twist: "by the back door [HERO] finds an old garden hat with two soft holes — [feature_used] poke through perfectly and the hat sits just right — ready for the party!"
+       Template B (collecting the right things for a walk):
+         theme_blurb: "[HERO] is going for a walk and must find the right things to bring!"
+         obstacle: "[HERO] grabs a teddy from the bedroom but it is too big to carry; then a book from the sofa but it is too heavy; then a saucepan from the kitchen but it is too clunky"
+         twist: "by the front door [HERO] finds a small soft pouch with a strap — [feature_used] slips through the strap perfectly and everything fits inside — ready for the walk!"
+     The pattern: 4 different items found in 4 different locations across pages 2-5. Pages 2-4 = wrong items (each wrong in a different way), page 5 = the right one (which fits or works because of the hero's body feature). Locations rotate across the rooms of the home or sub-areas of the setting.
 
-   PICKING THE SHAPE: when you start brainstorming a pitch, the situation you imagine usually fits one shape better than the others. A puppy with a stolen sock is a chase. A bedtime ritual is a routine. A series of wrong sandwiches is a repeated-arrival. Waiting for the bus is a waiting-and-return. A snowman melting is a transformation. Match the shape to the situation; do NOT force every situation into a chase. If you generate three pitches in a row and all three are chases, you have not been picking the shape — you have been pattern-matching on the most familiar template. Stop and ask: does THIS brainstorm actually fit one of the other four shapes better?
+   PICKING THE SHAPE: when you start brainstorming a pitch, the situation you imagine usually fits one shape better than the others. A puppy with a stolen sock is a chase. A bedtime ritual is a routine. Waiting for the bus is a waiting-and-return. Match the shape to the situation; do NOT force every situation into a chase. If you generate three pitches in a row and all three are chases, you have not been picking the shape — you have been pattern-matching on the most familiar template. Stop and ask: does THIS brainstorm actually fit one of the other three shapes better?
 
    SETTING ROTATION RULE: even within a CHASE-AND-CATCH pitch, do NOT default to the garden. Real toddler picture books are set in many places, all of which a 2-year-old recognises. Rotate across these:
      - bedroom (bed, toy box, cupboard, under the bed)
@@ -1133,7 +1152,6 @@ Plus TWO more tests for under_3 and age_3 pitches:
    GARDEN IS THE PROMPT'S DEFAULT — DELIBERATELY AVOID IT unless the pitch genuinely needs outdoor space the other settings can't provide. If you find yourself reaching for "in the garden" — STOP and ask: could this work in a bedroom, a kitchen, a park? Pick one of those instead.
 
    COMBINED EXAMPLES (shape + non-garden setting):
-     - REPEATED-ARRIVAL in a bedroom: "Mabel is going to bed but the wrong toy keeps appearing on her pillow — too lumpy! too big! too jingly! — until her favourite teddy is there at last."
      - ROUTINE-COMPLETION in a bathroom: "It's bath time! Mabel scrubs her ears, scrubs her hooves, scrubs her tummy, scrubs her tail. All clean!"
      - WAITING-AND-RETURN at a beach: "Mabel's beach ball has rolled into the sea. Will it come back? She watches the waves. She listens. SPLASH! Here it comes!"
      - CHASE-AND-CATCH in a supermarket: "Mabel's apple has rolled out of the trolley and is zooming down the aisle past the bread, past the freezer, past the checkout!"
