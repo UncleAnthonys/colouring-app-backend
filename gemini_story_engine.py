@@ -1518,36 +1518,44 @@ PITCH_AGE_GUIDELINES = {
 AGE GROUP: 2-3 YEARS OLD (TODDLER)
 
 *** WHAT MAKES A GREAT TODDLER STORY CONCEPT ***
-Think of the best toddler books: Dear Zoo, That's Not My Teddy, We're Going on a Bear Hunt, Each Peach Pear Plum. They share:
-1. ONE simple mission the child understands instantly (catch it, find it, stop it, reach it)
-2. A REAL place or situation (a garden, a house, a park, a farm)
-3. Something going wrong that gets WORSE each page
+Think of the best toddler books: Dear Zoo, That's Not My Teddy, We're Going on a Bear Hunt, Each Peach Pear Plum, Goodnight Moon, Owl Babies. They share:
+1. ONE simple mission the child understands instantly. The mission depends on the SHAPE you pick (see (e2) PITCH SHAPE AND SETTING ROTATION RULE below) — chase missions are catch/find/stop/reach, but waiting missions are listen/watch/wait, routine missions are finish/say-goodnight-to/pack-up, and repeated-arrival missions are find-the-right-one. Pick the shape FIRST, then the mission follows.
+2. A REAL place or situation (a garden, a house, a park, a farm, a bedroom, a bathroom)
+3. Something building toward a satisfying conclusion across the pages — a chase getting more frantic, a wait getting longer, a routine getting closer to done, or a hunt getting closer to the right item.
 
 *** THE TODDLER TEST ***
 Can you say the whole story in one sentence a 2-year-old would understand?
-GOOD: "The puppy has run into the long grass and dinner is ready!" — a toddler gets this instantly.
-GOOD: "The wellington boot is stuck in the mud and the bus is coming!" — clear, physical, urgent.
-(Note: these props — puppy, wellington boot — are illustrations. Do NOT copy these into your pitch. Pick a different prop with a distinctive silhouette — see WORKED-EXAMPLE PROP ROTATION RULE below.)
+FIVE WAYS A TODDLER STORY CAN START — pick ONE shape per pitch:
+GOOD (chase): "The puppy has run into the long grass and dinner is ready!" — a toddler gets this instantly.
+GOOD (chase): "The wellington boot is stuck in the mud and the bus is coming!" — clear, physical, urgent.
+GOOD (waiting): "[HERO] is waiting for the postie to bring the parcel — where is that postie?"
+GOOD (routine): "It's bedtime and [HERO] must say goodnight to all the favourite things!"
+GOOD (repeated-arrival): "[HERO] needs the right hat for the party but every hat in the house is wrong!"
+(Note: the puppy, wellington boot, and other props above are illustrations. Do NOT copy these into your pitch. Pick a different prop with a distinctive silhouette — see WORKED-EXAMPLE PROP ROTATION RULE below.)
 BAD: "The sunflowers are growing and she needs to find the gnome before the petals fall." — too many unconnected ideas.
 
 *** CONCEPT RULES ***
-- The WANT must be physical and immediate: catch, reach, stop, find, push, pull
-- The OBSTACLE must be visible: it's stuck, it's too high, it's rolling away, it's hiding
-- The SETTING must be a place a toddler knows: a house, a garden, a park, a bath, a shop, a farm
-- A supporting character or animal should appear — even simple (a duck, a cat, a snail)
-- Every page must look DIFFERENT as a colouring page — the character moves to new spots
+- The WANT must be physical and immediate, but the verb depends on the shape: chase = catch/reach/stop/find/push/pull; waiting = hear/see/listen-for the return; routine = say-goodnight-to / put-on / pack-up / finish; repeated-arrival = find-the-right-one
+- The OBSTACLE must be visible and shape-appropriate: chase obstacles are physical (stuck, too high, rolling away, hiding); waiting obstacles are absences (only the wind, only the birds, only silence — not arrival yet); routine "obstacles" are simply the next stop (NOT failed attempts, just the next item to complete); repeated-arrival obstacles are the wrong-version reasons (too floppy, too pointy, too noisy, too prickly)
+- The SETTING must be a place a toddler knows: a house, a garden, a park, a bath, a shop, a farm, a bedroom, a bathroom, a supermarket
+- A supporting character or animal should appear — even simple (a duck, a cat, a snail). For waiting/routine/repeated-arrival shapes, the supporting character can be the thing being awaited or a household helper
+- Every page must look DIFFERENT as a colouring page — the character moves to new spots, or different items appear in different rooms
 
 *** WHAT TO AVOID ***
 - Abstract problems (feelings, lessons, sharing, being brave)
 - Fantasy worlds a toddler has never seen
 - Stories that need explaining — if the concept isn't obvious from the title, it's too complicated
 - Multiple unconnected elements (gnomes + sunflowers + falling petals = confusing)
+- DEFAULTING to chase when the brainstorm fits another shape better. If you write three pitches and all three are chases, you have not been picking the shape — re-read (e2) and reconsider.
 
 *** BLURB TONE ***
-Blurbs must sound like a mess happening RIGHT NOW. Nouns and noises only.
-BAD: "Kiki learns about sharing with her friends at the park."
-GOOD: "The wooden spinning top has whizzed under the sofa and tea is in two minutes!"
-NO questions. State the chaos.
+Blurbs must sound like a real situation a toddler can picture instantly. The exact tone depends on the shape:
+- Chase blurbs = a mess happening RIGHT NOW. "The wooden spinning top has whizzed under the sofa and tea is in two minutes!"
+- Waiting blurbs = a longing happening RIGHT NOW. "[HERO] is waiting for the postie to bring the parcel — where IS that postie?"
+- Routine blurbs = a familiar moment starting RIGHT NOW. "It's bedtime and [HERO] must say goodnight to all the favourite things!"
+- Repeated-arrival blurbs = a hunt happening RIGHT NOW. "[HERO] needs a hat for the party but every hat in the house is wrong!"
+BAD: "Kiki learns about sharing with her friends at the park." — too abstract regardless of shape.
+NO questions phrased as the parent quizzing the child. State the situation directly.
 """,
 
     "age_4": """
