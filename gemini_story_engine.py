@@ -1158,6 +1158,7 @@ Plus ONE more test — the one toddlers forgive the least:
      - "He loops his tie round the basket." (Tie visible in the illustrations but never used or referenced earlier. Toddler: WHERE DID THAT COME FROM?)
      - "She has a sudden idea." (An idea is not a tool. What is the THING she uses?)
      - "The squirrel helps." (A new helper appearing to solve it = cheating.)
+     - "He uses a determined expression to make the puppy drop the toy." / "She stays very still and waits patiently until it works." / "He smiles kindly until the bird trusts him." (A FACIAL EXPRESSION, EMOTIONAL STATE, OR POSTURE IS NOT A TOOL. Toddlers under 4-5 cannot infer that another character will respond to calm body language or a facial expression — that requires social cognition skills they haven't developed yet. The resolution must be a PHYSICAL ACTION using a NAMED OBJECT or NAMED BODY FEATURE — something a child can point at on the page and name.)
    GOOD TOOL-SETUP EXAMPLES:
      - "Pete wears a big pirate hat on every page — on page 5 he takes it off and uses it to scoop up the ladybird." (The hat has been on his head since page 1. The toddler has been pointing at it the whole book.)
      - "On page 2 Meg notices her net on the sofa. On page 3 she drops it behind the chair. On page 5 she grabs it and scoops the sock out from under the dog." (The net is MENTIONED on page 2. The tool isn't a surprise.)
