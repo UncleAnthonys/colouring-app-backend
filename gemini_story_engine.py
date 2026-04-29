@@ -1103,6 +1103,12 @@ Plus TWO more tests for under_3 and age_3 pitches:
    INVALID (ornamental — still banned, unchanged from previous rule): "A friendly squirrel watches Alexander try to get the basket down." The squirrel does nothing, affects nothing, will confuse the toddler.
 
 (e2) PITCH SHAPE AND SETTING ROTATION RULE (under_3 AND age_3):
+
+   ⚠️ TEMPORARY EVALUATION MODE (active for diagnostic testing — will be removed after evaluation):
+   For this generation period, do NOT produce a CHASE-AND-CATCH pitch. The pitch shape MUST be ONE of the four alternatives below: REPEATED-ARRIVAL, WAITING-AND-RETURN, ROUTINE-COMPLETION, or TRANSFORMATION. Across multiple pitch generations, vary which alternative you pick — do not produce four REPEATED-ARRIVAL pitches in a row. We are evaluating the alternative shapes' story quality and they have not appeared in 12+ recent generations under equal-weight framing. The chase-and-catch description below is included for reference only; do not pick it during this evaluation period. After we assess story quality, this mandate will be removed and chase will be restored as one of five equally-weighted options.
+
+   ---
+
    The pitch generator has two related habits that need fixing at both under_3 and age_3: it defaults to CHASE-AND-CATCH (runaway thing, hero retrieves) AND it defaults to a GARDEN setting. The result is the same garden-tour appearing in story after story (gate → bench → watering can → puddle), which makes consecutive stories feel identical. Both shape variety and setting variety matter — a child reading multiple stories with the same character notices when every one is structurally identical.
 
    FIVE VALID PITCH SHAPES (all equally weighted — pick the shape that best fits the brainstorm you start with, with no default-to-chase bias):
