@@ -1102,6 +1102,36 @@ Plus TWO more tests for under_3 and age_3 pitches:
 
    INVALID (ornamental — still banned, unchanged from previous rule): "A friendly squirrel watches Alexander try to get the basket down." The squirrel does nothing, affects nothing, will confuse the toddler.
 
+(e2) PITCH SHAPE AND SETTING ROTATION RULE (under_3 specific):
+   The pitch generator's strong default is CHASE-AND-CATCH (runaway thing, hero retrieves) in a GARDEN setting. Four out of five under_3 stories the app produces follow this exact pattern: the same runaway-object pitch in the same garden tour (gate → bench → watering can → puddle). Parents reading multiple stories to the same child WILL notice. Vary BOTH the shape AND the setting.
+
+   FIVE VALID UNDER_3 PITCH SHAPES (do NOT default to chase every time — each of these is a real picture-book template):
+     1. CHASE-AND-CATCH (Wallace and the Bouncy Grass shape): a runaway thing escapes, hero tries jumping/running/reaching, hero finally catches it on page 5. Tool deployed page 5.
+     2. REPEATED-ARRIVAL (Dear Zoo by Rod Campbell shape): something keeps arriving, each one wrong in a different way, final one is just right. e.g. "The post box keeps delivering the wrong puppy for Mabel — too big! too small! too wiggly! — until just the right one arrives." NO chase. NO tool. Just repeated reveal.
+     3. WAITING-AND-RETURN (Owl Babies by Martin Waddell shape): hero waits for someone or something to come back. Each page they wonder, watch, or worry. Final page = arrival. e.g. "Mabel is waiting for Mum to come home. Maybe in the kitchen? Maybe in the garden? Maybe in the hall? Mum is back!" NO chase. NO tool.
+     4. ROUTINE-COMPLETION (Goodnight Moon by Margaret Wise Brown shape): hero says goodnight to / finishes with / packs up a series of objects. Final page = routine done. e.g. "Mabel says goodnight to the boots. Goodnight to the bath. Goodnight to the toys. Goodnight to the moon. Mabel is asleep." NO chase. NO problem-object.
+     5. TRANSFORMATION (Hungry Caterpillar by Eric Carle shape): the problem-state changes naturally over the pages. No retrieval, no chase. e.g. "Caterpillar eats one apple. Two pears. Three plums. Now caterpillar is a butterfly!" NO chase. NO tool. Final page = new state.
+
+   PITCH SHAPE ROTATION RULE: do not produce two CHASE-AND-CATCH pitches in a row for the same character. If your previous pitch was chase-shape, this one should be one of the OTHER four. The pitch generator has no memory across calls — but the user's CHILD does. They will read multiple stories with the same character and notice if every one is the same shape.
+
+   SETTING ROTATION RULE: even within a CHASE-AND-CATCH pitch, do NOT default to the garden. Real toddler picture books are set in many places, all of which a 2-year-old recognises. Rotate across these:
+     - bedroom (bed, toy box, cupboard, under the bed)
+     - bathroom (bath, sink, towel rail, soap dish)
+     - park / playground (slide, swing, sandpit, gate)
+     - beach (sandcastle, bucket, towel, water's edge)
+     - kitchen (oven, fridge, sink, table, cupboard)
+     - bus or car interior (seat, window, door, floor, mum's bag)
+     - supermarket (trolley, shelf, freezer, checkout)
+     - bookshelf or reading nook (top shelf, low shelf, pile of books)
+     - farm yard (gate, trough, barn, henhouse)
+   GARDEN IS THE PROMPT'S DEFAULT — DELIBERATELY AVOID IT unless the pitch genuinely needs outdoor space the other settings can't provide. If you find yourself reaching for "in the garden" — STOP and ask: could this work in a bedroom, a kitchen, a park? Pick one of those instead.
+
+   COMBINED EXAMPLES (shape + non-garden setting):
+     - REPEATED-ARRIVAL in a bedroom: "Mabel is going to bed but the wrong toy keeps appearing on her pillow — too lumpy! too big! too jingly! — until her favourite teddy is there at last."
+     - ROUTINE-COMPLETION in a bathroom: "It's bath time! Mabel scrubs her ears, scrubs her hooves, scrubs her tummy, scrubs her tail. All clean!"
+     - WAITING-AND-RETURN at a beach: "Mabel's beach ball has rolled into the sea. Will it come back? She watches the waves. She listens. SPLASH! Here it comes!"
+     - CHASE-AND-CATCH in a supermarket: "Mabel's apple has rolled out of the trolley and is zooming down the aisle past the bread, past the freezer, past the checkout!"
+
 (f) VARIATION STRUCTURE RULE: Under_3 board books use VARIATION, not escalation. Each page 2–5 must be a DIFFERENT thing happening INVOLVING THE SAME PROBLEM-OBJECT — but not BIGGER, just DIFFERENT.
    HOW REAL UNDER_3 BOARD BOOKS WORK (verified from Dear Zoo by Rod Campbell and That's Not My Puppy by Fiona Watt — both pure under_3 board books, interest age 0-3):
      Dear Zoo: same structure every page, different animal + different problem-word. Too big. Too fierce. Too tall. Too grumpy. Too naughty. Too scary. Too jumpy. The lion is not "worse" than the elephant — it's just a different reason the pet doesn't work. Equivalent weight. Pure variation.
