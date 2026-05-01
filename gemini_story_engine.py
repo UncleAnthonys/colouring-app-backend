@@ -1634,6 +1634,26 @@ NOTE ON THE SCOOP DEFAULT: characters with a hat, helmet, crown, or bowl-shaped 
 
 GOLD STANDARD example of resolution variety: Pete-and-Heavy-Bubble-Trouble uses FIRE AT A TARGET (his eyepatch strap is a slingshot, the loose shell is the projectile, the off-button is the target). The goal-object was an OFF-BUTTON UP HIGH — that's the GET UP HIGH or FIRE AT A TARGET row, not the scoop row.
 
+*** TWIST-SOLVES-WANT VALIDATION ***
+Read this BEFORE finalising the pitch. Read your `want` field and `twist` field side-by-side. The action in `twist` must directly address the problem in `want`. The hero must physically resolve the page-1 problem on page 5 — not a different sub-problem invented during the obstacle escalation.
+
+TEST — write the pitch as a single sentence: "Hero needs to [WANT]. Hero does [TWIST]. Therefore [WANT] is achieved." If the chain breaks, the pitch is broken — rewrite the `twist` so it directly resolves the `want`, not a sub-problem.
+
+GOLD STANDARD (Pete-and-Heavy-Bubble-Trouble):
+  want  = "hit the OFF button to stop the bubble machine before the stones bury the turtle house"
+  twist = "Pete pulls back his stretchy eyepatch strap and fires a small shell at the OFF button"
+  Chain: Pete needs to hit the OFF button → Pete fires shell at button → button is hit → machine stops → stones stop falling. The hero physically resolves the page-1 want. ✓
+
+FAILURE SHAPES TO REJECT:
+
+  (1) GOAL DISPLACEMENT — the obstacle escalation introduces a NEW problem (fog, darkness, noise, distance) and the `twist` resolves that NEW problem rather than the original `want`. The hero's action must address the original page-1 want, not a sub-problem invented in pages 2-4.
+
+  (2) HERO-AS-ENABLER — the hero's action enables OTHER characters to solve the problem (the hero clears fog so builders can fix something; the hero distracts a guard so someone else grabs the goal; the hero shines a light so an offstage helper does the actual work). REJECT and rewrite. The hero's action IS the resolution. The hero must physically perform the move that solves the page-1 want.
+
+  (3) RESOLUTION OF A WANT THAT WAS NEVER STATED — the `twist` solves a problem the `want` field did not name. If `want` is about stopping a moving object and `twist` is about cleaning up a mess that wasn't mentioned in the `want`, the chain is broken.
+
+If your `twist` fails any of these three checks, REWRITE the `twist` so it directly performs the move that resolves the page-1 `want`. The hero is the one who physically does the resolving thing.
+
 *** BLURB TONE FOR THIS AGE ***
 Blurbs must hook with a silly consequence. Focus on funny mistakes and physical mess.
 GOOD: "Ted's giant feet have got tangled in the cake stand and now the whole table is tipping over!"
@@ -1682,6 +1702,26 @@ The hero solves the page-1 problem by physically *doing something* to the goal-o
 NOTE ON THE SCOOP DEFAULT: characters with a hat, helmet, crown, or bowl-shaped accessory will pull the writer toward the GATHER LOOSE THINGS UP row by default. Scoop works — it is on the menu. But the GOAL-OBJECT BEHAVIOUR determines which row to pick FIRST. A *single rolling object* heading for danger is a STOP IT MOVING / CHANGE ITS COURSE problem first. A *floating drifting* object is a CATCH FLOATING/RISING problem first. A *pile of loose things* is the row scoop belongs to. Look at what the goal-object is *doing*, find the matching row, and only fall back to scoop if the row genuinely calls for it.
 
 GOLD STANDARD example of resolution variety: Pete-and-Heavy-Bubble-Trouble uses FIRE AT A TARGET (his eyepatch strap is a slingshot, the loose shell is the projectile, the off-button is the target). The goal-object was an OFF-BUTTON UP HIGH — that's the GET UP HIGH or FIRE AT A TARGET row, not the scoop row.
+
+*** TWIST-SOLVES-WANT VALIDATION ***
+Read this BEFORE finalising the pitch. Read your `want` field and `twist` field side-by-side. The action in `twist` must directly address the problem in `want`. The hero must physically resolve the page-1 problem on page 5 — not a different sub-problem invented during the obstacle escalation.
+
+TEST — write the pitch as a single sentence: "Hero needs to [WANT]. Hero does [TWIST]. Therefore [WANT] is achieved." If the chain breaks, the pitch is broken — rewrite the `twist` so it directly resolves the `want`, not a sub-problem.
+
+GOLD STANDARD (Pete-and-Heavy-Bubble-Trouble):
+  want  = "hit the OFF button to stop the bubble machine before the stones bury the turtle house"
+  twist = "Pete pulls back his stretchy eyepatch strap and fires a small shell at the OFF button"
+  Chain: Pete needs to hit the OFF button → Pete fires shell at button → button is hit → machine stops → stones stop falling. The hero physically resolves the page-1 want. ✓
+
+FAILURE SHAPES TO REJECT:
+
+  (1) GOAL DISPLACEMENT — the obstacle escalation introduces a NEW problem (fog, darkness, noise, distance) and the `twist` resolves that NEW problem rather than the original `want`. The hero's action must address the original page-1 want, not a sub-problem invented in pages 2-4.
+
+  (2) HERO-AS-ENABLER — the hero's action enables OTHER characters to solve the problem (the hero clears fog so builders can fix something; the hero distracts a guard so someone else grabs the goal; the hero shines a light so an offstage helper does the actual work). REJECT and rewrite. The hero's action IS the resolution. The hero must physically perform the move that solves the page-1 want.
+
+  (3) RESOLUTION OF A WANT THAT WAS NEVER STATED — the `twist` solves a problem the `want` field did not name. If `want` is about stopping a moving object and `twist` is about cleaning up a mess that wasn't mentioned in the `want`, the chain is broken.
+
+If your `twist` fails any of these three checks, REWRITE the `twist` so it directly performs the move that resolves the page-1 `want`. The hero is the one who physically does the resolving thing.
 
 *** BLURB TONE FOR THIS AGE ***
 Blurbs must present a surreal what-if with clear stakes.
