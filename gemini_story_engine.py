@@ -326,10 +326,14 @@ RULES:
     NO FORCED REFRAIN AT AGE_4: Age_4 stories are NOT board books. A Bear-Hunt-style cross-page refrain ("Catch that puppy!" on every page) makes age_4 writing sound babyish. Age_4 earns its rhythm differently — through rhyme, through triplet-stacking, through dialogue, and through repetition WITHIN a single page. If the user has specifically selected the Repetition writing style, that opt-in style adds a refrain — but by default, age_4 has NO cross-page refrain. Do NOT tack "Catch that X!" onto the end of every page.
     WHAT AGE_4 RHYTHM ACTUALLY LOOKS LIKE:
       - Internal rhyme (Room on the Broom): "The wind it BLEW and the balloon it SHOOK, round and round with a wibble and a wook."
+      - Triplet-stacking with parallel verbs (Pete-and-Heavy-Bubble-Trouble): "He hops. He skips. He leaps!" — three short sentences, parallel structure, escalating verbs, often capped on the third with `!`.
       - Triplet-stacking with a shared adjective (Gruffalo): "He has terrible tusks, and terrible claws, and terrible teeth in his terrible jaws."
+      - Triplet-stacking with a shared scaffold word (Pete-and-Heavy-Bubble-Trouble): "They are too high. They are too heavy. They are too hard." — three short sentences, all sharing a scaffold word ("too", "very", "so"), each with a different adjective.
+      - Triplet-stacking with earned sound words (Pete-and-Heavy-Bubble-Trouble): "Thump! Thump! Thump!" / "Tink! Tink! Tink!" / "Snap! Twang! Pop!" — three sound words the page's action actually makes (not slammed in for impact).
       - Within-page repetition: "Rub-a-dub-DUB! Rub-a-dub-DUB! 'Slippy enough yet?' Rub-a-dub-DUB!" (repetition belongs INSIDE one page, not across pages)
       - Dialogue with attitude (Tiger Who Came to Tea): a funny voice the parent performs, dropped mid-action.
       - Sentence-shape rhythm: short-short-LONG, or three beats before a punchline.
+    THE TWO-BEAT TRAP (age_4 and age_5 ONLY — under_3 and age_3 follow a different rhythm system, do NOT apply this rule there): if you write "He bounces off the cars. He bounces off the bears." and stop, you have a two-beat pair, NOT a triplet. The third beat is what makes the rhythm Gruffalo-shaped. Add a third sentence ("He bounces off the floor!") or rewrite as a single triplet sentence. The model has been generating two-beat parallel pairs and stopping; this is under-rhythmic and reads as toddler prose at age_4 length. Commit to the third beat. AT LEAST ONE TRIPLET PER PAGE for age_4 and age_5 stories.
     Each of those is a tool. Use at least two per page. Do NOT substitute them with a tacked-on refrain — that is a lazier, younger device.
     PAGE 1 STORY LOGIC (age_4): The same three questions apply but with more detail. The child must understand: what's the problem, what's the plan, and WHY the plan will work. Every page after must visibly work toward that plan.
     GOOD: "The oven won't stop! Bread is growing and growing and pushing out the door! Kiki must pull the plug out before the bread fills the whole kitchen. But the plug is behind the oven — and the bread is in the way!"
@@ -1609,6 +1613,27 @@ GOLD STANDARD: A grumpy chalk monster blocking the bridge who won't move until h
 - Problems that don't match their solutions (playing music to fix cracks)
 - Abstract obstacles (noise, darkness, feelings) — use physical, visible obstacles
 
+*** TWIST ACTION VARIETY ***
+The hero solves the page-1 problem by physically *doing something* to the goal-object or the obstacle. Pick the action shape that fits THIS story's physics. Below are the action shapes a 4-year-old recognises — each row's verbs are interchangeable for the same physical move. Read the menu before committing to a `twist` field:
+
+- STOP IT MOVING:                 block / plug / dam / wedge / jam / stuff / wall it off
+- CHANGE ITS COURSE:              bounce / knock / push / ramp / send sideways
+- CATCH SOMETHING FLOATING/RISING: hook / fish / loop / snag / pull down / tie down
+- CATCH SOMETHING FALLING:        catch / scoop / drop a soft thing under it / tuck under
+- GATHER LOOSE THINGS UP:         scoop / sweep / pile / gather / round up / pick up
+- GET UP HIGH:                    stack / pile / build / climb / step up / hop up / stand on
+- PULL IT OUT:                    pull / drag / tug / yank / tow / haul
+- WRAP OR TIE IT:                 wrap / tie / knot / tangle / loop / cover
+- POKE OR POP IT:                 poke / prod / jab / pop / push / press
+- HOLD IT DOWN:                   weight / pin / press / squash / sit on / hold down
+- MOP A SPILL:                    soak up / mop / sponge
+- FIRE AT A TARGET:               launch / sling / fling / fire / shoot / snap / ping / flick
+- TRICK THE OBSTACLE:             offer / swap / give / point away / hide / show
+
+NOTE ON THE SCOOP DEFAULT: characters with a hat, helmet, crown, or bowl-shaped accessory will pull the writer toward the GATHER LOOSE THINGS UP row by default. Scoop works — it is on the menu. But the GOAL-OBJECT BEHAVIOUR determines which row to pick FIRST. A *single rolling object* heading for danger is a STOP IT MOVING / CHANGE ITS COURSE problem first. A *floating drifting* object is a CATCH FLOATING/RISING problem first. A *pile of loose things* is the row scoop belongs to. Look at what the goal-object is *doing*, find the matching row, and only fall back to scoop if the row genuinely calls for it.
+
+GOLD STANDARD example of resolution variety: Pete-and-Heavy-Bubble-Trouble uses FIRE AT A TARGET (his eyepatch strap is a slingshot, the loose shell is the projectile, the off-button is the target). The goal-object was an OFF-BUTTON UP HIGH — that's the GET UP HIGH or FIRE AT A TARGET row, not the scoop row.
+
 *** BLURB TONE FOR THIS AGE ***
 Blurbs must hook with a silly consequence. Focus on funny mistakes and physical mess.
 GOOD: "Ted's giant feet have got tangled in the cake stand and now the whole table is tipping over!"
@@ -1636,6 +1661,27 @@ Must be essential to the plot — they either cause the problem, block the solut
 - Settings with made-up rules the child can't intuit
 - Problems solved by "trying harder" or "believing in yourself"
 - Supporting characters who just cheer from the sidelines
+
+*** TWIST ACTION VARIETY ***
+The hero solves the page-1 problem by physically *doing something* to the goal-object or the obstacle. Pick the action shape that fits THIS story's physics. Below are the action shapes a 4-year-old recognises — each row's verbs are interchangeable for the same physical move. Read the menu before committing to a `twist` field:
+
+- STOP IT MOVING:                 block / plug / dam / wedge / jam / stuff / wall it off
+- CHANGE ITS COURSE:              bounce / knock / push / ramp / send sideways
+- CATCH SOMETHING FLOATING/RISING: hook / fish / loop / snag / pull down / tie down
+- CATCH SOMETHING FALLING:        catch / scoop / drop a soft thing under it / tuck under
+- GATHER LOOSE THINGS UP:         scoop / sweep / pile / gather / round up / pick up
+- GET UP HIGH:                    stack / pile / build / climb / step up / hop up / stand on
+- PULL IT OUT:                    pull / drag / tug / yank / tow / haul
+- WRAP OR TIE IT:                 wrap / tie / knot / tangle / loop / cover
+- POKE OR POP IT:                 poke / prod / jab / pop / push / press
+- HOLD IT DOWN:                   weight / pin / press / squash / sit on / hold down
+- MOP A SPILL:                    soak up / mop / sponge
+- FIRE AT A TARGET:               launch / sling / fling / fire / shoot / snap / ping / flick
+- TRICK THE OBSTACLE:             offer / swap / give / point away / hide / show
+
+NOTE ON THE SCOOP DEFAULT: characters with a hat, helmet, crown, or bowl-shaped accessory will pull the writer toward the GATHER LOOSE THINGS UP row by default. Scoop works — it is on the menu. But the GOAL-OBJECT BEHAVIOUR determines which row to pick FIRST. A *single rolling object* heading for danger is a STOP IT MOVING / CHANGE ITS COURSE problem first. A *floating drifting* object is a CATCH FLOATING/RISING problem first. A *pile of loose things* is the row scoop belongs to. Look at what the goal-object is *doing*, find the matching row, and only fall back to scoop if the row genuinely calls for it.
+
+GOLD STANDARD example of resolution variety: Pete-and-Heavy-Bubble-Trouble uses FIRE AT A TARGET (his eyepatch strap is a slingshot, the loose shell is the projectile, the off-button is the target). The goal-object was an OFF-BUTTON UP HIGH — that's the GET UP HIGH or FIRE AT A TARGET row, not the scoop row.
 
 *** BLURB TONE FOR THIS AGE ***
 Blurbs must present a surreal what-if with clear stakes.
