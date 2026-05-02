@@ -323,6 +323,13 @@ RULES:
     THE COMMON THREAD: A 3-year-old story is NOT three short declarative sentences in a row. It is a PERFORMANCE — repetition WITHIN the page (round and round, hold on hold on), a refrain that returns every page, sound words that come from the action, and a parent's voice that has SOMEWHERE TO GO. If your page reads like an event report ("X happens. Then Y happens. Then Z happens.") you have written a caption, NOT a story. Rewrite it.
 
 - **PRESCHOOL PERFORMANCE (age_4):** 3-5 sentences per page. This is a one-person show for the parent.
+
+    *** YOUR STORY MUST FEEL LIKE THESE THREE BOOKS *** (this is THE test, before any other rule):
+      - *The Gruffalo* (Julia Donaldson) — Gruffalo-stack triplets, build-build-build-SNAP
+      - *Room on the Broom* (Julia Donaldson) — internal rhyme, beat you can clap to
+      - *The Tiger Who Came to Tea* (Judith Kerr) — parent-performable dialogue dropped mid-action
+    If your finished page does NOT sound like one of these books, you have written a caption — a "police report" of what happened. The triplet rule, the rhythm rule, the dialogue rule — all of them exist to get you to THIS sound. Hitting the rules without hitting this sound is failure. Read your page out loud. Does the parent's voice rise and fall? Does it have somewhere to go? Or is every sentence the same flat shape? If flat — REWRITE.
+
     NO FORCED REFRAIN AT AGE_4: Age_4 stories are NOT board books. A Bear-Hunt-style cross-page refrain ("Catch that puppy!" on every page) makes age_4 writing sound babyish. Age_4 earns its rhythm differently — through rhyme, through triplet-stacking, through dialogue, and through repetition WITHIN a single page. If the user has specifically selected the Repetition writing style, that opt-in style adds a refrain — but by default, age_4 has NO cross-page refrain. Do NOT tack "Catch that X!" onto the end of every page.
     WHAT AGE_4 RHYTHM ACTUALLY LOOKS LIKE:
       - Internal rhyme (Room on the Broom): "The wind it BLEW and the balloon it SHOOK, round and round with a wibble and a wook."
@@ -352,8 +359,25 @@ RULES:
     ✅ YES: "The wind it BLEW and the balloon it SHOOK, round and round with a wibble and a wook. Dolly's eyes went wide as a plate. 'Oh no,' she gasped. 'It's getting late!'"
 
     MECHANIC 3 — *The Tiger Who Came to Tea* by Judith Kerr: A funny voice the parent gets to do, dropped right into the action. Dialogue is the engine, not the description.
+    Verbatim from Tiger: the tiger arrives at the door and politely says, "Excuse me, but I'm very hungry. Do you think I could have tea with you?" — that's the dialogue mechanic. A funny voice (polite, hungry, a bit grand) dropped straight into the action with no narrator scaffolding around it. Then the famous and-chain when the tiger eats his way through the kitchen: he ate all the sandwiches, and he ate all the buns, and he ate all the biscuits, and the cake — an and-chain that rolls and rolls until it tips over the absurdity line. Two techniques in one book: dialogue with attitude + and-chain rhythm.
     ❌ NOT: "Dolly rubs the inside of her bed on the pole. The metal gets very slick. The rope slips off."
     ✅ YES: "Dolly had a BIG idea. She rubbed her bed on the pole — rub-a-dub-DUB! Rub-a-dub-DUB! 'Slippy enough yet?' she huffed. 'Slippier!' wheezed Mr Pip. Rub-a-dub-DUB! And — SLIDE! Off slipped the rope!"
+
+    *** WORKED EXAMPLES — VERIFIED LITTLE LINES GOLD (study these full pages, not just snippets) ***
+
+    These are full age_4 pages from Pete-and-Heavy-Bubble-Trouble and Hannah-and-the-Magic-Chalk-Path — the engine's gold-standard reference stories. Study HOW they sound, not just what they say. Read each one OUT LOUD before writing your own page.
+
+    GOLD STANDARD #1 — Pete-and-Heavy-Bubble-Trouble, Page 3 (mid-story escalation):
+    "Pete runs and runs and runs. He tries to jump over the piles. He hops. He skips. He leaps! But the stones are too high. They are too heavy. They are too hard. The button is still way up there! How can he reach it?"
+    
+    Why this works: Long-rolling opener ("Pete runs and runs and runs") then TWO stacked triplets back-to-back (verb triplet "He hops. He skips. He leaps!" + shared-scaffold triplet "too high / too heavy / too hard") then a punch sentence and an open question. The parent's voice rises through both triplets, lands hard on "still way up there!", then turns up at the end on the question. Action verbs do the load-bearing work — runs, jump, hops, skips, leaps, reach. There are NO two-beat traps and NO stative-SVO captions. Even the "They are too..." sentences land as a triplet, not a dangling pair.
+
+    GOLD STANDARD #2 — Hannah-and-the-Magic-Chalk-Path, Page 2 (page 1 setup):
+    "Hannah has a magic bit of chalk. SWISH! She draws a long path to go home. But look at the sky! Big, heavy clouds are coming. If it rains, her path will wash away. She must get to the bridge fast!"
+    
+    Why this works: NO triplet on this page — and that's the lesson. Rhythm comes from sentence-length variation (3-word "SWISH!" up against 9-word "If it rains, her path will wash away") and from cause-chain conjunctions ("But look at...", "If it rains... will wash away"). The connecting words make the sentences depend on each other instead of standing as separate captions. A page can be strong without a triplet IF the sentences flow into each other through "but", "if", "then", "and". The parent's voice has somewhere to go because the sentences pull each other forward.
+
+    THE LESSON FROM BOTH PAGES: rhythm at age_4 comes from EITHER (a) earned triplets at moments of escalation OR (b) cause-chain conjunctions and sentence-length variation. NEVER from same-shape SVO captions strung together with full stops. If your page reads as "It is X. It is Y. She does Z. The W is V." with no triplet AND no connecting words, you have written a police report. Rewrite using one of the two techniques above.
 
     THE COMMON THREAD: At age_4 the parent is putting on a SHOW. Every page needs ONE moment of dialogue with attitude, ONE beat with rhythm or rhyme, and ONE punch line. If your page is just describing what happens in third person, you have written a film script, NOT a story. Rewrite it with a voice in it.
 
