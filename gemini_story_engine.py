@@ -496,9 +496,7 @@ WHAT TO LOOK FOR in the pitch to identify the premise that must be visualised:
   - SETTING CONDITION: "kitchen flooded", "underwater coral world", "school playground covered in chalk drawings" — the image must establish that setting clearly with its key visible features. Underwater = sea grass, shells, fish, turtle house. Flooded kitchen = water on the floor, things floating, the source. Playground with chalk drawings = chalk drawings VISIBLY ON the concrete.
   - VISITOR-IN-ORDINARY-LIFE shape (age_4+): the image must show the visitor IN the ordinary setting (the dragon ON the library desk, the goose AT the bakery counter, the fox IN the kitchen). The visitor's wrongness is established by their interaction with normal objects in that setting.
   - JOURNEY-AND-RETURN shape (age_4+): the image must show the hero MID-JOURNEY at a recognisable obstacle on the path (hero crossing the muddy field, hero stuck at the stile, hero wading through the duck pond). Setting + obstacle visible together; the goal-destination implied or visible in the distance.
-  - CUMULATIVE-ENCOUNTER shape (age_4+): the image must show the hero AND at least one of the supporting cast/objects already arrived (witch + cat on the broom; child + first-arrived gift). The accumulation is hinted by having ONE visible companion or item with empty space for more.
   - CAN'T-DO-THE-THING shape (age_4+): the image must show the hero TRYING the simple thing AND the obstacle preventing them (hero in bed + the noise source nearby; hero with book + the cat sitting on the page).
-  - REPEATED-ARRIVAL shape (age_4+): the image must show the hero AND the FIRST wrong version (hero opening package with too-big elephant inside; hero looking at the too-heavy hammer the toolshop man has handed them).
 WORKED EXAMPLES:
 GOOD page 1 (Pete and the Heavy Bubble Trouble — age_4 gold standard):
   Pitch premise: bubble machine should blow light bubbles, this one is blowing heavy round stones, in an underwater coral world.
@@ -1340,18 +1338,17 @@ If ANY of tests (a) through (h) fail, rewrite the pitch. Under_3 and age_3 toddl
    This test runs LAST. By now the pitch may technically pass tests (a)-(h) — coherent goal, named obstacle, sound logic, valid stakes. But a pitch can pass every structural test and STILL be a dead premise. "Pete and the Windy Hat" passes everything and is still mundane.
    Read the THEME_NAME and THEME_BLURB out loud. Honestly answer the questions below — for age_4 and above, answer ALL FOUR. For under_3 and age_3, SKIP question (4) INVERSION and answer the GROUNDED FANTASY TEST that follows instead.
    (1) EXCITING: Would a 4-year-old hear this title and stop what they're doing? Or shrug?
-   (2) NOVEL: Has this premise shape appeared in any of the last several stories the app has made? Or is it the same shape as ones we keep generating (catch-the-floater, save-from-water, things-grow-too-big)? IN PARTICULAR — the engine has a documented over-bias toward INVERSION premises ("soft thing has become hard", "still thing is moving", "X has become Y"). If your draft pitch is an inversion, ask: does the character / theme / setting actually call for inversion, or are you defaulting to it because it is the most familiar shape? If the last few stories you have seen were inversions, pick a different shape from the SIX VALID PITCH SHAPES menu (VISITOR / JOURNEY / CUMULATIVE / CAN'T-DO / REPEATED-ARRIVAL).
+   (2) NOVEL: Has this premise shape appeared in any of the last several stories the app has made? Or is it the same shape as ones we keep generating (catch-the-floater, save-from-water, things-grow-too-big)? IN PARTICULAR — the engine has a documented over-bias toward INVERSION premises ("soft thing has become hard", "still thing is moving", "X has become Y"). If your draft pitch is an inversion, ask: does the character / theme / setting actually call for inversion, or are you defaulting to it because it is the most familiar shape? If the last few stories you have seen were inversions, pick a different shape from the FOUR VALID PITCH SHAPES menu (VISITOR / JOURNEY / CAN'T-DO).  [PATCH_E_SHAPE_CUT_001]
+   (2b) NO CONSECUTIVE INVERSIONS RULE (age_4+ — HARD CONSTRAINT — fires for every pitch in a multi-pitch batch): if the PREVIOUS pitch you generated in this batch was INVERSION, the next pitch must NOT be INVERSION. Pick from the three non-INVERSION shapes (VISITOR / JOURNEY / CAN'T-DO). The intent of multi-pitch batches is to give the user a CHOICE between distinct shapes, not three variants of the same shape. If you find yourself drafting a second consecutive INVERSION because it is the most familiar template, STOP and rewrite as a different shape from scratch — do not try to soften an inversion into something else.  [PATCH_E_NO_REPEAT_001]
    (3) DISTINCTIVE: Could a child describe this story to another child in one sentence and have it sound DIFFERENT from every other kids' story? Or does it blur into "another character chases another thing"?
-   (4) PREMISE SHAPE (AGE_4 AND ABOVE ONLY — under_3 and age_3 MUST SKIP this question and use the GROUNDED FANTASY TEST below instead): Does the premise have a recognisable PICTURE BOOK SHAPE that a 4-year-old can describe in one sentence? The strongest age_4+ stories sit on ONE clear shape from the SIX VALID PITCH SHAPES menu in the age_4 PITCH_AGE_GUIDELINES below. Pick the shape that fits this character + this theme — DO NOT default to INVERSION every time. The engine has a documented over-bias toward INVERSION premises ("soft thing has become hard", "still thing is moving"); the goal is shape variety across the user's library of stories.
-      The six valid shapes (study the menu in age_4 PITCH_AGE_GUIDELINES for full templates and when-to-pick guidance):
+   (4) PREMISE SHAPE (AGE_4 AND ABOVE ONLY — under_3 and age_3 MUST SKIP this question and use the GROUNDED FANTASY TEST below instead): Does the premise have a recognisable PICTURE BOOK SHAPE that a 4-year-old can describe in one sentence? The strongest age_4+ stories sit on ONE clear shape from the FOUR VALID PITCH SHAPES menu in the age_4 PITCH_AGE_GUIDELINES below. Pick the shape that fits this character + this theme — DO NOT default to INVERSION every time. The engine has a documented over-bias toward INVERSION premises ("soft thing has become hard", "still thing is moving"); the goal is shape variety across the user's library of stories.
+      The four valid shapes (study the menu in age_4 PITCH_AGE_GUIDELINES for full templates and when-to-pick guidance):
         - INVERSION (Pete-and-Heavy-Bubble-Trouble shape) — the world breaks ONE of its own rules in a specific physical way
         - VISITOR-IN-ORDINARY-LIFE (Tiger Who Came to Tea shape) — an unexpected creature arrives in an everyday setting
         - JOURNEY-AND-RETURN (Bear Hunt / Stick Man shape) — hero travels through a sequence of obstacles to reach a goal
-        - CUMULATIVE-ENCOUNTER (Room on the Broom shape) — hero meets a series of characters who stack up around the situation
         - CAN'T-DO-THE-THING (Peace at Last shape) — hero wants something simple but small absurdities prevent it on each page
-        - REPEATED-ARRIVAL (Dear Zoo shape) — hero hunts for the right version, wrong versions arrive in turn
-      RULE: if your draft pitch does not cleanly fit one of the six shapes, it is probably not a children's-book-shaped story — REJECT and pick a shape, then build the pitch from the shape outward. INVERSION is no longer the only valid age_4+ shape; treat it as one of six equally weighted options.
-      WHY THIS MATTERS: the engine's named reference books (Gruffalo, Tiger, Stick Man, Bear Hunt, Owl Babies, Peace at Last, Dear Zoo, Oi Frog, Supertato) are mostly NOT inversions. They are visitors, journeys, cumulative encounters, and can't-do-the-thing stories. Use the shape menu to MATCH the kind of story the references actually are.
+      RULE: if your draft pitch does not cleanly fit one of the four shapes, it is probably not a children's-book-shaped story — REJECT and pick a shape, then build the pitch from the shape outward. INVERSION is no longer the only valid age_4+ shape; treat it as one of four equally weighted options.
+      WHY THIS MATTERS: the engine's named reference books (Gruffalo, Tiger, Stick Man, Bear Hunt, Peace at Last, Oi Frog, Supertato) are mostly NOT inversions. They are visitors, journeys, and can't-do-the-thing stories. Use the shape menu to MATCH the kind of story the references actually are.
 
    (4-alt) GROUNDED FANTASY TEST (under_3 AND age_3 ONLY — SKIP for age_4 and above): Does the premise's fantasy stay within toddler-friendly categories?
       Toddlers (2-3 years old) cannot follow MECHANISM-FANTASY — chains of impossible cause-and-effect like "tag whistles → boots sneeze → boots fly". Their brains are still building real-world causal models. They cannot hold "the world's normal rules are broken in this specific way" AND "track the consequences of that broken rule" simultaneously. Stories that ask them to do this just confuse them — even if every individual sentence is simple.
@@ -1385,9 +1382,7 @@ If ANY of tests (a) through (h) fail, rewrite the pitch. Under_3 and age_3 toddl
      - INVERSION: "The bubble machine at the underwater pool started spitting out heavy stones and the turtle's house is being buried." (Pete shape — the world breaks its own rule.)
      - VISITOR-IN-ORDINARY-LIFE: "A small dragon has flown in through the library window and is melting all the books." (Tiger shape — visitor in real setting.)
      - JOURNEY-AND-RETURN: "[HERO] must deliver the birthday card across the village before sundown — through a muddy field, over a stile, past the duck pond, and through the bramble hedge." (Bear Hunt shape — sequence of obstacles on a path.)
-     - CUMULATIVE-ENCOUNTER: "It's [HERO]'s birthday tea and the table is bare — but every friend who arrives brings something more peculiar than the last." (Broom shape — accumulating arrivals.)
      - CAN'T-DO-THE-THING: "[HERO] just wants to read their new book but every animal in the house keeps interrupting with a different problem." (Peace at Last shape — small absurdities preventing a simple goal.)
-     - REPEATED-ARRIVAL: "[HERO] needs the right tool to fix the wonky shed but Mr Tinker keeps bringing the wrong ones — too heavy, too small, too floppy, too bendy." (Dear Zoo shape — wrongness ladder.)
    THE TEST: would a parent reading this pitch in the app smile and tap it because they think "that's CLEVER" — or would they scroll past because it sounds like every other story? If they'd scroll past, REJECT and rewrite. The premise is the most important thing. Stakes, structure, refrains — none of those matter if the premise is dead.
    COMMIT to either a SETTING with weird/imaginative chaos baked in, OR a SITUATION the child has never read before. No mundane premises. No "thing in a place." Always ask: WHAT MAKES THIS DIFFERENT FROM EVERY OTHER STORY THE APP COULD MAKE?
 
@@ -1642,7 +1637,7 @@ GOLD STANDARD: A grumpy chalk monster blocking the bridge who won't move until h
 - Problems that don't match their solutions (playing music to fix cracks)
 - Abstract obstacles (noise, darkness, feelings) — use physical, visible obstacles
 
-*** SIX VALID PITCH SHAPES (age_4+ — all equally weighted — pick the shape that best fits the brainstorm you start with, with no default-to-inversion bias) ***
+*** FOUR VALID PITCH SHAPES (age_4+ — all equally weighted — pick the shape that best fits the brainstorm you start with, with no default-to-inversion bias)  [PATCH_E_FOUR_SHAPES] ***
 
 - INVERSION (Pete-and-Heavy-Bubble-Trouble shape): the world breaks ONE of its own rules in a specific physical way. A bubble machine blows heavy stones instead of light bubbles. Stone statues come alive. Drawings lift off the page. Each middle page deepens the consequence of the broken rule; page 5 resolves it through a physical action that uses the rule's logic. Pick this shape when the brainstorm naturally produces a category violation — something soft becomes hard, something still becomes moving, something gentle becomes forceful. Use sparingly: roughly ONE pitch in five should be INVERSION, not five out of five. TWO WORKED TEMPLATES — adapt to the character:
     Template A (a kitchen appliance behaving wrong):
@@ -1677,16 +1672,29 @@ GOLD STANDARD: A grumpy chalk monster blocking the bridge who won't move until h
       twist: "[HERO] uses [feature_used] to grab the scarf as it dips low over the bus stop and tucks it back round their neck"
   The pattern: 4 different obstacles on a single coherent path across pages 2-5. Each obstacle has a different texture (muddy / wobbly / wet / scratchy). Page 5 is arrival or recovery, not a new obstacle.
 
-- CUMULATIVE-ENCOUNTER (*Room on the Broom* by Julia Donaldson shape): the hero meets a series of characters who join the journey or stack up around the situation. The accumulated group resolves the climax. Pick this shape when the brainstorm involves a collecting energy — a witch picking up animal helpers, a child gathering gifts for a tea party, a postie giving lifts to lost pets along the route. By page 5 the group works together (or one of them turns out to be the key). TWO WORKED TEMPLATES — adapt to the character:
-    Template A (collecting helpers on a journey):
-      theme_blurb: "[HERO]'s bicycle is too heavy to pedal up the hill — but a series of friendly animals keep climbing aboard!"
-      obstacle: "first a duck hops on the handlebars; then a cat curls in the basket; then a small dog sits in the saddlebag; then a goose lands on [HERO]'s head"
-      twist: "[HERO] uses [feature_used] to push off the top of the hill — and the whole bike GLIDES down with the animals cheering, arriving at the picnic just in time"
-    Template B (gathering items for a celebration):
-      theme_blurb: "It's [HERO]'s birthday tea and the table is BARE — but every friend who arrives brings something new!"
-      obstacle: "the rabbit brings a wobbly jelly; the badger brings a dusty book; the squirrel brings a sticky pine cone; the owl brings a pile of crinkly leaves"
-      twist: "[HERO] uses [feature_used] to arrange every gift on the table — somehow it makes the BEST birthday tea ever"
-  The pattern: 4 arrivals across pages 2-5, each adding to the group or pile. Page 5 = the accumulation pays off — the group helps, or the assortment turns out to be perfect.
+  WORKED EXAMPLE — verified gold-tier JOURNEY-AND-RETURN at age_4 (from "Oli and the Shiny Bird Chase").  [PATCH_G_MAGPIE_JOURNEY_001]
+  This is what a strong JOURNEY-AND-RETURN looks like in production. Study these two pages as a pair — the shape only becomes visible when you see how P1 sets up the journey and P3 carries it through a different setting.
+
+  PAGE 1 (setup — establishes the journey):
+    "Oli has a special card with a tiny baby on it. But look! Barnaby the Magpie snatches it with his beak. 'Hey! That is mine!' shouts Oli. Barnaby flies high, high, high toward the tall trees. Oli must get it back before the bird hides it in his nest!"
+
+  PAGE 3 (a middle obstacle — the duck pond):
+    "Now Barnaby is in the middle of the duck pond. He sits on a wet rock. The water is deep. The water is splashy. The water is cold. Oli tries to reach, but his boots get all soggy. Squelch! Squelch! Squelch! Barnaby just laughs."
+
+  WHY THIS WORKS — three things this excerpt demonstrates that single-page templates cannot:
+
+  (1) THE JOURNEY SHAPE IS PAGE-TO-PAGE, NOT PAGE-INTERNAL. Each page = one stop. The shape is the SEQUENCE of stops. P1 starts the journey; P3 is mid-journey at a different location. To teach JOURNEY you have to show at least two stops together — a single page can show prose density but cannot show shape.
+
+  (2) WHAT STAYS CONSTANT vs. WHAT VARIES. Across these two pages: the HERO (Oli), the GOAL-OBJECT (the special card), and the ANTAGONIST (Barnaby) are identical. What changes is the SETTING (sky+trees → duck pond) and the OBSTACLE (the bird is high → the water is deep). This visual-continuity discipline is what makes JOURNEY readable to a 4-year-old. The antagonist carrying the goal-object across different physical settings IS the shape.
+
+  (3) THE DESTINATION-WITH-CONSEQUENCE ANCHORS THE JOURNEY. P1 names the nest: "before the bird hides it in his nest!" The nest is the journey's TERMINUS — once the card is hidden there, it is gone forever. This is what stops the chase being infinite. Without a destination-with-consequence, JOURNEY collapses into "hero chases thing forever with no reason it has to end." Every middle-page obstacle (climbing frame, duck pond, bandstand) inherits the time-pressure from P1's nest-threat. The reader knows the journey MUST conclude — the only question is whether Oli reaches the card before it reaches the nest.
+
+  HOW TO USE THIS WHEN BRAINSTORMING A JOURNEY-AND-RETURN PITCH:
+    a) The goal-object should be something the hero starts WITH or starts NEAR — preferably an item visible on the user's uploaded photo (the card on Oli's ultrasound was the starting object here). The antagonist takes it away. The hero pursues.
+    b) The antagonist should be specific and named (Barnaby, not "a bird") and should have its own logic for taking the goal-object — Barnaby thinks the shiny card is treasure for his nest. Not malicious — just being a magpie.
+    c) The destination must be NAMED on P1 and must have a clear consequence-if-reached (the nest = card hidden forever). This anchors the time-pressure across all middle pages.
+    d) Each middle-page obstacle should be a DIFFERENT physical setting where the hero ENGAGES with the obstacle (not just passes it). Oli climbs the frame, wades into the pond, looks up at the bandstand — three different physical actions at three different locations.
+    e) The hero recovers the goal-object on P5 using their feature — Oli's reflective snowmen-jumper FLASH dazzles the bird. The feature SOLVES the journey.
 
 - CAN'T-DO-THE-THING (*Peace at Last* by Jill Murphy shape): the hero wants something simple (sleep, sit, eat, read) but a different small absurdity prevents it on each page. The comedy is in the variation of obstacles, not in any category violation. Pick this shape when the brainstorm involves a hero just trying to do an ordinary thing — sleep, eat lunch, read a book, finish a drawing — but the world keeps interrupting in absurd small ways. TWO WORKED TEMPLATES — adapt to the character:
     Template A (trying to sleep):
@@ -1699,18 +1707,7 @@ GOLD STANDARD: A grumpy chalk monster blocking the bridge who won't move until h
       twist: "[HERO] uses [feature_used] to make a quiet reading nook under the kitchen table where nobody can find them — at last, page one"
   The pattern: 4 different interruptions across pages 2-5, each preventing the same simple goal. Each interruption is different in shape (sound / animal / event / person). Page 5 = the hero finally achieves the simple thing.
 
-- REPEATED-ARRIVAL (*Dear Zoo* by Rod Campbell shape — works at age_4+ when the wrong-versions are funnier or more elaborate than at age_3): the hero asks for / hunts for / receives the right version of something but keeps getting wrong versions instead. Each wrong version is wrong in a different specific way; the comedy is the wrongness ladder. Page 5 = the right one. Pick this shape when the brainstorm involves the hero needing the right version of something — the right pet, the right outfit, the right ingredient, the right tool for the job. TWO WORKED TEMPLATES — adapt to the character:
-    Template A (the right pet for the situation):
-      theme_blurb: "[HERO] is going camping and writes to the pet shop — please send me a pet for the trip! But every pet that arrives is wrong!"
-      obstacle: "the pet shop sends a goldfish — too splashy; then a parrot — too noisy; then a rabbit — too jumpy; then a tortoise — too slow"
-      twist: "the pet shop finally sends a small dog with a feature parallel to [feature_used] — perfect for adventuring, and they set off together"
-    Template B (the right tool for a job):
-      theme_blurb: "[HERO] needs to fix the wonky shed and asks Mr Tinker the toolshop man for the right tool — but he keeps bringing the wrong ones!"
-      obstacle: "Mr Tinker brings a giant hammer — too heavy; then a toothbrush — too small; then a frying pan — too floppy; then a spaghetti fork — too bendy"
-      twist: "Mr Tinker finally finds a screwdriver in his garden shed — [HERO] uses [feature_used] to hold the wonky bit steady while they tighten the bolt"
-  The pattern: 4 wrong versions across pages 2-5, each wrong in a different specific way. Page 5 = the right one arrives. The hero's body feature does the final task.
-
-PICKING THE SHAPE: when you start brainstorming a pitch, the situation you imagine usually fits one shape better than the others. A misbehaving appliance is an INVERSION. A creature in the wrong place is a VISITOR. A hero needing to deliver something is a JOURNEY-AND-RETURN. A hero gathering helpers is a CUMULATIVE-ENCOUNTER. A hero trying to do an ordinary thing is a CAN'T-DO-THE-THING. A hero needing the right version is a REPEATED-ARRIVAL. Match the shape to the situation; do NOT force every situation into INVERSION. If you generate three pitches in a row and all three are inversions, you have not been picking the shape — you have been pattern-matching on the most familiar template. Stop and ask: does THIS brainstorm actually fit one of the other five shapes better?
+PICKING THE SHAPE: when you start brainstorming a pitch, the situation you imagine usually fits one shape better than the others. A misbehaving appliance is an INVERSION. A creature in the wrong place is a VISITOR. A hero needing to deliver something is a JOURNEY-AND-RETURN. A hero trying to do an ordinary thing is a CAN'T-DO-THE-THING. Match the shape to the situation; do NOT force every situation into INVERSION. If you generate three pitches in a row and all three are inversions, you have not been picking the shape — you have been pattern-matching on the most familiar template. Stop and ask: does THIS brainstorm actually fit one of the other three shapes better?
 
 *** TWIST ACTION VARIETY ***
 The hero solves the page-1 problem by physically *doing something* to the goal-object or the obstacle. Pick the action shape that fits THIS story's physics. Below are the action shapes a 4-year-old recognises — each row's verbs are interchangeable for the same physical move. Read the menu before committing to a `twist` field:
