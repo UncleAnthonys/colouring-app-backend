@@ -1656,6 +1656,50 @@ GOLD STANDARD: A grumpy chalk monster blocking the bridge who won't move until h
 - Problems that don't match their solutions (playing music to fix cracks)
 - Abstract obstacles (noise, darkness, feelings) — use physical, visible obstacles
 
+*** SETTING-COHERENT OBJECTS — every plot object must belong in this setting (age_4 and age_5)  [PATCH_L_SETTING_INVENTORIES_001] ***
+
+Every object named in your `obstacle` and `twist` fields must be a thing a 4-year-old visiting this setting would actually expect to see there. Random objects teleported in from elsewhere break the premise: the story collapses to a generic chase that happens to be set against the setting as wallpaper rather than a story that could only happen IN that setting.
+
+TEST FOR EVERY PLOT OBJECT IN YOUR PITCH: could this same object appear in three completely different settings without changing anything? If yes, REWRITE — pick an object the setting is famous for. If your obstacle could be the same in a kitchen, a museum, and a swimming pool, the setting is not doing structural work.
+
+WORKED NEGATIVE EXAMPLE — REAL ENGINE FAILURE:
+  Setting: museum. Obstacle named in the pitch: "a giant spoon flies out the window," "a massive hat is stuck on the flagpole," "a huge boot is stuck on a dinosaur."
+  Why this fails: a 4-year-old visiting a museum expects dinosaur skeletons, knight armour, mummies, fossils, ancient pots. Spoons, hats, and boots are random household items that could appear in ANY pitch about ANYWHERE. They do not belong in a museum. The setting becomes wallpaper rather than the story's engine.
+  REWRITE: "the dinosaur ribcage rattles loose from its frame," "the knight's helmet rolls down the corridor," "the ancient golden pot tips off its shelf." Now the museum setting is doing structural work — the obstacles only exist BECAUSE the museum exists.
+
+SETTING INVENTORIES — when your pitch is set in one of these places, draw obstacles, sub-spots, and twist props from the corresponding inventory rather than inventing generic items. These are the things a 4-year-old will recognise from a real visit:
+
+  CULTURAL / EDUCATIONAL:
+  - MUSEUM: dinosaur skeleton, knight's suit of armour, ancient golden pot, mummy in sarcophagus, fossil display, samurai sword, telescope, treasure chest, taxidermied lion, hot-air balloon model, cave-painting wall, gem cabinet, meteorite, pirate map
+  - AQUARIUM: jellyfish tank, stingray pool, shark tunnel, octopus tank, coral reef display, kelp forest, deep-sea exhibit, penguin enclosure, touch pool with starfish, seahorse tank, big glass dome
+  - ZOO: penguin pool, lion enclosure, monkey bars in the ape house, snake terrarium, giraffe house, elephant bath, parrot perch, butterfly tunnel, meerkat sand pit, flamingo pond, tortoise paddock
+  - LIBRARY: story-time cushions, picture-book shelf, librarian's desk, study tables, beanbag corner, book trolley, audiobook headphones, reference globes, puppet box, big atlas
+  - THEATRE / VILLAGE HALL SHOW: heavy red curtain, stage lights, costume rail, prop trunk, orchestra pit, dressing room mirrors, sound-effect drum, painted backdrop, fly-rope rigging, scenery flats, wig stand
+
+  TRAVEL / VEHICLES:
+  - TRAIN STATION: steam engine, departure board, ticket office gate, platform clock, luggage trolley, station tannoy, bench, signal lights, baggage scales, parcel cart, station cat
+  - FIRE STATION: fire engine, big curled hose, helmet rack, brass sliding pole, alarm bell, ladder rack, boots-and-jacket hooks, dalmatian's bed, control room map, smoke training tower
+  - BUILDING SITE: digger, crane, concrete mixer, scaffolding, brick stack, hard-hat shelf, sand pit, JCB bucket, plans table, port-a-loo, cement bag tower, wheelbarrow line
+  - BOATYARD / HARBOUR: fishing boat, lobster pots, anchor, lighthouse, mooring rope, ship's wheel, sail, cargo crate, gull on a post, tide pole, lifebuoy, captain's hat
+
+  FOOD / SHOPS:
+  - BAKERY: giant oven, rolling pin, dough tray, icing bag, cake display, baker's hat shelf, flour sack, cooling rack, big mixer, kneading table, pastry case
+  - GARDEN CENTRE: greenhouse, watering can wall, seed packet stand, flower pots tower, garden gnome statue, hose reel, wheelbarrow, fountain feature, koi pond, hanging basket, bag-of-soil pile
+  - VET'S: cat carrier, examination table, scales, pet beds, treatment trolley, x-ray screen, animal-toy box, stethoscope, fishbowl, treats jar, pet-shampoo shelf
+
+  RECREATIONAL:
+  - SWIMMING POOL: diving board, slide, lane ropes, lifeguard chair, deep-end markers, kickboards, floats stack, changing room locker, foot bath, kiddie pool, big inflatable
+  - THEME PARK / FUNFAIR: carousel, helter-skelter, ferris wheel, ghost train, candy floss stand, hook-a-duck stall, prize wall, log flume, dodgems, big swinging boat, mirror maze
+  - BEACH: sandcastle bucket, deckchair, beach huts, lifebuoy ring, ice cream van, pier, lighthouse, kite, rock pool, jetty, fishing net, windbreak
+
+HOW TO USE THESE INVENTORIES WHEN BUILDING A PITCH:
+  - VISITOR shape: the visitor's mischief disturbs 3-4 distinctive items from this list (the goose tangles the icing bag, then climbs into the dough tray, then knocks the cake display).
+  - JOURNEY shape: the path moves the goal-object past 3-4 distinctive items from this list (the magpie carries the card past the dinosaur skeleton, then over the knight's armour, then onto the ancient pot shelf).
+  - CAN'T-DO shape: each absurdity prevents the goal at a different distinctive item (Mr Bear can't sleep — the giraffe is honking, the parrots are squawking, the tortoises are clattering their shells).
+  - INVERSION shape: the world's broken rule applies to ONE specific distinctive item from this list (the dinosaur skeleton has come loose, NOT a generic spoon).
+
+IF THE SETTING IS NOT ON THIS LIST: the principle still applies. List 3-4 things a 4-year-old visiting THIS specific setting would expect to see. Use those for your obstacles. If the inventory you can think of is just "table, chair, door" — pick a richer setting.
+
 *** FOUR VALID PITCH SHAPES (age_4+ — all equally weighted — pick the shape that best fits the brainstorm you start with, with no default-to-inversion bias)  [PATCH_E_FOUR_SHAPES] ***
 
 - INVERSION (Pete-and-Heavy-Bubble-Trouble shape): the world breaks ONE of its own rules in a specific physical way. A bubble machine blows heavy stones instead of light bubbles. Stone statues come alive. Drawings lift off the page. Each middle page deepens the consequence of the broken rule; page 5 resolves it through a physical action that uses the rule's logic. Pick this shape when the brainstorm naturally produces a category violation — something soft becomes hard, something still becomes moving, something gentle becomes forceful. Use sparingly: roughly ONE pitch in five should be INVERSION, not five out of five. TWO WORKED TEMPLATES — adapt to the character:
