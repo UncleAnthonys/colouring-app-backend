@@ -1438,13 +1438,13 @@ The story setting MUST be describable in 1-3 words that a child already knows. T
 
 Study the top children's books: The Gruffalo = a wood. Tiger Who Came to Tea = a kitchen. We're Going on a Bear Hunt = a field, a river, mud. Owl Babies = a tree. Peter Rabbit = a garden. Dear Zoo = a zoo. Shark in the Park = a park. Peace at Last = a bedroom. Where the Wild Things Are = a bedroom. These are all ONE simple place.
 
-FOR under_3, age_3, age_4:
+FOR under_3, age_3:
 The setting must be a place a child can say in 1-3 words: a wood, a kitchen, a park, a shop, a bedroom, a school, a bath, a beach, a zoo, a farm, a playground, a garden, a pond, a hill, a field, a bus, a boat, a tree.
 Then ONE thing in that place goes wonderfully wrong. That's the whole story.
 The setting is the STAGE. The chaos is the SHOW. Keep the stage simple so the chaos shines.
 NEVER invent the setting. No clockwork forests, no gear worlds, no cracker moons, no crystal caves, no candy planets, no music dimensions. If a child can't draw the setting from memory, it's too complicated.
 
-*** CHAOS-FROM-SETTING RULE (CRITICAL) ***
+*** CHAOS-FROM-SETTING RULE (CRITICAL — for under_3, age_3) ***
 The chaos, the obstacle, AND the consequence must all come FROM the setting itself. A kitchen's own objects go bonkers — the oven, the tap, the pots, the food. A garden's own plants grow wild. A bath's own water rises. NEVER bolt a fantasy element onto a real place.
 BAD: "A kitchen where meatballs hit a rocket launch button" — there is no rocket button in a kitchen. A child would ask "why is there a button in the kitchen?"
 BAD: "A park where the swings open a portal" — there are no portals in a park.
@@ -1459,11 +1459,66 @@ GOOD: "A park where the slide goes underground" (a park + one bonkers thing)
 BAD: "A clockwork forest with a glass house and a noise dial" (child has never seen any of these things)
 BAD: "A cracker moon crumbling into starry soup" (every single element is invented)
 
-FOR age_5, age_6, age_7:
-The setting can be a FANTASY VERSION of a place kids know from play and stories — a pirate ship, a castle, a space rocket, a dragon's cave, an underwater kingdom, a magic school. Kids this age play pretend in these worlds. Still avoid pure abstraction — the child must be able to picture it.
+FOR age_4 AND ABOVE — THE ONE-FANTASY-ELEMENT RULE:  [PATCH_M_ONE_FANTASY_ELEMENT_001]
 
-FOR age_8, age_9, age_10:
-Any setting is fine — fully invented worlds, alternate dimensions, complex fantasy. The reader can build the world from description alone.
+The setting must be a place a child can picture in one second. A real place OR a place the child has play-pretended a hundred times — a kitchen, a park, a beach, a bedroom, a school, a bath, a museum, a library, a fire station, a zoo, a farm, a garden, a coral reef, a forest, a castle, a pirate ship, a rocket, a jungle, a dinosaur land. All of these are recognisable in one sentence. None needs explaining before the story can start.
+
+Then ONE fantasy element bolts onto that real place. ONE. Not two. Not seven.
+
+The fantasy element can be any of the following:
+
+  (a) A CHARACTER WHO DOESN'T BELONG. The Tiger Who Came to Tea: a real kitchen, one tiger. Stick Man: a real woodland, one sentient stick. The Smartest Giant in Town: a real high street, one giant. Supertato: a real supermarket, one heroic potato. The fantasy is a single visitor with personality.
+
+  (b) A REAL CHARACTER WITH PERSONALITY (an animal or creature that lives in the setting but talks, plans, and has feelings). Tiddler the fish at fish-school in a real ocean. Mr Bear in his bedroom in a real house. Pete the turtle on a real coral reef.
+
+  (c) ONE NAMED MAGICAL OBJECT OR MECHANISM that creates the chaos. Pete's bubble machine that blows stones instead of bubbles. Hannah's magic chalk that brings drawings to life. The witch's broom in Room on the Broom. The fantasy is a single named thing the child can point at.
+
+  (d) ONE FANTASTICAL CREATURE THAT BELONGS THERE (in pretend-play settings). A dragon at the dragon school. A pirate on the pirate ship. An astronaut in the rocket. A T-rex in dinosaur land. The setting itself is play-pretend, but the rules of that setting are the rules a 4-year-old already knows from games and picture books — pirates dig for treasure, dragons fly and breathe fire, astronauts float in space.
+
+WHAT THIS RULE BANS:
+
+Stacked fantasy. More than one fantasy element layered together until the world has its own systems that need explaining. A musical bridge with giant piano keys AND drum hills AND a Golden Gong AND a sleeping sun AND a vanishing moonbeam — five fantasy elements stitched together — is too much. A child needs the world explained before the story can start, which means the story has stalled before page 1.
+
+Abstract worlds. "A music dimension." "A world made of feelings." "A clockwork city where time runs backwards." These are adult-fantasy concepts. A child cannot picture them.
+
+Fantasy systems with their own rules. "A kingdom where everyone trades emotions for gemstones." "A planet where gravity switches off when the moons align." Anything where the engine has to teach the child the rules of the world before the chaos can begin.
+
+WORKED POSITIVE EXAMPLES — real engine output, gold-standard age_4:
+
+  Hannah and the Magic Chalk Path opens on page 1 with this single line: "Hannah has a magic bit of chalk. SWISH! She draws a long path to go home." Twenty-one words. The setting is a real path home. The one fantasy element is the magic chalk. By word twenty-one the child knows the rule of this world and the story can begin.
+
+  Pete and the Heavy Bubble Trouble opens on page 1 with this single line: "Look at the bubble machine! It is not blowing light bubbles today. It is blowing heavy, round stones!" Twenty-two words. The setting is a real coral reef. The one fantasy element is the bubble machine that has gone wrong. By word twenty-two the child knows what is broken and why the story matters.
+
+In both cases: setting is real, fantasy is one named thing, the rule is established in two sentences. This is the standard.
+
+WORKED NEGATIVE EXAMPLE — real engine output, age_4 failure:
+
+  Katie and the Musical Bridge Mission opens on page 1 with: "Katie pedals her bright bike. The sun is fast asleep. One thin moonbeam is fading away. If it goes, the world stays dark!" The story then introduces a Golden Gong, a string-bridge made of giant strings, drum-hills that go BOOM, and a piano-key bridge with a gap. By page 5 the world has stacked five separate fantasy elements with their own rules, and even an adult has to do work to keep them straight. A 4-year-old cannot.
+
+  REWRITE: pick ONE fantasy element. "Katie pedals across a piano bridge to wake the sun" — one element (a piano-bridge) on a recognisable concept (a bridge). Drop the Gong, the moonbeam, the drum-hills, and the strings. Build the whole story around the piano-bridge. Setting becomes pictureable; the chaos has somewhere to escalate within ONE rule.
+
+*** CHAOS-FROM-SETTING RULE (CRITICAL — for age_4 and above) ***
+
+When the setting is a real place (kitchen, garden, library, museum, fire station, coral reef, etc), the chaos must come from THINGS THAT ALREADY BELONG IN THAT PLACE — turned up to eleven, OR visited by ONE thing that doesn't belong. A kitchen's own oven goes wrong. A garden's own plants grow wild. A library's own books leap off the shelves. A bakery is visited by ONE goose. A museum is visited by ONE escaped penguin. A fire station is visited by ONE bossy penguin who thinks the fire engine is his nest. The setting does the work; the fantasy is the single twist.
+
+When the setting is a pretend-play place (pirate ship, castle, rocket, dinosaur land), the chaos must come from THINGS THAT BELONG IN THAT KIND OF STORY — pirates and treasure, dragons and knights, astronauts and planets, dinosaurs and eggs. Stay inside what a 4-year-old already knows from picture books and pretend games. Don't add abstract systems on top.
+
+GOOD: "A kitchen where the oven won't stop cooking and food keeps growing and bursting out of the door" (one fantasy: the oven is broken)
+GOOD: "A bath where the bubbles won't stop and they're filling up the whole house" (one fantasy: the bubbles won't stop)
+GOOD: "A bakery where a goose has wandered in and is honking at the customers" (one fantasy: the goose, a Tiger-Who-Came-to-Tea visitor)
+GOOD: "A coral reef where Pete's bubble machine has gone wrong and is blowing heavy stones" (one fantasy: the named broken machine)
+GOOD: "A road home where the chalk drawings have come alive" (one fantasy: the magic chalk rule)
+GOOD: "A library where a small dragon has flown in and is melting the picture books" (one fantasy: the visitor dragon)
+GOOD: "A pirate ship where the parrot has stolen the captain's hat" (pretend-play setting, chaos from things that belong: parrot, hat)
+GOOD: "A rocket where the snack pouches have come loose and are floating everywhere" (pretend-play setting, chaos from things that belong: zero gravity, snack pouches)
+
+BAD: "A kitchen where meatballs hit a rocket launch button and a cloud-pirate steals the gravy" (three fantasies stacked)
+BAD: "A park where the swings open a portal to a candyfloss kingdom ruled by a rhyming queen" (multiple fantasies, abstract world, kingdom systems)
+BAD: "A clockwork forest with a glass house and a noise dial" (every element invented, world has its own systems)
+BAD: "A musical bridge with giant piano keys, drum hills, and a vanishing moonbeam" (Katie-style stacking)
+BAD: "A pirate ship where the cannons fire feelings and the captain is made of thunder" (pretend-play setting + abstract fantasy stacked on top)
+
+The test for any pitch: how many sentences would the engine need to explain the world before the story could start? If the answer is more than one, cut the fantasy down to one element until it fits.
 """
 
 # ──────────────────────────────────────────────
@@ -1667,30 +1722,58 @@ WORKED NEGATIVE EXAMPLE — REAL ENGINE FAILURE:
   Why this fails: a 4-year-old visiting a museum expects dinosaur skeletons, knight armour, mummies, fossils, ancient pots. Spoons, hats, and boots are random household items that could appear in ANY pitch about ANYWHERE. They do not belong in a museum. The setting becomes wallpaper rather than the story's engine.
   REWRITE: "the dinosaur ribcage rattles loose from its frame," "the knight's helmet rolls down the corridor," "the ancient golden pot tips off its shelf." Now the museum setting is doing structural work — the obstacles only exist BECAUSE the museum exists.
 
-SETTING INVENTORIES — when your pitch is set in one of these places, draw obstacles, sub-spots, and twist props from the corresponding inventory rather than inventing generic items. These are the things a 4-year-old will recognise from a real visit:
+SETTING INVENTORIES — when your pitch is set in one of these places, draw obstacles, sub-spots, and twist props from the corresponding inventory rather than inventing generic items. These are the things a 4-year-old will recognise from a real visit. Every word on these lists has been chosen for 4-year-old vocabulary — words a parent would hear at preschool, not adult or technical labels. [PATCH_L_INVENTORY_REWRITE_001]
+
+  HOME (real settings a 4-year-old lives in):
+  - KITCHEN: oven, fridge, the tap, the sink, the kitchen table, the bin, the toaster, the bread bin, the biscuit tin, the fruit bowl, the cooker, the kettle, the cupboard under the sink, the high chair, the washing-up bowl
+  - BEDROOM: bed, wardrobe, toy box, lamp, rug, soft toys, bedside drawers, dressing-up box, fairy lights, slippers under the bed, bookshelf, laundry basket, hanging mobile, window with curtains, dressing-table mirror
+  - LIVING ROOM: sofa, coffee table, telly, the rug, fireplace, family photos on the shelf, big armchair, cushions, throw blanket, side lamp, bookshelf, the cat's basket
+  - BATHROOM: bath, sink, toilet, tap, shower curtain, rubber duck, bath toys in a net, bubble bath bottle, towel rail, bathmat, toothbrush cup, the plughole
+
+  GARDEN / OUTSIDE THE HOME:
+  - GARDEN: vegetable patch, garden shed, washing line, watering can, bird feeder, flower beds, hedge, paddling pool, garden hose, bird bath, snail under a leaf, compost heap, raised bed, garden bench, garden gnome
+  - PARK / PLAYGROUND: swings, slide, roundabout, climbing frame, sandpit, duck pond, park bench, bandstand, ice-cream van, picnic table, water fountain, see-saw, play tunnel
+  - WOODS / FOREST: tall trees, fallen log, mossy stones, mushroom ring, squirrel's tree, fox's den, woodland path, deep puddle, thick bushes, the stream
+
+  PLACES KIDS GO ON OUTINGS:
+  - SCHOOL / NURSERY / CLASSROOM: classroom carpet, reading corner, dressing-up box, painting easels, the teacher's desk, lunchboxes on a shelf, pegs with coats, snack table, sand tray, water tray, role-play kitchen, hamster cage
+  - SUPERMARKET: shopping trolley, fruit aisle, bread aisle, freezer, the till, the conveyor belt, baskets stacked, hanging signs, the bakery counter, sweet shelf, the ice-cream freezer
+  - DOCTOR'S / DENTIST'S WAITING ROOM: waiting-room chairs, the toy box, fish tank, magazine pile, the receptionist's desk, weighing scales, height chart on the wall, the doctor's bag, the nurse's trolley, plasters jar
+  - FARM: barn, hay bales, tractor, big puddles, chicken coop, cow shed, sheep pen, pig sty, the farmer's wellies, the duck pond, scarecrow, apple tree, milk churns
 
   CULTURAL / EDUCATIONAL:
-  - MUSEUM: dinosaur skeleton, knight's suit of armour, ancient golden pot, mummy in sarcophagus, fossil display, samurai sword, telescope, treasure chest, taxidermied lion, hot-air balloon model, cave-painting wall, gem cabinet, meteorite, pirate map
-  - AQUARIUM: jellyfish tank, stingray pool, shark tunnel, octopus tank, coral reef display, kelp forest, deep-sea exhibit, penguin enclosure, touch pool with starfish, seahorse tank, big glass dome
-  - ZOO: penguin pool, lion enclosure, monkey bars in the ape house, snake terrarium, giraffe house, elephant bath, parrot perch, butterfly tunnel, meerkat sand pit, flamingo pond, tortoise paddock
-  - LIBRARY: story-time cushions, picture-book shelf, librarian's desk, study tables, beanbag corner, book trolley, audiobook headphones, reference globes, puppet box, big atlas
-  - THEATRE / VILLAGE HALL SHOW: heavy red curtain, stage lights, costume rail, prop trunk, orchestra pit, dressing room mirrors, sound-effect drum, painted backdrop, fly-rope rigging, scenery flats, wig stand
+  - MUSEUM: dinosaur skeleton, knight's suit of armour, ancient golden pot, mummy in a stone box, fossil display, old sword in a glass case, telescope, treasure chest, stuffed lion, hot-air balloon model, cave drawings on the wall, gem cabinet, space rock that fell from the sky, pirate map
+  - AQUARIUM: jellyfish tank, stingray pool, shark tunnel, octopus tank, coral reef display, the underwater forest of long green plants, the deep dark tunnel, penguin enclosure, touch pool with starfish, seahorse tank, big glass dome
+  - ZOO: penguin pool, lion enclosure, monkey bars in the monkey house, snake glass tank, giraffe house, elephant bath, parrot perch, butterfly tunnel, meerkat sand pit, flamingo pond, tortoise paddock
+  - LIBRARY: story-time cushions, picture-book shelf, librarian's desk, study tables, beanbag corner, book trolley, headphones for listening to stories, big spinning globes, puppet box, big atlas
+  - THEATRE / VILLAGE HALL SHOW: heavy red curtain, stage lights, costume rail, prop trunk, orchestra pit, dressing-room mirrors, sound-effect drum, painted backdrop, the big ropes that pull the curtain, painted scenery boards, wig stand
 
   TRAVEL / VEHICLES:
-  - TRAIN STATION: steam engine, departure board, ticket office gate, platform clock, luggage trolley, station tannoy, bench, signal lights, baggage scales, parcel cart, station cat
-  - FIRE STATION: fire engine, big curled hose, helmet rack, brass sliding pole, alarm bell, ladder rack, boots-and-jacket hooks, dalmatian's bed, control room map, smoke training tower
-  - BUILDING SITE: digger, crane, concrete mixer, scaffolding, brick stack, hard-hat shelf, sand pit, JCB bucket, plans table, port-a-loo, cement bag tower, wheelbarrow line
-  - BOATYARD / HARBOUR: fishing boat, lobster pots, anchor, lighthouse, mooring rope, ship's wheel, sail, cargo crate, gull on a post, tide pole, lifebuoy, captain's hat
+  - TRAIN STATION: steam engine, departure board, ticket office gate, platform clock, luggage trolley, the big speakers, bench, signal lights, scales for weighing bags, parcel cart, station cat
+  - FIRE STATION: fire engine, big curled hose, helmet rack, brass sliding pole, alarm bell, ladder rack, boots-and-jacket hooks, dalmatian's bed, control room map, tall practice tower
+  - BUILDING SITE: digger, crane, concrete mixer, scaffolding, brick stack, hard-hat shelf, sand pile, JCB bucket, plans table, port-a-loo, cement bag tower, wheelbarrow line
+  - BOATYARD / HARBOUR: fishing boat, lobster pots, anchor, lighthouse, the rope tied to the boat, ship's wheel, sail, cargo crate, gull on a post, lifebuoy, captain's hat
+  - ROCKET / SPACE: rocket nose, control buttons, big window, astronaut helmet, jet boosters, food in pouches, sleeping bag floating, planet outside the window, moon rocks, alien plant in a pot
 
   FOOD / SHOPS:
-  - BAKERY: giant oven, rolling pin, dough tray, icing bag, cake display, baker's hat shelf, flour sack, cooling rack, big mixer, kneading table, pastry case
+  - BAKERY: giant oven, rolling pin, dough tray, icing bag, cake display, baker's hat shelf, flour sack, cooling rack, big mixer, kneading table, the cake counter
   - GARDEN CENTRE: greenhouse, watering can wall, seed packet stand, flower pots tower, garden gnome statue, hose reel, wheelbarrow, fountain feature, koi pond, hanging basket, bag-of-soil pile
-  - VET'S: cat carrier, examination table, scales, pet beds, treatment trolley, x-ray screen, animal-toy box, stethoscope, fishbowl, treats jar, pet-shampoo shelf
+  - VET'S: cat carrier, examination table, scales, pet beds, treatment trolley, animal-toy box, listening thing for hearing heartbeats, fishbowl, treats jar, pet-shampoo shelf
 
   RECREATIONAL:
-  - SWIMMING POOL: diving board, slide, lane ropes, lifeguard chair, deep-end markers, kickboards, floats stack, changing room locker, foot bath, kiddie pool, big inflatable
+  - SWIMMING POOL: diving board, slide, lane ropes, lifeguard chair, deep-end markers, kickboards, floats stack, changing-room locker, foot bath, kiddie pool, big inflatable
   - THEME PARK / FUNFAIR: carousel, helter-skelter, ferris wheel, ghost train, candy floss stand, hook-a-duck stall, prize wall, log flume, dodgems, big swinging boat, mirror maze
   - BEACH: sandcastle bucket, deckchair, beach huts, lifebuoy ring, ice cream van, pier, lighthouse, kite, rock pool, jetty, fishing net, windbreak
+
+  NATURE & WATER:
+  - UNDER THE SEA / CORAL REEF / OCEAN FLOOR: seaweed, big rocks, sand at the bottom, treasure chest, sunken boat, big shell, octopus's hidey-hole, jellyfish, fish school, anchor on a rope, pufferfish, crab in a cave, starfish on a rock, bubbles rising up
+  - POND / LAKE: lily pads, frog on a leaf, ducks paddling, a wooden jetty, fishing rod, the muddy bank, dragonfly, tadpole patch, big rock to sit on, reeds, an upturned rowing boat
+
+  PRETEND-PLAY SETTINGS (real to a 4-year-old from picture books and games):
+  - CASTLE: drawbridge, throne room, big banquet table, suit of armour, dungeon, crown on a cushion, royal kitchen, tall tower with stairs, knight on guard, dragon-shaped flag, big stone fireplace
+  - PIRATE SHIP: crow's nest, treasure chest, captain's wheel, the plank, sails, parrot perch, ship's bell, anchor, cannon, captain's hat, treasure map, the deck, captain's quarters
+  - JUNGLE: vines, big leaves, river, monkey in a tree, parrot, snake, log bridge, banana tree, waterfall, muddy path, tiger's hidey-hole, clearing
+  - DINOSAUR LAND: dinosaur eggs, big footprints, volcano in the distance, jungle of giant ferns, dinosaur nest, watering hole, fossils on the ground, T-rex tracks, baby dinosaur
 
 HOW TO USE THESE INVENTORIES WHEN BUILDING A PITCH:
   - VISITOR shape: the visitor's mischief disturbs 3-4 distinctive items from this list (the goose tangles the icing bag, then climbs into the dough tray, then knocks the cake display).
@@ -1702,7 +1785,19 @@ IF THE SETTING IS NOT ON THIS LIST: the principle still applies. List 3-4 things
 
 *** FOUR VALID PITCH SHAPES (age_4+ — all equally weighted — pick the shape that best fits the brainstorm you start with, with no default-to-inversion bias)  [PATCH_E_FOUR_SHAPES] ***
 
-- INVERSION (Pete-and-Heavy-Bubble-Trouble shape): the world breaks ONE of its own rules in a specific physical way. A bubble machine blows heavy stones instead of light bubbles. Stone statues come alive. Drawings lift off the page. Each middle page deepens the consequence of the broken rule; page 5 resolves it through a physical action that uses the rule's logic. Pick this shape when the brainstorm naturally produces a category violation — something soft becomes hard, something still becomes moving, something gentle becomes forceful. Use sparingly: roughly ONE pitch in five should be INVERSION, not five out of five. TWO WORKED TEMPLATES — adapt to the character:
+- INVERSION (Pete-and-Heavy-Bubble-Trouble shape): the world breaks ONE of its own rules in a specific physical way. A bubble machine blows heavy stones instead of light bubbles. Stone statues come alive. Drawings lift off the page. Each middle page deepens the consequence of the broken rule; page 5 resolves it through a physical action that uses the rule's logic. Pick this shape when the brainstorm naturally produces a category violation — something soft becomes hard, something still becomes moving, something gentle becomes forceful. Use sparingly: roughly ONE pitch in five should be INVERSION, not five out of five.
+
+  THE NAMED-MECHANISM RULE — every INVERSION must have a NAMED, POINTABLE-AT SOURCE that the child can answer "why?" with in one sentence.  [PATCH_N_NAMED_INVERSION_MECHANISM_001]
+
+  Pete and the Heavy Bubble Trouble passes this test cleanly. The bubble machine is the named source. The child can ask "why are the bubbles heavy?" and the answer is one sentence: "the bubble machine has gone wrong." Hannah and the Magic Chalk Path passes the same test: the magic chalk is the named source, and "why are the rocks alive?" answers with "Hannah drew them with magic chalk." Both stories establish the rule and its source in two sentences on page 1 and the child knows the world.
+
+  REAL ENGINE FAILURE — Sarah and the Bouncy Bread, age_4. Page 1 opens: "BOING! The dough ball is jumping! It hits the top of the shop. If it hits the big glass window, it will CRACK!" The dough is bouncy — but the story never names WHY. There is no broken oven, no spilled potion, no magic flour, no named source. The bouncing just happens. The child cannot answer "why is the dough bouncy?" with anything other than "it just is." The inversion has no anchor, so the chaos feels arbitrary. The story works mechanically but the world has no logic the child can grasp.
+
+  REWRITE: name the source. "The new oven the baker bought yesterday has a faulty spell on it — and now every loaf of dough is bouncing!" Or: "The baker spilled fairy yeast in the dough mixer last night and now the bread won't stop bouncing!" The named mechanism does the same teaching work as Pete's bubble machine or Hannah's chalk — it gives the child a why.
+
+  TEST FOR EVERY INVERSION PITCH: read the page 1 opening of your draft. Does it name a specific object, substance, or event that caused the rule to break? If yes, ✓. If the rule-break is just asserted ("the dough is bouncy", "the books are leaping", "the shoes are dancing") with no named cause, REWRITE the opening so the cause is named in the same sentence as the consequence.
+
+  TWO WORKED TEMPLATES — adapt to the character:
     Template A (a kitchen appliance behaving wrong):
       theme_blurb: "[HERO]'s toaster is launching slices of bread like rockets across the kitchen!"
       obstacle: "the bread is FLYING — sticking to the ceiling, knocking over a teacup on the counter, ricocheting off the fridge — and the bread bin is empty"
