@@ -596,7 +596,19 @@ GOOD: same page. scene_description: "Continuing from page 2: the grocery bag STI
 BAD: page 1 established "Jess wears a pink polka-dot dress, Grandad wears a blue checked shirt and a beanie hat". Page 3 scene_description: "Jess and Grandad stand on the dock." (No clothing repeated — image model invents new outfits.)
 GOOD: same page. scene_description: "Jess (STILL wearing her pink polka-dot dress as established on page 1) and Grandad (STILL wearing his blue checked shirt and beanie hat as established on page 1) stand on the dock."
 RULE: character clothing/appearance from page 1 should be re-stated on every middle page using the phrase "STILL wearing" or "as on page 1". This is the simplest fix for the recurring outfit-shift problem.
-TEST: list the continuing-state elements that matter for visual coherence: (1) damaged/changed objects, (2) attachment relationships, (3) character clothing, (4) setting features. For each one, check your scene_description — is it restated on this page? If no, add it with explicit "STILL" or "continuing from earlier" language.
+RULE (5) — SUPPORTING-CHARACTER VISUAL FINGERPRINT LOCK:  [PATCH_BB_SUPPORTING_CHARACTER_LOCK_001]
+Supporting characters (the antagonist creature, the helper, the named animal/robot/toy) drift visually across pages MORE than the hero does, because the hero's appearance comes from a fixed character profile that gets restated automatically on every page, while supporting characters get their visual fingerprint from the FIRST page that introduces them and then frequently get abbreviated to just their name on later pages. The image model has no memory of what they looked like — given just "Rex stomps across the rug", the image model will reach for its default mental model of "T-Rex stomping" which is a real-scale dinosaur with naturalistic anatomy, NOT the small plastic toy from page 1. The same failure mode hits robots in libraries (drift between three different chassis designs), dalmatians chasing a ball (drift between cartoon-stylised and photo-realistic), pufferfish chasing a sub (drift in colour/spike length), goats in a bakery (drift in horn size and coat texture). The fix: every middle-page scene_description must restate the FULL visual fingerprint of every named supporting character, not just their name.
+RULE: when a supporting character first appears (usually page 1 or 2), build a 1-sentence VISUAL FINGERPRINT of that character — physical type, distinctive features, size, colour, posture cues. Treat this fingerprint the way you treat the hero's character profile: it must be restated VERBATIM on every subsequent page that contains the character. Do NOT abbreviate to "Rex (as on page 1)" or "the goat from before". Repeat the full fingerprint inline.
+WORKED EXAMPLE — generic supporting character:
+  page 1 establishes: "Bleep is a small box-shaped library robot, approximately 30cm tall, blue metal body with two round eye-screens, four little wheels, a single antenna with a red light on top."
+  BAD page 3 scene_description: "Bleep zooms past the picture book shelves." (Image model: invents a different robot every page.)
+  GOOD page 3 scene_description: "Bleep (STILL the same small box-shaped library robot from page 1: 30cm tall, blue metal body, two round eye-screens, four little wheels, single antenna with red light on top) zooms past the picture book shelves."
+WORKED EXAMPLE — TOY-SCALE LOCK (toy-play seeds — critical):
+  When the supporting character is a TOY (toy dinosaur, toy digger, toy robot, plastic figurine, soft toy), the image model has a strong tendency to inflate the toy to real-creature/real-vehicle scale on action pages while keeping it correctly toy-scale on static pages. This produces visual incoherence where, for example, a toy T-Rex on page 1 (in the box, toy-scale) becomes a chest-height active T-Rex on page 3 (chasing the hero) and then a small plastic toy again on page 5 (being scooped up). The fix is to lock toy-scale into the visual fingerprint and restate it on every page, especially during action.
+  GOOD visual fingerprint: "Rex is a small plastic T-Rex toy: approximately 12cm tall, chunky toy proportions, smooth painted plastic surface (green body, cream belly, painted eyes), stiff posed legs, slightly stylised cartoon-toy aesthetic — clearly a child's plastic figurine, NOT a real dinosaur."
+  BAD page 3 scene_description (drift-inducing): "Rex stomps fast across the rug toward the wardrobe." (Image model defaults to dramatic real-dinosaur rendering because the prompt has lost the toy frame.)
+  GOOD page 3 scene_description (toy-locked): "Rex (STILL the same small plastic T-Rex toy from page 1: ~12cm tall, chunky toy proportions, smooth painted green-and-cream plastic surface, stiff posed legs, clearly a child's plastic figurine NOT a real dinosaur) is being moved across the rug by Lily's hand toward the wardrobe — Lily's hand is in frame, Rex is held between her thumb and fingers at toy-scale." Note: when a toy is "moving" in the story, frame the action with the child's hand visible at toy-scale, not as if the toy moves under its own power. This single technique is the strongest defence against scale-drift on action pages.
+TEST: list the continuing-state elements that matter for visual coherence: (1) damaged/changed objects, (2) attachment relationships, (3) character clothing, (4) setting features, (5) supporting-character visual fingerprint (especially toy-scale on toy-play seeds). For each one, check your scene_description — is it restated on this page? If no, add it with explicit "STILL" or "continuing from earlier" language.
 
 SELF-CHECK — run this before finalising any scene_description:
   Step 1: Read the story_text for this page aloud.
@@ -1552,6 +1564,11 @@ WORLD_SEEDS_GROUNDED = [
     # AND wide template variety (spill/grow, detective, rescue, time-running-out, missing-thing,
     # misbehaving-animal-in-unexpected-place, event-about-to-start).
     # For under_3, age_3, age_4 — all places a small child can picture.
+    # [PATCH_AA_PRETEND_AND_TOY_PLAY_001] — trimmed to 46 seeds (12 niche/adult/anachronistic
+    # entries removed: village post office, corner shop coin-down-grate, wedding garden,
+    # village hall show, boatyard buoys, funfair coconut shy, theatre backstage trap door,
+    # pizza restaurant pepperoni, museum cafe, bus stop queue tickets, park bench old lady
+    # oranges, bakery queue doughnuts (3rd-bakery duplicate)).
     "a kitchen where bread dough was left to rise and it's pushed the bowl off the counter",
     "a bath where the plug won't come out and the water keeps rising — toys floating higher and higher",
     "a bedroom where someone left the window open and now the curtains are wrapped round the lamp",
@@ -1576,26 +1593,18 @@ WORLD_SEEDS_GROUNDED = [
     "a hospital corridor where someone's get-well balloons have tangled round the lunch trolley",
     "a library where the returns bin has tipped over and books are sliding across the quiet carpet",
     "a zoo elephant pen where a school hat has blown over the rope and the elephant is reaching for it with his trunk",
-    "a museum cafe where a toddler's finger-painting has fallen face-down onto the white floor",
     "a busy train platform where somebody's lunchbox has fallen between the carriage and the platform edge",
     "an aeroplane where a toy dinosaur has bounced out of the bag and is rolling down the aisle",
-    "a bus stop where a gust of wind has sent every queue ticket spinning across the pavement",
     "a farm yard where the gate latch has broken and a muddy piglet is wandering toward the vegetable patch",
     "a zoo giraffe house where a child's bright balloon has floated up to the giraffe's head — and the big giraffe is trying to eat it",
     "a petting zoo where the goats have nibbled somebody's birthday banner down from the fence",
     "a beach where the tide is coming in fast and a sandcastle with a crab inside is about to wash away",
     "a rock pool where a little starfish is stuck on the wrong side of a wall of pebbles",
     "a swimming pool where somebody's armbands have floated to the deep end and the lesson starts in a minute",
-    "a boatyard where a rope has come loose and a rowing boat is drifting out toward the buoys",
     "a birthday party where the pin-the-tail game has blown off the wall and the birthday girl is about to come in",
-    "a wedding garden where the flower girl has dropped her basket of petals down the stone steps",
-    "a village hall show where the curtain rope has tangled and the first song starts in two minutes",
     "a sports day finish line where the winner's ribbon has been carried off by a magpie",
     "a cafe where somebody's strawberry milkshake has tipped over and is heading for the birthday book a child left on the chair",
-    "a pizza restaurant where the pepperoni has rolled off four pizzas in a row — and the birthday table is waiting",
     "a cinema where a tub of popcorn has tipped down the aisle and the film is starting in under a minute",
-    "a funfair where the winning coconut has rolled off the shy and into the long grass behind it",
-    "a theatre backstage where somebody's costume hat has fallen through a trap door before the show",
     "a campsite where someone's tent pegs have pinged out and the tent is starting to walk away in the wind",
     "a woodland path where a birthday balloon has snagged on the top of a branch nobody can reach",
     "a garden where somebody has eaten all the strawberries overnight and little paw prints lead behind the shed",
@@ -1603,13 +1612,101 @@ WORLD_SEEDS_GROUNDED = [
     "a kitchen where every biscuit in the tin has gone — and there are crumbs on the cat's whiskers",
     "a classroom where somebody's lunchbox drawings have appeared on the walls overnight and nobody knows who drew them",
     "a neighbour's front step where a kitten is stuck inside a tipped-over welly boot and mewing",
-    "a park bench where an old lady has dropped her shopping bag and oranges are rolling down the hill",
-    "a corner shop queue where a small boy has lost his pocket money coin down a grate and the ice cream van is going",
     "a kitchen where a pan of jelly needs to set in twenty minutes and the fridge door won't close",
     "a bathroom where the bubbly shampoo has spilled and the class photo is in half an hour",
-    "a village post office where a very determined pigeon has wandered in and is eyeing the parcels",
-    "a bakery queue where a dog has slipped its lead and is nosing toward the bottom tray of doughnuts",
     "a school corridor where somebody's sports medal has skittered all the way to the head teacher's door",
+    # [PATCH_AA_REVISED_001] — evidence-based gap-fills sourced from UK preschool TV/toy data
+    "an aquarium where a child's bobble hat has dropped from the glass tunnel and is drifting between the fish below",
+    "a doctor's surgery where the toy box has tipped over and toys are blocking the way to the appointment room",
+    "a dentist's waiting room where the giant tooth model has rolled across the floor and the dentist is calling the next patient",
+    "a hairdresser's where someone's teddy has been left on the chair and the hairdryer has blown its hat off",
+    "a soft play centre where a toddler's drink has spilled at the bottom of the ball pit and the ball pit is being cleared in five minutes",
+    "a police station front desk where the police hat has been knocked off the counter and the radio is buzzing with a callout",
+]
+
+WORLD_SEEDS_PRETEND_PLAY = [
+    # PRETEND-PLAY SETTINGS — for age_4 and above only.
+    # These are scenarios a 4-year-old already knows from picture books, toys,
+    # dress-up, and screen time. They are NOT fantasy to the child — they're
+    # settings the child can describe back in two sentences. The pitch must
+    # follow the same coherence rules as grounded seeds: ONE thing has gone
+    # wrong, with a clear physical cause and a clear stake.
+    # The hero is the child IN that role (a pirate, an astronaut, a knight,
+    # an explorer) — not visiting one. Dress-up logic.
+    "a pirate ship where the parrot has stolen the captain's hat and is hopping along the rigging",
+    "a pirate ship where the treasure chest key has dropped through a crack in the deck and the tide is going out",
+    "a pirate's island where the treasure map has blown into the rock pool and the X is about to wash away",
+    "a space rocket where the snack pouches have come loose and are floating around the cockpit",
+    "a space rocket where the steering wheel keeps wobbling and the planet is getting closer",
+    "a moon-landing site where the flag has fallen over and the camera is recording everything",
+    "a space station window where a toy astronaut has drifted away on the end of his line",
+    "a castle where the drawbridge rope has tangled and the king's pony is waiting on the other side",
+    "a castle kitchen where the royal cake has slid off the trolley and is rolling toward the throne room",
+    "a knight's tournament where a polishing cloth has stuck to the helmet and the trumpets are about to sound",
+    "a castle tower where a kite has tangled in the flag pole and the wind is picking up",
+    "a dinosaur valley where a baby dinosaur has wandered too close to the wobbly bridge",
+    "a dinosaur dig where a precious egg has rolled out of the cart and is heading for the deep crack",
+    "a stegosaurus's back where a butterfly has landed on the tallest plate and the stegosaurus is about to scratch",
+    "a jungle clearing where the explorer's compass has slid down the muddy slope toward the river",
+    "a jungle treetop where a cheeky monkey has snatched the explorer's lunch and swung off with it",
+    "a jungle river where the canoe has come loose from the bank and is drifting toward the waterfall",
+    "a fairy garden where the magic wand has fallen into the pond and the lily pads are sinking",
+    "a princess castle where the glass slipper has been kicked under the throne and the ball starts in five minutes",
+    "a fairy ring where the smallest fairy's wings have got tangled in the spider's web",
+    "a mermaid's coral palace where the seashell crown has rolled into the deep blue cave",
+    "a mermaid's grotto where the singing seashell has stopped working and the concert starts soon",
+    "a wizard's classroom where the spellbook has flapped open and the words are blowing across the room",
+    "a wizard's cauldron where a frog has hopped in and the lid won't shut",
+    "a superhero's rooftop where the cape has snagged on the chimney and the city is calling for help",
+    "a superhero's hideout where the mask has fallen behind the heavy desk and the alarm is going off",
+    "a circus tent where the clown's giant shoe has been kicked into the lion's empty cage",
+    "a circus where the elephant's hat has rolled out under the seats and the show is about to start",
+    # [PATCH_AA_REVISED_001] — underwater (Octonauts is UK No.1 preschool show) + construction + doctor-for-toys
+    "a coral reef where a baby clownfish has wandered too far from the anemone and the current is picking up",
+    "a coral reef where the treasure chest has clicked open and the gold coins are drifting toward the deep trench",
+    "an undersea cave where the lantern has slipped from the mermaid's hand and the cave is going dark",
+    "a sunken shipwreck on the seabed where a hungry octopus has crept inside the crew's lunch barrel",
+    "a construction site where the crane's hook has dropped a full bucket of bricks and the boss is climbing the ladder",
+    "a doctor's play surgery where every teddy patient has fallen off the bench and the next teddy is wheezing",
+]
+
+WORLD_SEEDS_TOY_PLAY = [
+    # TOY-PLAY SETTINGS — for age_4 and above only.
+    # The hero is the child playing with their toys, and the toys ARE the
+    # other characters. The setting is a corner of the child's real world
+    # (bedroom floor, sandpit, bath, cardboard box, dolls house) reframed as
+    # the toy's world. This sits exactly where a 4-year-old's brain is — the
+    # duvet IS a jungle when the dinos are out; the cardboard box IS a rocket.
+    # Strongest age_4-native mode because the child is literally already in
+    # this scenario every day.
+    "a bedroom floor where the toy dinosaurs have escaped the toy box and are stomping across the duvet jungle",
+    "a bedroom floor where the train set has come apart and the carriages are heading under the bed",
+    "a bedroom where the dolls' tea party has been set up — and the cat has knocked over the tiny teapot",
+    "a bedroom corner where the toy castle has tipped and the little knight has slid behind the chest of drawers",
+    "a bedroom rug where every Lego brick is scattered and bare feet are coming",
+    "a bedroom shelf where the action figures' rope ladder has come unhooked and the smallest figure is dangling",
+    "a sandpit where the digger truck has scooped up the toddler's last cupcake and is heading for the wall",
+    "a garden lawn where the toy tractor's trailer has come loose and is rolling toward the flower bed",
+    "a garden path where a chalk drawing of a dragon has been half-rained-on and the rest is fading fast",
+    "a paddling pool where the rubber duck has sailed off with the soap boat and the bubble bath is running out",
+    "a bath where the toy pirate ship has set sail with the sponge and the plug-out time is coming",
+    "a bath where the rubber whale has launched the bath crayons and the suds are getting deep",
+    "a cardboard-box rocket on the kitchen floor where the snack supply has fallen out of the hatch",
+    "a cardboard-box pirate ship where the toy parrot has flown into next door's garden",
+    "a cardboard-box castle where the drawbridge flap has torn and the toy soldier has tumbled out",
+    "a play-kitchen where the plastic cupcake has rolled under the real fridge and the pretend cafe is opening",
+    "a play-shop where the wooden tin of beans has rolled across the carpet and the till is running out of pretend money",
+    "a dolls' house where every tiny chair has fallen off the table and the doll family is coming for tea",
+    "a dolls' house where the doll's hat has dropped from the top floor and is balanced on the staircase",
+    "a Lego building site where the crane's hook has come loose and the bricks are tumbling down",
+    "a wooden train track where the bridge has come apart and the engine is heading right for the gap",
+    "a hallway where the toy doctor's bag has tipped and the bandages are unrolling toward the front door",
+    # [PATCH_AA_REVISED_001] — top licensed brands 0-6 (Lego, Thomas, Disney Princess, Paw Patrol, dinosaurs)
+    "a bedroom carpet Lego city where the Lego wall has tipped and the minifigure family is heading for the cliff edge",
+    "a wooden train track on the bedroom floor where Thomas has come off the rails and the toy passengers have rolled into the carpet",
+    "a sandpit dinosaur dig where a precious toy dinosaur egg has rolled out of the bucket and is heading for the deep digger hole",
+    "a garden fairy ring where the smallest plastic fairy figurine has tumbled from her flower and the watering can is tipping",
+    "a hallway where the dress-up firefighter helmet has fallen over the toddler's eyes and the toy fire engine is rolling toward the dog",
 ]
 
 WORLD_SEEDS_FANTASY = [
@@ -1641,12 +1738,22 @@ WORLD_SEEDS_FANTASY = [
 ]
 
 def get_random_world_seeds(n=3, age_level="age_5"):
-    """Pick n random world seeds — grounded only for young ages, all seeds for older."""
-    young_ages = ("under_3", "age_3", "age_4")
-    if age_level in young_ages:
+    """Pick n random world seeds.
+
+    [PATCH_AA_PRETEND_AND_TOY_PLAY_001] Three age-tiers:
+      - under_3, age_3: GROUNDED only (real-world places child has visited).
+      - age_4: GROUNDED + PRETEND_PLAY + TOY_PLAY (real + dress-up scenarios
+        + toys-come-to-life). Excludes abstract WORLD_SEEDS_FANTASY which
+        requires explaining world-rules a 4-year-old cannot hold.
+      - age_5+: all four lists including abstract fantasy.
+    """
+    toddler_ages = ("under_3", "age_3")
+    if age_level in toddler_ages:
         pool = WORLD_SEEDS_GROUNDED
+    elif age_level == "age_4":
+        pool = WORLD_SEEDS_GROUNDED + WORLD_SEEDS_PRETEND_PLAY + WORLD_SEEDS_TOY_PLAY
     else:
-        pool = WORLD_SEEDS_GROUNDED + WORLD_SEEDS_FANTASY
+        pool = WORLD_SEEDS_GROUNDED + WORLD_SEEDS_PRETEND_PLAY + WORLD_SEEDS_TOY_PLAY + WORLD_SEEDS_FANTASY
     return random.sample(pool, min(n, len(pool)))
 
 PITCH_AGE_GUIDELINES = {
