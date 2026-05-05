@@ -1556,7 +1556,7 @@ WORLD_SEEDS_GROUNDED = [
     "a fire station where the big boots are missing and the alarm is ringing out loud",
     "a hospital corridor where someone's get-well balloons have tangled round the lunch trolley",
     "a library where the returns bin has tipped over and books are sliding across the quiet carpet",
-    "a museum where a feather from the dinosaur display is drifting toward the Do-Not-Touch sign",
+    "a zoo elephant pen where a school hat has blown over the rope and the elephant is reaching for it with his trunk",
     "a museum cafe where a toddler's finger-painting has fallen face-down onto the white floor",
     "a busy train platform where somebody's lunchbox has fallen between the carriage and the platform edge",
     "an aeroplane where a toy dinosaur has bounced out of the bag and is rolling down the aisle",
@@ -1612,7 +1612,7 @@ WORLD_SEEDS_FANTASY = [
     "a circus where all the performers have gone home and the animals are doing the show",
     "a pirate ship where the treasure map keeps changing every time you look at it",
     "a zoo at night where the animals are having a secret sports day",
-    "a museum where all the dinosaur bones have started moving",
+    "a swimming pool where every armband and float has piled up at the deep end and the lesson is about to start",
     "a magic show where the magician has disappeared and left all the tricks running",
     "a theme park where the rollercoaster has turned into a dragon",
     "a space rocket that has launched with nobody driving it",
@@ -1742,7 +1742,7 @@ SETTING INVENTORIES — when your pitch is set in one of these places, draw obst
   - FARM: barn, hay bales, tractor, big puddles, chicken coop, cow shed, sheep pen, pig sty, the farmer's wellies, the duck pond, scarecrow, apple tree, milk churns
 
   CULTURAL / EDUCATIONAL:
-  - MUSEUM: dinosaur skeleton, knight's suit of armour, ancient golden pot, mummy in a stone box, fossil display, old sword in a glass case, telescope, treasure chest, stuffed lion, hot-air balloon model, cave drawings on the wall, gem cabinet, space rock that fell from the sky, pirate map
+  - MUSEUM: dinosaur skeleton, knight's suit of armour, ancient golden pot, mummy in a stone box, fossil display, old sword in a glass case, telescope, treasure chest, stuffed lion, hot-air balloon model, cave drawings on the wall, gem cabinet, space rock that fell from the sky, old gold coins  [PATCH_L_VOCAB_AND_DIVERSITY_001]
   - AQUARIUM: jellyfish tank, stingray pool, shark tunnel, octopus tank, coral reef display, the underwater forest of long green plants, the deep dark tunnel, penguin enclosure, touch pool with starfish, seahorse tank, big glass dome
   - ZOO: penguin pool, lion enclosure, monkey bars in the monkey house, snake glass tank, giraffe house, elephant bath, parrot perch, butterfly tunnel, meerkat sand pit, flamingo pond, tortoise paddock
   - LIBRARY: story-time cushions, picture-book shelf, librarian's desk, study tables, beanbag corner, book trolley, headphones for listening to stories, big spinning globes, puppet box, big atlas
