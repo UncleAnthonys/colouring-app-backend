@@ -2152,7 +2152,42 @@ Think of: Zog, Supertato, Superworm, Dogger, Giraffes Can't Dance. They share:
 3. A SETBACK where it looks like it won't work out — then a surprising solution
 4. A supporting character who HELPS or HINDERS — not just watches
 
-Age 5 can handle slightly more complex settings than age 4 — a pirate ship, a magic school, a dragon's cave — as long as kids can picture it from play or TV. But the CONCEPT still needs to be explainable in one sentence.
+[PATCH_FF_AGE_5_6_7_ONE_FANTASY_001] WORLD-BUILDING DOES NOT ESCALATE FROM AGE 4. The ONE-FANTASY-ELEMENT RULE applies at age 5 exactly as at age 4. The setting must be a real recognisable place OR a play-pretend setting a 5-year-old already knows the rules of (pirate ship, dragon school, castle, fairy garden) — and ONE fantasy element bolts onto it. Not two. Not seven.
+
+What CHANGES from age 4 to age 5 is NOT the world. It is:
+  - Vocabulary (slightly richer words a 5-year-old uses at school: "mighty", "rumble", "sneaky", "clever", not adult words)
+  - Sentence rhythm (longer, more flowing prose; less staccato than age 4)
+  - Emotional nuance (the hero can feel jealous, embarrassed, proud, secretly nervous — not just happy/sad/scared)
+  - Supporting character personality (the antagonist has a real motive the child can sympathise with; the helper has a quirk)
+  - Dialogue (real character voices, mild irony, gentle humour the parent enjoys reading aloud)
+
+What does NOT change from age 4: the world is still grounded, still pictureable in one second, still has ONE fantasy element. NEVER stack fantasy elements at age 5. NEVER invent worlds with their own systems of rules ("a clockwork city where time runs backwards", "a kitchen where gravity is upside down and popcorn fills the air"). These are ADULT-fantasy concepts a 5-year-old cannot picture.
+
+REAL BESTSELLING AGE 5 BOOKS — these are the standard. Match this pattern:
+  - The Gruffalo (Donaldson): a real wood + ONE fantasy element (a clever mouse who invents an imaginary creature; the actual Gruffalo turns up). Grounded woodland setting. ONE invented thing.
+  - Stick Man (Donaldson): the real world — woods, beach, swan's nest, fireplace, a family home — + ONE fantasy element (the stick is alive). The world is otherwise a normal English landscape. The journey is being mistaken for ordinary objects (a Pooh stick, a swan's nest twig, kindling for a fire).
+  - Stuck (Oliver Jeffers): a real garden with a real tree + ONE escalating problem (a kite stuck in a tree; absurd objects thrown to dislodge it). Grounded garden. ONE absurd escalation.
+  - Supertato (Sue Hendra): a real supermarket + ONE fantasy element (vegetables are alive, with a hero potato and a villain pea). Grounded supermarket. ONE invented thing.
+  - The Day the Crayons Quit (Daywalt): a real bedroom and drawing pad + ONE fantasy element (the crayons write letters of complaint). Grounded child's bedroom. ONE invented thing.
+  - How to Catch a Star (Jeffers): a real beach, real sky, real ocean + a small fantasy logic (boy thinks he can literally catch a star; finds a starfish instead). Grounded coastal scene. ONE poetic conceit.
+  - The Lion Inside (Bright): a real African-style savannah + ONE fantasy element (mouse and lion talk to each other). Grounded savannah. ONE invented thing.
+
+Notice: every single one of these is a real recognisable place. The fantasy is one talking animal, one alive object, one magical conceit. None of them invent a world with multiple new rules. None of them require explanation before the story can start. A 5-year-old reads page 1 and the world is established in 20-25 words exactly as in age_4 gold-standard books like Pete-and-the-Heavy-Bubble-Trouble and Hannah-and-the-Magic-Chalk-Path.
+
+REJECT pitches for age_5 that:
+  - Stack multiple fantasy elements ("an upside-down kitchen where popcorn flies AND gravity is reversed AND the oven is alive")
+  - Invent worlds with their own rules ("a city where time runs backwards", "a place where colours have feelings", "a dimension where everything sings")
+  - Require a paragraph to explain the setting before the story can start
+  - Need the child to learn a new physics or geography to follow the action
+
+ACCEPT pitches for age_5 that:
+  - Place the hero in a real recognisable setting (a kitchen, a park, a school, a shop, a beach, a wood, a garden)
+  - Add ONE fantasy element (a talking animal, an alive object, a magical small thing the hero owns)
+  - Have a real EMOTIONAL stake (someone might be left out, embarrassed, disappointed, lonely)
+  - Resolve through cleverness, kindness, or inventive use of the hero's feature
+  - Are explainable in one sentence: "[Hero] is in [real place] when [one weird thing] happens."
+
+The CONCEPT still needs to be explainable in one sentence.
 
 *** SUPPORTING CHARACTER ***
 Must be essential to the plot — they either cause the problem, block the solution, or provide the key. They need personality the parent can voice.
@@ -2214,6 +2249,31 @@ One surprising image, one clear problem, no questions.
     "age_6": """
 AGE GROUP: 6 YEARS OLD
 
+*** [PATCH_FF_AGE_5_6_7_ONE_FANTASY_001] WORLD-BUILDING CONSTRAINT — READ FIRST ***
+The ONE-FANTASY-ELEMENT RULE still applies at age 6 just as at age 4 and age 5. The setting is a real recognisable place OR an established play-pretend setting (pirate ship, dragon school, castle, fairy garden, magic-tree-as-portal). ONE fantasy element bolts onto it.
+
+DO NOT stack fantasy elements. DO NOT invent worlds with their own systems of rules. A 6-year-old can handle MORE EMOTIONAL COMPLEXITY than a 5-year-old (real conflict between friends, characters with competing goals, irony the parent enjoys, plans that go wrong in interesting ways) — but the WORLD they inhabit is still grounded.
+
+REAL BESTSELLING AGE 6 BOOKS — match this pattern:
+  - What the Ladybird Heard (Donaldson): a real farm + the ONE fantasy element is that the farm animals can talk to each other and outwit two real human thieves. Real farm, talking animals (an established convention).
+  - The Tiger Who Came to Tea (Judith Kerr): a real kitchen and house + ONE visitor (a tiger arrives, eats and drinks everything, leaves). Grounded English suburban home. ONE impossible visitor.
+  - The Smartest Giant in Town (Donaldson): a real high street + ONE fantasy character (a giant) who walks home giving his clothes to needy animals along the way. Grounded street, ONE impossible-scale character.
+  - The Snail and the Whale (Donaldson): the real ocean + ONE fantasy element (an unlikely friendship between a tiny snail and a huge whale). Real geography (ports, icebergs, beaches). ONE talking-animal duo.
+  - Pumpkin Soup (Helen Cooper): a real cottage and surrounds + talking animal characters falling out and reconciling. Grounded countryside. ONE established convention (talking animals as friends).
+  - The Highway Rat (Donaldson): real countryside roads + ONE fantasy element (a rat highway robber stealing food until tricked). Grounded country roads. ONE invented character archetype.
+  - Where the Wild Things Are (Sendak): boy's bedroom transforms into wild place via imagination — but the imagination is FRAMED as imagination (Max is sent to his room, then sails to where the wild things are, then comes home). Grounded bedroom is the anchor.
+
+Notice: even the most "imaginative" age 6 books (Where the Wild Things Are, The Smartest Giant) anchor in a REAL HOME. The fantasy is contained within ONE element or ONE journey, not stacked into a fully invented world.
+
+What CHANGES from age 5 to age 6:
+  - Real conflict (friends fall out, characters have opposing wants, the antagonist has a sympathetic motive)
+  - Plans that fail in interesting ways (the helper's plan creates a new problem; the obstacle is harder than expected)
+  - Wit and gentle irony — wordplay, twists the parent enjoys, dramatic irony where the reader knows something the character doesn't
+  - More dialogue with character voices
+  - Slightly longer story_text per page (story can breathe more)
+
+What does NOT change: the world is still grounded with ONE fantasy element.
+
 *** STORY DRIVER ***
 1. What does the character WANT? (Specific, urgent goal)
 2. What are the STAKES? (What happens if they fail? Someone gets hurt/disappointed/left out)
@@ -2246,6 +2306,34 @@ High concept, specific objects, adult wink of irony. No questions.
 
     "age_7": """
 AGE GROUP: 7-8 YEARS OLD
+
+*** [PATCH_FF_AGE_5_6_7_ONE_FANTASY_001] WORLD-BUILDING CONSTRAINT — READ FIRST ***
+The ONE-FANTASY-ELEMENT RULE still applies at age 7. Even at this age — when readers are starting to explore early chapter books with longer arcs — the dominant pattern in published bestsellers is GROUNDED settings with ONE fantasy element. The escalation from age 6 is in NARRATIVE ARC LENGTH, CHARACTER MOTIVATION, and EMOTIONAL NUANCE — not world-building complexity.
+
+REAL BESTSELLING AGE 7 BOOKS — match this pattern:
+  - Charlotte's Web (E.B. White): a real farm + ONE fantasy element (the farm animals can talk to each other, with a particular spider who can write words in her web). Grounded American farm. ONE invented thing.
+  - Fantastic Mr Fox (Roald Dahl): real countryside + three real farms + ONE fantasy element (the foxes and other animals live underground and can plan, talk, scheme). Grounded countryside. ONE talking-animal society.
+  - The Twits (Roald Dahl): a real house and garden + a horrible couple who play tricks + the animals fight back. NO fantasy element at all — purely grounded with talking animals as the convention.
+  - George's Marvellous Medicine (Dahl): a real house and farm + ONE fantasy element (George makes a medicine that has unpredictable magical effects). Grounded farmhouse. ONE magical object.
+  - The BFG (Dahl): real London + Giant Country. This is the MOST world-building of any age 7 bestseller and STILL anchors most scenes in real London (Sophie's orphanage, the streets, Buckingham Palace). Giant Country is ONE fantasy place, not a stacked-rules world.
+  - Paddington Bear (Bond): real London + the Browns' real house + ONE fantasy element (a polite talking bear from Peru). Grounded English suburbia. ONE impossible visitor.
+  - Charlie and the Chocolate Factory (Dahl): Charlie's real home + ONE pretend-play setting (the factory has invented rooms with their own rules, but each room follows ONE rule the reader is given on entry — chocolate river room, gum room, nut room — not stacked rules at once).
+  - Horrid Henry (Simon): real home, real school, real neighbourhood. NO fantasy element — purely grounded. Humour and character drive the story.
+  - The Magic Faraway Tree (Blyton): a real wood + ONE portal element (a tree that leads to different lands at the top — but each land is a SINGLE concept room, similar to Charlie's factory).
+
+Notice: even Roald Dahl, the king of imaginative children's writing, sets most age 7 stories in real farms, real houses, real countryside, with ONE magical element bolted on. The Twits and Horrid Henry have ZERO fantasy elements. None of these books require the child to learn the rules of a fully invented world before the story can start.
+
+What CHANGES from age 6 to age 7:
+  - Longer narrative arc (a year on Charlotte's farm; Sophie's developing friendship with the BFG; Mr Fox's three-day siege)
+  - More developed character motivation (the antagonist has a real reason for being who they are; the hero has flaws and doubts)
+  - Cost and trade-offs (every plan has a downside; characters lose something to gain something else)
+  - Subverted assumptions (the reader thinks they understand something and gets reframed)
+  - Subtler humour, irony, wordplay
+  - Real stakes (real consequences, real losses, real growth)
+
+What does NOT change: the world is still grounded (or grounded with ONE pretend-play extension), still has ONE fantasy element OR none at all.
+
+REJECT age_7 pitches that stack multiple fantasy systems, invent worlds with their own physics, or require the child to learn a new universe before the story can start. ACCEPT age_7 pitches that put a real character in a real situation with real emotional stakes, with at most ONE fantasy element and a longer, more nuanced arc than age_6.
 
 *** STORY DRIVER ***
 1. What does the character WANT? (Compelling, specific goal with real urgency)
