@@ -1870,20 +1870,29 @@ WORLD_SEEDS_FANTASY = [
 def get_random_world_seeds(n=3, age_level="age_5"):
     """Pick n random world seeds.
 
-    [PATCH_AA_PRETEND_AND_TOY_PLAY_001] Three age-tiers:
+    [PATCH_AA_PRETEND_AND_TOY_PLAY_001] Original three-tier scheme.
+    [PATCH_HH_REMOVE_FANTASY_POOL_001] Updated to remove WORLD_SEEDS_FANTASY
+    from age_5+ pool — bestseller research at age 5/6/7 shows 70-80%
+    grounded settings with ONE fantasy element, never stacked invented
+    worlds. The age_5+ pool now matches the age_4 pool: GROUNDED +
+    PRETEND_PLAY + TOY_PLAY.
+
+    Tiers:
       - under_3, age_3: GROUNDED only (real-world places child has visited).
-      - age_4: GROUNDED + PRETEND_PLAY + TOY_PLAY (real + dress-up scenarios
-        + toys-come-to-life). Excludes abstract WORLD_SEEDS_FANTASY which
-        requires explaining world-rules a 4-year-old cannot hold.
-      - age_5+: all four lists including abstract fantasy.
+      - age_4 AND age_5+: GROUNDED + PRETEND_PLAY + TOY_PLAY (real places +
+        established play-pretend settings + toys-come-to-life).
+        WORLD_SEEDS_FANTASY (invented worlds with their own rules) is
+        EXCLUDED from all current age tiers — these stacked-fantasy worlds
+        are unsuitable for picture books at age 3-7 per bestseller research.
+        WORLD_SEEDS_FANTASY is retained in the file for possible future
+        use at age_8+ chapter-book territory but not currently selected.
     """
     toddler_ages = ("under_3", "age_3")
     if age_level in toddler_ages:
         pool = WORLD_SEEDS_GROUNDED
-    elif age_level == "age_4":
-        pool = WORLD_SEEDS_GROUNDED + WORLD_SEEDS_PRETEND_PLAY + WORLD_SEEDS_TOY_PLAY
     else:
-        pool = WORLD_SEEDS_GROUNDED + WORLD_SEEDS_PRETEND_PLAY + WORLD_SEEDS_TOY_PLAY + WORLD_SEEDS_FANTASY
+        # age_4 and age_5+ share the same pool — see [PATCH_HH_REMOVE_FANTASY_POOL_001]
+        pool = WORLD_SEEDS_GROUNDED + WORLD_SEEDS_PRETEND_PLAY + WORLD_SEEDS_TOY_PLAY
     return random.sample(pool, min(n, len(pool)))
 
 PITCH_AGE_GUIDELINES = {
