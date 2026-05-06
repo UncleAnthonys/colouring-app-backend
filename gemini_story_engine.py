@@ -400,11 +400,75 @@ RULES:
 
     THE COMMON THREAD: At age_4 the parent is putting on a SHOW. Every page needs ONE moment of dialogue with attitude, ONE beat with rhythm or rhyme, and ONE punch line. If your page is just describing what happens in third person, you have written a film script, NOT a story. Rewrite it with a voice in it.
 
-- **PICTURE BOOK NARRATIVE (age_5):** 4-6 sentences per page. More plot complexity than age_4 but same performability.
+- **PICTURE BOOK NARRATIVE (age_5):** 60-90 words per page. 5-8 sentences per page mixing short and long. More plot complexity than age_4, with real prose rhythm a parent enjoys reading aloud.  [PATCH_GG_AGE_5_PROSE_STYLE_001]
+
     PAGE 1 STORY LOGIC (age_5): The problem can have a bit more nuance, but the plan must still be clear. The child needs to understand what's going wrong, what the hero must do, and why that specific action will work. Stakes can be a touch more abstract (losing something treasured, letting someone down) but the physical action is still concrete.
+
     VOCABULARY (age_5): Slightly richer than age_4 — a few "mouth-feel" words are welcome (wobbly, grumbling, splinters, whispered) but anything a 5-year-old wouldn't recognise is cut.
 
-    WRITE LIKE: *Stick Man* by Julia Donaldson, *The Day the Crayons Quit* by Drew Daywalt, *Zog* by Julia Donaldson. Characters have distinct voices the parent can do. Internal thoughts allowed briefly. Callbacks: an earlier detail returns in the resolution. Emotional beat on page 4 before the win on page 5.
+    GOLD STANDARD #1 — *Stick Man* by Julia Donaldson, opening lines. Read this passage. Notice the rhythm, the rhyme, the dialogue mid-action, the way each sentence has its own length and shape, the way the parent's voice has somewhere to go:
+
+      "Stick Man lives in the family tree
+      With his Stick Lady Love and their stick children three.
+      One day he wakes early and goes for a jog.
+      Stick Man, oh Stick Man, beware of the dog!
+      'I'll fetch it and drop it, and fetch it — and then
+      I'll fetch it and drop it and fetch it again.'
+      'I'm not a stick! Why can't you see,
+      I'm Stick Man, I'm Stick Man, I'M STICK MAN, that's me,
+      And I want to go home to the family tree!'"
+
+    Why this works at age_5: rhythm with rhyming couplets the ear catches; direct character speech the parent performs (the dog's cheerful "I'll fetch it and drop it"); the hero's increasingly desperate refrain ("I'm Stick Man, I'm Stick Man, I'M STICK MAN") with caps for vocal emphasis; the closing line ("the family tree") returning to the opening to make the goal stick. NOT short staccato captions. Each line carries its weight in the read-aloud.
+
+    GOLD STANDARD #2 — *The Gruffalo* by Julia Donaldson, page-equivalent verse. Notice the cumulative pattern, the dialogue-as-action, the mock-formality:
+
+      "A mouse took a stroll through the deep dark wood.
+      A fox saw the mouse, and the mouse looked good.
+      'Where are you going to, little brown mouse?
+      Come and have lunch in my underground house.'
+      'It's terribly kind of you, Fox, but no —
+      I'm going to have lunch with a gruffalo.'
+      'A gruffalo? What's a gruffalo?'
+      'A gruffalo! Why, didn't you know?
+      He has terrible tusks, and terrible claws,
+      And terrible teeth in his terrible jaws.'"
+
+    Why this works at age_5: dialogue carries the entire scene (no "the mouse said" / "the fox said" — the voices speak directly, mid-action); the triple "terrible / terrible / terrible / terrible" earns its repetition because each adjective lands on a different body part (tusks, claws, teeth, jaws); the formality of "It's terribly kind of you" gives the mouse a voice the parent can put on. NOT a list of captioned actions.
+
+    PROSE RHYTHM RULES (age_5 — apply to every page):
+
+    (1) MIX SHORT AND LONG SENTENCES. A page of all 5-word sentences ("She grabs the straw. She hooks the key. CLICK!") reads as captions. Real picture-book prose mixes a 3-word punch with a 12-word flow with a 6-word setup. Example:
+        BAD age_5: "Lily has a big idea. She grabs a long straw. She hooks the golden key. The key fits the dog."
+        GOOD age_5: "Lily had an idea — a daring, splashy idea. She snatched the long bendy straw from her bag and lowered it down through the bubbles, fishing for the glint of gold below. There! She hooked the key, lifted it dripping into the air, and turned it in the great dog's keyhole. CLICK."
+
+    (2) DIALOGUE EVERY PAGE OR EVERY OTHER PAGE. The supporting character has a voice the parent performs. The hero has at least one direct line ("Got you!", "Almost there!", "Wait — I have an idea!"). Use direct speech mid-action, not as a separate beat at the end of the page.
+
+    (3) MID-ACTION VERBS. The action is happening NOW in the prose, not summarised after. Use present-progressive or active verbs ("She is reaching, stretching, almost touching the key") rather than past-completed ("She found the key"). The scene_description should match this — show the moment of doing, not the result. (See the MID-ACTION RULE for scene_description guidance.)
+
+    (4) ONE EARNED RHYTHMIC BEAT PER PAGE. A triple, a refrain, an alliteration, a dialogue exchange — pick one and let it land. Don't stack three rhythmic devices on one page.
+
+    (5) EMOTIONAL INTERIORITY. The hero can FEEL something the prose names — worried, hopeful, secretly nervous, embarrassed, proud. Not just panicked/determined/happy. Internal thought allowed in moderation: "Lily's tummy went all wobbly. The water looked deep — but the parade was almost here."
+
+    (6) CALLBACKS. An earlier detail returns in the resolution. If page 1 names the magpie's love of shiny things, page 5 can resolve through that ("Lily wiggled her sparkly hair clip — the magpie's eyes flashed and dropped the key"). Patch O firing — features set up early pay off late.
+
+    REJECT age_5 prose that reads as:
+      - A string of 3-5 word captions ("She grabs the straw. She hooks the key. CLICK! It works.")
+      - Pure third-person narration with no dialogue
+      - Action summarised after the moment ("Lily got the key out") instead of mid-action ("Lily was reaching, almost there...")
+      - All sentences the same length and shape
+      - No emotional naming (everything is panicked/determined/happy with no nuance)
+
+    ACCEPT age_5 prose that:
+      - Mixes 3-word punches with 10-15 word flowing sentences
+      - Has dialogue with character voice on at least most pages
+      - Names emotion with specificity (wobbly tummy, secret hope, prickly worry)
+      - Uses ONE rhythmic device per page that earns its place
+      - Reads aloud well — a parent has somewhere to put their voice
+      - Builds toward a resolution that calls back to an earlier detail
+
+    BLURB TONE FOR THIS AGE: see the BLURB TONE block in the age_5 PITCH_AGE_GUIDELINES.
+
+    WRITE LIKE: *Stick Man* by Julia Donaldson, *The Gruffalo* by Julia Donaldson, *Stuck* by Oliver Jeffers, *The Day the Crayons Quit* by Drew Daywalt, *Supertato* by Sue Hendra. Characters have distinct voices the parent can do. Internal thoughts allowed briefly. Callbacks: an earlier detail returns in the resolution. Emotional beat on page 4 before the win on page 5.
 
 - **STORYTIME (age_6, age_7):** 80-120 words per page. Character tries, fails, grows. Dialogue and internal thoughts.
     WRITE LIKE: *The Enormous Crocodile* by Roald Dahl, *Flat Stanley* by Jeff Brown, *Horrid Henry* by Francesca Simon. Dialogue drives scenes. Characters have clear voices and attitudes. Sly humour, mild peril. Rich vocabulary ("bamboozled", "flabbergasted", "squelching") used without apologising. The reader is now in the story alongside the hero.
@@ -835,10 +899,14 @@ SYLLABLE RULE: If a word has 3+ syllables, replace it with a 1-2 syllable word. 
 SENTENCE RULE: A 4-year-old speaks in simple declarations. "She grabs the big red ball." NOT "Reaching forward, she carefully grasps the enormous crimson sphere." Write how they talk.
 SELF-CHECK: After writing each page, reread every word. For EACH word ask: would I hear this word in a preschool classroom? If no, swap it. This applies to EVERY word — nouns, verbs, adjectives, adverbs, all of them.""")
     elif age_level == "age_5":
-        parts.append("""⚠️ VOCABULARY REMINDER (age_5):
-Max 10 words per sentence. Max 50 words per page.
+        parts.append("""⚠️ VOCABULARY AND PROSE LENGTH (age_5):  [PATCH_GG_AGE_5_PROSE_STYLE_001]
+Target 60-90 words per page (some pages can hit 100 — flowing prose pages can run longer than action pages). This is roughly DOUBLE the age_4 target. Use the extra room.
+Sentences average 8-12 words. Single sentences can run to 18 when carrying dialogue, rhythm, or a cause-and-effect chain ("And the dog pulls and pulls and pulls until at last the stick comes free.").
+Sentences can be short (3-5 words) when landing a punch ("The key sank deep.") — but the page overall should not read as a string of 3-5 word captions. Mix short and long.
 Use playground words — fun to say, easy to understand. No Latinate or academic vocabulary.
-BANNED: investigate, magnificent, structure, ancient, cascade, illuminated, mechanism, delicate, precisely, extraordinary.""")
+BANNED: investigate, magnificent, structure, ancient, cascade, illuminated, mechanism, delicate, precisely, extraordinary.
+ACCEPTED at age_5 (these are mouth-feel words a 5-year-old enjoys hearing): wobbly, grumbling, splinters, whispered, tumbled, scrunched, twirled, wriggled, snuffled, snatched, scuttled, glimmered, rumbled, scratchy, splashy, sneaky, mighty, clever, daft, cosy.
+Story_text should READ ALOUD WELL. If a parent reading the page would naturally pause, breathe, change voice for a character, or land on a punch — the page is working. If it sounds like a list of captions strung together with full stops, REWRITE.""")
 
     parts.append(f"WRITING_STYLE: {writing_style or 'Standard'}")
 
