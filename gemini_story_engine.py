@@ -751,6 +751,7 @@ def generate_story_gemini(
                 "episode_num": 1,
                 "title": "...",
                 "story_text": "...",
+                "continuity_state": "...",  # PATCH_EE_CONTINUITY_STATE_FIELD_001 — required state-anchor for image continuity
                 "scene_description": "...",
                 "character_emotion": "..."
             },
@@ -894,12 +895,65 @@ Return valid JSON matching this EXACT structure:
       "episode_num": 1,
       "title": "string — short episode title",
       "story_text": "string — the story text for this episode",
+      "continuity_state": "string — REQUIRED, see CONTINUITY_STATE FIELD instruction below",
       "scene_description": "string — COMPLETE standalone image prompt (80+ words)",
       "character_emotion": "string — one of: {emotions_str}",
       "parent_prompt": "string or null — a one-sentence Parental Spark question for this page (NOT in story_text)"
     }}
   ]
 }}
+
+⚠️ CONTINUITY_STATE FIELD — REQUIRED ON EVERY PAGE  [PATCH_EE_CONTINUITY_STATE_FIELD_001]
+
+Why this field exists: the image model sees three inputs every page — (a) the character reveal image (the canonical character with all their accessories), (b) the previous drawn page (which may show a different state), and (c) the scene_description text. When the reveal and the previous page DISAGREE about the character's state (e.g. reveal shows Gav with glasses, previous page shows Gav without glasses because they were taken by a crab), the image model defaults to the reveal unless the scene_description text explicitly resolves the contradiction. This field FORCES that resolution on every page.
+
+What to write in continuity_state: a 2-4 sentence statement of every persistent thing on this page that differs from the character's canonical complete state, OR every persistent thing that is the same across pages and must be re-stated. Specifically:
+
+  (1) Hero's missing/displaced items. If an item the hero normally wears or holds is currently with the antagonist, lost, or out of reach, state it: "Gav is STILL not wearing his glasses — they are STILL on the crab's head." NEVER omit this on middle pages — the image model will put the glasses back if you don't say so.
+
+  (2) Antagonist's possessed plot object. If the antagonist has the plot object, state where: "The crab is STILL wearing the rectangular glasses on its head." Both halves of the displacement (where it ISN'T and where it IS) need restating every page.
+
+  (3) Supporting characters who have NOT YET arrived. If a story shape is "hero waits for X to come" and X arrives on the final page, state on every middle page: "Sparky has STILL not arrived. Bonnie is alone." If you do not state this, the image model will draw Sparky in middle pages because Sparky is in the story.
+
+  (4) Setting state changes from page 1. If the setting has been altered (water rising, ship sliding, ice melting), state the current state: "The water is STILL rising — now up to Wally's knees."
+
+  (5) Persistent supporting-character visual fingerprint. If a supporting character is named, restate their full description briefly: "Barnaby (STILL the same small grumpy red crab with one big claw, ~10cm)."
+
+What NOT to put in continuity_state:
+  - Things that change ONLY on this page (those go in scene_description as actions).
+  - Things that are identical to the reveal image (no need to restate the obvious).
+  - The hero's emotion (that's character_emotion).
+  - Story narrative (that's story_text).
+
+WORKED EXAMPLE — Gav-glasses (a 5-page "hero loses item" story):
+  Story: Gav drops his glasses, a crab takes them and runs, Gav chases through 4 underwater locations, gets them back on page 5.
+
+  Page 1 continuity_state: "Gav is NOT wearing his glasses — they have just fallen into the water and the grumpy crab has put them on its own head. Gav is bare-eyed."
+  Page 2 continuity_state: "Gav is STILL NOT wearing his glasses. The grumpy crab is STILL wearing the rectangular glasses on its head, scuttling ahead of Gav."
+  Page 3 continuity_state: "Gav is STILL NOT wearing his glasses. The grumpy crab is STILL wearing them, now hidden inside the bumpy shell — only the crab's claws are visible."
+  Page 4 continuity_state: "Gav is STILL NOT wearing his glasses. The grumpy crab is STILL wearing them at the top of the tall rock, just out of Gav's reach."
+  Page 5 continuity_state: "Gav has JUST GOT his glasses back — he is now holding them in his left hand. The crab is on the sand, no longer wearing the glasses, reaching for Gav's sparkly ring instead."
+
+WORKED EXAMPLE — Kitty-helmet (a 5-page "hero retrieves item from antagonist"):
+  Page 1 continuity_state: "Kitty's helmet is NOT on her head. The bossy owl is STILL inside the helmet on the top shelf, eyes shut. Kitty's pointy cat ears are visible above her astronaut suit's neck ring."
+  Page 2 continuity_state: "Kitty STILL has no helmet on her head — her cat ears are STILL visible. The bossy owl is STILL inside the helmet on the top shelf above."
+  Page 3 continuity_state: "Kitty STILL has no helmet on her head — her cat ears are STILL visible. The bossy owl is STILL inside the helmet, fluffing his feathers, perched at the top of the metal stairs."
+  Page 4 continuity_state: "Kitty STILL has no helmet on her head — her cat ears are STILL visible. The bossy owl is STILL inside the helmet, gripping the rim with his claws."
+  Page 5 continuity_state: "Kitty has JUST GOT her helmet — it is now ON her head, her cat face visible through the visor. The bossy owl has hopped out of the helmet and is flying to a lamp."
+
+WORKED EXAMPLE — waiting-for-arrival ("hero waits, supporting character arrives on final page"):
+  Story: Bonnie waits on the porch for her cousin Sparky the dog to visit. He arrives on page 5.
+
+  Page 1 continuity_state: "Sparky has NOT YET arrived. Bonnie is alone on the porch, watching the path."
+  Page 2 continuity_state: "Sparky has STILL NOT arrived. Bonnie is STILL alone, now waiting at the garden gate."
+  Page 3 continuity_state: "Sparky has STILL NOT arrived. Bonnie is STILL alone, waiting on the bench by the road."
+  Page 4 continuity_state: "Sparky has STILL NOT arrived. Bonnie is STILL alone, waiting at the bus stop."
+  Page 5 continuity_state: "Sparky has JUST ARRIVED! He is a small white dog with one black ear, running up to Bonnie. Bonnie is no longer alone."
+
+WORKED EXAMPLE — short / no displacement (e.g. a page where everything is in canonical state):
+  Page 1 continuity_state: "All characters and objects in canonical state. Bonnie has her usual red coat and yellow boots. The garden is undisturbed."
+
+If a page truly has no notable continuity to state, write a short statement saying so. The field is REQUIRED — it must never be empty.
 
 Generate exactly {episode_count} episodes numbered 1 to {episode_count}.""")
 

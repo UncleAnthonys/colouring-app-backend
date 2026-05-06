@@ -169,7 +169,16 @@ def generate_full_story_task(self, job_id: str, params: dict):
         for i, episode in enumerate(episodes):
             update_job_status(job_id, "processing", progress=f"Drawing page {i+1} of {len(episodes)}...")
             
-            scene_prompt = episode.get("scene_description", "").replace("{name}", character_name)
+            scene_description = episode.get("scene_description", "").replace("{name}", character_name)
+            continuity_state = episode.get("continuity_state", "").replace("{name}", character_name)
+            # PATCH_EE_CONTINUITY_STATE_FIELD_001 — prepend continuity_state to scene_description
+            # so the image model receives the state-anchor before the scene composition.
+            # Falls back to scene_description alone if continuity_state is missing/empty
+            # (preserves backward compatibility with episodes generated before Patch EE).
+            if continuity_state.strip():
+                scene_prompt = f"CONTINUITY STATE: {continuity_state}\n\nSCENE: {scene_description}"
+            else:
+                scene_prompt = scene_description
             story_text = episode.get("story_text", "").replace("{name}", character_name)
             episode_title = episode.get("title", f"Episode {i+1}")
             character_emotion = episode.get("character_emotion", "happy")
@@ -179,7 +188,8 @@ def generate_full_story_task(self, job_id: str, params: dict):
             print(f"[WORKER] ===== PAGE {i+1} =====")
             print(f"[WORKER] Page {i+1} title: {episode_title}")
             print(f"[WORKER] Page {i+1} story_text: {story_text}")
-            print(f"[WORKER] Page {i+1} scene_description ({len(scene_prompt)} chars): {scene_prompt}")
+            print(f"[WORKER] Page {i+1} continuity_state ({len(continuity_state)} chars): {continuity_state}")
+            print(f"[WORKER] Page {i+1} scene_description ({len(scene_description)} chars): {scene_description}")
             print(f"[WORKER] Page {i+1} character_emotion: {character_emotion}")
             print(f"[WORKER] ========================")
             
@@ -248,7 +258,8 @@ def generate_full_story_task(self, job_id: str, params: dict):
                 "raw_image_url": raw_image_url,
                 "mask_url": mask_url,
                 "story_text": story_text,
-                "scene_description": scene_prompt
+                "scene_description": scene_description,
+                "continuity_state": continuity_state  # PATCH_EE_CONTINUITY_STATE_FIELD_001
             })
             
             # MEMORY: explicit GC at end of each page iteration to release b64 buffers
